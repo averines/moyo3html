@@ -214,6 +214,14 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+
+  .subcategories-icons {
+    grid-template-columns: repeat(6, 1fr);
+
+    &__link {
+      font-size: 0.75em;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -610,6 +618,14 @@
     .footer-top__info {
       order: -1;
       margin-top: 0;
+    }
+  }
+
+  .subcategories-icons {
+    grid-template-columns: repeat(12, 1fr);
+
+    &__link {
+      font-size: 0.75em;
     }
   }
 }

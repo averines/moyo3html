@@ -67,7 +67,9 @@ main {
 
 h1,
 .h1 {
-  font-size: 22px;
+  font-size: 24px;
+  letter-spacing: $ls;
+  font-weight: 400;
 }
 
 .visually-hidden {

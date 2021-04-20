@@ -1068,32 +1068,32 @@
   // иконки категорий зависят от id категории, нужно будет их поправить в css, когда получим реальные id
   &[data-category-id="1"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-woman.svg);
+      background-image: url(../img/icons/categories/woman.svg);
     }
   }
   &[data-category-id="2"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-girl.svg);
+      background-image: url(../img/icons/categories/girl.svg);
     }
   }
   &[data-category-id="3"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-man.svg);
+      background-image: url(../img/icons/categories/man.svg);
     }
   }
   &[data-category-id="4"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-boy.svg);
+      background-image: url(../img/icons/categories/boy.svg);
     }
   }
   &[data-category-id="5"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-home.svg);
+      background-image: url(../img/icons/categories/home.svg);
     }
   }
   &[data-category-id="6"] {
     .category-menu__title::before {
-      background-image: url(../img/icons/category-toy.svg);
+      background-image: url(../img/icons/categories/toy.svg);
     }
   }
 
@@ -2223,7 +2223,6 @@
 }
 
 // баннеры на странице категории
-
 .section-banners {
   padding-top: 2em;
   padding-bottom: 2em;
@@ -2253,6 +2252,199 @@
         opacity: 0.8;
       }
     }
+  }
+}
+
+// хлебные крошки
+.breadcrumbs {
+  margin: 20px 0 10px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+
+  li {
+    font-size: 12px;
+    letter-spacing: $ls;
+    margin-right: 20px;
+
+    &::after {
+      content: "/";
+      margin-left: 8px;
+      position: absolute;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+
+      &::after {
+        display: none;
+      }
+    }
+    a {
+      color: $text-light;
+      text-decoration: none;
+      transition: $tr;
+      &:hover {
+        color: $text;
+      }
+    }
+
+    span {
+      color: $text;
+    }
+  }
+}
+
+.pagetitle {
+  display: flex;
+  align-items: baseline;
+  &__counter {
+    font-size: 11px;
+    margin-left: 0.75em;
+  }
+}
+.pagebanner {
+  &__video {
+    width: 100%;
+  }
+}
+
+.subcategories-icons {
+  margin: 2em 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $gap * 3 $gap;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: $tr;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    text-align: center;
+    color: $text-light;
+    font-weight: 600;
+    row-gap: $gap;
+    max-width: 85px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      width: 55px;
+      height: 55px;
+      display: inline-block;
+      background-position: center;
+      background-size: contain;
+      background-size: contain;
+      transition: $tr;
+    }
+
+    &[data-subcategory-id="101"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/01.svg);
+      }
+    }
+    &[data-subcategory-id="102"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/02.svg);
+      }
+    }
+    &[data-subcategory-id="103"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/03.svg);
+      }
+    }
+    &[data-subcategory-id="104"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/04.svg);
+      }
+    }
+    &[data-subcategory-id="105"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/05.svg);
+      }
+    }
+    &[data-subcategory-id="106"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/06.svg);
+      }
+    }
+    &[data-subcategory-id="107"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/07.svg);
+      }
+    }
+    &[data-subcategory-id="108"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/08.svg);
+      }
+    }
+    &[data-subcategory-id="109"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/09.svg);
+      }
+    }
+    &[data-subcategory-id="110"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/10.svg);
+      }
+    }
+    &[data-subcategory-id="111"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/11.svg);
+      }
+    }
+    &[data-subcategory-id="112"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/12.svg);
+      }
+    }
+    &[data-subcategory-id="113"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/13.svg);
+      }
+    }
+    &[data-subcategory-id="114"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/14.svg);
+      }
+    }
+    &[data-subcategory-id="115"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/15.svg);
+      }
+    }
+    &[data-subcategory-id="116"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/16.svg);
+      }
+    }
+    &[data-subcategory-id="117"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/17.svg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      &::before {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.65em;
+    color: $text-light;
+    text-align: center;
+    margin-top: 1em;
   }
 }
 
