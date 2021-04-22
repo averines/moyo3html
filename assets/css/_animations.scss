@@ -1,0 +1,42 @@
+@keyframes jump {
+  0% {
+    transform: none;
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes spiral {
+  0% {
+    transform: none;
+    animation-timing-function: ease-out;
+  }
+
+  25% {
+    transform: translateY(-2px) translateX(-2px);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: translateY(-4px) translateX(2px) scale(0.8);
+  }
+
+  75% {
+    transform: translateY(-10px) translateX(4px) scale(0.7);
+  }
+
+  85% {
+    transform: translateY(-12px) translateX(2px) scale(0.6);
+  }
+
+  100% {
+    transform: translateY(-12px) translateX(2px) scale(0.6);
+    opacity: 0;
+  }
+}

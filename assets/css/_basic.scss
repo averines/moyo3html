@@ -192,6 +192,16 @@ h1,
   }
 }
 
+.btn-filter {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: $ls;
+  color: $text-dark;
+  text-decoration: none;
+  border-bottom: 1px dashed $text;
+  margin-left: auto;
+}
+
 // фансибокс
 .fancybox-is-open .fancybox-bg {
   opacity: 0.6;

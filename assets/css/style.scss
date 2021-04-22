@@ -1962,8 +1962,43 @@
       }
     }
 
+    &__favorite {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 4;
+      display: block;
+      width: 28px;
+      height: 28px;
+      background: url(../img/icons/favorite.svg) no-repeat center;
+      background-size: 55%;
+      filter: grayscale(1);
+      transition: all 0.1s ease-in-out;
+
+      &:active {
+        transform: scale(0.9);
+      }
+
+      &.is-active {
+        filter: none;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        right: calc(50% - 7px);
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url(../img/icons/favorite_.svg) no-repeat center;
+        background-size: 100%;
+        animation: spiral 1s forwards ease-in-out;
+      }
+    }
+
     &:hover {
       box-shadow: 0 5px 20px transparentize($black, 0.85);
+      z-index: 6;
     }
   }
 }
@@ -1976,7 +2011,7 @@
   position: absolute;
   top: 0;
   left: -70px;
-  z-index: 2;
+  z-index: 5;
   width: 70px;
   height: 100%;
   background-color: $text-dark;
@@ -2005,21 +2040,41 @@
 
 .sizes-variants {
   display: none;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
   background-color: $white;
   flex-wrap: wrap;
-  column-gap: 3px;
-  row-gap: 3px;
+  row-gap: 10px;
   z-index: 3;
   position: relative;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    row-gap: 4px;
+  }
 
   &__item {
     display: block;
     text-decoration: none;
-    border: 1px solid $line-dark;
+    outline: 1px solid $line-dark;
+    border: 1px solid transparent;
     padding: 0.5em 0.5em;
     font-size: 0.7em;
     color: $text;
+    transition: $tr;
+
+    &:hover {
+      border-color: $text-light;
+      outline-color: $text-light;
+    }
+
+    &.is-active {
+      background-color: $text-light;
+      outline-color: $text-light;
+      color: $white;
+    }
   }
 }
 
@@ -2030,6 +2085,7 @@
   column-gap: 0.5em;
   row-gap: 0.2em;
   align-items: center;
+  font-size: 0.9em;
 
   &__break {
     flex-basis: 100%;
@@ -2477,6 +2533,26 @@
   align-items: stretch;
   max-width: 400px;
 
+  a,
+  span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: $text;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 9px;
+    transition: $tr;
+  }
+  a:hover {
+    background-color: $line-light + 20%;
+  }
+
+  span::after {
+    content: "...";
+  }
+
   &__prev {
     margin-right: auto;
   }
@@ -2496,6 +2572,7 @@
       overflow: hidden;
       border-radius: 4px 0 0 4px;
       transition: $tr;
+
       &::after {
         display: block;
         width: 100%;
@@ -2505,13 +2582,16 @@
         background-size: 35%;
         transition: $tr;
       }
+
       &:hover {
         background-color: $main;
         border-color: $main;
+
         &::after {
           filter: brightness(3);
         }
       }
+
       &:active {
         background-color: $main - 25%;
       }
@@ -2525,27 +2605,6 @@
   &__active a {
     color: $main;
     text-decoration: underline;
-  }
-
-  li {
-    a,
-    span {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      color: $text;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 10px 9px;
-      transition: $tr;
-    }
-    a:hover {
-      background-color: $line-light + 20%;
-    }
-    span::after {
-      content: "...";
-    }
   }
 }
 
@@ -2677,4 +2736,5 @@
   }
 }
 
+@import "animations";
 @import "adaptive";

@@ -162,7 +162,47 @@ let categoryItem
             subCategoryItem.classList.remove('is-active') // прячем список субкатегорий
         }
     })
-});
+})
+
+
+// кнопка добавления в избранное
+const favorites = document.getElementsByClassName('product__favorite');
+[...favorites].forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('is-active')
+        item.insertAdjacentHTML('afterbegin', '<span></span>')
+        setTimeout(function () { item.innerHTML = '' }, 1000)
+
+    })
+})
+
+
+// кнопка добавления размера в корзину
+const sizesVariantsItems = document.getElementsByClassName('sizes-variants__item');
+[...sizesVariantsItems].forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault()
+        item.classList.toggle('is-active')
+    })
+})
+
+// переключение сортировки в каталоге
+const togglerSort = document.querySelector('.toggler-sort')
+if (togglerSort) {
+    const togglerSortBtns = togglerSort.querySelectorAll('.toggler-sort__item')
+    for (let togglerSortBtn of togglerSortBtns) {
+        togglerSortBtn.addEventListener('click', (e) => {
+            if (!togglerSortBtn.classList.contains('is-active')) {
+                [...togglerSortBtns].forEach(togglerSortBtn => {
+                    togglerSortBtn.classList.remove('is-active')
+                })
+                togglerSortBtn.classList.add('is-active')
+            }
+        })
+    }
+}
+
+
 
 
 // tiny slider
