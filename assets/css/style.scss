@@ -1432,6 +1432,7 @@
       padding-right: $gap;
       background: $white;
     }
+
     &__title {
       color: $text-dark;
       text-transform: uppercase;
@@ -2007,8 +2008,7 @@
   }
 }
 
-// варианты расцветок
-
+// варианты цветов и размеров
 .color-variants {
   display: none;
   flex-direction: column;
@@ -2742,6 +2742,162 @@
       &::after {
         background-color: $special-1;
       }
+    }
+  }
+}
+
+.menu-filters {
+  position: absolute;
+  padding: 10px;
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: $tr;
+  transform: translateY(10px);
+  border: 1px solid red;
+  background-color: $white;
+  box-shadow: 0 5px 15px transparentize($black, 0.7);
+  z-index: 5;
+
+  &.is-active {
+    visibility: visible;
+    pointer-events: all;
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  font-size: 0.9em;
+  border-bottom: 1px solid $main;
+  border-top: 1px solid $main;
+  position: relative;
+  margin-top: 1em;
+
+  &::before {
+    content: "Внимание";
+    position: absolute;
+    color: $white;
+    background-color: $main;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.7em;
+    padding: 0.3em 1em;
+    transform: translateY(-100%);
+  }
+}
+
+.product-accordion {
+  margin: 1.5em 0;
+
+  .accordion__item {
+    margin-top: -1px;
+
+    &.is-active {
+      .accordion__content {
+        padding: 0.5 0 2em 0;
+      }
+    }
+  }
+
+  .accordion__title {
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 0.75em 0;
+    border-top: 1px solid $line-light;
+    border-bottom: 1px solid $line-light;
+    cursor: pointer;
+  }
+
+  .accordion__content {
+    font-size: 0.9em;
+    // padding: 0.5em 0;
+    line-height: 1.6;
+  }
+
+  dl {
+    display: flex;
+    font-size: 0.95em;
+    border-bottom: 1px solid transparentize($line-light, 0.5);
+    padding: 0.5em 0;
+    margin: 0;
+
+    dt {
+      font-weight: 600;
+    }
+
+    dd {
+      margin-left: 1em;
+    }
+  }
+}
+
+.feedbacks {
+  margin: 1em 0;
+}
+
+.feedback {
+  margin: 2.5em 0;
+  &__header {
+    border-bottom: 2px dotted $line-dark;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    padding: 0.5em 0;
+    align-items: baseline;
+    margin-bottom: 0.5em;
+  }
+
+  &__user {
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+
+  &__date {
+    font-size: 0.85em;
+  }
+
+  .feedback-size {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+
+    &__title::before {
+      content: "Размер: ";
+    }
+
+    &__description {
+      color: $special-2;
+    }
+  }
+
+  .feedback-content {
+    margin-top: 1em;
+
+    &__text {
+      line-height: 1.4;
+      font-size: 0.95em;
+    }
+
+    &__gallery {
+      display: flex;
+      column-gap: $gap;
+      flex-wrap: wrap;
+
+      a {
+        transition: $tr;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &__pic {
+      display: block;
+      margin-top: 1em;
     }
   }
 }

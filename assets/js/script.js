@@ -33,6 +33,31 @@ menuCatalogWrapper.addEventListener('click', (e) => {
     }
 })
 
+// фильтры на странице подкатегории
+const menuFilterBtn = document.getElementById('btn-filter')
+const menuFilterBlock = document.querySelector('.menu-filters')
+let menuFilterIsActive = false
+
+const menuFilterOpen = function () {
+    menuFilterIsActive = true
+    menuFilterBtn.classList.add('is-active')
+    menuFilterBlock.classList.add('is-active')
+}
+
+const menuFilterClose = function () {
+    menuFilterIsActive = false
+    menuFilterBtn.classList.remove('is-active')
+    menuFilterBlock.classList.remove('is-active')
+}
+
+
+if (menuFilterBtn) {
+    menuFilterBtn.addEventListener('click', () => {
+        if (!menuFilterIsActive) menuFilterOpen()
+        else menuFilterClose()
+    })
+}
+
 
 // плавный переход к блоку
 const scrollLinks = document.querySelectorAll('.scroll-link')
@@ -377,4 +402,31 @@ productSliders.forEach(element => {
             },
         }
     });
+});
+
+
+//fancybox
+$('[data-fancybox="gallery-feedback"]').fancybox({
+    backFocus: false,
+    hash: false,
+    loop: false,
+    protect: false,
+    buttons: ["close"],
+    image: {
+        preload: false
+    },
+    animationDuration: 400,
+    animationEffect: "fade",
+    transitionDuration: 1400,
+    transitionEffect: "fade",
+    lang: "ru",
+    i18n: {
+        ru: {
+            CLOSE: "Закрыть",
+            NEXT: "Вперед",
+            PREV: "Назад",
+            ERROR: "К сожалению, запрошенный контент невозможно загрузить.<br/> Пожалуйста, попробуйте позже.",
+            THUMBS: "Превью"
+        }
+    }
 });

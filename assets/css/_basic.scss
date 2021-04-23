@@ -201,6 +201,11 @@ h1,
   text-decoration: none;
   border-bottom: 1px dashed $text;
   margin-left: auto;
+
+  &.is-active {
+    color: $main;
+    border-bottom-color: $main;
+  }
 }
 
 // фансибокс
