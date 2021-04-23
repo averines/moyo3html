@@ -1994,6 +1994,10 @@
         background-size: 100%;
         animation: spiral 1s forwards ease-in-out;
       }
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     &:hover {
@@ -2026,19 +2030,25 @@
     height: 90px;
     background-color: #ccc;
     transition: $tr;
+    outline: 3px solid transparent;
+    outline-offset: -3px;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     img {
       display: block;
       width: 100%;
     }
+
+    &.is-active {
+      outline-color: $white;
+    }
   }
 }
 
-.sizes-variants {
+.size-variants {
   display: none;
   padding: 0 1em 1em 1em;
   background-color: $white;
@@ -2060,7 +2070,7 @@
     text-decoration: none;
     outline: 1px solid $line-dark;
     border: 1px solid transparent;
-    padding: 0.5em 0.5em;
+    padding: 0.45em;
     font-size: 0.7em;
     color: $text;
     transition: $tr;

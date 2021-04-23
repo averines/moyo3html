@@ -2415,6 +2415,11 @@ h1,
           animation: spiral 1s forwards ease-in-out;
 }
 
+.product-wrapper .product__favorite:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .product-wrapper .product:hover {
   -webkit-box-shadow: 0 5px 20px rgba(16, 16, 16, 0.15);
           box-shadow: 0 5px 20px rgba(16, 16, 16, 0.15);
@@ -2450,10 +2455,12 @@ h1,
   background-color: #ccc;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
 }
 
 .color-variants__item:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .color-variants__item img {
@@ -2461,7 +2468,11 @@ h1,
   width: 100%;
 }
 
-.sizes-variants {
+.color-variants__item.is-active {
+  outline-color: white;
+}
+
+.size-variants {
   display: none;
   padding: 0 1em 1em 1em;
   background-color: white;
@@ -2472,7 +2483,7 @@ h1,
   position: relative;
 }
 
-.sizes-variants__list {
+.size-variants__list {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2484,24 +2495,24 @@ h1,
   row-gap: 4px;
 }
 
-.sizes-variants__item {
+.size-variants__item {
   display: block;
   text-decoration: none;
   outline: 1px solid #cdcdcd;
   border: 1px solid transparent;
-  padding: 0.5em 0.5em;
+  padding: 0.45em;
   font-size: 0.7em;
   color: #3d3d3c;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.sizes-variants__item:hover {
+.size-variants__item:hover {
   border-color: #777;
   outline-color: #777;
 }
 
-.sizes-variants__item.is-active {
+.size-variants__item.is-active {
   background-color: #777;
   outline-color: #777;
   color: white;
@@ -3747,7 +3758,7 @@ h1,
     display: -ms-flexbox;
     display: flex;
   }
-  .product-wrapper:hover .sizes-variants {
+  .product-wrapper:hover .size-variants {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4019,8 +4030,8 @@ h1,
             column-gap: 10px;
   }
   .products .product__favorite {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
   }
 }
 

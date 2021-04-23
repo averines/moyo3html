@@ -36,7 +36,6 @@ menuCatalogWrapper.addEventListener('click', (e) => {
 
 // плавный переход к блоку
 const scrollLinks = document.querySelectorAll('.scroll-link')
-
 {
     for (let i = 0; i < scrollLinks.length; i++) {
         scrollLinks[i].addEventListener('click', function (e) {
@@ -178,13 +177,57 @@ const favorites = document.getElementsByClassName('product__favorite');
 
 
 // кнопка добавления размера в корзину
-const sizesVariantsItems = document.getElementsByClassName('sizes-variants__item');
-[...sizesVariantsItems].forEach(item => {
+const sizeVariantsItems = document.getElementsByClassName('size-variants__item');
+[...sizeVariantsItems].forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault()
         item.classList.toggle('is-active')
     })
 })
+
+
+// переключение цвета в карточке товара
+var colorVariantStartId
+
+const colorVariantsItems = document.getElementsByClassName('color-variants__item');
+[...colorVariantsItems].forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        let colorVariants = item.parentElement
+        let colorVariantId = item.dataset.colorVariant
+
+        let colorVariantsLocalItems = colorVariants.getElementsByClassName('color-variants__item');
+
+        if (!colorVariantStartId) {
+            colorVariantStartId = colorVariantsLocalItems[0].dataset.colorVariant;
+        }
+
+        [...colorVariantsLocalItems].forEach(item => { item.classList.remove('is-active') })
+        item.classList.add('is-active')
+
+        let product = item.closest('.product')
+        let productPictire = product.querySelector('.product__pic picture')
+        let productPictireSources = productPictire.querySelectorAll('source')
+
+        let productPictireImg = productPictire.querySelectorAll('img')[0]
+
+        let productPictireImgSrc = productPictireImg.getAttribute('src')
+        let replaceId = new RegExp(`${colorVariantStartId}`, 'gi')
+        let srcsetNew = productPictireImgSrc.replace(replaceId, colorVariantId)
+        productPictireImg.setAttribute('src', srcsetNew)
+
+        for (let source of productPictireSources) {
+            srcset = source.getAttribute('srcset')
+            srcsetNew = srcset.replace(replaceId, colorVariantId)
+            source.setAttribute('srcset', srcsetNew)
+
+        }
+
+        colorVariantStartId = colorVariantId
+    })
+})
+
 
 // переключение сортировки в каталоге
 const togglerSort = document.querySelector('.toggler-sort')
@@ -201,8 +244,6 @@ if (togglerSort) {
         })
     }
 }
-
-
 
 
 // tiny slider
