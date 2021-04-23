@@ -1140,7 +1140,7 @@ h1,
   top: 55px;
   width: 400px;
   border-radius: 4px;
-  z-index: 3;
+  z-index: 6;
 }
 
 .dropdown-products::after {
@@ -3240,7 +3240,7 @@ h1,
   content: "";
   width: 20px;
   height: 20px;
-  background: url(/assets/img/icons/close.svg) no-repeat center #d5d5d5;
+  background: url(../img/icons/close.svg) no-repeat center #d5d5d5;
   background-size: 50%;
   border-radius: 50%;
   margin-left: 10px;
