@@ -134,11 +134,13 @@ window.addEventListener('resize', () => {
 const accordions = document.getElementsByClassName('accordion')
 
 for (let accordion of accordions) {
-    let accordionItems = accordion.getElementsByClassName('accordion__item')
+    let accordionItems = accordion.querySelectorAll('.accordion__item')
+    let accordionItemsClass = accordionItems[0].classList
+    let accordionItemsArr = Array.prototype.slice.call(accordionItems);
+    let filteredAccordionItems = accordionItemsArr.filter(item => item.classList.contains(accordionItemsClass[0]));
 
-    for (let accordionItem of accordionItems) {
+    for (let accordionItem of filteredAccordionItems) {
         let accordionTitle = accordionItem.querySelector('.accordion__title')
-
         accordionTitle.addEventListener('click', (e) => {
             accordionItem.classList.toggle('is-active')
         })

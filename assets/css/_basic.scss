@@ -250,13 +250,13 @@ h1,
     }
   }
   .is-active {
-    .accordion__title {
+    > .accordion__title {
       &::after {
         background-image: url(../img/icons/minus.svg);
         transform: rotate(0deg);
       }
     }
-    .accordion__content {
+    > .accordion__content {
       max-height: 1000px;
     }
   }
