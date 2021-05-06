@@ -273,6 +273,105 @@ if (togglerSort) {
 }
 
 
+// быстрый просмотр
+const quickViewBtns = document.querySelectorAll('.product__quick-view')
+
+
+if (quickViewBtns) {
+    [...quickViewBtns].forEach(item => {
+        item.addEventListener('click', (e) => {
+            let quickViewBlockWrapper = document.createElement('div')
+            quickViewBlockWrapper.classList.add('quick-view-wrapper')
+            let quickViewBlock = document.createElement('div')
+            quickViewBlock.classList.add('quick-view')
+            quickViewBlockWrapper.appendChild(quickViewBlock)
+
+            document.getElementsByTagName('main')[0].appendChild(quickViewBlockWrapper);
+
+            quickViewBlockWrapper.addEventListener('click', (e) => {
+                let target = e.target.className
+                if (target.includes('quick-view-wrapper') || target.includes('quick-view__close')) {
+                    quickViewBlockWrapper.remove()
+                }
+            })
+        })
+    })
+
+}
+
+
+// загрузка файлов в отзыв перетаскиванием
+const dropArea = document.getElementById('feedback-form__upload-wrapper');
+
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false)
+})
+
+
+dropArea.addEventListener('dragenter', dropAreaHighlight, false)
+dropArea.addEventListener('dragover', dropAreaHighlight, false)
+
+dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
+dropArea.addEventListener('drop', dropAreaUnhighlight, false)
+dropArea.addEventListener('drop', dropHandle, false)
+
+
+
+function preventDefaults(e) {
+    console.log(123);
+    e.preventDefault()
+    e.stopPropagation()
+}
+
+function dropAreaHighlight() {
+    dropArea.classList.add('highlight')
+}
+
+function dropAreaUnhighlight() {
+    dropArea.classList.remove('highlight')
+}
+
+function dropHandle(e) {
+    let dt = e.dataTransfer
+    let files = dt.files;
+    handleFiles(files)
+}
+
+function handleFiles(files) {
+    files = [...files]
+    // files.forEach(uploadFile)
+    files.forEach(previewFile)
+}
+
+function uploadFile(file) {
+    var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
+    var xhr = new XMLHttpRequest()
+    var formData = new FormData()
+    xhr.open('POST', url, true)
+    xhr.addEventListener('readystatechange', function (e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Готово. Информируем пользователя
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+            // Ошибка. Информируем пользователя
+        }
+    })
+    formData.append('file', file)
+    xhr.send(formData)
+}
+
+function previewFile(file) {
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onloadend = function () {
+        let img = document.createElement('img')
+        img.src = reader.result
+        document.getElementById('feedback-form__upload-preview').appendChild(img)
+    }
+}
+
+
+
 // tiny slider
 const mainSliderContainer = document.querySelectorAll('.main-slider')
 let mainSlider = mainSliderContainer.length > 0 ?

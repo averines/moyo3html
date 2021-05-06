@@ -724,6 +724,49 @@
         <div class="accordion__item">
           <div class="accordion__title">Отзывы и вопросы</div>
           <div class="accordion__content">
+            <div class="feedback-info">
+              <form class="feedback-form">
+                <div class="feedback-form__row">
+                  <input class="feedback-form__input" type="text" placeholder="Ваше имя" maxlength="200">
+                </div>
+                <div class="feedback-form__row">
+                  <input class="feedback-form__input" type="text" placeholder="Размер купленного товара" maxlength="10">
+                </div>
+                <div class="feedback-form__row">
+                  <ul class="feedback-form__checkbox-list">
+                    <li>
+                      <input type="radio" id="feedback-form-size-1" name="feedback-form-size" value="Маломерит">
+                      <label for="feedback-form-size-1">Маломерит</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="feedback-form-size-2" name="feedback-form-size" value="Соответствует" checked>
+                      <label for="feedback-form-size-2">Соответствует</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="feedback-form-size-3" name="feedback-form-size" value="Большемерит">
+                      <label for="feedback-form-size-3">Большемерит</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="feedback-form__row">
+                  <textarea class="feedback-form__input" name="" id="" cols="30" rows="5" placeholder="Ваш вопрос или отзыв (необязательно)"></textarea>
+                </div>
+                <div class="feedback-form__row">
+                  <div class="feedback-form__upload-wrapper" draggable="true" id="feedback-form__upload-wrapper">
+                    <input type="file" id="feedback-form-file" multiple accept="image/*" onchange="handleFiles(this.files)">
+                    <label for="feedback-form-file">Кликните или перетащите, чтобы загрузить фото (максимум 3 шт.)</label>
+                  </div>
+                </div>
+                <div class="feedback-form__row">
+                  <div id="feedback-form__upload-preview" class="feedback-form__upload-preview"></div>
+                </div>
+
+                <div class="feedback-form__row">
+                  <button class="btn btn-white">Отменить</button>
+                  <button class="btn btn-gray" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
             <div class="feedbacks">
               <div class="feedbacks__item feedback">
                 <div class="feedback__header">

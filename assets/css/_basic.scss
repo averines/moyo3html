@@ -121,6 +121,18 @@ h1,
       background-color: $main - 10;
     }
   }
+
+  &-gray {
+    color: $white;
+    background-color: $text-light;
+    min-width: auto;
+  }
+
+  &-white {
+    background-color: $white;
+    min-width: auto;
+    border: 1px solid $line-light;
+  }
 }
 
 .btn-burger {
