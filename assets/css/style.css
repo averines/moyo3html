@@ -4322,43 +4322,6 @@ h1,
   .product-group .tns-ovh {
     overflow: visible;
   }
-  .section-banners .banners {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: "big big small" "small2 big2 big2";
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-  }
-  .section-banners .banners__item {
-    max-height: 400px;
-  }
-  .section-banners .banners__item:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: big;
-  }
-  .section-banners .banners__item:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: small;
-  }
-  .section-banners .banners__item:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: small2;
-  }
-  .section-banners .banners__item:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-area: big2;
-  }
   .section-bigcategories .tns-outer::before {
     background: url(../img/bigcategories-bg.png) no-repeat center bottom 130px;
     background-size: 90%;
