@@ -4643,7 +4643,7 @@ h1,
 
 @media screen and (min-width: 1900px) {
   .container--big {
-    max-width: 1900px;
+    max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
