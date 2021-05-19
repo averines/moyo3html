@@ -552,6 +552,27 @@
       }
     }
   }
+
+  // отзывы на странице товара
+  .feedback-form {
+    &__checkbox-list {
+      display: flex;
+      align-items: baseline;
+      column-gap: 1.5em;
+      margin: 1.5em 0;
+
+      li {
+        align-items: baseline;
+        margin-bottom: 0;
+      }
+    }
+
+    &__upload-wrapper {
+      label {
+        align-items: center;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -783,7 +804,7 @@
 
     .product {
       &__favorite {
-        width: 36px;
+        width: 36 px;
         height: 36px;
       }
     }

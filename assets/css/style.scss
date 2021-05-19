@@ -3082,5 +3082,217 @@
   background-color: $white;
 }
 
+// формы с отзывами
+.feedback-form__stars {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.feedback-stars {
+  position: relative;
+
+  &__filled {
+    width: 0%;
+    height: 28px;
+    background: url(../img/icons/star-filled.svg) repeat-x;
+    // background-position-x: -5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &[data-feedback-stars="1"] {
+      width: 20%;
+    }
+    &[data-feedback-stars="2"] {
+      width: 40%;
+    }
+    &[data-feedback-stars="3"] {
+      width: 60%;
+    }
+    &[data-feedback-stars="4"] {
+      width: 80%;
+    }
+    &[data-feedback-stars="5"] {
+      width: 100%;
+    }
+  }
+
+  &__stroked {
+    width: 146px;
+    height: 28px;
+    background: url(../img/icons/star-stroked.svg) repeat-x;
+    // background-position-x: -5px;
+    position: relative;
+  }
+}
+
+.feedback-result {
+  background-color: $bg-light;
+  padding: 2em;
+
+  &__text {
+    font-weight: 600;
+    font-size: 0.95em;
+    text-align: center;
+    margin: 4em 0;
+  }
+}
+
+.feedback-stats {
+  text-align: center;
+}
+
+.stats-rating {
+  background-color: $bg-light;
+  padding: 2em;
+  display: flex;
+
+  &__info {
+    margin-right: 2em;
+  }
+
+  &__number {
+    font-size: 3em;
+    font-weight: 600;
+  }
+
+  &__quantity {
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 1em;
+  }
+}
+
+.stats-sizes {
+  display: flex;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-top: 1em;
+  }
+}
+
+.stars-lines {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75em;
+  }
+
+  &__number {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  &__percent {
+    font-size: 0.9em;
+
+    &::after {
+      content: "%";
+    }
+  }
+
+  &__line {
+    width: 150px;
+    height: 6px;
+    background-color: $line-dark;
+    margin: 0 1em;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background-color: $main;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.diagram {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: $main;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .diagram-left,
+  .diagram-right {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    z-index: 2;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: $line-dark;
+    }
+  }
+
+  .diagram-right {
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+
+  &.over-50 {
+    .diagram-left {
+      transform: rotate(180deg);
+      &::before {
+        background: $main;
+      }
+    }
+    .diagram-right {
+      transform: rotate(360deg);
+    }
+  }
+
+  .diagram-text {
+    font-size: 1.3em;
+    font-weight: 600;
+    z-index: 4;
+    position: relative;
+    top: calc(50% - 0.6em);
+
+    &::after {
+      content: "%";
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";

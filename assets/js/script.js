@@ -303,72 +303,93 @@ if (quickViewBtns) {
 // загрузка файлов в отзыв перетаскиванием
 const dropArea = document.getElementById('feedback-form__upload-wrapper');
 
-['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-    dropArea.addEventListener(eventName, preventDefaults, false)
-})
-
-
-dropArea.addEventListener('dragenter', dropAreaHighlight, false)
-dropArea.addEventListener('dragover', dropAreaHighlight, false)
-
-dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
-dropArea.addEventListener('drop', dropAreaUnhighlight, false)
-dropArea.addEventListener('drop', dropHandle, false)
-
-
-
-function preventDefaults(e) {
-    console.log(123);
-    e.preventDefault()
-    e.stopPropagation()
-}
-
-function dropAreaHighlight() {
-    dropArea.classList.add('highlight')
-}
-
-function dropAreaUnhighlight() {
-    dropArea.classList.remove('highlight')
-}
-
-function dropHandle(e) {
-    let dt = e.dataTransfer
-    let files = dt.files;
-    handleFiles(files)
-}
-
-function handleFiles(files) {
-    files = [...files]
-    // files.forEach(uploadFile)
-    files.forEach(previewFile)
-}
-
-function uploadFile(file) {
-    var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
-    var xhr = new XMLHttpRequest()
-    var formData = new FormData()
-    xhr.open('POST', url, true)
-    xhr.addEventListener('readystatechange', function (e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            // Готово. Информируем пользователя
-        }
-        else if (xhr.readyState == 4 && xhr.status != 200) {
-            // Ошибка. Информируем пользователя
-        }
+if (dropArea) {
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false)
     })
-    formData.append('file', file)
-    xhr.send(formData)
-}
 
-function previewFile(file) {
-    let reader = new FileReader()
-    reader.readAsDataURL(file)
-    reader.onloadend = function () {
-        let img = document.createElement('img')
-        img.src = reader.result
-        document.getElementById('feedback-form__upload-preview').appendChild(img)
+
+    dropArea.addEventListener('dragenter', dropAreaHighlight, false)
+    dropArea.addEventListener('dragover', dropAreaHighlight, false)
+
+    dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
+    dropArea.addEventListener('drop', dropAreaUnhighlight, false)
+    dropArea.addEventListener('drop', dropHandle, false)
+
+
+
+    function preventDefaults(e) {
+        e.preventDefault()
+        e.stopPropagation()
+    }
+
+    function dropAreaHighlight() {
+        dropArea.classList.add('highlight')
+    }
+
+    function dropAreaUnhighlight() {
+        dropArea.classList.remove('highlight')
+    }
+
+    function dropHandle(e) {
+        let dt = e.dataTransfer
+        let files = dt.files;
+        handleFiles(files)
+    }
+
+    function handleFiles(files) {
+        files = [...files]
+        // files.forEach(uploadFile)
+        files.forEach(previewFile)
+    }
+
+    function uploadFile(file) {
+        var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
+        var xhr = new XMLHttpRequest()
+        var formData = new FormData()
+        xhr.open('POST', url, true)
+        xhr.addEventListener('readystatechange', function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Готово. Информируем пользователя
+            }
+            else if (xhr.readyState == 4 && xhr.status != 200) {
+                // Ошибка. Информируем пользователя
+            }
+        })
+        formData.append('file', file)
+        xhr.send(formData)
+    }
+
+    function previewFile(file) {
+        let reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onloadend = function () {
+            let img = document.createElement('img')
+            img.src = reader.result
+            document.getElementById('feedback-form__upload-preview').appendChild(img)
+        }
     }
 }
+
+
+
+// вывод значений диаграммой
+function progressView() {
+    let diagramBox = document.querySelectorAll('.diagram');
+    diagramBox.forEach((box) => {
+        let deg = (360 * box.dataset.percent / 100) + 180;
+        if (box.dataset.percent >= 50) {
+            box.classList.add('over-50');
+        } else {
+            box.classList.remove('over-50');
+        }
+        box.querySelector('.diagram-right').style.transform = 'rotate(' + deg + 'deg)';
+    });
+}
+progressView()
+
+
+// вывод значении линией
 
 
 
