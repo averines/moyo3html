@@ -2404,11 +2404,13 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
   li {
     font-size: 12px;
     letter-spacing: $ls;
     margin-right: 20px;
+    margin-bottom: 5px;
 
     &::after {
       content: "/";
@@ -3091,15 +3093,16 @@
 
 .feedback-stars {
   position: relative;
+  width: 100px;
 
   &__filled {
     width: 0%;
-    height: 28px;
+    height: 19px;
     background: url(../img/icons/star-filled.svg) repeat-x;
-    // background-position-x: -5px;
     position: absolute;
     top: 0;
     left: 0;
+    background-size: contain;
 
     &[data-feedback-stars="1"] {
       width: 20%;
@@ -3120,9 +3123,11 @@
 
   &__stroked {
     width: 146px;
-    height: 28px;
+    width: 100%;
+    height: 19px;
     background: url(../img/icons/star-stroked.svg) repeat-x;
     // background-position-x: -5px;
+    background-size: contain;
     position: relative;
   }
 }
@@ -3145,11 +3150,11 @@
 
 .stats-rating {
   background-color: $bg-light;
-  padding: 2em;
+  padding: 1em;
   display: flex;
 
   &__info {
-    margin-right: 2em;
+    margin-right: 1em;
   }
 
   &__number {
@@ -3166,18 +3171,21 @@
 
 .stats-sizes {
   display: flex;
+  justify-content: center;
+  margin: 1em 0;
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 0.75em;
   }
 
   &__title {
     font-weight: 600;
     margin-top: 1em;
+    font-size: 0.75em;
   }
 }
 
@@ -3185,16 +3193,16 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
   }
 
   &__number {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 600;
   }
 
   &__percent {
-    font-size: 0.9em;
+    font-size: 0.75em;
 
     &::after {
       content: "%";
@@ -3202,10 +3210,10 @@
   }
 
   &__line {
-    width: 150px;
+    width: 95px;
     height: 6px;
     background-color: $line-dark;
-    margin: 0 1em;
+    margin: 0 0.5em;
     position: relative;
 
     &::before {
@@ -3221,8 +3229,8 @@
 }
 
 .diagram {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: $main;
   position: relative;
@@ -3232,10 +3240,10 @@
     content: "";
     display: block;
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
     border-radius: 50%;
     background: #fff;
     z-index: 3;
@@ -3282,7 +3290,7 @@
   }
 
   .diagram-text {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
     z-index: 4;
     position: relative;
@@ -3290,6 +3298,56 @@
 
     &::after {
       content: "%";
+    }
+  }
+}
+
+.product-container {
+  column-gap: 2em;
+}
+
+.product-gallery {
+  margin-bottom: 2em;
+  display: flex;
+}
+
+.product-preview-slider {
+  max-height: 385px;
+  overflow: hidden;
+  padding: 5px;
+  background-color: $text-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  &__item {
+    outline: 3px solid transparent;
+    transition: $tr;
+
+    picture,
+    img {
+      display: block;
+    }
+
+    &.is-active {
+      outline-color: $main;
+      z-index: 1;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.product-gallery-slider {
+  &__item {
+    max-width: 250px;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
     }
   }
 }

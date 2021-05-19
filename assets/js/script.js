@@ -120,13 +120,36 @@ menuUserBtn.addEventListener('click', (e) => {
 
 
 // сброс развернутых элементов при переходе в десктопный режим
+let clientWidth = 0
 window.addEventListener('resize', () => {
+    clientWidth = document.body.clientWidth;
+
     if (document.body.clientWidth > 1200) {
         menuInfoBtn.classList.remove('is-active')
         menuInfoWindow.classList.remove('is-active')
         menuUserBtn.classList.remove('is-active')
         menuUserWindow.classList.remove('is-active')
     }
+
+    if (document.body.clientWidth < 768) {
+        const productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
+        var productGallerySlider = productGallerySliderContainer.length > 0 ?
+            tns({
+                container: productGallerySliderContainer[0],
+                items: 2,
+                slideBy: 'page',
+                autoplay: false,
+                controls: false,
+                nav: false,
+                loop: false,
+                mouseDrag: true,
+                swipeAngle: 60,
+                autoWidth: true,
+                gutter: 10,
+            })
+            : "";
+    }
+
 }, false);
 
 
@@ -527,6 +550,7 @@ productSliders.forEach(element => {
 });
 
 
+
 //fancybox
 $('[data-fancybox="gallery-feedback"]').fancybox({
     backFocus: false,
@@ -552,3 +576,29 @@ $('[data-fancybox="gallery-feedback"]').fancybox({
         }
     }
 });
+
+
+//галерея на странице продукта
+const productPreviewItems = document.querySelectorAll('.product-preview-slider__item')
+const productGalleryItems = document.querySelectorAll('.product-gallery-slider__item')
+
+productPreviewItems.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+        removeIsActive(productPreviewItems)
+        item.classList.add('is-active');
+
+        productGalleryItems.forEach(productGalleryItem => {
+            productGalleryItem.style.zIndex = 0
+        })
+
+        productGalleryItems[index].style.zIndex = 1
+
+    })
+})
+
+// функция для удаления активного класса у всех потомков
+const removeIsActive = (items) => {
+    [...items].forEach(item => {
+        item.classList.remove('is-active')
+    })
+}

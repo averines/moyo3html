@@ -249,6 +249,22 @@
   .btn-filter {
     margin-left: 20px;
   }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .product-gallery-slider {
+    &__item {
+      position: absolute;
+      height: 385px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
