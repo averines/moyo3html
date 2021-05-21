@@ -282,6 +282,13 @@
     grid-template-columns: 1fr 1fr;
     column-gap: $gap * 4;
   }
+
+  .list-contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: $gap;
+  }
 }
 
 // lg
