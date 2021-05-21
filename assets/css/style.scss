@@ -3354,9 +3354,6 @@
 }
 
 //табы
-.tabs {
-}
-
 .tabs-titles {
   display: flex;
   justify-content: center;
@@ -3409,6 +3406,14 @@
   column-gap: 1.5em;
   line-height: 1.4;
 
+  &__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+    font-size: 0.7em;
+  }
+
   &__title {
     font-size: 1.05em;
     font-weight: 600;
@@ -3451,6 +3456,7 @@
     width: 50px;
     text-align: center;
     align-self: center;
+    font-size: 0.7em;
   }
 
   &__info {

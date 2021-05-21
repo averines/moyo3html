@@ -4149,6 +4149,17 @@ hr.dotted {
   line-height: 1.4;
 }
 
+.about-item__icon {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 50px;
+  text-align: center;
+  font-size: 0.7em;
+}
+
 .about-item__title {
   font-size: 1.05em;
   font-weight: 600;
@@ -4201,6 +4212,7 @@ hr.dotted {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-size: 0.7em;
 }
 
 .contacts-item__info {
