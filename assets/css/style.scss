@@ -3353,5 +3353,46 @@
   }
 }
 
+//табы
+.tabs {
+}
+
+.tabs-titles {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.77em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1.25em 2.5em;
+    color: $text;
+    border-bottom: 2px solid $line-dark;
+    flex-grow: 1;
+    transition: $tr;
+
+    &:hover {
+      background-color: $bg-light;
+    }
+
+    &.is-active {
+      border-bottom-color: $main;
+    }
+  }
+}
+
+.tabs-content {
+  &__item {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";
