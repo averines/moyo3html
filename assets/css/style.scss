@@ -3512,14 +3512,28 @@
   }
 }
 
+.terms-wrapper {
+  p {
+    margin-top: 0.5em;
+  }
+  p.h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
 .list-terms {
   margin: 0;
-  padding: 2em;
+  padding: 3em 2em;
   list-style: none;
   background-color: $bg-light;
 
   &__item {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 2em 0;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -3529,9 +3543,10 @@
   &__number {
     font-size: 2.5em;
     color: $line-dark - 20;
-    width: 2em;
+    width: 1.5em;
     flex-grow: 0;
     flex-shrink: 0;
+    text-align: center;
   }
 
   &__title {
@@ -3539,6 +3554,79 @@
     font-weight: 600;
     font-size: 0.9em;
     margin-bottom: 0.5em;
+  }
+
+  &__text {
+    p {
+      margin: 0 0 1em 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.list-return {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 2em;
+  }
+}
+
+.return-item {
+  padding: 1.5em;
+  background-color: $white;
+
+  &__title {
+    font-weight: 600;
+    font-size: 0.95em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid $main;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.list-docs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 1.5em;
+    display: flex;
+    column-gap: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $text-dark;
+      text-decoration: underline;
+      font-size: 0.9em;
+    }
+  }
+
+  &__item--xls {
+    &::before {
+      flex-grow: 0;
+      flex-shrink: 0;
+      content: "";
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      background: url(/assets/img/icons/xls.svg) no-repeat;
+    }
   }
 }
 

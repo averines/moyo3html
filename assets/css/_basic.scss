@@ -118,6 +118,16 @@ h4,
   }
 }
 
+.mb-1,
+.my-1 {
+  margin-bottom: 1em;
+}
+
+.mt-1,
+.my-1 {
+  margin-top: 1em;
+}
+
 .mb-2,
 .my-2 {
   margin-bottom: 2em;
@@ -358,11 +368,20 @@ h4,
   text-align: right;
 }
 
-p {
-  line-height: 1.4;
+.text-italic {
+  font-style: italic;
+}
+
+.text-muted {
+  color: $text-light;
+}
+
+.text-main {
+  color: $main;
 }
 
 p {
+  line-height: 1.4;
   a {
     color: $main;
     transition: $tr;
