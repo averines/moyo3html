@@ -289,6 +289,13 @@
     grid-template-rows: 1fr 1fr 1fr;
     column-gap: $gap;
   }
+
+  .list-suppliers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: $gap;
+  }
 }
 
 // lg
@@ -885,6 +892,10 @@
     &__item {
       height: 800px;
     }
+  }
+  .list-suppliers {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 
