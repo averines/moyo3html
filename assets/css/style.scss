@@ -2834,26 +2834,6 @@
   }
 }
 
-.alert {
-  font-size: 0.9em;
-  border-bottom: 1px solid $main;
-  border-top: 1px solid $main;
-  position: relative;
-  margin-top: 1em;
-
-  &::before {
-    content: "Внимание";
-    position: absolute;
-    color: $white;
-    background-color: $main;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.7em;
-    padding: 0.3em 1em;
-    transform: translateY(-100%);
-  }
-}
-
 .product-accordion {
   margin: 1.5em 0;
 

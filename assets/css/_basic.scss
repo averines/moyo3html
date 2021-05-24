@@ -118,54 +118,23 @@ h4,
   }
 }
 
-.mb-1,
-.my-1 {
-  margin-bottom: 1em;
+.d-flex {
+  display: flex;
+  column-gap: 15px;
 }
 
-.mt-1,
-.my-1 {
-  margin-top: 1em;
+.align-center {
+  align-items: center;
 }
 
-.mb-2,
-.my-2 {
-  margin-bottom: 2em;
-}
+.list-clear {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-.mt-2,
-.my-2 {
-  margin-top: 2em;
-}
-
-.mb-3,
-.my-3 {
-  margin-bottom: 3em;
-}
-
-.mt-3,
-.my-3 {
-  margin-top: 3em;
-}
-
-.mb-4,
-.my-4 {
-  margin-bottom: 4em;
-}
-
-.mt-4,
-.my-4 {
-  margin-top: 4em;
-}
-
-.mb-5,
-.my-5 {
-  margin-bottom: 5em;
-}
-
-.mt-5,
-.my-5 {
-  margin-top: 5em;
+  li {
+    margin: 0.5em;
+  }
 }
 
 .row {
@@ -180,6 +149,27 @@ h4,
   padding-right: $gap;
   position: relative;
   width: 100%;
+}
+
+.alert {
+  font-size: 0.9em;
+  border-bottom: 1px solid $main;
+  border-top: 1px solid $main;
+  position: relative;
+  margin-top: 1em;
+  background: #f9f2f2;
+
+  &::before {
+    content: "Внимание";
+    position: absolute;
+    color: $white;
+    background-color: $main;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.7em;
+    padding: 0.3em 1em;
+    transform: translateY(-100%);
+  }
 }
 
 // кнопки
@@ -362,6 +352,55 @@ h4,
   }
 }
 
+.accordion--standart {
+  .accordion__title {
+    color: $text-dark;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: $tr;
+    border-top: 1px solid $line-light;
+
+    &:hover {
+      background: linear-gradient(270deg, $bg-light 0%, $white 100%);
+    }
+
+    &::after {
+      background: url(../img/icons/arrow.svg) no-repeat center;
+      background-size: 30%;
+    }
+  }
+
+  .accordion__content {
+    padding-left: $gap;
+    padding-right: $gap;
+
+    p {
+      font-size: 0.95em;
+    }
+  }
+
+  .accordion__item {
+    &.is-active {
+      .accordion__title {
+        border-bottom: 1px solid $main;
+
+        &::after {
+          background-image: url(../img/icons/arrow.svg);
+          transform: rotate(90deg);
+        }
+      }
+      .accordion__content {
+        padding-bottom: 3em;
+      }
+    }
+  }
+}
+
 //для текста
 
 .text-right {
@@ -378,6 +417,10 @@ h4,
 
 .text-main {
   color: $main;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 p {
@@ -442,4 +485,54 @@ hr {
 
 .italic {
   font-style: italic;
+}
+
+.mb-1,
+.my-1 {
+  margin-bottom: 1em;
+}
+
+.mt-1,
+.my-1 {
+  margin-top: 1em;
+}
+
+.mb-2,
+.my-2 {
+  margin-bottom: 2em;
+}
+
+.mt-2,
+.my-2 {
+  margin-top: 2em;
+}
+
+.mb-3,
+.my-3 {
+  margin-bottom: 3em;
+}
+
+.mt-3,
+.my-3 {
+  margin-top: 3em;
+}
+
+.mb-4,
+.my-4 {
+  margin-bottom: 4em;
+}
+
+.mt-4,
+.my-4 {
+  margin-top: 4em;
+}
+
+.mb-5,
+.my-5 {
+  margin-bottom: 5em;
+}
+
+.mt-5,
+.my-5 {
+  margin-top: 5em;
 }
