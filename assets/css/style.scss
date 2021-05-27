@@ -2077,7 +2077,7 @@
   z-index: 5;
   width: 70px;
   height: 100%;
-  background-color: $text-dark;
+  background-color: $bg-dark;
   align-items: center;
   padding: 5px;
   row-gap: 5px;
@@ -2091,6 +2091,7 @@
     transition: $tr;
     outline: 3px solid transparent;
     outline-offset: -3px;
+    padding: 0;
 
     &:hover {
       opacity: 0.9;
@@ -3296,7 +3297,7 @@
   max-height: 385px;
   overflow: hidden;
   padding: 5px;
-  background-color: $text-dark;
+  background-color: $bg-dark;
   flex-direction: column;
   align-items: center;
   gap: 2px;

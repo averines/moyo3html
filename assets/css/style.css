@@ -2800,7 +2800,7 @@ hr.dotted {
   z-index: 5;
   width: 70px;
   height: 100%;
-  background-color: #555;
+  background-color: #c4c4c4;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2819,6 +2819,7 @@ hr.dotted {
   transition: all 0.2s ease-in-out;
   outline: 3px solid transparent;
   outline-offset: -3px;
+  padding: 0;
 }
 
 .color-variants__item:hover {
@@ -4170,7 +4171,7 @@ hr.dotted {
   max-height: 385px;
   overflow: hidden;
   padding: 5px;
-  background-color: #555;
+  background-color: #c4c4c4;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
