@@ -3340,6 +3340,7 @@
 //табы
 .tabs-titles {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   &__item {

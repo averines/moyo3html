@@ -277,6 +277,10 @@
     display: none;
   }
 
+  .tabs-titles {
+    flex-direction: row;
+  }
+
   .list-about {
     display: grid;
     grid-template-columns: 1fr 1fr;
