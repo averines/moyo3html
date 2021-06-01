@@ -4542,6 +4542,56 @@ hr.dotted {
   margin: 3em 0;
 }
 
+.table-title {
+  color: #ab064e;
+  font-size: 1.1em;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table {
+  vertical-align: top;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.table td {
+  border: none;
+  background-color: white;
+  padding: 0.75em 1.5em;
+}
+
+.table thead tr td {
+  background: #f3f2f0;
+}
+
+.table tbody tr:nth-child(2n - 1) td {
+  background-color: #fdfcfa;
+}
+
+.table tbody tr:hover td {
+  background-color: #e9e8e6;
+}
+
+.table-center {
+  text-align: center;
+}
+
+.table-first-left tbody tr td:first-child {
+  text-align: left;
+}
+
+.table-first-left thead tr td:first-child {
+  text-align: left;
+}
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: none;

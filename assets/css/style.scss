@@ -3617,5 +3617,56 @@
   margin: 3em 0;
 }
 
+.table-title {
+  color: $main;
+  font-size: 1.1em;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table {
+  vertical-align: top;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+
+  td {
+    border: none;
+    background-color: $white;
+    padding: 0.75em 1.5em;
+  }
+
+  thead tr td {
+    background: $bg-light;
+  }
+
+  tbody tr:nth-child(2n - 1) td {
+    background-color: $bg-light + 10;
+  }
+
+  tbody tr:hover td {
+    background-color: $bg-light - 10;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-first-left {
+    tbody tr td:first-child {
+      text-align: left;
+    }
+    thead tr td:first-child {
+      text-align: left;
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";
