@@ -1877,6 +1877,7 @@
     .color-variants {
       right: -70px;
       left: auto;
+      box-shadow: 10px 5px 15px transparentize($black, 0.85);
     }
   }
 }
@@ -2077,11 +2078,11 @@
   z-index: 5;
   width: 70px;
   height: 100%;
-  background-color: $bg-dark;
+  background-color: $white;
   align-items: center;
   padding: 5px;
   row-gap: 5px;
-  box-shadow: 0 5px 20px transparentize($black, 0.75);
+  box-shadow: -10px 5px 15px transparentize($black, 0.85);
 
   &__item {
     display: block;
