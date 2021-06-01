@@ -1899,10 +1899,12 @@
       }
     }
 
+    &:nth-child(6n + 1),
     &:first-child {
       .color-variants {
         right: -70px;
         left: auto;
+        box-shadow: 10px 5px 15px transparentize($black, 0.85);
       }
     }
   }

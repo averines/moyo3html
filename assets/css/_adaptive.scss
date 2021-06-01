@@ -485,6 +485,7 @@
       .color-variants {
         right: -70px;
         left: auto;
+        box-shadow: 10px 5px 15px transparentize($black, 0.85);
       }
     }
 
@@ -551,12 +552,12 @@
   .products {
     grid-template-columns: repeat(6, 1fr);
 
-    .product-wrapper:nth-child(7n) {
-      .color-variants {
-        right: -70px;
-        left: auto;
-      }
-    }
+    // .product-wrapper:nth-child(7n) {
+    //   .color-variants {
+    //     right: -70px;
+    //     left: auto;
+    //   }
+    // }
   }
 
   .product-wrapper {
