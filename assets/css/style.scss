@@ -3689,5 +3689,49 @@
   }
 }
 
+.list-delivery {
+  margin: 2em 0 0 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 0.5em;
+  }
+}
+
+.delivery-item {
+  background-color: $white;
+  padding: 1.5em;
+
+  &__title {
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
+
+.delivery-postman {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-top: -50px;
+
+  &__text {
+    font-style: italic;
+    font-size: 0.85em;
+    line-height: 1.4;
+    text-align: right;
+    max-width: 450px;
+    margin-left: auto;
+    margin-top: 50px;
+  }
+}
+
 @import "animations";
 @import "adaptive";
