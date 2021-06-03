@@ -3483,6 +3483,92 @@
   }
 }
 
+//выбор цвета на странице товара
+.product-colors {
+  margin-top: 3em;
+  &__title {
+    font-weight: bold;
+    font-size: 0.95em;
+  }
+}
+
+.product-color-info {
+  margin-top: 2em;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  &__title {
+    font-weight: bold;
+    font-size: 0.95em;
+  }
+
+  &__link {
+    font-weight: 400;
+    color: $text-light;
+    font-size: 0.85em;
+  }
+}
+
+//таблица с доступными размерами выбранного цвета
+.product-table {
+  &.table td {
+    padding: 0.85em 0.75em;
+  }
+
+  thead {
+    td {
+      font-size: 0.9em;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 2px dotted $line-light;
+    }
+  }
+
+  &__price {
+    font-size: 0.95em;
+    min-width: 100px;
+  }
+}
+
+.icon-info {
+  display: inline-block;
+  width: 20px;
+  height: 1em;
+  margin-left: 0.3em;
+  background: url(/assets/img/icons/info.svg) no-repeat center;
+  filter: grayscale(1);
+  transform: translateY(1px);
+}
+
+//итог на странице товара
+.product-total {
+  display: flex;
+  margin-top: 1.5em;
+  justify-content: flex-end;
+  width: 100%;
+  column-gap: 0.3em;
+
+  &__count {
+    font-weight: 600;
+
+    &::after {
+      content: " шт. / ";
+    }
+  }
+
+  &__cost {
+    font-weight: 600;
+
+    &::after {
+      content: " ₽";
+    }
+  }
+}
+
 //табы
 .tabs-titles {
   display: flex;

@@ -4401,6 +4401,96 @@ hr.dotted {
   border-right: none;
 }
 
+.product-colors {
+  margin-top: 3em;
+}
+
+.product-colors__title {
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.product-color-info {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.product-color-info__title {
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.product-color-info__link {
+  font-weight: 400;
+  color: #777;
+  font-size: 0.85em;
+}
+
+.product-table.table td {
+  padding: 0.85em 0.75em;
+}
+
+.product-table thead td {
+  font-size: 0.9em;
+}
+
+.product-table tbody tr {
+  border-bottom: 2px dotted #d9d9d9;
+}
+
+.product-table__price {
+  font-size: 0.95em;
+  min-width: 100px;
+}
+
+.icon-info {
+  display: inline-block;
+  width: 20px;
+  height: 1em;
+  margin-left: 0.3em;
+  background: url(/assets/img/icons/info.svg) no-repeat center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.product-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  -webkit-column-gap: 0.3em;
+          column-gap: 0.3em;
+}
+
+.product-total__count {
+  font-weight: 600;
+}
+
+.product-total__count::after {
+  content: " шт. / ";
+}
+
+.product-total__cost {
+  font-weight: 600;
+}
+
+.product-total__cost::after {
+  content: " ₽";
+}
+
 .tabs-titles {
   display: -webkit-box;
   display: -ms-flexbox;

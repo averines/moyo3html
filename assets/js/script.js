@@ -551,6 +551,31 @@ productSliders.forEach(element => {
 
 
 
+const productColorsSliderContainer = document.querySelectorAll('.product-colors-slider')
+var productColorsSlider = productColorsSliderContainer.length > 0 ?
+    tns({
+        container: productColorsSliderContainer[0],
+        items: 4,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 5,
+        responsive: {
+            768: {
+                items: 6,
+            }
+        }
+    })
+    : "";
+
+
+
+
 //fancybox
 $('[data-fancybox="gallery-feedback"]').fancybox({
     backFocus: false,
