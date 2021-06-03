@@ -306,6 +306,29 @@
     grid-template-columns: 1fr 1fr;
     column-gap: $gap;
   }
+
+  .product-gallery-slider__sticky {
+    display: none;
+  }
+
+  .product-info {
+    .product-status {
+      display: block;
+    }
+    &__price {
+      font-size: 1.25em;
+    }
+  }
+
+  .product-colors-slider__item {
+    width: 85px;
+    a {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 // lg
@@ -708,6 +731,17 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1.5em;
   }
+
+  .specifications-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .social-share-wwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 //xl
@@ -989,6 +1023,16 @@
     &__item {
       max-width: 270px;
     }
+  }
+
+  .product-container {
+    grid-template-columns: 2.3fr 3fr;
+    column-gap: 0;
+  }
+
+  .product-info {
+    background-color: $white;
+    padding: 4em 6em;
   }
 }
 

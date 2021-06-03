@@ -3380,6 +3380,7 @@
   background-size: 55%;
   filter: grayscale(1);
   transition: all 0.1s ease-in-out;
+  margin-left: auto;
 
   &:active {
     transform: scale(0.9);
@@ -3417,20 +3418,46 @@
     &__infotext {
       display: flex;
       align-items: baseline;
-      font-size: 0.85em;
+      font-size: 0.83em;
       column-gap: 0.3em;
       text-transform: lowercase;
       padding-bottom: 1.5em;
+      line-height: 1.4;
+      margin-top: 0.5em;
     }
   }
 
   &__price {
     font-size: 1.15em;
   }
+
+  .product-status {
+    display: none;
+    &::after {
+      display: inline-block;
+      background-color: $special-1;
+      color: $white;
+      font-size: 0.65em;
+      text-transform: uppercase;
+      padding: 0.33em 1em;
+      z-index: 1;
+    }
+
+    &.product-status--new {
+      &::after {
+        content: "Новинка";
+      }
+    }
+  }
+}
+
+.specifications-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .specifications {
-  margin: 1em 0;
+  margin: 1.5em 0 1em 0;
   padding: 0;
   list-style: none;
 
@@ -3493,10 +3520,13 @@
 }
 
 .product-color-info {
-  margin-top: 2em;
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
+  &__header {
+    margin-top: 2em;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 1em;
+  }
 
   &__title {
     font-weight: bold;
