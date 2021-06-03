@@ -117,6 +117,12 @@ h5,
           align-items: center;
 }
 
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .list-clear {
   margin: 0;
   padding: 0;
@@ -4225,6 +4231,124 @@ hr.dotted {
 .product-gallery-slider__item img {
   display: block;
   width: 100%;
+}
+
+.product-gallery-slider__download {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: url(/assets/img/icons/download.svg) no-repeat center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.product-gallery-slider__download:hover {
+  opacity: 0.8;
+}
+
+.product-gallery-slider__sticky::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  background-color: #e7003e;
+  color: white;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  padding: 0.33em 1em;
+  z-index: 1;
+}
+
+.product-gallery-slider__sticky--new::after {
+  content: "Новинка";
+}
+
+.product-favorite {
+  z-index: 4;
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url(../img/icons/favorite.svg) no-repeat center;
+  background-size: 55%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.product-favorite:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.product-favorite.is-active {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.product-favorite span {
+  position: absolute;
+  top: 0;
+  right: calc(50% - 7px);
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/favorite_.svg) no-repeat center;
+  background-size: 100%;
+  -webkit-animation: spiral 1s forwards ease-in-out;
+          animation: spiral 1s forwards ease-in-out;
+}
+
+.product-favorite:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.product-info .pagetitle {
+  display: block;
+}
+
+.product-info .pagetitle__header {
+  margin-bottom: 0;
+}
+
+.product-info .pagetitle__infotext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 0.85em;
+  -webkit-column-gap: 0.3em;
+          column-gap: 0.3em;
+  text-transform: lowercase;
+  padding-bottom: 1.5em;
+}
+
+.specifications {
+  margin: 0 0 3em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.specifications__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.88em;
+  -webkit-column-gap: 0.3em;
+          column-gap: 0.3em;
+  line-height: 1.5;
+}
+
+.specifications__title {
+  font-weight: 600;
+}
+
+.specifications__title::after {
+  content: ":";
 }
 
 .tabs-titles {
