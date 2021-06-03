@@ -3423,10 +3423,14 @@
       padding-bottom: 1.5em;
     }
   }
+
+  &__price {
+    font-size: 1.15em;
+  }
 }
 
 .specifications {
-  margin: 0 0 3em 0;
+  margin: 1em 0;
   padding: 0;
   list-style: none;
 
@@ -3442,6 +3446,39 @@
 
     &::after {
       content: ":";
+    }
+  }
+}
+
+.social-share {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 20px;
+    padding: 0 10px;
+    transition: $tr;
+    border-right: 1px solid $line-light;
+
+    img {
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+
+    &:last-child {
+      border-right: none;
     }
   }
 }
