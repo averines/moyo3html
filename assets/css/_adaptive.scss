@@ -281,6 +281,15 @@
     display: flex;
   }
 
+  .d-md-grid {
+    display: grid;
+    column-gap: $gap * 2;
+  }
+
+  .grid-md-1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .tabs-titles {
     flex-direction: row;
   }
@@ -398,6 +407,15 @@
 
 // lg
 @media screen and (min-width: 1024px) {
+  .d-lg-grid {
+    display: grid;
+    column-gap: $gap * 2;
+  }
+
+  .grid-lg-1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .col-lg-8 {
     flex: 0 0 66.6666%;
     max-width: 66.666%;
@@ -649,13 +667,6 @@
 
   .products {
     grid-template-columns: repeat(6, 1fr);
-
-    // .product-wrapper:nth-child(7n) {
-    //   .color-variants {
-    //     right: -70px;
-    //     left: auto;
-    //   }
-    // }
   }
 
   .product-wrapper {

@@ -150,6 +150,14 @@ h5,
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .list-clear {
   margin: 0;
   padding: 0;
@@ -181,11 +189,14 @@ h5,
   position: relative;
   margin-top: 1em;
   background: #f9f2f2;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 
   &::before {
     content: "Внимание";
     position: absolute;
     color: $white;
+    left: 0;
     background-color: $main;
     text-transform: uppercase;
     font-weight: 600;
@@ -458,6 +469,10 @@ h5,
   font-size: 0.85em;
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
+
 p {
   line-height: 1.4;
   a {
@@ -570,4 +585,12 @@ hr {
 .mt-5,
 .my-5 {
   margin-top: 5em;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.pl-1 {
+  padding-left: 1em;
 }
