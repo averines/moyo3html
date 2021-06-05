@@ -5026,7 +5026,7 @@ hr.dotted {
   border-bottom: 2px solid #d9d9d9;
   padding: 0.75em 0;
   margin-bottom: 2em;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .order-item {
@@ -5861,7 +5861,7 @@ hr.dotted {
   }
   .order-item__table thead tr td {
     padding: 0.75em 0.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     border: none;
   }
   .order-item__table tbody tr td {
