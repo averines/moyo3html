@@ -2447,9 +2447,14 @@
 .pagetitle {
   display: flex;
   align-items: baseline;
+
   &__counter {
     font-size: 11px;
     margin-left: 0.75em;
+  }
+
+  &__text {
+    font-size: 0.8em;
   }
 }
 
@@ -3993,6 +3998,381 @@
     max-width: 450px;
     margin-left: auto;
     margin-top: 50px;
+  }
+}
+
+.cabinet-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .pagetitle {
+    flex-direction: column;
+
+    .pagetitle__header {
+      margin: 0 0 0.2em 0;
+    }
+  }
+}
+
+// заказ на странице корзины
+.order {
+  margin-top: 2em;
+  width: 100%;
+}
+
+.order-header {
+  display: none;
+  border-bottom: 2px solid $line-light;
+  padding: 0.75em 0;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+}
+
+.order-item {
+  margin-bottom: 3em;
+  align-items: flex-start;
+
+  &__info-wrapper {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1em;
+  }
+
+  &__pic {
+    max-width: 130px;
+    position: relative;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    flex-shrink: 1;
+    width: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-left: -5px;
+  }
+
+  &__favorite {
+    margin-left: 0;
+  }
+
+  &__remove {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(/assets/img/icons/plus.svg) no-repeat center;
+    transform: rotate(-45deg);
+    background-size: 70%;
+    transition: $tr;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.05em;
+  }
+
+  &__type {
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  &__editsizes {
+    font-size: 0.9em;
+    color: $text-light;
+  }
+
+  .order-item-status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &::after {
+      display: inline-block;
+      background-color: $special-1;
+      color: $white;
+      font-size: 0.65em;
+      text-transform: uppercase;
+      padding: 0.33em 1em;
+      z-index: 1;
+    }
+
+    &.order-item-status--new {
+      &::after {
+        content: "Новинка";
+      }
+    }
+  }
+
+  &__table {
+    .price {
+      border-bottom: 1px solid $line-light;
+      margin-bottom: 0.3em;
+      padding-bottom: 0.3em;
+    }
+    .price__base {
+      font-weight: 400;
+    }
+  }
+
+  &__cost {
+    font-weight: 600;
+    &::after {
+      content: " ₽";
+    }
+  }
+}
+
+.order-item__table {
+  margin-top: 1.5em;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      td {
+        padding: 0.75em 0.5em;
+        font-size: 0.85em;
+        border-bottom: 2px solid $line-dark;
+        border-top: 2px solid $line-dark;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        font-size: 0.95em;
+        padding: 1em 0.5em;
+        border-bottom: 2px dotted $line-dark;
+      }
+    }
+  }
+}
+
+.quantity-counter {
+  display: flex;
+  column-gap: $gap;
+  align-content: center;
+
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    display: block;
+    border: none;
+    background: none;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: $tr;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &--increase {
+      background: url(/assets/img/icons/plus.svg) no-repeat center;
+    }
+
+    &--decrease {
+      background: url(/assets/img/icons/minus.svg) no-repeat center;
+    }
+
+    &:hover {
+      opacity: 1;
+      background-color: $bg-dark;
+    }
+  }
+}
+
+.order-info {
+  background-color: $bg-light;
+  padding: 1.5em 1em;
+}
+
+.order-info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $text-light;
+  }
+
+  &__title {
+    font-size: 0.85em;
+    padding-right: 0.3em;
+    transform: translateY(4px);
+    background-color: $bg-light;
+  }
+
+  &__value {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: $main;
+    padding-left: 0.3em;
+    transform: translateY(4px);
+    background-color: $bg-light;
+
+    &::after {
+      content: " ₽";
+    }
+
+    &--black {
+      color: $black;
+    }
+  }
+}
+
+.order-info-total {
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+
+  .total {
+    margin-left: 0.5em;
+    font-weight: 600;
+
+    &::after {
+      content: " ₽";
+    }
+  }
+}
+
+.order-buttons {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    display: block;
+    width: 280px;
+    margin-bottom: 0.5em;
+  }
+}
+
+.order-status {
+  background-color: $bg-light;
+  padding: 1.5em 0.75em;
+  margin-bottom: 0.5em;
+
+  &__group {
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
+
+  &__group--promocode {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 23px;
+      height: 20px;
+      top: -10px;
+      right: 120px;
+      background: url(/assets/img/icons/scissors.svg) no-repeat center;
+    }
+  }
+
+  &__input {
+    padding: 0.75em 0.5em;
+    background-color: $white;
+    border: 1px dashed $text-light;
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 100px;
+    border-radius: 0;
+  }
+
+  &__btn {
+    color: $white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: $text-light;
+    padding: 0.5em 1em;
+  }
+
+  &__text {
+    background-color: $white;
+    border-top: 1px solid $text-light;
+    border-bottom: 1px solid $text-light;
+    padding: 0.75em 0.5em;
+    font-size: 0.85em;
+    flex-grow: 1;
+
+    span {
+      color: $special-2;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+}
+
+.order-status-total {
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+
+  .total {
+    margin-left: 0.5em;
+    font-weight: 600;
+
+    &::after {
+      content: " ₽";
+    }
+  }
+}
+
+.price-base {
+  &::after {
+    content: " ₽";
+  }
+}
+
+.price-profit {
+  color: $main;
+  font-size: 0.9em;
+  &::after {
+    content: " ₽";
+  }
+  &::before {
+    content: "-";
+  }
+}
+
+.price-discount {
+  color: $white;
+  background-color: $special-2;
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0 0.2em;
+  border-radius: 2px;
+
+  &::after {
+    content: "%";
   }
 }
 

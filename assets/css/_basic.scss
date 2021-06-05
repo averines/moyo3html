@@ -112,6 +112,18 @@ h5,
   margin: -1px;
 }
 
+.after-percent {
+  &::after {
+    content: "%";
+  }
+}
+
+.after-rub {
+  &::after {
+    content: " ₽";
+  }
+}
+
 .link-callback {
   color: $white;
   font-size: 0.85em;
@@ -194,6 +206,7 @@ h5,
   cursor: pointer;
   transition: background-color 0.2s ease-in-out, transform 0.1s;
   text-decoration: none;
+  color: $black;
 
   &:active {
     transform: translateY(2px);
@@ -308,6 +321,12 @@ h5,
     color: $main;
     border-bottom-color: $main;
   }
+}
+
+.btn-logout {
+  color: $main;
+  font-size: 0.9em;
+  margin-top: 0.5em;
 }
 
 // фансибокс
