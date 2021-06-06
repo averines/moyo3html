@@ -112,6 +112,15 @@
 
 // md
 @media screen and (min-width: 768px) {
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .pt-md-3 {
+    padding-top: 3em;
+  }
+
   .main-slider {
     .main-slide {
       &__pic {
@@ -402,6 +411,32 @@
     justify-content: flex-end;
     flex-direction: row;
     column-gap: $gap;
+  }
+
+  .current-discount__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .deposit-content,
+  .charge-content {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-volume__title {
+    display: flex;
+    column-gap: 10px;
+    align-items: flex-end;
+  }
+
+  .discounts-info-wrapper {
+    &__pic {
+      order: 2;
+    }
+
+    &__text {
+      order: 1;
+    }
   }
 }
 
@@ -831,6 +866,17 @@
     &__content {
       order: 1;
       flex-basis: 50%;
+    }
+  }
+
+  .discounts-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3em;
+
+    .current-discount__content {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
