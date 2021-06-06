@@ -4411,5 +4411,44 @@
   }
 }
 
+.defenition-list {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 0.5em;
+    display: flex;
+  }
+
+  &__title {
+    font-weight: 600;
+    min-width: 40px;
+  }
+}
+
+// для страницы Заказ отправлен
+.order-sent-header-wrapper {
+  display: flex;
+  column-gap: 1em;
+  justify-content: flex-start;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.order-sent {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 2em;
+  margin-bottom: 3em;
+
+  &__pic {
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";
