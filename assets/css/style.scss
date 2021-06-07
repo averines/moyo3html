@@ -4603,5 +4603,110 @@
   flex-direction: column;
 }
 
+.history {
+  &__header {
+    padding: 0.5em;
+    border-bottom: 2px solid $line-light;
+    font-size: 0.8em;
+  }
+}
+
+.history-item {
+  padding: 1.5em;
+  border-bottom: 2px dotted $line-dark;
+  display: flex;
+
+  &__info {
+    display: flex;
+    column-gap: 5em;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    background: url(/assets/img/icons/box.svg) no-repeat center;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "Новый";
+      font-weight: 600;
+      font-size: 14px;
+      position: absolute;
+      bottom: -2em;
+      left: -30px;
+      width: 120px;
+      text-align: center;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 28px;
+      height: 28px;
+      bottom: 0;
+      right: -14px;
+      background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+    }
+  }
+
+  .history-item__icon--new {
+    &::after {
+      content: "Новый";
+    }
+    &::before {
+      background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+    }
+  }
+
+  &__content {
+    line-height: 1.4;
+  }
+
+  &__link {
+    font-size: 0.9em;
+    color: $main;
+    margin-top: 1em;
+    display: inline-block;
+  }
+}
+
+.history-table {
+  display: flex;
+
+  &__quantity {
+    width: 50px;
+
+    &::after {
+      content: " шт.";
+    }
+  }
+
+  &__status {
+    border: 1px solid red;
+    width: 250px;
+  }
+
+  &__total {
+    font-weight: 600;
+    &::after {
+      content: " ₽";
+    }
+  }
+
+  &__payment {
+    text-align: center;
+
+    a {
+      color: $main;
+    }
+
+    .success {
+      color: $special-2;
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";

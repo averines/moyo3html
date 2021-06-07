@@ -5727,6 +5727,116 @@ hr.dotted {
           flex-direction: column;
 }
 
+.history__header {
+  padding: 0.5em;
+  border-bottom: 2px solid #d9d9d9;
+  font-size: 0.8em;
+}
+
+.history-item {
+  padding: 1.5em;
+  border-bottom: 2px dotted #cdcdcd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.history-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 5em;
+          column-gap: 5em;
+}
+
+.history-item__icon {
+  width: 40px;
+  height: 40px;
+  background: url(/assets/img/icons/box.svg) no-repeat center;
+  position: relative;
+}
+
+.history-item__icon::after {
+  display: block;
+  content: "Новый";
+  font-weight: 600;
+  font-size: 14px;
+  position: absolute;
+  bottom: -2em;
+  left: -30px;
+  width: 120px;
+  text-align: center;
+}
+
+.history-item__icon::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 28px;
+  height: 28px;
+  bottom: 0;
+  right: -14px;
+  background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+}
+
+.history-item .history-item__icon--new::after {
+  content: "Новый";
+}
+
+.history-item .history-item__icon--new::before {
+  background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+}
+
+.history-item__content {
+  line-height: 1.4;
+}
+
+.history-item__link {
+  font-size: 0.9em;
+  color: #ab064e;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.history-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.history-table__quantity {
+  width: 50px;
+}
+
+.history-table__quantity::after {
+  content: " шт.";
+}
+
+.history-table__status {
+  border: 1px solid red;
+  width: 250px;
+}
+
+.history-table__total {
+  font-weight: 600;
+}
+
+.history-table__total::after {
+  content: " ₽";
+}
+
+.history-table__payment {
+  text-align: center;
+}
+
+.history-table__payment a {
+  color: #ab064e;
+}
+
+.history-table__payment .success {
+  color: #038184;
+}
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: none;
