@@ -1,4 +1,5 @@
 $main: #ab064e;
+$main-light: #f2cfde;
 
 $white: rgba(#fff, 1);
 $black: rgba(#101010, 1);
@@ -48,7 +49,7 @@ main {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1470px;
   padding-left: $gap;
   padding-right: $gap;
   margin: 0 auto;

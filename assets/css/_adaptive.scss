@@ -515,6 +515,18 @@
     margin-top: 5em;
   }
 
+  .post-slider {
+    .post-slide {
+      &__title {
+        font-size: 18px;
+      }
+
+      &__link {
+        display: flex;
+      }
+    }
+  }
+
   .modal {
     &__title {
       font-size: 1.3em;
@@ -933,12 +945,15 @@
         width: 100%;
         height: auto;
         margin: 0;
-        background: transparentize($white, 0.2);
         margin-right: 15px;
         min-width: 250px;
 
         &__form {
           margin: 0;
+        }
+
+        &__close {
+          display: none;
         }
       }
 
@@ -1043,10 +1058,11 @@
         font-weight: 400;
         bottom: 3em;
         padding: 0.75em 2.5em;
-        border: 1px solid $white;
+        border: 2px solid transparentize($white, 0.6);
 
         &:hover {
-          opacity: 0.5;
+          background-color: $main;
+          border-color: $main;
         }
       }
     }
