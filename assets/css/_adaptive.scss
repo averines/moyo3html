@@ -301,6 +301,15 @@
 
   .tabs-titles {
     flex-direction: row;
+
+    &__item {
+      border: none;
+      border-bottom: 2px solid $line-dark;
+
+      &.is-active {
+        border-color: $main;
+      }
+    }
   }
 
   .list-about {

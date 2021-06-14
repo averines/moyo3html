@@ -6326,6 +6326,13 @@ hr.dotted {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .tabs-titles__item {
+    border: none;
+    border-bottom: 2px solid #cdcdcd;
+  }
+  .tabs-titles__item.is-active {
+    border-color: #ab064e;
+  }
   .list-about {
     display: -ms-grid;
     display: grid;
