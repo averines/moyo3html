@@ -580,6 +580,7 @@
           display: block;
           transition: none;
           cursor: initial;
+          border-bottom: none;
 
           &::after {
             display: none;
@@ -941,6 +942,10 @@
         &__item {
           padding: 11px;
         }
+
+        .btn-favorites {
+          padding: 13px;
+        }
       }
 
       .search {
@@ -983,7 +988,7 @@
           top: -2px;
           height: auto;
           min-height: calc(100% + 2px);
-          padding-top: 2em;
+          padding-top: 33px;
 
           svg {
             width: 28%;
@@ -1136,6 +1141,12 @@
 
   .price {
     font-size: 1em;
+  }
+
+  .product-info {
+    &__price {
+      font-size: 1.25em;
+    }
   }
 }
 

@@ -13,6 +13,7 @@ $special-4: #e64747;
 $text: #3d3d3c;
 $text-dark: #555;
 $text-light: #777;
+$text-main-light: #d9aab2;
 
 $line-dark: #cdcdcd;
 $line-light: #d9d9d9;
@@ -134,15 +135,14 @@ h5,
 }
 
 .link-callback {
-  color: $white;
+  color: $text-main-light;
   font-size: 0.85em;
   text-decoration: none;
-  border-bottom: 1px dashed transparentize($white, 0.3);
-  opacity: 0.6;
+  border-bottom: 1px dashed transparentize($white, 0.5);
   transition: $tr;
 
   &:hover {
-    opacity: 1;
+    color: $white;
   }
 }
 
