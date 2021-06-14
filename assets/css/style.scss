@@ -1814,7 +1814,7 @@
         content: "";
         width: 15px;
         height: 10px;
-        background: url(/assets/img/icons/arrow.svg) no-repeat center;
+        background: url(../img/icons/arrow.svg) no-repeat center;
         background-size: contain;
         transform: scale(-1, 1) translateY(-0.5px);
         transition: $tr;
@@ -2296,6 +2296,11 @@
   padding-bottom: 4em;
 
   .bigcategories-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+
     &__title {
       text-transform: uppercase;
       font-size: 0.9em;
@@ -3422,7 +3427,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    background: url(/assets/img/icons/download.svg) no-repeat center;
+    background: url(../img/icons/download.svg) no-repeat center;
     transition: $tr;
 
     &:hover {
@@ -3639,6 +3644,10 @@
     }
   }
 
+  &.table tr:nth-child(2n - 1) td {
+    background-color: $white;
+  }
+
   &__price {
     font-size: 0.95em;
     min-width: 100px;
@@ -3650,7 +3659,7 @@
   width: 20px;
   height: 1em;
   margin-left: 0.3em;
-  background: url(/assets/img/icons/info.svg) no-repeat center;
+  background: url(../img/icons/info.svg) no-repeat center;
   filter: grayscale(1);
   transform: translateY(1px);
 }
@@ -3953,7 +3962,7 @@
       display: block;
       width: 1.5em;
       height: 1.5em;
-      background: url(/assets/img/icons/xls.svg) no-repeat;
+      background: url(../img/icons/xls.svg) no-repeat;
     }
   }
 }
@@ -3998,7 +4007,7 @@
   }
 
   tbody tr:nth-child(2n - 1) td {
-    background-color: $bg-light + 10;
+    background-color: #f9f9f9;
   }
 
   tbody tr:hover td {
@@ -4146,7 +4155,7 @@
     width: 20px;
     height: 20px;
     display: block;
-    background: url(/assets/img/icons/plus.svg) no-repeat center;
+    background: url(../img/icons/plus.svg) no-repeat center;
     transform: rotate(-45deg);
     background-size: 70%;
     transition: $tr;
@@ -4260,11 +4269,11 @@
     cursor: pointer;
 
     &--increase {
-      background: url(/assets/img/icons/plus.svg) no-repeat center;
+      background: url(../img/icons/plus.svg) no-repeat center;
     }
 
     &--decrease {
-      background: url(/assets/img/icons/minus.svg) no-repeat center;
+      background: url(../img/icons/minus.svg) no-repeat center;
     }
 
     &:hover {
@@ -4367,7 +4376,7 @@
       height: 20px;
       top: -10px;
       right: 120px;
-      background: url(/assets/img/icons/scissors.svg) no-repeat center;
+      background: url(../img/icons/scissors.svg) no-repeat center;
     }
   }
 
@@ -4604,7 +4613,7 @@
       right: -85%;
       width: 126px;
       height: 62px;
-      background: url(/assets/img/coins.svg) no-repeat center;
+      background: url(../img/coins.svg) no-repeat center;
       background-size: contain;
       z-index: -1;
     }
@@ -4629,7 +4638,7 @@
       height: 34px;
       top: 0;
       left: -10px;
-      background: url(/assets/img/triangle1.svg) no-repeat top right;
+      background: url(../img/triangle1.svg) no-repeat top right;
     }
 
     &::after {
@@ -4640,7 +4649,7 @@
       height: 14px;
       bottom: -14px;
       right: 0;
-      background: url(/assets/img/triangle2.svg) no-repeat top right;
+      background: url(../img/triangle2.svg) no-repeat top right;
       background-size: 100%;
     }
   }
@@ -4700,7 +4709,7 @@
   &__icon {
     width: 40px;
     height: 40px;
-    background: url(/assets/img/icons/box.svg) no-repeat center;
+    background: url(../img/icons/box.svg) no-repeat center;
     position: relative;
 
     &::after {
@@ -4723,7 +4732,7 @@
       height: 28px;
       bottom: 0;
       right: -14px;
-      background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+      background: url(../img/icons/order-status/01.svg) no-repeat center;
     }
   }
 
@@ -4732,7 +4741,7 @@
       content: "Новый";
     }
     &::before {
-      background: url(/assets/img/icons/order-status/01.svg) no-repeat center;
+      background: url(../img/icons/order-status/01.svg) no-repeat center;
     }
   }
 
