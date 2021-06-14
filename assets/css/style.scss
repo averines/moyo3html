@@ -1677,14 +1677,14 @@
     text-transform: uppercase;
     font-size: 0.75em;
     letter-spacing: $ls;
-    padding: 0.75em 1em;
+    padding: 0.55em 1em;
     margin: 0;
     color: $white;
     background-color: $text;
     display: inline-block;
     font-weight: 600;
     margin-bottom: -2px;
-    min-width: 170px;
+    min-width: 190px;
   }
 }
 
@@ -1727,41 +1727,49 @@
   display: flex;
   align-items: stretch;
 
+  &.tns-horizontal.tns-subpixel > .tns-item {
+    display: flex;
+  }
+
   .post-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
     &__pic {
       position: relative;
       display: block;
       width: 100%;
-      overflow: hidden;
+
+      picture {
+        overflow: hidden;
+        display: block;
+      }
 
       img {
         display: block;
         width: 100%;
-        transition: $tr;
-      }
-
-      &:hover {
-        img {
-          opacity: 0.8;
-        }
+        transition: all 0.5s ease-in-out;
       }
     }
 
     &__sticky {
       color: $white;
       background-color: $special-2;
-      font-size: 0.85em;
+      font-size: 17px;
       padding: 0.2em 1em;
       position: absolute;
       font-weight: 600;
-      bottom: 0;
+      bottom: -10px;
+      z-index: 1;
     }
 
     &__info {
-      padding: 1.5em;
+      padding: 15px 15px 40px 15px;
       background-color: $bg-light;
       min-height: 130px;
-      height: 100%;
+      position: relative;
+      flex-grow: 1;
     }
 
     &__title {
@@ -1784,6 +1792,9 @@
     }
 
     &__link {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
       display: none;
       align-items: center;
       justify-content: flex-end;
@@ -1795,6 +1806,7 @@
       color: $text;
       line-height: 1;
       margin-top: 2em;
+      transition: $tr;
 
       &::after {
         content: "";
@@ -1803,7 +1815,36 @@
         background: url(/assets/img/icons/arrow.svg) no-repeat center;
         background-size: contain;
         transform: scale(-1, 1) translateY(-0.5px);
+        transition: $tr;
       }
+
+      &:hover {
+        color: $main;
+
+        &::after {
+          transform: scale(-1, 1) translateY(-0.5px) translateX(-3px);
+        }
+      }
+    }
+
+    &:hover {
+      .post-slide__pic {
+        img {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+}
+
+.post-slider-actions {
+  .post-slider__item {
+    .post-slide__info {
+      padding: 20px 0 50px 0;
+    }
+    .post-slide__link {
+      right: auto;
+      left: 0;
     }
   }
 }
