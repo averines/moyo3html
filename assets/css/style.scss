@@ -4015,6 +4015,18 @@
     background-color: $bg-light - 10;
   }
 
+  tbody tr td {
+    &.bg-gray-light {
+      background-color: #eee;
+      color: #666;
+    }
+
+    &.bg-gray-dark {
+      background-color: #ddd;
+      color: #666;
+    }
+  }
+
   &-center {
     text-align: center;
   }

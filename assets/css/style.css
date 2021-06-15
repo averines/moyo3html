@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.bg-gray-light {
+  background-color: #eee;
+  color: #666;
+}
+
+.bg-gray-dark {
+  background-color: #ddd;
+  color: #666;
+}
+
 *,
 *::after,
 *::before {
@@ -5080,6 +5090,16 @@ hr.dotted {
 
 .table tbody tr:hover td {
   background-color: #e9e8e6;
+}
+
+.table tbody tr td.bg-gray-light {
+  background-color: #eee;
+  color: #666;
+}
+
+.table tbody tr td.bg-gray-dark {
+  background-color: #ddd;
+  color: #666;
 }
 
 .table-center {
