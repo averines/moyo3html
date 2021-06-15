@@ -714,3 +714,17 @@ $(document).ready(function () {
     }
 
 });
+
+
+
+
+const orderStatusBtns = document.querySelectorAll('.order-status__btn')
+if (orderStatusBtns.length > 0) {
+    orderStatusBtns.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.add('is-active')
+            console.log(item.dataset);
+            item.innerHTML = item.dataset.successText
+        })
+    })
+}

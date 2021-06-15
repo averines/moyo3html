@@ -1,14 +1,4 @@
 @charset "UTF-8";
-.bg-gray-light {
-  background-color: #eee;
-  color: #666;
-}
-
-.bg-gray-dark {
-  background-color: #ddd;
-  color: #666;
-}
-
 *,
 *::after,
 *::before {
@@ -5515,7 +5505,7 @@ hr.dotted {
   width: 23px;
   height: 20px;
   top: -10px;
-  right: 120px;
+  right: 160px;
   background: url(../img/icons/scissors.svg) no-repeat center;
 }
 
@@ -5538,6 +5528,15 @@ hr.dotted {
   border-radius: 0 4px 4px 0;
   background-color: #777;
   padding: 0.5em 1em;
+}
+
+.order-status__btn:hover {
+  cursor: pointer;
+  background-color: #6d6d6d;
+}
+
+.order-status__btn.is-active {
+  background-color: #ab064e;
 }
 
 .order-status__text {
