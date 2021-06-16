@@ -2784,6 +2784,11 @@ hr.dotted {
   height: auto;
 }
 
+.products .product-wrapper .product__favorite {
+  width: 36px;
+  height: 36px;
+}
+
 .products .product-wrapper:nth-child(6n + 1) .color-variants, .products .product-wrapper:first-child .color-variants {
   right: -70px;
   left: auto;
