@@ -2,8 +2,8 @@
 
 .header {
   background-color: $main;
-  background: url(../img/header-bg.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 120%);
-  background-size: cover;
+  background: url(../img/header-bg-414.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
+  background-size: auto 100%, cover;
 
   &-top {
     border-bottom: 1px solid transparentize($white, 0.8);

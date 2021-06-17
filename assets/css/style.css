@@ -619,9 +619,9 @@ hr.dotted {
 
 .header {
   background-color: #ab064e;
-  background: url(../img/header-bg.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#710067), color-stop(120%, #e64747));
-  background: url(../img/header-bg.jpg) no-repeat center, linear-gradient(90deg, #710067 0%, #e64747 120%);
-  background-size: cover;
+  background: url(../img/header-bg-414.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
+  background: url(../img/header-bg-414.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
+  background-size: auto 100%, cover;
 }
 
 .header-top {
@@ -913,8 +913,8 @@ hr.dotted {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ab064e;
-  background: -webkit-gradient(linear, left top, right top, from(#710067), color-stop(120%, #e64747));
-  background: linear-gradient(90deg, #710067 0%, #e64747 120%);
+  background: -webkit-gradient(linear, left top, right top, from(#870873), color-stop(120%, #be1860));
+  background: linear-gradient(90deg, #870873 0%, #be1860 120%);
   left: 0;
   right: 0;
   width: calc(100% - 15px * 2);
@@ -1252,8 +1252,8 @@ hr.dotted {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.25em;
-  background: -webkit-gradient(linear, left top, right top, from(#710067), color-stop(120%, #e64747));
-  background: linear-gradient(90deg, #710067 0%, #e64747 120%);
+  background: -webkit-gradient(linear, left top, right top, from(#870873), color-stop(120%, #be1860));
+  background: linear-gradient(90deg, #870873 0%, #be1860 120%);
 }
 
 .header .menu-user__item {
@@ -5802,7 +5802,7 @@ hr.dotted {
 }
 
 .discount-number__percent {
-  color: #710067;
+  color: #870873;
   font-weight: 600;
   font-size: 5.7em;
   line-height: 1em;
@@ -6604,6 +6604,10 @@ hr.dotted {
   .my-lg-5 {
     margin-top: 5em;
   }
+  .header {
+    background: url(../img/header-bg-1024.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
+    background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
+  }
   .header-main__logo {
     width: 158px;
     min-width: 158px;
@@ -7183,6 +7187,10 @@ hr.dotted {
     max-width: 100%;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .header {
+    background: url(../img/header-bg-2600.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
+    background: url(../img/header-bg-2600.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
   }
   .products {
     -webkit-column-gap: 10px;

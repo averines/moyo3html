@@ -548,6 +548,7 @@
   }
 
   .header {
+    background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
     &-main {
       &__logo {
         width: 158px;
@@ -1231,6 +1232,10 @@
     max-width: 100%;
     padding-left: $gap-big;
     padding-right: $gap-big;
+  }
+
+  .header {
+    background: url(../img/header-bg-2600.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
   }
   .products {
     column-gap: 10px;
