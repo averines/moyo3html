@@ -1563,11 +1563,12 @@ hr.dotted {
   z-index: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border-radius: 0 0 10px 10px;
 }
 
 .dropdown-products__items:hover::after {
+  height: 80px;
   pointer-events: none;
-  opacity: 0;
 }
 
 .dropdown-products .cart-dropdown {
@@ -7005,7 +7006,7 @@ hr.dotted {
   }
   .header-main .user-buttons {
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     margin-left: 15px;
   }
   .header-main .user-buttons__item {
