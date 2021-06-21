@@ -4823,6 +4823,24 @@
     }
   }
 
+  .history-item__icon--processed {
+    &::after {
+      content: "Обрабатывается";
+    }
+    &::before {
+      background: url(../img/icons/order-status/02.svg) no-repeat center;
+    }
+  }
+
+  .history-item__icon--packed {
+    &::after {
+      content: "Упакован";
+    }
+    &::before {
+      background: url(../img/icons/order-status/03.svg) no-repeat center;
+    }
+  }
+
   &__content {
     line-height: 1.5;
   }
@@ -4844,6 +4862,22 @@
       background-size: contain;
       transform: rotate(-90deg);
       opacity: 0.8;
+      transition: $tr;
+    }
+
+    &.is-active {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__more-block {
+    display: none;
+    flex-direction: column;
+
+    &.is-active {
+      display: flex;
     }
   }
 }

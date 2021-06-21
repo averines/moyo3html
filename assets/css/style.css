@@ -6008,6 +6008,22 @@ hr.dotted {
   background: url(../img/icons/order-status/01.svg) no-repeat center;
 }
 
+.history-item .history-item__icon--processed::after {
+  content: "Обрабатывается";
+}
+
+.history-item .history-item__icon--processed::before {
+  background: url(../img/icons/order-status/02.svg) no-repeat center;
+}
+
+.history-item .history-item__icon--packed::after {
+  content: "Упакован";
+}
+
+.history-item .history-item__icon--packed::before {
+  background: url(../img/icons/order-status/03.svg) no-repeat center;
+}
+
 .history-item__content {
   line-height: 1.5;
 }
@@ -6036,6 +6052,27 @@ hr.dotted {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   opacity: 0.8;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.history-item__more-link.is-active::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.history-item__more-block {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.history-item__more-block.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .history-table {

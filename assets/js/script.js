@@ -723,8 +723,24 @@ if (orderStatusBtns.length > 0) {
     orderStatusBtns.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.add('is-active')
-            console.log(item.dataset);
             item.innerHTML = item.dataset.successText
         })
     })
 }
+
+// показ/скрытие блока Подробнее на вкладке История заказов
+const historyItems = document.querySelectorAll('.history__item')
+
+if (historyItems.length > 0) {
+    historyItems.forEach(item => {
+
+        let historyItemMoreBtn = item.querySelector('.history-item__more-link')
+        let historyItemMoreBlock = item.querySelector('.history-item__more-block')
+        historyItemMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            historyItemMoreBtn.classList.toggle('is-active')
+            historyItemMoreBlock.classList.toggle('is-active')
+        })
+    })
+}
+
