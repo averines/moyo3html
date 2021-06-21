@@ -1470,6 +1470,9 @@
             &--ok {
               background: url(../img/icons/social-share/06.svg) no-repeat center;
             }
+            &--ig {
+              background: url(../img/icons/social-share/07.svg) no-repeat center;
+            }
 
             &:hover {
               opacity: 0.8;
@@ -3213,6 +3216,7 @@
 .feedback-stars {
   position: relative;
   width: 100px;
+  margin-right: auto;
 
   &__filled {
     width: 0%;
@@ -3546,6 +3550,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: $text-light;
 
   &::before {
     content: "Добавить в избранное";
@@ -3559,21 +3564,33 @@
     height: 16px;
     background: url(../img/icons/favorite.svg) no-repeat center;
     background-size: 100%;
-    filter: grayscale(1) brightness(10);
+    filter: grayscale(1);
     transition: all 0.1s ease-in-out;
     margin-left: 7px;
     margin-right: 0;
   }
 
   &.is-active {
+    color: $white;
+    background-color: $main;
+    border-color: transparent;
+
     &::before {
       content: "В избранном";
     }
+
     &::after {
-      background: url(../img/icons/favorite.svg) no-repeat center;
-      background-size: 100%;
+      transform: scale(0.9);
       filter: grayscale(1) brightness(10);
-      transform: scale(0.85) translateY(1px);
+    }
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $main;
+    border-color: transparent;
+    &::after {
+      filter: grayscale(1) brightness(10);
     }
   }
 
@@ -3618,6 +3635,22 @@
     }
   }
 
+  &__brand-logo {
+    width: 100px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    transition: $tr;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &__price {
     font-size: 1.15em;
     row-gap: 0.05em;
@@ -3639,6 +3672,16 @@
       &::after {
         content: "Новинка";
       }
+    }
+  }
+
+  .feedback-stars {
+    width: 140px;
+    &__filled {
+      height: 28px;
+    }
+    &__stroked {
+      height: 28px;
     }
   }
 }
@@ -3712,6 +3755,9 @@
     }
     &--ok {
       background: url(../img/icons/social-share/06.svg) no-repeat center;
+    }
+    &--ig {
+      background: url(../img/icons/social-share/07.svg) no-repeat center;
     }
 
     &:hover {
