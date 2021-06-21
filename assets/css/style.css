@@ -4660,6 +4660,7 @@ hr.dotted {
   display: block;
   position: absolute;
   right: 15px;
+  top: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -7597,6 +7598,18 @@ hr.dotted {
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .product-info {
+    background-color: white;
+    padding: 4em 6em;
+  }
+  .product-info__brand-logo {
+    width: 120px;
+    right: 6em;
+    top: 4em;
+  }
+}
+
 @media screen and (min-width: 1900px) {
   .container--big {
     max-width: 100%;
@@ -7637,14 +7650,6 @@ hr.dotted {
         grid-template-columns: 2.3fr 3fr;
     -webkit-column-gap: 0;
             column-gap: 0;
-  }
-  .product-info {
-    background-color: white;
-    padding: 4em 6em;
-  }
-  .product-info__brand-logo {
-    width: 120px;
-    right: 6em;
   }
   .order-sent {
     padding: 4em;
