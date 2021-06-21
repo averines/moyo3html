@@ -70,6 +70,10 @@ main {
   padding-left: 0;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .d-flex {
   display: flex;
 }
@@ -260,7 +264,7 @@ h5,
     color: $white;
 
     &:hover {
-      background-color: $main - 10;
+      background-color: $main - 15;
     }
   }
 
@@ -268,12 +272,20 @@ h5,
     color: $white;
     background-color: $text-light;
     min-width: auto;
+
+    &:hover {
+      background-color: $text-light - 15;
+    }
   }
 
   &-white {
     background-color: $white;
     min-width: auto;
     border: 1px solid $line-light;
+
+    &:hover {
+      background-color: $white - 15;
+    }
   }
 }
 

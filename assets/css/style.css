@@ -42,6 +42,10 @@ main {
   padding-left: 0;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,7 +261,7 @@ h5,
 }
 
 .btn-main:hover {
-  background-color: #a10044;
+  background-color: #9c003f;
 }
 
 .btn-gray {
@@ -266,10 +270,18 @@ h5,
   min-width: auto;
 }
 
+.btn-gray:hover {
+  background-color: #686868;
+}
+
 .btn-white {
   background-color: white;
   min-width: auto;
   border: 1px solid #d9d9d9;
+}
+
+.btn-white:hover {
+  background-color: #f0f0f0;
 }
 
 .btn-burger {
@@ -7182,7 +7194,7 @@ hr.dotted {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .social-share-wwrapper {
+  .social-share-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -225,6 +225,16 @@ const favorites = document.getElementsByClassName('product__favorite');
     })
 })
 
+const favoritesBtns = document.getElementsByClassName('product-favorite-btn');
+[...favoritesBtns].forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('is-active')
+        // item.insertAdjacentHTML('afterbegin', '<span></span>')
+        // setTimeout(function () { item.innerHTML = '' }, 1000)
+    })
+})
+
+
 
 // кнопка добавления размера в корзину
 const sizeVariantsItems = document.getElementsByClassName('size-variants__item');
