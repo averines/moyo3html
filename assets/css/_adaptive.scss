@@ -472,6 +472,12 @@
       order: 1;
     }
   }
+
+  .history {
+    &__header {
+      display: block;
+    }
+  }
 }
 
 // lg

@@ -4762,6 +4762,7 @@
 
 .history {
   &__header {
+    display: none;
     padding: 0.5em;
     border-bottom: 2px solid $line-light;
     font-size: 0.8em;
@@ -4769,12 +4770,15 @@
 }
 
 .history-item {
-  padding: 1.5em;
+  padding: 1.5em 0;
   border-bottom: 2px dotted $line-dark;
   display: flex;
+  flex-direction: column;
+  font-size: 14px;
 
   &__info {
     display: flex;
+    flex-direction: column;
     column-gap: 5em;
   }
 
@@ -4783,6 +4787,7 @@
     height: 40px;
     background: url(../img/icons/box.svg) no-repeat center;
     position: relative;
+    margin-bottom: 20px;
 
     &::after {
       display: block;
@@ -4790,10 +4795,11 @@
       font-weight: 600;
       font-size: 14px;
       position: absolute;
-      bottom: -2em;
-      left: -30px;
+      bottom: 30%;
+      left: auto;
+      right: -140px;
       width: 120px;
-      text-align: center;
+      text-align: left;
     }
 
     &::before {
@@ -4818,49 +4824,165 @@
   }
 
   &__content {
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
-  &__link {
-    font-size: 0.9em;
-    color: $main;
+  &__more-link {
+    font-size: 12px;
+    color: $text-dark;
     margin-top: 1em;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url(/assets/img/icons/arrow.svg) no-repeat center;
+      background-size: contain;
+      transform: rotate(-90deg);
+      opacity: 0.8;
+    }
   }
 }
 
 .history-table {
   display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__head {
+    border: 2px solid $line-dark;
+    border-left: none;
+    border-right: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__title {
+    padding: 0.75em;
+    text-align: center;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em 0;
+  }
 
   &__quantity {
-    width: 50px;
+    // width: 50px;
+    text-align: center;
 
     &::after {
       content: " шт.";
     }
   }
 
-  &__status {
-    border: 1px solid red;
-    width: 250px;
-  }
-
   &__total {
     font-weight: 600;
+    text-align: center;
     &::after {
       content: " ₽";
     }
   }
+}
 
-  &__payment {
+.history-item-payment {
+  margin-top: 10px;
+
+  &__success {
+    color: $special-2;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  &__waiting {
+    color: $text;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $main;
+    font-size: 14px;
+    transition: $tr;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.history-item-status {
+  border-top: 2px dotted $line-light;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 10px;
+
+  &__item {
     text-align: center;
+    padding: 5px;
+    font-size: 11px;
 
-    a {
-      color: $main;
+    &.status-doc {
+      color: $text;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::before {
+        content: "";
+        width: 35px;
+        height: 35px;
+        display: block;
+      }
     }
 
-    .success {
-      color: $special-2;
+    &.status-doc--1 {
+      &::before {
+        background: url(/assets/img/icons/order-status/_03.svg) no-repeat center;
+      }
+    }
+
+    &.status-doc--2 {
+      &::before {
+        background: url(/assets/img/icons/order-status/_04.svg) no-repeat center;
+      }
+    }
+
+    &.status-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &::before {
+        content: "";
+        width: 35px;
+        height: 35px;
+        display: block;
+      }
+    }
+
+    &.status-info--1 {
+      &::before {
+        background: url(/assets/img/icons/order-status/_01.svg) no-repeat center;
+      }
+      &::after {
+        content: "Товар подтвердил поставщик";
+        font-weight: 600;
+      }
+    }
+    &.status-info--2 {
+      &::before {
+        background: url(/assets/img/icons/order-status/_02.svg) no-repeat center;
+      }
+      &::after {
+        content: "Товар собран на складе";
+        font-weight: 600;
+      }
     }
   }
 }

@@ -143,6 +143,12 @@ h5,
           align-items: center;
 }
 
+.align-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .justify-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -5931,23 +5937,33 @@ hr.dotted {
 }
 
 .history__header {
+  display: none;
   padding: 0.5em;
   border-bottom: 2px solid #d9d9d9;
   font-size: 0.8em;
 }
 
 .history-item {
-  padding: 1.5em;
+  padding: 1.5em 0;
   border-bottom: 2px dotted #cdcdcd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
 }
 
 .history-item__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-column-gap: 5em;
           column-gap: 5em;
 }
@@ -5957,6 +5973,7 @@ hr.dotted {
   height: 40px;
   background: url(../img/icons/box.svg) no-repeat center;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .history-item__icon::after {
@@ -5965,10 +5982,11 @@ hr.dotted {
   font-weight: 600;
   font-size: 14px;
   position: absolute;
-  bottom: -2em;
-  left: -30px;
+  bottom: 30%;
+  left: auto;
+  right: -140px;
   width: 120px;
-  text-align: center;
+  text-align: left;
 }
 
 .history-item__icon::before {
@@ -5991,53 +6009,194 @@ hr.dotted {
 }
 
 .history-item__content {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-.history-item__link {
-  font-size: 0.9em;
-  color: #ab064e;
+.history-item__more-link {
+  font-size: 12px;
+  color: #555;
   margin-top: 1em;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.history-item__more-link::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(/assets/img/icons/arrow.svg) no-repeat center;
+  background-size: contain;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 0.8;
 }
 
 .history-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.history-table__head {
+  border: 2px solid #cdcdcd;
+  border-left: none;
+  border-right: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.history-table__title {
+  padding: 0.75em;
+  text-align: center;
+}
+
+.history-table__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 2em 0;
 }
 
 .history-table__quantity {
-  width: 50px;
+  text-align: center;
 }
 
 .history-table__quantity::after {
   content: " шт.";
 }
 
-.history-table__status {
-  border: 1px solid red;
-  width: 250px;
-}
-
 .history-table__total {
   font-weight: 600;
+  text-align: center;
 }
 
 .history-table__total::after {
   content: " ₽";
 }
 
-.history-table__payment {
-  text-align: center;
+.history-item-payment {
+  margin-top: 10px;
 }
 
-.history-table__payment a {
-  color: #ab064e;
-}
-
-.history-table__payment .success {
+.history-item-payment__success {
   color: #038184;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.history-item-payment__waiting {
+  color: #3d3d3c;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.history-item-payment__link {
+  color: #ab064e;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.history-item-payment__link:hover {
+  opacity: 0.8;
+}
+
+.history-item-status {
+  border-top: 2px dotted #d9d9d9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 10px;
+}
+
+.history-item-status__item {
+  text-align: center;
+  padding: 5px;
+  font-size: 11px;
+}
+
+.history-item-status__item.status-doc {
+  color: #3d3d3c;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history-item-status__item.status-doc::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.history-item-status__item.status-doc--1::before {
+  background: url(/assets/img/icons/order-status/_03.svg) no-repeat center;
+}
+
+.history-item-status__item.status-doc--2::before {
+  background: url(/assets/img/icons/order-status/_04.svg) no-repeat center;
+}
+
+.history-item-status__item.status-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.history-item-status__item.status-info::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.history-item-status__item.status-info--1::before {
+  background: url(/assets/img/icons/order-status/_01.svg) no-repeat center;
+}
+
+.history-item-status__item.status-info--1::after {
+  content: "Товар подтвердил поставщик";
+  font-weight: 600;
+}
+
+.history-item-status__item.status-info--2::before {
+  background: url(/assets/img/icons/order-status/_02.svg) no-repeat center;
+}
+
+.history-item-status__item.status-info--2::after {
+  content: "Товар собран на складе";
+  font-weight: 600;
 }
 
 @-webkit-keyframes jump {
@@ -6570,6 +6729,9 @@ hr.dotted {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  .history__header {
+    display: block;
   }
 }
 
