@@ -4606,8 +4606,8 @@ hr.dotted {
   background-size: 100%;
   -webkit-filter: grayscale(1) brightness(10);
           filter: grayscale(1) brightness(10);
-  -webkit-transform: scale(0.85) translateY(2px);
-          transform: scale(0.85) translateY(2px);
+  -webkit-transform: scale(0.85) translateY(1px);
+          transform: scale(0.85) translateY(1px);
 }
 
 .product-info .pagetitle {
@@ -4689,6 +4689,22 @@ hr.dotted {
 
 .specifications__title::after {
   content: ":";
+}
+
+.social-share-wrapper {
+  width: 234px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
 }
 
 .social-share {
@@ -7255,18 +7271,6 @@ hr.dotted {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .social-share-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .order-sent {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7306,6 +7310,9 @@ hr.dotted {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .social-share-wrapper {
+    margin-top: -25px;
   }
 }
 

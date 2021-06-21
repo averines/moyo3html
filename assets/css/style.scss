@@ -3573,7 +3573,7 @@
       background: url(../img/icons/favorite.svg) no-repeat center;
       background-size: 100%;
       filter: grayscale(1) brightness(10);
-      transform: scale(0.85) translateY(2px);
+      transform: scale(0.85) translateY(1px);
     }
   }
 
@@ -3667,6 +3667,15 @@
       content: ":";
     }
   }
+}
+
+.social-share-wrapper {
+  width: 234px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
 }
 
 .social-share {
