@@ -4875,6 +4875,8 @@
   &__more-block {
     display: none;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
 
     &.is-active {
       display: flex;
@@ -4886,6 +4888,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  width: 100%;
 
   &__head {
     border: 2px solid $line-dark;
@@ -4954,6 +4957,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 10px;
+  width: 100%;
 
   &__item {
     text-align: center;
