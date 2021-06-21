@@ -229,13 +229,13 @@ h5,
 }
 
 .btn {
-  border-radius: 3px;
+  border-radius: 4px;
   min-width: 220px;
   max-width: 290px;
   text-align: center;
-  padding: 0.6em 2em;
+  padding: 0.75em 1.5em;
   border: none;
-  font-size: 1em;
+  font-size: 15px;
   cursor: pointer;
   -webkit-transition: background-color 0.2s ease-in-out, -webkit-transform 0.1s;
   transition: background-color 0.2s ease-in-out, -webkit-transform 0.1s;
@@ -2237,27 +2237,27 @@ hr.dotted {
 }
 
 .footer .footer-top__info .footer-info .social .social__item--vk {
-  background: url(/assets/img/icons/social-share/01.svg) no-repeat center;
+  background: url(../img/icons/social-share/01.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item--fb {
-  background: url(/assets/img/icons/social-share/02.svg) no-repeat center;
+  background: url(../img/icons/social-share/02.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item--tw {
-  background: url(/assets/img/icons/social-share/03.svg) no-repeat center;
+  background: url(../img/icons/social-share/03.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item--li {
-  background: url(/assets/img/icons/social-share/04.svg) no-repeat center;
+  background: url(../img/icons/social-share/04.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item--ma {
-  background: url(/assets/img/icons/social-share/05.svg) no-repeat center;
+  background: url(../img/icons/social-share/05.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item--ok {
-  background: url(/assets/img/icons/social-share/06.svg) no-repeat center;
+  background: url(../img/icons/social-share/06.svg) no-repeat center;
 }
 
 .footer .footer-top__info .footer-info .social .social__item:hover {
@@ -4565,6 +4565,51 @@ hr.dotted {
           transform: scale(1.05);
 }
 
+.product-favorite-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-favorite-btn::before {
+  content: "Добавить в избранное";
+}
+
+.product-favorite-btn::after {
+  content: "";
+  z-index: 4;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/icons/favorite.svg) no-repeat center;
+  background-size: 100%;
+  -webkit-filter: grayscale(1) brightness(10);
+          filter: grayscale(1) brightness(10);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  margin-left: 7px;
+  margin-right: 0;
+}
+
+.product-favorite-btn.is-active::before {
+  content: "В избранном";
+}
+
+.product-favorite-btn.is-active::after {
+  background: url(../img/icons/favorite.svg) no-repeat center;
+  background-size: 100%;
+  -webkit-filter: grayscale(1) brightness(10);
+          filter: grayscale(1) brightness(10);
+  -webkit-transform: scale(0.85) translateY(2px);
+          transform: scale(0.85) translateY(2px);
+}
+
 .product-info .pagetitle {
   display: block;
 }
@@ -4653,42 +4698,58 @@ hr.dotted {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1.5em 0;
+  margin-bottom: 30px;
 }
 
-.social-share__item {
+.social-share .social-share__item {
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: -1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 33px;
-  height: 20px;
-  padding: 0 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  border-right: 1px solid #d9d9d9;
+  width: 40px;
+  height: 20px;
 }
 
-.social-share__item img {
-  display: block;
+.social-share .social-share__item--vk {
+  background: url(../img/icons/social-share/01.svg) no-repeat center;
 }
 
-.social-share__item:hover {
+.social-share .social-share__item--fb {
+  background: url(../img/icons/social-share/02.svg) no-repeat center;
+}
+
+.social-share .social-share__item--tw {
+  background: url(../img/icons/social-share/03.svg) no-repeat center;
+}
+
+.social-share .social-share__item--li {
+  background: url(../img/icons/social-share/04.svg) no-repeat center;
+}
+
+.social-share .social-share__item--ma {
+  background: url(../img/icons/social-share/05.svg) no-repeat center;
+}
+
+.social-share .social-share__item--ok {
+  background: url(../img/icons/social-share/06.svg) no-repeat center;
+}
+
+.social-share .social-share__item:hover {
   opacity: 0.8;
 }
 
-.social-share__item:active {
+.social-share .social-share__item:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
-}
-
-.social-share__item:last-child {
-  border-right: none;
 }
 
 .product-colors {
@@ -6060,7 +6121,7 @@ hr.dotted {
   display: block;
   width: 12px;
   height: 12px;
-  background: url(/assets/img/icons/arrow.svg) no-repeat center;
+  background: url(../img/icons/arrow.svg) no-repeat center;
   background-size: contain;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -6211,11 +6272,11 @@ hr.dotted {
 }
 
 .history-item-status__item.status-doc--1::before {
-  background: url(/assets/img/icons/order-status/_03.svg) no-repeat center;
+  background: url(../img/icons/order-status/_03.svg) no-repeat center;
 }
 
 .history-item-status__item.status-doc--2::before {
-  background: url(/assets/img/icons/order-status/_04.svg) no-repeat center;
+  background: url(../img/icons/order-status/_04.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info {
@@ -6239,7 +6300,7 @@ hr.dotted {
 }
 
 .history-item-status__item.status-info--1::before {
-  background: url(/assets/img/icons/order-status/_01.svg) no-repeat center;
+  background: url(../img/icons/order-status/_01.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info--1::after {
@@ -6248,7 +6309,7 @@ hr.dotted {
 }
 
 .history-item-status__item.status-info--2::before {
-  background: url(/assets/img/icons/order-status/_02.svg) no-repeat center;
+  background: url(../img/icons/order-status/_02.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info--2::after {

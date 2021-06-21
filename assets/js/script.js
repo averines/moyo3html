@@ -225,12 +225,11 @@ const favorites = document.getElementsByClassName('product__favorite');
     })
 })
 
+// кнопка добавления в избранное на странице товара
 const favoritesBtns = document.getElementsByClassName('product-favorite-btn');
 [...favoritesBtns].forEach(item => {
     item.addEventListener('click', () => {
         item.classList.toggle('is-active')
-        // item.insertAdjacentHTML('afterbegin', '<span></span>')
-        // setTimeout(function () { item.innerHTML = '' }, 1000)
     })
 })
 
