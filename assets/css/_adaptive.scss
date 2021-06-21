@@ -4,7 +4,6 @@
       &__logo {
         width: 117px;
         height: 27px;
-        margin-left: 1em;
       }
       .user-buttons {
         &__item {
@@ -78,9 +77,12 @@
   }
 
   .header {
+    background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
+
     .menu-user {
       column-gap: 1em;
       padding: 0.5em;
+
       &__item {
         font-size: 0.8em;
         padding: 2em 1em;
@@ -547,19 +549,6 @@
     margin-top: 5em;
   }
 
-  .header {
-    background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
-    &-main {
-      &__logo {
-        width: 158px;
-        min-width: 158px;
-        height: 36px;
-        margin-left: 5px;
-        margin-right: 10px;
-      }
-    }
-  }
-
   .main-slider {
     .main-slide {
       &__pic {
@@ -634,7 +623,7 @@
 
   .footer-top {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 200px;
 
     .accordion {
       background: none;
@@ -686,7 +675,7 @@
     padding-left: $gap;
     padding-right: $gap;
     display: grid;
-    grid-template-columns: 6fr 4fr;
+    grid-template-columns: 8fr 3fr;
   }
 
   .footer {
@@ -703,12 +692,12 @@
         }
       }
     }
-  }
-
-  .footer-top__contacts {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
+    .footer-top__contacts {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-top: 0;
+    }
   }
 
   .categories-slider {
@@ -980,6 +969,9 @@
   }
 
   .header {
+    position: relative;
+    background: url(../img/header-bg-2600.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
+
     &-top {
       display: block;
 
@@ -991,6 +983,14 @@
     &-main {
       padding-top: 0;
       padding-bottom: 0;
+
+      &__logo {
+        width: 158px;
+        min-width: 158px;
+        height: 36px;
+        margin-left: 5px;
+        margin-right: 10px;
+      }
 
       &__inner {
         height: 80px;
@@ -1156,6 +1156,10 @@
     display: none;
   }
 
+  .container--footer {
+    grid-template-columns: 6fr 3fr;
+  }
+
   .footer-top__contacts {
     margin-left: 0;
     display: grid;
@@ -1164,6 +1168,10 @@
     .footer-top__info {
       order: -1;
       margin-top: 0;
+
+      .footer-info {
+        padding-bottom: 45px;
+      }
     }
   }
 
@@ -1234,9 +1242,6 @@
     padding-right: $gap-big;
   }
 
-  .header {
-    background: url(../img/header-bg-2600.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
-  }
   .products {
     column-gap: 10px;
 
