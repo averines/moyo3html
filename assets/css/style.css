@@ -264,6 +264,17 @@ h5,
   background-color: #9c003f;
 }
 
+.btn-main:disabled {
+  background-color: transparent;
+  color: #777;
+  opacity: 0.8;
+  border: 1px solid #cdcdcd;
+}
+
+.btn-main:disabled:hover {
+  opacity: 1;
+}
+
 .btn-gray {
   color: white;
   background-color: #777;
@@ -376,6 +387,13 @@ h5,
   color: #ab064e;
   font-size: 0.9em;
   margin-top: 0.5em;
+}
+
+.password-icon {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: block;
 }
 
 .fancybox-is-open .fancybox-bg {
@@ -5619,11 +5637,15 @@ hr.dotted {
   margin-bottom: 15px;
 }
 
+.order-item-modal .table tbody tr {
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .order-item-modal .table tbody tr td {
   padding-top: 0;
   padding-bottom: 0;
   height: 42px;
-  border-bottom: 1px solid #d9d9d9;
+  border: none;
 }
 
 .order-item__table {
@@ -5638,10 +5660,14 @@ hr.dotted {
   border-top: 2px solid #cdcdcd;
 }
 
+.order-item__table tbody tr {
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .order-item__table tbody tr td {
   font-size: 0.95em;
   padding: 1em 0.5em;
-  border-bottom: 2px dotted #cdcdcd;
+  border: none;
 }
 
 .quantity-counter {

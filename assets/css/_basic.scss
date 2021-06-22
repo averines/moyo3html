@@ -266,6 +266,17 @@ h5,
     &:hover {
       background-color: $main - 15;
     }
+
+    &:disabled {
+      background-color: transparent;
+      color: $text-light;
+      opacity: 0.8;
+      border: 1px solid $line-dark;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   &-gray {
@@ -378,6 +389,13 @@ h5,
   color: $main;
   font-size: 0.9em;
   margin-top: 0.5em;
+}
+
+.password-icon {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: block;
 }
 
 // фансибокс

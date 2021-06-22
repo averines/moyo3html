@@ -4488,11 +4488,12 @@
   .table {
     tbody {
       tr {
+        border-bottom: 1px solid $line-light;
         td {
           padding-top: 0;
           padding-bottom: 0;
           height: 42px;
-          border-bottom: 1px solid $line-light;
+          border: none;
         }
       }
     }
@@ -4516,10 +4517,11 @@
 
   tbody {
     tr {
+      border-bottom: 1px solid $line-light;
       td {
         font-size: 0.95em;
         padding: 1em 0.5em;
-        border-bottom: 2px dotted $line-dark;
+        border: none;
       }
     }
   }

@@ -698,133 +698,124 @@
         </div>
         <div class="tabs-content">
           <div class="tabs-content__item my-2" data-tabid="favorites">
-            <div class="history">
-              <div class="history__header">
-                <div>Заказ</div>
-                <div>Количество</div>
-                <div>Сумма</div>
-                <div>Статус</div>
+            <div class="d-lg-grid grid-lg-1-1">
+              <div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Сумма на Вашем депозите</div>
+                  <div class="info-plate__content">
+                    <div class="text-main text-bold after-rub">2 468,00</div>
+                    <div class="form-group mt-1">
+                      <input class="form-group__input" type="text" placeholder="Введите сумму">
+                      <button class="btn btn-main">Пополнить</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Логин и пароль</div>
+                  <div class="info-plate__content">
+                    <p class="text-main">Логин: ххххх@mail.ru</p>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo1">Изменить пароль</button>
+                  </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Фамилия Имя Отчество</div>
+                  <div class="info-plate__content">
+                    <p>Для изменения имени, фамилии, отчества, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
+                  </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Телефон</div>
+                  <div class="info-plate__content">
+                    <p>+7 123 456-78-90</p>
+                    <button class="btn btn-gray">Изменить телефон</button>
+                  </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Город доставки</div>
+                  <div class="info-plate__content">
+                    <p>Название города</p>
+                    <p><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз.</p>
+                    <button class="btn btn-gray">Изменить город</button>
+                    <p>Информация о городе доставки берется из данных при регистрации на сайте.
+                      Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
+                  </div>
+                </div>
               </div>
-              <div class="history__items">
-                <div class="history__item history-item">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--new"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="history-item__more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a data-fancybox data-src="#historyItem1" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
+              <div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Транспортная компания</div>
+                  <div class="info-plate__content">
+                    <p>ПЭК</p>
+                    <button class="btn btn-gray">Изменить</button>
                   </div>
                 </div>
-                <div class="history__item history-item">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--processed"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__waiting">Ожидается оплата</div>
-                          <a class="history-item-payment__link" href="#">Оплатить онлайн</a>
-                        </div>
-                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="history-item__more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a data-fancybox data-src="#historyItem2" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
+                <div class="info-plate">
+                  <div class="info-plate__title">Адреса доставки</div>
+                  <div class="info-plate__content">
+                    <ol class="pl-1">
+                      <li>108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</li>
+                    </ol>
+                    <button class="btn btn-gray">Изменить</button>
+                    <p><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа. Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
                   </div>
                 </div>
-                <div class="history__item history-item">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--packed"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__waiting">Ожидается оплата</div>
-                          <a class="history-item-payment__link" href="#">Оплатить онлайн</a>
-                        </div>
-                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Гостевые логины</div>
+                  <div class="info-plate__content">
+                    <ol class="pl-1">
+                      <li>Гостевой логин (наценка 0% + 0)</li>
+                    </ol>
+                    <button class="btn btn-gray">Изменить</button>
                   </div>
-                  <div class="history-item__more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Показывать парсер СП</div>
+                  <div class="info-plate__content">
+                    <select name="user-parser" id="user-parser">
+                      <option value="TurboParcer">TurboParcer</option>
+                      <option value="TurboParcer2">TurboParcer2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="info-plate">
+                  <div class="info-plate__title">Рассылка</div>
+                  <div class="info-plate__content">
+                    <div class="form-group mb-1">
+                      <input class="form-group__checkbox" type="checkbox" name="user-subscribe" id="user-subscribe">
+                      <label class="form-group__label" for="user-subscribe">Получать рассылку об акциях и новинках</label>
                     </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a data-fancybox data-src="#historyItem3" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
+                    <button class="btn btn-gray">Изменить</button>
                   </div>
                 </div>
               </div>
             </div>
             <div class="modals">
-              <div class="modals__item modal" id="historyItem1">
-                <div class="modal__title">Просмотр заказа 1</div>
+              <div class="modals__item modal" id="modalInfo1">
+                <div class="modal__title">Изменение пароля</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="callback-name" type="text" name="callback-name" required />
+                      <label for="callback-name">Текущий пароль</label>
+                      <a href="#" class="password-icon"></a>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="callback-phone" type="text" name="callback-phone" required />
+                      <label for="callback-phone">Новый пароль</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="callback-phone" type="text" name="callback-phone" required />
+                      <label for="callback-phone">Повторите новый пароль</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" disabled>Изменить</button>
+                </form>
               </div>
-              <div class="modals__item modal" id="historyItem2">
-                <div class="modal__title">Просмотр заказа 2</div>
-              </div>
-              <div class="modals__item modal" id="historyItem3">
-                <div class="modal__title">Просмотр заказа 3</div>
-              </div>
+
             </div>
           </div>
           <div class="tabs-content__item my-2" data-tabid="cart">
@@ -1152,7 +1143,7 @@
                 </div>
 
                 <div class="order-status-total">
-                  На депозите:
+                  У вас на депозите:
                   <div class="total">1 234,00</div>
                 </div>
               </div>
@@ -1193,100 +1184,136 @@
             </div>
           </div>
           <div class="tabs-content__item my-2" data-tabid="personal">
-            <div class="d-lg-grid grid-lg-1-1">
-              <div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Сумма на Вашем депозите</div>
-                  <div class="info-plate__content">
-                    <div class="text-main text-bold after-rub">2 468,00</div>
-                    <div class="form-group mt-1">
-                      <input class="form-group__input" type="text" placeholder="Введите сумму">
-                      <button class="btn btn-main">Пополнить</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Логин и пароль</div>
-                  <div class="info-plate__content">
-                    <p class="text-main">Логин: ххххх@mail.ru</p>
-                    <button class="btn btn-gray">Изменить пароль</button>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Фамилия Имя Отчество</div>
-                  <div class="info-plate__content">
-                    <p>Для изменения имени, фамилии, отчества, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Телефон</div>
-                  <div class="info-plate__content">
-                    <p>+7 123 456-78-90</p>
-                    <button class="btn btn-gray">Изменить телефон</button>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Город доставки</div>
-                  <div class="info-plate__content">
-                    <p>Название города</p>
-                    <p><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз.</p>
-                    <button class="btn btn-gray">Изменить город</button>
-                    <p>Информация о городе доставки берется из данных при регистрации на сайте.
-                      Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
-                  </div>
-                </div>
+          </div>
+          <div class="tabs-content__item my-2" data-tabid="orders">
+            <div class="history">
+              <div class="history__header">
+                <div>Заказ</div>
+                <div>Количество</div>
+                <div>Сумма</div>
+                <div>Статус</div>
               </div>
-              <div>
-
-                <div class="info-plate">
-                  <div class="info-plate__title">Транспортная компания</div>
-                  <div class="info-plate__content">
-                    <p>ПЭК</p>
-                    <button class="btn btn-gray">Изменить</button>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Адреса доставки</div>
-                  <div class="info-plate__content">
-                    <ol class="pl-1">
-                      <li>108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</li>
-                    </ol>
-                    <button class="btn btn-gray">Изменить</button>
-                    <p><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа. Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Гостевые логины</div>
-                  <div class="info-plate__content">
-                    <ol class="pl-1">
-                      <li>Гостевой логин (наценка 0% + 0)</li>
-                    </ol>
-                    <button class="btn btn-gray">Изменить</button>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Показывать парсер СП</div>
-                  <div class="info-plate__content">
-                    <select name="user-parser" id="user-parser">
-                      <option value="TurboParcer">TurboParcer</option>
-                      <option value="TurboParcer2">TurboParcer2</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="info-plate">
-                  <div class="info-plate__title">Рассылка</div>
-                  <div class="info-plate__content">
-                    <div class="form-group mb-1">
-                      <input class="form-group__checkbox" type="checkbox" name="user-subscribe" id="user-subscribe">
-                      <label class="form-group__label" for="user-subscribe">Получать рассылку об акциях и новинках</label>
+              <div class="history__items">
+                <div class="history__item history-item">
+                  <div class="history-item__info">
+                    <div class="history-item__icon history-item__icon--new"></div>
+                    <div class="history-item__content">
+                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
+                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                      <div class="d-flex justify-between align-end">
+                        <div class="history-item__payment history-item-payment">
+                          <div class="history-item-payment__success">Заказ оплачен</div>
+                        </div>
+                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
+                      </div>
                     </div>
-                    <button class="btn btn-gray">Изменить</button>
+                  </div>
+                  <div class="history-item__more-block">
+                    <div class="history-item__table history-table">
+                      <div class="history-table__head">
+                        <div class="history-table__title">Количество</div>
+                        <div class="history-table__title">Сумма</div>
+                      </div>
+                      <div class="history-table__body">
+                        <div class="history-table__quantity">1</div>
+                        <div class="history-table__total">2 655,00</div>
+                      </div>
+                    </div>
+                    <div class="history-item__status history-item-status">
+                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
+                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
+                      <div class="history-item-status__item status-info status-info--1"></div>
+                      <div class="history-item-status__item status-info status-info--2"></div>
+                    </div>
+                    <a data-fancybox data-src="#historyItem1" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
+                  </div>
+                </div>
+                <div class="history__item history-item">
+                  <div class="history-item__info">
+                    <div class="history-item__icon history-item__icon--processed"></div>
+                    <div class="history-item__content">
+                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
+                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                      <div class="d-flex justify-between align-end">
+                        <div class="history-item__payment history-item-payment">
+                          <div class="history-item-payment__waiting">Ожидается оплата</div>
+                          <a class="history-item-payment__link" href="#">Оплатить онлайн</a>
+                        </div>
+                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="history-item__more-block">
+                    <div class="history-item__table history-table">
+                      <div class="history-table__head">
+                        <div class="history-table__title">Количество</div>
+                        <div class="history-table__title">Сумма</div>
+                      </div>
+                      <div class="history-table__body">
+                        <div class="history-table__quantity">1</div>
+                        <div class="history-table__total">2 655,00</div>
+                      </div>
+                    </div>
+                    <div class="history-item__status history-item-status">
+                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
+                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
+                      <div class="history-item-status__item status-info status-info--1"></div>
+                      <div class="history-item-status__item status-info status-info--2"></div>
+                    </div>
+                    <a data-fancybox data-src="#historyItem2" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
+                  </div>
+                </div>
+                <div class="history__item history-item">
+                  <div class="history-item__info">
+                    <div class="history-item__icon history-item__icon--packed"></div>
+                    <div class="history-item__content">
+                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от 01.12.2020</span></div>
+                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                      <div class="d-flex justify-between align-end">
+                        <div class="history-item__payment history-item-payment">
+                          <div class="history-item-payment__waiting">Ожидается оплата</div>
+                          <a class="history-item-payment__link" href="#">Оплатить онлайн</a>
+                        </div>
+                        <a class="history-item__more-link d-md-none" href="#">Подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="history-item__more-block">
+                    <div class="history-item__table history-table">
+                      <div class="history-table__head">
+                        <div class="history-table__title">Количество</div>
+                        <div class="history-table__title">Сумма</div>
+                      </div>
+                      <div class="history-table__body">
+                        <div class="history-table__quantity">1</div>
+                        <div class="history-table__total">2 655,00</div>
+                      </div>
+                    </div>
+                    <div class="history-item__status history-item-status">
+                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank" download>Счет-договор</a>
+                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank" download>Накладная Торг12</a>
+                      <div class="history-item-status__item status-info status-info--1"></div>
+                      <div class="history-item-status__item status-info status-info--2"></div>
+                    </div>
+                    <a data-fancybox data-src="#historyItem3" href="javascript:;" class="btn btn-main mt-1">Посмотреть заказ</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="tabs-content__item my-2" data-tabid="orders">
+            <div class="modals">
+              <div class="modals__item modal" id="historyItem1">
+                <div class="modal__title">Просмотр заказа 1</div>
+              </div>
+              <div class="modals__item modal" id="historyItem2">
+                <div class="modal__title">Просмотр заказа 2</div>
+              </div>
+              <div class="modals__item modal" id="historyItem3">
+                <div class="modal__title">Просмотр заказа 3</div>
+              </div>
+            </div>
           </div>
           <div class="tabs-content__item my-2" data-tabid="discounts">
             <div class="discounts-wrapper">
