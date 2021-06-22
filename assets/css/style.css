@@ -3103,7 +3103,7 @@ hr.dotted {
 
 .size-variants {
   display: none;
-  padding: 0 1em 1em 1em;
+  padding: 0 10px 20px 15px;
   background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -4454,7 +4454,7 @@ hr.dotted {
   display: none;
   max-height: 385px;
   overflow: hidden;
-  padding: 5px;
+  padding: 3px;
   background-color: #c4c4c4;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -4476,6 +4476,7 @@ hr.dotted {
 .product-preview-slider__item picture,
 .product-preview-slider__item img {
   display: block;
+  width: 100%;
 }
 
 .product-preview-slider__item.is-active {
@@ -4501,7 +4502,7 @@ hr.dotted {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 5px;
+  bottom: 5px;
   left: 5px;
   background: url(../img/icons/download.svg) no-repeat center;
   -webkit-transition: all 0.2s ease-in-out;
@@ -4629,6 +4630,10 @@ hr.dotted {
 .product-favorite-btn:hover::after {
   -webkit-filter: grayscale(1) brightness(10);
           filter: grayscale(1) brightness(10);
+}
+
+.product-info {
+  position: relative;
 }
 
 .product-info .pagetitle {
@@ -6732,24 +6737,38 @@ hr.dotted {
     margin-left: 20px;
   }
   .product-container {
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 3fr 4fr;
         grid-template-columns: 3fr 4fr;
   }
+  .product-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66px 1fr;
+        grid-template-columns: 66px 1fr;
+  }
   .product-preview-slider {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 66px;
+    max-height: 376px;
+  }
+  .product-preview-slider__item {
+    width: 100%;
+  }
+  .product-gallery-slider {
+    width: 100%;
+    z-index: 0;
+    position: relative;
   }
   .product-gallery-slider__item {
+    width: 100%;
     position: absolute;
-    height: 385px;
     max-width: none;
-  }
-  .product-gallery-slider__item img {
-    height: 100%;
-    width: auto;
   }
   .d-md-none {
     display: none;
@@ -6828,7 +6847,7 @@ hr.dotted {
     font-size: 1.25em;
   }
   .product-colors-slider__item {
-    width: 85px;
+    width: 70px;
   }
   .product-colors-slider__item a {
     width: 100%;
@@ -7370,8 +7389,27 @@ hr.dotted {
   .social-share-wrapper {
     margin-top: -25px;
   }
+  .product-container {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .product-gallery {
+    -ms-grid-columns: 80px 1fr;
+        grid-template-columns: 80px 1fr;
+  }
+  .product-preview-slider {
+    width: 80px;
+    max-height: 460px;
+  }
   .product-colors-slider__item {
-    width: 95px;
+    width: 90px;
+  }
+  .product-info {
+    padding: 2em 3em;
+  }
+  .product-info__brand-logo {
+    right: 3em;
+    top: 2em;
   }
 }
 
@@ -7561,14 +7599,26 @@ hr.dotted {
     font-size: 0.75em;
   }
   .product-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 2.3fr;
+        grid-template-columns: 1fr 2.3fr;
   }
   .product-preview-slider {
-    min-height: 700px;
+    max-height: 458px;
+  }
+  .product-info {
+    background-color: white;
+    padding: 3em 3em;
+  }
+  .product-info__brand-logo {
+    width: 120px;
+    right: 3em;
+    top: 3em;
+  }
+  .product-gallery-slider {
+    width: 100%;
   }
   .product-gallery-slider__item {
-    height: 700px;
+    max-height: 700px;
   }
 }
 
@@ -7596,11 +7646,7 @@ hr.dotted {
   .product-colors-slider__item {
     width: 105px;
   }
-}
-
-@media screen and (min-width: 1600px) {
   .product-info {
-    background-color: white;
     padding: 4em 6em;
   }
   .product-info__brand-logo {
@@ -7624,9 +7670,6 @@ hr.dotted {
     width: 36 px;
     height: 36px;
   }
-  .product-preview-slider {
-    min-height: 800px;
-  }
   .product-gallery-slider__item {
     height: 800px;
   }
@@ -7646,10 +7689,18 @@ hr.dotted {
     max-width: 270px;
   }
   .product-container {
-    -ms-grid-columns: 2.3fr 3fr;
-        grid-template-columns: 2.3fr 3fr;
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
     -webkit-column-gap: 0;
             column-gap: 0;
+  }
+  .product-gallery {
+    -ms-grid-columns: 112px 1fr;
+        grid-template-columns: 112px 1fr;
+  }
+  .product-preview-slider {
+    width: 112px;
+    min-height: 653px;
   }
   .order-sent {
     padding: 4em;

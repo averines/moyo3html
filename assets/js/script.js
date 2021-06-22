@@ -121,6 +121,28 @@ menuUserBtn.addEventListener('click', (e) => {
 
 // сброс развернутых элементов при переходе в десктопный режим
 let clientWidth = 0
+
+// слайдер на странице продукта
+if (document.body.clientWidth < 768) {
+    const productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
+    var productGallerySlider = productGallerySliderContainer.length > 0 ?
+        tns({
+            container: productGallerySliderContainer[0],
+            items: 2,
+            slideBy: 'page',
+            autoplay: false,
+            controls: false,
+            nav: false,
+            loop: false,
+            mouseDrag: true,
+            swipeAngle: 60,
+            autoWidth: true,
+            gutter: 10,
+        })
+        : "";
+}
+
+
 window.addEventListener('resize', () => {
     clientWidth = document.body.clientWidth;
 
@@ -131,6 +153,7 @@ window.addEventListener('resize', () => {
         menuUserWindow.classList.remove('is-active')
     }
 
+    // слайдер на странице продукта
     if (document.body.clientWidth < 768) {
         const productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
         var productGallerySlider = productGallerySliderContainer.length > 0 ?
@@ -149,6 +172,7 @@ window.addEventListener('resize', () => {
             })
             : "";
     }
+
 
 }, false);
 

@@ -286,24 +286,36 @@
   }
 
   .product-container {
+    column-gap: 20px;
     display: grid;
     grid-template-columns: 3fr 4fr;
   }
 
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 66px 1fr;
+  }
+
   .product-preview-slider {
     display: flex;
+    width: 66px;
+    max-height: 376px;
+
+    &__item {
+      width: 100%;
+    }
   }
 
   .product-gallery-slider {
-    &__item {
-      position: absolute;
-      height: 385px;
-      max-width: none;
+    width: 100%;
+    z-index: 0;
+    position: relative;
 
-      img {
-        height: 100%;
-        width: auto;
-      }
+    &__item {
+      width: 100%;
+      position: absolute;
+      // height: 385px;
+      max-width: none;
     }
   }
 
@@ -377,7 +389,7 @@
   }
 
   .product-colors-slider__item {
-    width: 85px;
+    width: 70px;
     a {
       width: 100%;
       img {
@@ -986,8 +998,30 @@
     margin-top: -25px;
   }
 
+  .product-container {
+    column-gap: 0;
+  }
+
+  .product-gallery {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .product-preview-slider {
+    width: 80px;
+    max-height: 460px;
+  }
+
   .product-colors-slider__item {
-    width: 95px;
+    width: 90px;
+  }
+
+  .product-info {
+    padding: 2em 3em;
+
+    &__brand-logo {
+      right: 3em;
+      top: 2em;
+    }
   }
 }
 
@@ -1214,16 +1248,28 @@
   }
 
   .product-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2.3fr;
   }
 
   .product-preview-slider {
-    min-height: 700px;
+    max-height: 458px;
+  }
+
+  .product-info {
+    background-color: $white;
+    padding: 3em 3em;
+
+    &__brand-logo {
+      width: 120px;
+      right: 3em;
+      top: 3em;
+    }
   }
 
   .product-gallery-slider {
+    width: 100%;
     &__item {
-      height: 700px;
+      max-height: 700px;
     }
   }
 }
@@ -1266,11 +1312,8 @@
   .product-colors-slider__item {
     width: 105px;
   }
-}
 
-@media screen and (min-width: 1600px) {
   .product-info {
-    background-color: $white;
     padding: 4em 6em;
 
     &__brand-logo {
@@ -1300,15 +1343,12 @@
     }
   }
 
-  .product-preview-slider {
-    min-height: 800px;
-  }
-
   .product-gallery-slider {
     &__item {
       height: 800px;
     }
   }
+
   .list-suppliers {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -1326,10 +1366,18 @@
   }
 
   .product-container {
-    grid-template-columns: 2.3fr 3fr;
+    grid-template-columns: 2fr 3fr;
     column-gap: 0;
   }
 
+  .product-gallery {
+    grid-template-columns: 112px 1fr;
+  }
+
+  .product-preview-slider {
+    width: 112px;
+    min-height: 653px;
+  }
   .order-sent {
     padding: 4em;
   }

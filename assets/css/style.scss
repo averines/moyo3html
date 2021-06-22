@@ -2241,7 +2241,7 @@
 
 .size-variants {
   display: none;
-  padding: 0 1em 1em 1em;
+  padding: 0 10px 20px 15px;
   background-color: $white;
   flex-wrap: wrap;
   row-gap: 10px;
@@ -3438,7 +3438,7 @@
   display: none;
   max-height: 385px;
   overflow: hidden;
-  padding: 5px;
+  padding: 3px;
   background-color: $bg-dark;
   flex-direction: column;
   align-items: center;
@@ -3452,6 +3452,7 @@
     picture,
     img {
       display: block;
+      width: 100%;
     }
 
     &.is-active {
@@ -3479,7 +3480,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 5px;
+    bottom: 5px;
     left: 5px;
     background: url(../img/icons/download.svg) no-repeat center;
     transition: $tr;
@@ -3616,6 +3617,8 @@
 }
 
 .product-info {
+  position: relative;
+
   .pagetitle {
     display: block;
 
