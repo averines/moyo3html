@@ -5506,6 +5506,10 @@ hr.dotted {
   color: #777;
 }
 
+.order-item__modal {
+  display: none;
+}
+
 .order-item .order-item-status {
   position: absolute;
   bottom: 0;
@@ -5542,6 +5546,84 @@ hr.dotted {
 
 .order-item__cost::after {
   content: " ₽";
+}
+
+.popup-info {
+  display: inline-block;
+  position: relative;
+}
+
+.popup-info__btn {
+  width: 22px;
+  height: 22px;
+  background: url(../img/icons/info.svg) no-repeat center;
+  background-size: 80%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  cursor: pointer;
+}
+
+.popup-info__btn:hover {
+  -webkit-filter: grayscale(1) brightness(0.5);
+          filter: grayscale(1) brightness(0.5);
+}
+
+.popup-info__btn:hover + .popup-info__content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-info__content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  border-radius: 4px;
+  color: #fff;
+  padding: 12px;
+  font-size: 12px;
+  background-color: #3d3d3c;
+  width: 200px;
+  z-index: 10;
+}
+
+.popup-info__content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-right: 10px solid #3d3d3c;
+}
+
+.popup-info__content p {
+  margin: 0;
+}
+
+.order-item-modal {
+  padding: 15px !important;
+  border-radius: 4px;
+  min-width: 200px;
+  max-width: 500px;
+  width: 90%;
+  min-height: 350px;
+}
+
+.order-item-modal__title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.order-item-modal .table tbody tr td {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 42px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .order-item__table {
@@ -5605,6 +5687,11 @@ hr.dotted {
 .quantity-counter__btn:hover {
   opacity: 1;
   background-color: #c4c4c4;
+}
+
+.quantity-counter__btn:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .order-info {
