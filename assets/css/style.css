@@ -5445,6 +5445,7 @@ hr.dotted {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 
 .order-item__info-wrapper {
@@ -5493,6 +5494,9 @@ hr.dotted {
 }
 
 .order-item__remove {
+  position: absolute;
+  right: 15px;
+  top: 2px;
   margin-left: auto;
   width: 20px;
   height: 20px;
@@ -6993,6 +6997,9 @@ hr.dotted {
     opacity: 0;
     visibility: hidden;
   }
+  .order-item__remove {
+    top: -10px;
+  }
   .order-item__table {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -7008,7 +7015,7 @@ hr.dotted {
     border-bottom: none;
   }
   .order-item__table tbody tr:first-child td {
-    padding-top: 3em;
+    padding-top: 4em;
   }
   .order-buttons {
     -webkit-box-pack: end;

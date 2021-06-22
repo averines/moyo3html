@@ -4306,6 +4306,7 @@
 .order-item {
   margin-bottom: 3em;
   align-items: flex-start;
+  position: relative;
 
   &__info-wrapper {
     display: flex;
@@ -4341,6 +4342,10 @@
   }
 
   &__remove {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+
     margin-left: auto;
     width: 20px;
     height: 20px;

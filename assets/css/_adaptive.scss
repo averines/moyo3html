@@ -422,6 +422,10 @@
         }
       }
     }
+
+    &__remove {
+      top: -10px;
+    }
   }
 
   .order-item__table {
@@ -446,7 +450,7 @@
 
         &:first-child {
           td {
-            padding-top: 3em;
+            padding-top: 4em;
           }
         }
       }
