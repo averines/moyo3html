@@ -735,7 +735,7 @@
                   <div class="info-plate__content">
                     <p>Название города</p>
                     <p><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз.</p>
-                    <button class="btn btn-gray">Изменить</button>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo3">Изменить</button>
                     <p>Информация о городе доставки берется из данных при регистрации на сайте.
                       Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
                   </div>
@@ -746,7 +746,7 @@
                   <div class="info-plate__title">Транспортная компания</div>
                   <div class="info-plate__content">
                     <p>ПЭК</p>
-                    <button class="btn btn-gray">Изменить</button>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo4">Изменить</button>
                   </div>
                 </div>
                 <div class="info-plate">
@@ -755,7 +755,7 @@
                     <ul class="pl-1">
                       <li><button class="btn-delete"></button> 108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</li>
                     </ul>
-                    <button class="btn btn-gray">Изменить</button>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo5">Изменить</button>
                     <p><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа. Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
                   </div>
                 </div>
@@ -765,7 +765,7 @@
                     <ul class="pl-1">
                       <li><button class="btn-delete"></button>Гостевой логин (наценка 0% + 0)</li>
                     </ul>
-                    <button class="btn btn-gray">Изменить</button>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo6">Изменить</button>
                   </div>
                 </div>
                 <div class="info-plate">
@@ -827,7 +827,6 @@
                       <input id="user-phone" type="text" name="user-phone" required />
                       <label for="user-phone">Текущий номер</label>
                       <input id="user-phone-country" type="text" name="user-phone-country" hidden value="" />
-
                       <div class="custom-select" data-input-id="user-phone-country">
                         <div class="custom-select__selected">
                           <img src="/assets/img/icons/flags/05.svg" alt="Россия">
@@ -863,6 +862,114 @@
                       </div>
                     </div>
                   </div>
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo3">
+                <div class="modal__title">Изменение города доставки</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-delivery-city" type="text" name="user-delivery-city" required />
+                      <label for="user-delivery-city">Текущий город доставки</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo4">
+                <div class="modal__title">Изменение транспортной компании</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <select class="form-group__select w-100" name="user-transport" id="user-transport">
+                        <option value="user-transport2">Байкал-Сервис</option>
+                        <option value="user-transport3">Возовоз</option>
+                        <option value="user-transport3">Деловые линии</option>
+                        <option value="user-transport3">Желдорэкспедиция</option>
+                        <option value="user-transport1" selected>ПЭК</option>
+                        <option value="user-transport3">Энергия</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo5">
+                <div class="modal__title">Новый адрес доставки</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-index" type="text" name="user-address-index" required />
+                      <label for="user-address-index">Почтовый индекс</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input id="user-address-region" type="text" name="user-address-region" />
+                      <label for="user-address-region">Регион, область, район</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-city" type="text" name="user-address-city" required />
+                      <label for="user-address-city">Населенный пункт</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-street" type="text" name="user-address-street" required />
+                      <label for="user-address-street">Улица</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-house" type="text" name="user-address-house" required />
+                      <label for="user-address-house">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group form-group--required">
+                      <input id="user-address-apartment" type="text" name="user-address-apartment" required />
+                      <label for="user-address-apartment">Кв./офис</label>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo6">
+                <div class="modal__title">Новый гостевой логин</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-guest-email" type="text" name="user-guest-email" required />
+                      <label for="user-guest-email">Гостевая эл. почта <span class="text-italic">(письма на неё не отправляются)</span>()</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-guest-password" type="text" name="user-guest-password" required />
+                      <label for="user-guest-password">Пароль</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-guest-charge" type="number" name="user-guest-charge" required />
+                      <label for="user-guest-charge">Наценка в процентах</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-guest-charge" type="number" name="user-guest-charge" required />
+                      <label for="user-guest-charge">Фиксированная наценка в рублях</label>
+                    </div>
+                  </div>
+                  <div class="my-3">
+                    <div class="form-group justify-center">
+                      <input class="form-group__checkbox" type="checkbox" name="user-guest-round" id="user-guest-round">
+                      <label class="form-group__label" for="user-guest-round">Округлять цены до целых рублей вверх?</label>
+                    </div>
+                  </div>
+
                   <button class="btn btn-main" disabled>Сохранить</button>
                 </form>
               </div>
