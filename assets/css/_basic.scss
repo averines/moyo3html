@@ -78,6 +78,14 @@ main {
   display: flex;
 }
 
+.d-grid {
+  display: grid;
+}
+
+.grid-1-1 {
+  grid-template-columns: 1fr 1fr;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
