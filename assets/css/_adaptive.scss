@@ -694,6 +694,12 @@
     }
   }
 
+  .modals {
+    &__item {
+      min-height: 300px;
+    }
+  }
+
   .modal {
     &__title {
       font-size: 1.3em;

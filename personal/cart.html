@@ -727,7 +727,7 @@
                   <div class="info-plate__title">Телефон</div>
                   <div class="info-plate__content">
                     <p>+7 123 456-78-90</p>
-                    <button class="btn btn-gray">Изменить</button>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo2">Изменить</button>
                   </div>
                 </div>
                 <div class="info-plate">
@@ -797,27 +797,75 @@
                 <form class="modal__form" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="callback-name" type="text" name="callback-name" required />
-                      <label for="callback-name">Текущий пароль</label>
-                      <a href="#" class="password-icon"></a>
+                      <input id="user-password-actual" type="password" name="user-password-actual" required />
+                      <label for="user-password-actual">Текущий пароль</label>
+                      <button type="button" class="password-icon"></button>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="callback-phone" type="text" name="callback-phone" required />
-                      <label for="callback-phone">Новый пароль</label>
+                      <input id="user-password-new" type="password" name="user-password-new" required />
+                      <label for="user-password-new">Новый пароль</label>
+                      <button type="button" class="password-icon"></button>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="callback-phone" type="text" name="callback-phone" required />
-                      <label for="callback-phone">Повторите новый пароль</label>
+                      <input id="user-password-new-repeat" type="password" name="user-password-new-repeat" required />
+                      <label for="user-password-new-repeat">Повторите новый пароль</label>
+                      <button type="button" class="password-icon"></button>
                     </div>
                   </div>
                   <button class="btn btn-main" disabled>Изменить</button>
                 </form>
               </div>
+              <div class="modals__item modal" id="modalInfo2">
+                <div class="modal__title">Изменение телефона</div>
+                <form class="modal__form" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-phone" type="text" name="user-phone" required />
+                      <label for="user-phone">Текущий номер</label>
+                      <input id="user-phone-country" type="text" name="user-phone-country" hidden value="" />
 
+                      <div class="custom-select" data-input-id="user-phone-country">
+                        <div class="custom-select__selected">
+                          <img src="/assets/img/icons/flags/05.svg" alt="Россия">
+                        </div>
+                        <div class="custom-select__options">
+                          <div class="custom-select__option phone-country" data-value="+374" data-icon="/assets/img/icons/flags/01.svg">
+                            <div class="phone-country__code">+374</div>
+                            <div class="phone-country__title">Армения</div>
+                            <img src="/assets/img/icons/flags/01.svg" alt="Армения">
+                          </div>
+                          <div class="custom-select__option phone-country" data-value="+375" data-icon="/assets/img/icons/flags/02.svg">
+                            <div class="phone-country__code">+375</div>
+                            <div class="phone-country__title">Белоруссия</div>
+                            <img src="/assets/img/icons/flags/02.svg" alt="Белоруссия">
+                          </div>
+                          <div class="custom-select__option phone-country" data-value="+995" data-icon="/assets/img/icons/flags/03.svg">
+                            <div class="phone-country__code">+995</div>
+                            <div class="phone-country__title">Грузия</div>
+                            <img src="/assets/img/icons/flags/03.svg" alt="Грузия">
+                          </div>
+                          <div class="custom-select__option phone-country" data-value="+7" data-icon="/assets/img/icons/flags/04.svg">
+                            <div class="phone-country__code">+7</div>
+                            <div class="phone-country__title">Казахстан</div>
+                            <img src="/assets/img/icons/flags/04.svg" alt="Казахстан">
+                          </div>
+                          <div class="custom-select__option phone-country" data-value="+7" data-icon="/assets/img/icons/flags/05.svg">
+                            <div class="phone-country__code">+7</div>
+                            <div class="phone-country__title">Россия</div>
+                            <img src="/assets/img/icons/flags/05.svg" alt="Россия">
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
             </div>
           </div>
           <div class="tabs-content__item my-2" data-tabid="cart">

@@ -761,12 +761,11 @@ if (orderStatusBtns.length > 0) {
     })
 }
 
-// показ/скрытие блока Подробнее на вкладке История заказов
+// показать/скрыть блок Подробнее на вкладке История заказов
 const historyItems = document.querySelectorAll('.history__item')
 
 if (historyItems.length > 0) {
     historyItems.forEach(item => {
-
         let historyItemMoreBtn = item.querySelector('.history-item__more-link')
         let historyItemMoreBlock = item.querySelector('.history-item__more-block')
         historyItemMoreBtn.addEventListener('click', (e) => {
@@ -777,3 +776,43 @@ if (historyItems.length > 0) {
     })
 }
 
+
+// показать/скрыть пароль
+const passwordItems = document.querySelectorAll('input[type="password"]')
+if (passwordItems.length > 0) {
+    passwordItems.forEach(item => {
+        let passwordBtn = item.parentNode.querySelector('.password-icon')
+        passwordBtn.addEventListener('click', (e) => {
+            e.preventDefault;
+            passwordBtn.classList.toggle('is-active')
+            if (item.getAttribute('type') == 'password') {
+                item.setAttribute('type', 'text');
+            } else {
+                item.setAttribute('type', 'password');
+            }
+
+        })
+    })
+}
+
+const customSelectItems = document.querySelectorAll('.custom-select')
+if (customSelectItems.length > 0) {
+    customSelectItems.forEach(item => {
+        let customSelectSelected = item.querySelector('.custom-select__selected')
+        let customSelectOptions = item.querySelector('.custom-select__options')
+        let customSelectInput = document.getElementById(item.dataset.inputId)
+        let customSelectOptionsItems = item.querySelectorAll('.custom-select__option')
+
+        customSelectSelected.addEventListener('click', () => {
+            customSelectOptions.classList.toggle('is-active')
+        })
+
+        customSelectOptionsItems.forEach(option => {
+            option.addEventListener('click', () => {
+                customSelectOptions.classList.remove('is-active')
+                customSelectInput.setAttribute('value', option.dataset.value)
+                customSelectSelected.querySelector('img').setAttribute('src', option.dataset.icon)
+            })
+        })
+    })
+}

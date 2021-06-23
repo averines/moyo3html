@@ -5,7 +5,6 @@ $white: rgba(#fff, 1);
 $black: rgba(#101010, 1);
 
 $special-1: #e7003e;
-// $special-2: #009295;
 $special-2: #038184;
 $special-3: #870873;
 $special-4: #be1860;
@@ -402,8 +401,17 @@ h5,
 .password-icon {
   width: 20px;
   height: 20px;
-  background-color: red;
+  background: url(../img/icons/eye.svg) no-repeat center;
+  background-size: 100%;
   display: block;
+  position: absolute;
+  right: 0;
+  border: none;
+  cursor: pointer;
+
+  &.is-active {
+    filter: brightness(0);
+  }
 }
 
 // фансибокс
