@@ -52,6 +52,10 @@ main {
   display: flex;
 }
 
+.d-none {
+  display: none;
+}
+
 .d-grid {
   display: -ms-grid;
   display: grid;
@@ -523,6 +527,10 @@ h5,
 
 .text-right {
   text-align: right;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-italic {
@@ -4981,7 +4989,7 @@ hr.dotted {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.77em;
+  font-size: 11px;
   font-weight: 600;
   text-decoration: none;
   padding: 1.25em 2.5em;
@@ -6430,6 +6438,38 @@ hr.dotted {
   background: url(../img/icons/order-status/03.svg) no-repeat center;
 }
 
+.history-item .history-item__icon--send::after {
+  content: "Отправлен";
+}
+
+.history-item .history-item__icon--send::before {
+  background: url(../img/icons/order-status/05.svg) no-repeat center;
+}
+
+.history-item .history-item__icon--paid::after {
+  content: "Оплачен";
+}
+
+.history-item .history-item__icon--paid::before {
+  background: url(../img/icons/order-status/05.svg) no-repeat center;
+}
+
+.history-item .history-item__icon--canceled::after {
+  content: "Отменен";
+}
+
+.history-item .history-item__icon--canceled::before {
+  background: url(../img/icons/order-status/06.svg) no-repeat center;
+}
+
+.history-item .history-item__icon--onpacked::after {
+  content: "На упаковке";
+}
+
+.history-item .history-item__icon--onpacked::before {
+  background: url(../img/icons/order-status/07.svg) no-repeat center;
+}
+
 .history-item__content {
   line-height: 1.5;
 }
@@ -6523,6 +6563,9 @@ hr.dotted {
 
 .history-table__quantity {
   text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .history-table__quantity::after {
@@ -6536,6 +6579,30 @@ hr.dotted {
 
 .history-table__total::after {
   content: " ₽";
+}
+
+.history-table .total-return {
+  white-space: nowrap;
+}
+
+.history-table .total-return::after {
+  content: "";
+  color: #ab064e;
+}
+
+.history-table .total-return__title {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.history-table .total-return__summ {
+  color: #ab064e;
+}
+
+.history-table .total-return__summ::after {
+  content: " ₽";
+  color: #ab064e;
 }
 
 .history-item-payment {
@@ -6748,6 +6815,27 @@ hr.dotted {
 .phone-country img {
   display: block;
   width: 20px;
+}
+
+.extraorder {
+  margin-top: 30px;
+  line-height: 1.4;
+}
+
+.extraorder__item {
+  background: url(../img/icons/plus-small.svg) no-repeat top 10px left 10px #f3f2f0;
+  padding: 10px 7px 7px 32px;
+  margin-bottom: 2px;
+  font-size: 10px;
+}
+
+.extraorder__link {
+  color: #777;
+}
+
+.extraorder__content {
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 @-webkit-keyframes jump {
@@ -6965,6 +7053,9 @@ hr.dotted {
   }
   .mb-md-0 {
     margin-bottom: 0;
+  }
+  .d-md-block {
+    display: block;
   }
   .main-slider .main-slide__pic {
     display: block;
@@ -7304,8 +7395,8 @@ hr.dotted {
   .history__header {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 1fr 1fr 4fr;
-        grid-template-columns: 2fr 1fr 1fr 4fr;
+    -ms-grid-columns: 1.5fr 1fr 1fr 3fr;
+        grid-template-columns: 1.5fr 1fr 1fr 3fr;
     text-align: center;
   }
   .history-item {
@@ -7313,6 +7404,8 @@ hr.dotted {
     display: grid;
     -ms-grid-columns: 2fr 6fr;
         grid-template-columns: 2fr 6fr;
+    position: relative;
+    padding-bottom: 50px;
   }
   .history-item__more-block {
     display: -ms-grid;
@@ -7327,6 +7420,20 @@ hr.dotted {
     border-top: none;
     padding-top: 0;
     width: 100%;
+  }
+  .history-item__show {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    color: #ab064e;
+    padding: 0;
+    background-color: transparent;
+    min-width: 0;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .history-item__content .text-small {
+    margin: 0.3em 0;
   }
   .info-plate {
     padding: 20px;
@@ -7374,6 +7481,10 @@ hr.dotted {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .extraorder__item {
+    width: 100%;
+    font-size: 13px;
   }
 }
 
@@ -8075,6 +8186,42 @@ hr.dotted {
     width: 120px;
     right: 6em;
     top: 4em;
+  }
+  .history__header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.2fr 1fr 1fr 5fr;
+        grid-template-columns: 2.2fr 1fr 1fr 5fr;
+    text-align: center;
+  }
+  .history-item {
+    padding-top: 40px;
+  }
+  .history-item__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+  .history-item .history-item__icon {
+    width: 140px;
+  }
+  .history-item .history-item__icon::before {
+    right: 32px;
+  }
+  .history-item .history-item__icon::after {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-top: 65px;
+    right: auto;
+  }
+  .history-item-status__item {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    max-width: 120px;
   }
 }
 

@@ -144,6 +144,10 @@
     margin-bottom: 0;
   }
 
+  .d-md-block {
+    display: block;
+  }
+
   .main-slider {
     .main-slide {
       &__pic {
@@ -496,7 +500,7 @@
   .history {
     &__header {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 4fr;
+      grid-template-columns: 1.5fr 1fr 1fr 3fr;
       text-align: center;
     }
   }
@@ -504,11 +508,26 @@
   .history-item {
     display: grid;
     grid-template-columns: 2fr 6fr;
+    // grid-template-rows: 1fr 1fr;
+    // grid-template-areas:
+    //   "info more"
+    //   "extraorder";
+    position: relative;
+    padding-bottom: 50px;
+
+    // &__info {
+    //   grid-area: info;
+    // }
 
     &__more-block {
       display: grid;
       grid-template-columns: 2fr 6fr;
+      // grid-area: more;
     }
+
+    // &__extraorder {
+    //   grid-area: extraorder;
+    // }
 
     .history-table__head {
       display: none;
@@ -518,6 +537,24 @@
       border-top: none;
       padding-top: 0;
       width: 100%;
+    }
+
+    &__show {
+      position: absolute;
+      left: 0;
+      bottom: 30px;
+      color: $main;
+      padding: 0;
+      background-color: transparent;
+      min-width: 0;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+
+    &__content {
+      .text-small {
+        margin: 0.3em 0;
+      }
     }
   }
 
@@ -570,6 +607,13 @@
       bottom: 20px;
       display: flex;
       align-items: center;
+    }
+  }
+
+  .extraorder {
+    &__item {
+      width: 100%;
+      font-size: 13px;
     }
   }
 }
@@ -1396,6 +1440,42 @@
       right: 6em;
       top: 4em;
     }
+  }
+
+  .history {
+    &__header {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr 1fr 5fr;
+      text-align: center;
+    }
+  }
+
+  .history-item {
+    padding-top: 40px;
+    &__info {
+      flex-direction: row;
+      column-gap: 40px;
+    }
+
+    .history-item__icon {
+      width: 140px;
+
+      &::before {
+        right: 32px;
+      }
+
+      &::after {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-top: 65px;
+        right: auto;
+      }
+    }
+  }
+  .history-item-status__item {
+    justify-self: center;
+    max-width: 120px;
   }
 }
 

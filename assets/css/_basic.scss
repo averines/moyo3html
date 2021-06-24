@@ -77,6 +77,10 @@ main {
   display: flex;
 }
 
+.d-none {
+  display: none;
+}
+
 .d-grid {
   display: grid;
 }
@@ -521,6 +525,10 @@ h5,
 
 .text-right {
   text-align: right;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-italic {
