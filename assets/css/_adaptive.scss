@@ -393,6 +393,11 @@
       // height: 385px;
       max-width: none;
     }
+
+    &__download {
+      bottom: 5px;
+      left: 5px;
+    }
   }
 
   .d-md-none {
@@ -459,8 +464,13 @@
     .product-status {
       display: block;
     }
+
     &__price {
       font-size: 1.25em;
+    }
+
+    &__brand-logo {
+      width: 100px;
     }
   }
 

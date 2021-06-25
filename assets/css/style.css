@@ -4552,7 +4552,7 @@ hr.dotted {
   height: 20px;
   position: absolute;
   bottom: 5px;
-  left: 5px;
+  right: 20px;
   background: url(../img/icons/download.svg) no-repeat center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4690,6 +4690,7 @@ hr.dotted {
 }
 
 .product-info .pagetitle__header {
+  margin-top: 30px;
   margin-bottom: 0;
 }
 
@@ -4710,7 +4711,7 @@ hr.dotted {
 }
 
 .product-info__brand-logo {
-  width: 100px;
+  width: 70px;
   display: block;
   position: absolute;
   right: 15px;
@@ -4729,8 +4730,25 @@ hr.dotted {
 }
 
 .product-info__price {
-  font-size: 1.15em;
   row-gap: 0.05em;
+}
+
+.product-info__price .price__old,
+.product-info__price .price__profit,
+.product-info__price .price__discount {
+  font-size: 16px;
+}
+
+.product-info__price .price__old {
+  opacity: 0.7;
+}
+
+.product-info__price .price__discount {
+  padding: 0.05em 0.4em;
+}
+
+.product-info__price .price__base {
+  font-size: 19px;
 }
 
 .product-info .product-status {
@@ -4783,7 +4801,7 @@ hr.dotted {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.88em;
+  font-size: 14px;
   -webkit-column-gap: 0.3em;
           column-gap: 0.3em;
   line-height: 1.5;
@@ -4884,7 +4902,13 @@ hr.dotted {
 
 .product-colors__title {
   font-weight: bold;
-  font-size: 0.95em;
+  font-size: 15px;
+}
+
+.product-colors .product-colors-slider {
+  border-top: 1px solid #d9d9d9;
+  padding-top: 20px;
+  margin-top: 15px;
 }
 
 .product-color-info__header {
@@ -4897,19 +4921,19 @@ hr.dotted {
           align-items: baseline;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .product-color-info__title {
   font-weight: bold;
-  font-size: 0.95em;
+  font-size: 15px;
 }
 
 .product-color-info__link {
   font-weight: 400;
   color: #777;
-  font-size: 0.85em;
+  font-size: 14px;
 }
 
 .product-table.table td {
@@ -7295,6 +7319,10 @@ hr.dotted {
     position: absolute;
     max-width: none;
   }
+  .product-gallery-slider__download {
+    bottom: 5px;
+    left: 5px;
+  }
   .d-md-none {
     display: none;
   }
@@ -7370,6 +7398,9 @@ hr.dotted {
   }
   .product-info__price {
     font-size: 1.25em;
+  }
+  .product-info__brand-logo {
+    width: 100px;
   }
   .product-colors-slider__item {
     width: 70px;
