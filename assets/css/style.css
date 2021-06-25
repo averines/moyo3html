@@ -8357,6 +8357,9 @@ hr.dotted {
     -webkit-column-gap: 0;
             column-gap: 0;
   }
+  .product-wrapper .product__info {
+    padding: 15px;
+  }
   .product-gallery {
     -ms-grid-columns: 112px 1fr;
         grid-template-columns: 112px 1fr;

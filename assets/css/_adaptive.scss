@@ -1624,6 +1624,12 @@
     column-gap: 0;
   }
 
+  .product-wrapper {
+    .product__info {
+      padding: 15px;
+    }
+  }
+
   .product-gallery {
     grid-template-columns: 112px 1fr;
   }
