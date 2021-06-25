@@ -30,6 +30,33 @@
       }
     }
   }
+
+  .pagination {
+    &--top {
+      position: absolute;
+      right: 15px;
+      top: 40px;
+      width: 300px;
+    }
+
+    &--bottom {
+      position: absolute;
+      right: 15px;
+      width: 300px;
+    }
+
+    &__links {
+      max-width: none;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    &__link {
+      pointer-events: all;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -338,24 +365,24 @@
     }
   }
 
-  .pagination {
-    max-width: 300px;
-    margin-right: 0;
+  // .pagination {
+  //   max-width: 300px;
+  //   margin-right: 0;
 
-    &.pagination--top {
-      position: absolute;
-      right: $gap;
-      top: 30px;
-    }
+  //   &.pagination--top {
+  //     position: absolute;
+  //     right: $gap;
+  //     top: 30px;
+  //   }
 
-    .pagination__prev {
-      margin-right: 0;
-    }
+  //   .pagination__prev {
+  //     margin-right: 0;
+  //   }
 
-    .pagination__next {
-      margin-left: 0;
-    }
-  }
+  //   .pagination__next {
+  //     margin-left: 0;
+  //   }
+  // }
 
   .btn-filter {
     margin-left: 20px;
@@ -1040,15 +1067,15 @@
     }
   }
 
-  .pagination {
-    .pagination__prev,
-    .pagination__next {
-      a {
-        width: 36px;
-        height: 36px;
-      }
-    }
-  }
+  // .pagination {
+  //   .pagination__prev,
+  //   .pagination__next {
+  //     a {
+  //       width: 36px;
+  //       height: 36px;
+  //     }
+  //   }
+  // }
 
   // отзывы на странице товара
   .feedback-form {
@@ -1405,6 +1432,10 @@
 
 //xxl
 @media screen and (min-width: 1366px) {
+  main {
+    position: relative;
+  }
+
   .header {
     &-main {
       &__logo {
@@ -1425,6 +1456,88 @@
         min-width: 350px;
         width: 100%;
       }
+    }
+  }
+
+  .container--pagination {
+    position: initial;
+  }
+
+  .pagination {
+    pointer-events: none;
+    width: 100%;
+    max-width: none;
+
+    &--top {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      left: 0;
+    }
+
+    &--bottom {
+      position: absolute;
+      width: 100%;
+      left: 0;
+    }
+
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 680px;
+      z-index: 1;
+      pointer-events: none;
+      margin: 0 auto;
+    }
+
+    &__prev,
+    &__next {
+      width: 340px;
+    }
+
+    &__prev {
+      &::before {
+        margin-left: 10px;
+      }
+      &::after {
+        content: "Предыдущая страница";
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:hover {
+        &::before {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+    &__next {
+      transform: translateX(-1px);
+      flex-direction: row-reverse;
+
+      &::before {
+        margin-right: 10px;
+      }
+      &::after {
+        content: "Следующая страница";
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:hover {
+        &::before {
+          transform: rotate(180deg) translateX(5px);
+        }
+      }
+    }
+
+    &__links {
+      position: absolute;
+      right: 15px;
+      top: 0;
+      max-width: none;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -1501,100 +1614,100 @@
     padding-right: $gap-big;
   }
 
-  .pagination {
-    width: 200px;
-    margin-bottom: 0;
+  // .pagination {
+  //   width: 200px;
+  //   margin-bottom: 0;
 
-    &.pagination--top {
-      position: absolute;
-      right: $gap;
-      top: 40px;
-    }
+  //   &.pagination--top {
+  //     position: absolute;
+  //     right: $gap;
+  //     top: 40px;
+  //   }
 
-    .pagination__prev,
-    .pagination__next {
-      width: 340px;
-      position: absolute;
+  //   .pagination__prev,
+  //   .pagination__next {
+  //     width: 340px;
+  //     position: absolute;
 
-      a {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        font-weight: 400;
+  //     a {
+  //       display: flex;
+  //       align-items: center;
+  //       width: 100%;
+  //       font-weight: 400;
 
-        &::after {
-          width: 9px;
-          height: 9px;
-          background-size: contain;
-        }
+  //       &::after {
+  //         width: 9px;
+  //         height: 9px;
+  //         background-size: contain;
+  //       }
 
-        &:hover {
-          background-color: $bg-light;
-          border-color: $line-dark;
+  //       &:hover {
+  //         background-color: $bg-light;
+  //         border-color: $line-dark;
 
-          &::after {
-            filter: none;
-          }
-        }
-      }
-    }
+  //         &::after {
+  //           filter: none;
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .pagination__prev {
-      right: 740px;
-      a {
-        flex-direction: row-reverse;
+  //   .pagination__prev {
+  //     right: 740px;
+  //     a {
+  //       flex-direction: row-reverse;
 
-        &::before {
-          content: "Предыдущая страница";
-          margin-right: auto;
-        }
+  //       &::before {
+  //         content: "Предыдущая страница";
+  //         margin-right: auto;
+  //       }
 
-        &::after {
-          margin-right: auto;
-        }
+  //       &::after {
+  //         margin-right: auto;
+  //       }
 
-        &:hover {
-          &::after {
-            transform: translateX(5px);
-          }
-        }
-      }
-    }
+  //       &:hover {
+  //         &::after {
+  //           transform: translateX(5px);
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .pagination__next {
-      right: 400px;
-      a {
-        transform: none;
-        border-radius: 0 2px 2px 0;
-        margin-left: -1px;
+  //   .pagination__next {
+  //     right: 400px;
+  //     a {
+  //       transform: none;
+  //       border-radius: 0 2px 2px 0;
+  //       margin-left: -1px;
 
-        &::before {
-          content: "Следующая страница";
-          margin-left: auto;
-        }
+  //       &::before {
+  //         content: "Следующая страница";
+  //         margin-left: auto;
+  //       }
 
-        &::after {
-          transform: rotate(-180deg);
-          margin-left: auto;
-        }
+  //       &::after {
+  //         transform: rotate(-180deg);
+  //         margin-left: auto;
+  //       }
 
-        &:hover {
-          &::after {
-            transform: rotate(-180deg) translateX(5px);
-          }
-        }
-      }
-    }
+  //       &:hover {
+  //         &::after {
+  //           transform: rotate(-180deg) translateX(5px);
+  //         }
+  //       }
+  //     }
+  //   }
 
-    &.pagination--top {
-      .pagination__prev {
-        right: 720px;
-      }
-      .pagination__next {
-        right: 380px;
-      }
-    }
-  }
+  //   &.pagination--top {
+  //     .pagination__prev {
+  //       right: 720px;
+  //     }
+  //     .pagination__next {
+  //       right: 380px;
+  //     }
+  //   }
+  // }
 
   .products {
     column-gap: 10px;

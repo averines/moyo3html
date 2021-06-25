@@ -2741,87 +2741,182 @@
 }
 
 // пагинация в каталоге
-.pagination {
-  margin: 0 auto 15px auto;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  max-width: 400px;
+// .pagination {
+//   margin: 0 auto 15px auto;
+//   padding: 0;
+//   list-style: none;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: stretch;
+//   max-width: 400px;
 
-  a,
-  span {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    color: $text;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 9px;
-    transition: $tr;
-  }
-  a:hover {
-    background-color: $line-light + 20%;
-  }
+//   a,
+//   span {
+//     display: flex;
+//     align-items: center;
+//     height: 100%;
+//     color: $text;
+//     font-size: 14px;
+//     font-weight: 600;
+//     text-decoration: none;
+//     padding: 10px 9px;
+//     transition: $tr;
+//   }
+//   a:hover {
+//     background-color: $line-light + 20%;
+//   }
+
+//   span::after {
+//     content: "...";
+//   }
+
+//   &__prev {
+//     margin-right: auto;
+//   }
+
+//   &__next {
+//     margin-left: auto;
+//   }
+
+//   &__prev,
+//   &__next {
+//     a {
+//       display: block;
+//       width: 40px;
+//       height: 40px;
+//       border: 1px solid $line-dark;
+//       background-color: $white;
+//       overflow: hidden;
+//       border-radius: 4px 0 0 4px;
+//       transition: $tr;
+
+//       &::after {
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         content: "";
+//         background: url(../img/icons/arrow.svg) no-repeat center;
+//         background-size: 35%;
+//         transition: $tr;
+//       }
+
+//       &:hover {
+//         background-color: $main;
+//         border-color: $main;
+
+//         &::after {
+//           filter: brightness(3);
+//         }
+//       }
+
+//       &:active {
+//         background-color: $main - 25%;
+//       }
+//     }
+//   }
+
+//   &__next a {
+//     transform: scale(-1, -1);
+//   }
+
+//   &__active a {
+//     color: $main;
+//     text-decoration: underline;
+//   }
+// }
+
+.pagination {
+  max-width: 400px;
+  position: relative;
 
   span::after {
     content: "...";
   }
 
-  &__prev {
-    margin-right: auto;
-  }
-
-  &__next {
-    margin-left: auto;
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
   }
 
   &__prev,
   &__next {
-    a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid $line-dark;
+    background-color: $white;
+    overflow: hidden;
+    border-radius: 4px 0 0 4px;
+    transition: $tr;
+    pointer-events: all;
+    text-decoration: none;
+    font-size: 15px;
+    color: $text;
+
+    &::before {
       display: block;
-      width: 40px;
-      height: 40px;
-      border: 1px solid $line-dark;
-      background-color: $white;
-      overflow: hidden;
-      border-radius: 4px 0 0 4px;
+      width: 9px;
+      height: 9px;
+      content: "";
+      background: url(../img/icons/arrow.svg) no-repeat center;
+      background-size: contain;
       transition: $tr;
+    }
 
-      &::after {
-        display: block;
-        width: 100%;
-        height: 100%;
-        content: "";
-        background: url(../img/icons/arrow.svg) no-repeat center;
-        background-size: 35%;
-        transition: $tr;
+    &:hover {
+      background-color: $main;
+      border-color: $main;
+      color: $white;
+
+      &::before {
+        filter: brightness(3);
       }
+    }
 
-      &:hover {
-        background-color: $main;
-        border-color: $main;
-
-        &::after {
-          filter: brightness(3);
-        }
-      }
-
-      &:active {
-        background-color: $main - 25%;
-      }
+    &:active {
+      background-color: $main - 25%;
     }
   }
 
-  &__next a {
-    transform: scale(-1, -1);
+  &__next {
+    border-radius: 0 4px 4px 0;
+
+    &::before {
+      transform: rotate(180deg);
+    }
   }
 
-  &__active a {
-    color: $main;
-    text-decoration: underline;
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    height: 36px;
+    z-index: 2;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: $text;
+    display: block;
+    padding: 7px;
+
+    &:hover {
+      background-color: $line-light + 20%;
+    }
+
+    &--active {
+      color: $main;
+      text-decoration: underline;
+    }
   }
 }
 
