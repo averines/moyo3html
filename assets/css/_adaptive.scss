@@ -1530,7 +1530,7 @@
     }
 
     .pagination__prev {
-      left: -780px;
+      right: 740px;
       a {
         flex-direction: row-reverse;
 
@@ -1552,7 +1552,7 @@
     }
 
     .pagination__next {
-      left: -440px;
+      right: 400px;
       a {
         transform: none;
         border-radius: 0 2px 2px 0;
@@ -1573,6 +1573,15 @@
             transform: rotate(-180deg) translateX(5px);
           }
         }
+      }
+    }
+
+    &.pagination--top {
+      .pagination__prev {
+        right: 720px;
+      }
+      .pagination__next {
+        right: 380px;
       }
     }
   }

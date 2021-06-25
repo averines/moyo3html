@@ -8278,7 +8278,7 @@ hr.dotted {
             filter: none;
   }
   .pagination .pagination__prev {
-    left: -780px;
+    right: 740px;
   }
   .pagination .pagination__prev a {
     -webkit-box-orient: horizontal;
@@ -8298,7 +8298,7 @@ hr.dotted {
             transform: translateX(5px);
   }
   .pagination .pagination__next {
-    left: -440px;
+    right: 400px;
   }
   .pagination .pagination__next a {
     -webkit-transform: none;
@@ -8318,6 +8318,12 @@ hr.dotted {
   .pagination .pagination__next a:hover::after {
     -webkit-transform: rotate(-180deg) translateX(5px);
             transform: rotate(-180deg) translateX(5px);
+  }
+  .pagination.pagination--top .pagination__prev {
+    right: 720px;
+  }
+  .pagination.pagination--top .pagination__next {
+    right: 380px;
   }
   .products {
     -webkit-column-gap: 10px;
