@@ -6688,7 +6688,7 @@ hr.dotted {
 }
 
 .history-item-payment__waiting {
-  color: #3d3d3c;
+  color: #c09507;
   font-weight: 600;
   font-size: 14px;
 }
@@ -7619,7 +7619,6 @@ hr.dotted {
     line-height: 1.1em;
   }
   .history-item .history-item-payment__waiting {
-    font-weight: 400;
     margin-bottom: 10px;
   }
   .history-item__show {
