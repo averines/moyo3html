@@ -621,7 +621,8 @@
     &__more-block {
       display: grid;
       grid-template-columns: 1.5fr 6fr;
-      align-items: flex-start;
+      align-self: flex-start;
+      padding-top: 20px;
     }
 
     .history-table__head {

@@ -5435,6 +5435,15 @@
       color: $main;
     }
 
+    &__total {
+      font-weight: 600;
+      margin-bottom: 7px;
+
+      &::after {
+        content: " ₽";
+      }
+    }
+
     &__title {
       font-weight: 400;
       font-size: 12px;

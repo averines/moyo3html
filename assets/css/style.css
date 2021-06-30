@@ -6662,6 +6662,15 @@ hr.dotted {
   color: #ab064e;
 }
 
+.history-table .total-return__total {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.history-table .total-return__total::after {
+  content: " ₽";
+}
+
 .history-table .total-return__title {
   font-weight: 400;
   font-size: 12px;
@@ -7590,9 +7599,8 @@ hr.dotted {
     display: grid;
     -ms-grid-columns: 1.5fr 6fr;
         grid-template-columns: 1.5fr 6fr;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-self: flex-start;
+    padding-top: 20px;
   }
   .history-item .history-table__head {
     display: none;
