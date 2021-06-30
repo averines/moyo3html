@@ -1132,17 +1132,6 @@
     }
   }
 
-  .discounts-wrapper {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    column-gap: 3em;
-
-    .current-discount__content {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   .social-share-wrapper {
     margin-top: -25px;
   }
@@ -1428,6 +1417,17 @@
     width: 100%;
     &__item {
       max-height: 700px;
+    }
+  }
+
+  .discounts-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3em;
+
+    .current-discount__content {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

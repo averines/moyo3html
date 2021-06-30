@@ -557,6 +557,10 @@ h5,
   white-space: nowrap;
 }
 
+.fz-14 {
+  font-size: 14px;
+}
+
 p {
   line-height: 1.4;
 }
@@ -569,6 +573,10 @@ p a {
 
 p a:hover {
   opacity: 0.8;
+}
+
+p.fz-14 {
+  font-size: 14px;
 }
 
 hr {
@@ -622,6 +630,16 @@ hr.dotted {
 
 .italic {
   font-style: italic;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0;
+}
+
+.mt-0,
+.my-0 {
+  margin-top: 0;
 }
 
 .mb-1,
@@ -1377,6 +1395,12 @@ hr.dotted {
 .modals__item {
   display: none;
   min-height: calc(100vh - 15px);
+}
+
+.modals__item.modalsizestable {
+  min-height: 0;
+  width: 90%;
+  max-width: 1480px;
 }
 
 .modal {
@@ -6230,6 +6254,7 @@ hr.dotted {
 }
 
 .current-discount__title {
+  font-size: 16px;
   font-weight: 600;
   padding: 1em;
   background-color: #f3f2f0;
@@ -6248,7 +6273,7 @@ hr.dotted {
 
 .purchase-volume__item {
   margin-bottom: 1em;
-  font-size: 0.8em;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6327,7 +6352,7 @@ hr.dotted {
 
 .discount-number__title {
   font-weight: 600;
-  font-size: 1.05em;
+  font-size: 18px;
   color: white;
   background-color: #900583;
   display: inline-block;
@@ -6392,6 +6417,7 @@ hr.dotted {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 14px;
 }
 
 .history__header {
@@ -7946,23 +7972,6 @@ hr.dotted {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .discounts-wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 3fr 2fr;
-        grid-template-columns: 3fr 2fr;
-    -webkit-column-gap: 3em;
-            column-gap: 3em;
-  }
-  .discounts-wrapper .current-discount__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .social-share-wrapper {
     margin-top: -25px;
   }
@@ -8206,6 +8215,23 @@ hr.dotted {
   }
   .product-gallery-slider__item {
     max-height: 700px;
+  }
+  .discounts-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+    -webkit-column-gap: 3em;
+            column-gap: 3em;
+  }
+  .discounts-wrapper .current-discount__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
