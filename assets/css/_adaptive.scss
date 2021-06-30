@@ -666,6 +666,12 @@
       min-width: 0;
       font-size: 14px;
       text-decoration: underline;
+
+      &:hover {
+        background: none;
+        color: $main;
+        opacity: 0.8;
+      }
     }
 
     &__content {

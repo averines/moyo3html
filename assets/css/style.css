@@ -6458,6 +6458,8 @@ hr.dotted {
   background: url(../img/icons/box.svg) no-repeat center;
   position: relative;
   margin-bottom: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .history-item__icon::after {
@@ -6513,7 +6515,7 @@ hr.dotted {
 }
 
 .history-item .history-item__icon--send::before {
-  background: url(../img/icons/order-status/05.svg) no-repeat center;
+  background: url(../img/icons/order-status/04.svg) no-repeat center;
 }
 
 .history-item .history-item__icon--paid::after {
@@ -6732,6 +6734,8 @@ hr.dotted {
       -ms-flex-align: center;
           align-items: center;
   line-height: 1.3;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .history-item-status__item.status-doc::before {
@@ -6739,6 +6743,17 @@ hr.dotted {
   width: 35px;
   height: 35px;
   display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.history-item-status__item.status-doc:hover {
+  opacity: 0.8;
+}
+
+.history-item-status__item.status-doc:hover::before {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .history-item-status__item.status-doc--1::before {
@@ -7617,6 +7632,11 @@ hr.dotted {
     min-width: 0;
     font-size: 14px;
     text-decoration: underline;
+  }
+  .history-item__show:hover {
+    background: none;
+    color: #ab064e;
+    opacity: 0.8;
   }
   .history-item__content .text-small {
     margin: 0.3em 0;
