@@ -5479,7 +5479,7 @@
 .history-item-status {
   border-top: 2px dotted $line-light;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   width: 100%;
 
@@ -5515,6 +5515,12 @@
       }
     }
 
+    &.status-doc--3 {
+      &::before {
+        background: url(../img/icons/order-status/_05.svg) no-repeat center;
+      }
+    }
+
     &.status-info {
       display: flex;
       flex-direction: column;
@@ -5537,6 +5543,7 @@
         font-weight: 600;
       }
     }
+
     &.status-info--2 {
       &::before {
         background: url(../img/icons/order-status/_02.svg) no-repeat center;

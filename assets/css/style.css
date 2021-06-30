@@ -6706,8 +6706,8 @@ hr.dotted {
   border-top: 2px dotted #d9d9d9;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 10px;
   width: 100%;
 }
@@ -6746,6 +6746,10 @@ hr.dotted {
 
 .history-item-status__item.status-doc--2::before {
   background: url(../img/icons/order-status/_04.svg) no-repeat center;
+}
+
+.history-item-status__item.status-doc--3::before {
+  background: url(../img/icons/order-status/_05.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info {
