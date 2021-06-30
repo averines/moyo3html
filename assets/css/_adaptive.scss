@@ -607,43 +607,53 @@
   .history {
     &__header {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 3fr;
+      grid-template-columns: 2fr 0.75fr 0.75fr 6.5fr;
       text-align: center;
     }
   }
 
   .history-item {
     display: grid;
-    grid-template-columns: 2fr 6fr;
-    // grid-template-rows: 1fr 1fr;
-    // grid-template-areas:
-    //   "info more"
-    //   "extraorder";
+    grid-template-columns: 2fr 8fr;
     position: relative;
     padding-bottom: 50px;
 
-    // &__info {
-    //   grid-area: info;
-    // }
-
     &__more-block {
       display: grid;
-      grid-template-columns: 2fr 6fr;
-      // grid-area: more;
+      grid-template-columns: 1.5fr 6fr;
+      align-items: flex-start;
     }
-
-    // &__extraorder {
-    //   grid-area: extraorder;
-    // }
 
     .history-table__head {
       display: none;
+    }
+
+    .history-table__body {
+      padding: 10px 0;
     }
 
     .history-item-status {
       border-top: none;
       padding-top: 0;
       width: 100%;
+      max-width: 580px;
+      padding-left: 50px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .history-item-payment {
+      position: absolute;
+      right: 0;
+      top: 50px;
+      margin: 0;
+      text-align: center;
+      max-width: 90px;
+      line-height: 1.1em;
+
+      &__waiting {
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
     }
 
     &__show {
@@ -1430,6 +1440,25 @@
       flex-direction: column;
     }
   }
+
+  .history-item {
+    grid-template-columns: 3fr 8fr;
+
+    .history-item-status {
+      max-width: 550px;
+      padding-left: 40px;
+    }
+
+    .history-item-payment {
+      top: 60px;
+      width: 150px;
+      max-width: none;
+    }
+
+    &__more-block {
+      grid-template-columns: 2fr 6fr;
+    }
+  }
 }
 
 //xxl
@@ -1569,14 +1598,13 @@
 
   .history {
     &__header {
-      display: grid;
-      grid-template-columns: 2.2fr 1fr 1fr 5fr;
-      text-align: center;
+      grid-template-columns: 3fr 1fr 1fr 6fr;
     }
   }
 
   .history-item {
     padding-top: 40px;
+
     &__info {
       flex-direction: row;
       column-gap: 40px;
@@ -1597,7 +1625,13 @@
         right: auto;
       }
     }
+
+    .history-item-status {
+      max-width: 650px;
+      padding-left: 50px;
+    }
   }
+
   .history-item-status__item {
     justify-self: center;
     max-width: 120px;
