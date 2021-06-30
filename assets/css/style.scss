@@ -5505,19 +5505,19 @@
 
     &.status-doc--1 {
       &::before {
-        background: url(../img/icons/order-status/_03.svg) no-repeat center;
+        background: url(../img/icons/order-item-status/03.svg) no-repeat center;
       }
     }
 
     &.status-doc--2 {
       &::before {
-        background: url(../img/icons/order-status/_04.svg) no-repeat center;
+        background: url(../img/icons/order-item-status/04.svg) no-repeat center;
       }
     }
 
     &.status-doc--3 {
       &::before {
-        background: url(../img/icons/order-status/_05.svg) no-repeat center;
+        background: url(../img/icons/order-item-status/05.svg) no-repeat center;
       }
     }
 
@@ -5536,7 +5536,7 @@
 
     &.status-info--1 {
       &::before {
-        background: url(../img/icons/order-status/_01.svg) no-repeat center;
+        background: url(../img/icons/order-item-status/01.svg) no-repeat center;
       }
       &::after {
         content: "Товар подтвердил поставщик";
@@ -5546,7 +5546,7 @@
 
     &.status-info--2 {
       &::before {
-        background: url(../img/icons/order-status/_02.svg) no-repeat center;
+        background: url(../img/icons/order-item-status/02.svg) no-repeat center;
       }
       &::after {
         content: "Товар собран на складе";

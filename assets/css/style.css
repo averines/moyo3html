@@ -6741,15 +6741,15 @@ hr.dotted {
 }
 
 .history-item-status__item.status-doc--1::before {
-  background: url(../img/icons/order-status/_03.svg) no-repeat center;
+  background: url(../img/icons/order-item-status/03.svg) no-repeat center;
 }
 
 .history-item-status__item.status-doc--2::before {
-  background: url(../img/icons/order-status/_04.svg) no-repeat center;
+  background: url(../img/icons/order-item-status/04.svg) no-repeat center;
 }
 
 .history-item-status__item.status-doc--3::before {
-  background: url(../img/icons/order-status/_05.svg) no-repeat center;
+  background: url(../img/icons/order-item-status/05.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info {
@@ -6773,7 +6773,7 @@ hr.dotted {
 }
 
 .history-item-status__item.status-info--1::before {
-  background: url(../img/icons/order-status/_01.svg) no-repeat center;
+  background: url(../img/icons/order-item-status/01.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info--1::after {
@@ -6782,7 +6782,7 @@ hr.dotted {
 }
 
 .history-item-status__item.status-info--2::before {
-  background: url(../img/icons/order-status/_02.svg) no-repeat center;
+  background: url(../img/icons/order-item-status/02.svg) no-repeat center;
 }
 
 .history-item-status__item.status-info--2::after {
