@@ -36,6 +36,7 @@ menuCatalogWrapper.addEventListener('click', (e) => {
 // фильтры на странице подкатегории
 const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
+const menuFilterCloseBtn = document.querySelector('.menu-filters__close')
 let menuFilterIsActive = false
 
 const menuFilterOpen = function () {
@@ -50,11 +51,16 @@ const menuFilterClose = function () {
     menuFilterBlock.classList.remove('is-active')
 }
 
-
 if (menuFilterBtn) {
     menuFilterBtn.addEventListener('click', () => {
         if (!menuFilterIsActive) menuFilterOpen()
         else menuFilterClose()
+    })
+}
+
+if (menuFilterCloseBtn) {
+    menuFilterCloseBtn.addEventListener('click', () => {
+        menuFilterClose()
     })
 }
 
@@ -816,3 +822,55 @@ if (customSelectItems.length > 0) {
         })
     })
 }
+
+//мультибегунок
+const multirangeItems = document.querySelectorAll('.filter-range')
+
+if (multirangeItems.length > 0) {
+    multirangeItems.forEach(item => {
+        let inputs = item.querySelectorAll('.range-inputs input')
+
+        let rangeSlider = item.querySelector('.range-inputs__slider')
+
+
+        let inputStart = item.querySelector('.range-inputs__start')
+        let inputStartValue = inputStart.value;
+        let inputStartMax = inputStart.max;
+        let inputStartMin = inputStart.min;
+
+        let slideLeft = 0
+        let totalWidth = inputStartMax - inputStartMin
+
+        let inputEnd = item.querySelector('.range-inputs__end')
+        let inputEndValue = inputEnd.value;
+
+        inputs.forEach(input => {
+            input.addEventListener('mouseover', (e) => {
+                input.classList.add('is-active')
+            })
+            input.addEventListener('mouseout', (e) => {
+                input.classList.remove('is-active')
+            })
+        })
+
+        inputStart.addEventListener('input', (e) => {
+            inputEnd.setAttribute('min', e.target.value)
+            slideLeft = ((e.target.value - inputStartValue) * 100) / totalWidth
+            rangeSlider.style.left = slideLeft + '%'
+
+            // slideWidth = ((inputStartMax - e.target.value) * 100) / totalWidth
+            // rangeSlider.style.width = slideWidth + '%'
+        })
+
+        inputEnd.addEventListener('input', (e) => {
+            inputStart.setAttribute('max', e.target.value)
+
+            // slideRight = ((inputEndValue - e.target.value) * 100) / totalWidth
+            // rangeSlider.style.right = slideRight + '%'
+
+            slideWidth = 100 - ((inputEndValue - e.target.value) * 100) / totalWidth
+            rangeSlider.style.width = slideWidth + '%'
+        })
+    })
+}
+
