@@ -44,6 +44,16 @@
       padding-right: 10px;
     }
   }
+
+  .order-view {
+    .order {
+      &.order--failed {
+        .order-failed-title {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -166,7 +176,7 @@
     .main-slide {
       &__pic {
         display: block;
-        height: 270px;
+        height: 355px;
         overflow: hidden;
       }
 
@@ -189,8 +199,8 @@
 
       &__content {
         height: auto;
-        height: 220px;
-        width: 300px;
+        height: 275px;
+        width: 405px;
         background-color: transparentize($black, 0.1);
         padding: 2em 2em 4em 2em;
       }
@@ -546,9 +556,9 @@
 
     &__table {
       tbody {
-           tr {
-        border-bottom-color: transparent;
-      }
+        tr {
+          border-bottom-color: transparent;
+        }
       }
     }
 
@@ -633,7 +643,7 @@
     position: relative;
     padding-bottom: 50px;
 
-    &__more-block {
+    .more-block {
       display: grid;
       grid-template-columns: 1.5fr 6fr;
       align-self: flex-start;
@@ -653,7 +663,7 @@
       padding-top: 0;
       width: 100%;
       max-width: 580px;
-      padding-left: 50px;
+      padding-left: 20px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
@@ -754,6 +764,100 @@
       font-size: 13px;
     }
   }
+
+  .order-view {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 15px;
+    }
+
+    &__header-wrapper {
+      order: 2;
+      margin-right: auto;
+    }
+
+    &__title-wrapper {
+      display: flex;
+      align-items: baseline;
+      column-gap: 20px;
+    }
+
+    &__status {
+      margin-top: 0;
+    }
+
+    &__info {
+      display: flex;
+      margin-top: 2px;
+      line-height: 1.3;
+
+      > div {
+        border-right: 1px solid $line-dark;
+        padding-right: 13px;
+        margin-right: 13px;
+        flex-shrink: 1;
+
+        &:last-child {
+          border: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    .order-return {
+      order: 3;
+      margin-top: 0;
+      text-align: right;
+    }
+
+    &__back-btn {
+      position: relative;
+      top: auto;
+      right: auto;
+      order: 1;
+      background: $main;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url(../img/icons/arrow.svg) no-repeat center;
+        filter: brightness(20);
+      }
+    }
+
+    .more-block {
+      display: block;
+      width: 70%;
+    }
+
+    .order-item {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+    .order {
+      &.order--failed {
+        .order-failed-title {
+          padding: 30px 0;
+          border-top: none;
+          margin-bottom: 0;
+        }
+
+        .order-header {
+          padding: 20px 0;
+        }
+
+        .order-item__table {
+          margin-top: -4.5em;
+        }
+      }
+    }
+  }
 }
 
 // lg
@@ -839,7 +943,7 @@
 
       &__content {
         height: 275px;
-        width: 405px;
+        width: 455px;
         padding: 40px 40px 80px 40px;
       }
 
@@ -1163,8 +1267,28 @@
   }
 
   .order-item {
+    &__title {
+      font-size: 18px;
+    }
+
     &__info-wrapper {
       min-width: 350px;
+    }
+  }
+
+  .order-view {
+    &__header {
+      padding: 30px 40px;
+      box-shadow: 0 5px 20px transparentize($black, 0.92);
+      border-radius: 4px;
+    }
+
+    .order-info {
+      .order-info-list {
+        width: 50%;
+        margin-left: auto;
+      }
+      
     }
   }
 }
@@ -1437,6 +1561,12 @@
     }
   }
 
+  .history {
+    &__header {
+      grid-template-columns: 3fr 1fr 1fr 6fr;
+    }
+  }
+
   .history-item {
     grid-template-columns: 3fr 8fr;
 
@@ -1451,7 +1581,7 @@
       max-width: none;
     }
 
-    &__more-block {
+    .more-block {
       grid-template-columns: 2fr 6fr;
     }
   }
@@ -1640,6 +1770,17 @@
   .order-item {
     &__info-wrapper {
       min-width: 500px;
+    }
+  }
+
+  .order-view {
+    .status-icons__item {
+      width: 33px;
+      height: 24px;
+    }
+
+    .more-block {
+      width: 100%;
     }
   }
 }

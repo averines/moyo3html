@@ -692,26 +692,32 @@ if (tabsContainers.length > 0) {
 
         tabsTitlesItems.forEach(tabsTitlesItem => {
             tabsTitlesItem.addEventListener('click', (e) => {
-                e.preventDefault()
 
-                let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
+                if (tabsTitlesItem.getAttribute('href')[0] == '#') {
 
-                //убираем активный класс со всех заголовков
-                tabsTitlesItems.forEach(item => { item.classList.remove('is-active') })
+                    e.preventDefault()
 
-                // делаем активным кликнутый заголовок
-                tabsTitlesItem.classList.add('is-active')
+                    let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
 
-                let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
+                    //убираем активный класс со всех заголовков
+                    tabsTitlesItems.forEach(item => { item.classList.remove('is-active') })
 
-                //убираем активный класс со всех элементов с контентом
-                tabsContentItems.forEach(item => { item.classList.remove('is-active') })
+                    // делаем активным кликнутый заголовок
+                    tabsTitlesItem.classList.add('is-active')
 
-                // делаем активным нужный контейнер с контентом
-                activeContentTab.classList.add('is-active')
+                    let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
+
+                    //убираем активный класс со всех элементов с контентом
+                    tabsContentItems.forEach(item => { item.classList.remove('is-active') })
+
+                    // делаем активным нужный контейнер с контентом
+                    activeContentTab.classList.add('is-active')
+
+                } else {
+                    console.log('нет решетки, клик работает как ссылка');
+                }
             })
         })
-
     })
 }
 
@@ -753,8 +759,6 @@ $(document).ready(function () {
 });
 
 
-
-
 const orderStatusBtns = document.querySelectorAll('.order-status__btn')
 if (orderStatusBtns.length > 0) {
     orderStatusBtns.forEach(item => {
@@ -765,17 +769,16 @@ if (orderStatusBtns.length > 0) {
     })
 }
 
-// показать/скрыть блок Подробнее на вкладке История заказов
-const historyItems = document.querySelectorAll('.history__item')
-
-if (historyItems.length > 0) {
-    historyItems.forEach(item => {
-        let historyItemMoreBtn = item.querySelector('.history-item__more-link')
-        let historyItemMoreBlock = item.querySelector('.history-item__more-block')
-        historyItemMoreBtn.addEventListener('click', (e) => {
+// показать/скрыть блок Подробнее на вкладке История заказов и История заказа
+const moreItems = document.querySelectorAll('.more-wrapper')
+if (moreItems.length > 0) {
+    moreItems.forEach(item => {
+        let moreBtn = item.querySelector('.more-link')
+        let moreBlock = item.querySelector('.more-block')
+        moreBtn.addEventListener('click', (e) => {
             e.preventDefault()
-            historyItemMoreBtn.classList.toggle('is-active')
-            historyItemMoreBlock.classList.toggle('is-active')
+            moreBtn.classList.toggle('is-active')
+            moreBlock.classList.toggle('is-active')
         })
     })
 }
