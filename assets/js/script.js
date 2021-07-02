@@ -263,8 +263,6 @@ const favoritesBtns = document.getElementsByClassName('product-favorite-btn');
     })
 })
 
-
-
 // кнопка добавления размера в корзину
 const sizeVariantsItems = document.getElementsByClassName('size-variants__item');
 [...sizeVariantsItems].forEach(item => {

@@ -451,7 +451,8 @@
 
     &__item {
       border: none;
-      border-bottom: 2px solid $line-dark;
+      border-bottom: 4px solid $line-dark;
+      width: 20%;
 
       &.is-active {
         border-color: $main;
@@ -527,7 +528,7 @@
     column-gap: 4em;
     flex-grow: 1;
     border-bottom: 2px dotted $line-light;
-    padding-bottom: 2em;
+    padding-bottom: 30px;
 
     &:not(:first-child) {
       .order-item__table {
@@ -540,6 +541,18 @@
 
     &__remove {
       top: -10px;
+    }
+
+    &__table {
+      tbody {
+           tr {
+        border-bottom-color: transparent;
+      }
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
     }
   }
 

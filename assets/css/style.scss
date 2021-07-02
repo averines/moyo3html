@@ -4355,7 +4355,6 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 11px;
-    font-weight: 600;
     text-decoration: none;
     padding: 1.25em 2.5em;
     color: $text;
@@ -4364,12 +4363,14 @@
     flex-grow: 1;
     transition: $tr;
 
+
     &:hover {
       background-color: $bg-light;
     }
 
     &.is-active {
       border-color: $main;
+      font-weight: 600;
     }
   }
 }
@@ -4782,7 +4783,7 @@
 }
 
 .order-item {
-  margin-bottom: 3em;
+  margin-bottom: 30px;
   align-items: flex-start;
   position: relative;
 
@@ -4823,7 +4824,6 @@
     position: absolute;
     right: 15px;
     top: 2px;
-
     margin-left: auto;
     width: 20px;
     height: 20px;
@@ -5052,7 +5052,8 @@
 
 .order-info {
   background-color: $bg-light;
-  padding: 1.5em 1em;
+  padding: 30px 20px;
+  margin-bottom: 0.5em;
 }
 
 .order-info-list {
@@ -5124,7 +5125,7 @@
 
 .order-status {
   background-color: $bg-light;
-  padding: 1.5em 0.75em;
+  padding: 30px 20px;
   margin-bottom: 0.5em;
 
   &__group {
@@ -5151,6 +5152,7 @@
     padding: 0.75em 0.5em;
     background-color: $white;
     border: 1px dashed $text-light;
+    border-right: none;
     flex-shrink: 1;
     flex-grow: 1;
     min-width: 100px;
@@ -5173,11 +5175,11 @@
       background-color: $main;
     }
   }
-
+ 
   &__text {
     background-color: $white;
-    border-top: 1px solid $text-light;
-    border-bottom: 1px solid $text-light;
+    border-top: 1px solid $line-dark;
+    border-bottom: 1px solid $line-dark;
     padding: 0.75em 0.5em;
     font-size: 0.85em;
     flex-grow: 1;
@@ -5228,8 +5230,9 @@
   color: $white;
   background-color: $special-2;
   display: inline-block;
-  font-size: 0.75em;
-  padding: 0 0.2em;
+  font-size: 11px;
+  line-height: 13px;
+  padding: 1px 0.3em 0 0.3em;
   border-radius: 2px;
 
   &::after {
