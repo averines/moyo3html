@@ -1,5 +1,6 @@
 $main: #ab064e;
 $main-light: #f2cfde;
+$main-hover: #c00a5a;
 
 $white: rgba(#fff, 1);
 $black: rgba(#101010, 1);
@@ -276,7 +277,7 @@ h5,
     color: $white;
 
     &:hover {
-      background-color: $main - 15;
+      background-color: $main-hover;
     }
 
     &:disabled {

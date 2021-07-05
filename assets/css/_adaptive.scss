@@ -662,23 +662,9 @@
       border-top: none;
       padding-top: 0;
       width: 100%;
-      max-width: 580px;
+      max-width: 540px;
       padding-left: 20px;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .history-item-payment {
-      position: absolute;
-      right: 0;
-      top: 50px;
-      margin: 0;
-      text-align: center;
-      max-width: 90px;
-      line-height: 1.1em;
-
-      &__waiting {
-        margin-bottom: 10px;
-      }
     }
 
     &__show {
@@ -1291,6 +1277,24 @@
       
     }
   }
+
+.history-item {
+      .history-item-payment {
+      position: absolute;
+      right: 0;
+      top: 50px;
+      margin: 0;
+      text-align: center;
+      width: 170px;
+      line-height: 1.1em;
+
+
+
+      &__waiting {
+        margin-bottom: 10px;
+      }
+    }
+}  
 }
 
 //xl
@@ -1577,8 +1581,7 @@
 
     .history-item-payment {
       top: 60px;
-      width: 150px;
-      max-width: none;
+      width: 170px;
     }
 
     .more-block {
