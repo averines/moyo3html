@@ -180,13 +180,11 @@ if (document.body.clientWidth > 768 && productGallerySlider) {
 //     : "";
 
 
-
-
-
 window.addEventListener('resize', () => {
     clientWidth = document.body.clientWidth;
+    // console.log(clientWidth);
 
-    if (document.body.clientWidth > 1200) {
+    if (clientWidth > 1200) {
         menuInfoBtn.classList.remove('is-active')
         menuInfoWindow.classList.remove('is-active')
         menuUserBtn.classList.remove('is-active')
@@ -194,10 +192,16 @@ window.addEventListener('resize', () => {
     }
 
     // слайдер на странице продукта
-    if (document.body.clientWidth > 768 && productGallerySlider) {
+    if (clientWidth > 768 && productGallerySlider) {
         productGallerySlider.destroy()
     } else {
-        productGallerySlider.rebuild()
+        // productGallerySlider.rebuild()
+    }
+    if (clientWidth < 768) {
+        togglersItems.forEach(item => {
+            item.classList.remove('is-active')
+            console.log("123");
+        })
     }
 }, false);
 
@@ -360,6 +364,16 @@ if (togglerSort) {
             }
         })
     }
+}
+
+
+const togglersItems = document.querySelectorAll('.togglers__item')
+if (togglersItems.length > 0) {
+    togglersItems.forEach( item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('is-active')
+        })
+    })
 }
 
 
