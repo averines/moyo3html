@@ -3188,25 +3188,16 @@ hr.dotted {
 
 .size-variants {
   display: none;
-  padding: 0 10px 20px 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 5px 10px 15px 10px;
   background-color: white;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  row-gap: 10px;
+  gap: 8px;
   z-index: 3;
   position: relative;
-}
-
-.size-variants__list {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 4px;
-          column-gap: 4px;
-  row-gap: 4px;
 }
 
 .size-variants__item {
@@ -9242,6 +9233,11 @@ hr.dotted {
   }
   .menu-filters-wrapper {
     top: 120px;
+  }
+  .size-variants {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
