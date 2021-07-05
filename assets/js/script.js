@@ -36,18 +36,21 @@ menuCatalogWrapper.addEventListener('click', (e) => {
 // фильтры на странице подкатегории
 const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
+const menuFilterWrapper = document.querySelector('.menu-filters-wrapper')
 const menuFilterCloseBtn = document.querySelector('.menu-filters__close')
 let menuFilterIsActive = false
 
 const menuFilterOpen = function () {
     menuFilterIsActive = true
     menuFilterBtn.classList.add('is-active')
+    menuFilterWrapper.classList.add('is-active')
     menuFilterBlock.classList.add('is-active')
 }
 
 const menuFilterClose = function () {
     menuFilterIsActive = false
     menuFilterBtn.classList.remove('is-active')
+    menuFilterWrapper.classList.remove('is-active')
     menuFilterBlock.classList.remove('is-active')
 }
 
@@ -63,6 +66,16 @@ if (menuFilterCloseBtn) {
         menuFilterClose()
     })
 }
+
+menuFilterWrapper.addEventListener('click', (e) => {
+    let target = e.target.className
+    if (target.includes('menu-filters-wrapper')) {
+        menuFilterClose();
+        subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+        categoryItem.classList.remove('is-active') // прячем список субкатегорий 
+        catalogContent.classList.remove('is-active') //  прячем обертку
+    }
+})
 
 
 // плавный переход к блоку
@@ -126,27 +139,48 @@ menuUserBtn.addEventListener('click', (e) => {
 
 
 // сброс развернутых элементов при переходе в десктопный режим
-let clientWidth = 0
+let clientWidth = document.body.clientWidth
 
 // слайдер на странице продукта
-if (document.body.clientWidth < 768) {
-    const productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
-    var productGallerySlider = productGallerySliderContainer.length > 0 ?
-        tns({
-            container: productGallerySliderContainer[0],
-            items: 2,
-            slideBy: 'page',
-            autoplay: false,
-            controls: false,
-            nav: false,
-            loop: false,
-            mouseDrag: true,
-            swipeAngle: 60,
-            autoWidth: true,
-            gutter: 10,
-        })
-        : "";
+var productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
+if (productGallerySliderContainer.length > 0) {
+    var productGallerySlider = tns({
+        container: productGallerySliderContainer[0],
+        items: 2,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 10,
+    })
 }
+
+if (document.body.clientWidth > 768 && productGallerySlider) {
+    productGallerySlider.destroy()
+} 
+
+// var productGallerySlider = productGallerySliderContainer.length > 0 ?
+//     tns({
+//         container: productGallerySliderContainer[0],
+//         items: 2,
+//         slideBy: 'page',
+//         autoplay: false,
+//         controls: false,
+//         nav: false,
+//         loop: false,
+//         mouseDrag: true,
+//         swipeAngle: 60,
+//         autoWidth: true,
+//         gutter: 10,
+//     })
+//     : "";
+
+
+
 
 
 window.addEventListener('resize', () => {
@@ -160,26 +194,11 @@ window.addEventListener('resize', () => {
     }
 
     // слайдер на странице продукта
-    if (document.body.clientWidth < 768) {
-        const productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
-        var productGallerySlider = productGallerySliderContainer.length > 0 ?
-            tns({
-                container: productGallerySliderContainer[0],
-                items: 2,
-                slideBy: 'page',
-                autoplay: false,
-                controls: false,
-                nav: false,
-                loop: false,
-                mouseDrag: true,
-                swipeAngle: 60,
-                autoWidth: true,
-                gutter: 10,
-            })
-            : "";
+    if (document.body.clientWidth > 768 && productGallerySlider) {
+        productGallerySlider.destroy()
+    } else {
+        productGallerySlider.rebuild()
     }
-
-
 }, false);
 
 
@@ -193,6 +212,17 @@ for (let accordion of accordions) {
     let filteredAccordionItems = accordionItemsArr.filter(item => item.classList.contains(accordionItemsClass[0]));
 
     for (let accordionItem of filteredAccordionItems) {
+        let accordionActive = accordionItem.dataset.active;
+
+        // при загрузке страницы разворачивать элемент аккрдиона если у него указан атрибут data-active="768". 
+        if (
+            accordionActive > 0
+            && document.body.clientWidth >= accordionActive
+            && !accordionItem.classList.contains('is-active')
+        ){
+            accordionItem.classList.add('is-active')
+        }
+
         let accordionTitle = accordionItem.querySelector('.accordion__title')
         accordionTitle.addEventListener('click', (e) => {
             accordionItem.classList.toggle('is-active')
@@ -434,19 +464,35 @@ if (dropArea) {
 
 
 // вывод значений диаграммой
-function progressView() {
+// function progressView() {
+//     let diagramBox = document.querySelectorAll('.diagram');
+//     diagramBox.forEach((box) => {
+//         let deg = (360 * box.dataset.percent / 100) + 180;
+//         if (box.dataset.percent >= 50) {
+//             box.classList.add('over-50');
+//         } else {
+//             box.classList.remove('over-50');
+//         }
+//         box.querySelector('.diagram-right').style.transform = 'rotate(' + deg + 'deg)';
+//     });
+// }
+// progressView()
+
+
+function progressDiagram() {
     let diagramBox = document.querySelectorAll('.diagram');
     diagramBox.forEach((box) => {
-        let deg = (360 * box.dataset.percent / 100) + 180;
+        let circle = box.querySelector('.diagram-circle')
+        let deg = (360 * box.dataset.percent) / 100;
+        
         if (box.dataset.percent >= 50) {
-            box.classList.add('over-50');
+            circle.style.background = `linear-gradient(${deg}deg, transparent 50%, #ab064e 50%), linear-gradient(180deg, transparent 50%, #ab064e 50%)`
         } else {
-            box.classList.remove('over-50');
+            circle.style.background = `linear-gradient(180deg, #cdcdcd 50%, transparent 50%), linear-gradient(${deg}deg, transparent 50%, #ab064e 50%)`
         }
-        box.querySelector('.diagram-right').style.transform = 'rotate(' + deg + 'deg)';
     });
 }
-progressView()
+progressDiagram()
 
 
 // вывод значении линией

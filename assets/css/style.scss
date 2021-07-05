@@ -998,7 +998,7 @@
 .menu-catalog-wrapper {
   position: fixed;
   top: 0;
-  background-color: transparent;
+  
   width: 0;
   height: 0;
   transition: background-color 0.4s ease-in-out;
@@ -3056,110 +3056,152 @@
 }
 
 //выпадающее меню с фильтрами в субкатегории
-.menu-filters {
+
+.menu-filters-wrapper {
   position: absolute;
-  top: 0;
-  width: calc(100% - 30px);
-  min-height: 100vh;
-  left: 15px;
+  top: 45px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.4s ease-in-out;
   opacity: 0;
+  min-height: 100vw;
   max-height: none;
   pointer-events: none;
   visibility: hidden;
-  transition: $tr;
-  transform: translateY(10px);
-  background-color: $white;
-  box-shadow: 0 5px 15px transparentize($black, 0.7);
   z-index: 5;
-  letter-spacing: 0.05em;
-
+  background-color: transparent;
+  
   &.is-active {
+    width: 100%;
+    height: 100%;
     visibility: visible;
-    pointer-events: all;
-    max-height: 5000px;
     opacity: 1;
-    transform: translateY(0);
+    pointer-events: all;
+    background-color: transparentize($black, $amount: 0.6);
   }
 
-  &__title {
-    background-color: $bg-light;
-    font-weight: 600;
-    color: $text-dark;
-    font-size: 15px;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-  }
+  .menu-filters {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 350px;
+    transform: translateX(-50px);
+    transition: transform 0.1s ease-in-out, box-shadow 1s ease-in-out;
+    background-color: $white;
+    box-shadow: 0 5px 15px transparentize($black, 0.7);
+    letter-spacing: 0.05em;
 
-  &__content {
-    padding: 0 15px;
-  }
-
-  &__close {
-    cursor: pointer;
-    border: none;
-    background: url(../img/icons/arrow.svg) no-repeat center;
-    background-size: 50%;
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    transition: $tr;
-
-    &:hover {
-      opacity: 0.8;
-      transform: scale(1.1);
-    }
-  }
-
-  &__clear {
-    cursor: pointer;
-    border: none;
-    margin-left: auto;
-    font-size: 12px;
-    font-weight: 600;
-    transition: $tr;
-
-    &:hover {
-      color: $main;
-    }
-  }
-
-  .filter-item {
-    border-bottom: 1px solid $line-dark;
-    transition: $tr;
-
-    &__title {
-      padding: 12px 0;
-      border-bottom: 1px solid transparent;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: -34px;
+      width: 18px;
+      height: 18px;
+      background: url(../img/icons/close.svg) no-repeat center;
+      background-size: contain;
+      display: block;
+      border: none;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0s ease-in-out;
       cursor: pointer;
-
-      &::after {
-        right: 0;
-        background: url(../img/icons/arrow-down.svg) no-repeat center;
-        background-size: 50%;
-        transform: none;
-      }
-
-      &:hover {
-        background: linear-gradient(
-          90deg,
-          rgba(199, 199, 199, 0) 0%,
-          rgba(199, 199, 199, 0.1) 85%,
-          rgba(199, 199, 199, 0) 100%
-        );
-      }
-    }
-
-    &__content {
     }
 
     &.is-active {
-      .filter-item__title {
-        border-bottom-color: $line-dark;
+      visibility: visible;
+      pointer-events: all;
+      max-height: 5000px;
+      opacity: 1;
+      transform: translateX(0);
+
+      &::after {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+    }
+
+    &__title {
+      background-color: $bg-light;
+      font-weight: 600;
+      color: $text-dark;
+      font-size: 15px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__content {
+      padding: 0 15px;
+    }
+
+    &__close {
+      cursor: pointer;
+      border: none;
+      background: url(../img/icons/arrow.svg) no-repeat center;
+      background-size: 50%;
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+      transition: $tr;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+      }
+    }
+
+    &__clear {
+      cursor: pointer;
+      border: none;
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 600;
+      transition: $tr;
+
+      &:hover {
+        color: $main;
+      }
+    }
+
+    .filter-item {
+      border-bottom: 1px solid $line-dark;
+      transition: $tr;
+
+      &__title {
+        padding: 12px 0;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+
         &::after {
+          right: 0;
           background: url(../img/icons/arrow-down.svg) no-repeat center;
           background-size: 50%;
-          transform: scale(1, -1);
+          transform: none;
+        }
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            rgba(199, 199, 199, 0) 0%,
+            rgba(199, 199, 199, 0.1) 85%,
+            rgba(199, 199, 199, 0) 100%
+          );
+        }
+      }
+
+      &__content {
+      }
+
+      &.is-active {
+        .filter-item__title {
+          border-bottom-color: $line-dark;
+          &::after {
+            background: url(../img/icons/arrow-down.svg) no-repeat center;
+            background-size: 50%;
+            transform: scale(1, -1);
+          }
         }
       }
     }
@@ -3803,75 +3845,120 @@
   }
 }
 
+// .diagram {
+//   width: 70px;
+//   height: 70px;
+//   border-radius: 50%;
+//   background: $main;
+//   // background: $line-dark;
+//   position: relative;
+//   overflow: hidden;
+//   // transform: scale(1, -1);
+
+//   &::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     top: 6px;
+//     left: 6px;
+//     right: 6px;
+//     bottom: 6px;
+//     border-radius: 50%;
+//     background: #fff;
+//     z-index: 3;
+//     opacity: 1;
+//   }
+
+//   .diagram-left,
+//   .diagram-right {
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     right: 0;
+//     overflow: hidden;
+//     position: absolute;
+//     border-radius: 50%;
+//     transform: rotate(0deg);
+//     z-index: 2;
+
+//     &::before {
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       width: 50%;
+//       height: 100%;
+//       background: $line-dark;
+//       // background: $main;
+//     }
+//   }
+
+//   .diagram-right {
+//     transform: rotate(180deg);
+//     z-index: 1;
+//   }
+
+//   &.over-50 {
+//     .diagram-left {
+//       transform: rotate(180deg);
+//       &::before {
+//         background: $main;
+//       }
+//     }
+//     .diagram-right {
+//       transform: rotate(360deg);
+//     }
+//   }
+
+//   .diagram-text {
+//     font-size: 15px;
+//     font-weight: 600;
+//     z-index: 4;
+//     position: relative;
+//     top: calc(50% - 0.6em);
+//     // transform: scale(1, -1);
+
+//     &::after {
+//       content: "%";
+//     }
+//   }
+// }
+
 .diagram {
-  width: 70px;
-  height: 70px;
   border-radius: 50%;
-  background: $main;
+  width: 75px;
+  height: 75px;
+  background: $line-dark;
   position: relative;
-  overflow: hidden;
 
-  &::before {
-    content: "";
+  .diagram-circle {
     display: block;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
-    border-radius: 50%;
-    background: #fff;
-    z-index: 3;
-    opacity: 1;
-  }
-
-  .diagram-left,
-  .diagram-right {
+    content: "";
     width: 100%;
     height: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
     position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 50%;
-    transform: rotate(0deg);
-    z-index: 2;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background: $line-dark;
-    }
-  }
-
-  .diagram-right {
-    transform: rotate(180deg);
-    z-index: 1;
-  }
-
-  &.over-50 {
-    .diagram-left {
-      transform: rotate(180deg);
-      &::before {
-        background: $main;
-      }
-    }
-    .diagram-right {
-      transform: rotate(360deg);
-    }
+    transform: rotate(-90deg);
   }
 
   .diagram-text {
-    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    font-size: 15px;
     font-weight: 600;
-    z-index: 4;
-    position: relative;
-    top: calc(50% - 0.6em);
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
 
-    &::after {
+    &:after {
       content: "%";
     }
   }
@@ -5847,7 +5934,6 @@
 .history-item-payment {
   margin-top: 10px;
 
-
   &__success {
     color: $special-2;
     font-weight: 600;
@@ -5860,20 +5946,18 @@
     font-size: 14px;
   }
 
-
-    &__link {
-      line-height: 1.1;
-      display: inline-block;
-        max-width: none;
-        min-width: 0;
-        margin-bottom: 10px;
-     }
+  &__link {
+    line-height: 1.1;
+    display: inline-block;
+    max-width: none;
+    min-width: 0;
+    margin-bottom: 10px;
+  }
 
   // &__link {
   //   // color: $main;
   //   // font-size: 14px;
   //   // transition: $tr;
-    
 
   //   // &:hover {
   //   //   opacity: 0.8;
