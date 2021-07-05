@@ -67,15 +67,18 @@ if (menuFilterCloseBtn) {
     })
 }
 
-menuFilterWrapper.addEventListener('click', (e) => {
-    let target = e.target.className
-    if (target.includes('menu-filters-wrapper')) {
-        menuFilterClose();
-        subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
-        categoryItem.classList.remove('is-active') // прячем список субкатегорий 
-        catalogContent.classList.remove('is-active') //  прячем обертку
-    }
-})
+if (menuFilterWrapper) {
+    menuFilterWrapper.addEventListener('click', (e) => {
+        let target = e.target.className
+        if (target.includes('menu-filters-wrapper')) {
+            menuFilterClose();
+            subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+            categoryItem.classList.remove('is-active') // прячем список субкатегорий 
+            catalogContent.classList.remove('is-active') //  прячем обертку
+        }
+    })
+}
+
 
 
 // плавный переход к блоку
