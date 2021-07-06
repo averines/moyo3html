@@ -546,6 +546,10 @@ h5,
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -705,8 +709,32 @@ hr.dotted {
   margin-top: 5em;
 }
 
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-1 {
+  margin-right: 1em;
+}
+
+.ml-1 {
+  margin-left: 1em;
+}
+
 .p-0 {
   padding: 0;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.p-2 {
+  padding: 2em;
 }
 
 .pl-1 {
@@ -7799,6 +7827,9 @@ hr.dotted {
   .modal__form .form-row .form-group {
     margin-bottom: 0;
   }
+  .modallogin .modal__form {
+    padding: 0;
+  }
   .form-text {
     min-width: auto;
     -ms-flex-preferred-size: 50%;
@@ -8933,6 +8964,9 @@ hr.dotted {
   }
   .pagetitle__counter {
     font-size: 12px;
+  }
+  .modallogin .form-row {
+    margin-bottom: 15px;
   }
 }
 

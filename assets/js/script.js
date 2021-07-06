@@ -785,10 +785,8 @@ const tabsContainers = document.querySelectorAll('.tabs')
 
 if (tabsContainers.length > 0) {
     tabsContainers.forEach(tabsContainer => {
-
         let tabsContentItems = tabsContainer.querySelectorAll('.tabs-content__item')
         let tabsTitlesItems = tabsContainer.querySelectorAll('.tabs-titles__item')
-
         if (window.location.hash) {
             let hash = window.location.hash
 
