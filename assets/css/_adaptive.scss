@@ -297,6 +297,7 @@
   .togglers {
     display: flex;
     column-gap: 0;
+    margin-top: 0;
 
     .toggler-sort-wrapper {
       align-self: center;
@@ -1335,6 +1336,12 @@
       left: 8px;
       right: 8px;
       bottom: 8px;
+    }
+  }
+
+  .pagetitle {
+    &__counter {
+      font-size: 12px;
     }
   }
 }

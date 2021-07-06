@@ -2955,8 +2955,8 @@ hr.dotted {
 .products .product-wrapper:nth-child(6n + 1) .color-variants, .products .product-wrapper:first-child .color-variants {
   right: -70px;
   left: auto;
-  -webkit-box-shadow: 10px 5px 15px rgba(16, 16, 16, 0.15);
-          box-shadow: 10px 5px 15px rgba(16, 16, 16, 0.15);
+  -webkit-box-shadow: 15px 5px 15px rgba(16, 16, 16, 0.15);
+          box-shadow: 15px 5px 15px rgba(16, 16, 16, 0.15);
 }
 
 .product-wrapper {
@@ -3157,8 +3157,8 @@ hr.dotted {
           align-items: center;
   padding: 5px;
   row-gap: 5px;
-  -webkit-box-shadow: -10px 5px 15px rgba(16, 16, 16, 0.15);
-          box-shadow: -10px 5px 15px rgba(16, 16, 16, 0.15);
+  -webkit-box-shadow: -15px 5px 15px rgba(16, 16, 16, 0.15);
+          box-shadow: -15px 5px 15px rgba(16, 16, 16, 0.15);
 }
 
 .color-variants__item {
@@ -3848,8 +3848,8 @@ hr.dotted {
       grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 2px;
           column-gap: 2px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 36px;
 }
 
@@ -8009,6 +8009,7 @@ hr.dotted {
     display: flex;
     -webkit-column-gap: 0;
             column-gap: 0;
+    margin-top: 0;
   }
   .togglers .toggler-sort-wrapper {
     -ms-flex-item-align: center;
@@ -8928,6 +8929,9 @@ hr.dotted {
     left: 8px;
     right: 8px;
     bottom: 8px;
+  }
+  .pagetitle__counter {
+    font-size: 12px;
   }
 }
 

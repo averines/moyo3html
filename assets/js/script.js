@@ -125,20 +125,16 @@ if (menuFilterCheckboxItems) {
 }
 
 
-
-
-
 // кнопка Очистить для выбранных фильтров в выпадающем меню
 const menuFilterClearBtn = document.getElementById('menu-filters-clear')
 if (menuFilterClearBtn) {
     menuFilterClearBtn.addEventListener('click', () => {
+        selectedFiltersWrapper.innerHTML = ''
         menuFilterCheckboxItems.forEach(item => {
             item.checked = false
         })
     })
 }
-
-
 
 
 // плавный переход к блоку

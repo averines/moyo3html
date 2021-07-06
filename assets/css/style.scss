@@ -2035,7 +2035,7 @@
       .color-variants {
         right: -70px;
         left: auto;
-        box-shadow: 10px 5px 15px transparentize($black, 0.85);
+        box-shadow: 15px 5px 15px transparentize($black, 0.85);
       }
     }
   }
@@ -2217,7 +2217,7 @@
   align-items: center;
   padding: 5px;
   row-gap: 5px;
-  box-shadow: -10px 5px 15px transparentize($black, 0.85);
+  box-shadow: -15px 5px 15px transparentize($black, 0.85);
 
   &__item {
     display: block;
@@ -2932,8 +2932,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2px;
-  margin-top: $gap;
-  margin-bottom: $gap;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 36px;
 
   .toggler-sort-wrapper,
