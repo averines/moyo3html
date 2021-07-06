@@ -2934,29 +2934,37 @@
   column-gap: 2px;
   margin-top: $gap;
   margin-bottom: $gap;
+  height: 36px;
+
+  .toggler-sort-wrapper, .toggler-count-wrapper {
+    position: relative;
+    z-index: 99;
+  }
 
   .togglers__item {
     background-color: $white;
     position: relative;
-    border-radius: 4px 0 0 4px;
-    width: 100%;
-
+    
     &.is-active {
       position: absolute;
+      width: 100%;
       z-index: 99;
       padding-top: 36px;
 
       .toggler-sort__item {
         display: flex;
         &::after {
-          transform: rotate(-90deg) translateX(-1px) scale(-1, 1);
+          transform: rotate(-90deg) scale(-1, 1);
         }
       }
-    }
-  }
 
-  .toggler-sort-wrapper, .toggler-count-wrapper {
-    position: relative;
+      .toggler-count__item {
+        display: flex;
+        &::after {
+          transform: rotate(-90deg) scale(-1, 1);
+        }
+      }      
+    }
   }
 
   .toggler-sort {
@@ -2972,7 +2980,7 @@
       border-bottom: 1px dashed $line-light;
       margin: 0 13px;
       padding: 11px 0;
-      transition: $tr;
+      // transition: background-color 0.2s ease-in-out;  
 
       &:last-child {
         border-bottom: none;
@@ -3010,7 +3018,7 @@
           height: 11px;
           background: url(../img/icons/arrow.svg) no-repeat center;
           margin-left: auto;
-          transform: rotate(-90deg) translateX(-1px);
+          transform: rotate(-90deg);
         }
 
         &:hover {
@@ -3021,43 +3029,60 @@
   }
 
   .toggler-count {
-    background-color: $bg-light;
-    flex-basis: 50%;
-    border-radius: 0 4px 4px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-
-    &__title {
-      font-size: 14px;
-    }
-
-    &__select {
-      max-width: 0;
-      overflow: hidden;
-
-      &.is-active {
-        max-width: 300px;
-      }
-    }
-
     &__item {
       display: none;
+      height: 36px;
       font-size: 14px;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background-color: $white;
+      border-bottom: 1px dashed $line-light;
+      margin: 0 13px;
+      padding: 11px 0;
+      // transition: background-color 0.2s ease-in-out;   
 
-      &::before {
-        display: inline-block;
-        content: "";
-        width: 11px;
-        height: 11px;
-        background: url(../img/icons/arrow.svg) no-repeat center;
-        margin-right: 4px;
-        transform: rotate(-90deg) translateX(-3px);
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: linear-gradient(90deg, transparent 0%, $bg-light + 5 50%, transparent 100%);
       }
 
       &.is-active {
         display: flex;
+        align-items: center;
+        background-color: $bg-light;
+        margin: 0;
+        padding: 10px 13px;
+        border-bottom: none;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+
+        &::before {
+          display: inline-block;
+          content: "На странице";
+          margin-right: auto;
+        }
+
+        &::after {
+          transition: $tr;
+          display: inline-block;
+          content: "";
+          width: 11px;
+          height: 11px;
+          background: url(../img/icons/arrow.svg) no-repeat center;
+          margin-left: 9px;
+          transform: rotate(-90deg);
+        }
+
+        &:hover {
+          background: $bg-light;
+        }
       }
     }
   }

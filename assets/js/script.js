@@ -437,6 +437,21 @@ if (togglersItems.length > 0) {
     })
 }
 
+//переключение количества элементов на странице
+const togglerCount = document.querySelector('.toggler-count')
+if (togglerCount) {
+    const togglerCountBtns = togglerCount.querySelectorAll('.toggler-count__item')
+    for (let togglerCountBtn of togglerCountBtns) {
+        togglerCountBtn.addEventListener('click', (e) => {
+            if (!togglerCountBtn.classList.contains('is-active')) {
+                [...togglerCountBtns].forEach(togglerCountBtn => {
+                    togglerCountBtn.classList.remove('is-active')
+                })
+                togglerCountBtn.classList.add('is-active')
+            }
+        })
+    }
+}
 
 // быстрый просмотр
 const quickViewBtns = document.querySelectorAll('.product__quick-view')
