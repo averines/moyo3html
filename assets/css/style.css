@@ -3853,7 +3853,8 @@ hr.dotted {
   height: 36px;
 }
 
-.togglers .toggler-sort-wrapper, .togglers .toggler-count-wrapper {
+.togglers .toggler-sort-wrapper,
+.togglers .toggler-count-wrapper {
   position: relative;
   z-index: 99;
 }
@@ -4086,7 +4087,7 @@ hr.dotted {
   max-height: none;
   pointer-events: none;
   visibility: hidden;
-  z-index: 5;
+  z-index: 100;
   background-color: transparent;
   cursor: pointer;
 }
@@ -4379,10 +4380,10 @@ hr.dotted {
 }
 
 .filter-range {
-  padding: 24px 0;
+  padding: 25px 0;
 }
 
-.filter-range__values {
+.filter-range__controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4392,127 +4393,66 @@ hr.dotted {
   -webkit-column-gap: 15px;
           column-gap: 15px;
   color: #777;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.filter-range .range-values__item {
-  width: 125px;
-  text-align: center;
+.filter-range__controls input {
+  min-width: 125px;
+  max-width: 150px;
+  height: 30px;
   font-size: 14px;
   line-height: 18px;
   color: #777;
+  border-radius: 4px;
   border: 1px solid #d9d9d9;
-  padding: 5px 15px;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 3px;
-          column-gap: 3px;
+  padding: 7px 10px;
 }
 
-.filter-range .range-values__item::after {
-  content: " ₽";
+.filter-range .irs-from,
+.filter-range .irs-to {
+  display: none;
 }
 
-.filter-range .range-values__item input {
-  min-width: 30px;
-  max-width: 100px;
-  text-align: right;
-  font-size: 14px;
-  line-height: 18px;
+.filter-range .irs-min,
+.filter-range .irs-max {
+  font-size: 12px;
   color: #777;
+  top: 10px;
 }
 
-.filter-range__inputs {
-  margin-top: 30px;
-  margin-bottom: 50px;
-  position: relative;
-  width: 100%;
+.filter-range .irs--round .irs-line {
+  background-color: #dedede;
+  height: 6px;
 }
 
-.filter-range__inputs::before {
-  content: "";
-  display: block;
-  left: 0;
-  width: 100%;
-  border-radius: 2px;
-  background: #f3f2f0;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  height: 4px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.filter-range .irs--round .irs-bar {
+  background-color: #cdcdcd;
+  height: 6px;
 }
 
-.filter-range__inputs .range-inputs__slider {
-  width: 100%;
-  background-color: #d9d9d9;
-  border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  height: 4px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.filter-range__inputs input {
-  margin: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: absolute;
-  display: block;
-  width: 100%;
-  background: transparent;
-  outline: none;
-  height: 20px;
-  padding: 2px 0;
-  pointer-events: none;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
-.filter-range__inputs input::-webkit-slider-thumb {
-  pointer-events: all;
+.filter-range .irs--round .irs-handle {
+  border-color: #cdcdcd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
-  background-color: white;
-  border: 4px solid #d9d9d9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  -webkit-appearance: none;
-          appearance: none;
 }
 
-.filter-range__inputs input::-ms-thumb {
-  pointer-events: all;
-  cursor: pointer;
+.filter-range .irs--round .irs-handle:hover {
   background-color: white;
-  border: 4px solid #d9d9d9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  appearance: none;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.filter-range__inputs input::-moz-range-thumb {
-  pointer-events: all;
-  cursor: pointer;
-  background-color: white;
-  border: 4px solid #d9d9d9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  -moz-appearance: none;
-       appearance: none;
+.filter-range .irs--round .irs-single {
+  background-color: #555;
+  font-size: 12px;
+  top: 3px;
 }
 
-.filter-range__inputs input.is-active {
-  z-index: 1;
+.filter-range .irs--round .irs-single::before {
+  border-top-color: #555;
 }
 
 .product-accordion {

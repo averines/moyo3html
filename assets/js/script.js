@@ -38,7 +38,7 @@ const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
 const menuFilterWrapper = document.querySelector('.menu-filters-wrapper')
 const menuFilterCloseBtn = document.querySelector('.menu-filters__close')
-const menuFilterCheckboxItems = menuFilterBlock.querySelectorAll('.filter-checkbox__item input')
+const menuFilterCheckboxItems = document.querySelectorAll('.filter-checkbox__item input')
 const selectedFiltersWrapper = document.querySelector('.selected-filters')
 let menuFilterIsActive = false
 
@@ -552,21 +552,6 @@ if (dropArea) {
 
 
 // вывод значений диаграммой
-// function progressView() {
-//     let diagramBox = document.querySelectorAll('.diagram');
-//     diagramBox.forEach((box) => {
-//         let deg = (360 * box.dataset.percent / 100) + 180;
-//         if (box.dataset.percent >= 50) {
-//             box.classList.add('over-50');
-//         } else {
-//             box.classList.remove('over-50');
-//         }
-//         box.querySelector('.diagram-right').style.transform = 'rotate(' + deg + 'deg)';
-//     });
-// }
-// progressView()
-
-
 function progressDiagram() {
     let diagramBox = document.querySelectorAll('.diagram');
     diagramBox.forEach((box) => {
@@ -959,53 +944,119 @@ if (customSelectItems.length > 0) {
 }
 
 //мультибегунок
-const multirangeItems = document.querySelectorAll('.filter-range')
+// const multirangeItems = document.querySelectorAll('.filter-range')
+// if (multirangeItems.length > 0) {
+//     multirangeItems.forEach(item => {
+//         let inputs = item.querySelectorAll('.range-inputs input')
+//         let rangeSlider = item.querySelector('.range-inputs__slider')
+//         let inputStart = item.querySelector('.range-inputs__start')
+//         let inputEnd = item.querySelector('.range-inputs__end')
 
-if (multirangeItems.length > 0) {
-    multirangeItems.forEach(item => {
-        let inputs = item.querySelectorAll('.range-inputs input')
 
-        let rangeSlider = item.querySelector('.range-inputs__slider')
+//         let inputStartValue = inputStart.value;
+//         let inputEndValue = inputEnd.value;
 
+//         let inputStartMax = inputStart.max;
+//         let inputStartMin = inputStart.min;
 
-        let inputStart = item.querySelector('.range-inputs__start')
-        let inputStartValue = inputStart.value;
-        let inputStartMax = inputStart.max;
-        let inputStartMin = inputStart.min;
+//         let totalWidth = inputStartMax - inputStartMin
 
-        let slideLeft = 0
-        let totalWidth = inputStartMax - inputStartMin
+//         inputs.forEach(input => {
+//             input.addEventListener('mouseover', (e) => {
+//                 input.classList.add('is-active')
+//             })
+//             input.addEventListener('mouseout', (e) => {
+//                 input.classList.remove('is-active')
+//             })
+//         })
 
-        let inputEnd = item.querySelector('.range-inputs__end')
-        let inputEndValue = inputEnd.value;
+//         inputStart.addEventListener('input', (e) => {
+//             inputEnd.min = e.target.value
 
-        inputs.forEach(input => {
-            input.addEventListener('mouseover', (e) => {
-                input.classList.add('is-active')
-            })
-            input.addEventListener('mouseout', (e) => {
-                input.classList.remove('is-active')
-            })
-        })
+//             inputMaxWidthOffset = ((e.target.value - inputStartValue) * 100) / totalWidth
+//             inputEnd.style.width = 100 - inputMaxWidthOffset + '%'
+            
+//             rangeSlider.style.left = inputMaxWidthOffset + '%'
+//             rangeSlider.style.width = 100 - inputMaxWidthOffset + '%'
 
-        inputStart.addEventListener('input', (e) => {
-            inputEnd.setAttribute('min', e.target.value)
-            slideLeft = ((e.target.value - inputStartValue) * 100) / totalWidth
-            rangeSlider.style.left = slideLeft + '%'
+//             // slideWidth = ((inputStartMax - e.target.value) * 100) / totalWidth
+//             // rangeSlider.style.width = slideWidth + '%'
+//         })
 
-            // slideWidth = ((inputStartMax - e.target.value) * 100) / totalWidth
-            // rangeSlider.style.width = slideWidth + '%'
-        })
+//         inputEnd.addEventListener('input', (e) => {
+//             inputStartMax = e.target.value
 
-        inputEnd.addEventListener('input', (e) => {
-            inputStart.setAttribute('max', e.target.value)
+//             inputMinWidthOffset = ((inputEndValue - e.target.value) * 100) / (inputEndValue - inputStartValue)
+//             inputStart.style.width = 100 - inputMinWidthOffset + '%'
+            
+//             rangeSlider.style.right = inputMinWidthOffset + '%'
+//             rangeSlider.style.width = 100 - inputMinWidthOffset + '%'
 
-            // slideRight = ((inputEndValue - e.target.value) * 100) / totalWidth
-            // rangeSlider.style.right = slideRight + '%'
+//             // slideWidth = 100 - ((inputEndValue - e.target.value) * 100) / totalWidth
+//             // rangeSlider.style.width = slideWidth + '%'
+//         })
+//     })
+// }
 
-            slideWidth = 100 - ((inputEndValue - e.target.value) * 100) / totalWidth
-            rangeSlider.style.width = slideWidth + '%'
-        })
+var $rangeSlider = $(".js-range-slider"),
+$inputFrom = $(".js-range-from"),
+$inputTo = $(".js-range-to"),
+rangeInstance
+rangeMin = 100,
+rangeMax = 1000,
+rangeFrom = 100,
+rangeTo = 1000;
+
+if ($rangeSlider.length > 0) {
+    $rangeSlider.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: rangeMin,
+        max: rangeMax,
+        from: 100,
+        to: 1000,
+        onStart: updateInputs,
+        onChange: updateInputs
+    })
+
+    rangeInstance = $rangeSlider.data("ionRangeSlider");
+
+    function updateInputs(data) {
+        from = data.from;
+        to = data.to;
+
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < rangeMin) {
+            val = rangeMin;
+        } else if (val > rangeTo) {
+            val = rangeTo;
+        }
+
+        rangeInstance.update({
+            from: val
+        });
+    })
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        // validate
+        if (val < rangeFrom) {
+            val = rangeFrom;
+        } else if (val > rangeMax) {
+            val = rangeMax;
+        }
+
+        rangeInstance.update({
+            to: val
+        });
     })
 }
 
