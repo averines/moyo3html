@@ -33,11 +33,13 @@ menuCatalogWrapper.addEventListener('click', (e) => {
     }
 })
 
-// фильтры на странице подкатегории
+// меню фильтров на странице подкатегории (в каталоге)
 const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
 const menuFilterWrapper = document.querySelector('.menu-filters-wrapper')
 const menuFilterCloseBtn = document.querySelector('.menu-filters__close')
+const menuFilterCheckboxItems = menuFilterBlock.querySelectorAll('.filter-checkbox__item input')
+const selectedFiltersWrapper = document.querySelector('.selected-filters')
 let menuFilterIsActive = false
 
 const menuFilterOpen = function () {
@@ -72,12 +74,70 @@ if (menuFilterWrapper) {
         let target = e.target.className
         if (target.includes('menu-filters-wrapper')) {
             menuFilterClose();
-            subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
-            categoryItem.classList.remove('is-active') // прячем список субкатегорий 
-            catalogContent.classList.remove('is-active') //  прячем обертку
+            // subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+            // categoryItem.classList.remove('is-active') // прячем список субкатегорий 
+            // catalogContent.classList.remove('is-active') //  прячем обертку
         }
     })
 }
+
+// отображение выбранных фильтров на странице
+if (menuFilterCheckboxItems) {
+    menuFilterCheckboxItems.forEach(item => {
+        let itemTitle
+        if (item.parentNode.querySelector('.filter-checkbox__title')) {
+            itemTitle = item.parentNode.querySelector('.filter-checkbox__title').innerHTML
+        }
+        item.addEventListener('change', () => {
+            if (item.checked) {
+                let selectedFilterItem = document.createElement('a')
+                selectedFilterItem.classList.add('selected-filters__item')
+                selectedFilterItem.dataset.id = item.id
+                selectedFilterItem.innerHTML = itemTitle
+                selectedFiltersWrapper.appendChild(selectedFilterItem)
+
+                // удалить выбранный фильтр при клике по нему
+                let selectedFiltersItems = selectedFiltersWrapper.querySelectorAll('.selected-filters__item');
+                selectedFiltersItems.forEach(selectedFiltersItem => {
+                    selectedFiltersItem.addEventListener('click', () => {
+                        selectedFiltersItem.parentNode.removeChild(selectedFiltersItem)
+
+                        //снимаем галочку в меню фильтров, если нажали на элемент в списке выбранных фильтров
+                        Array.prototype.map.call(menuFilterCheckboxItems, menuFilterCheckboxItem => {
+                            if (menuFilterCheckboxItem.id == selectedFiltersItem.dataset.id ) {
+                                menuFilterCheckboxItem.checked = false
+                            }
+                        })
+                    })
+                })
+
+            } else {
+                let selectedFiltersItems = selectedFiltersWrapper.querySelectorAll('.selected-filters__item');
+                //удаляем из списка выбранных фильтров тот фильтр, который стал не checked
+                Array.prototype.map.call(selectedFiltersItems, selectedFiltersItem => {
+                    if (selectedFiltersItem.dataset.id == item.id) {
+                        selectedFiltersItem.parentNode.removeChild(selectedFiltersItem)
+                    }
+                })
+            }
+        })
+    })
+}
+
+
+
+
+
+// кнопка Очистить для выбранных фильтров в выпадающем меню
+const menuFilterClearBtn = document.getElementById('menu-filters-clear')
+if (menuFilterClearBtn) {
+    menuFilterClearBtn.addEventListener('click', () => {
+        menuFilterCheckboxItems.forEach(item => {
+            item.checked = false
+        })
+    })
+}
+
 
 
 
@@ -288,7 +348,6 @@ const favorites = document.getElementsByClassName('product__favorite');
         item.classList.toggle('is-active')
         item.insertAdjacentHTML('afterbegin', '<span></span>')
         setTimeout(function () { item.innerHTML = '' }, 1000)
-
     })
 })
 
@@ -369,7 +428,6 @@ if (togglerSort) {
     }
 }
 
-
 const togglersItems = document.querySelectorAll('.togglers__item')
 if (togglersItems.length > 0) {
     togglersItems.forEach( item => {
@@ -382,8 +440,6 @@ if (togglersItems.length > 0) {
 
 // быстрый просмотр
 const quickViewBtns = document.querySelectorAll('.product__quick-view')
-
-
 if (quickViewBtns) {
     [...quickViewBtns].forEach(item => {
         item.addEventListener('click', (e) => {

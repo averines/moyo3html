@@ -2014,7 +2014,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $gap;
-  margin: 2em 0;
+  margin: 15px 0;
 
   .product-wrapper {
     flex-shrink: 0;
@@ -3063,10 +3063,9 @@
   }
 }
 
-.selected-filter {
+.selected-filters {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
 
   &__item {
     background-color: $bg-light;
@@ -3216,7 +3215,7 @@
     }
 
     .filter-item {
-      border-bottom: 1px solid $line-dark;
+      border-bottom: 1px solid $line-light;
       transition: $tr;
 
       &__title {
@@ -3241,12 +3240,10 @@
         }
       }
 
-      &__content {
-      }
 
       &.is-active {
         .filter-item__title {
-          border-bottom-color: $line-dark;
+          border-bottom-color: $line-light;
           &::after {
             background: url(../img/icons/arrow-down.svg) no-repeat center;
             background-size: 50%;
