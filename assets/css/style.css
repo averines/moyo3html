@@ -2530,6 +2530,7 @@ hr.dotted {
 
 .tns-outer {
   position: relative;
+  margin-top: -1px;
 }
 
 .tns-outer .tns-controls {
