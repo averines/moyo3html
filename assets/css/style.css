@@ -7739,6 +7739,42 @@ hr.dotted {
   border-block-color: #ab064e;
 }
 
+.appendix-header {
+  border-radius: 4px;
+  background: url(../img/icons/plus-small.svg) no-repeat top 25px left 20px #f3f2f0;
+  background-size: 20px;
+  padding: 25px 30px 25px 55px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.appendix-header__title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.appendix-header__info {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.appendix-header__total {
+  font-weight: 600;
+  font-size: 19px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.appendix-header__total::after {
+  content: " ₽";
+}
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: none;
@@ -8622,6 +8658,41 @@ hr.dotted {
   }
   .menu-filters__wrapper {
     max-width: 250px;
+  }
+  .appendix-header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appendix-header__title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .appendix-header__info {
+    margin-top: 5px;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .appendix-header__info div {
+    border-right: 1px solid #cdcdcd;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  .appendix-header__info div:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .appendix-header__total {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .appendix-header__total::after {
+    content: " ₽";
   }
 }
 

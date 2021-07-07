@@ -884,6 +884,44 @@
       max-width: 250px;
     }
   }
+
+.appendix-header {
+  align-items: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__info {
+    margin-top: 5px;
+    font-size: 14px;
+    display: flex;
+
+    div {
+      border-right: 1px solid $line-dark;
+      padding-right: 10px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  &__total {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: right;
+    white-space: nowrap;
+
+    &::after {
+      content: " ₽";
+    }
+  }
+}  
 }
 
 // lg
