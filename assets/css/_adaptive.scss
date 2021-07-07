@@ -1668,7 +1668,7 @@
   }
 
   .menu-filters-wrapper {
-    top: 120px;
+    top: 0;
   }
 
   .size-variants {
@@ -1879,9 +1879,6 @@
     }
   }
 
-  .menu-filters-wrapper {
-    top: -1px;
-  }
 }
 
 @media screen and (min-width: 1900px) {

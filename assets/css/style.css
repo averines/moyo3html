@@ -3560,8 +3560,8 @@ hr.dotted {
 }
 
 .breadcrumbs {
-  margin: 20px 0 10px 0;
-  padding: 0;
+  margin: 0 0 10px 0;
+  padding: 20px 0 0 0;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9287,7 +9287,7 @@ hr.dotted {
         grid-template-columns: 2fr 6fr;
   }
   .menu-filters-wrapper {
-    top: 120px;
+    top: 0;
   }
   .size-variants {
     -webkit-box-pack: center;
@@ -9459,9 +9459,6 @@ hr.dotted {
   }
   .order-view .more-block {
     width: 100%;
-  }
-  .menu-filters-wrapper {
-    top: -1px;
   }
 }
 
