@@ -6048,11 +6048,15 @@ hr.dotted {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1em;
-  margin-left: -5px;
 }
 
 .order-item__favorite {
-  margin-left: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.order-item__favorite::before {
+  content: "Перенести в избранное";
 }
 
 .order-item__remove {

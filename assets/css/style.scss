@@ -5085,11 +5085,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    margin-left: -5px;
+    // margin-left: -5px;
   }
 
   &__favorite {
-    margin-left: 0;
+    font-size: 14px;
+    color: $text-light;
+
+    &::before {
+      content: "Перенести в избранное";
+    }
   }
 
   &__remove {
