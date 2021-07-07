@@ -3133,7 +3133,7 @@
            
               </div>
               <div class="tabs-content__item" data-tabid="loginphone">
-                <form action="/" class="modal__form mt-2 js-form-check">
+                <form action="/" class="modal__form mt-2 js-form-check js-form-phone-code">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-phone" type="text" name="user-phone" required>
@@ -3177,12 +3177,16 @@
                         </div>
                       </div>
                     </div>
+                    <div class="form-group form-group--required js-input-code">
+                      <input id="user-code" type="text" name="user-code">
+                      <label for="user-code">Код из смс</label>
+                    </div>
                   </div>
                   <div class="d-flex flex-column align-center mt-4">
-                    <button class="btn btn-main" type="submit" disabled>Получить код</button>
+                    <button class="btn btn-main js-btn-code" type="submit" disabled>Получить код</button>
+                    <button class="btn btn-main js-btn-login" type="submit" disabled>Войти</button>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>

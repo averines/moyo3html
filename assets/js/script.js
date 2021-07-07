@@ -1079,8 +1079,32 @@ if (formsCheck) {
                 } else {
                     submitBtn.setAttribute('disabled', true)
                 }
-
             } )
         })
+    })
+}
+
+const formPhoneCode = document.querySelector('.js-form-phone-code')
+if (formPhoneCode) {
+    btnCode = formPhoneCode.querySelector('.js-btn-code')
+    btnLogin = formPhoneCode.querySelector('.js-btn-login')
+    inputCode = formPhoneCode.querySelector('.js-input-code')
+
+    inputCode.style.display = 'none'
+    btnLogin.style.display = 'none'
+
+    btnCode.addEventListener('click', (e) => {
+        e.preventDefault()
+        btnCode.style.display = 'none'
+        inputCode.style.display = 'block'
+        btnLogin.style.display = 'block'
+    })
+
+    inputCode.addEventListener('input', (e) => {
+        if (e.target.value) {
+            btnLogin.removeAttribute('disabled')
+        } else {
+            btnLogin.setAttribute('disabled', true)
+        }
     })
 }
