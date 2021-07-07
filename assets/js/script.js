@@ -910,7 +910,6 @@ if (passwordItems.length > 0) {
             } else {
                 item.setAttribute('type', 'password');
             }
-
         })
     })
 }
@@ -1054,3 +1053,34 @@ if ($rangeSlider.length > 0) {
     })
 }
 
+
+// проверка форм перед отправкой
+const formsCheck = document.querySelectorAll('.js-form-check')
+if (formsCheck) {
+    formsCheck.forEach( form => {
+        let requiredInputs = form.querySelectorAll('input[required]')
+        let submitBtn = form.querySelector('button[type="submit"]')
+        
+        requiredInputs.forEach(input => {
+        
+            input.addEventListener('input', (e) => {
+                let allInputsFilled = false
+
+                requiredInputs.forEach(input => {
+                    if (input.value) {
+                        allInputsFilled = true
+                    } else {
+                        allInputsFilled = false
+                    }
+                })
+
+                if (allInputsFilled) {
+                    submitBtn.removeAttribute('disabled')
+                } else {
+                    submitBtn.setAttribute('disabled', true)
+                }
+
+            } )
+        })
+    })
+}

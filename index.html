@@ -3102,7 +3102,6 @@
           veniam, illo fugiat quisquam beatae facere eveniet reprehenderit.
         </p>
       </div>
-
       <div class="modals__item modal modallogin" id="modallogin">
         <div class="modal__title">Вход</div>
         <div class="modal__content p-2">
@@ -3113,7 +3112,7 @@
             </div>
             <div class="tabs-content">
               <div class="tabs-content__item" data-tabid="loginemail">
-                <div class="modal__form mt-2">
+                <form action="/" class="modal__form mt-2 js-form-check">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="login-email" type="text" name="login-email" required>
@@ -3126,13 +3125,18 @@
                       <button type="button" class="password-icon"></button>
                     </div>
                   </div>
-                </div>
+                  <div class="d-flex flex-column align-center">
+                    <p class="text-center">Забыли пароль? <a class="text-italic" href="#">Восстановить</a></p>
+                    <button class="btn btn-main" type="submit" disabled>Войти</button>
+                  </div>
+                </form>
+           
               </div>
-              <div class="tabs-content__item " data-tabid="loginphone">
-                <div class="modal__form mt-2">
+              <div class="tabs-content__item" data-tabid="loginphone">
+                <form action="/" class="modal__form mt-2 js-form-check">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-phone" type="text" name="user-phone" required="">
+                      <input id="user-phone" type="text" name="user-phone" required>
                       <label for="user-phone">Номер телефона</label>
                       <input id="user-phone-country" type="text" name="user-phone-country" hidden="" value="">
                       <div class="custom-select" data-input-id="user-phone-country">
@@ -3144,7 +3148,7 @@
                             data-icon="../assets/img/icons/flags/01.svg">
                             <div class="phone-country__code">+374</div>
                             <div class="phone-country__title">Армения</div>
-                            <img src="/assets/img/icons/flags/01.svg" alt="Армения">
+                            <img src="./assets/img/icons/flags/01.svg" alt="Армения">
                           </div>
                           <div class="custom-select__option phone-country" data-value="+375"
                             data-icon="../assets/img/icons/flags/02.svg">
@@ -3174,13 +3178,15 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div class="d-flex flex-column align-center mt-4">
+                    <button class="btn btn-main" type="submit" disabled>Получить код</button>
+                  </div>
+                </form>
+
               </div>
             </div>
           </div>
           <div class="d-flex flex-column align-center">
-            <p class="text-center">Забыли пароль? <a class="text-italic" href="#">Восстановить</a></p>
-            <button class="btn btn-main" disabled>Войти</button>
             <p class="text-center text-small mt-3">Если Вы не зарегистрированы в нашем магазине, <br> пожалуйста,
               зарегистрируйтесь!</p>
             <a href="#" class="btn btn-main mb-3">Зарегистрироваться</a>

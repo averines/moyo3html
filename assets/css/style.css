@@ -273,6 +273,7 @@ h5,
 
 .btn-main {
   background-color: #ab064e;
+  border: 1px solid #ab064e;
   color: white;
 }
 
@@ -284,7 +285,7 @@ h5,
   background-color: transparent;
   color: #777;
   opacity: 0.8;
-  border: 1px solid #cdcdcd;
+  border-color: #cdcdcd;
 }
 
 .btn-main:disabled:hover {
