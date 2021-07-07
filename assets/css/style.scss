@@ -635,6 +635,10 @@
       width: 90%;
       max-width: 1480px;
     }
+
+    &.modalregistration {
+      min-height: 530px;
+    }
   }
 }
 
@@ -676,7 +680,7 @@
           content: "*";
           position: absolute;
           color: $main;
-          font-size: 1.3em;
+          font-size: 15px;
           top: -0.1em;
           right: -0.5em;
         }
@@ -687,7 +691,7 @@
         top: 30%;
         left: 0;
         position: absolute;
-        font-size: 0.9em;
+        font-size: 14px;
         color: $text-light;
         transition: top 0.2s $cub1;
       }
@@ -697,13 +701,17 @@
         width: 100%;
         padding: 0.5em 0.5em 0.5em 0;
         border: none;
-        font-size: 1.1em;
+        font-size: 18px;
         border-bottom: 1px dashed $line-dark;
         transition: $tr;
 
         &:focus {
           outline: none;
           border-block-color: $text;
+        }
+
+        &:not:focus ~ label {
+          background-color: red;
         }
 
         &:focus ~ label,

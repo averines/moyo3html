@@ -1455,6 +1455,10 @@ hr.dotted {
   max-width: 1480px;
 }
 
+.modals__item.modalregistration {
+  min-height: 530px;
+}
+
 .modal {
   border-radius: 4px;
   border: 10px solid white;
@@ -1500,7 +1504,7 @@ hr.dotted {
   content: "*";
   position: absolute;
   color: #ab064e;
-  font-size: 1.3em;
+  font-size: 15px;
   top: -0.1em;
   right: -0.5em;
 }
@@ -1510,7 +1514,7 @@ hr.dotted {
   top: 30%;
   left: 0;
   position: absolute;
-  font-size: 0.9em;
+  font-size: 14px;
   color: #777;
   -webkit-transition: top 0.2s cubic-bezier(0.61, -0.44, 0.29, 1.4);
   transition: top 0.2s cubic-bezier(0.61, -0.44, 0.29, 1.4);
@@ -1521,7 +1525,7 @@ hr.dotted {
   width: 100%;
   padding: 0.5em 0.5em 0.5em 0;
   border: none;
-  font-size: 1.1em;
+  font-size: 18px;
   border-bottom: 1px dashed #cdcdcd;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1530,6 +1534,10 @@ hr.dotted {
 .modal__form .form-row .form-group input:focus {
   outline: none;
   border-block-color: #3d3d3c;
+}
+
+.modal__form .form-row .form-group input:not:focus ~ label {
+  background-color: red;
 }
 
 .modal__form .form-row .form-group input:focus ~ label,

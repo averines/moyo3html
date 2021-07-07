@@ -1084,6 +1084,7 @@ if (formsCheck) {
     })
 }
 
+// форма входа с кодом телефона
 const formPhoneCode = document.querySelector('.js-form-phone-code')
 if (formPhoneCode) {
     btnCode = formPhoneCode.querySelector('.js-btn-code')
@@ -1106,5 +1107,32 @@ if (formPhoneCode) {
         } else {
             btnLogin.setAttribute('disabled', true)
         }
+    })
+}
+
+// форма регистрации с кодом телефона
+const formPhoneCodeRegistration = document.querySelectorAll('.js-form-phone-code-registration')
+if (formPhoneCodeRegistration) {
+    formPhoneCodeRegistration.forEach( form => {
+        btnCodeWrapper = form.querySelector('.js-btn-code-wrapper')
+        btnCode = form.querySelector('.js-btn-code')
+        btnRegistration = form.querySelector('.js-btn-registration')
+        inputCode = form.querySelector('.js-input-code')
+
+        inputCode.style.display = 'none'
+
+        btnCode.addEventListener('click', (e) => {
+            e.preventDefault()
+            btnCodeWrapper.style.display = 'none'
+            inputCode.style.display = 'block'
+        })
+
+        inputCode.addEventListener('input', (e) => {
+            if (e.target.value) {
+                btnRegistration.removeAttribute('disabled')
+            } else {
+                btnRegistration.setAttribute('disabled', true)
+            }
+        })
     })
 }
