@@ -50,7 +50,19 @@ body {
 
 main {
   min-height: 50vh;
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
+
+  &.page-main {
+    .tns-outer {
+      position: sticky;
+      top: 0;
+    }
+
+    .page-main__content-wrapper {
+      background-color: #f9f9f9;
+      position: relative;
+    }
+  }
 }
 
 .container {

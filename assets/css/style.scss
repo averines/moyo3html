@@ -6595,5 +6595,27 @@
   }
 }
 
+.choose-variants {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+
+  &__item {
+    margin-top: 15px;
+    padding: 15px 15px 15px 0;
+    text-decoration: none;
+    border-bottom: 2px solid #9B9B9B;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: $tr;
+    color: $text;
+
+    &:hover {
+      border-block-color: $main
+    }
+  }
+}
+
 @import "animations";
 @import "adaptive";

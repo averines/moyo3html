@@ -71,11 +71,11 @@
     }
   }
 
-.modallogin {
-  .modal__form {
-    padding: 0;
+  .modallogin {
+    .modal__form {
+      padding: 0;
+    }
   }
-}
 
   .form-text {
     min-width: auto;
@@ -697,6 +697,7 @@
       min-width: 0;
       font-size: 14px;
       text-decoration: underline;
+      border: none;
 
       &:hover {
         background: none;
@@ -1351,13 +1352,27 @@
     }
   }
 
-
-.modallogin {
-  .form-row {
-    margin-bottom: 15px;
+  .modallogin {
+    .form-row {
+      margin-bottom: 15px;
+    }
   }
-}
 
+  .choose-variants {
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+
+
+    &__item {
+      text-align: center;
+      margin-top: 0;
+      padding: 15px 15px 15px 15px;
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+  }
 }
 
 //xl

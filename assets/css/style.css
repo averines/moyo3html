@@ -21,7 +21,17 @@ body {
 
 main {
   min-height: 50vh;
-  border: 1px solid transparent;
+}
+
+main.page-main .tns-outer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+main.page-main .page-main__content-wrapper {
+  background-color: #f9f9f9;
+  position: relative;
 }
 
 .container {
@@ -7688,6 +7698,35 @@ hr.dotted {
   font-size: 14px;
 }
 
+.choose-variants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.choose-variants__item {
+  margin-top: 15px;
+  padding: 15px 15px 15px 0;
+  text-decoration: none;
+  border-bottom: 2px solid #9B9B9B;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #3d3d3c;
+}
+
+.choose-variants__item:hover {
+  border-block-color: #ab064e;
+}
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: none;
@@ -8403,6 +8442,7 @@ hr.dotted {
     min-width: 0;
     font-size: 14px;
     text-decoration: underline;
+    border: none;
   }
   .history-item__show:hover {
     background: none;
@@ -8968,6 +9008,27 @@ hr.dotted {
   }
   .modallogin .form-row {
     margin-bottom: 15px;
+  }
+  .choose-variants {
+    margin-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    width: 100%;
+  }
+  .choose-variants__item {
+    text-align: center;
+    margin-top: 0;
+    padding: 15px 15px 15px 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
