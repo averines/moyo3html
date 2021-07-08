@@ -104,7 +104,7 @@ if (menuFilterCheckboxItems) {
 
                         //снимаем галочку в меню фильтров, если нажали на элемент в списке выбранных фильтров
                         Array.prototype.map.call(menuFilterCheckboxItems, menuFilterCheckboxItem => {
-                            if (menuFilterCheckboxItem.id == selectedFiltersItem.dataset.id ) {
+                            if (menuFilterCheckboxItem.id == selectedFiltersItem.dataset.id) {
                                 menuFilterCheckboxItem.checked = false
                             }
                         })
@@ -220,7 +220,7 @@ if (productGallerySliderContainer.length > 0) {
 
 if (document.body.clientWidth > 768 && productGallerySlider) {
     productGallerySlider.destroy()
-} 
+}
 
 // var productGallerySlider = productGallerySliderContainer.length > 0 ?
 //     tns({
@@ -282,7 +282,7 @@ for (let accordion of accordions) {
             accordionActive > 0
             && document.body.clientWidth >= accordionActive
             && !accordionItem.classList.contains('is-active')
-        ){
+        ) {
             accordionItem.classList.add('is-active')
         }
 
@@ -426,7 +426,7 @@ if (togglerSort) {
 
 const togglersItems = document.querySelectorAll('.togglers__item')
 if (togglersItems.length > 0) {
-    togglersItems.forEach( item => {
+    togglersItems.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.toggle('is-active')
         })
@@ -553,7 +553,7 @@ function progressDiagram() {
     diagramBox.forEach((box) => {
         let circle = box.querySelector('.diagram-circle')
         let deg = (360 * box.dataset.percent) / 100;
-        
+
         if (box.dataset.percent >= 50) {
             circle.style.background = `linear-gradient(${deg}deg, transparent 50%, #ab064e 50%), linear-gradient(180deg, transparent 50%, #ab064e 50%)`
         } else {
@@ -968,7 +968,7 @@ if (customSelectItems.length > 0) {
 
 //             inputMaxWidthOffset = ((e.target.value - inputStartValue) * 100) / totalWidth
 //             inputEnd.style.width = 100 - inputMaxWidthOffset + '%'
-            
+
 //             rangeSlider.style.left = inputMaxWidthOffset + '%'
 //             rangeSlider.style.width = 100 - inputMaxWidthOffset + '%'
 
@@ -981,7 +981,7 @@ if (customSelectItems.length > 0) {
 
 //             inputMinWidthOffset = ((inputEndValue - e.target.value) * 100) / (inputEndValue - inputStartValue)
 //             inputStart.style.width = 100 - inputMinWidthOffset + '%'
-            
+
 //             rangeSlider.style.right = inputMinWidthOffset + '%'
 //             rangeSlider.style.width = 100 - inputMinWidthOffset + '%'
 
@@ -992,13 +992,13 @@ if (customSelectItems.length > 0) {
 // }
 
 var $rangeSlider = $(".js-range-slider"),
-$inputFrom = $(".js-range-from"),
-$inputTo = $(".js-range-to"),
-rangeInstance
+    $inputFrom = $(".js-range-from"),
+    $inputTo = $(".js-range-to"),
+    rangeInstance
 rangeMin = 100,
-rangeMax = 1000,
-rangeFrom = 100,
-rangeTo = 1000;
+    rangeMax = 1000,
+    rangeFrom = 100,
+    rangeTo = 1000;
 
 if ($rangeSlider.length > 0) {
     $rangeSlider.ionRangeSlider({
@@ -1057,12 +1057,12 @@ if ($rangeSlider.length > 0) {
 // проверка форм перед отправкой
 const formsCheck = document.querySelectorAll('.js-form-check')
 if (formsCheck) {
-    formsCheck.forEach( form => {
+    formsCheck.forEach(form => {
         let requiredInputs = form.querySelectorAll('input[required]')
         let submitBtn = form.querySelector('button[type="submit"]')
-        
+
         requiredInputs.forEach(input => {
-        
+
             input.addEventListener('input', (e) => {
                 let allInputsFilled = false
 
@@ -1079,7 +1079,7 @@ if (formsCheck) {
                 } else {
                     submitBtn.setAttribute('disabled', true)
                 }
-            } )
+            })
         })
     })
 }
@@ -1087,9 +1087,9 @@ if (formsCheck) {
 // форма входа с кодом телефона
 const formPhoneCode = document.querySelector('.js-form-phone-code')
 if (formPhoneCode) {
-    btnCode = formPhoneCode.querySelector('.js-btn-code')
-    btnLogin = formPhoneCode.querySelector('.js-btn-login')
-    inputCode = formPhoneCode.querySelector('.js-input-code')
+    let btnCode = formPhoneCode.querySelector('.js-btn-code')
+    let btnLogin = formPhoneCode.querySelector('.js-btn-login')
+    let inputCode = formPhoneCode.querySelector('.js-input-code')
 
     inputCode.style.display = 'none'
     btnLogin.style.display = 'none'
@@ -1113,11 +1113,11 @@ if (formPhoneCode) {
 // форма регистрации с кодом телефона
 const formPhoneCodeRegistration = document.querySelectorAll('.js-form-phone-code-registration')
 if (formPhoneCodeRegistration) {
-    formPhoneCodeRegistration.forEach( form => {
-        btnCodeWrapper = form.querySelector('.js-btn-code-wrapper')
-        btnCode = form.querySelector('.js-btn-code')
-        btnRegistration = form.querySelector('.js-btn-registration')
-        inputCode = form.querySelector('.js-input-code')
+    formPhoneCodeRegistration.forEach(form => {
+        let btnCodeWrapper = form.querySelector('.js-btn-code-wrapper')
+        let btnCode = form.querySelector('.js-btn-code')
+        let btnRegistration = form.querySelector('.js-btn-registration')
+        let inputCode = form.querySelector('.js-input-code')
 
         inputCode.style.display = 'none'
 

@@ -4142,6 +4142,7 @@
 
 .product-container {
   column-gap: 2em;
+  margin-bottom: 2em;
 }
 
 .product-gallery {
@@ -6725,3 +6726,4 @@
 
 @import "animations";
 @import "adaptive";
+@import "margins";
