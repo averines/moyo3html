@@ -429,25 +429,6 @@
     }
   }
 
-  // .pagination {
-  //   max-width: 300px;
-  //   margin-right: 0;
-
-  //   &.pagination--top {
-  //     position: absolute;
-  //     right: $gap;
-  //     top: 30px;
-  //   }
-
-  //   .pagination__prev {
-  //     margin-right: 0;
-  //   }
-
-  //   .pagination__next {
-  //     margin-left: 0;
-  //   }
-  // }
-
   .btn-filter {
     margin-left: 20px;
   }
@@ -925,6 +906,9 @@
     }
   }
 
+  .cart-empty {
+    padding-top: 100px;
+  }
  
 }
 
