@@ -6526,7 +6526,7 @@
         width: 200px;
         z-index: 10;
       }
-      
+
       &:hover {
         transform: translateY(-2px);
         z-index: 1;
@@ -6692,6 +6692,32 @@
     bottom: 5px;
     left: calc(50% - 10px);
     opacity: 0.5;
+  }
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  &__icon {
+    width: 65px;
+    height: 65px;    
+    opacity: 0.35;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
   }
 }
 
