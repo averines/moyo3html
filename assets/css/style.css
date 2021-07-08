@@ -7786,7 +7786,8 @@ hr.dotted {
 
 .appendix-header .appendix-total__value {
   font-weight: 600;
-  font-size: 19px;
+  font-size: 16px;
+  line-height: 1.4;
   white-space: nowrap;
 }
 
