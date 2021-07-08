@@ -3208,7 +3208,8 @@
                 <label for="type1-code">Код из СМС</label>
               </div>
               <div class="form-group">
-                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled>Зарегистрироваться</a>
+                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit"
+                  disabled>Зарегистрироваться</a>
               </div>
             </div>
 
@@ -3216,10 +3217,9 @@
         </div>
       </div>
       <div class="modals__item modal modalregistrationtype2" id="modalregistrationtype2">
-        <div class="modal__title">Покупаю на продажу</div>
+        <div class="modal__title">Покупаю для продажи</div>
         <div class="modal__content">
           <form action="/" class="modal__form js-form-check js-form-phone-code-registration">
-      
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-surname" type="text" name="type2-surname" required>
@@ -3230,7 +3230,7 @@
                 <label for=type2-city">Город доставки</label>
               </div>
             </div>
-      
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-name" type="text" name="type2-name" required>
@@ -3241,7 +3241,7 @@
                 <label for=type2-email">Эл. почта (логин)</label>
               </div>
             </div>
-      
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-patronymic" type="text" name="type2-patronymic" required>
@@ -3253,7 +3253,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-      
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-phone" type="text" name="type2-phone" required>
@@ -3304,7 +3304,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-      
+
             <div class="form-row">
               <div class="form-group js-btn-code-wrapper">
                 <button class="btn btn-main mb-3 w-100 js-btn-code" type="submit" disabled>Получить код</a>
@@ -3314,53 +3314,104 @@
                 <label for="type2-code">Код из СМС</label>
               </div>
               <div class="form-group">
-                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled 
-                data-fancybox data-src="#modalregistrationaddress"
-              href="javascript:;">Далее</a>
+                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox
+                  data-src="#modalregistrationaddress" href="javascript:;">Далее</a>
               </div>
             </div>
-      
           </form>
         </div>
       </div>
       <div class="modals__item modal modalregistrationaddress" id="modalregistrationaddress">
         <div class="modal__title">Адрес</div>
         <div class="modal__content">
-          <form action="/" class="modal__form js-form-check">
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-index1" type="text" name="type2-index1" required>
-                <label for="type2-index1">Индекс</label>
+          <form action="/" class="modal__form js-form-check js-form-registration-address">
+            <div class="form-registration-address">
+              <div class="form-group-wrapper js-form-registration-address-type1">
+                <div class="form-group-wrapper__title">Юр.адрес</div>
+                <div class="form-group-wrapper__content">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-index1" type="text" name="type2-index1" required>
+                      <label for="type2-index1">Индекс</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-country1" type="text" name="type2-country1" required>
+                      <label for="type2-country1">Страна</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-city1" type="text" name="type2-city1" required>
+                      <label for="type2-city1">Город</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-street1" type="text" name="type2-street1" required>
+                      <label for="type2-street1">Улица</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-building1" type="text" name="type2-building1" required>
+                      <label for="type2-building1">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group form-group--required">
+                      <input id="type2-appartmet1" type="text" name="type2-appartmet1" required>
+                      <label for="type2-appartmet1">Кв./офис</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-wrapper js-form-registration-address-type2">
+                <div class="form-group-wrapper__title">Факт.адрес</div>
+                <div class="form-group-wrapper__content">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-index2" type="text" name="type2-index2" required>
+                      <label for="type2-index2">Индекс</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-country2" type="text" name="type2-country2" required>
+                      <label for="type2-country2">Страна</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-city2" type="text" name="type2-city2" required>
+                      <label for="type2-city2">Город</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-street2" type="text" name="type2-street2" required>
+                      <label for="type2-street2">Улица</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="type2-building2" type="text" name="type2-building2" required>
+                      <label for="type2-building2">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group form-group--required">
+                      <input id="type2-appartmet2" type="text" name="type2-appartmet2" required>
+                      <label for="type2-appartmet2">Кв./офис</label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-country1" type="text" name="type2-country1" required>
-                <label for="type2-country1">Страна</label>
-              </div>
+
+            <div class="form-group d-flex justify-center mb-2">
+              <input type="checkbox" class="form-group__checkbox" name="type2-addressdouble" id="type2-addressdouble">
+              <label class="form-group__label text-italic" for="type2-addressdouble">Юр. адрес совпадает с
+                фактическим</label>
             </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-city1" type="text" name="type2-city1" required>
-                <label for="type2-city1">Город</label>
-              </div>
-            </div>
-          <div class="form-row">
-            <div class="form-group form-group--required">
-              <input id="type2-street1" type="text" name="type2-street1" required>
-              <label for="type2-street1">Улица</label>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group form-group--required">
-              <input id="type2-building1" type="text" name="type2-building1" required>
-              <label for="type2-building1">Дом, стр./корп.</label>
-            </div>
-            <div class="form-group form-group--required">
-              <input id="type2-appartmet1" type="text" name="type2-appartmet1" required>
-              <label for="type2-appartmet1">Кв./офис</label>
-            </div>
-          </div>
+
             <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox
               data-src="#modalregistrationrequisites" href="javascript:;">Далее</a>
           </form>

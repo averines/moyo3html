@@ -6724,6 +6724,25 @@
   }
 }
 
+.form-registration-address {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.form-group-wrapper {
+  &__title {
+    border-bottom: 2px solid $text-light;
+    padding: 15px 0;
+    text-align: left;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+
+
 @import "animations";
 @import "adaptive";
 @import "margins";

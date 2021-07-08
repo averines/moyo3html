@@ -1084,6 +1084,32 @@ if (formsCheck) {
     })
 }
 
+function singleFormCheck (form) {
+    let requiredInputs = form.querySelectorAll('input[required]')
+    let submitBtn = form.querySelector('button[type="submit"]')
+
+    requiredInputs.forEach(input => {
+
+        input.addEventListener('input', (e) => {
+            let allInputsFilled = false
+
+            requiredInputs.forEach(input => {
+                if (input.value) {
+                    allInputsFilled = true
+                } else {
+                    allInputsFilled = false
+                }
+            })
+
+            if (allInputsFilled) {
+                submitBtn.removeAttribute('disabled')
+            } else {
+                submitBtn.setAttribute('disabled', true)
+            }
+        })
+    })
+}
+
 // форма входа с кодом телефона
 const formPhoneCode = document.querySelector('.js-form-phone-code')
 if (formPhoneCode) {
@@ -1135,4 +1161,30 @@ if (formPhoneCodeRegistration) {
             }
         })
     })
+}
+
+
+// форма адреса при регистрации
+const formAddressRegistration = document.querySelector('.js-form-registration-address')
+if (formAddressRegistration) {
+    let addressDoubleCheckbox = document.getElementById('type2-addressdouble')
+    let addressType2 = formAddressRegistration.querySelector('.js-form-registration-address-type2')
+    let addresType2Inputs = addressType2.querySelectorAll('input')
+
+    addressDoubleCheckbox.addEventListener('change', () => {
+        if (addressDoubleCheckbox.checked) {
+            addressType2.style.display = 'none'
+            addresType2Inputs.forEach( input => {
+                input.removeAttribute('required')
+            })
+            singleFormCheck(formAddressRegistration)
+        } else {
+            addressType2.style.display = 'block'
+            addresType2Inputs.forEach(input => {
+                input.setAttribute('required', true)
+            })
+            singleFormCheck(formAddressRegistration)
+        }
+    })
+
 }
