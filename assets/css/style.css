@@ -6376,6 +6376,7 @@ hr.dotted {
 .order-info-total .total {
   margin-left: 0.5em;
   font-weight: 600;
+  font-size: 19px;
 }
 
 .order-info-total .total::after {
@@ -7478,7 +7479,6 @@ hr.dotted {
 
 .order-view .order-return__title {
   font-size: 14px;
-  font-weight: 600;
 }
 
 .order-view .order-return__value {
@@ -7490,6 +7490,26 @@ hr.dotted {
 }
 
 .order-view .order-return__value::after {
+  content: " ₽";
+}
+
+.order-view .order-total {
+  margin-top: 10px;
+}
+
+.order-view .order-total__title {
+  font-size: 14px;
+}
+
+.order-view .order-total__value {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 19px;
+  color: #3d3d3c;
+  white-space: nowrap;
+}
+
+.order-view .order-total__value::after {
   content: " ₽";
 }
 
@@ -7598,8 +7618,8 @@ hr.dotted {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 0;
-  right: -210px;
+  top: -60px;
+  left: -100px;
   border-radius: 4px;
   color: #fff;
   padding: 12px;
@@ -7607,20 +7627,6 @@ hr.dotted {
   background-color: #3d3d3c;
   width: 200px;
   z-index: 10;
-}
-
-.order-view .status-icons__item::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  top: 5px;
-  left: 30px;
-  width: 7px;
-  height: 7px;
-  border: 7px solid transparent;
-  border-right-color: #3d3d3c;
 }
 
 .order-view .status-icons__item:hover {
@@ -7726,7 +7732,7 @@ hr.dotted {
   margin-top: 15px;
   padding: 15px 15px 15px 0;
   text-decoration: none;
-  border-bottom: 2px solid #9B9B9B;
+  border-bottom: 2px solid #9b9b9b;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
@@ -7741,16 +7747,24 @@ hr.dotted {
 
 .appendix-header {
   border-radius: 4px;
-  background: url(../img/icons/plus-small.svg) no-repeat top 25px left 20px #f3f2f0;
+  background: url(../img/icons/plus-small.svg) no-repeat top 25px left 20px white;
   background-size: 20px;
   padding: 25px 30px 25px 55px;
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 0 7px 10px rgba(16, 16, 16, 0.05);
+          box-shadow: 0 7px 10px rgba(16, 16, 16, 0.05);
+  row-gap: 15px;
+  position: relative;
 }
 
 .appendix-header__title {
@@ -7764,15 +7778,33 @@ hr.dotted {
   line-height: 1.3;
 }
 
-.appendix-header__total {
+.appendix-header .appendix-total__title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.appendix-header .appendix-total__value {
   font-weight: 600;
   font-size: 19px;
-  text-align: right;
   white-space: nowrap;
 }
 
-.appendix-header__total::after {
+.appendix-header .appendix-total__value::after {
   content: " ₽";
+}
+
+.appendix-header::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(../img/icons/arrow-down.svg) no-repeat center;
+  background-size: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 10px);
+  opacity: 0.5;
 }
 
 @-webkit-keyframes jump {
@@ -7993,6 +8025,39 @@ hr.dotted {
   }
   .section-bigcategories .tns-outer::after {
     height: 70%;
+  }
+  .appendix-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appendix-header__title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .appendix-header__info {
+    margin-top: 5px;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .appendix-header__info div {
+    border-right: 1px solid #cdcdcd;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  .appendix-header__info div:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .appendix-header .appendix-total {
+    text-align: right;
   }
 }
 
@@ -8560,6 +8625,9 @@ hr.dotted {
             justify-content: space-between;
     -webkit-column-gap: 15px;
             column-gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .order-view__header-wrapper {
     -webkit-box-ordinal-group: 3;
@@ -8605,6 +8673,14 @@ hr.dotted {
             order: 3;
     margin-top: 0;
     text-align: right;
+  }
+  .order-view .order-total {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-top: 0;
+    text-align: right;
+    margin-left: 30px;
   }
   .order-view__back-btn {
     position: relative;
@@ -8658,41 +8734,6 @@ hr.dotted {
   }
   .menu-filters__wrapper {
     max-width: 250px;
-  }
-  .appendix-header {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .appendix-header__title {
-    font-weight: 600;
-    font-size: 18px;
-  }
-  .appendix-header__info {
-    margin-top: 5px;
-    font-size: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .appendix-header__info div {
-    border-right: 1px solid #cdcdcd;
-    padding-right: 10px;
-    margin-right: 10px;
-  }
-  .appendix-header__info div:last-child {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-  .appendix-header__total {
-    font-weight: 600;
-    font-size: 20px;
-    text-align: right;
-    white-space: nowrap;
-  }
-  .appendix-header__total::after {
-    content: " ₽";
   }
 }
 
@@ -9539,6 +9580,24 @@ hr.dotted {
   .order-view .status-icons__item {
     width: 33px;
     height: 24px;
+  }
+  .order-view .status-icons__item:after {
+    top: 0;
+    right: -210px;
+    left: auto;
+  }
+  .order-view .status-icons__item::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 5px;
+    left: 30px;
+    width: 7px;
+    height: 7px;
+    border: 7px solid transparent;
+    border-right-color: #3d3d3c;
   }
   .order-view .more-block {
     width: 100%;

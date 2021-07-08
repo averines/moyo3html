@@ -157,6 +157,38 @@
       }
     }
   }
+.appendix-header {
+  flex-direction: row;
+  align-items: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__info {
+    margin-top: 5px;
+    font-size: 14px;
+    display: flex;
+
+    div {
+      border-right: 1px solid $line-dark;
+      padding-right: 10px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  .appendix-total {
+    text-align: right;
+  }
+
+}   
 }
 
 // md
@@ -777,6 +809,7 @@
       display: flex;
       justify-content: space-between;
       column-gap: 15px;
+      align-items: center;
     }
 
     &__header-wrapper {
@@ -818,6 +851,13 @@
       margin-top: 0;
       text-align: right;
     }
+
+    .order-total {
+      order: 4;
+      margin-top: 0;
+      text-align: right;
+      margin-left: 30px;
+    }    
 
     &__back-btn {
       position: relative;
@@ -885,43 +925,7 @@
     }
   }
 
-.appendix-header {
-  align-items: center;
-
-  &__title {
-    font-weight: 600;
-    font-size: 18px;
-  }
-
-  &__info {
-    margin-top: 5px;
-    font-size: 14px;
-    display: flex;
-
-    div {
-      border-right: 1px solid $line-dark;
-      padding-right: 10px;
-      margin-right: 10px;
-
-      &:last-child {
-        margin: 0;
-        padding: 0;
-        border: none;
-      }
-    }
-  }
-
-  &__total {
-    font-weight: 600;
-    font-size: 20px;
-    text-align: right;
-    white-space: nowrap;
-
-    &::after {
-      content: " ₽";
-    }
-  }
-}  
+ 
 }
 
 // lg
@@ -1910,6 +1914,26 @@
     .status-icons__item {
       width: 33px;
       height: 24px;
+
+      &:after {
+        top: 0;
+        right: -210px;
+        left: auto;
+      }
+
+      &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 5px;
+        left: 30px;
+        width: 7px;
+        height: 7px;
+        border: 7px solid transparent;
+        border-right-color: $text;
+      }      
     }
 
     .more-block {

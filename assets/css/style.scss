@@ -3600,7 +3600,7 @@
       padding: 7px 10px;
     }
   }
-  
+
   .irs-from,
   .irs-to {
     display: none;
@@ -3615,7 +3615,7 @@
 
   .irs--round {
     .irs-line {
-      background-color: $line-light +5;
+      background-color: $line-light + 5;
       height: 6px;
     }
     .irs-bar {
@@ -5393,6 +5393,7 @@
   .total {
     margin-left: 0.5em;
     font-weight: 600;
+    font-size: 19px;
 
     &::after {
       content: " ₽";
@@ -6382,7 +6383,7 @@
 
     &__title {
       font-size: 14px;
-      font-weight: 600;
+      // font-weight: 600;
     }
 
     &__value {
@@ -6397,6 +6398,26 @@
       }
     }
   }
+
+  .order-total {
+    margin-top: 10px;
+
+    &__title {
+      font-size: 14px;
+    }
+
+    &__value {
+      margin-top: 5px;
+      font-weight: 600;
+      font-size: 19px;
+      color: $text;
+      white-space: nowrap;
+
+      &::after {
+        content: " ₽";
+      }
+    }
+  }  
 
   &__back-btn {
     cursor: pointer;
@@ -6493,8 +6514,10 @@
         visibility: hidden;
         opacity: 0;
         position: absolute;
-        top: 0;
-        right: -210px;
+        top: -60px;
+        // right: -210px;
+        left: -100px;
+
         border-radius: 4px;
         color: #fff;
         padding: 12px;
@@ -6503,21 +6526,7 @@
         width: 200px;
         z-index: 10;
       }
-
-      &::before {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        top: 5px;
-        left: 30px;
-        width: 7px;
-        height: 7px;
-        border: 7px solid transparent;
-        border-right-color: $text;
-      }
-
+      
       &:hover {
         transform: translateY(-2px);
         z-index: 1;
@@ -6617,7 +6626,7 @@
     margin-top: 15px;
     padding: 15px 15px 15px 0;
     text-decoration: none;
-    border-bottom: 2px solid #9B9B9B;
+    border-bottom: 2px solid #9b9b9b;
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
@@ -6625,20 +6634,23 @@
     color: $text;
 
     &:hover {
-      border-block-color: $main
+      border-block-color: $main;
     }
   }
 }
 
 .appendix-header {
   border-radius: 4px;
-  background: url(../img/icons/plus-small.svg) no-repeat top 25px left 20px #f3f2f0;
+  background: url(../img/icons/plus-small.svg) no-repeat top 25px left 20px $white;
   background-size: 20px;
   padding: 25px 30px 25px 55px;
   margin-top: 60px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  // box-shadow: 0 7px 10px transparentize($black, 0.95);
+  box-shadow: 0 7px 10px transparentize($black, 0.95);
+  row-gap: 15px;
+  position: relative;
 
   &__title {
     font-weight: 600;
@@ -6651,15 +6663,35 @@
     line-height: 1.3;
   }
 
-  &__total {
-    font-weight: 600;
-    font-size: 19px;
-    text-align: right;
-    white-space: nowrap;
-
-    &::after {
-      content: " ₽";
+  .appendix-total {
+    &__title {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
     }
+
+    &__value {
+      font-weight: 600;
+      font-size: 19px;
+      white-space: nowrap;
+
+      &::after {
+        content: " ₽";
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../img/icons/arrow-down.svg) no-repeat center;
+    background-size: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 10px);
+    opacity: 0.5;
   }
 }
 
