@@ -695,6 +695,8 @@
         <div class="tabs-titles">
           <a class="tabs-titles__item" href="#favorites">Избранное</a>
           <a class="tabs-titles__item" href="#cart">Корзина</a>
+          <a class="tabs-titles__item" href="#delivery">Доставка</a>
+          <a class="tabs-titles__item" href="#payment">Оплата</a>
           <a class="tabs-titles__item" href="#personal">Личные данные</a>
           <a class="tabs-titles__item" href="#orders">История заказов</a>
           <a class="tabs-titles__item" href="#discounts">Скидки и бонусы</a>
@@ -1185,384 +1187,385 @@
             </div>
           </div>
           <div class="tabs-content__item my-2" data-tabid="cart">
-              <div class="cart-empty">
-                <img class="cart-empty__icon" src="/assets/img/icons/cart-empty.svg">
-                <div class="cart-empty__title">Ваша корзина пока пуста</div>
-                <div class="cart-empty__text">
-                  <p>Вы можете начать свой выбор с <a href="/">главной страницы</a>
-                     или посмотреть <a href="#">акции</a> и&nbsp;<a href="#">скидки</a>. Воспользуйтесь поиском, если ищете что-то конкретное.</p>
-                  <p>Приятных покупок! 🤗</p>
-                </div>
-                <a href="/personal/cart.html" class="btn btn-main">Перейти в каталог</a>
+            <div class="cart-empty">
+              <img class="cart-empty__icon" src="/assets/img/icons/cart-empty.svg">
+              <div class="cart-empty__title">Ваша корзина пока пуста</div>
+              <div class="cart-empty__text">
+                <p>Вы можете начать свой выбор с <a href="/">главной страницы</a>
+                  или посмотреть <a href="#">акции</a> и&nbsp;<a href="#">скидки</a>. Воспользуйтесь поиском, если ищете
+                  что-то конкретное.</p>
+                <p>Приятных покупок! 🤗</p>
               </div>
-          <div class="product-group">
-            <div class="product-group__header">
-              <div class="product-group__title">Рекомендуем</div>
-              <a class="product-group__link" href="#">Смотреть все</a>
+              <a href="/personal/cart.html" class="btn btn-main">Перейти в каталог</a>
             </div>
-            <div class="product-mini-slider">
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
-                      </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
-                    </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+            <div class="product-group">
+              <div class="product-group__header">
+                <div class="product-group__title">Рекомендуем</div>
+                <a class="product-group__link" href="#">Смотреть все</a>
+              </div>
+              <div class="product-mini-slider">
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
                         </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
                         </div>
+                      </a>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
                       </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
-                      </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
-                    </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
                         </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
                       </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
-                    </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
-                        </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
-                      </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
-                    </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
                         </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
                       </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
-                    </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
-                        </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                      </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="product-mini-slider__item">
-                <div class="product-wrapper">
-                  <div class="product">
-                    <div class="product__colors color-variants">
-                      <a class="color-variants__item" href="#" data-color-variant="01">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/01-1-60.webp">
-                          <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
-                        </picture>
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
+                      </div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
+                        </div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
+                        </div>
                       </a>
-                      <a class="color-variants__item" href="#" data-color-variant="02">
-                        <picture>
-                          <source type="image/webp" srcset="../i/products/02-1-60.webp">
-                          <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
-                        </picture>
-                      </a>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
+                      </div>
                     </div>
-                    <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a href="#quick-view" class="product__quick-view"></a>
-                    <a href="product.html" class="product__link">
-                      <div class="product__pic">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <picture>
-                          <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
-                          <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
-                          <source type="image/webp" srcset="../i/products/01.webp">
-                          <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
-                        </picture>
+                  </div>
+                </div>
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
                       </div>
-                      <div class="product__info">
-                        <div class="product__header">
-                          <div class="product__brand">Vittoria Vicci</div>
-                          <div class="product__title">Платье</div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
                         </div>
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
                         </div>
+                      </a>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
                       </div>
-                    </a>
-                    <div class="product__sizes size-variants">
-                      <a href="#" class="size-variants__item">40</a>
-                      <a href="#" class="size-variants__item">42</a>
-                      <a href="#" class="size-variants__item">44</a>
-                      <a href="#" class="size-variants__item">46</a>
-                      <a href="#" class="size-variants__item">48/50</a>
-                      <a href="#" class="size-variants__item">50</a>
-                      <a href="#" class="size-variants__item">52</a>
-                      <a href="#" class="size-variants__item">52-54</a>
-                      <a href="#" class="size-variants__item">54-56</a>
-                      <a href="#" class="size-variants__item">56-58</a>
-                      <a href="#" class="size-variants__item">56XL-58XXL</a>
-                      <a href="#" class="size-variants__item">60XL-70XXL</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-mini-slider__item">
+                  <div class="product-wrapper">
+                    <div class="product">
+                      <div class="product__colors color-variants">
+                        <a class="color-variants__item" href="#" data-color-variant="01">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/01-1-60.webp">
+                            <img src="../i/products/01-1-60.jpg" alt="Цвет 1">
+                          </picture>
+                        </a>
+                        <a class="color-variants__item" href="#" data-color-variant="02">
+                          <picture>
+                            <source type="image/webp" srcset="../i/products/02-1-60.webp">
+                            <img src="../i/products/02-1-60.jpg" alt="Цвет 2">
+                          </picture>
+                        </a>
+                      </div>
+                      <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                      <a href="#quick-view" class="product__quick-view"></a>
+                      <a href="product.html" class="product__link">
+                        <div class="product__pic">
+                          <div class="product__sticky product__sticky--new"></div>
+                          <picture>
+                            <source type="image/webp" media="(min-width: 1366px)" srcset="../i/products/01-1-232.webp">
+                            <source type="image/webp" media="(min-width: 1024px)" srcset="../i/products/01-1-200.webp">
+                            <source type="image/webp" srcset="../i/products/01.webp">
+                            <img src="../i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                          </picture>
+                        </div>
+                        <div class="product__info">
+                          <div class="product__header">
+                            <div class="product__brand">Vittoria Vicci</div>
+                            <div class="product__title">Платье</div>
+                          </div>
+                          <div class="product__price price">
+                            <div class="price__old">2 830,00</div>
+                            <div class="price__profit">175,00</div>
+                            <div class="price__break"></div>
+                            <div class="price__base">2 655,00</div>
+                            <div class="price__discount">13</div>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="product__sizes size-variants">
+                        <a href="#" class="size-variants__item">40</a>
+                        <a href="#" class="size-variants__item">42</a>
+                        <a href="#" class="size-variants__item">44</a>
+                        <a href="#" class="size-variants__item">46</a>
+                        <a href="#" class="size-variants__item">48/50</a>
+                        <a href="#" class="size-variants__item">50</a>
+                        <a href="#" class="size-variants__item">52</a>
+                        <a href="#" class="size-variants__item">52-54</a>
+                        <a href="#" class="size-variants__item">54-56</a>
+                        <a href="#" class="size-variants__item">56-58</a>
+                        <a href="#" class="size-variants__item">56XL-58XXL</a>
+                        <a href="#" class="size-variants__item">60XL-70XXL</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
             <!-- <div class="order">
               <div class="order-header">Наименование</div>
               <div class="order-items">
@@ -2221,489 +2224,555 @@
               </div>
             </div>
           </div>
-          <div class="tabs-content__item my-2" data-tabid="orders">
-            <div class="history">
-              <div class="history__header">
-                <div class="text-left">Заказ</div>
-                <div>Количество</div>
-                <div>Сумма</div>
-                <div>Статус</div>
+          <div class="tabs-content__item my-2" data-tabid="delivery">
+            <div class="order-progress-list">
+              <div class="order-progress-list__item progress-item progress-item--active">
+                <div class="progress-item__icon"><img src="../assets/img/icons/order-progress/01.svg" alt=""></div>
+                <div class="progress-item__title">Корзина</div>
               </div>
-              <div class="history__items">
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--new"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--processed"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <!-- <div class="history-item-payment__waiting">Ожидается оплата</div> -->
-                          <a class="history-item-payment__link btn btn-main"
-                            href="../personal/online-payment.html">Оплатить
-                            онлайн</a>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                  <div class="d-none d-md-block"></div>
-                  <div class="history-item__extraorder extraorder">
-                    <div class="extraorder__item">
-                      <a class="extraorder__link" href="#">Дозаказ #12345 от 01.12.2020</a> –
-                      <span class="extraorder__content">186 шт. / 12 345,67 ₽</span>
-                    </div>
-                    <div class="extraorder__item">
-                      <a class="extraorder__link" href="#">Дозаказ #12345 от 01.12.2020</a> –
-                      <span class="extraorder__content">186 шт. / 12 345,67 ₽</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--packed"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <!-- <div class="history-item-payment__waiting">Ожидается оплата</div> -->
-                          <a class="history-item-payment__link btn btn-main"
-                            href="../personal/online-payment.html">Оплатить
-                            онлайн</a>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--packed"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №12345</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Транспортная компания:</span> Желдорэкспедиция
-                      </div>
-                      <div class="text-small"><span class="text-bold">Номер отправления:</span> БАБШВИМ-2/1310</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Овчинникова Людмила
-                        Витальевна</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">2</div>
-                        <div class="history-table__total total-return">
-                          <div class="total-return__total">2 500,00</div>
-                          <div class="total-return__title">К возврату</div>
-                          <div class="total-return__summ">-1 655,00</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--send"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--paid"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--canceled"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-                <div class="history__item history-item more-wrapper">
-                  <div class="history-item__info">
-                    <div class="history-item__icon history-item__icon--onpacked"></div>
-                    <div class="history-item__content">
-                      <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
-                          01.12.2020</span></div>
-                      <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
-                      <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
-                      <div class="d-flex justify-between align-end">
-                        <div class="history-item__payment history-item-payment">
-                          <div class="history-item-payment__success">Заказ оплачен</div>
-                        </div>
-                        <a class="more-link d-md-none" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="more-block">
-                    <div class="history-item__table history-table">
-                      <div class="history-table__head">
-                        <div class="history-table__title">Количество</div>
-                        <div class="history-table__title">Сумма</div>
-                      </div>
-                      <div class="history-table__body">
-                        <div class="history-table__quantity">1</div>
-                        <div class="history-table__total">2 655,00</div>
-                      </div>
-                    </div>
-                    <div class="history-item__status history-item-status">
-                      <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
-                        download>Счет-договор</a>
-                      <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
-                        download>Накладная Торг12</a>
-                      <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
-                        download>Спецификация</a>
-                      <div class="history-item-status__item status-info status-info--1"></div>
-                      <div class="history-item-status__item status-info status-info--2"></div>
-                    </div>
-                    <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
-                  </div>
-                </div>
-              </div>
+              <div class="order-progress-list__separator order-progress-list__separator--active"></div>
+              <div class="order-progress-list__item progress-item progress-item--active">
+                <div class=" progress-item__icon progress-item__icon--delivery"><img
+                  src="../assets/img/icons/order-progress/02.svg" alt=""></div>
+              <div class="progress-item__title">Доставка</div>
             </div>
-            <div class="modals">
-              <div class="modals__item modal" id="historyItem1">
-                <div class="modal__title">Просмотр заказа 1</div>
-              </div>
-              <div class="modals__item modal" id="historyItem2">
-                <div class="modal__title">Просмотр заказа 2</div>
-              </div>
-              <div class="modals__item modal" id="historyItem3">
-                <div class="modal__title">Просмотр заказа 3</div>
+            <div class="order-progress-list__separator"></div>
+            <div class="order-progress-list__item progress-item">
+              <div class="progress-item__icon"><img src="../assets/img/icons/order-progress/03.svg" alt=""></div>
+              <div class="progress-item__title">Оплата</div>
+            </div>
+          </div>
+
+          <div class="order-progress-delivery-wrapper delivery-wrapper">
+            <div class="delivery-wrapper__item is-active">Самовывоз</div>
+            <div class="delivery-wrapper__item">Транспортная компания</div>
+            <div class="delivery-wrapper__item">Доставка почтой</div>
+          </div>
+
+          <div class="order-progress-address-wrapper">
+            <div class="">Выберите адрес доставки</div>
+            <div class="order-info order-info--indelyveryrab">
+              <ul class="order-info-list">
+                <li>
+                  <div class="order-info-list__title">Общая стоимость товаров</div>
+                  <div class="order-info-list__value order-info-list__value--black">1 234,00</div>
+                </li>
+                <li>
+                  <div class="order-info-list__title">Скидка</div>
+                  <div class="order-info-list__value">234,00</div>
+                </li>
+                <li>
+                  <div class="order-info-list__title">Скидка по промокоду</div>
+                  <div class="order-info-list__value">0,00</div>
+                </li>
+                <li>
+                  <div class="order-info-list__title">Накопительная скидка</div>
+                  <div class="order-info-list__value">0,00</div>
+                </li>
+                <li>
+                  <div class="order-info-list__title">Бонус за выкуп</div>
+                  <div class="order-info-list__value">0,00</div>
+                </li>
+              </ul>
+              <div class="order-info-total">
+                Итого:
+                <div class="total">1 234,00</div>
               </div>
             </div>
           </div>
-          <div class="tabs-content__item my-2" data-tabid="discounts">
-            <div class="discounts-wrapper">
-              <div>
-                <p class="h4 mb-0 text-bold">Скидка за суммарный объём</p>
-                <div class="discounts-info-wrapper">
-                  <img class="img-max discounts-info-wrapper__pic" src="../assets/img/discount.png" alt="">
-                  <div class="discounts-info-wrapper__text">
-                    <div class="row">
-                      <div class="col-md-9">
-                        <p>Во внимание принимаются все отправленные заказы <span class="text-bold">только за три
-                            предыдущих месяца</span>. Скидка рассчитывается от общей суммы этих заказов и может
-                          изменяться при формировании возвратов.</p>
-                        <p> Суммы (оплаченные заказы) начнут отображаться на странице после перевода заказа в статус
-                          «отправлен». Данный статус присваивается заказу после получения документов из транспортной
-                          компании. Как правило, на следующий рабочий
-                          день. Сумма заказов начнет влиять на скидку с первого числа следующего месяца.</p>
+
+
+          <div class="order-buttons">
+            <a class="btn btn-white" href="../personal/cart.html#cart">Назад к корзине</a>
+            <a class="btn btn-main" href="../personal/cart.html#payment">Далее к оплате</a>
+          </div>
+        </div>
+        <div class="tabs-content__item my-2" data-tabid="payment">
+          Оплата
+        </div>
+        <div class="tabs-content__item my-2" data-tabid="orders">
+          <div class="history">
+            <div class="history__header">
+              <div class="text-left">Заказ</div>
+              <div>Количество</div>
+              <div>Сумма</div>
+              <div>Статус</div>
+            </div>
+            <div class="history__items">
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--new"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
                       </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--processed"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <!-- <div class="history-item-payment__waiting">Ожидается оплата</div> -->
+                        <a class="history-item-payment__link btn btn-main"
+                          href="../personal/online-payment.html">Оплатить
+                          онлайн</a>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+                <div class="d-none d-md-block"></div>
+                <div class="history-item__extraorder extraorder">
+                  <div class="extraorder__item">
+                    <a class="extraorder__link" href="#">Дозаказ #12345 от 01.12.2020</a> –
+                    <span class="extraorder__content">186 шт. / 12 345,67 ₽</span>
+                  </div>
+                  <div class="extraorder__item">
+                    <a class="extraorder__link" href="#">Дозаказ #12345 от 01.12.2020</a> –
+                    <span class="extraorder__content">186 шт. / 12 345,67 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--packed"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <!-- <div class="history-item-payment__waiting">Ожидается оплата</div> -->
+                        <a class="history-item-payment__link btn btn-main"
+                          href="../personal/online-payment.html">Оплатить
+                          онлайн</a>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--packed"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №12345</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Транспортная компания:</span> Желдорэкспедиция
+                    </div>
+                    <div class="text-small"><span class="text-bold">Номер отправления:</span> БАБШВИМ-2/1310</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Овчинникова Людмила
+                      Витальевна</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">2</div>
+                      <div class="history-table__total total-return">
+                        <div class="total-return__total">2 500,00</div>
+                        <div class="total-return__title">К возврату</div>
+                        <div class="total-return__summ">-1 655,00</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--send"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--paid"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--canceled"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+              <div class="history__item history-item more-wrapper">
+                <div class="history-item__info">
+                  <div class="history-item__icon history-item__icon--onpacked"></div>
+                  <div class="history-item__content">
+                    <div><span class="text-bold">Заказ №3894</span> <span class="text-small text-muted">от
+                        01.12.2020</span></div>
+                    <div class="text-small"><span class="text-bold">Доставка:</span> Самовывоз</div>
+                    <div class="text-small"><span class="text-bold">Получатель:</span> ИП Получатель</div>
+                    <div class="d-flex justify-between align-end">
+                      <div class="history-item__payment history-item-payment">
+                        <div class="history-item-payment__success">Заказ оплачен</div>
+                      </div>
+                      <a class="more-link d-md-none" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-block">
+                  <div class="history-item__table history-table">
+                    <div class="history-table__head">
+                      <div class="history-table__title">Количество</div>
+                      <div class="history-table__title">Сумма</div>
+                    </div>
+                    <div class="history-table__body">
+                      <div class="history-table__quantity">1</div>
+                      <div class="history-table__total">2 655,00</div>
+                    </div>
+                  </div>
+                  <div class="history-item__status history-item-status">
+                    <a class="history-item-status__item status-doc status-doc--1" href="#" target="_blank"
+                      download>Счет-договор</a>
+                    <a class="history-item-status__item status-doc status-doc--2" href="#" target="_blank"
+                      download>Накладная Торг12</a>
+                    <a class="history-item-status__item status-doc status-doc--3" href="#" target="_blank"
+                      download>Спецификация</a>
+                    <div class="history-item-status__item status-info status-info--1"></div>
+                    <div class="history-item-status__item status-info status-info--2"></div>
+                  </div>
+                  <a href="./order-view.html#orders" class="btn btn-main mt-1 history-item__show">Посмотреть заказ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modals">
+            <div class="modals__item modal" id="historyItem1">
+              <div class="modal__title">Просмотр заказа 1</div>
+            </div>
+            <div class="modals__item modal" id="historyItem2">
+              <div class="modal__title">Просмотр заказа 2</div>
+            </div>
+            <div class="modals__item modal" id="historyItem3">
+              <div class="modal__title">Просмотр заказа 3</div>
+            </div>
+          </div>
+        </div>
+        <div class="tabs-content__item my-2" data-tabid="discounts">
+          <div class="discounts-wrapper">
+            <div>
+              <p class="h4 mb-0 text-bold">Скидка за суммарный объём</p>
+              <div class="discounts-info-wrapper">
+                <img class="img-max discounts-info-wrapper__pic" src="../assets/img/discount.png" alt="">
+                <div class="discounts-info-wrapper__text">
+                  <div class="row">
+                    <div class="col-md-9">
+                      <p>Во внимание принимаются все отправленные заказы <span class="text-bold">только за три
+                          предыдущих месяца</span>. Скидка рассчитывается от общей суммы этих заказов и может
+                        изменяться при формировании возвратов.</p>
+                      <p> Суммы (оплаченные заказы) начнут отображаться на странице после перевода заказа в статус
+                        «отправлен». Данный статус присваивается заказу после получения документов из транспортной
+                        компании. Как правило, на следующий рабочий
+                        день. Сумма заказов начнет влиять на скидку с первого числа следующего месяца.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="current-discount">
-                <div class="current-discount__title">Объем за 3 месяца</div>
-                <div class="current-discount__content pt-md-3">
-                  <ul class="current-discount__list purchase-volume">
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">Сентябрь 2020</div>
-                      <div class="purchase-volume__value">39 138,00</div>
-                    </li>
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">Октябрь 2020</div>
-                      <div class="purchase-volume__value">39 138,00</div>
-                    </li>
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">Ноябрь 2020</div>
-                      <div class="purchase-volume__value">0,00</div>
-                    </li>
-                    <li class="purchase-volume__item mt-3">
-                      <div class="purchase-volume__title text-bold">Итого за 3 мес.</div>
-                      <div class="purchase-volume__value">64 338,00</div>
-                    </li>
-                  </ul>
-                  <div class="current-discount__number discount-number">
-                    <div class="discount-number__percent">5</div>
-                    <div class="discount-number__title">Ваша текущая скидка</div>
-                    <div class="discount-number__text">На вашем бонусном счёте:</div>
-                    <div class="discount-number__total">1 234,00 ₽</div>
-                  </div>
+            </div>
+            <div class="current-discount">
+              <div class="current-discount__title">Объем за 3 месяца</div>
+              <div class="current-discount__content pt-md-3">
+                <ul class="current-discount__list purchase-volume">
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">Сентябрь 2020</div>
+                    <div class="purchase-volume__value">39 138,00</div>
+                  </li>
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">Октябрь 2020</div>
+                    <div class="purchase-volume__value">39 138,00</div>
+                  </li>
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">Ноябрь 2020</div>
+                    <div class="purchase-volume__value">0,00</div>
+                  </li>
+                  <li class="purchase-volume__item mt-3">
+                    <div class="purchase-volume__title text-bold">Итого за 3 мес.</div>
+                    <div class="purchase-volume__value">64 338,00</div>
+                  </li>
+                </ul>
+                <div class="current-discount__number discount-number">
+                  <div class="discount-number__percent">5</div>
+                  <div class="discount-number__title">Ваша текущая скидка</div>
+                  <div class="discount-number__text">На вашем бонусном счёте:</div>
+                  <div class="discount-number__total">1 234,00 ₽</div>
                 </div>
               </div>
             </div>
-            <p class="h4 mt-3 mb-0 text-bold">Бонус за выкуп</p>
-            <p class="fz-14">Бонус за выкуп - это 1% от суммы всех завершенных заказов, начисляемый вам на счёт.
-              Накопленная сумма не сгорает и позволяет оплатить с бонусного счёта <span class="text-bold">до 15%
-                стоимости</span> любого заказа.</p>
-            <p class="fz-14">Бонус по каждому заказу начисляется <span class="text-bold">по прошествии 20 дней с момента
-                отправки заказа</span>. После отмены частично оплаченных бонусами товаров бонусы на счёт <span
-                class="text-bold">не возвращаются</span>.</p>
+          </div>
+          <p class="h4 mt-3 mb-0 text-bold">Бонус за выкуп</p>
+          <p class="fz-14">Бонус за выкуп - это 1% от суммы всех завершенных заказов, начисляемый вам на счёт.
+            Накопленная сумма не сгорает и позволяет оплатить с бонусного счёта <span class="text-bold">до 15%
+              стоимости</span> любого заказа.</p>
+          <p class="fz-14">Бонус по каждому заказу начисляется <span class="text-bold">по прошествии 20 дней с момента
+              отправки заказа</span>. После отмены частично оплаченных бонусами товаров бонусы на счёт <span
+              class="text-bold">не возвращаются</span>.</p>
 
-            <div class="d-md-grid grid-md-1-1">
-              <div class="current-discount">
-                <div class="current-discount__title">Последние начисления</div>
-                <div class="current-discount__content deposit-content">
-                  <ul class="current-discount__list purchase-volume deposit-volume">
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">
-                        <div class="text-bold">Заказ №3894</div>
-                        <span class="text-small text-muted">отправлен 30.10.20</span>
-                      </div>
-                      <div class="purchase-volume__value">234,00</div>
-                    </li>
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">
-                        <div class="text-bold">Заказ №3894</div>
-                        <span class="text-small text-muted">отправлен 30.10.20</span>
-                      </div>
-                      <div class="purchase-volume__value">234,00</div>
-                    </li>
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">
-                        <div class="text-bold">Заказ №3894</div>
-                        <span class="text-small text-muted">отправлен 30.10.20</span>
-                      </div>
-                      <div class="purchase-volume__value">234,00</div>
-                    </li>
-                  </ul>
-                </div>
+          <div class="d-md-grid grid-md-1-1">
+            <div class="current-discount">
+              <div class="current-discount__title">Последние начисления</div>
+              <div class="current-discount__content deposit-content">
+                <ul class="current-discount__list purchase-volume deposit-volume">
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">
+                      <div class="text-bold">Заказ №3894</div>
+                      <span class="text-small text-muted">отправлен 30.10.20</span>
+                    </div>
+                    <div class="purchase-volume__value">234,00</div>
+                  </li>
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">
+                      <div class="text-bold">Заказ №3894</div>
+                      <span class="text-small text-muted">отправлен 30.10.20</span>
+                    </div>
+                    <div class="purchase-volume__value">234,00</div>
+                  </li>
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">
+                      <div class="text-bold">Заказ №3894</div>
+                      <span class="text-small text-muted">отправлен 30.10.20</span>
+                    </div>
+                    <div class="purchase-volume__value">234,00</div>
+                  </li>
+                </ul>
               </div>
+            </div>
 
-              <div class="current-discount">
-                <div class="current-discount__title">Последние расходы</div>
-                <div class="current-discount__content charge-content">
-                  <ul class="current-discount__list purchase-volume charge-volume">
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">
-                        <div class="text-bold">Заказ №3894</div>
-                        <span class="text-small text-muted">заказан 30.10.20</span>
-                      </div>
-                      <div class="purchase-volume__value">234,00</div>
-                    </li>
-                    <li class="purchase-volume__item">
-                      <div class="purchase-volume__title">
-                        <div class="text-bold">Заказ №3894</div>
-                        <span class="text-small text-muted">заказан 30.10.20</span>
-                      </div>
-                      <div class="purchase-volume__value">234,00</div>
-                    </li>
-                  </ul>
-                </div>
+            <div class="current-discount">
+              <div class="current-discount__title">Последние расходы</div>
+              <div class="current-discount__content charge-content">
+                <ul class="current-discount__list purchase-volume charge-volume">
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">
+                      <div class="text-bold">Заказ №3894</div>
+                      <span class="text-small text-muted">заказан 30.10.20</span>
+                    </div>
+                    <div class="purchase-volume__value">234,00</div>
+                  </li>
+                  <li class="purchase-volume__item">
+                    <div class="purchase-volume__title">
+                      <div class="text-bold">Заказ №3894</div>
+                      <span class="text-small text-muted">заказан 30.10.20</span>
+                    </div>
+                    <div class="purchase-volume__value">234,00</div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </main>
 

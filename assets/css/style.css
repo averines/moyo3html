@@ -6225,6 +6225,15 @@ hr.dotted {
   margin-bottom: 0.5em;
 }
 
+.order-info.order-info--indelyveryrab {
+  background-color: #f9f9f9;
+  padding: 0;
+}
+
+.order-info.order-info--indelyveryrab .order-info-list__title, .order-info.order-info--indelyveryrab .order-info-list__value {
+  background: #f9f9f9;
+}
+
 .order-info-list {
   margin: 0;
   padding: 0;
@@ -6297,10 +6306,9 @@ hr.dotted {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6308,8 +6316,60 @@ hr.dotted {
 
 .order-buttons .btn {
   display: block;
-  width: 280px;
   margin-bottom: 0.5em;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+}
+
+.order-buttons .btn:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.order-buttons .btn:first-child::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 12px;
+  background: url(../img/icons/arrow.svg) no-repeat center;
+  opacity: 0.7;
+  background-size: contain;
+  position: absolute;
+  left: 10px;
+  top: calc( 50% - 6px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.order-buttons .btn:first-child:hover:after {
+  left: 7px;
+}
+
+.order-buttons .btn:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.order-buttons .btn:last-child::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 12px;
+  background: url(../img/icons/arrow.svg) no-repeat center;
+  opacity: 1;
+  background-size: contain;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  right: 10px;
+  top: calc( 50% - 6px);
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.order-buttons .btn:last-child:hover:after {
+  right: 7px;
 }
 
 .order-status {
@@ -7771,6 +7831,88 @@ hr.dotted {
   font-size: 15px;
 }
 
+.order-progress-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 30px 0;
+}
+
+.order-progress-list__separator {
+  height: 20px;
+  width: 30px;
+  background: url(../img/icons/arrow-long.svg) no-repeat center right;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-filter: grayscale(1) brightness(3.5);
+          filter: grayscale(1) brightness(3.5);
+}
+
+.order-progress-list__separator--active {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.order-progress-list .progress-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.order-progress-list .progress-item__icon {
+  height: 25px;
+  -webkit-filter: grayscale(1) brightness(3.5);
+          filter: grayscale(1) brightness(3.5);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.order-progress-list .progress-item__icon img {
+  display: block;
+}
+
+.order-progress-list .progress-item .progress-item__icon--delivery img {
+  margin-top: -2px;
+}
+
+.order-progress-list .progress-item__title {
+  font-size: 14px;
+}
+
+.order-progress-list .progress-item--active .progress-item__icon {
+  -webkit-filter: none;
+          filter: none;
+}
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: none;
@@ -8429,17 +8571,6 @@ hr.dotted {
   .order-item__table tbody tr:first-child td {
     padding-top: 4em;
   }
-  .order-buttons {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-column-gap: 15px;
-            column-gap: 15px;
-  }
   .current-discount__content {
     display: -ms-grid;
     display: grid;
@@ -8709,6 +8840,64 @@ hr.dotted {
             flex-direction: row;
     -webkit-column-gap: 30px;
             column-gap: 30px;
+  }
+  .order-progress-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .order-progress-list__separator {
+    width: 100px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .order-progress-list .progress-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .order-progress-list .progress-item__title {
+    font-size: 15px;
+  }
+  .order-progress-address-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .order-progress-delivery-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    margin-bottom: 20px;
+  }
+  .order-progress-delivery-wrapper .delivery-wrapper__item {
+    background-color: #f3f2f0;
+    border-bottom: 4px solid transparent;
+    padding: 15px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .order-progress-delivery-wrapper .delivery-wrapper__item.is-active {
+    background-color: white;
+    border-bottom-color: #ab064e;
+  }
+  .order-progress-delivery-wrapper .delivery-wrapper__item:hover {
+    background-color: white;
+    border-bottom-color: #ab064e;
   }
 }
 
@@ -9576,6 +9765,12 @@ hr.dotted {
   }
   .order-view .more-block {
     width: 100%;
+  }
+  .order-progress-list__separator {
+    width: 150px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
   }
 }
 

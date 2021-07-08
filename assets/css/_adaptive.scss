@@ -629,11 +629,11 @@
     }
   }
 
-  .order-buttons {
-    justify-content: flex-end;
-    flex-direction: row;
-    column-gap: $gap;
-  }
+  // .order-buttons {
+  //   justify-content: flex-end;
+  //   flex-direction: row;
+  //   column-gap: $gap;
+  // }
 
   .current-discount__content {
     display: grid;
@@ -912,6 +912,58 @@
   .form-registration-address {
     flex-direction: row;
     column-gap: 30px;
+  }
+
+  .order-progress-list {
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+
+    &__separator {
+      width: 100px;
+      flex-grow: 0;
+    }
+
+    .progress-item {
+      flex-direction: row;
+
+      &__title {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .order-progress-address-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $gap;
+  }
+
+  .order-progress-delivery-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: $gap;
+    margin-bottom: 20px;
+
+    .delivery-wrapper {
+      &__item {
+        background-color: $bg-light;
+        border-bottom: 4px solid transparent;
+        padding: 15px;
+        transition: $tr;
+        cursor: pointer;
+
+        &.is-active {
+          background-color: $white;
+          border-bottom-color: $main;
+        }
+
+        &:hover {
+          background-color: $white;
+          border-bottom-color: $main;
+        }
+      }
+    }
   }
 }
 
@@ -1924,6 +1976,13 @@
 
     .more-block {
       width: 100%;
+    }
+  }
+
+  .order-progress-list {
+    &__separator {
+      width: 150px;
+      flex-grow: 0;
     }
   }
 }
