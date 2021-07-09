@@ -5521,11 +5521,11 @@ hr.dotted {
   border-top-color: transparent;
 }
 
-.tabs-content__item {
+.js-tabs .tabs-content__item {
   display: none;
 }
 
-.tabs-content__item.is-active {
+.js-tabs .tabs-content__item.is-active {
   display: block;
 }
 

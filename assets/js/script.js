@@ -781,7 +781,7 @@ const removeIsActive = (items) => {
 }
 
 //табы
-const tabsContainers = document.querySelectorAll('.tabs')
+const tabsContainers = document.querySelectorAll('.js-tabs')
 
 if (tabsContainers.length > 0) {
     tabsContainers.forEach(tabsContainer => {
