@@ -1690,6 +1690,20 @@
     grid-template-columns: 1fr 2.3fr;
   }
 
+
+ .product-wrapper {
+    .product {
+      &__favorite {
+        width: 36px;
+        height: 36px;
+
+        &::before {
+          width: 16px;
+          height: 16px;
+        }        
+      }
+    }
+  }  
   .product-preview-slider {
     max-height: 458px;
   }
@@ -1995,107 +2009,12 @@
     padding-right: $gap-big;
   }
 
-  // .pagination {
-  //   width: 200px;
-  //   margin-bottom: 0;
-
-  //   &.pagination--top {
-  //     position: absolute;
-  //     right: $gap;
-  //     top: 40px;
-  //   }
-
-  //   .pagination__prev,
-  //   .pagination__next {
-  //     width: 340px;
-  //     position: absolute;
-
-  //     a {
-  //       display: flex;
-  //       align-items: center;
-  //       width: 100%;
-  //       font-weight: 400;
-
-  //       &::after {
-  //         width: 9px;
-  //         height: 9px;
-  //         background-size: contain;
-  //       }
-
-  //       &:hover {
-  //         background-color: $bg-light;
-  //         border-color: $line-dark;
-
-  //         &::after {
-  //           filter: none;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .pagination__prev {
-  //     right: 740px;
-  //     a {
-  //       flex-direction: row-reverse;
-
-  //       &::before {
-  //         content: "Предыдущая страница";
-  //         margin-right: auto;
-  //       }
-
-  //       &::after {
-  //         margin-right: auto;
-  //       }
-
-  //       &:hover {
-  //         &::after {
-  //           transform: translateX(5px);
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .pagination__next {
-  //     right: 400px;
-  //     a {
-  //       transform: none;
-  //       border-radius: 0 2px 2px 0;
-  //       margin-left: -1px;
-
-  //       &::before {
-  //         content: "Следующая страница";
-  //         margin-left: auto;
-  //       }
-
-  //       &::after {
-  //         transform: rotate(-180deg);
-  //         margin-left: auto;
-  //       }
-
-  //       &:hover {
-  //         &::after {
-  //           transform: rotate(-180deg) translateX(5px);
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   &.pagination--top {
-  //     .pagination__prev {
-  //       right: 720px;
-  //     }
-  //     .pagination__next {
-  //       right: 380px;
-  //     }
-  //   }
-  // }
-
   .products {
     column-gap: 10px;
 
     .product {
       &__favorite {
-        width: 36 px;
+        width: 36px;
         height: 36px;
       }
     }

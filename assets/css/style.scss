@@ -2061,25 +2061,57 @@
     position: relative;
     transition: $tr;
 
+    .sticky-wrapper {
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      row-gap: 1px;
+      align-items: flex-start;
+    }
+
     &__sticky {
-      &::after {
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        background-color: $special-1;
-        color: $white;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        padding: 0.35em 1em;
-        z-index: 1;
-      }
+      width: 40px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      display: inline-block;
+      background-color: $text;
+      color: $white;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      z-index: 1;
+      flex-grow: 0;
     }
 
     &__sticky--new {
-      &::after {
-        content: "Новинка";
+      &::before {
+        content: "New";
+      }
+    }
+
+    &__sticky--hit {
+      background-color: $special-6;
+      &::before {
+        content: "Хит";
+      }
+    }
+
+    &__sticky--action {
+      display: flex;
+      margin-top: auto;
+      background-color: $special-1;
+      padding: 2px 10px 0 10px;
+      height: auto;
+      width: auto;
+
+      &::before {
+        content: "Акция до ";
       }
     }
 
@@ -2095,6 +2127,10 @@
       width: 150px;
       height: 230px;
       overflow: hidden;
+
+      picture {
+        display: block;
+      }
 
       img {
         width: 100%;
@@ -2171,23 +2207,41 @@
 
     &__favorite {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 10px;
+      top: 10px;
       z-index: 4;
       display: block;
-      width: 28px;
-      height: 28px;
-      background: url(../img/icons/favorite.svg) no-repeat center;
-      background-size: 55%;
-      filter: grayscale(1);
-      transition: all 0.1s ease-in-out;
+      width: 26px;
+      height: 26px;
+      background: transparentize($black, 0.85);
+      transition: all 0.2s ease-in-out;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 13px;
+        background: url(../img/icons/favorite.svg) no-repeat center;
+        background-size: 100%;
+        filter: grayscale(1) brightness(10)
+      }
+
+      &:hover {
+        background: transparentize($black, 0.7);
+      }
 
       &:active {
-        transform: scale(0.9);
+        &::before {
+            transform: scale(0.9);
+        }
       }
 
       &.is-active {
-        filter: none;
+        background-color: $main;
       }
 
       span {
@@ -2200,10 +2254,6 @@
         background: url(../img/icons/favorite_.svg) no-repeat center;
         background-size: 100%;
         animation: spiral 1s forwards ease-in-out;
-      }
-
-      &:hover {
-        transform: scale(1.05);
       }
     }
 
@@ -3268,12 +3318,7 @@
         }
 
         &:hover {
-          background: linear-gradient(
-            90deg,
-            rgba(199, 199, 199, 0) 0%,
-            rgba(199, 199, 199, 0.1) 85%,
-            rgba(199, 199, 199, 0) 100%
-          );
+          background: linear-gradient(90deg, rgba(199, 199, 199, 0) 0%, rgba(199, 199, 199, 0.1) 85%, rgba(199, 199, 199, 0) 100%);
         }
       }
 
@@ -3397,13 +3442,7 @@
     }
 
     &--2::after {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(18, 18, 18, 1) 51%,
-        rgba(0, 0, 0, 1) 100%
-      );
+      background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(18, 18, 18, 1) 51%, rgba(0, 0, 0, 1) 100%);
     }
 
     &--3::after {
@@ -3427,17 +3466,7 @@
     }
 
     &--8::after {
-      background: linear-gradient(
-        90deg,
-        #ff0000 6.25%,
-        #fe8900 18.68%,
-        #e4f86e 31.14%,
-        #39d63f 43.6%,
-        #49dce6 56.34%,
-        #4db9e5 69.22%,
-        #5574e4 81.45%,
-        #d92ba8 93.75%
-      );
+      background: linear-gradient(90deg, #ff0000 6.25%, #fe8900 18.68%, #e4f86e 31.14%, #39d63f 43.6%, #49dce6 56.34%, #4db9e5 69.22%, #5574e4 81.45%, #d92ba8 93.75%);
     }
   }
 }
@@ -5352,7 +5381,8 @@
     background-color: #f9f9f9;
     padding: 0;
 
-    .order-info-list__title, .order-info-list__value {
+    .order-info-list__title,
+    .order-info-list__value {
       background: #f9f9f9;
     }
   }
@@ -5439,7 +5469,7 @@
         background-size: contain;
         position: absolute;
         left: 10px;
-        top: calc( 50% - 6px);
+        top: calc(50% - 6px);
         transition: $tr;
       }
 
@@ -5460,9 +5490,9 @@
         opacity: 1;
         background-size: contain;
         position: absolute;
-                transition: $tr;
+        transition: $tr;
         right: 10px;
-        top: calc( 50% - 6px);
+        top: calc(50% - 6px);
         filter: brightness(10);
         transform: rotate(180deg);
       }
@@ -5471,7 +5501,7 @@
           right: 7px;
         }
       }
-    }    
+    }
   }
 }
 
@@ -6843,7 +6873,7 @@
 
     .progress-item__icon--delivery img {
       margin-top: -2px;
-    }    
+    }
 
     &__title {
       font-size: 14px;
@@ -6856,8 +6886,6 @@
     }
   }
 }
-
-
 
 @import "animations";
 @import "adaptive";
