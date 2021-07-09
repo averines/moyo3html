@@ -3143,7 +3143,7 @@
             </div>
             <div class="tabs-content">
               <div class="tabs-content__item" data-tabid="loginemail">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check">
+                <form action="personal-data-fiz.html" class="modal__form mt-2 js-form-check">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="login-email" type="text" name="login-email" required>
@@ -3162,7 +3162,7 @@
                 </form>
               </div>
               <div class="tabs-content__item" data-tabid="loginphone">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check js-form-phone-code">
+                <form action="personal-data-fiz.html" class="modal__form mt-2 js-form-check js-form-phone-code">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-phone" type="text" name="user-phone" required>
@@ -3225,7 +3225,7 @@
         <div class="modal__title">Восстановление пароля</div>
         <div class="modal__content p-2">
           <p class="text-italic">Пожалуйста, введите адрес электронной почты, на который мы вышлем Ваш новый пароль.</p>
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check">
+          <form action="personal-data-fiz.html" class="modal__form js-form-check">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="recover-email" type="text" name="recover-email" required>
@@ -3246,14 +3246,14 @@
               <a class="choose-variants__link" data-fancybox data-src="#modalregistrationtype1" href="javascript:;">Покупаю для себя</a>
               <div class="choose-variants__text">
                 <p>Если Вы зарегистрируетесь «Покупаю для себя», то мы будем считать, что у вас нет юридического лица и отгружать товар мы будем для личных целей.</p>
-                <p> При этой форме регистрации мы не транслируем маркировку  через ЭДО или «Честный знак»</p>
+                <p> При этой форме регистрации мы <span class="text-bold">не&nbsp;транслируем</span> маркировку через ЭДО или «Честный знак»</p>
               </div>
             </div>
             <div class="choose-variants__item">
               <a class="choose-variants__link" data-fancybox data-src="#modalregistrationtype2" href="javascript:;">Покупаю для продажи</a>
               <div class="choose-variants__text">
                 <p>Если Вы зарегистрируетесь «Покупаю для продажи», то мы будем считать, что у вы юридическое лицо (ИП, ООО, АО) и отгружать товар мы будем для последующей продажи.</p>
-                <p>При этой форме регистрации мы транслируем маркировку через ЭДО или «Честный знак» и вы должны ее принять.</p>
+                <p>При этой форме регистрации мы <span class="text-bold">транслируем</span> маркировку через ЭДО или «Честный знак» и вы должны ее принять.</p>
               </div>
             </div>
           </div>
@@ -3262,7 +3262,7 @@
       <div class="modals__item modal modalregistrationtype1" id="modalregistrationtype1">
         <div class="modal__title">Покупаю для себя</div>
         <div class="modal__content">
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check js-form-phone-code-registration">
+          <form action="personal-data-fiz.html" class="modal__form js-form-check js-form-phone-code-registration">
 
             <div class="form-row">
               <div class="form-group form-group--required">
@@ -3362,7 +3362,7 @@
       <div class="modals__item modal modalregistrationtype2" id="modalregistrationtype2">
         <div class="modal__title">Покупаю для продажи</div>
         <div class="modal__content">
-          <form action="/" class="modal__form js-form-check js-form-phone-code-registration">
+          <form action="personal-data-fiz.html" class="modal__form js-form-check js-form-phone-code-registration">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-surname" type="text" name="type2-surname" required>
@@ -3451,12 +3451,29 @@
                 <label for="type2-code">Код из СМС</label>
               </div>
               <div class="form-group">
-                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationaddress" href="javascript:;">Далее</a>
+                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationinn" href="javascript:;">Далее</a>
               </div>
             </div>
           </form>
         </div>
       </div>
+      <div class="modals__item modal modalregistrationinn" id="modalregistrationinn">
+        <div class="modal__title">Организация или ИП</div>
+        <div class="modal__content">
+          <form action="personal-data-ip.html" class="modal__form js-form-check">
+            <div class="form-row">
+              <div class="form-group form-group--required">
+                <input id="type2-bik" type="text" name="type2-bik" required>
+                <label for="type2-bik">ИНН</label>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-center">
+              <button class="btn btn-main" type="submit" disabled>В личный кабинет</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--
       <div class="modals__item modal modalregistrationaddress" id="modalregistrationaddress">
         <div class="modal__title">Адрес</div>
         <div class="modal__content">
@@ -3555,7 +3572,7 @@
       <div class="modals__item modal modalregistrationrequisites" id="modalregistrationrequisites">
         <div class="modal__title">Реквизиты</div>
         <div class="modal__content">
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check">
+          <form action="personal-data-fiz.html" class="modal__form js-form-check">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-bik" type="text" name="type2-bik" required>
@@ -3582,6 +3599,8 @@
           </form>
         </div>
       </div>
+
+    -->
     </div>
   </footer>
 </body>
