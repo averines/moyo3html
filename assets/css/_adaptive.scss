@@ -1446,11 +1446,18 @@
     width: 100%;
 
     &__item {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+
+    &__link {
       text-align: center;
       margin-top: 0;
       padding: 15px 15px 15px 15px;
-      flex-grow: 1;
-      flex-basis: 50%;
+    }
+
+    &__text {
+      margin-top: 20px;
     }
   }
 }

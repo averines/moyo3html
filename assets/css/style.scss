@@ -6713,6 +6713,13 @@
   column-gap: 20px;
 
   &__item {
+
+
+
+  }
+
+  &__link {
+    display: block;
     margin-top: 15px;
     padding: 15px 15px 15px 0;
     text-decoration: none;
@@ -6727,6 +6734,10 @@
       border-block-color: $main;
     }
   }
+
+   &__text {
+     font-size: 13px;
+   }
 }
 
 .appendix-header {

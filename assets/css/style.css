@@ -7762,7 +7762,8 @@ hr.dotted {
           column-gap: 20px;
 }
 
-.choose-variants__item {
+.choose-variants__link {
+  display: block;
   margin-top: 15px;
   padding: 15px 15px 15px 0;
   text-decoration: none;
@@ -7775,8 +7776,12 @@ hr.dotted {
   color: #3d3d3c;
 }
 
-.choose-variants__item:hover {
+.choose-variants__link:hover {
   border-block-color: #ab064e;
+}
+
+.choose-variants__text {
+  font-size: 13px;
 }
 
 .appendix-header {
@@ -9374,14 +9379,19 @@ hr.dotted {
     width: 100%;
   }
   .choose-variants__item {
-    text-align: center;
-    margin-top: 0;
-    padding: 15px 15px 15px 15px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+  .choose-variants__link {
+    text-align: center;
+    margin-top: 0;
+    padding: 15px 15px 15px 15px;
+  }
+  .choose-variants__text {
+    margin-top: 20px;
   }
 }
 
