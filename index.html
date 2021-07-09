@@ -18,14 +18,15 @@
   <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-
+  
   <link rel="stylesheet" href="./assets/js/fancybox/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="./assets/js/tiny-slider/tiny-slider.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-
+  
   <script src="./assets/js/jquery-3.6.0.min.js" defer></script>
   <script src="./assets/js/fancybox/jquery.fancybox.min.js" defer></script>
   <script src="./assets/js/tiny-slider/tiny-slider.js" defer></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU"></script>
   <script src="./assets/js/script.js" defer></script>
 </head>
 
@@ -36,26 +37,27 @@
         <div class="header-top__slogan">Интернет-магазин оптовой торговли</div>
         <nav class="header-top__navigation">
           <ul class="header-top__menu menu-top">
-            <li class="menu-top__item"><a data-fancybox data-src="#modallogin" href="javascript:;">Вход /
-                Регистрация</a></li>
+            <li class="menu-top__item">
+              <a data-fancybox data-src="#modallogin" href="javascript:;">Вход / Регистрация</a>
+            </li>
             <li class="menu-top__item menu-top__item--parent">
               <span>О покупках</span>
               <ul class="menu-child">
-                <li><a href="#">Размеры</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Ответы на вопросы</a></li>
+                <li><a href="info-sizes.html">Размеры</a></li>
+                <li><a href="info-delivery.html">Доставка</a></li>
+                <li><a href="info-payment.html">Оплата</a></li>
+                <li><a href="info-faq.html">Ответы на вопросы</a></li>
               </ul>
             </li>
             <li class="menu-top__item menu-top__item--parent">
               <span>О магазине</span>
               <ul class="menu-child">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Условия работы</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="info-about.html">О нас</a></li>
+                <li><a href="info-conditions.html">Условия работы</a></li>
+                <li><a href="info-contacts.html">Контакты</a></li>
               </ul>
             </li>
-            <li class="menu-top__item"><a href="#">Сотрудничество</a></li>
+            <li class="menu-top__item"><a href="info-partnership.html">Сотрудничество</a></li>
           </ul>
         </nav>
         <div class="header-top__contacts">
@@ -446,22 +448,22 @@
         <li class="menu-info__item menu-info__item--parent accordion__item">
           <span class="accordion__title">О покупках</span>
           <ul class="menu-child">
-            <li><a href="#">Размеры</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Оплата</a></li>
-            <li><a href="#">Ответы на вопросы</a></li>
+                <li><a href="info-sizes.html">Размеры</a></li>
+                <li><a href="info-delivery.html">Доставка</a></li>
+                <li><a href="info-payment.html">Оплата</a></li>
+                <li><a href="info-faq.html">Ответы на вопросы</a></li>
           </ul>
         </li>
         <li class="menu-info__item menu-info__item--parent accordion__item">
           <span class="accordion__title">О магазине</span>
           <ul class="menu-child">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Условия работы</a></li>
-            <li><a href="#">Контакты</a></li>
+                <li><a href="info-about.html">О нас</a></li>
+                <li><a href="info-conditions.html">Условия работы</a></li>
+                <li><a href="info-contacts.html">Контакты</a></li>
           </ul>
         </li>
         <li class="menu-info__item">
-          <a href="#">Сотрудничество</a>
+          <a href="info-partnership.html">Сотрудничество</a>
         </li>
       </ul>
       <div class="menu-user">
