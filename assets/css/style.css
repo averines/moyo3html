@@ -2978,9 +2978,6 @@ hr.dotted {
 }
 
 .product-wrapper .product__sticky--action {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: auto;
   background-color: #e7003e;
   padding: 2px 10px 0 10px;
