@@ -982,6 +982,8 @@
   }
 
   &__link {
+    display: block;
+    text-decoration: none;
     border-radius: 0 0 4px 4px;
     background-color: $special-1;
     color: $white;
