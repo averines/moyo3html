@@ -2061,59 +2061,6 @@
     position: relative;
     transition: $tr;
 
-    .sticky-wrapper {
-      pointer-events: none;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      row-gap: 1px;
-      align-items: flex-start;
-    }
-
-    &__sticky {
-      width: 40px;
-      height: 20px;
-      line-height: 20px;
-      text-align: center;
-      display: inline-block;
-      background-color: $text;
-      color: $white;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-
-      z-index: 1;
-      flex-grow: 0;
-    }
-
-    &__sticky--new {
-      &::before {
-        content: "New";
-      }
-    }
-
-    &__sticky--hit {
-      background-color: $special-6;
-      &::before {
-        content: "Хит";
-      }
-    }
-
-    &__sticky--action {
-      margin-top: auto;
-      background-color: $special-1;
-      padding: 2px 10px 0 10px;
-      height: auto;
-      width: auto;
-
-      &::before {
-        content: "Акция до ";
-      }
-    }
-
     &__link {
       text-decoration: none;
       color: $text;
@@ -2226,7 +2173,7 @@
         height: 13px;
         background: url(../img/icons/favorite.svg) no-repeat center;
         background-size: 100%;
-        filter: grayscale(1) brightness(10)
+        filter: grayscale(1) brightness(10);
       }
 
       &:hover {
@@ -2235,7 +2182,7 @@
 
       &:active {
         &::before {
-            transform: scale(0.9);
+          transform: scale(0.9);
         }
       }
 
@@ -2341,6 +2288,59 @@
       background-color: $text-light;
       outline-color: $text-light;
       color: $white;
+    }
+  }
+}
+
+.sticky-wrapper {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  row-gap: 1px;
+  align-items: flex-start;
+
+  .product__sticky {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    display: inline-block;
+    background-color: $text;
+    color: $white;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    z-index: 1;
+    flex-grow: 0;
+
+    &--new {
+      &::before {
+        content: "New";
+      }
+    }
+
+    &--hit {
+      background-color: $special-6;
+      &::before {
+        content: "Хит";
+      }
+    }
+
+    &--action {
+      margin-top: auto;
+      background-color: $special-1;
+      padding: 2px 10px 0 10px;
+      height: auto;
+      width: auto;
+
+      &::before {
+        content: "Акция до ";
+      }
     }
   }
 }
@@ -6713,9 +6713,6 @@
   column-gap: 20px;
 
   &__item {
-
-
-
   }
 
   &__link {
@@ -6735,9 +6732,9 @@
     }
   }
 
-   &__text {
-     font-size: 13px;
-   }
+  &__text {
+    font-size: 13px;
+  }
 }
 
 .appendix-header {
