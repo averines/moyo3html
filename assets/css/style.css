@@ -1886,6 +1886,10 @@ hr.dotted {
   background-image: url(../img/icons/categories/toy.svg);
 }
 
+.category-menu[data-category-id="7"] .category-menu__title::before {
+  background-image: url(../img/icons/categories/brand.svg);
+}
+
 .category-menu__content {
   background-color: white;
   padding: 0 1em;
