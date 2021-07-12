@@ -8772,6 +8772,11 @@ hr.dotted {
     bottom: 20px;
     right: 20px;
   }
+  .info-plate .modal__form .btn-main {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
   .info-plate .form-group__select {
     width: auto;
     min-width: 160px;
