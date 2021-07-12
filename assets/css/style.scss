@@ -1132,7 +1132,7 @@
     .category-menu__title::before {
       background-image: url(../img/icons/categories/brand.svg);
     }
-  }  
+  }
 
   &__content {
     background-color: $white;
@@ -1186,7 +1186,6 @@
     position: relative;
     order: 1;
     text-transform: capitalize;
-
 
     &::after {
       order: 3;
@@ -4692,17 +4691,16 @@
 }
 
 .js-tabs {
-.tabs-content {
-  &__item {
-    display: none;
+  .tabs-content {
+    &__item {
+      display: none;
 
-    &.is-active {
-      display: block;
+      &.is-active {
+        display: block;
+      }
     }
   }
 }
-}
-
 
 .list-about {
   margin: 0;
@@ -6732,9 +6730,6 @@
   flex-direction: column;
   column-gap: 20px;
 
-  &__item {
-  }
-
   &__link {
     display: block;
     margin-top: 15px;
@@ -6913,6 +6908,27 @@
     }
   }
 }
+
+.choose-wrapper {
+  &__item {
+    background-color: $bg-light;
+    border-bottom: 4px solid transparent;
+    padding: 15px;
+    transition: $tr;
+    cursor: pointer;
+  }
+}
+
+  .choose-item {
+      &__title {
+        font-size: 15px;
+      }
+
+      &__content {
+        font-size: 14px;
+        padding: 15px;
+      }
+  } 
 
 @import "animations";
 @import "adaptive";

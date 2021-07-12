@@ -750,10 +750,43 @@
               </div>
             </div>
 
-            <div class="order-progress-delivery-wrapper delivery-wrapper">
-              <div class="delivery-wrapper__item is-active">Самовывоз</div>
-              <div class="delivery-wrapper__item">Транспортная компания</div>
-              <div class="delivery-wrapper__item">Доставка почтой</div>
+            <div class="order-progress-delivery-wrapper choose-wrapper accordion">
+              <div class="choose-wrapper__item is-active choose-item accordion__item">
+                <div class="choose-item__title accordion__title">Самовывоз</div>
+                <div class="choose-item__content accordion__content">
+                  <p>Забрать заказ самостоятельно</p>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input type="radio" value="deliverytype1-variant1" id="deliverytype1-variant1">
+                      <label for="deliverytype1-variant1">г. Москва, Окружной проезд, 30А</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-wrapper__item choose-item accordion__item">
+                <div class="choose-item__title accordion__title">Транспортная компания</div>
+                <div class="choose-item__content accordion__content">
+                <p>Доставка до транспортной компании бесплатно</p>                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input type="radio" value="deliverytype2-variant1" id="deliverytype2-variant1">
+                      <label for="deliverytype2-variant1">г. Москва, Окружной проезд, 30А</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-wrapper__item choose-item accordion__item">
+                <div class="choose-item__title accordion__title">Доставка почтой</div>
+                <div class="choose-item__content accordion__content">
+                  <p>Доставка до вашего города оплачивается отдельно. Согласно тарифам почтовой организации. Будет выставлен отдельный счет на доставку.</p>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input type="radio" value="deliverytype3-variant1" id="deliverytype3-variant1">
+                      <label for="deliverytype3-variant1">г. Москва, Окружной проезд, 30А</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="order-progress-address-wrapper">
@@ -787,7 +820,6 @@
                 </div>
               </div>
             </div>
-
 
             <div class="order-buttons">
               <a class="btn btn-white" href="./personal/cart.html#cart">Назад к корзине</a>
