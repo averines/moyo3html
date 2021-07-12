@@ -750,7 +750,7 @@
                   </div>
                 </div>
                 <div class="info-plate">
-                  <div class="info-plate__title">ИП Македонский А. С.</div>
+                  <div class="info-plate__title">ИП Македонский А.С. / ИНН 775550104402</div>
                   <div class="info-plate__content">
                     <p>Для изменения формы собственности, названия организации, ИНН, ФИО, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
                   </div>
@@ -786,7 +786,7 @@
                       <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                     </form>
                     <p>Пожалуйста, внимательно заполните свои реквизиты.</p>
-                    <p>В дальнейшем для редактирования реквизитов (формы собственности, названия организации, ИНН, ФИО) нужно будет звонить нашему менеджеру:
+                    <p>В дальнейшем для редактирования реквизитов нужно будет звонить нашему менеджеру:
                       <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
                     </p>
                   </div>
@@ -814,7 +814,6 @@
                           <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
                         </p>
                         </div>
-
                       </div>
                       <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                     </form>
@@ -845,6 +844,8 @@
                   <div class="info-plate__title">Транспортная компания</div>
                   <div class="info-plate__content">
                     <p>ПЭК</p>
+                    <p>Для изменения транспортной компании позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
+
                     <button class="btn btn-gray" data-fancybox data-src="#modalInfo4">Изменить</button>
                   </div>
                 </div>
@@ -966,27 +967,27 @@
                       </div>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo3">
                 <div class="modal__title">Изменение города доставки</div>
-                <form class="modal__form" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-delivery-city" type="text" name="user-delivery-city" required />
                       <label for="user-delivery-city">Текущий город доставки</label>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo4">
                 <div class="modal__title">Изменение транспортной компании</div>
-                <form class="modal__form" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
                   <div class="form-row">
                     <div class="form-group">
-                      <select class="form-group__select w-100" name="user-transport" id="user-transport">
+                      <select class="form-group__select w-100" name="user-transport" id="user-transport" required>
                         <option value="user-transport2">Байкал-Сервис</option>
                         <option value="user-transport3">Возовоз</option>
                         <option value="user-transport3">Деловые линии</option>
@@ -996,12 +997,12 @@
                       </select>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo5">
                 <div class="modal__title">Новый адрес доставки</div>
-                <form class="modal__form" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-address-index" type="text" name="user-address-index" required />
@@ -1037,12 +1038,12 @@
                     </div>
                   </div>
 
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo6">
                 <div class="modal__title">Новый гостевой логин</div>
-                <form class="modal__form" action="/" method="POST">
+                <form class="modal__form js-form-check" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-guest-email" type="text" name="user-guest-email" required />
@@ -1075,7 +1076,7 @@
                         вверх?</label>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
                 </form>
               </div>
             </div>

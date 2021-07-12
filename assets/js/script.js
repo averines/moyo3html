@@ -1058,11 +1058,10 @@ if ($rangeSlider.length > 0) {
 const formsCheck = document.querySelectorAll('.js-form-check')
 if (formsCheck) {
     formsCheck.forEach(form => {
-        let requiredInputs = form.querySelectorAll('input[required]')
+        let requiredInputs = form.querySelectorAll('[required]')
         let submitBtn = form.querySelector('button[type="submit"]')
 
         requiredInputs.forEach(input => {
-
             input.addEventListener('input', (e) => {
                 let allInputsFilled = false
 
@@ -1162,7 +1161,6 @@ if (formPhoneCodeRegistration) {
         })
     })
 }
-
 
 // форма адреса при регистрации
 const formAddressRegistration = document.querySelector('.js-form-registration-address')
