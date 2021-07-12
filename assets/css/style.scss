@@ -6911,24 +6911,86 @@
 
 .choose-wrapper {
   &__item {
-    background-color: $bg-light;
     border-bottom: 4px solid transparent;
-    padding: 15px;
     transition: $tr;
     cursor: pointer;
   }
+
+  &.accordion {
+    .accordion__item {
+      .accordion__title {
+        &::after {
+          background: url(../img/icons/arrow.svg) no-repeat center;
+          background-size: 35%;
+        }
+      }
+
+      &.is-active {
+        .accordion__title {
+          &::after {
+            background: url(../img/icons/arrow.svg) no-repeat center;
+            background-size: 35%;
+            transform: rotate(90deg) scale(1, -1);
+          }
+        }
+      }
+    }
+  }
 }
 
-  .choose-item {
-      &__title {
-        font-size: 15px;
-      }
+.choose-item {
+  &__title {
+    font-size: 15px;
+    background-color: $bg-light;
+    padding: 15px;
+  }
 
-      &__content {
-        font-size: 14px;
-        padding: 15px;
-      }
-  } 
+  &__content {
+    font-size: 14px;
+    padding: 15px;
+    background-color: transparent;
+  }
+}
+
+.form-group__radio {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+
+  & + label {
+    color: $text-light;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid $line-dark;
+      background-color: $white;
+      border-radius: 50%;
+      transform: translateY(1px);
+      transition: $tr;
+    }
+    &:hover {
+      color: $text;
+    }
+  }
+
+  &:checked + label {
+    color: $text;
+    font-weight: 600;
+    &::before {
+      border: 2px solid $main;
+    }
+  }
+}
 
 @import "animations";
 @import "adaptive";

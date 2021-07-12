@@ -754,10 +754,10 @@
               <div class="choose-wrapper__item is-active choose-item accordion__item">
                 <div class="choose-item__title accordion__title">Самовывоз</div>
                 <div class="choose-item__content accordion__content">
-                  <p>Забрать заказ самостоятельно</p>
+                  <div class="mb-1">Забрать заказ самостоятельно</div>
                   <div class="form-row">
                     <div class="form-group">
-                      <input type="radio" value="deliverytype1-variant1" id="deliverytype1-variant1">
+                      <input type="radio" class="form-group__radio" value="deliverytype1-variant1" id="deliverytype1-variant1" name="deliverytype">
                       <label for="deliverytype1-variant1">г. Москва, Окружной проезд, 30А</label>
                     </div>
                   </div>
@@ -769,8 +769,28 @@
                 <p>Доставка до транспортной компании бесплатно</p>                  
                   <div class="form-row">
                     <div class="form-group">
-                      <input type="radio" value="deliverytype2-variant1" id="deliverytype2-variant1">
-                      <label for="deliverytype2-variant1">г. Москва, Окружной проезд, 30А</label>
+                      <input type="radio"  class="form-group__radio" value="deliverytype2-variant1" id="deliverytype2-variant1" name="deliverytype">
+                      <label for="deliverytype2-variant1">Байкал-Сервис</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio"  class="form-group__radio" value="deliverytype2-variant2" id="deliverytype2-variant2" name="deliverytype">
+                      <label for="deliverytype2-variant2">Возовоз</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype2-variant3" id="deliverytype2-variant3" name="deliverytype">
+                      <label for="deliverytype2-variant3">Деловые линии</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype2-variant4" id="deliverytype2-variant4" name="deliverytype">
+                      <label for="deliverytype2-variant4">Желдорэкспедиция</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype2-variant5" id="deliverytype2-variant5" name="deliverytype">
+                      <label for="deliverytype2-variant5">ПЭК</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype2-variant6" id="deliverytype2-variant6" name="deliverytype">
+                      <label for="deliverytype2-variant6">Энергия</label>
                     </div>
                   </div>
                 </div>
@@ -781,16 +801,39 @@
                   <p>Доставка до вашего города оплачивается отдельно. Согласно тарифам почтовой организации. Будет выставлен отдельный счет на доставку.</p>
                   <div class="form-row">
                     <div class="form-group">
-                      <input type="radio" value="deliverytype3-variant1" id="deliverytype3-variant1">
-                      <label for="deliverytype3-variant1">г. Москва, Окружной проезд, 30А</label>
+                      <input type="radio" class="form-group__radio" value="deliverytype3-variant1" id="deliverytype3-variant1" name="deliverytype">
+                      <label for="deliverytype3-variant1">EMS</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype3-variant2" id="deliverytype3-variant2" name="deliverytype">
+                      <label for="deliverytype3-variant2">СДЭК</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype3-variant3" id="deliverytype3-variant3" name="deliverytype">
+                      <label for="deliverytype3-variant3">Почта России</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" class="form-group__radio" value="deliverytype3-variant4" id="deliverytype3-variant4" name="deliverytype">
+                      <label for="deliverytype3-variant4">DPD</label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="order-progress-address-wrapper">
-              <div class="">Выберите адрес доставки</div>
+            <div class="order-progress-address-wrapper accordion">
+
+              <div class="accordion__item">
+                <div class="accordion__title">Выберите адрес доставки</div>
+                <div class="accordion__content">
+
+                  <ul class="pl-1">
+                    <li><button class="btn-delete"></button> 108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад
+                      сдек)</li>
+                  </ul>
+                  <button class="btn btn-gray" data-fancybox data-src="#modalInfo5">Добавить новый адрес</button>
+              </div>
+              
               <div class="order-info order-info--indelyveryrab">
                 <ul class="order-info-list">
                   <li>
@@ -822,8 +865,8 @@
             </div>
 
             <div class="order-buttons">
-              <a class="btn btn-white" href="./personal/cart.html#cart">Назад к корзине</a>
-              <a class="btn btn-main" href="./personal/cart.html#payment">Далее к оплате</a>
+              <a class="btn btn-white" href="personal-cart.html">Назад к корзине</a>
+              <a class="btn btn-main" href="personal-order-payment.html">Далее к оплате</a>
             </div>
           </div>
         </div>
