@@ -1185,6 +1185,8 @@
     transition: $tr;
     position: relative;
     order: 1;
+    text-transform: capitalize;
+
 
     &::after {
       order: 3;
@@ -5645,7 +5647,8 @@
 
   &__input {
     font-size: 14px;
-    padding: 0.6em;
+    padding: 8px;
+    height: 40px;
     line-height: 1.4;
     border-radius: 0;
     border: 1px solid $line-light;

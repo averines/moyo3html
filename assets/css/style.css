@@ -1944,6 +1944,7 @@ hr.dotted {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  text-transform: capitalize;
 }
 
 .category-menu__link::after {
@@ -6592,7 +6593,8 @@ hr.dotted {
 
 .form-group__input {
   font-size: 14px;
-  padding: 0.6em;
+  padding: 8px;
+  height: 40px;
   line-height: 1.4;
   border-radius: 0;
   border: 1px solid #d9d9d9;

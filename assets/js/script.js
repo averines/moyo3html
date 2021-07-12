@@ -1171,12 +1171,18 @@ if (formAddressRegistration) {
     let addressType2 = formAddressRegistration.querySelector('.js-form-registration-address-type2')
     let addresType2Inputs = addressType2.querySelectorAll('input')
 
+    function hideaddressType2() {
+        addressType2.style.display = 'none'
+        addresType2Inputs.forEach(input => {
+            input.removeAttribute('required')
+        })
+    }
+
+    hideaddressType2()
+
     addressDoubleCheckbox.addEventListener('change', () => {
         if (addressDoubleCheckbox.checked) {
-            addressType2.style.display = 'none'
-            addresType2Inputs.forEach( input => {
-                input.removeAttribute('required')
-            })
+            hideaddressType2()
             singleFormCheck(formAddressRegistration)
         } else {
             addressType2.style.display = 'block'
@@ -1188,3 +1194,12 @@ if (formAddressRegistration) {
     })
 
 }
+
+// плавная прокрутка к якорю
+$(function () {
+    $("a[href^='#']").click(function () {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+});
