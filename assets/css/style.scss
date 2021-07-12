@@ -2789,6 +2789,12 @@
       }
     }
 
+    &[data-subcategory-id="118"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/18.svg);
+      }
+    }
+
     &:hover {
       opacity: 0.8;
 

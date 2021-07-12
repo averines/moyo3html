@@ -3727,6 +3727,10 @@ hr.dotted {
   background-image: url(../img/icons/subcategories/17.svg);
 }
 
+.subcategories-icons__link[data-subcategory-id="118"]::before {
+  background-image: url(../img/icons/subcategories/18.svg);
+}
+
 .subcategories-icons__link:hover {
   opacity: 0.8;
 }
