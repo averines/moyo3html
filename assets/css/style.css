@@ -7460,6 +7460,11 @@ hr.dotted {
   padding: 10px 7px 7px 32px;
   margin-bottom: 2px;
   font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
 }
 
 .extraorder__link {
@@ -10011,6 +10016,10 @@ hr.dotted {
 
 .p-2 {
   padding: 2em;
+}
+
+.p-3 {
+  padding: 3em;
 }
 
 .pl-1 {

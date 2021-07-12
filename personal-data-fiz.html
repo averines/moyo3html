@@ -836,7 +836,7 @@
             <div class="modals">
               <div class="modals__item modal" id="modalInfo1">
                 <div class="modal__title">Изменение пароля</div>
-                <form class="modal__form" action="/" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-password-actual" type="password" name="user-password-actual" required autocomplete="user-password-actual" />
@@ -858,12 +858,12 @@
                       <button type="button" class="password-icon"></button>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Изменить</button>
+                  <button class="btn btn-main" type="submit" disabled>Изменить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo2">
                 <div class="modal__title">Изменение телефона</div>
-                <form class="modal__form" action="/" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-phone" type="text" name="user-phone" required />
@@ -904,7 +904,7 @@
                       </div>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled>Сохранить</button>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo3">
@@ -1189,7 +1189,7 @@
             </div>
             <div class="tabs-content">
               <div class="tabs-content__item" data-tabid="loginemail">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check">
+                <form action="" class="modal__form mt-2 js-form-check">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="login-email" type="text" name="login-email" required>
@@ -1208,13 +1208,13 @@
                 </form>
               </div>
               <div class="tabs-content__item" data-tabid="loginphone">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check js-form-phone-code">
+                <form action="#" class="modal__form mt-2 js-form-check js-form-phone-code">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-phone" type="text" name="user-phone" required>
-                      <label for="user-phone">Номер телефона</label>
-                      <input id="user-phone-country" type="text" name="user-phone-country" hidden="" value="">
-                      <div class="custom-select" data-input-id="user-phone-country">
+                      <input id="user-phone-recover" type="text" name="user-phone-recover" required>
+                      <label for="user-phone-recover">Номер телефона</label>
+                      <input id="user-phone-recover-country" type="text" name="user-phone-recover-country" hidden="" value="">
+                      <div class="custom-select" data-input-id="user-phone-recover-country">
                         <div class="custom-select__selected">
                           <img src="./assets/img/icons/flags/05.svg" alt="Россия">
                         </div>
