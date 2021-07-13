@@ -500,7 +500,7 @@ h5,
   color: #555;
   font-size: 14px;
   font-weight: 600;
-  padding: 15px 0;
+  padding: 15px 30px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,11 +514,12 @@ h5,
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-top: 1px solid #d9d9d9;
+  line-height: 1.4;
 }
 
 .accordion--standart .accordion__title:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#f3f2f0), to(white));
-  background: linear-gradient(270deg, #f3f2f0 0%, white 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#f3f2f0), to(transparent));
+  background: linear-gradient(270deg, #f3f2f0 0%, transparent 100%);
 }
 
 .accordion--standart .accordion__title::after {
@@ -2379,6 +2380,10 @@ hr.dotted {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-bottom: 2px solid white;
+}
+
+.footer .accordion__title::after {
+  right: 30px;
 }
 
 .footer .accordion__title:hover {
@@ -8266,7 +8271,6 @@ hr.dotted {
     padding: 2em 1em;
   }
   .menu-catalog-categories {
-    left: -350px;
     width: 350px;
   }
   .container--pr0 {
@@ -9196,6 +9200,8 @@ hr.dotted {
     padding-bottom: 20px;
   }
   .footer-top .accordion {
+    -webkit-transition: none;
+    transition: none;
     background: none;
     display: -ms-grid;
     display: grid;
@@ -9203,8 +9209,6 @@ hr.dotted {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     -webkit-column-gap: 15px;
             column-gap: 15px;
-    -webkit-transition: none;
-    transition: none;
   }
   .footer-top .accordion .accordion__item {
     margin-bottom: 0;
@@ -9220,18 +9224,23 @@ hr.dotted {
     transition: none;
     cursor: initial;
     border-bottom: none;
+    transition: none;
   }
   .footer-top .accordion .accordion__item .accordion__title::after {
     display: none;
   }
   .footer-top .accordion .accordion__item .accordion__title:hover {
     background: none;
+    -webkit-transition: none;
+    transition: none;
   }
   .footer-top .accordion .accordion__item .accordion__content {
     background: none;
     padding-left: 0;
     padding-right: 0;
     max-height: 500px;
+    -webkit-transition: none;
+    transition: none;
   }
   .footer-top .accordion .accordion__item.is-active .accordion__content {
     max-height: 500px;

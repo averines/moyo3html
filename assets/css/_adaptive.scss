@@ -121,7 +121,7 @@
   }
 
   .menu-catalog-categories {
-    left: -350px;
+    // left: -350px;
     width: 350px;
   }
 
@@ -1135,11 +1135,11 @@
     padding-bottom: 20px;
 
     .accordion {
+      transition: none;
       background: none;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       column-gap: $gap;
-      transition: none;
 
       .accordion__item {
         margin-bottom: 0;
@@ -1153,6 +1153,7 @@
           transition: none;
           cursor: initial;
           border-bottom: none;
+          transition: none;
 
           &::after {
             display: none;
@@ -1160,6 +1161,7 @@
 
           &:hover {
             background: none;
+            transition: none;
           }
         }
 
@@ -1168,6 +1170,7 @@
           padding-left: 0;
           padding-right: 0;
           max-height: 500px;
+          transition: none;
         }
 
         &.is-active {

@@ -1565,6 +1565,10 @@
       cursor: pointer;
       transition: $tr;
       border-bottom: 2px solid $white;
+      
+      &::after {
+        right: 30px;
+      }
 
       &:hover {
         background-color: $bg-light - 5%;
