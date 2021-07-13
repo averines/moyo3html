@@ -555,6 +555,54 @@ h5,
   }
 }
 
+.accordion--brand-filter {
+  .accordion__title {
+    color: $text-dark;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: $tr;
+    border-bottom: 3px solid $line-light;
+    line-height: 1.4;
+
+    &:hover {
+      background: linear-gradient(270deg, $bg-light 0%, transparent 100%);
+    }
+
+    &::after {
+      background: url(../img/icons/arrow.svg) no-repeat center;
+      background-size: 30%;
+      right: 0;
+    }
+  }
+
+  .accordion__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .accordion__item {
+    &.is-active {
+      .accordion__title {
+        border-bottom: 3px solid $line-light;
+
+        &::after {
+          background-image: url(../img/icons/arrow.svg);
+          transform: rotate(90deg);
+        }
+      }
+      .accordion__content {
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
 //для текста
 
 .text-right {

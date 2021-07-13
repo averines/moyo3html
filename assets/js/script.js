@@ -725,6 +725,57 @@ var productColorsSlider = productColorsSliderContainer.length > 0 ?
     })
     : "";
 
+//слайдер для табов
+const tabTitleSliders = document.querySelectorAll('.tabs-slider')
+if (tabTitleSliders) {
+    tabTitleSliders.forEach( (item, index) => {
+        let tabTitleSlider = tns({
+            container: tabTitleSliders[index],
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            controls: false,
+            nav: false,
+            loop: false,
+            mouseDrag: true,
+            swipeAngle: 60,
+            autoWidth: true,
+            gutter: 0,
+            responsive: {
+                768: {
+                    items: 6,
+                    autoWidth: false,
+                }
+            }
+        })
+    })
+}
+
+
+//слайдер для букв в фильтре брендов
+const brandFilterTitles = document.querySelectorAll('.brand-filter-slider')
+if (brandFilterTitles) {
+    let brandFilterTitlesSlider = tns({
+        container: brandFilterTitles[0],
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 0,
+        responsive: {
+            768: {
+                items: 6,
+                autoWidth: false,
+            }
+        }
+    })
+}
+
 
 
 
@@ -1200,4 +1251,13 @@ $(function () {
         $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
         return false;
     });
+});
+
+
+// mixitup
+const brandMixerEl = document.querySelector('.brand-filter-content')
+var brandMixer = mixitup(brandMixerEl, {
+    animation: {
+        duration: 0
+    }
 });

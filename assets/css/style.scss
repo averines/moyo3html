@@ -1565,7 +1565,7 @@
       cursor: pointer;
       transition: $tr;
       border-bottom: 2px solid $white;
-      
+
       &::after {
         right: 30px;
       }
@@ -4656,8 +4656,8 @@
 
 //табы
 .tabs-titles {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   justify-content: center;
 
   &__item {
@@ -4670,21 +4670,26 @@
     text-decoration: none;
     padding: 14px;
     color: $text;
-    border: 2px solid transparent;
-    border-top-color: $line-dark;
+    // border-top: 2px solid transparent;
+    // border-top-color: $line-dark;
     flex-grow: 1;
     transition: background-color 0.2s ease-in-out;
+
+    border-bottom: 4px solid $line-dark;
+    padding: 14px 24px;
 
     &:hover {
       background-color: $bg-light;
     }
 
-    &:first-child {
-      border-top-color: transparent;
-    }
+    // &:first-child {
+    //   border-top-color: transparent;
+    // }
 
     &.is-active {
-      border-color: $main;
+      // border-color: $main;
+      border-bottom-color: $main;
+
       font-weight: 600;
 
       + .tabs-titles__item {
@@ -6946,12 +6951,14 @@
   &__title {
     font-size: 15px;
     background-color: $bg-light;
-    padding: 15px;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
   }
 
   &__content {
     font-size: 14px;
-    padding: 15px;
+    padding: 0 15px;
     background-color: transparent;
   }
 }
@@ -6992,6 +6999,103 @@
     font-weight: 600;
     &::before {
       border: 2px solid $main;
+    }
+  }
+}
+
+.allpageslist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div {
+    flex-grow: 1;
+    //  border: 1px solid red
+  }
+}
+
+.brand-filter {
+  .brand-filter-titles {
+    margin-bottom: 20px;
+    position: absolute;
+    top: -45px;
+    left: 130px;
+
+    &__item {
+      color: text;
+      text-transform: uppercase;
+      font-size: 13px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: $tr;
+      border-radius: 4px;
+      position: relative;
+
+      &.is-active {
+        color: $main;
+        font-weight: 600;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        background-color: $bg-light;
+      }
+
+      &:first-child {
+        padding-left: 0;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      &--separator {
+        margin-left: 15px;
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 12px;
+          background-color: $line-light;
+          position: absolute;
+          top: 0;
+          left: -7px;
+          top: calc(50% - 7px)
+        }
+      }
+    }
+  }
+
+  .brand-filter-content {
+    margin-top: 40px;
+    .accordion__title {
+      span {
+        font-weight: 400;
+        font-size: 11px;
+        margin-right: auto;
+        margin-left: 5px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .brand-filter-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+      font-size: 13px;
+      color: $text;
+      line-height: 1.3;
+      padding: 11px 0;
+      text-decoration: none;
+      border-bottom: 1px dashed $line-light;
+      transition: opacity 0.2s ease-in-out;
+
+      img {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
