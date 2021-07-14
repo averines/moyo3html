@@ -63,7 +63,7 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 15px;
     }
-  }  
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -117,7 +117,6 @@
   }
 
   .header {
-
     .menu-user {
       column-gap: 1em;
       padding: 0.5em;
@@ -793,6 +792,10 @@
       display: flex;
       align-items: center;
     }
+
+    &--minimal {
+      padding: 0;
+    }
   }
 
   .extraorder {
@@ -936,6 +939,8 @@
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+    border-bottom: 2px solid $line-light;
+    padding-bottom: 20px;
 
     &__separator {
       width: 100px;
@@ -951,25 +956,12 @@
     }
   }
 
-  .order-progress-address-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: $gap;
-  }
-
-  .order-progress-delivery-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: $gap;
-    margin-bottom: 20px;
-  }
-
-  .choose-wrapper {
+    .choose-wrapper {
     &__item {
       background-color: $bg-light;
       transition: $tr;
 
-      &.is-active {
+      &.is-choosen {
         border-bottom-color: $main;
         background-color: $white;
 
@@ -983,10 +975,9 @@
       &:hover {
         background-color: $white;
         border-bottom-color: $main;
-      .choose-item {
+        .choose-item {
           &__title {
             background-color: $white;
-            
           }
         }
       }
@@ -995,16 +986,51 @@
     .choose-item {
       &__title {
         font-weight: 600;
+        padding: 10px 20px 0 20px;
+        height: auto;
         transition: $tr;
+      }
+
+      &.is-active {
+        .choose-item__content {
+          padding: 0 20px 30px 20px;
+        }
       }
     }
   }
+
+  .order-progress-delivery-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: $gap;
+    margin-bottom: 20px;
+  }
+
+  .order-progress-address-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $gap;
+
+    .choose-item {
+      &__title {
+        padding: 0 20px;
+      }    
+    }
+
+    .info-plate {
+      ul {
+        margin: 25px 0;
+      }
+    }
+  }
+
+
 
   .brand-filter {
     .brand-filter-list {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-  }  
+  }
 }
 
 // lg
@@ -1824,61 +1850,60 @@
     }
   }
 
-.brand-filter {
-  .brand-filter-titles {
-        position: absolute;
-    top: -45px;
-    left: 130px;
-    &__item {
-    }
-  }
-
-  .brand-filter-content {
-    .accordion__title {
-      pointer-events: none;
-    }
-  }
-
-  .brand-filter-list {
-    background-color: $white;
-    display: flex;
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-grow: 0;
-      padding: 11px 0;
-      border-bottom: none;
-      margin-bottom: 30px;
-
-      img {
-        display: block;
+  .brand-filter {
+    .brand-filter-titles {
+      position: absolute;
+      top: -45px;
+      left: 130px;
+      &__item {
       }
-    }  
-  }
-}
-
-.accordion--brand-filter {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  column-gap: 15px;
-
-  .accordion__title {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    height: 60px;
-    &::after {
-      display: none;
     }
-    &:hover {
-      background: transparent;
+
+    .brand-filter-content {
+      .accordion__title {
+        pointer-events: none;
+      }
+    }
+
+    .brand-filter-list {
+      background-color: $white;
+      display: flex;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 0;
+        padding: 11px 0;
+        border-bottom: none;
+        margin-bottom: 30px;
+
+        img {
+          display: block;
+        }
+      }
     }
   }
-}
 
+  .accordion--brand-filter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 15px;
+
+    .accordion__title {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      height: 60px;
+      &::after {
+        display: none;
+      }
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
 }
 
 //xxl

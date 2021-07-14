@@ -293,13 +293,21 @@ for (let accordion of accordions) {
 
         // при ресайзе развернуть элемент аккордиона и прекратить его функционал, если указан параметр data-disable="768"
         let accordionDisable = accordionItem.dataset.disable
+        if (accordionDisable > 0
+            && document.body.clientWidth >= accordionDisable) {
+            accordionItem.classList.add('is-active')
+            accordionItem.classList.add('is-disabled')
+        }
 
         window.addEventListener('resize', () => {
             if (
                 accordionDisable > 0
                 && document.body.clientWidth >= accordionDisable
-                ) {
+            ) {
                 accordionItem.classList.add('is-active')
+                accordionItem.classList.add('is-disabled')
+            } else {
+                accordionItem.classList.remove('is-disabled')
             }
         });
 
@@ -741,7 +749,7 @@ var productColorsSlider = productColorsSliderContainer.length > 0 ?
 //слайдер для табов
 const tabTitleSliders = document.querySelectorAll('.tabs-slider')
 if (tabTitleSliders.length > 0) {
-    tabTitleSliders.forEach( (item, index) => {
+    tabTitleSliders.forEach((item, index) => {
         let tabTitleSlider = tns({
             container: tabTitleSliders[index],
             items: 1,
@@ -790,8 +798,6 @@ if (brandFilterTitles.length > 0) {
 }
 
 
-
-
 //fancybox
 $('[data-fancybox="gallery-feedback"]').fancybox({
     backFocus: false,
@@ -822,18 +828,14 @@ $('[data-fancybox="gallery-feedback"]').fancybox({
 //галерея на странице продукта
 const productPreviewItems = document.querySelectorAll('.product-preview-slider__item')
 const productGalleryItems = document.querySelectorAll('.product-gallery-slider__item')
-
 productPreviewItems.forEach((item, index) => {
     item.addEventListener('mouseover', () => {
         removeIsActive(productPreviewItems)
         item.classList.add('is-active');
-
         productGalleryItems.forEach(productGalleryItem => {
             productGalleryItem.style.zIndex = 0
         })
-
         productGalleryItems[index].style.zIndex = 1
-
     })
 })
 
@@ -1059,7 +1061,7 @@ var $rangeSlider = $(".js-range-slider"),
     $inputFrom = $(".js-range-from"),
     $inputTo = $(".js-range-to"),
     rangeInstance
-    rangeMin = 100,
+rangeMin = 100,
     rangeMax = 1000,
     rangeFrom = 100,
     rangeTo = 1000;
@@ -1147,7 +1149,7 @@ if (formsCheck) {
     })
 }
 
-function singleFormCheck (form) {
+function singleFormCheck(form) {
     let requiredInputs = form.querySelectorAll('input[required]')
     let submitBtn = form.querySelector('button[type="submit"]')
 
@@ -1277,3 +1279,19 @@ if (brandMixerEl) {
     })
 }
 
+// выбор блока при выборе доставки
+const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper')
+if (deliveryWrapper) {
+    let deliveryRadioItems = deliveryWrapper.querySelectorAll('.form-group__radio')
+    let deliveryChooseItems = deliveryWrapper.querySelectorAll('.choose-item')
+    deliveryRadioItems.forEach( item => {
+        item.addEventListener('click', () => {
+            deliveryChooseItems.forEach( item => {
+                item.classList.remove('is-choosen')
+            })
+            item.closest('.choose-item').classList.add('is-choosen')
+        })
+        
+    })
+    
+}

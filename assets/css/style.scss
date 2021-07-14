@@ -505,7 +505,6 @@
           background-size: 35%;
           transition: $tr;
         }
-
       }
 
       > a {
@@ -5403,9 +5402,10 @@
   padding: 30px 20px;
   margin-bottom: 0.5em;
 
-  &.order-info--indelyveryrab {
+  &.order-info--indelyverytab {
     background-color: #f9f9f9;
     padding: 0;
+    margin-top: 30px;
 
     .order-info-list__title,
     .order-info-list__value {
@@ -5453,7 +5453,7 @@
 
 .order-info-total {
   margin-top: 1.5em;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
@@ -5790,6 +5790,11 @@
 
   .form-group__select {
     width: 100%;
+  }
+
+  &--minimal {
+    background: transparent;
+    padding: 0;
   }
 }
 
@@ -6869,7 +6874,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 30px 0;
+  margin: 40px 0;
 
   &__separator {
     height: 20px;
@@ -6948,6 +6953,25 @@
       }
     }
   }
+
+  &.order-progress-address-wrapper {
+    .choose-wrapper__item {
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+        border-bottom-color: transparent;
+        .choose-item__title {
+          background-color: $bg-light;
+        }
+      }
+    }
+  }
+  .order-info-list {
+    &__title,
+    &__value {
+      font-size: 14px;
+    }
+  }
 }
 
 .choose-item {
@@ -6957,12 +6981,22 @@
     padding: 0 15px;
     height: 40px;
     line-height: 40px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
   }
 
   &__content {
     font-size: 14px;
     padding: 0 15px;
     background-color: transparent;
+  }
+
+  &.is-active {
+    .choose-item__content {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -7017,7 +7051,7 @@
 }
 
 .brand-filter {
-margin-bottom: 40px;
+  margin-bottom: 40px;
   .brand-filter-titles {
     margin-bottom: 20px;
 
@@ -7032,7 +7066,7 @@ margin-bottom: 40px;
       border-radius: 4px;
       position: relative;
       font-weight: 600;
-      border:none;
+      border: none;
       background-color: transparent;
 
       &.mixitup-control-active {
@@ -7054,7 +7088,7 @@ margin-bottom: 40px;
 
         &.mixitup-control-active {
           background-color: transparent;
-        }        
+        }
       }
       &--separator {
         &::after {
@@ -7066,7 +7100,7 @@ margin-bottom: 40px;
           position: absolute;
           top: 0;
           left: -1px;
-          top: calc(50% - 7px)
+          top: calc(50% - 7px);
         }
       }
     }
