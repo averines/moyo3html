@@ -7014,13 +7014,12 @@
 }
 
 .brand-filter {
+
   .brand-filter-titles {
     margin-bottom: 20px;
-    position: absolute;
-    top: -45px;
-    left: 130px;
 
     &__item {
+      display: block;
       color: text;
       text-transform: uppercase;
       font-size: 13px;
@@ -7029,10 +7028,13 @@
       transition: $tr;
       border-radius: 4px;
       position: relative;
+      font-weight: 600;
+      border:none;
+      background-color: transparent;
 
-      &.is-active {
+      &.mixitup-control-active {
         color: $main;
-        font-weight: 600;
+        background-color: $bg-light;
       }
 
       &:hover {
@@ -7046,9 +7048,12 @@
         &:hover {
           background-color: transparent;
         }
+
+        &.mixitup-control-active {
+          background-color: transparent;
+        }        
       }
       &--separator {
-        margin-left: 15px;
         &::after {
           content: "";
           display: block;
@@ -7057,7 +7062,7 @@
           background-color: $line-light;
           position: absolute;
           top: 0;
-          left: -7px;
+          left: -1px;
           top: calc(50% - 7px)
         }
       }

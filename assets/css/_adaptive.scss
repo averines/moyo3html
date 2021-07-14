@@ -1827,12 +1827,16 @@
 
 .brand-filter {
   .brand-filter-titles {
+        position: absolute;
+    top: -45px;
+    left: 130px;
     &__item {
     }
   }
 
   .brand-filter-content {
     .accordion__title {
+      pointer-events: none;
     }
   }
 

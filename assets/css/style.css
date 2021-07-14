@@ -8145,12 +8145,10 @@ hr.dotted {
 
 .brand-filter .brand-filter-titles {
   margin-bottom: 20px;
-  position: absolute;
-  top: -45px;
-  left: 130px;
 }
 
 .brand-filter .brand-filter-titles__item {
+  display: block;
   color: text;
   text-transform: uppercase;
   font-size: 13px;
@@ -8160,11 +8158,14 @@ hr.dotted {
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
   position: relative;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
 }
 
-.brand-filter .brand-filter-titles__item.is-active {
+.brand-filter .brand-filter-titles__item.mixitup-control-active {
   color: #ab064e;
-  font-weight: 600;
+  background-color: #f3f2f0;
 }
 
 .brand-filter .brand-filter-titles__item:hover {
@@ -8180,8 +8181,8 @@ hr.dotted {
   background-color: transparent;
 }
 
-.brand-filter .brand-filter-titles__item--separator {
-  margin-left: 15px;
+.brand-filter .brand-filter-titles__item:first-child.mixitup-control-active {
+  background-color: transparent;
 }
 
 .brand-filter .brand-filter-titles__item--separator::after {
@@ -8192,7 +8193,7 @@ hr.dotted {
   background-color: #d9d9d9;
   position: absolute;
   top: 0;
-  left: -7px;
+  left: -1px;
   top: calc(50% - 7px);
 }
 
@@ -9953,6 +9954,14 @@ hr.dotted {
   .togglers .toggler-sort {
     -webkit-column-gap: 20px;
             column-gap: 20px;
+  }
+  .brand-filter .brand-filter-titles {
+    position: absolute;
+    top: -45px;
+    left: 130px;
+  }
+  .brand-filter .brand-filter-content .accordion__title {
+    pointer-events: none;
   }
   .brand-filter .brand-filter-list {
     background-color: white;

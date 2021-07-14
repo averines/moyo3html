@@ -275,7 +275,7 @@ for (let accordion of accordions) {
     let filteredAccordionItems = accordionItemsArr.filter(item => item.classList.contains(accordionItemsClass[0]));
 
     for (let accordionItem of filteredAccordionItems) {
-        let accordionActive = accordionItem.dataset.active;
+        let accordionActive = accordionItem.dataset.active
 
         // при загрузке страницы разворачивать элемент аккрдиона если у него указан атрибут data-active="768". 
         if (
@@ -290,6 +290,19 @@ for (let accordion of accordions) {
         accordionTitle.addEventListener('click', (e) => {
             accordionItem.classList.toggle('is-active')
         })
+
+        // при ресайзе развернуть элемент аккордиона и прекратить его функционал, если указан параметр data-disable="768"
+        let accordionDisable = accordionItem.dataset.disable
+
+        window.addEventListener('resize', () => {
+            if (
+                accordionDisable > 0
+                && document.body.clientWidth >= accordionDisable
+                ) {
+                accordionItem.classList.add('is-active')
+            }
+        });
+
     }
 }
 
@@ -757,7 +770,7 @@ const brandFilterTitles = document.querySelectorAll('.brand-filter-slider')
 if (brandFilterTitles) {
     let brandFilterTitlesSlider = tns({
         container: brandFilterTitles[0],
-        items: 1,
+        items: 5,
         slideBy: 'page',
         autoplay: false,
         controls: false,
