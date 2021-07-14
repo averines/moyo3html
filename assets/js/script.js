@@ -740,7 +740,7 @@ var productColorsSlider = productColorsSliderContainer.length > 0 ?
 
 //слайдер для табов
 const tabTitleSliders = document.querySelectorAll('.tabs-slider')
-if (tabTitleSliders) {
+if (tabTitleSliders.length > 0) {
     tabTitleSliders.forEach( (item, index) => {
         let tabTitleSlider = tns({
             container: tabTitleSliders[index],
@@ -767,7 +767,7 @@ if (tabTitleSliders) {
 
 //слайдер для букв в фильтре брендов
 const brandFilterTitles = document.querySelectorAll('.brand-filter-slider')
-if (brandFilterTitles) {
+if (brandFilterTitles.length > 0) {
     let brandFilterTitlesSlider = tns({
         container: brandFilterTitles[0],
         items: 5,
@@ -1059,7 +1059,7 @@ var $rangeSlider = $(".js-range-slider"),
     $inputFrom = $(".js-range-from"),
     $inputTo = $(".js-range-to"),
     rangeInstance
-rangeMin = 100,
+    rangeMin = 100,
     rangeMax = 1000,
     rangeFrom = 100,
     rangeTo = 1000;
@@ -1258,19 +1258,22 @@ if (formAddressRegistration) {
 }
 
 // плавная прокрутка к якорю
-$(function () {
-    $("a[href^='#']").click(function () {
-        var _href = $(this).attr("href");
-        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-        return false;
-    });
-});
+// $(function () {
+//     $("a[href^='#']").click(function () {
+//         var _href = $(this).attr("href");
+//         $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+//         return false;
+//     });
+// });
 
 
 // mixitup
 const brandMixerEl = document.querySelector('.brand-filter-content')
-var brandMixer = mixitup(brandMixerEl, {
-    animation: {
-        duration: 0
-    }
-});
+if (brandMixerEl) {
+    var brandMixer = mixitup(brandMixerEl, {
+        animation: {
+            duration: 0
+        }
+    })
+}
+

@@ -720,8 +720,8 @@ hr.dotted {
   width: 100%;
   z-index: 999;
   background-color: #ab064e;
-  background: url(../img/header-bg-414.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
-  background: url(../img/header-bg-414.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
+  background: url(../img/header-bg-1024.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
+  background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
   background-size: auto 100%, cover;
 }
 
@@ -1321,8 +1321,10 @@ hr.dotted {
 }
 
 .header .menu-info__item.is-active span::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  background: url(../img/icons/arrow.svg) no-repeat center;
+  background-size: 35%;
+  -webkit-transform: rotate(-90deg) scale(-1, 1);
+          transform: rotate(-90deg) scale(-1, 1);
 }
 
 .header .menu-info.is-active {
@@ -8143,6 +8145,10 @@ hr.dotted {
           flex-grow: 1;
 }
 
+.brand-filter {
+  margin-bottom: 40px;
+}
+
 .brand-filter .brand-filter-titles {
   margin-bottom: 20px;
 }
@@ -8422,10 +8428,6 @@ hr.dotted {
   }
   .form-text--phones .callback-phones a:last-child::after {
     display: none;
-  }
-  .header {
-    background: url(../img/header-bg-1024.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
-    background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
   }
   .header .menu-user {
     -webkit-column-gap: 1em;
