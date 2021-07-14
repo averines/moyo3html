@@ -1060,8 +1060,8 @@ if (customSelectItems.length > 0) {
 var $rangeSlider = $(".js-range-slider"),
     $inputFrom = $(".js-range-from"),
     $inputTo = $(".js-range-to"),
-    rangeInstance
-rangeMin = 100,
+    rangeInstance,
+    rangeMin = 100,
     rangeMax = 1000,
     rangeFrom = 100,
     rangeTo = 1000;
@@ -1284,14 +1284,30 @@ const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper
 if (deliveryWrapper) {
     let deliveryRadioItems = deliveryWrapper.querySelectorAll('.form-group__radio')
     let deliveryChooseItems = deliveryWrapper.querySelectorAll('.choose-item')
-    deliveryRadioItems.forEach( item => {
+    deliveryRadioItems.forEach(item => {
         item.addEventListener('click', () => {
-            deliveryChooseItems.forEach( item => {
+            deliveryChooseItems.forEach(item => {
                 item.classList.remove('is-choosen')
             })
             item.closest('.choose-item').classList.add('is-choosen')
         })
-        
     })
-    
+}
+
+
+const btnBrands = document.querySelector('.js-btn-brands')
+if (btnBrands) {
+    const menuItemBrands = document.querySelector('.js-menu-item-brands')
+
+    btnBrands.addEventListener('click', (e) => { btnBrandsHandler(e)})
+
+    function btnBrandsHandler(e) {
+        if (document.body.clientWidth < 768) {
+            e.preventDefault()
+            menuCatalogOpen()
+            if (menuItemBrands) {
+                menuItemBrands.classList.add('is-active')
+            }
+        }
+    }
 }
