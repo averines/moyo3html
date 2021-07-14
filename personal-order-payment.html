@@ -786,10 +786,146 @@
               </div>
             </div>
 
-        <div class="order-buttons">
-          <a class="btn btn-white" href="personal-order-delivery.html">Назад к доставке</a>
-          <a class="btn btn-main" href="personal-online-payment.html">Отправить заказ</a>
-        </div>
+            <div class="order-progress-delivery-wrapper choose-wrapper accordion">
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/pickup.svg" alt="Самовывоз">
+                  Самовывоз
+                </div>
+                <div class="choose-item__content accordion__content">
+                  <p>Забрать заказ самостоятельно</p>
+                  <div class="my-2">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype1-variant1" id="deliverytype1-variant1" name="deliverytype">
+                        <label for="deliverytype1-variant1">г. Москва, Окружной проезд, 30А</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/delivery.svg" alt="Транспортная компания">
+                  Транспортная компания
+                </div>
+                <div class="choose-item__content accordion__content">
+                  <p>Доставка до транспортной компании бесплатно</p>
+                  <div class="my-2">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant1" id="deliverytype2-variant1" name="deliverytype">
+                        <label for="deliverytype2-variant1">Байкал-Сервис</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant2" id="deliverytype2-variant2" name="deliverytype">
+                        <label for="deliverytype2-variant2">Возовоз</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant3" id="deliverytype2-variant3" name="deliverytype">
+                        <label for="deliverytype2-variant3">Деловые линии</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant4" id="deliverytype2-variant4" name="deliverytype">
+                        <label for="deliverytype2-variant4">Желдорэкспедиция</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant5" id="deliverytype2-variant5" name="deliverytype">
+                        <label for="deliverytype2-variant5">ПЭК</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype2-variant6" id="deliverytype2-variant6" name="deliverytype">
+                        <label for="deliverytype2-variant6">Энергия</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/letter.svg" alt="Доставка почтой">
+                  Доставка почтой
+                </div>
+                <div class="choose-item__content accordion__content">
+                  <p>Доставка до вашего города оплачивается отдельно. Согласно тарифам почтовой организации. Будет выставлен отдельный счет на доставку.</p>
+                  <div class="my-2">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype3-variant1" id="deliverytype3-variant1" name="deliverytype">
+                        <label for="deliverytype3-variant1">EMS</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype3-variant2" id="deliverytype3-variant2" name="deliverytype">
+                        <label for="deliverytype3-variant2">СДЭК</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype3-variant3" id="deliverytype3-variant3" name="deliverytype">
+                        <label for="deliverytype3-variant3">Почта России</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" class="form-group__radio" value="deliverytype3-variant4" id="deliverytype3-variant4" name="deliverytype">
+                        <label for="deliverytype3-variant4">DPD</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="order-progress-address-wrapper choose-wrapper accordion">
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/pin.svg" alt="Выберите адрес доставки">
+                  Выберите адрес доставки
+                </div>
+                <div class="choose-item__content accordion__content">
+                  <div class="info-plate info-plate--minimal">
+                    <ul class="pl-1">
+                      <li><button class="btn-delete"></button> 108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад СДЕК)</li>
+                    </ul>
+                  </div>
+                  <button class="btn btn-white" data-fancybox data-src="#modalInfo5">Добавить новый адрес</button>
+                </div>
+              </div>
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">Стоимость заказа</div>
+                <div class="choose-item__content accordion__content">
+                  <div class="order-info order-info--indelyverytab">
+                    <ul class="order-info-list">
+                      <li>
+                        <div class="order-info-list__title">Общая стоимость товаров</div>
+                        <div class="order-info-list__value order-info-list__value--black">1 234,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Скидка</div>
+                        <div class="order-info-list__value">234,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Скидка по промокоду</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Накопительная скидка</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Бонус за выкуп</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                    </ul>
+                    <div class="order-info-total">
+                      Итого:
+                      <div class="total">1 234,00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-buttons">
+              <a class="btn btn-white" href="personal-order-delivery.html">Назад к доставке</a>
+              <a class="btn btn-main" href="personal-online-payment.html">Отправить заказ</a>
+            </div>
           </div>
         </div>
       </div>

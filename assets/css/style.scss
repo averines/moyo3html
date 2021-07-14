@@ -4658,8 +4658,8 @@
 
 //табы
 .tabs-titles {
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 
   &__item {
@@ -4672,25 +4672,25 @@
     text-decoration: none;
     padding: 14px;
     color: $text;
-    // border-top: 2px solid transparent;
-    // border-top-color: $line-dark;
+    // border-bottom: 2px solid $line-dark; это для табов в виде слайдера
+    border: 2px solid transparent;
+    border-top-color: $line-dark;
     flex-grow: 1;
     transition: background-color 0.2s ease-in-out;
-
-    border-bottom: 4px solid $line-dark;
-    padding: 14px 24px;
+    // border-bottom: 4px solid $line-dark;
+    // padding: 14px 24px;
 
     &:hover {
       background-color: $bg-light;
     }
 
-    // &:first-child {
-    //   border-top-color: transparent;
-    // }
+    &:first-child {
+      border-top-color: transparent;
+    }
 
     &.is-active {
-      // border-color: $main;
-      border-bottom-color: $main;
+      border-color: $main;
+      // border-bottom-color: $main;
 
       font-weight: 600;
 

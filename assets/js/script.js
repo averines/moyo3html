@@ -747,30 +747,30 @@ var productColorsSlider = productColorsSliderContainer.length > 0 ?
     : "";
 
 //слайдер для табов
-const tabTitleSliders = document.querySelectorAll('.tabs-slider')
-if (tabTitleSliders.length > 0) {
-    tabTitleSliders.forEach((item, index) => {
-        let tabTitleSlider = tns({
-            container: tabTitleSliders[index],
-            items: 1,
-            slideBy: 'page',
-            autoplay: false,
-            controls: false,
-            nav: false,
-            loop: false,
-            mouseDrag: true,
-            swipeAngle: 60,
-            autoWidth: true,
-            gutter: 0,
-            responsive: {
-                768: {
-                    items: 6,
-                    autoWidth: false,
-                }
-            }
-        })
-    })
-}
+// const tabTitleSliders = document.querySelectorAll('.tabs-slider')
+// if (tabTitleSliders.length > 0) {
+//     tabTitleSliders.forEach((item, index) => {
+//         let tabTitleSlider = tns({
+//             container: tabTitleSliders[index],
+//             items: 1,
+//             slideBy: 'page',
+//             autoplay: false,
+//             controls: false,
+//             nav: false,
+//             loop: false,
+//             mouseDrag: true,
+//             swipeAngle: 60,
+//             autoWidth: true,
+//             gutter: 0,
+//             responsive: {
+//                 768: {
+//                     items: 6,
+//                     autoWidth: false,
+//                 }
+//             }
+//         })
+//     })
+// }
 
 
 //слайдер для букв в фильтре брендов

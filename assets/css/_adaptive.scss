@@ -497,7 +497,7 @@
   }
 
   .tabs-titles {
-    // flex-direction: row;
+    flex-direction: row;
     display: flex;
 
     &__item {
@@ -941,6 +941,7 @@
     column-gap: 20px;
     border-bottom: 2px solid $line-light;
     padding-bottom: 20px;
+    margin-top: 20px;
 
     &__separator {
       width: 100px;
