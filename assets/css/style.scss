@@ -688,6 +688,7 @@
         }
       }
 
+
       label {
         pointer-events: none;
         top: 30%;
@@ -716,12 +717,26 @@
           background-color: red;
         }
 
-        &:focus ~ label,
-        &:valid ~ label {
+
+        &:valid ~ label,
+        &.not-empty ~ label {
           top: -0.8em;
           font-size: 0.8em;
         }
+
+        &.empty ~ label {
+          top: 30%;
+          font-size: 14px;
+        }
+
+        &:focus ~ label {
+          top: -0.8em;
+          font-size: 0.8em;
+        }        
+
       }
+
+
 
       &:last-child {
         margin-bottom: 0;

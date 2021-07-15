@@ -1126,20 +1126,21 @@ if (formsCheck) {
     formsCheck.forEach(form => {
         let requiredInputs = form.querySelectorAll('[required]')
         let submitBtn = form.querySelector('button[type="submit"]')
+        const checkArrTrue = el => el == true
 
         requiredInputs.forEach(input => {
             input.addEventListener('input', (e) => {
-                let allInputsFilled = false
+                let allInputsFilledArr = []
 
                 requiredInputs.forEach(input => {
                     if (input.value) {
-                        allInputsFilled = true
+                        allInputsFilledArr.push(true)
                     } else {
-                        allInputsFilled = false
+                        allInputsFilledArr.push(false)
                     }
                 })
 
-                if (allInputsFilled) {
+                if (allInputsFilledArr.every(checkArrTrue)) {
                     submitBtn.removeAttribute('disabled')
                 } else {
                     submitBtn.setAttribute('disabled', true)
@@ -1310,4 +1311,30 @@ if (btnBrands) {
             }
         }
     }
+}
+
+
+//проверка инпутов в формах на пустоту
+const formGroups = document.querySelectorAll('.form-group')
+if (formGroups.length > 0) {
+    formGroups.forEach( formGroup => {
+        let formInputs = formGroup.querySelectorAll('input')
+        if (formInputs.length > 0) {
+            formInputs.forEach(formInput => {
+                if (!formInput.val) {
+                    formInput.classList.add('empty')
+                }
+                
+                formInput.addEventListener('input', (e) => {
+                    if (e.target.value) {
+                        formInput.classList.remove('empty')
+                        formInput.classList.add('not-empty')
+                    } else {
+                        formInput.classList.remove('not-empty')
+                        formInput.classList.add('empty')
+                    }
+                } )
+            })
+        }
+    })
 }

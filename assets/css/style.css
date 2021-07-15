@@ -1511,8 +1511,18 @@ hr.dotted {
   background-color: red;
 }
 
-.modal__form .form-row .form-group input:focus ~ label,
-.modal__form .form-row .form-group input:valid ~ label {
+.modal__form .form-row .form-group input:valid ~ label,
+.modal__form .form-row .form-group input.not-empty ~ label {
+  top: -0.8em;
+  font-size: 0.8em;
+}
+
+.modal__form .form-row .form-group input.empty ~ label {
+  top: 30%;
+  font-size: 14px;
+}
+
+.modal__form .form-row .form-group input:focus ~ label {
   top: -0.8em;
   font-size: 0.8em;
 }
