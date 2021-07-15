@@ -1551,6 +1551,7 @@
   .header {
     position: relative;
     background: url(../img/header-bg-2600.jpg) no-repeat center, linear-gradient(90deg, $special-3 0%, $special-4 100%);
+    background-size: auto 100%, cover;
 
     &-top {
       display: block;
@@ -1603,7 +1604,7 @@
         height: auto;
         margin: 0;
         margin-right: 15px;
-        min-width: 250px;
+        min-width: 200px;
 
         &__form {
           margin: 0;
@@ -1929,10 +1930,6 @@
         }
       }
 
-      .search {
-        min-width: 350px;
-        width: 100%;
-      }
     }
   }
 
