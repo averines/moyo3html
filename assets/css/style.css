@@ -3852,6 +3852,10 @@ hr.dotted {
   color: #ab064e;
 }
 
+.subcategories-icons__link--special-2 {
+  color: #1978b8;
+}
+
 .subcategories-icons__title {
   text-transform: uppercase;
   font-weight: 600;
