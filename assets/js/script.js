@@ -1338,3 +1338,36 @@ if (formGroups.length > 0) {
         }
     })
 }
+
+// эмуляция входа пользователя
+const menuUserLogged = document.querySelector('.js-menu-user-is-logged')
+const menuUserNotLogged = document.querySelector('.js-menu-user-is-not-logged')
+const setIsLoggedBtn = document.querySelector('.js-user-set-logged')
+const setIsNotLoggedBtn = document.querySelector('.js-user-set-not-logged')
+let userIsLogged = localStorage.getItem('userLogged')
+
+if (menuUserLogged && menuUserNotLogged) {
+    if (userIsLogged == 1) {
+        console.log('залогинен');
+        menuUserNotLogged.style.display = 'none'
+        menuUserLogged.style.display = 'block'
+    } else {
+        console.log('незалогинен');
+        menuUserNotLogged.style.display = 'block'
+        menuUserLogged.style.display = 'none'
+
+        setIsLoggedBtn.addEventListener('click', () => {
+            localStorage.setItem('userLogged', 1)
+            menuUserNotLogged.style.display = 'none'
+            menuUserLogged.style.display = 'block'
+        })
+    }
+
+    if (setIsNotLoggedBtn && userIsLogged) {
+        setIsNotLoggedBtn.addEventListener('click', () => {
+            localStorage.setItem('userLogged', 0)
+            menuUserNotLogged.style.display = 'block'
+            menuUserLogged.style.display = 'none'
+        })
+    }
+}

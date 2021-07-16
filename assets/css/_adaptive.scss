@@ -957,7 +957,7 @@
     }
   }
 
-    .choose-wrapper {
+  .choose-wrapper {
     &__item {
       background-color: $bg-light;
       transition: $tr;
@@ -996,6 +996,10 @@
         .choose-item__content {
           padding: 0 20px 30px 20px;
         }
+
+        .comment-wrapper {
+          padding: 0;
+        }
       }
     }
   }
@@ -1015,7 +1019,7 @@
     .choose-item {
       &__title {
         padding: 0 20px;
-      }    
+      }
     }
 
     .info-plate {
@@ -1024,8 +1028,6 @@
       }
     }
   }
-
-
 
   .brand-filter {
     .brand-filter-list {
@@ -1530,6 +1532,100 @@
       margin-top: 20px;
     }
   }
+
+  .order-progress-payment-wrapper {
+    .choose-wrapper__item {
+      background-color: transparent;
+      border: none;
+    }
+    .choose-item__title {
+      display: none;
+    }
+
+    &.choose-wrapper {
+      .choose-item.is-active {
+        .choose-item__content {
+          padding: 0;
+        }
+      }
+    }
+
+    .payment-choose-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 15px;
+      margin: 0;
+      &__item {
+        background-color: $bg-light;
+        padding: 15px;
+        cursor: initial;
+      }
+    }
+
+    .form-row {
+      .form-group {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        column-gap: 10px;
+        padding: 5px 0 10px 5px;
+
+        &__icon {
+          display: block;
+        }
+
+        input {
+          position: absolute;
+          &:checked {
+            ~ label {
+              color: $main;
+            }
+          }
+        }
+
+        label {
+          margin: 0;
+          font-weight: 600;
+          font-size: 15px;
+          // max-width: 150px;
+          display: inline-block;
+
+          &::before {
+            display: none;
+          }
+
+          &:hover {
+            color: $text;
+          }
+        }
+      }
+      &__description {
+        padding-left: 5px;
+      }
+    }
+
+    form {
+      .form-row {
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          &__input {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+          }
+          .btn {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 
 //xl
@@ -1929,7 +2025,6 @@
           padding: 1em;
         }
       }
-
     }
   }
 
@@ -2122,6 +2217,7 @@
   }
 
   .order-progress-list {
+    border-bottom-width: 1px;
     &__separator {
       width: 150px;
       flex-grow: 0;

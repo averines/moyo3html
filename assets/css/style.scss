@@ -688,7 +688,6 @@
         }
       }
 
-
       label {
         pointer-events: none;
         top: 30%;
@@ -717,7 +716,6 @@
           background-color: red;
         }
 
-
         &:valid ~ label,
         &.not-empty ~ label {
           top: -0.8em;
@@ -732,11 +730,8 @@
         &:focus ~ label {
           top: -0.8em;
           font-size: 0.8em;
-        }        
-
+        }
       }
-
-
 
       &:last-child {
         margin-bottom: 0;
@@ -1932,16 +1927,14 @@
   }
 }
 
-
 .post-slider-actions {
-
   .post-slider__item {
     .post-slide__pic {
       img {
         border-radius: 0 0 5px 5px;
       }
     }
-    
+
     .post-slide__info {
       padding: 20px 0 50px 0;
     }
@@ -1951,10 +1944,7 @@
       left: 0;
     }
   }
-
-
 }
-
 
 // слайдер категорий на главной
 .categories-slider {
@@ -2534,14 +2524,14 @@
 
       &:first-child {
         .category-slide__info {
-            border-radius: 0 0 0 5px;
+          border-radius: 0 0 0 5px;
         }
       }
       &:last-child {
         .category-slide__info {
-            border-radius: 0 0 5px 0;
+          border-radius: 0 0 5px 0;
         }
-      }      
+      }
     }
 
     &__link {
@@ -7200,6 +7190,87 @@
       &:hover {
         opacity: 0.8;
       }
+    }
+  }
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  margin: 0;
+  padding: 15px 20px;
+  border-radius: 0;
+  border: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+}
+
+.comment-wrapper {
+  padding: 0;
+}
+
+.order-progress-payment-wrapper {
+  margin-bottom: 30px;
+
+  .form-group__icon {
+    display: none;
+  }
+
+    form {
+      .form-row {
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          &__input {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+          }
+          .btn {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+}
+
+
+.payment-choose-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  margin: 20px 10px;
+
+  &__item {
+    .form-row__description {
+      font-size: 14px;
+      color: $text-light;
+      padding-left: 20px;
+      line-height: 1.3;
+      margin-top: -7px;
+    }
+
+    .form-row {
+      .form-group {
+        label {
+          color: $text-light;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .form-group__radio:checked ~ label,
+    .form-group__radio:checked ~ .form-row__description {
+      color: $text;
     }
   }
 }

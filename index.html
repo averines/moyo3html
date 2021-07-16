@@ -38,8 +38,8 @@
         <div class="header-top__slogan">Интернет-магазин оптовой торговли</div>
         <nav class="header-top__navigation">
           <ul class="header-top__menu menu-top">
-            <li class="menu-top__item menu-top__item--parent">
-              <span><a data-fancybox data-src="#modallogin" href="javascript:;">Вход / Регистрация</a></span>
+            <li class="menu-top__item menu-top__item--parent js-menu-user-is-logged d-none">
+              <span><a data-fancybox data-src="#modallogin" href="javascript:;">Личный кабинет</a></span>
               <ul class="menu-child">
                 <li><a href="personal-favorites.html">Избранное</a></li>
                 <li><a href="personal-cart.html">Корзина</a></li>
@@ -48,6 +48,10 @@
                 <li><a href="personal-discounts.html">Скидки и бонусы</a></li>
               </ul>
             </li>
+            <li class="menu-top__item js-menu-user-is-not-logged">
+              <a data-fancybox data-src="#modallogin" href="javascript:;">Вход / Регистрация</a>
+            </li>
+
             <li class="menu-top__item menu-top__item--parent">
               <span>О покупках</span>
               <ul class="menu-child">
@@ -3204,7 +3208,7 @@
                   </div>
                   <div class="d-flex flex-column align-center">
                     <p class="text-center">Забыли пароль? <a class="text-italic" data-fancybox data-src="#modalpasswordrecover" href="javascript:;">Восстановить</a></p>
-                    <button class="btn btn-main" type="submit" disabled>Войти</button>
+                    <button class="btn btn-main js-user-set-logged" type="submit" disabled>Войти</button>
                   </div>
                 </form>
               </div>

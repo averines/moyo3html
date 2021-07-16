@@ -38,8 +38,8 @@
         <div class="header-top__slogan">Интернет-магазин оптовой торговли</div>
         <nav class="header-top__navigation">
           <ul class="header-top__menu menu-top">
-            <li class="menu-top__item menu-top__item--parent">
-                   <span><a data-fancybox data-src="#modallogin" href="javascript:;">Вход / Регистрация</a></span>
+            <li class="menu-top__item menu-top__item--parent js-menu-user-is-logged d-none">
+              <span><a data-fancybox data-src="#modallogin" href="javascript:;">Личный кабинет</a></span>
               <ul class="menu-child">
                 <li><a href="personal-favorites.html">Избранное</a></li>
                 <li><a href="personal-cart.html">Корзина</a></li>
@@ -47,6 +47,9 @@
                 <li><a href="personal-orders.html">История заказов</a></li>
                 <li><a href="personal-discounts.html">Скидки и бонусы</a></li>
               </ul>
+            </li>
+            <li class="menu-top__item js-menu-user-is-not-logged">
+              <a data-fancybox data-src="#modallogin" href="javascript:;">Вход / Регистрация</a>
             </li>
             <li class="menu-top__item menu-top__item--parent">
               <span>О покупках</span>
@@ -760,7 +763,7 @@
         <h1 class="pagetitle__header">Личный кабинет</h1>
         <div class="pagetitle__text">Имя пользователя</div>
       </div>
-      <a href="personal-logout.html" class="btn-logout">Выйти</a>
+      <a href="index.html" class="btn-logout js-user-set-not-logged">Выйти</a>
     </div>
 
     <div class="container">
