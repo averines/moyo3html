@@ -7324,7 +7324,10 @@ textarea {
   }
 }
 
-
+.contacts-map__modal {
+  width: 100%;
+  height: 500px;
+}
 
 @import "animations";
 @import "adaptive";

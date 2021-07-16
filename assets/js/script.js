@@ -848,7 +848,6 @@ const removeIsActive = (items) => {
 
 //табы
 const tabsContainers = document.querySelectorAll('.js-tabs')
-
 if (tabsContainers.length > 0) {
     tabsContainers.forEach(tabsContainer => {
         let tabsContentItems = tabsContainer.querySelectorAll('.tabs-content__item')
@@ -934,8 +933,47 @@ $(document).ready(function () {
             }
         }
     }
-
 });
+
+
+const mapModalBtns = document.querySelectorAll('.js-mapmodal')
+mapModalBtns.forEach(mapModalBtn => {
+    let myMap;
+    mapModalBtn.addEventListener('click', () => {
+        if (document.getElementById('js-map2')) {
+            "use strict";
+            ymaps.ready(init);
+            function init() {
+                if (!myMap) {
+                    myMap = new ymaps.Map(
+                        'js-map2',
+                        {
+                            center: [55.77446156893533, 37.741998],
+                            zoom: 15
+                        },
+                        {
+                            searchControlProvider: 'yandex#search'
+                        }
+                    );
+                    myMap.geoObjects.add(
+                        new ymaps.Placemark(
+                            [55.77446156893533, 37.741998],
+                            {
+                                balloonContent: 'Окружной проезд, 30А',
+                                iconCaption: 'OptMoyo.ru'
+                            },
+                            {
+                                preset: 'islands#redDotIconWithCaption'
+                            }
+                        )
+                    );
+                    myMap.behaviors.disable('scrollZoom')
+                }
+            }
+        }
+    })
+} )
+
 
 
 const orderStatusBtns = document.querySelectorAll('.order-status__btn')
@@ -1300,7 +1338,7 @@ const btnBrands = document.querySelector('.js-btn-brands')
 if (btnBrands) {
     const menuItemBrands = document.querySelector('.js-menu-item-brands')
 
-    btnBrands.addEventListener('click', (e) => { btnBrandsHandler(e)})
+    btnBrands.addEventListener('click', (e) => { btnBrandsHandler(e) })
 
     function btnBrandsHandler(e) {
         if (document.body.clientWidth < 768) {
@@ -1317,14 +1355,14 @@ if (btnBrands) {
 //проверка инпутов в формах на пустоту
 const formGroups = document.querySelectorAll('.form-group')
 if (formGroups.length > 0) {
-    formGroups.forEach( formGroup => {
+    formGroups.forEach(formGroup => {
         let formInputs = formGroup.querySelectorAll('input')
         if (formInputs.length > 0) {
             formInputs.forEach(formInput => {
                 if (!formInput.val) {
                     formInput.classList.add('empty')
                 }
-                
+
                 formInput.addEventListener('input', (e) => {
                     if (e.target.value) {
                         formInput.classList.remove('empty')
@@ -1333,7 +1371,7 @@ if (formGroups.length > 0) {
                         formInput.classList.remove('not-empty')
                         formInput.classList.add('empty')
                     }
-                } )
+                })
             })
         }
     })
