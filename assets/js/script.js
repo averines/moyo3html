@@ -471,28 +471,28 @@ if (togglerCount) {
 }
 
 // быстрый просмотр
-const quickViewBtns = document.querySelectorAll('.product__quick-view')
-if (quickViewBtns) {
-    [...quickViewBtns].forEach(item => {
-        item.addEventListener('click', (e) => {
-            let quickViewBlockWrapper = document.createElement('div')
-            quickViewBlockWrapper.classList.add('quick-view-wrapper')
-            let quickViewBlock = document.createElement('div')
-            quickViewBlock.classList.add('quick-view')
-            quickViewBlockWrapper.appendChild(quickViewBlock)
+// const quickViewBtns = document.querySelectorAll('.product__quick-view')
+// if (quickViewBtns) {
+//     [...quickViewBtns].forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             let quickViewBlockWrapper = document.createElement('div')
+//             quickViewBlockWrapper.classList.add('quick-view-wrapper')
+//             let quickViewBlock = document.createElement('div')
+//             quickViewBlock.classList.add('quick-view')
+//             quickViewBlockWrapper.appendChild(quickViewBlock)
 
-            document.getElementsByTagName('main')[0].appendChild(quickViewBlockWrapper);
+//             document.getElementsByTagName('main')[0].appendChild(quickViewBlockWrapper);
 
-            quickViewBlockWrapper.addEventListener('click', (e) => {
-                let target = e.target.className
-                if (target.includes('quick-view-wrapper') || target.includes('quick-view__close')) {
-                    quickViewBlockWrapper.remove()
-                }
-            })
-        })
-    })
+//             quickViewBlockWrapper.addEventListener('click', (e) => {
+//                 let target = e.target.className
+//                 if (target.includes('quick-view-wrapper') || target.includes('quick-view__close')) {
+//                     quickViewBlockWrapper.remove()
+//                 }
+//             })
+//         })
+//     })
 
-}
+// }
 
 
 // загрузка файлов в отзыв перетаскиванием
@@ -1348,11 +1348,9 @@ let userIsLogged = localStorage.getItem('userLogged')
 
 if (menuUserLogged && menuUserNotLogged) {
     if (userIsLogged == 1) {
-        console.log('залогинен');
         menuUserNotLogged.style.display = 'none'
         menuUserLogged.style.display = 'block'
     } else {
-        console.log('незалогинен');
         menuUserNotLogged.style.display = 'block'
         menuUserLogged.style.display = 'none'
 

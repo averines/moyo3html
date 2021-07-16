@@ -1443,6 +1443,10 @@
       right: 3em;
       top: 2em;
     }
+
+    &.modal-product-info {
+      padding: 40px 0 0 0;
+    }
   }
 
   .order-item {
@@ -1890,6 +1894,10 @@
       right: 3em;
       top: 3em;
     }
+
+    &.modal-product-info {
+      padding: 40px 0 0 0;
+    }
   }
 
   .product-gallery-slider {
@@ -2131,6 +2139,9 @@
       width: 120px;
       right: 6em;
       top: 4em;
+    }
+    &.modal-product-info {
+      padding: 40px 0 0 0;
     }
   }
 
