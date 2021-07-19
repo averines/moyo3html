@@ -204,26 +204,26 @@ menuUserBtn.addEventListener('click', (e) => {
 let clientWidth = document.body.clientWidth
 
 // слайдер на странице продукта
-var productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
-if (productGallerySliderContainer.length > 0) {
-    var productGallerySlider = tns({
-        container: productGallerySliderContainer[0],
-        items: 2,
-        slideBy: 'page',
-        autoplay: false,
-        controls: false,
-        nav: false,
-        loop: false,
-        mouseDrag: true,
-        swipeAngle: 60,
-        autoWidth: true,
-        gutter: 10,
-    })
-}
+// var productGallerySliderContainer = document.querySelectorAll('.product-gallery-slider')
+// if (productGallerySliderContainer.length > 0) {
+//     var productGallerySlider = tns({
+//         container: productGallerySliderContainer[0],
+//         items: 2,
+//         slideBy: 'page',
+//         autoplay: false,
+//         controls: false,
+//         nav: false,
+//         loop: false,
+//         mouseDrag: true,
+//         swipeAngle: 60,
+//         autoWidth: true,
+//         gutter: 10,
+//     })
+// }
 
-if (document.body.clientWidth > 768 && productGallerySlider) {
-    productGallerySlider.destroy()
-}
+// if (document.body.clientWidth > 768 && productGallerySlider) {
+//     productGallerySlider.destroy()
+// }
 
 // var productGallerySlider = productGallerySliderContainer.length > 0 ?
 //     tns({
@@ -254,11 +254,13 @@ window.addEventListener('resize', () => {
     }
 
     // слайдер на странице продукта
-    if (clientWidth > 768 && productGallerySlider) {
-        productGallerySlider.destroy()
-    } else {
-        // productGallerySlider.rebuild()
-    }
+    // if (clientWidth > 768 && productGallerySlider) {
+    //     productGallerySlider.destroy()
+    // } else {
+    //     // productGallerySlider.rebuild()
+    // }
+
+
     if (clientWidth < 768) {
         togglersItems.forEach(item => {
             item.classList.remove('is-active')
@@ -1447,3 +1449,38 @@ if (paymentListItems.length > 0) {
     })
 }
 
+// новый слайдер
+const swiperProductThumbs = new Swiper('.product-thumbs', {
+    direction: 'vertical',
+    loop: false,
+    grabCursor: true,
+    slidesPerView: 4,
+    setWrapperSize: true,
+    // autoHeight: true,
+
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+const swiperProductGallery = new Swiper('.product-gallery-slider', {
+    loop: false,
+    grabCursor: true,
+    slidesPerView: 2,
+    setWrapperSize: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+window.addEventListener('resize', () => {
+    if (document.body.clientWidth > 768) {
+        swiperProductGallery.destroy(true, true )
+    }
+}, false);

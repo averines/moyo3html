@@ -4285,87 +4285,87 @@
   margin-bottom: 2em;
 }
 
-.product-gallery {
-  margin-bottom: 2em;
-  display: flex;
-}
+// .product-gallery {
+//   margin-bottom: 2em;
+//   display: flex;
+// }
 
-.product-preview-slider {
-  display: none;
-  max-height: 385px;
-  overflow: hidden;
-  padding: 3px;
-  background-color: $bg-dark;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
+// .product-preview-slider {
+//   display: none;
+//   // max-height: 385px;
+//   overflow: hidden;
+//   padding: 3px;
+//   background-color: $bg-dark;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 2px;
 
-  &__item {
-    outline: 2px solid transparent;
-    outline-offset: -2px;
-    transition: $tr;
+//   &__item {
+//     outline: 2px solid transparent;
+//     outline-offset: -2px;
+//     transition: $tr;
 
-    picture,
-    img {
-      display: block;
-      width: 100%;
-    }
+//     picture,
+//     img {
+//       display: block;
+//       width: 100%;
+//     }
 
-    &.is-active {
-      outline-color: $main;
-      z-index: 1;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
+//     &.is-active {
+//       outline-color: $main;
+//       z-index: 1;
+//     }
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+// }
 
-.product-gallery-slider {
-  &__item {
-    max-width: 250px;
-    position: relative;
+// .product-gallery-slider {
+//   &__item {
+//     max-width: 250px;
+//     position: relative;
 
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
+//     img {
+//       display: block;
+//       width: 100%;
+//     }
+//   }
 
-  &__download {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: 5px;
-    right: 20px;
-    background: url(../img/icons/download.svg) no-repeat center;
-    transition: $tr;
+//   &__download {
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     bottom: 5px;
+//     right: 20px;
+//     background: url(../img/icons/download.svg) no-repeat center;
+//     transition: $tr;
 
-    &:hover {
-      opacity: 0.8;
-    }
-  }
+//     &:hover {
+//       opacity: 0.8;
+//     }
+//   }
 
-  &__sticky {
-    &::after {
-      display: inline-block;
-      position: absolute;
-      bottom: 0;
-      background-color: $special-1;
-      color: $white;
-      font-size: 0.65em;
-      text-transform: uppercase;
-      padding: 0.33em 1em;
-      z-index: 1;
-    }
-  }
+//   &__sticky {
+//     &::after {
+//       display: inline-block;
+//       position: absolute;
+//       bottom: 0;
+//       background-color: $special-1;
+//       color: $white;
+//       font-size: 0.65em;
+//       text-transform: uppercase;
+//       padding: 0.33em 1em;
+//       z-index: 1;
+//     }
+//   }
 
-  &__sticky--new {
-    &::after {
-      content: "Новинка";
-    }
-  }
-}
+//   &__sticky--new {
+//     &::after {
+//       content: "Новинка";
+//     }
+//   }
+// }
 
 .product-favorite {
   z-index: 4;
@@ -7255,7 +7255,6 @@ textarea {
 }
 
 .order-progress-payment-wrapper {
-
   .form-group__icon {
     display: none;
   }
@@ -7373,6 +7372,57 @@ textarea {
 
 .body-overlay {
   overflow-y: hidden;
+}
+
+.product-thumbs {
+  display: none;
+}
+
+.swiper-container-vertical {
+  margin: 0;
+  position: relative;
+
+  .swiper-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    height: 20px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: transparentize($black, 0.5);
+    margin: 0;
+    
+    &:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      background: url(../img/icons/arrow.svg) no-repeat center;
+      background-size: 35%;
+      filter: brightness(10);
+      transform: rotate(90deg);
+    }
+  }
+
+  .swiper-button-prev {
+    top: 0;
+  }
+
+  .swiper-button-next {
+    top: auto;
+    bottom: 0;
+    &::after {
+      transform: rotate(-90deg);
+    }    
+  }
 }
 
 @import "animations";
