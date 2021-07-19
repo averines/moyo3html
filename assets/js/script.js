@@ -1422,3 +1422,28 @@ if (menuUserLogged && menuUserNotLogged) {
         })
     }
 }
+
+//выбор способа оплаты в корзине
+
+const paymentListItems = document.querySelectorAll('.payment-choose-list__item')
+const paymentListItemsInputs = document.querySelectorAll('.payment-choose-list__item input')
+
+if (paymentListItems.length > 0) {
+    paymentListItems.forEach(paymentListItem => {
+        let paymentListItemInput = paymentListItem.querySelector('input')
+
+        paymentListItem.addEventListener('click', () => {
+            paymentListItemsInputs.forEach(item => {
+                item.removeAttribute('checked')
+            })
+
+            paymentListItems.forEach( item => {
+                item.classList.remove('is-active')
+            })
+
+            paymentListItem.classList.add('is-active')
+            paymentListItemInput.setAttribute('checked', 'checked')
+        })
+    })
+}
+

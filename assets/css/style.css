@@ -8390,10 +8390,6 @@ textarea {
   padding: 0;
 }
 
-.order-progress-payment-wrapper {
-  margin-bottom: 30px;
-}
-
 .order-progress-payment-wrapper .form-group__icon {
   display: none;
 }
@@ -9980,6 +9976,9 @@ textarea {
   .choose-variants__text {
     margin-top: 20px;
   }
+  .order-progress-payment-wrapper {
+    margin-bottom: 30px;
+  }
   .order-progress-payment-wrapper .choose-wrapper__item {
     background-color: transparent;
     border: none;
@@ -10003,6 +10002,16 @@ textarea {
     background-color: #f3f2f0;
     padding: 15px;
     cursor: initial;
+    border-bottom: 4px solid transparent;
+  }
+  .order-progress-payment-wrapper .payment-choose-list__item:hover {
+    background-color: white;
+    cursor: pointer;
+    border-bottom-color: #ab064e;
+  }
+  .order-progress-payment-wrapper .payment-choose-list__item.is-active {
+    background-color: white;
+    border-bottom-color: #ab064e;
   }
   .order-progress-payment-wrapper .form-row .form-group {
     display: -webkit-box;

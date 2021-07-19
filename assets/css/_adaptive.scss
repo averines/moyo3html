@@ -1546,6 +1546,7 @@
   }
 
   .order-progress-payment-wrapper {
+      margin-bottom: 30px;
     .choose-wrapper__item {
       background-color: transparent;
       border: none;
@@ -1567,10 +1568,25 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       column-gap: 15px;
       margin: 0;
+
       &__item {
         background-color: $bg-light;
         padding: 15px;
         cursor: initial;
+        border-bottom: 4px solid transparent;
+
+          &:hover {
+            background-color: $white;
+            cursor: pointer;
+            border-bottom-color: $main;
+        }
+
+        &.is-active {
+            background-color: $white;
+            border-bottom-color: $main;
+        }
+
+        
       }
     }
 
