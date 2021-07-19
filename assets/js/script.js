@@ -937,15 +937,15 @@ $(document).ready(function () {
 
 
 const mapModalBtns = document.querySelectorAll('.js-mapmodal')
+let myMapModal;
 mapModalBtns.forEach(mapModalBtn => {
-    let myMap;
     mapModalBtn.addEventListener('click', () => {
         if (document.getElementById('js-map2')) {
             "use strict";
             ymaps.ready(init);
             function init() {
-                if (!myMap) {
-                    myMap = new ymaps.Map(
+                if (!myMapModal) {
+                    myMapModal = new ymaps.Map(
                         'js-map2',
                         {
                             center: [55.77446156893533, 37.741998],
@@ -955,7 +955,7 @@ mapModalBtns.forEach(mapModalBtn => {
                             searchControlProvider: 'yandex#search'
                         }
                     );
-                    myMap.geoObjects.add(
+                    myMapModal.geoObjects.add(
                         new ymaps.Placemark(
                             [55.77446156893533, 37.741998],
                             {
@@ -967,7 +967,7 @@ mapModalBtns.forEach(mapModalBtn => {
                             }
                         )
                     );
-                    myMap.behaviors.disable('scrollZoom')
+                    myMapModal.behaviors.disable('scrollZoom')
                 }
             }
         }
