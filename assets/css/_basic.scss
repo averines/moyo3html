@@ -452,6 +452,12 @@ h5,
       filter: brightness(4);
     }
   }
+
+  .modalquickview {
+      .fancybox-close-small {
+      filter: none;
+    }
+  }
 }
 
 // аккордион

@@ -226,8 +226,11 @@
   }
 
   .main-slider {
+    display: flex;
+
     .main-slide {
       &__pic {
+        width: 100%;
         display: block;
         height: 355px;
         overflow: hidden;
@@ -240,6 +243,7 @@
         height: 100%;
         display: flex;
         align-items: center;
+        overflow: hidden;
       }
 
       &__container-inner {
@@ -1972,6 +1976,11 @@
 
   .size-variants {
     justify-content: center;
+
+      &--inmodal {
+      justify-content: flex-start;
+      font-size: 1.3em;
+    }
   }
 
   .togglers {
@@ -1985,8 +1994,6 @@
       position: absolute;
       top: -45px;
       left: 130px;
-      &__item {
-      }
     }
 
     .brand-filter-content {

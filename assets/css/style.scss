@@ -2196,6 +2196,7 @@
       display: none;
       text-align: center;
       transition: $tr;
+      border-radius: 3px;
 
       &::before {
         content: "Быстрый просмотр";
@@ -2363,6 +2364,16 @@
       // outline-color: $text-light;
       border-color: $text-light;
       color: $white;
+    }
+  }
+
+  &--inmodal {
+    display: flex;
+    padding: 0;
+    .size-variants__item {
+      padding: 0.75em 1em;
+      border-color: $line-light;
+      pointer-events: none;
     }
   }
 }
@@ -4649,6 +4660,11 @@
     border-top: 1px solid $line-light;
     padding-top: 20px;
     margin-top: 15px;
+
+    img {
+      display: block;
+      border-radius: 4px;
+    }
   }
 }
 
@@ -7318,6 +7334,7 @@ textarea {
     &__item {
       display: block;
       width: 430px;
+      border-radius: 4px;
     }
   }
 

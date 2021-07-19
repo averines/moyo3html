@@ -447,6 +447,11 @@ h5,
           filter: brightness(4);
 }
 
+.fancybox-container .modalquickview .fancybox-close-small {
+  -webkit-filter: none;
+          filter: none;
+}
+
 .accordion__item .accordion__title {
   position: relative;
 }
@@ -3135,6 +3140,7 @@ hr.dotted {
   text-align: center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border-radius: 3px;
 }
 
 .product-wrapper .product__quick-view::before {
@@ -3312,6 +3318,19 @@ hr.dotted {
   background-color: #777;
   border-color: #777;
   color: white;
+}
+
+.size-variants--inmodal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.size-variants--inmodal .size-variants__item {
+  padding: 0.75em 1em;
+  border-color: #d9d9d9;
+  pointer-events: none;
 }
 
 .sticky-wrapper {
@@ -5524,6 +5543,11 @@ hr.dotted {
   border-top: 1px solid #d9d9d9;
   padding-top: 20px;
   margin-top: 15px;
+}
+
+.product-colors .product-colors-slider img {
+  display: block;
+  border-radius: 4px;
 }
 
 .product-color-info__header {
@@ -8474,6 +8498,7 @@ textarea {
 .modalquickview .modal-product-gallery__item {
   display: block;
   width: 430px;
+  border-radius: 4px;
 }
 
 .modalquickview .product-info__brand-logo {
@@ -8788,7 +8813,13 @@ textarea {
   .d-md-block {
     display: block;
   }
+  .main-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .main-slider .main-slide__pic {
+    width: 100%;
     display: block;
     height: 355px;
     overflow: hidden;
@@ -8804,6 +8835,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    overflow: hidden;
   }
   .main-slider .main-slide__container-inner {
     width: 100%;
@@ -10346,6 +10378,12 @@ textarea {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .size-variants--inmodal {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 1.3em;
   }
   .togglers .toggler-sort {
     -webkit-column-gap: 20px;
