@@ -2,6 +2,7 @@
 const menuCatalogBtn = document.getElementById('btn-catalog')
 const menuCatalogBlock = document.querySelector('.menu-catalog-categories')
 const menuCatalogWrapper = document.querySelector('.menu-catalog-wrapper')
+const documentBody = document.querySelector('body')
 let menuCatalogIsActive = false
 
 const menuCatalogOpen = function () {
@@ -9,6 +10,7 @@ const menuCatalogOpen = function () {
     menuCatalogBtn.classList.add('is-active')
     menuCatalogWrapper.classList.add('is-active')
     menuCatalogBlock.classList.add('is-active')
+    documentBody.classList.add('body-overlay')
 }
 
 const menuCatalogClose = function () {
@@ -16,6 +18,7 @@ const menuCatalogClose = function () {
     menuCatalogBtn.classList.remove('is-active')
     menuCatalogWrapper.classList.remove('is-active')
     menuCatalogBlock.classList.remove('is-active')
+    documentBody.classList.remove('body-overlay')
 }
 
 menuCatalogBtn.addEventListener('click', () => {

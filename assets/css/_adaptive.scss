@@ -196,6 +196,14 @@
       text-align: right;
     }
   }
+
+.menu-catalog-wrapper {
+  &::after {
+    top: 14px;
+    left: 368px;
+    right: auto;
+  }
+}  
 }
 
 // md
@@ -2039,6 +2047,10 @@
       }      
     }  
   }
+
+  .body-overlay {
+  padding-right: 18px;
+}
     
 }
 
