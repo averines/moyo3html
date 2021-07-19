@@ -2302,8 +2302,8 @@
     height: 90px;
     background-color: #ccc;
     transition: $tr;
-    outline: 3px solid transparent;
-    outline-offset: -3px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
     padding: 0;
 
     &:hover {
@@ -2317,7 +2317,7 @@
     }
 
     &.is-active {
-      outline-color: $white;
+      outline-color: $text-light;
     }
   }
 }

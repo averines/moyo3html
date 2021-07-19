@@ -969,7 +969,7 @@
       </div>
       <div class="modals__item modal modalmap" id="modalmap">
         <div class="modal__title">Схема проезда</div>
-<div class="contacts-map contacts-map__modal" id="js-map2"></div>
+        <div class="contacts-map contacts-map__modal" id="js-map2"></div>
       </div>
       <div class="modals__item modal modallogin" id="modallogin">
         <div class="modal__title">Вход</div>
@@ -981,7 +981,7 @@
             </div>
             <div class="tabs-content">
               <div class="tabs-content__item" data-tabid="loginemail">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check">
+                <form action="personal-data-fiz.html" class="modal__form mt-2 js-form-check">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="login-email" type="text" name="login-email" required>
@@ -995,12 +995,12 @@
                   </div>
                   <div class="d-flex flex-column align-center">
                     <p class="text-center">Забыли пароль? <a class="text-italic" data-fancybox data-src="#modalpasswordrecover" href="javascript:;">Восстановить</a></p>
-                    <button class="btn btn-main" type="submit" disabled>Войти</button>
+                    <button class="btn btn-main js-user-set-logged" type="submit" disabled>Войти</button>
                   </div>
                 </form>
               </div>
               <div class="tabs-content__item" data-tabid="loginphone">
-                <form action="./personal/cart.html#personal" class="modal__form mt-2 js-form-check js-form-phone-code">
+                <form action="personal-data-fiz.html" class="modal__form mt-2 js-form-check js-form-phone-code">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-phone" type="text" name="user-phone" required>
@@ -1063,7 +1063,7 @@
         <div class="modal__title">Восстановление пароля</div>
         <div class="modal__content p-2">
           <p class="text-italic">Пожалуйста, введите адрес электронной почты, на который мы вышлем Ваш новый пароль.</p>
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check">
+          <form action="personal-data-fiz.html" class="modal__form js-form-check">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="recover-email" type="text" name="recover-email" required>
@@ -1080,17 +1080,27 @@
         <div class="modal__title">Регистрация</div>
         <div class="modal__content p-2">
           <div class="choose-variants">
-            <a class="choose-variants__item" data-fancybox data-src="#modalregistrationtype1" href="javascript:;">Покупаю для себя</a>
-            <a class="choose-variants__item" data-fancybox data-src="#modalregistrationtype2" href="javascript:;">Покупаю для
-              продажи</a>
+            <div class="choose-variants__item">
+              <a class="choose-variants__link" data-fancybox data-src="#modalregistrationtype1" href="javascript:;">Покупаю для себя</a>
+              <div class="choose-variants__text">
+                <p>Если Вы зарегистрируетесь «Покупаю для себя», то мы будем считать, что у вас нет юридического лица и отгружать товар мы будем для личных целей.</p>
+                <p> При этой форме регистрации мы <span class="text-bold">не&nbsp;транслируем</span> маркировку через ЭДО или «Честный знак»</p>
+              </div>
+            </div>
+            <div class="choose-variants__item">
+              <a class="choose-variants__link" data-fancybox data-src="#modalregistrationtype2" href="javascript:;">Покупаю для продажи</a>
+              <div class="choose-variants__text">
+                <p>Если Вы зарегистрируетесь «Покупаю для продажи», то мы будем считать, что у вы юридическое лицо (ИП, ООО, АО) и отгружать товар мы будем для последующей продажи.</p>
+                <p>При этой форме регистрации мы <span class="text-bold">транслируем</span> маркировку через ЭДО или «Честный знак» и вы должны ее принять.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="modals__item modal modalregistrationtype1" id="modalregistrationtype1">
         <div class="modal__title">Покупаю для себя</div>
         <div class="modal__content">
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check js-form-phone-code-registration">
-  
+          <form action="personal-data-fiz.html" class="modal__form js-form-check js-form-phone-code-registration">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type1-surname" type="text" name="type1-surname" required>
@@ -1114,8 +1124,8 @@
             </div>
   
             <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type1-patronymic" type="text" name="type1-patronymic" required>
+              <div class="form-group">
+                <input id="type1-patronymic" type="text" name="type1-patronymic">
                 <label for="type1-patronymic">Отчество</label>
               </div>
               <div class="form-group form-group--required">
@@ -1189,7 +1199,7 @@
       <div class="modals__item modal modalregistrationtype2" id="modalregistrationtype2">
         <div class="modal__title">Покупаю для продажи</div>
         <div class="modal__content">
-          <form action="/" class="modal__form js-form-check js-form-phone-code-registration">
+          <form action="personal-data-ooo-firsttime.html" class="modal__form js-form-check js-form-phone-code-registration">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-surname" type="text" name="type2-surname" required>
@@ -1278,135 +1288,34 @@
                 <label for="type2-code">Код из СМС</label>
               </div>
               <div class="form-group">
-                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationaddress" href="javascript:;">Далее</a>
+                <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationinn" href="javascript:;">Далее</a>
               </div>
             </div>
           </form>
         </div>
       </div>
-      <div class="modals__item modal modalregistrationaddress" id="modalregistrationaddress">
-        <div class="modal__title">Адрес</div>
+      <div class="modals__item modal modalregistrationinn" id="modalregistrationinn">
+        <div class="modal__title">Реквизиты организации</div>
         <div class="modal__content">
-          <form action="/" class="modal__form js-form-check js-form-registration-address">
-            <div class="form-registration-address">
-              <div class="form-group-wrapper js-form-registration-address-type1">
-                <div class="form-group-wrapper__title">Юр.адрес</div>
-                <div class="form-group-wrapper__content">
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-index1" type="text" name="type2-index1" required>
-                      <label for="type2-index1">Индекс</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-country1" type="text" name="type2-country1" required>
-                      <label for="type2-country1">Страна</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-city1" type="text" name="type2-city1" required>
-                      <label for="type2-city1">Город</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-street1" type="text" name="type2-street1" required>
-                      <label for="type2-street1">Улица</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-building1" type="text" name="type2-building1" required>
-                      <label for="type2-building1">Дом, стр./корп.</label>
-                    </div>
-                    <div class="form-group form-group--required">
-                      <input id="type2-appartmet1" type="text" name="type2-appartmet1" required>
-                      <label for="type2-appartmet1">Кв./офис</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group-wrapper js-form-registration-address-type2">
-                <div class="form-group-wrapper__title">Факт.адрес</div>
-                <div class="form-group-wrapper__content">
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-index2" type="text" name="type2-index2" required>
-                      <label for="type2-index2">Индекс</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-country2" type="text" name="type2-country2" required>
-                      <label for="type2-country2">Страна</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-city2" type="text" name="type2-city2" required>
-                      <label for="type2-city2">Город</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-street2" type="text" name="type2-street2" required>
-                      <label for="type2-street2">Улица</label>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="type2-building2" type="text" name="type2-building2" required>
-                      <label for="type2-building2">Дом, стр./корп.</label>
-                    </div>
-                    <div class="form-group form-group--required">
-                      <input id="type2-appartmet2" type="text" name="type2-appartmet2" required>
-                      <label for="type2-appartmet2">Кв./офис</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="form-group d-flex justify-center mb-2">
-              <input type="checkbox" class="form-group__checkbox" name="type2-addressdouble" id="type2-addressdouble">
-              <label class="form-group__label text-italic" for="type2-addressdouble">Юр. адрес совпадает с
-                фактическим</label>
-            </div>
-  
-            <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationrequisites" href="javascript:;">Далее</a>
-          </form>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationrequisites" id="modalregistrationrequisites">
-        <div class="modal__title">Реквизиты</div>
-        <div class="modal__content">
-          <form action="./personal/cart.html#personal" class="modal__form js-form-check">
+          <form action="personal-data-ooo-firsttime.html" class="modal__form js-form-check">
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-bik" type="text" name="type2-bik" required>
-                <label for="type2-bik">БИК</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type2-kors" type="text" name="type2-kors" required>
-                <label for=type2-kors">К/С</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-bank" type="text" name="type2-bank" required>
-                <label for=type2-bank">Банк</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type2-rass" type="text" name="type2-rass" required>
-                <label for=type2-rass">Р/С</label>
+                <label for="type2-bik">ИНН</label>
               </div>
             </div>
             <div class="d-flex flex-column align-center">
-              <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+              <button class="btn btn-main" type="submit" disabled data-fancybox data-src="#modalregistrationalert" href="javascript:;">Далее</button>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="modals__item modal modalregistrationalert" id="modalregistrationalert">
+        <div class="modal__title">Подтверждение эл. почты</div>
+        <div class="modal__content p-3">
+          <p>Спасибо за регистрацию! На указанную вами эл. почту будет отправлено письмо с предложением подтвердить ваш электронный адрес и ссылка для входа в личный кабинет.</p>
+          <p>Перейдите по ссылке в этом письме и приступайте к покупкам!</p>
+          <button class="btn btn-main" onclick="$.fancybox.close(true);">Закрыть</button>
         </div>
       </div>
     </div>

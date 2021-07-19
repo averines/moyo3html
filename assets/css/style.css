@@ -3257,8 +3257,8 @@ hr.dotted {
   background-color: #ccc;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  outline: 3px solid transparent;
-  outline-offset: -3px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
   padding: 0;
 }
 
@@ -3273,7 +3273,7 @@ hr.dotted {
 }
 
 .color-variants__item.is-active {
-  outline-color: white;
+  outline-color: #777;
 }
 
 .size-variants {
