@@ -399,7 +399,23 @@
     .btn-login {
       padding-left: 10px;
       padding-right: 10px;
+
+      &.is-visible {
+        display: block;
+      }
+      &.is-hidden {
+        display: none;
+      }      
     }
+
+    .btn-user {
+      &.is-visible {
+        display: block;
+      }
+      &.is-hidden {
+        display: none;
+      }      
+    }    
 
     .cart-mini {
       .btn-cart {

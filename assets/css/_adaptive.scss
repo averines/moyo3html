@@ -2010,6 +2010,36 @@
       }
     }
   }
+
+  .btn-logout {
+    display: block;
+  }
+
+
+  .header-main {
+    .btn-login {
+      display: none;
+
+      &.is-visible {
+        display: none;
+      }
+      &.is-hidden {
+        display: none;
+      }      
+    }
+
+    .btn-user {
+      display: none;
+
+      &.is-visible {
+        display: none;
+      }
+      &.is-hidden {
+        display: none;
+      }      
+    }  
+  }
+    
 }
 
 //xxl

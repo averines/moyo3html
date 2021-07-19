@@ -1380,6 +1380,10 @@ if (formGroups.length > 0) {
 // эмуляция входа пользователя
 const menuUserLogged = document.querySelector('.js-menu-user-is-logged')
 const menuUserNotLogged = document.querySelector('.js-menu-user-is-not-logged')
+
+const userButtonsLogin = document.querySelector('.js-user-buttons-login')
+const userButtonsUser = document.querySelector('.js-user-buttons-user')
+
 const setIsLoggedBtn = document.querySelector('.js-user-set-logged')
 const setIsNotLoggedBtn = document.querySelector('.js-user-set-not-logged')
 let userIsLogged = localStorage.getItem('userLogged')
@@ -1388,14 +1392,20 @@ if (menuUserLogged && menuUserNotLogged) {
     if (userIsLogged == 1) {
         menuUserNotLogged.style.display = 'none'
         menuUserLogged.style.display = 'block'
+        userButtonsLogin.classList.add('is-hidden')
+        userButtonsUser.classList.add('is-visible')
     } else {
         menuUserNotLogged.style.display = 'block'
         menuUserLogged.style.display = 'none'
+        userButtonsLogin.classList.add('is-visible')
+        userButtonsUser.classList.add('is-hidden')
 
         setIsLoggedBtn.addEventListener('click', () => {
             localStorage.setItem('userLogged', 1)
             menuUserNotLogged.style.display = 'none'
             menuUserLogged.style.display = 'block'
+            userButtonsLogin.classList.add('is-hidden')
+            userButtonsUser.classList.add('is-visible')
         })
     }
 
@@ -1404,6 +1414,8 @@ if (menuUserLogged && menuUserNotLogged) {
             localStorage.setItem('userLogged', 0)
             menuUserNotLogged.style.display = 'block'
             menuUserLogged.style.display = 'none'
+            userButtonsLogin.classList.add('is-visible')
+            userButtonsUser.classList.add('is-hidden')
         })
     }
 }

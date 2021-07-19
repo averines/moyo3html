@@ -414,6 +414,7 @@ h5,
   color: #ab064e;
   font-size: 0.9em;
   margin-top: 0.5em;
+  display: none;
 }
 
 .password-icon {
@@ -1155,6 +1156,22 @@ hr.dotted {
 .header-main .btn-login {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.header-main .btn-login.is-visible {
+  display: block;
+}
+
+.header-main .btn-login.is-hidden {
+  display: none;
+}
+
+.header-main .btn-user.is-visible {
+  display: block;
+}
+
+.header-main .btn-user.is-hidden {
+  display: none;
 }
 
 .header-main .cart-mini .btn-cart {
@@ -10359,6 +10376,27 @@ textarea {
   }
   .accordion--brand-filter .accordion__title:hover {
     background: transparent;
+  }
+  .btn-logout {
+    display: block;
+  }
+  .header-main .btn-login {
+    display: none;
+  }
+  .header-main .btn-login.is-visible {
+    display: none;
+  }
+  .header-main .btn-login.is-hidden {
+    display: none;
+  }
+  .header-main .btn-user {
+    display: none;
+  }
+  .header-main .btn-user.is-visible {
+    display: none;
+  }
+  .header-main .btn-user.is-hidden {
+    display: none;
   }
 }
 
