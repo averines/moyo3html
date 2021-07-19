@@ -9607,7 +9607,7 @@ textarea {
     display: flex;
   }
   .modals__item {
-    min-height: 300px;
+    min-height: 350px;
   }
   .modal__title {
     font-size: 1.3em;
