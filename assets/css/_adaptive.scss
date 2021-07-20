@@ -466,18 +466,24 @@
     display: flex;
     align-items: flex-start;
 
-    .product-thumbs {
-      height: 359px;
-      width: 63px;
+    .product-thumbs-wrapper {
+      border: 2px solid #c4c4c4;
+      height: 370px;
+      width: 64px;
+      overflow: hidden;
       flex-shrink: 0;
       flex-grow: 0;
-      padding: 3px;
-      background-color: #C4C4C4;
+    }
+
+    .product-thumbs {
+      height: 100%;
+      background-color: #c4c4c4;
 
       &__item {
+        margin-bottom: 2px;
         img {
           box-sizing: border-box;
-          border-bottom: 3px solid transparent;
+          // border-bottom: 3px solid transparent;
           display: block;
           width: 100%;
         }
@@ -487,9 +493,17 @@
     .product-gallery-slider {
       position: relative;
 
+    .swiper-nav {
+      display: block;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+
       &__item {
-        height: 360px;
-        position: absolute;
+        height: 370px;
+        // position: absolute;
         top: 0;
         flex-shrink: 0;
         flex-grow: 0;
@@ -498,6 +512,7 @@
         picture {
           display: block;
           width: 100%;
+          height: 100%;
         }
 
         &.is-active {
@@ -1437,16 +1452,15 @@
     margin-top: -25px;
   }
 
-
   .product-container {
     grid-template-columns: 350px auto;
   }
 
   .product-gallery {
-    .product-thumbs {
-      height: 419px;
+    .product-thumbs-wrapper {
+      border-width: 3px;
+      height: 430px;
       width: 74px;
-      padding: 4px;
     }
 
     .product-gallery-slider {
@@ -1908,15 +1922,15 @@
   }
 
   .product-gallery {
-    .product-thumbs {
+    .product-thumbs-wrapper {
       height: 536px;
       width: 96px;
-      padding: 6px;
+      border-width: 6px;
     }
 
     .product-gallery-slider {
       &__item {
-        height: 545px;
+        height: 536px;
       }
     }
   }
@@ -1934,7 +1948,6 @@
       }
     }
   }
-
 
   .product-info {
     background-color: $white;
@@ -2320,17 +2333,17 @@
   }
 
   .product-gallery {
-    .product-thumbs {
+    .product-thumbs-wrapper {
       height: 670px;
-      width: 115px;
+      width: 118px;
     }
 
     .product-gallery-slider {
       &__item {
-        height: 700px;
+        height: 670px;
       }
     }
-  }  
+  }
 }
 
 @media screen and (min-width: 1900px) {
@@ -2351,7 +2364,6 @@
       }
     }
   }
-
 
   .list-suppliers {
     grid-template-columns: 1fr 1fr 1fr;
