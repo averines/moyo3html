@@ -21,11 +21,14 @@
 
   <link rel="stylesheet" href="./assets/js/fancybox/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="./assets/js/tiny-slider/tiny-slider.css" />
+  <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+
 
   <script src="./assets/js/jquery-3.6.0.min.js" defer></script>
   <script src="./assets/js/fancybox/jquery.fancybox.min.js" defer></script>
   <script src="./assets/js/tiny-slider/tiny-slider.js" defer></script>
+  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/mixitup/mixitup.min.js" defer></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU"></script>
   <script src="./assets/js/script.js" defer></script>
@@ -1086,16 +1089,126 @@
                       </a>
                     </div>
                     <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
-                    <a data-fancybox data-src="#modalquickview" href="javascript:;" class="product__quick-view"></a>
-
+                    <a data-fancybox="modal" data-src="#modalquickview" href="javascript:;" class="product__quick-view"></a>
 
                     <div class="modalquickview modals__item" id="modalquickview">
                       <div class="modalquickview__wrapper">
                         <div class="modal-product-container">
 
-                          <div class="modal-product-gallery">
-                            <img class="modal-product-gallery__item" src="./i/products/01-1-462.jpg" alt="">
+                        <div class="modal-product-gallery product-gallery">
+                          <div class="product-thumbs-wrapper">
+                            <div class="product-thumbs swiper-container">
+                              <div class="swiper-wrapper">
+                                <div class="product-thumbs__item swiper-slide">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-1-90.webp">
+                                    <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                                    <img src="./i/products/01-1-60.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </div>
+                                <div class="product-thumbs__item swiper-slide">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-2-90.webp">
+                                    <source type="image/webp" srcset="./i/products/01-2-60.webp">
+                                    <img src="./i/products/01-2-60.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </div>
+                                <div class="product-thumbs__item swiper-slide">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-3-90.webp">
+                                    <source type="image/webp" srcset="./i/products/01-3-60.webp">
+                                    <img src="./i/products/01-3-60.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </div>
+                                <div class="product-thumbs__item swiper-slide">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-4-90.webp">
+                                    <source type="image/webp" srcset="./i/products/01-4-60.webp">
+                                    <img src="./i/products/01-4-60.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </div>
+                                <div class="product-thumbs__item swiper-slide">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-1-90.webp">
+                                    <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                                    <img src="./i/products/01-1-60.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </div>
+                              </div>
+                              <div class="swiper-nav">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                              </div>
+                            </div>
                           </div>
+                        
+                          <div class="product-gallery-slider swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="product-gallery-slider__item is-active swiper-slide">
+                                <a href="./i/products/01-1-302.jpg" class="product-gallery-slider__download" download></a>
+                                <div class="product-gallery-slider__sticky product-gallery-slider__sticky--new"></div>
+                                <a href="./i/products/01-1-462.webp" data-fancybox="product-gallery" data-caption="">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-1-462.webp">
+                                    <source type="image/webp" media="(min-width: 300px)" srcset="./i/products/01-1-302.webp">
+                                    <source type="image/webp" srcset="./i/products/01-1-302.webp">
+                                    <img src="./i/products/01-1-302.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </a>
+                              </div>
+                              <div class="product-gallery-slider__item swiper-slide">
+                                <a href="./i/products/01-2-302.jpg" class="product-gallery-slider__download" download></a>
+                                <a href="./i/products/01-2-462.webp" data-fancybox="product-gallery" data-caption="">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-2-462.webp">
+                                    <source type="image/webp" media="(min-width: 300px)" srcset="./i/products/01-2-302.webp">
+                                    <source type="image/webp" srcset="./i/products/01-2-302.webp">
+                                    <img src="./i/products/01-2-302.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </a>
+                              </div>
+                              <div class="product-gallery-slider__item swiper-slide">
+                                <a href="./i/products/01-3-302.jpg" class="product-gallery-slider__download" download></a>
+                                <a href="./i/products/01-3-462.webp" data-fancybox="product-gallery" data-caption="">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-3-462.webp">
+                                    <source type="image/webp" media="(min-width: 300px)" srcset="./i/products/01-3-302.webp">
+                                    <source type="image/webp" srcset="./i/products/01-3-302.webp">
+                                    <img src="./i/products/01-3-302.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </a>
+                              </div>
+                              <div class="product-gallery-slider__item swiper-slide">
+                                <a href="./i/products/01-4-302.jpg" class="product-gallery-slider__download" download></a>
+                                <a href="./i/products/01-4-462.webp" data-fancybox="product-gallery" data-caption="">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-4-462.webp">
+                                    <source type="image/webp" media="(min-width: 300px)" srcset="./i/products/01-4-302.webp">
+                                    <source type="image/webp" srcset="./i/products/01-4-302.webp">
+                                    <img src="./i/products/01-4-302.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </a>
+                              </div>
+                              <div class="product-gallery-slider__item swiper-slide">
+                                <a href="./i/products/01-1-302.jpg" class="product-gallery-slider__download" download></a>
+                                <a href="./i/products/01-1-462.webp" data-fancybox="product-gallery" data-caption="">
+                                  <picture>
+                                    <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/01-1-462.webp">
+                                    <source type="image/webp" media="(min-width: 300px)" srcset="./i/products/01-1-302.webp">
+                                    <source type="image/webp" srcset="./i/products/01-1-302.webp">
+                                    <img src="./i/products/01-1-302.jpg" alt="Новая коллекция весна-лето от Brioni">
+                                  </picture>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-nav">
+                              <div class="swiper-button-prev"></div>
+                              <div class="swiper-button-next"></div>
+                            </div>
+                          </div>
+                        
+                        </div>
 
                           <div class="modal-product-info product-info">
                             <div class="d-flex align-center justify-between">
@@ -1320,7 +1433,6 @@
                       </div>
                     </div>
 
-
                     <a href="product.html" class="product__link">
                       <div class="product__pic">
                         <div class="sticky-wrapper">
@@ -1366,7 +1478,6 @@
                   </div>
                 </div>
               </div>
-
 
               <div class="product-mini-slider__item">
                 <div class="product-wrapper">

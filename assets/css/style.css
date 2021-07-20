@@ -8419,18 +8419,29 @@ textarea {
 }
 
 .modalquickview .modal-product-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-column-gap: 20px;
           column-gap: 20px;
 }
 
-.modalquickview .modal-product-gallery__item {
-  display: block;
-  width: 430px;
-  border-radius: 4px;
+.modalquickview .modal-product-gallery {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  max-width: 600px;
+}
+
+.modalquickview .modal-product-info {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 500px;
 }
 
 .modalquickview .product-info__brand-logo {
@@ -8629,7 +8640,6 @@ textarea {
   bottom: 0;
   left: 0;
   opacity: 0.7;
-  border: 1px solid red;
   bottom: 27px;
 }
 
@@ -9262,6 +9272,13 @@ textarea {
   }
   .product-gallery .product-gallery-slider__item.is-active {
     position: relative;
+  }
+  .modal-product-container .product-gallery .product-gallery-slider {
+    width: 250px;
+  }
+  .modal-product-container .product-gallery .product-gallery-slider__item img,
+  .modal-product-container .product-gallery .product-gallery-slider__item picture {
+    width: 100%;
   }
   .d-md-none {
     display: none;
@@ -10134,6 +10151,13 @@ textarea {
   .product-info.modal-product-info {
     padding: 40px 0 0 0;
   }
+  .modal-product-container .product-gallery .product-gallery-slider {
+    width: 300px;
+  }
+  .modal-product-container .product-gallery .product-gallery-slider__item img,
+  .modal-product-container .product-gallery .product-gallery-slider__item picture {
+    width: 100%;
+  }
   .order-item__title {
     font-size: 18px;
   }
@@ -10532,6 +10556,9 @@ textarea {
   .product-info.modal-product-info {
     padding: 40px 0 0 0;
   }
+  .modal-product-container .product-gallery .product-gallery-slider {
+    width: 350px;
+  }
   .discounts-wrapper {
     display: -ms-grid;
     display: grid;
@@ -10869,6 +10896,9 @@ textarea {
   }
   .product-gallery .product-gallery-slider__item {
     height: 670px;
+  }
+  .modal-product-container .product-gallery .product-gallery-slider {
+    width: 450px;
   }
 }
 

@@ -1515,5 +1515,63 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
             swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
         })
     })
-
 }
+
+$('[data-fancybox="product-gallery"]').fancybox({
+    protect: true
+});
+
+
+$("[data-fancybox='modal']").fancybox({
+    afterShow: function (instance, slide) {
+        if (document.querySelectorAll('.product-gallery').length > 0) {
+            const swiperProductThumbs = new Swiper('.product-thumbs', {
+                direction: 'vertical',
+                loop: true,
+                grabCursor: false,
+                slidesPerView: 4,
+                setWrapperSize: true,
+                spaceBetween: 4,
+                allowTouchMove: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+
+            const swiperProductGallery = new Swiper('.product-gallery-slider', {
+                loop: true,
+                grabCursor: true,
+                slidesPerView: 2,
+                setWrapperSize: true,
+                spaceBetween: 10,
+                navigation: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: {
+                        // allowTouchMove: false,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        grabCursor: false,
+                        speed: 0,
+                    }
+                }
+            })
+
+            const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
+
+            swiperProductThumbsItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
+                })
+            })
+        }
+    }
+});
