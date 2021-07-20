@@ -1466,6 +1466,7 @@ const swiperProductThumbs = new Swiper('.product-thumbs', {
 });
 }
 
+
 if (document.querySelectorAll('.product-gallery-slider').length > 0) {
     const swiperProductGallery = new Swiper('.product-gallery-slider', {
         loop: false,
@@ -1500,23 +1501,25 @@ if (document.querySelectorAll('.product-gallery-slider').length > 0) {
         })
         productThumbsSlides[e.activeIndex].classList.add('is-active')
     })
-}
 
-
-
-const productThumbsSlides = document.querySelectorAll('.product-thumbs__item')
-if (productThumbsSlides.length > 0) {
-    productThumbsSlides.forEach((productThumbsSlide, index) => {
-        productThumbsSlide.addEventListener('mouseover', () => {
-            productThumbsSlides.forEach(item => {
-                item.classList.remove('is-active')
+    const productThumbsSlides = document.querySelectorAll('.product-thumbs__item')
+    if (productThumbsSlides.length > 0) {
+        productThumbsSlides.forEach((productThumbsSlide, index) => {
+            productThumbsSlide.addEventListener('mouseover', () => {
+                productThumbsSlides.forEach(item => {
+                    item.classList.remove('is-active')
+                })
+                productThumbsSlide.classList.add('is-active')
+                console.log(index);
+                swiperProductGallery.slideTo(index);
             })
-            productThumbsSlide.classList.add('is-active')
-            console.log(index);
-            swiperProductGallery.slideTo(index);
         })
-    })
+    }
 }
+
+
+
+
 
 
 // swiperProductThumbs.on('click', function (e) {
