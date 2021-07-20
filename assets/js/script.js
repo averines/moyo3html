@@ -1510,8 +1510,6 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
     // })
 
 
-    
-
     swiperProductThumbsItems.forEach(item => {
         item.addEventListener('mouseover', () => {
             swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
