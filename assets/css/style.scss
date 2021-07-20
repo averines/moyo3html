@@ -7473,6 +7473,41 @@ textarea {
 .product-gallery-slider {
   padding-bottom: 25px;
 
+  &__download {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    background: url(../img/icons/download.svg) no-repeat center;
+    transition: $tr;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__sticky {
+    &::after {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      background-color: $special-1;
+      color: $white;
+      font-size: 0.65em;
+      text-transform: uppercase;
+      padding: 0.33em 1em;
+      z-index: 1;
+    }
+  }
+
+  &__sticky--new {
+    &::after {
+      content: "Новинка";
+    }
+  }
+
+
   &:hover {
     .swiper-nav {
       opacity: 1;
@@ -7503,23 +7538,31 @@ textarea {
 
   .swiper-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
-    height: 100%;
+    height: 40px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     opacity: 0.7;
+    border: 1px solid red;
+    bottom: 27px;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
     height: 40px;
     width: 40px;
-    left: auto;
-    right: 0;
+    // left: auto;
+    // right: 0;
+    position: relative;
     background-color: transparentize($black, 0.85);
     margin: 0;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
 
     &:after {
       content: "";
@@ -7540,17 +7583,19 @@ textarea {
   }
 
   .swiper-button-prev {
-    top: 0;
+        &::after {
+      transform: rotate(0);
+    }
   }
 
   .swiper-button-next {
-    top: auto;
-    bottom: 25px;
+    
     &::after {
-      transform: rotate(-90deg);
+      transform: rotate(180deg);
     }
   }
 }
+
 
 @import "animations";
 @import "adaptive";

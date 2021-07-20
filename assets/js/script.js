@@ -1484,7 +1484,7 @@ const swiperProductGallery = new Swiper('.product-gallery-slider', {
     },
     breakpoints: {
         768: {
-            allowTouchMove: false,
+            // allowTouchMove: false,
             slidesPerView: 1,
             spaceBetween: 0,
             grabCursor: false,
