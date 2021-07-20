@@ -8563,8 +8563,8 @@ textarea {
   width: 20px;
   height: 20px;
   position: absolute;
-  bottom: 5px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   background: url(../img/icons/download.svg) no-repeat center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
