@@ -115,6 +115,18 @@ main {
   gap: 1em;
 }
 
+.pos-relative {
+  position: relative;
+}
+
+.pos-b-0  {
+  bottom: 0;
+}
+
+.pos-r-0 {
+  right: 0;
+}
+
 h1,
 .h1 {
   font-size: 24px;

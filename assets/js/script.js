@@ -1450,6 +1450,7 @@ if (paymentListItems.length > 0) {
 }
 
 // новый слайдер
+if (document.querySelectorAll('.product-thumbs').length > 0) {
 const swiperProductThumbs = new Swiper('.product-thumbs', {
     direction: 'vertical',
     loop: false,
@@ -1463,34 +1464,45 @@ const swiperProductThumbs = new Swiper('.product-thumbs', {
         prevEl: '.swiper-button-prev',
     },
 });
+}
+
+if (document.querySelectorAll('.product-gallery-slider').length > 0) {
+    const swiperProductGallery = new Swiper('.product-gallery-slider', {
+        loop: false,
+        grabCursor: true,
+        slidesPerView: 2,
+        setWrapperSize: true,
+        spaceBetween: 10,
+        navigation: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                // allowTouchMove: false,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                grabCursor: false,
+                speed: 200,
+            }
+        }
+    });
+
+    swiperProductGallery.on('slideChange', function (e) {
+        console.log(e.activeIndex);
+        productThumbsSlides.forEach(thumbSlide => {
+            thumbSlide.classList.remove('is-active')
+        })
+        productThumbsSlides[e.activeIndex].classList.add('is-active')
+    })
+}
 
 
-
-
-const swiperProductGallery = new Swiper('.product-gallery-slider', {
-    loop: false,
-    grabCursor: true,
-    slidesPerView: 2,
-    setWrapperSize: true,
-    spaceBetween: 10,
-    navigation: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        768: {
-            // allowTouchMove: false,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            grabCursor: false,
-            speed: 200,
-        }}
-});
 
 const productThumbsSlides = document.querySelectorAll('.product-thumbs__item')
 if (productThumbsSlides.length > 0) {
@@ -1518,10 +1530,3 @@ if (productThumbsSlides.length > 0) {
 //     }
 // });
 
-swiperProductGallery.on('slideChange', function (e) {
-    console.log(e.activeIndex);
-    productThumbsSlides.forEach(thumbSlide => {
-        thumbSlide.classList.remove('is-active')
-    })
-    productThumbsSlides[e.activeIndex].classList.add('is-active')
-})

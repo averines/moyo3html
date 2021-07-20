@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главная</title>
+  <title>Личный кабинет - Личные данные ИП</title>
   <meta name="description"
     content="Стильная одежда мелким оптом по низкой цене для всех без исключения! Закажите одежду для всей семьи по оптовым ценам или совершите совместную покупку | Optmoyo.ru" />
   <meta name="robots" content="index, follow">
@@ -799,6 +799,7 @@
                 <div class="info-plate">
                   <div class="info-plate__title">ИП Македонский А.С. / ИНН 7707083893</div>
                   <div class="info-plate__content">
+                    <p class="text-main text-bold">ID Клиента: 254816</p>
                     <p>Для изменения формы собственности, названия организации, ИНН, ФИО, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
                   </div>
                 </div>
@@ -946,7 +947,7 @@
             <div class="modals">
               <div class="modals__item modal" id="modalInfo1">
                 <div class="modal__title">Изменение пароля</div>
-                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-password-actual" type="password" name="user-password-actual" required autocomplete="user-password-actual" />
@@ -968,18 +969,18 @@
                       <button type="button" class="password-icon"></button>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled type="submit">Изменить</button>
+                  <button class="btn btn-main" type="submit" disabled>Изменить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo2">
                 <div class="modal__title">Изменение телефона</div>
-                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-phone" type="text" name="user-phone" required />
-                      <label for="user-phone">Текущий номер</label>
-                      <input id="user-phone-country" type="text" name="user-phone-country" hidden value="" />
-                      <div class="custom-select" data-input-id="user-phone-country">
+                      <input id="user-phone-new" type="text" name="user-phone-new" required />
+                      <label for="user-phone-new">Текущий номер</label>
+                      <input id="user-phone-new-country" type="text" name="user-phone-new-country" hidden value="" />
+                      <div class="custom-select" data-input-id="user-phone-new-country">
                         <div class="custom-select__selected">
                           <img src="./assets/img/icons/flags/05.svg" alt="Россия">
                         </div>
@@ -1010,31 +1011,31 @@
                             <img src="./assets/img/icons/flags/05.svg" alt="Россия">
                           </div>
                         </div>
-
+            
                       </div>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo3">
                 <div class="modal__title">Изменение города доставки</div>
-                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-delivery-city" type="text" name="user-delivery-city" required />
-                      <label for="user-delivery-city">Текущий город доставки</label>
+                      <input id="user-delivery-new-city" type="text" name="user-delivery-new-city" required />
+                      <label for="user-delivery-new-city">Текущий город доставки</label>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo4">
                 <div class="modal__title">Изменение транспортной компании</div>
-                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group">
-                      <select class="form-group__select w-100" name="user-transport" id="user-transport" required>
+                      <select class="form-group__select w-100" name="user-transport" id="user-transport">
                         <option value="user-transport2">Байкал-Сервис</option>
                         <option value="user-transport3">Возовоз</option>
                         <option value="user-transport3">Деловые линии</option>
@@ -1044,53 +1045,52 @@
                       </select>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
+                  <button class="btn btn-main" disabled>Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo5">
                 <div class="modal__title">Новый адрес доставки</div>
-                <form class="modal__form js-form-check" action="personal-data-ip-firsttime.html" method="POST">
+                <form class="modal__form js-form-check" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-address-index" type="text" name="user-address-index" required />
-                      <label for="user-address-index">Почтовый индекс</label>
+                      <input id="user-delivery-index" type="text" name="user-delivery-index" required />
+                      <label for="user-delivery-index">Почтовый индекс</label>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group">
-                      <input id="user-address-region" type="text" name="user-address-region" />
-                      <label for="user-address-region">Регион, область, район</label>
+                      <input id="user-delivery-region" type="text" name="user-delivery-region" />
+                      <label for="user-delivery-region">Регион, область, район</label>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-address-city" type="text" name="user-address-city" required />
-                      <label for="user-address-city">Населенный пункт</label>
+                      <input id="user-delivery-city" type="text" name="user-delivery-city" required />
+                      <label for="user-delivery-city">Населенный пункт</label>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-address-street" type="text" name="user-address-street" required />
-                      <label for="user-address-street">Улица</label>
+                      <input id="user-delivery-street" type="text" name="user-delivery-street" required />
+                      <label for="user-delivery-street">Улица</label>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group form-group--required">
-                      <input id="user-address-house" type="text" name="user-address-house" required />
-                      <label for="user-address-house">Дом, стр./корп.</label>
+                      <input id="user-delivery-house" type="text" name="user-delivery-house" required />
+                      <label for="user-delivery-house">Дом, стр./корп.</label>
                     </div>
                     <div class="form-group form-group--required">
-                      <input id="user-address-apartment" type="text" name="user-address-apartment" required />
-                      <label for="user-address-apartment">Кв./офис</label>
+                      <input id="user-delivery-apartment" type="text" name="user-delivery-apartment" required />
+                      <label for="user-delivery-apartment">Кв./офис</label>
                     </div>
                   </div>
-
-                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo6">
                 <div class="modal__title">Новый гостевой логин</div>
-                <form class="modal__form js-form-check" action="/" method="POST">
+                <form class="modal__form" action="/" method="POST">
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-guest-email" type="text" name="user-guest-email" required />
@@ -1123,7 +1123,83 @@
                         вверх?</label>
                     </div>
                   </div>
-                  <button class="btn btn-main" disabled type="submit">Сохранить</button>
+                  <button class="btn btn-main" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo7">
+                <div class="modal__title">Изменение фактического адреса</div>
+                <form class="modal__form js-form-check" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-index" type="text" name="user-address-index" required />
+                      <label for="user-address-index">Почтовый индекс</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input id="user-address-country" type="text" name="user-address-country" required />
+                      <label for="user-address-country">Страна</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <input id="user-address-region" type="text" name="user-address-region" />
+                      <label for="user-address-region">Регион, область, район</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-city" type="text" name="user-address-city" required />
+                      <label for="user-address-city">Населенный пункт</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-street" type="text" name="user-address-street" required />
+                      <label for="user-address-street">Улица</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-address-house" type="text" name="user-address-house" required />
+                      <label for="user-address-house">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group form-group--required">
+                      <input id="user-address-apartment" type="text" name="user-address-apartment" required />
+                      <label for="user-address-apartment">Кв./офис</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo8">
+                <div class="modal__title">Изменение банковских реквизитов</div>
+                <form class="modal__form js-form-check" action="/" method="POST">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-bank-bik" type="text" name="user-bank-bik" required />
+                      <label for="user-bank-bik">БИК</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-bank-title" type="text" name="user-bank-title" required />
+                      <label for="user-bank-title">Название банка</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-bank-ks" type="text" name="user-bank-ks" required />
+                      <label for="user-bank-ks">К/С</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-bank-rs" type="text" name="user-bank-rs" required />
+                      <label for="user-bank-rs">Р/С</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" type="submit" disabled>Сохранить</button>
                 </form>
               </div>
             </div>
