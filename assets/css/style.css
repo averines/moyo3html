@@ -8591,28 +8591,8 @@ textarea {
   opacity: 0.8;
 }
 
-.product-gallery-slider__sticky::after {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  background-color: #e7003e;
-  color: white;
-  font-size: 0.65em;
-  text-transform: uppercase;
-  padding: 0.33em 1em;
-  z-index: 1;
-}
-
-.product-gallery-slider__sticky--new::after {
-  content: "Новинка";
-}
-
 .product-gallery-slider:hover .swiper-nav {
   opacity: 1;
-}
-
-.product-gallery-slider .swiper-nav {
-  display: none;
 }
 
 .product-gallery-slider .swiper-pagination {
@@ -8634,19 +8614,18 @@ textarea {
 }
 
 .product-gallery-slider .swiper-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: 40px;
   position: absolute;
+  top: calc(50% - 70px);
   bottom: 0;
   left: 0;
   opacity: 0.7;
@@ -8656,8 +8635,8 @@ textarea {
 
 .product-gallery-slider .swiper-button-prev,
 .product-gallery-slider .swiper-button-next {
-  height: 40px;
-  width: 40px;
+  height: 100px;
+  width: 50px;
   position: relative;
   background-color: rgba(16, 16, 16, 0.15);
   margin: 0;
@@ -8670,11 +8649,11 @@ textarea {
 .product-gallery-slider .swiper-button-prev:after,
 .product-gallery-slider .swiper-button-next:after {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   display: block;
-  background: url(../img/icons/arrow.svg) no-repeat center;
-  background-size: 35%;
+  background: url(../img/icons/arrow-thin.svg) no-repeat center;
+  background-size: 45%;
   -webkit-filter: brightness(10);
           filter: brightness(10);
   -webkit-transform: rotate(90deg);
@@ -8688,9 +8667,17 @@ textarea {
   pointer-events: all;
 }
 
+.product-gallery-slider .swiper-button-prev {
+  border-radius: 0 5px 5px 0;
+}
+
 .product-gallery-slider .swiper-button-prev::after {
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+.product-gallery-slider .swiper-button-next {
+  border-radius: 5px 0 0 5px;
 }
 
 .product-gallery-slider .swiper-button-next::after {
