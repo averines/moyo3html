@@ -264,7 +264,6 @@ window.addEventListener('resize', () => {
     if (clientWidth < 768) {
         togglersItems.forEach(item => {
             item.classList.remove('is-active')
-            console.log("123");
         })
     }
 }, false);
@@ -1575,3 +1574,15 @@ $("[data-fancybox='modal']").fancybox({
         }
     }
 });
+
+const brandCateroryListItems = document.querySelectorAll('.category-list__item')
+if (brandCateroryListItems.length > 0) {
+    brandCateroryListItems.forEach(brandCateroryListItem => {
+        brandCateroryListItem.addEventListener('click', () => {
+            brandCateroryListItems.forEach( item => {
+                item.classList.remove('is-active')
+            })
+            brandCateroryListItem.classList.add('is-active')
+        })
+    })
+}

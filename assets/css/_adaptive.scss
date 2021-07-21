@@ -2388,10 +2388,6 @@
         width: 450px;
       }
     }
-
-    .product-info {
-
-    }
   }  
 }
 
@@ -2438,6 +2434,11 @@
 
   .order-sent {
     padding: 4em;
+  }
+
+  .category-list-wrapper {
+  flex-direction: row;
+  column-gap: 20px;
   }
 }
 

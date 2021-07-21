@@ -7583,7 +7583,44 @@ textarea {
   }
 }
 
+.category-list-wrapper {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 
+  .category-list-title {
+    color: $text-light;
+    font-size: 13px;
+    padding: 0.5em 0;
+    display: inline-block;
+  }
+
+  .category-list {
+    display: flex;
+    column-gap: 15px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+
+    &__item {
+      font-size: 14px;
+      padding: 0.5em 0.75em;
+      border: 1px solid $line-light;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: $tr;
+
+      &:hover {
+        background-color: $bg-light
+      }
+
+      &.is-active {
+        border-color: $text;
+        background-color: $bg-light
+      }
+    }
+  }
+}
 
 @import "animations";
 @import "adaptive";

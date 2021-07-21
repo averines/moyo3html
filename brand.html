@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главная</title>
+  <title>Altex &mdash; все товары бренда</title>
   <meta name="description"
     content="Стильная одежда мелким оптом по низкой цене для всех без исключения! Закажите одежду для всей семьи по оптовым ценам или совершите совместную покупку | Optmoyo.ru" />
   <meta name="robots" content="index, follow">
@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="./assets/js/fancybox/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="./assets/js/tiny-slider/tiny-slider.css" />
+  <link rel="stylesheet" href="./assets/js/ion-range-slider/ion.rangeSlider.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 
   <script src="./assets/js/jquery-3.6.0.min.js" defer></script>
@@ -28,6 +29,7 @@
   <script src="./assets/js/tiny-slider/tiny-slider.js" defer></script>
   <script src="./assets/js/mixitup/mixitup.min.js" defer></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU"></script>
+  <script src="./assets/js/ion-range-slider/ion.rangeSlider.min.js" defer></script>
   <script src="./assets/js/script.js" defer></script>
 </head>
 
@@ -749,20 +751,2141 @@
   </header>
 
   <main>
-    <div class="container">
+    <div class="container container--pagination">
       <nav>
         <ol class="breadcrumbs">
           <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
-          <li><span>Бренд</span></li>
+          <li><a href="brands.html">Бренды</a></li>
+          <li><span>Altex</span></li>
         </ol>
       </nav>
+
       <div class="pagetitle">
-        <h1 class="pagetitle__header">Бренд</h1>
+        <h1 class="pagetitle__header">Altex</h1>
+        <div class="pagetitle__counter">256 товаров</div>
+        <a href="#filter" id="btn-filter" class="btn-filter" aria-label="Фильтры">Фильтры</a>
+      </div>
+
+      <div class=" pagination pagination--top">
+        <div class="pagination__btns">
+          <a class="pagination__prev" href="#"></a>
+          <a class="pagination__next" href="#"></a>
+        </div>
+        <div class="pagination__links">
+          <a class="pagination__link" href="#">1</a>
+          <span></span>
+          <a class="pagination__link" href="#">3</a>
+          <a class="pagination__link pagination__link--active" href="#">4</a>
+          <a class="pagination__link" href="#">5</a>
+          <span></span>
+          <a class="pagination__link" href="#">315</a>
+        </div>
+      </div>
+
+      <div class="category-list-wrapper">
+        <div class="category-list-title">Категории бренда:</div>
+        <div class="category-list">
+          <div class="category-list__item">Домашние костюмы</div>
+          <div class="category-list__item">Ночные сорочки, пижамы</div>
+          <div class="category-list__item">Халаты</div>
+          <div class="category-list__item">Платья</div>
+          <div class="category-list__item">Блузы, джемперы</div>
+          <div class="category-list__item">Туники</div>
+          <div class="category-list__item">Брюки, бриджи</div>
+          <div class="category-list__item">Юбки, Шорты</div>
+          <div class="category-list__item">Костюмы</div>
+        </div>
+      </div>
+
+      <div class="togglers">
+        <div class="toggler-sort-wrapper">
+          <div class="togglers__item toggler-sort">
+            <div class="toggler-sort__item is-active">Популярные</div>
+            <div class="toggler-sort__item">Наш выбор</div>
+            <div class="toggler-sort__item">Дорогие</div>
+            <div class="toggler-sort__item">Дешевые</div>
+            <div class="toggler-sort__item">Новые</div>
+            <div class="toggler-sort__item">Старые</div>
+            <div class="toggler-sort__item">Скидки</div>
+            <div class="toggler-sort__item">Акции</div>
+          </div>
+        </div>
+
+        <div class="toggler-count-wrapper">
+          <div class="togglers__item toggler-count">
+            <div class="toggler-count__item is-active">100</div>
+            <div class="toggler-count__item">36</div>
+            <div class="toggler-count__item">50</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-filters">
       </div>
     </div>
-    <div class="container">
+    <div class="menu-filters-wrapper">
+      <div class="menu-filters">
+        <div class="menu-filters__title">
+          <button class="menu-filters__close"></button>
+          Фильтры
+          <button class="menu-filters__clear" id="menu-filters-clear">Очистить</button>
+        </div>
+        <div class="menu-filters__content accordion">
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Тип</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox filter-checkbox--long">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-1">
+                  <label for="filter-checkbox-01-item-1">
+                    <span class="filter-checkbox__title">Повседневные</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-2">
+                  <label for="filter-checkbox-01-item-2">
+                    <span class="filter-checkbox__title">Офисные</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-3">
+                  <label for="filter-checkbox-01-item-3">
+                    <span class="filter-checkbox__title">Трикотажные</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-4">
+                  <label for="filter-checkbox-01-item-4">
+                    <span class="filter-checkbox__title">Коктейльные</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-5">
+                  <label for="filter-checkbox-01-item-5">
+                    <span class="filter-checkbox__title">Вечерние</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-6">
+                  <label for="filter-checkbox-01-item-6">
+                    <span class="filter-checkbox__title">Длинные</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-7">
+                  <label for="filter-checkbox-01-item-7">
+                    <span class="filter-checkbox__title">Костюмы</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-8">
+                  <label for="filter-checkbox-01-item-8">
+                    <span class="filter-checkbox__title">Сарафаны</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-9">
+                  <label for="filter-checkbox-01-item-9">
+                    <span class="filter-checkbox__title">Летние</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-10">
+                  <label for="filter-checkbox-01-item-10">
+                    <span class="filter-checkbox__title">Короткие</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-11">
+                  <label for="filter-checkbox-01-item-11">
+                    <span class="filter-checkbox__title">Короткие</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-12">
+                  <label for="filter-checkbox-01-item-12">
+                    <span class="filter-checkbox__title">Короткие</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-01-item-13">
+                  <label for="filter-checkbox-01-item-13">
+                    <span class="filter-checkbox__title">Короткие</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Материал</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-1">
+                  <label for="filter-checkbox-02-item-1">
+                    <span class="filter-checkbox__title">Хлопок</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-2">
+                  <label for="filter-checkbox-02-item-2">
+                    <span class="filter-checkbox__title">Лен</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-3">
+                  <label for="filter-checkbox-02-item-3">
+                    <span class="filter-checkbox__title">Шерсть</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-4">
+                  <label for="filter-checkbox-02-item-4">
+                    <span class="filter-checkbox__title">Кашемир</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-5">
+                  <label for="filter-checkbox-02-item-5">
+                    <span class="filter-checkbox__title">Вискоза</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-6">
+                  <label for="filter-checkbox-02-item-6">
+                    <span class="filter-checkbox__title">Полиэстр</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-7">
+                  <label for="filter-checkbox-02-item-7">
+                    <span class="filter-checkbox__title">Нейлон</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-8">
+                  <label for="filter-checkbox-02-item-8">
+                    <span class="filter-checkbox__title">Шелк</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-9">
+                  <label for="filter-checkbox-02-item-9">
+                    <span class="filter-checkbox__title">Шелк</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-10">
+                  <label for="filter-checkbox-02-item-10">
+                    <span class="filter-checkbox__title">Шелк</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-02-item-11">
+                  <label for="filter-checkbox-02-item-11">
+                    <span class="filter-checkbox__title">Шелк</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Цвет</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-1">
+                  <label for="filter-checkbox-03-item-1">
+                    <span class="icon-color icon-color--1"></span>
+                    <span class="filter-checkbox__title">Белый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-2">
+                  <label for="filter-checkbox-03-item-2">
+                    <span class="icon-color icon-color--2"></span>
+                    <span class="filter-checkbox__title">Черно-белый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-3">
+                  <label for="filter-checkbox-03-item-3">
+                    <span class="icon-color icon-color--3"></span>
+                    <span class="filter-checkbox__title">Желтый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-4">
+                  <label for="filter-checkbox-03-item-4">
+                    <span class="icon-color icon-color--4"></span>
+                    <span class="filter-checkbox__title">Серый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-5">
+                  <label for="filter-checkbox-03-item-5">
+                    <span class="icon-color icon-color--5"></span>
+                    <span class="filter-checkbox__title">Зеленый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-6">
+                  <label for="filter-checkbox-03-item-6">
+                    <span class="icon-color icon-color--6"></span>
+                    <span class="filter-checkbox__title">Сиреневый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-7">
+                  <label for="filter-checkbox-03-item-7">
+                    <span class="icon-color icon-color--7"></span>
+                    <span class="filter-checkbox__title">Бирюзовый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-8">
+                  <label for="filter-checkbox-03-item-8">
+                    <span class="icon-color icon-color--8"></span>
+                    <span class="filter-checkbox__title">Разноцветный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-9">
+                  <label for="filter-checkbox-03-item-9">
+                    <span class="icon-color icon-color--8"></span>
+                    <span class="filter-checkbox__title">Разноцветный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-10">
+                  <label for="filter-checkbox-03-item-10">
+                    <span class="icon-color icon-color--8"></span>
+                    <span class="filter-checkbox__title">Разноцветный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-03-item-11">
+                  <label for="filter-checkbox-03-item-11">
+                    <span class="icon-color icon-color--8"></span>
+                    <span class="filter-checkbox__title">Разноцветный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Размеры</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-1">
+                  <label for="filter-checkbox-04-item-1">
+                    <span class="filter-checkbox__title">23/32</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-2">
+                  <label for="filter-checkbox-04-item-2">
+                    <span class="filter-checkbox__title">23/34</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-3">
+                  <label for="filter-checkbox-04-item-3">
+                    <span class="filter-checkbox__title">24/32</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-4">
+                  <label for="filter-checkbox-04-item-4">
+                    <span class="filter-checkbox__title">24/34</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-5">
+                  <label for="filter-checkbox-04-item-5">
+                    <span class="filter-checkbox__title">25</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-6">
+                  <label for="filter-checkbox-04-item-6">
+                    <span class="filter-checkbox__title">25/32</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-7">
+                  <label for="filter-checkbox-04-item-7">
+                    <span class="filter-checkbox__title">25/34</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-8">
+                  <label for="filter-checkbox-04-item-8">
+                    <span class="filter-checkbox__title">26</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-9">
+                  <label for="filter-checkbox-04-item-9">
+                    <span class="filter-checkbox__title">26</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-04-item-10">
+                  <label for="filter-checkbox-04-item-10">
+                    <span class="filter-checkbox__title">26</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Сезон</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-05-item-1">
+                  <label for="filter-checkbox-05-item-1">
+                    <span class="filter-checkbox__title">Демисезон</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-05-item-2">
+                  <label for="filter-checkbox-05-item-2">
+                    <span class="filter-checkbox__title">Весна – Лето</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-05-item-3">
+                  <label for="filter-checkbox-05-item-3">
+                    <span class="filter-checkbox__title">Осень – Зима</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
 
+              </div>
+            </div>
+
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Стиль</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-checkbox">
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-1">
+                  <label for="filter-checkbox-06-item-1">
+                    <span class="filter-checkbox__title">Базовый</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-2">
+                  <label for="filter-checkbox-06-item-2">
+                    <span class="filter-checkbox__title">Деловой</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-3">
+                  <label for="filter-checkbox-06-item-3">
+                    <span class="filter-checkbox__title">Нарядный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-4">
+                  <label for="filter-checkbox-06-item-4">
+                    <span class="filter-checkbox__title">Повседневный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-8">
+                  <label for="filter-checkbox-06-item-5">
+                    <span class="filter-checkbox__title">Романтический</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-06-item-6">
+                  <label for="filter-checkbox-06-item-6">
+                    <span class="filter-checkbox__title">Сексуальный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-05-item-7">
+                  <label for="filter-checkbox-05-item-7">
+                    <span class="filter-checkbox__title">Спортивный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+                <div class="filter-checkbox__item">
+                  <input type="checkbox" name="" id="filter-checkbox-05-item-8">
+                  <label for="filter-checkbox-05-item-8">
+                    <span class="filter-checkbox__title">Ультрамодный</span>
+                    <span class="filter-checkbox__count">888</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-filters__item filter-item accordion__item">
+            <div class="filter-item__title accordion__title">Цена</div>
+            <div class="filter-item__content accordion__content">
+              <div class="filter-range">
+                <div class="filter-range__controls">
+                  <input type="text" class="js-range-from" value="0">
+                  –
+                  <input type="text" class="js-range-to" value="0">
+                </div>
+                <input type="text" class="js-range-slider" name="my_range" value="">
+              </div>
+
+
+            </div>
+            <!-- <div class="filter-item__content accordion__content">
+                  <div class="filter-range">
+                    <div class="filter-range__values range-values">
+                      <div class="range-values__item">
+                        <div class="range-values__start" data-value="1">1</div>
+                      </div>
+                      –
+                      <div class="range-values__item">
+                        <div class="range-values__end" data-value="1000">1000</div>
+                      </div>
+                    </div>
+                    <div class="filter-range__inputs range-inputs">
+                      <div class="range-inputs__slider"></div>
+                      <input class="range-inputs__start" type="range" min="100" max="1000" step="1" value="100">
+                      <input class="range-inputs__end" type="range" min="100" max="1000" step="1" value="1000">
+                    </div>
+                  </div>
+                </div> -->
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="container container--big">
+      <div class="products">
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-wrapper">
+          <div class="product">
+            <div class="product__colors color-variants">
+              <a class="color-variants__item" href="#" data-color-variant="01">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                  <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                </picture>
+              </a>
+              <a class="color-variants__item" href="#" data-color-variant="02">
+                <picture>
+                  <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                  <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                </picture>
+              </a>
+            </div>
+            <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+            <a href="#quick-view" class="product__quick-view"></a>
+            <a href="product.html" class="product__link">
+              <div class="product__pic">
+                <div class="sticky-wrapper">
+                  <div class="product__sticky product__sticky--new"></div>
+                  <div class="product__sticky product__sticky--hit"></div>
+                  <div class="product__sticky product__sticky--action">26/06</div>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 2100px)" srcset="./i/products/01-1-462.webp">
+                  <source type="image/webp" media="(min-width: 1900px)" srcset="./i/products/01-1-302.webp">
+                  <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                  <source type="image/webp" srcset="./i/products/01.webp">
+                  <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                </picture>
+              </div>
+              <div class="product__info">
+                <div class="product__header">
+                  <div class="product__brand">Vittoria Vicci 123</div>
+                  <div class="product__title">Платье</div>
+                </div>
+                <div class="product__price price">
+                  <div class="price__old">2 830,00</div>
+                  <div class="price__profit">175,00</div>
+                  <div class="price__break"></div>
+                  <div class="price__base">2 655,00</div>
+                  <div class="price__discount">13</div>
+                </div>
+              </div>
+            </a>
+            <div class="product__sizes size-variants">
+              <a href="#" class="size-variants__item">40</a>
+              <a href="#" class="size-variants__item">42</a>
+              <a href="#" class="size-variants__item">44</a>
+              <a href="#" class="size-variants__item">46</a>
+              <a href="#" class="size-variants__item">48/50</a>
+              <a href="#" class="size-variants__item">50</a>
+              <a href="#" class="size-variants__item">52</a>
+              <a href="#" class="size-variants__item">52-54</a>
+              <a href="#" class="size-variants__item">54-56</a>
+              <a href="#" class="size-variants__item">56-58</a>
+              <a href="#" class="size-variants__item">56XL-58XXL</a>
+              <a href="#" class="size-variants__item">60XL-70XXL</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container--pagination">
+      <div class="pagination pagination--bottom">
+        <div class="pagination__btns">
+          <a class="pagination__prev" href="#"></a>
+          <a class="pagination__next" href="#"></a>
+        </div>
+        <div class="pagination__links">
+          <a class="pagination__link" href="#">1</a>
+          <span></span>
+          <a class="pagination__link" href="#">3</a>
+          <a class="pagination__link pagination__link--active" href="#">4</a>
+          <a class="pagination__link" href="#">5</a>
+          <span></span>
+          <a class="pagination__link" href="#">315</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-productslist">
+      <h2 class="visually-hidden">Вы недавно смотрели</h2>
+      <div class="container container--pr0">
+        <div class="product-group">
+          <div class="product-group__header">
+            <div class="product-group__title">Вы недавно смотрели</div>
+          </div>
+          <div class="product-mini-slider">
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-mini-slider__item">
+              <div class="product-wrapper">
+                <div class="product">
+                  <div class="product__colors color-variants">
+                    <a class="color-variants__item" href="#" data-color-variant="01">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/01-1-60.webp">
+                        <img src="./i/products/01-1-60.jpg" alt="Цвет 1">
+                      </picture>
+                    </a>
+                    <a class="color-variants__item" href="#" data-color-variant="02">
+                      <picture>
+                        <source type="image/webp" srcset="./i/products/02-1-60.webp">
+                        <img src="./i/products/02-1-60.jpg" alt="Цвет 2">
+                      </picture>
+                    </a>
+                  </div>
+                  <a href="#favorite" class="product__favorite" aria-label="В избранное"></a>
+                  <a href="#quick-view" class="product__quick-view"></a>
+                  <a href="product.html" class="product__link">
+                    <div class="product__pic">
+                      <div class="sticky-wrapper">
+                        <div class="product__sticky product__sticky--new"></div>
+                        <div class="product__sticky product__sticky--hit"></div>
+                        <div class="product__sticky product__sticky--action">26/06</div>
+                      </div>
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="./i/products/01-1-232.webp">
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="./i/products/01-1-200.webp">
+                        <source type="image/webp" srcset="./i/products/01.webp">
+                        <img src="./i/products/01.jpg" alt="Новая коллекция весна-лето от Brioni">
+                      </picture>
+                    </div>
+                    <div class="product__info">
+                      <div class="product__header">
+                        <div class="product__brand">Vittoria Vicci</div>
+                        <div class="product__title">Платье</div>
+                      </div>
+                      <div class="product__price price">
+                        <div class="price__old">2 830,00</div>
+                        <div class="price__profit">175,00</div>
+                        <div class="price__break"></div>
+                        <div class="price__base">2 655,00</div>
+                        <div class="price__discount">13</div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="product__sizes size-variants">
+                    <a href="#" class="size-variants__item">40</a>
+                    <a href="#" class="size-variants__item">42</a>
+                    <a href="#" class="size-variants__item">44</a>
+                    <a href="#" class="size-variants__item">46</a>
+                    <a href="#" class="size-variants__item">48/50</a>
+                    <a href="#" class="size-variants__item">50</a>
+                    <a href="#" class="size-variants__item">52</a>
+                    <a href="#" class="size-variants__item">52-54</a>
+                    <a href="#" class="size-variants__item">54-56</a>
+                    <a href="#" class="size-variants__item">56-58</a>
+                    <a href="#" class="size-variants__item">56XL-58XXL</a>
+                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -820,19 +2943,19 @@
               <a class="link-phone" href="tel:+78003012575">8 (800) 301-25-75</a>
               <a class="link-callback" data-fancybox data-src="#modalcallback" href="javascript:;">Заказать звонок</a>
             </div>
-  
+
             <div class="footer-top__worktime worktime">
               <div class="worktime__item">Понедельник – пятница:<span> c 10:00 до 20:00</span></div>
               <div class="worktime__item">Суббота, воскресенье<span> – выходные дни</span></div>
             </div>
-  
+
             <div class="footer-top__address address">
               <div class="address__item">Москва | Окружной проезд | 30A</div>
               <div class="address__item">
                 <a class="link-map js-mapmodal" data-fancybox data-src="#modalmap" href="javascript:;">Схема проезда</a>
               </div>
             </div>
-  
+
             <div class="footer-top__payment">
               <img src="./assets/img/icons/payment-visa.svg" alt="visa" loading="lazy" />
               <img src="./assets/img/icons/payment-mc.svg" alt="master card" loading="lazy" />
@@ -881,7 +3004,7 @@
           </div>
           <button type="submit" class="btn btn-main">Позвоните мне</button>
         </form>
-  
+
         <div class="form-text-wrapper">
           <div class="form-text form-text--phones">
             <div class="form-text__icon form-text__icon--phone"></div>
@@ -1057,7 +3180,7 @@
                 <label for=type1-city">Город доставки</label>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type1-name" type="text" name="type1-name" required>
@@ -1068,7 +3191,7 @@
                 <label for=type1-email">Эл. почта (логин)</label>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group">
                 <input id="type1-patronymic" type="text" name="type1-patronymic">
@@ -1080,7 +3203,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type1-phone" type="text" name="type1-phone" required>
@@ -1125,7 +3248,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group js-btn-code-wrapper">
                 <button class="btn btn-main mb-3 w-100 js-btn-code" type="submit" disabled>Получить код</a>
@@ -1138,7 +3261,7 @@
                 <button class="btn btn-main mb-3 w-100 js-btn-registration" type="submit" disabled>Зарегистрироваться</a>
               </div>
             </div>
-  
+
           </form>
         </div>
       </div>
@@ -1156,7 +3279,7 @@
                 <label for=type2-city">Город доставки</label>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-name" type="text" name="type2-name" required>
@@ -1167,7 +3290,7 @@
                 <label for=type2-email">Эл. почта (логин)</label>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-patronymic" type="text" name="type2-patronymic" required>
@@ -1179,7 +3302,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group form-group--required">
                 <input id="type2-phone" type="text" name="type2-phone" required>
@@ -1224,7 +3347,7 @@
                 <button type="button" class="password-icon"></button>
               </div>
             </div>
-  
+
             <div class="form-row">
               <div class="form-group js-btn-code-wrapper">
                 <button class="btn btn-main mb-3 w-100 js-btn-code" type="submit" disabled>Получить код</a>
