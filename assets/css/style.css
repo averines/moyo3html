@@ -6358,11 +6358,11 @@ hr.dotted {
   display: block;
   border: none;
   background: none;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   opacity: 0.5;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2 ease-in-out;
+  transition: background-color 0.2 ease-in-out;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -6373,6 +6373,11 @@ hr.dotted {
 
 .quantity-counter__btn--decrease {
   background: url(../img/icons/minus.svg) no-repeat center;
+}
+
+.quantity-counter__btn--delete {
+  background: url(../img/icons/bin-1.svg) no-repeat center;
+  background-size: 70%;
 }
 
 .quantity-counter__btn:hover {
@@ -9464,15 +9469,12 @@ textarea {
     border-bottom: none;
   }
   .order-item__table thead tr td {
-    padding: 0.75em 0.5em;
+    padding: 0.75em 0.5em 4em 0.75em;
     font-size: 0.8em;
     border: none;
   }
   .order-item__table tbody tr td {
     border-bottom: none;
-  }
-  .order-item__table tbody tr:first-child td {
-    padding-top: 4em;
   }
   .current-discount__content {
     display: -ms-grid;

@@ -1520,7 +1520,7 @@ $('[data-fancybox="product-gallery"]').fancybox({
     protect: true
 });
 
-
+// новый слайдер в модальном окне фансибокс
 $("[data-fancybox='modal']").fancybox({
     afterShow: function (instance, slide) {
         if (document.querySelectorAll('.product-gallery').length > 0) {
@@ -1575,6 +1575,8 @@ $("[data-fancybox='modal']").fancybox({
     }
 });
 
+
+// имитация выбора категории на странице бренда
 const brandCateroryListItems = document.querySelectorAll('.category-list__item')
 if (brandCateroryListItems.length > 0) {
     brandCateroryListItems.forEach(brandCateroryListItem => {
@@ -1585,4 +1587,40 @@ if (brandCateroryListItems.length > 0) {
             brandCateroryListItem.classList.add('is-active')
         })
     })
+}
+
+
+// имитация изменения количества товара в корзине
+const quantityCounters = document.querySelectorAll('.quantity-counter')
+if (quantityCounters.length > 0) {
+
+    quantityCounters.forEach(quantityCounter => {
+        let quantityCounterDecrease = quantityCounter.querySelector('.quantity-counter__btn--decrease')
+        let quantityCounterIncrease = quantityCounter.querySelector('.quantity-counter__btn--increase')
+        let quantityCounterValueElement = quantityCounter.querySelector('.quantity-counter__value')
+        let quantityCounterValue = parseInt(quantityCounterValueElement.innerHTML)
+        let orderProductRow = quantityCounter.closest('tr')
+
+        
+        quantityCounterDecrease.addEventListener('click', () => {
+            quantityCounterValue--
+            quantityCounterValueElement.innerHTML = quantityCounterValue
+            if (quantityCounterValue < 2) {
+                quantityCounterDecrease.classList.add('quantity-counter__btn--delete')
+            }
+
+            if (quantityCounterValue < 1) {
+                orderProductRow.style.display = 'none';
+            }
+        })
+
+        quantityCounterIncrease.addEventListener('click', () => {
+            quantityCounterValue++
+            quantityCounterValueElement.innerHTML = quantityCounterValue
+            if (quantityCounterValue > 1) {
+                quantityCounterDecrease.classList.remove('quantity-counter__btn--delete')
+            }
+        })
+    })
+    
 }
