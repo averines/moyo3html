@@ -2507,6 +2507,7 @@
     align-items: center;
     flex-wrap: wrap;
     column-gap: 0.5em;
+    margin-bottom: 10px;
 
     &__title {
       text-transform: uppercase;
@@ -7625,6 +7626,77 @@ textarea {
       }
     }
   }
+}
+
+.error {
+  margin-bottom: 20px;
+
+  &__pic {
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+    // border: 1px solid red;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+
+    img, picture {
+      // width: 100%;
+      display: block;
+    }
+
+    .error-pic__img {
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+      z-index: 1;
+      width: 120px;
+    }
+
+    .error-pic__text {
+      position: absolute;
+      width: 100%;
+      bottom: -4px;
+      right: 0;
+      z-index: 0;
+      transition: $tr;
+    }
+  }
+
+  &__info {
+    background: $bg-light;
+    padding: 15px 15px 35px 15px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: normal;
+    margin-top: 10px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__description{
+    margin: 12px 0 26px 0;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+  display: block;
+  width: 160px;
+  max-width: 160px;
+  min-width: 0;
+}
+
+
 }
 
 @import "animations";
