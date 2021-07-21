@@ -8792,7 +8792,7 @@ textarea {
 .error__pic .error-pic__text {
   position: absolute;
   width: 100%;
-  bottom: -4px;
+  bottom: -7px;
   right: 0;
   z-index: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -9948,7 +9948,7 @@ textarea {
     display: flex;
     background-color: #f3f2f0;
     max-width: 994px;
-    margin: 100px auto 0 auto;
+    margin: 100px auto 100px auto;
   }
   .error__info {
     -webkit-box-ordinal-group: 2;
