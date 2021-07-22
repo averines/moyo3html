@@ -1586,6 +1586,19 @@ $("[data-fancybox='modal']").fancybox({
 });
 
 
+window.addEventListener('resize', () => {
+    clientWidth = document.body.clientWidth;
+    // console.log(clientWidth);
+
+    if (clientWidth < 1024) {
+        // $("[data-fancybox='modal']").fancybox.close();
+        $.fancybox.close();
+    }
+}, false);
+
+
+
+
 // имитация выбора категории на странице бренда
 const brandCateroryListItems = document.querySelectorAll('.category-list__item')
 if (brandCateroryListItems.length > 0) {

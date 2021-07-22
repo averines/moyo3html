@@ -234,7 +234,7 @@
         width: 168px;
       }
     }
-  }  
+  }
 }
 
 // md
@@ -1157,46 +1157,45 @@
         width: 380px;
         right: -8px;
         path {
-          fill: #F9F9F9;
+          fill: #f9f9f9;
         }
-      }      
-    }
-  }
-
-.error-menu {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 0;
-  flex-wrap: nowrap;
-  margin-top: 20px;
-
-  &__item {
-    flex-basis: 14.3%;
-    padding: 1em 0;
-    border-bottom: none;
-    text-decoration: underline;
-    position: relative;
-    text-align: center;
-
-    &::after {
-      content: '';
-      width: 1px;
-      height: 20px;
-      background-color: $line-light;
-      display: block;
-      position: absolute;
-      right: 0%;
-      top: calc(50% - 10px);
-    }
-
-    &:last-child{
-      &::after {
-        display: none;
       }
     }
-
   }
-}  
+
+  .error-menu {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+
+    &__item {
+      flex-basis: 14.3%;
+      padding: 1em 0;
+      border-bottom: none;
+      text-decoration: underline;
+      position: relative;
+      text-align: center;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: $line-light;
+        display: block;
+        position: absolute;
+        right: 0%;
+        top: calc(50% - 10px);
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 // lg
@@ -1959,7 +1958,7 @@
   .product-wrapper {
     .product {
       &__quick-view {
-        top: 250px;
+        top: 200px;
         font-size: 0.8em;
         max-width: 170px;
 
@@ -2243,6 +2242,17 @@
 
   .body-overlay {
     padding-right: 18px;
+  }
+
+  .price {
+    flex-basis: 65%;
+  }
+
+  .product {
+    &__action-time {
+      text-align: right;
+      max-width: 55px;
+    }
   }
 }
 

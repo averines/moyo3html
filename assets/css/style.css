@@ -3274,8 +3274,6 @@ hr.dotted {
 .product-wrapper .product__action-time {
   font-size: 11px;
   color: #e7003e;
-  text-align: right;
-  max-width: 55px;
 }
 
 .product-wrapper .product:hover {
@@ -3459,8 +3457,6 @@ hr.dotted {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.9em;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
 }
 
 .price__break {
@@ -10298,7 +10294,7 @@ textarea {
     right: -8px;
   }
   .error__pic .error-pic__text path {
-    fill: #F9F9F9;
+    fill: #f9f9f9;
   }
   .error-menu {
     display: -webkit-box;
@@ -10323,7 +10319,7 @@ textarea {
     text-align: center;
   }
   .error-menu__item::after {
-    content: '';
+    content: "";
     width: 1px;
     height: 20px;
     background-color: #d9d9d9;
@@ -10993,7 +10989,7 @@ textarea {
     max-height: 600px;
   }
   .product-wrapper .product__quick-view {
-    top: 250px;
+    top: 200px;
     font-size: 0.8em;
     max-width: 170px;
   }
@@ -11240,6 +11236,14 @@ textarea {
   }
   .body-overlay {
     padding-right: 18px;
+  }
+  .price {
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+  }
+  .product__action-time {
+    text-align: right;
+    max-width: 55px;
   }
 }
 
