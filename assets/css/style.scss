@@ -3193,6 +3193,18 @@
       }
     }
 
+        &[data-subcategory-id="510"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/510.svg);
+      }
+    }
+
+        &[data-subcategory-id="511"] {
+      &::before {
+        background-image: url(../img/icons/subcategories/511.svg);
+      }
+    }
+
     &:hover {
       opacity: 0.8;
 

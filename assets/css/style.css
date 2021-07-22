@@ -4131,6 +4131,14 @@ hr.dotted {
   background-image: url(../img/icons/subcategories/509.svg);
 }
 
+.subcategories-icons__link[data-subcategory-id="510"]::before {
+  background-image: url(../img/icons/subcategories/510.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="511"]::before {
+  background-image: url(../img/icons/subcategories/511.svg);
+}
+
 .subcategories-icons__link:hover {
   opacity: 0.8;
 }
