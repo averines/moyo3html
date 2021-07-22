@@ -5485,8 +5485,8 @@
     }
 
     &--delete {
-       background: url(../img/icons/bin-1.svg) no-repeat center;
-       background-size: 70%;
+      background: url(../img/icons/bin-1.svg) no-repeat center;
+      background-size: 70%;
     }
 
     &:hover {
@@ -7346,7 +7346,7 @@ textarea {
     max-width: 600px;
   }
 
-  .modal-product-info  {
+  .modal-product-info {
     flex-shrink: 0;
     flex-grow: 1;
     max-width: 500px;
@@ -7582,7 +7582,7 @@ textarea {
   }
 
   .swiper-button-next {
-    border-radius:  5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
     &::after {
       transform: rotate(180deg);
     }
@@ -7617,20 +7617,22 @@ textarea {
       transition: $tr;
 
       &:hover {
-        background-color: $bg-light
+        background-color: $bg-light;
       }
 
       &.is-active {
         border-color: $text;
-        background-color: $bg-light
+        background-color: $bg-light;
       }
     }
   }
 }
 
-.error {
-  margin-bottom: 20px;
+.error-wrapper {
+  margin-bottom: 100px;
+}
 
+.error {
   &__pic {
     width: 100%;
     min-height: 200px;
@@ -7639,7 +7641,8 @@ textarea {
     display: flex;
     justify-content: flex-end;
 
-    img, picture {
+    img,
+    picture {
       display: block;
     }
 
@@ -7670,7 +7673,7 @@ textarea {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: normal;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   &__subtitle {
@@ -7678,7 +7681,7 @@ textarea {
     font-size: 15px;
   }
 
-  &__description{
+  &__description {
     margin: 12px 0 26px 0;
   }
 
@@ -7688,13 +7691,32 @@ textarea {
   }
 
   &__btn {
-  display: block;
-  width: 160px;
-  max-width: 160px;
-  min-width: 0;
+    display: block;
+    width: 160px;
+    max-width: 160px;
+    min-width: 0;
+  }
 }
 
+.error-menu {
+  display: grid;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
 
+  &__item {
+    flex-basis: 50%;
+    text-decoration: none;
+    color: $text;
+    padding: 1em;
+    border-bottom: 1px solid $line-light;
+    font-size: 14px;
+    transition: $tr;
+
+    &:hover {
+      color: $text-light;
+    }
+  }
 }
 
 @import "animations";

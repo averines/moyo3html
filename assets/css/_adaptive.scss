@@ -726,12 +726,6 @@
     }
   }
 
-  // .order-buttons {
-  //   justify-content: flex-end;
-  //   flex-direction: row;
-  //   column-gap: $gap;
-  // }
-
   .current-discount__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1123,11 +1117,15 @@
     }
   }
 
+  .error-wrapper {
+    margin: 100px auto 100px auto;
+    max-width: 994px;
+  }
+
   .error {
     display: flex;
     background-color: $bg-light;
-    max-width: 994px;
-    margin: 100px auto 100px auto;
+    // max-width: 994px;
 
     &__info {
       order: 1;
@@ -1164,6 +1162,41 @@
       }      
     }
   }
+
+.error-menu {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+
+  &__item {
+    flex-basis: 14.3%;
+    padding: 1em 0;
+    border-bottom: none;
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 20px;
+      background-color: $line-light;
+      display: block;
+      position: absolute;
+      right: 0%;
+      top: calc(50% - 10px);
+    }
+
+    &:last-child{
+      &::after {
+        display: none;
+      }
+    }
+
+  }
+}  
 }
 
 // lg

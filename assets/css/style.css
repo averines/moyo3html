@@ -8760,8 +8760,8 @@ textarea {
   background-color: #f3f2f0;
 }
 
-.error {
-  margin-bottom: 20px;
+.error-wrapper {
+  margin-bottom: 100px;
 }
 
 .error__pic {
@@ -8777,7 +8777,8 @@ textarea {
           justify-content: flex-end;
 }
 
-.error__pic img, .error__pic picture {
+.error__pic img,
+.error__pic picture {
   display: block;
 }
 
@@ -8808,12 +8809,12 @@ textarea {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: normal;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .error__subtitle {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .error__description {
@@ -8834,6 +8835,33 @@ textarea {
   width: 160px;
   max-width: 160px;
   min-width: 0;
+}
+
+.error-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.error-menu__item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-decoration: none;
+  color: #3d3d3c;
+  padding: 1em;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.error-menu__item:hover {
+  color: #777;
 }
 
 @-webkit-keyframes jump {
@@ -9942,13 +9970,15 @@ textarea {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .error-wrapper {
+    margin: 100px auto 100px auto;
+    max-width: 994px;
+  }
   .error {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-color: #f3f2f0;
-    max-width: 994px;
-    margin: 100px auto 100px auto;
   }
   .error__info {
     -webkit-box-ordinal-group: 2;
@@ -9984,6 +10014,41 @@ textarea {
   }
   .error__pic .error-pic__text path {
     fill: #F9F9F9;
+  }
+  .error-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 20px;
+  }
+  .error-menu__item {
+    -ms-flex-preferred-size: 14.3%;
+        flex-basis: 14.3%;
+    padding: 1em 0;
+    border-bottom: none;
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+  }
+  .error-menu__item::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: #d9d9d9;
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: calc(50% - 10px);
+  }
+  .error-menu__item:last-child::after {
+    display: none;
   }
 }
 
