@@ -3987,6 +3987,34 @@ hr.dotted {
   background-image: url(../img/icons/subcategories/212.svg);
 }
 
+.subcategories-icons__link[data-subcategory-id="213"]::before {
+  background-image: url(../img/icons/subcategories/213.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="214"]::before {
+  background-image: url(../img/icons/subcategories/214.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="215"]::before {
+  background-image: url(../img/icons/subcategories/215.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="216"]::before {
+  background-image: url(../img/icons/subcategories/216.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="217"]::before {
+  background-image: url(../img/icons/subcategories/217.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="218"]::before {
+  background-image: url(../img/icons/subcategories/218.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="219"]::before {
+  background-image: url(../img/icons/subcategories/219.svg);
+}
+
 .subcategories-icons__link[data-subcategory-id="301"]::before {
   background-image: url(../img/icons/subcategories/301.svg);
 }
@@ -4137,6 +4165,10 @@ hr.dotted {
 
 .subcategories-icons__link[data-subcategory-id="511"]::before {
   background-image: url(../img/icons/subcategories/511.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="512"]::before {
+  background-image: url(../img/icons/subcategories/512.svg);
 }
 
 .subcategories-icons__link:hover {
