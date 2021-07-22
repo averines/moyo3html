@@ -1519,6 +1519,15 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
 $('[data-fancybox="product-gallery"]').fancybox({
     protect: true,
     backFocus: false,
+    buttons: [
+        "zoom",
+        //"share",
+        // "slideShow",
+        //"fullScreen",
+        //"download",
+        "thumbs",
+        "close"
+    ],
 });
 
 // новый слайдер в модальном окне фансибокс

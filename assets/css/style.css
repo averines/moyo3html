@@ -3831,75 +3831,231 @@ hr.dotted {
 }
 
 .subcategories-icons__link[data-subcategory-id="101"]::before {
-  background-image: url(../img/icons/subcategories/01.svg);
+  background-image: url(../img/icons/subcategories/101.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="102"]::before {
-  background-image: url(../img/icons/subcategories/02.svg);
+  background-image: url(../img/icons/subcategories/102.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="103"]::before {
-  background-image: url(../img/icons/subcategories/03.svg);
+  background-image: url(../img/icons/subcategories/103.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="104"]::before {
-  background-image: url(../img/icons/subcategories/04.svg);
+  background-image: url(../img/icons/subcategories/104.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="105"]::before {
-  background-image: url(../img/icons/subcategories/05.svg);
+  background-image: url(../img/icons/subcategories/105.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="106"]::before {
-  background-image: url(../img/icons/subcategories/06.svg);
+  background-image: url(../img/icons/subcategories/106.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="107"]::before {
-  background-image: url(../img/icons/subcategories/07.svg);
+  background-image: url(../img/icons/subcategories/107.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="108"]::before {
-  background-image: url(../img/icons/subcategories/08.svg);
+  background-image: url(../img/icons/subcategories/108.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="109"]::before {
-  background-image: url(../img/icons/subcategories/09.svg);
+  background-image: url(../img/icons/subcategories/109.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="110"]::before {
-  background-image: url(../img/icons/subcategories/10.svg);
+  background-image: url(../img/icons/subcategories/110.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="111"]::before {
-  background-image: url(../img/icons/subcategories/11.svg);
+  background-image: url(../img/icons/subcategories/111.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="112"]::before {
-  background-image: url(../img/icons/subcategories/12.svg);
+  background-image: url(../img/icons/subcategories/112.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="113"]::before {
-  background-image: url(../img/icons/subcategories/13.svg);
+  background-image: url(../img/icons/subcategories/113.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="114"]::before {
-  background-image: url(../img/icons/subcategories/14.svg);
+  background-image: url(../img/icons/subcategories/114.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="115"]::before {
-  background-image: url(../img/icons/subcategories/15.svg);
+  background-image: url(../img/icons/subcategories/115.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="116"]::before {
-  background-image: url(../img/icons/subcategories/16.svg);
+  background-image: url(../img/icons/subcategories/116.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="117"]::before {
-  background-image: url(../img/icons/subcategories/17.svg);
+  background-image: url(../img/icons/subcategories/117.svg);
 }
 
 .subcategories-icons__link[data-subcategory-id="118"]::before {
-  background-image: url(../img/icons/subcategories/18.svg);
+  background-image: url(../img/icons/subcategories/118.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="201"]::before {
+  background-image: url(../img/icons/subcategories/201.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="202"]::before {
+  background-image: url(../img/icons/subcategories/202.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="203"]::before {
+  background-image: url(../img/icons/subcategories/203.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="204"]::before {
+  background-image: url(../img/icons/subcategories/204.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="205"]::before {
+  background-image: url(../img/icons/subcategories/205.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="206"]::before {
+  background-image: url(../img/icons/subcategories/206.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="207"]::before {
+  background-image: url(../img/icons/subcategories/207.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="208"]::before {
+  background-image: url(../img/icons/subcategories/208.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="209"]::before {
+  background-image: url(../img/icons/subcategories/209.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="210"]::before {
+  background-image: url(../img/icons/subcategories/210.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="211"]::before {
+  background-image: url(../img/icons/subcategories/211.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="212"]::before {
+  background-image: url(../img/icons/subcategories/212.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="301"]::before {
+  background-image: url(../img/icons/subcategories/301.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="302"]::before {
+  background-image: url(../img/icons/subcategories/302.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="303"]::before {
+  background-image: url(../img/icons/subcategories/303.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="304"]::before {
+  background-image: url(../img/icons/subcategories/304.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="305"]::before {
+  background-image: url(../img/icons/subcategories/305.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="306"]::before {
+  background-image: url(../img/icons/subcategories/306.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="307"]::before {
+  background-image: url(../img/icons/subcategories/307.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="308"]::before {
+  background-image: url(../img/icons/subcategories/308.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="309"]::before {
+  background-image: url(../img/icons/subcategories/309.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="310"]::before {
+  background-image: url(../img/icons/subcategories/310.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="311"]::before {
+  background-image: url(../img/icons/subcategories/311.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="312"]::before {
+  background-image: url(../img/icons/subcategories/312.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="401"]::before {
+  background-image: url(../img/icons/subcategories/401.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="402"]::before {
+  background-image: url(../img/icons/subcategories/402.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="403"]::before {
+  background-image: url(../img/icons/subcategories/403.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="404"]::before {
+  background-image: url(../img/icons/subcategories/404.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="405"]::before {
+  background-image: url(../img/icons/subcategories/405.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="406"]::before {
+  background-image: url(../img/icons/subcategories/406.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="407"]::before {
+  background-image: url(../img/icons/subcategories/407.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="408"]::before {
+  background-image: url(../img/icons/subcategories/408.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="409"]::before {
+  background-image: url(../img/icons/subcategories/409.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="410"]::before {
+  background-image: url(../img/icons/subcategories/410.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="411"]::before {
+  background-image: url(../img/icons/subcategories/411.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="412"]::before {
+  background-image: url(../img/icons/subcategories/412.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="413"]::before {
+  background-image: url(../img/icons/subcategories/413.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="414"]::before {
+  background-image: url(../img/icons/subcategories/414.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="415"]::before {
+  background-image: url(../img/icons/subcategories/415.svg);
 }
 
 .subcategories-icons__link:hover {
