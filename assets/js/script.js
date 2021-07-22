@@ -1517,7 +1517,8 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
 }
 
 $('[data-fancybox="product-gallery"]').fancybox({
-    protect: true
+    protect: true,
+    backFocus: false,
 });
 
 // новый слайдер в модальном окне фансибокс
