@@ -4058,6 +4058,42 @@ hr.dotted {
   background-image: url(../img/icons/subcategories/415.svg);
 }
 
+.subcategories-icons__link[data-subcategory-id="501"]::before {
+  background-image: url(../img/icons/subcategories/501.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="502"]::before {
+  background-image: url(../img/icons/subcategories/502.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="503"]::before {
+  background-image: url(../img/icons/subcategories/503.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="504"]::before {
+  background-image: url(../img/icons/subcategories/504.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="505"]::before {
+  background-image: url(../img/icons/subcategories/505.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="506"]::before {
+  background-image: url(../img/icons/subcategories/506.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="507"]::before {
+  background-image: url(../img/icons/subcategories/507.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="508"]::before {
+  background-image: url(../img/icons/subcategories/508.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="509"]::before {
+  background-image: url(../img/icons/subcategories/509.svg);
+}
+
 .subcategories-icons__link:hover {
   opacity: 0.8;
 }
@@ -5782,6 +5818,42 @@ hr.dotted {
 
 .js-tabs .tabs-content__item.is-active {
   display: block;
+}
+
+.tabs--category {
+  margin-top: 20px;
+}
+
+.tabs--category .tabs-titles__item {
+  padding: 3em;
+}
+
+.tabs--category .tabs-titles__item.is-active .tabs-title-category__pic path {
+  stroke: #ab064e;
+}
+
+.tabs--category .tabs-title-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 7px;
+          column-gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs--category .tabs-title-category__title {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding-bottom: 0.4em;
+}
+
+.tabs--category .tabs-title-category__description {
+  color: #777;
+  font-size: 10px;
+  text-transform: initial;
 }
 
 .list-about {
