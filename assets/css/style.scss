@@ -7635,13 +7635,11 @@ textarea {
     width: 100%;
     min-height: 200px;
     position: relative;
-    // border: 1px solid red;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
 
     img, picture {
-      // width: 100%;
       display: block;
     }
 
@@ -7677,7 +7675,7 @@ textarea {
 
   &__subtitle {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   &__description{
