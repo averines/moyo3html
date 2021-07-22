@@ -10007,10 +10007,11 @@ textarea {
   }
   .error__pic .error-pic__img {
     width: 210px;
-    right: 80px;
+    right: 70px;
   }
   .error__pic .error-pic__text {
     width: 380px;
+    right: -8px;
   }
   .error__pic .error-pic__text path {
     fill: #F9F9F9;

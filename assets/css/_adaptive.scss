@@ -1125,7 +1125,6 @@
   .error {
     display: flex;
     background-color: $bg-light;
-    // max-width: 994px;
 
     &__info {
       order: 1;
@@ -1152,10 +1151,11 @@
 
       .error-pic__img {
         width: 210px;
-        right: 80px;
+        right: 70px;
       }
       .error-pic__text {
         width: 380px;
+        right: -8px;
         path {
           fill: #F9F9F9;
         }
