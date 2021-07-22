@@ -73,6 +73,17 @@ main.page-main .page-main__content-wrapper {
   display: grid;
 }
 
+.d-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
 .grid-1-1 {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -282,6 +293,15 @@ h5,
   text-decoration: none;
   color: #101010;
   white-space: nowrap;
+}
+
+.btn.btn--mini {
+  border-radius: 3px;
+  padding: 0.5em;
+  font-size: 13px;
+  min-width: auto;
+  max-width: none;
+  white-space: normal;
 }
 
 .btn:active {
@@ -3239,6 +3259,25 @@ hr.dotted {
           animation: spiral 1s forwards ease-in-out;
 }
 
+.product-wrapper .product__price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+.product-wrapper .product__action-time {
+  font-size: 11px;
+  color: #e7003e;
+  text-align: right;
+  max-width: 55px;
+}
+
 .product-wrapper .product:hover {
   -webkit-box-shadow: 0 5px 20px rgba(16, 16, 16, 0.15);
           box-shadow: 0 5px 20px rgba(16, 16, 16, 0.15);
@@ -3420,6 +3459,8 @@ hr.dotted {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.9em;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .price__break {

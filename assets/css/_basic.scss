@@ -103,6 +103,12 @@ main {
   display: grid;
 }
 
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .grid-1-1 {
   grid-template-columns: 1fr 1fr;
 }
@@ -292,6 +298,15 @@ h5,
   color: $black;
   white-space: nowrap;
 
+  &.btn--mini {
+  border-radius: 3px;
+  padding: 0.5em;
+  font-size: 13px;
+  min-width: auto;
+  max-width: none;
+  white-space: normal;
+}
+
   &:active {
     transform: translateY(2px);
   }
@@ -341,6 +356,7 @@ h5,
     }
   }
 }
+
 
 .btn-burger {
   padding: 8px 8px 8px 0;

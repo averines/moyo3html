@@ -1007,6 +1007,7 @@
       position: absolute;
       bottom: $gap + 5px;
     }
+    
   }
 
   &__link {
@@ -2273,6 +2274,20 @@
       }
     }
 
+    &__price-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 5px;
+    }
+
+    &__action-time {
+      font-size: 11px;
+      color: $special-1;
+      text-align: right;
+      max-width: 55px;
+    }
+
     &:hover {
       box-shadow: 0 5px 20px transparentize($black, 0.85);
       z-index: 6;
@@ -2441,6 +2456,7 @@
   row-gap: 0.2em;
   align-items: center;
   font-size: 0.9em;
+  flex-basis: 60%;
 
   &__break {
     flex-basis: 100%;
@@ -3126,7 +3142,7 @@
     }        
 
 
- // новорожденным
+ // Малышам
     &[data-subcategory-id="501"] {
       &::before {
         background-image: url(../img/icons/subcategories/501.svg);
