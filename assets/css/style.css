@@ -6374,6 +6374,21 @@ hr.dotted {
   bottom: 0;
 }
 
+.order-item .order-btn-comeback {
+  display: none;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 110px);
+}
+
+.order-item.is-empty {
+  opacity: 0.5;
+}
+
+.order-item.is-empty .order-btn-comeback {
+  display: block;
+}
+
 .popup-info-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

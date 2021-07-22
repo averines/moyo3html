@@ -1600,17 +1600,40 @@ if (brandCateroryListItems.length > 0) {
 }
 
 
+function checkOrdeiItemRowValue(ordeiItemRow) {
+    let orderItemRowValues = []
+    let quantityCounterValueElements = ordeiItemRow.querySelectorAll('.order-item__table .quantity-counter__value')
+    quantityCounterValueElements.forEach(quantityCounterValueElement => {
+        orderItemRowValues.push(quantityCounterValueElement.innerHTML)
+    })
+
+    let orderItemRowValueTotal = 0
+    orderItemRowValues.forEach(item => {
+        orderItemRowValueTotal = orderItemRowValueTotal + parseInt(item)
+    })
+
+    console.log(orderItemRowValues);
+
+    if (orderItemRowValueTotal > 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
 // имитация изменения количества товара в корзине
-const quantityCounters = document.querySelectorAll('.quantity-counter')
+const quantityCounters = document.querySelectorAll('.order-item .order-item__table .quantity-counter')
 if (quantityCounters.length > 0) {
 
     quantityCounters.forEach(quantityCounter => {
         let quantityCounterDecrease = quantityCounter.querySelector('.quantity-counter__btn--decrease')
         let quantityCounterIncrease = quantityCounter.querySelector('.quantity-counter__btn--increase')
         let quantityCounterValueElement = quantityCounter.querySelector('.quantity-counter__value')
+
+        let ordeiItemRow = quantityCounter.closest('.order-item')
+
         let quantityCounterValue = parseInt(quantityCounterValueElement.innerHTML)
         let orderProductRow = quantityCounter.closest('tr')
-
         
         quantityCounterDecrease.addEventListener('click', () => {
             quantityCounterValue--
@@ -1621,6 +1644,11 @@ if (quantityCounters.length > 0) {
 
             if (quantityCounterValue < 1) {
                 orderProductRow.style.display = 'none';
+                if (checkOrdeiItemRowValue(ordeiItemRow)) {
+                    console.log('ok');
+                } else {
+                    ordeiItemRow.classList.add('is-empty')
+                }
             }
         })
 
@@ -1633,4 +1661,24 @@ if (quantityCounters.length > 0) {
         })
     })
     
+}
+
+// удаление строки с целым товаром из корзины и перенаправление в пустую корзину
+const orderItems = document.querySelectorAll('.order-item')
+if (orderItems.length > 0) {
+    let orderItemsQuantity = orderItems.length
+
+    orderItems.forEach(orderItem => {
+        let orderItemremoveBtn = orderItem.querySelector('.order-item__remove')
+
+        orderItemremoveBtn.addEventListener('click', () => {
+            orderItem.remove()
+            orderItemsQuantity--
+            console.log(orderItemsQuantity);
+            if (orderItemsQuantity == 0) {
+                window.location.href = 'personal-cart-empty.html';
+            }
+        })
+
+    })
 }
