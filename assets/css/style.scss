@@ -1007,7 +1007,6 @@
       position: absolute;
       bottom: $gap + 5px;
     }
-    
   }
 
   &__link {
@@ -2980,10 +2979,9 @@
       &::before {
         background-image: url(../img/icons/subcategories/213.svg);
       }
-    }    
+    }
 
-
-        &[data-subcategory-id="214"] {
+    &[data-subcategory-id="214"] {
       &::before {
         background-image: url(../img/icons/subcategories/214.svg);
       }
@@ -2993,9 +2991,9 @@
       &::before {
         background-image: url(../img/icons/subcategories/215.svg);
       }
-    }   
+    }
 
-        &[data-subcategory-id="216"] {
+    &[data-subcategory-id="216"] {
       &::before {
         background-image: url(../img/icons/subcategories/216.svg);
       }
@@ -3005,9 +3003,9 @@
       &::before {
         background-image: url(../img/icons/subcategories/217.svg);
       }
-    }   
+    }
 
-        &[data-subcategory-id="218"] {
+    &[data-subcategory-id="218"] {
       &::before {
         background-image: url(../img/icons/subcategories/218.svg);
       }
@@ -3017,8 +3015,8 @@
       &::before {
         background-image: url(../img/icons/subcategories/219.svg);
       }
-    }   
-    
+    }
+
     // мужчинам
     &[data-subcategory-id="301"] {
       &::before {
@@ -3091,7 +3089,7 @@
       }
     }
 
-  // мальчикам
+    // мальчикам
     &[data-subcategory-id="401"] {
       &::before {
         background-image: url(../img/icons/subcategories/401.svg);
@@ -3161,8 +3159,8 @@
       &::before {
         background-image: url(../img/icons/subcategories/412.svg);
       }
-    }    
-    
+    }
+
     &[data-subcategory-id="413"] {
       &::before {
         background-image: url(../img/icons/subcategories/413.svg);
@@ -3179,10 +3177,9 @@
       &::before {
         background-image: url(../img/icons/subcategories/415.svg);
       }
-    }        
+    }
 
-
- // Малышам
+    // Малышам
     &[data-subcategory-id="501"] {
       &::before {
         background-image: url(../img/icons/subcategories/501.svg);
@@ -3236,23 +3233,23 @@
       }
     }
 
-        &[data-subcategory-id="510"] {
+    &[data-subcategory-id="510"] {
       &::before {
         background-image: url(../img/icons/subcategories/510.svg);
       }
     }
 
-        &[data-subcategory-id="511"] {
+    &[data-subcategory-id="511"] {
       &::before {
         background-image: url(../img/icons/subcategories/511.svg);
       }
     }
 
-        &[data-subcategory-id="512"] {
+    &[data-subcategory-id="512"] {
       &::before {
         background-image: url(../img/icons/subcategories/512.svg);
       }
-    }    
+    }
 
     &:hover {
       opacity: 0.8;
@@ -5184,7 +5181,7 @@
       &.is-active {
         .tabs-title-category__pic {
           path {
-            stroke: $main
+            stroke: $main;
           }
         }
       }
@@ -5744,11 +5741,10 @@
 
   &.is-empty {
     opacity: 0.5;
-     .order-btn-comeback {
-       display: block;
-     }
+    .order-btn-comeback {
+      display: block;
+    }
   }
-
 }
 
 .popup-info-wrapper {
@@ -7140,7 +7136,6 @@
       position: relative;
       align-self: stretch;
     }
-
   }
 
   .status-icons {
