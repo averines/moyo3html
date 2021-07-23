@@ -1281,7 +1281,6 @@
   background-color: $white;
 
   .category-menu__item {
-
     .category-menu__title {
       text-transform: uppercase;
       font-size: 0.75em;
@@ -7185,6 +7184,14 @@ textarea {
   .modal-product-container {
     display: flex;
     column-gap: 20px;
+
+    .needlogin {
+      max-width: 50%;
+      &__title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
   }
 
   .modal-product-gallery {
@@ -7570,6 +7577,24 @@ textarea {
 
     &:hover {
       color: $text-light;
+    }
+  }
+}
+
+.needlogin {
+  &__title {
+    font-size: 14px;
+    margin: 0.5em 0 0.75em 0;
+  }
+
+  &__description {
+    color: $text-light;
+    font-size: 13.5px;
+    line-height: 1.45;
+    font-style: italic;
+
+    > a {
+      color: $main;
     }
   }
 }

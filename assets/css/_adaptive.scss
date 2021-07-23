@@ -641,6 +641,17 @@
     &__brand-logo {
       width: 100px;
     }
+
+    .needlogin {
+      border: 1px solid $line-light;
+      padding: 15px;
+      max-width: 55%;
+      &__title {
+        font-weight: 600;
+        font-size: 17px;
+        margin: 0.3em 0;
+      }
+    }
   }
 
   .product-colors-slider__item {

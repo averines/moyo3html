@@ -1389,7 +1389,15 @@ const userButtonsLogin = document.querySelector('.js-user-buttons-login')
 const userButtonsUser = document.querySelector('.js-user-buttons-user')
 
 const setIsLoggedBtn = document.querySelector('.js-user-set-logged')
-const setIsNotLoggedBtn = document.querySelector('.js-user-set-not-logged')
+const setIsNotLoggedBtns = document.querySelectorAll('.js-user-set-not-logged')
+
+const needloginBlocks = document.querySelectorAll('.needlogin')
+const priceWrapperBlocks = document.querySelectorAll('.js-product-price-wrapper')
+const productFavoriteBtns = document.querySelectorAll('.product-favorite-btn')
+
+
+
+
 let userIsLogged = localStorage.getItem('userLogged')
 
 if (menuUserLogged && menuUserNotLogged) {
@@ -1398,13 +1406,41 @@ if (menuUserLogged && menuUserNotLogged) {
         menuUserLogged.style.display = 'block'
         userButtonsLogin.classList.add('is-hidden')
         userButtonsUser.classList.add('is-visible')
+
+        if (needloginBlocks && priceWrapperBlocks) {
+            needloginBlocks.forEach(needloginBlock => {
+                needloginBlock.style.display = 'none'
+            })
+
+            productFavoriteBtns.forEach(productFavoriteBtn => {
+                productFavoriteBtn.style.display = 'block'
+            })
+
+            priceWrapperBlocks.forEach(priceWrapperBlock => {
+                priceWrapperBlock.style.display = 'flex'
+            })
+        }
+
     } else {
         menuUserNotLogged.style.display = 'block'
         menuUserLogged.style.display = 'none'
         userButtonsLogin.classList.add('is-visible')
         userButtonsUser.classList.add('is-hidden')
 
-        setIsLoggedBtn.addEventListener('click', () => {
+        if (needloginBlocks && priceWrapperBlocks) {
+            needloginBlocks.forEach(needloginBlock => {
+                needloginBlock.style.display = 'block'
+            })
+
+            productFavoriteBtns.forEach(productFavoriteBtn => {
+                productFavoriteBtn.style.display = 'none'
+            })
+
+            priceWrapperBlocks.forEach(priceWrapperBlock => {
+                priceWrapperBlock.style.display = 'none'
+            })
+        }
+        setIsLoggedBtn.addEventListener('click', (e) => {
             localStorage.setItem('userLogged', 1)
             menuUserNotLogged.style.display = 'none'
             menuUserLogged.style.display = 'block'
@@ -1413,19 +1449,23 @@ if (menuUserLogged && menuUserNotLogged) {
         })
     }
 
-    if (setIsNotLoggedBtn && userIsLogged) {
-        setIsNotLoggedBtn.addEventListener('click', () => {
-            localStorage.setItem('userLogged', 0)
-            menuUserNotLogged.style.display = 'block'
-            menuUserLogged.style.display = 'none'
-            userButtonsLogin.classList.add('is-visible')
-            userButtonsUser.classList.add('is-hidden')
+    if (setIsNotLoggedBtns && userIsLogged) {
+        setIsNotLoggedBtns.forEach(setIsNotLoggedBtn => { 
+            setIsNotLoggedBtn.addEventListener('click', () => {
+                localStorage.setItem('userLogged', 0)
+                menuUserNotLogged.style.display = 'block'
+                menuUserLogged.style.display = 'none'
+                userButtonsLogin.classList.add('is-visible')
+                userButtonsUser.classList.add('is-hidden')
+            })
         })
+
+
     }
 }
 
-//выбор способа оплаты в корзине
 
+//выбор способа оплаты в корзине
 const paymentListItems = document.querySelectorAll('.payment-choose-list__item')
 const paymentListItemsInputs = document.querySelectorAll('.payment-choose-list__item input')
 

@@ -8419,6 +8419,15 @@ textarea {
           column-gap: 20px;
 }
 
+.modalquickview .modal-product-container .needlogin {
+  max-width: 50%;
+}
+
+.modalquickview .modal-product-container .needlogin__title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .modalquickview .modal-product-gallery {
   -ms-flex-negative: 1;
       flex-shrink: 1;
@@ -8857,6 +8866,22 @@ textarea {
 
 .error-menu__item:hover {
   color: #777;
+}
+
+.needlogin__title {
+  font-size: 14px;
+  margin: 0.5em 0 0.75em 0;
+}
+
+.needlogin__description {
+  color: #777;
+  font-size: 13.5px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.needlogin__description > a {
+  color: #ab064e;
 }
 
 .subcategories-icons {
@@ -10029,6 +10054,16 @@ textarea {
   }
   .product-info__brand-logo {
     width: 100px;
+  }
+  .product-info .needlogin {
+    border: 1px solid #d9d9d9;
+    padding: 15px;
+    max-width: 55%;
+  }
+  .product-info .needlogin__title {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0.3em 0;
   }
   .product-colors-slider__item {
     width: 70px;
