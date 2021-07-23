@@ -1986,6 +1986,23 @@ hr.dotted {
   transition: all 0.2s ease-in-out;
 }
 
+.category-menu > .category-menu__title > span {
+  margin-left: auto;
+  margin-right: 35px;
+  font-size: 11px;
+  color: #01A976;
+  border: 1px solid #c0dad3;
+  padding: 0.3em 0.6em;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: initial;
+}
+
+.category-menu > .category-menu__title > span::before {
+  content: "Новинок ";
+  font-weight: 400;
+}
+
 .category-menu > .category-menu__title::before {
   content: "";
   width: 28px;
@@ -2163,7 +2180,7 @@ hr.dotted {
   position: relative;
   list-style: none;
   background-color: transparent;
-  max-width: 600px;
+  max-width: 400px;
   height: 100%;
   display: block;
   opacity: 0;

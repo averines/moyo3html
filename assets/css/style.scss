@@ -1119,6 +1119,23 @@
     cursor: pointer;
     transition: $tr;
 
+    > span {
+      margin-left: auto;
+      margin-right: 35px;
+      font-size: 11px;
+      color: $special-6;
+      border: 1px solid $special-6-l;
+      padding: 0.3em 0.6em;
+      border-radius: 3px;
+      font-weight: 600;
+      letter-spacing: initial;
+
+      &::before {
+        content: "Новинок ";
+        font-weight: 400;
+      }
+    }
+
     &::before {
       content: "";
       width: 28px;
@@ -1264,6 +1281,7 @@
   background-color: $white;
 
   .category-menu__item {
+
     .category-menu__title {
       text-transform: uppercase;
       font-size: 0.75em;
@@ -1296,7 +1314,7 @@
   position: relative;
   list-style: none;
   background-color: transparent;
-  max-width: 600px;
+  max-width: 400px;
   height: 100%;
   display: block;
   opacity: 0;
