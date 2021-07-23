@@ -297,7 +297,7 @@ h5,
 
 .btn.btn--mini {
   border-radius: 3px;
-  padding: 0.5em;
+  padding: 0.35em 0.5em;
   font-size: 13px;
   min-width: auto;
   max-width: none;
@@ -7280,6 +7280,25 @@ hr.dotted {
 .history-table .total-return__summ::after {
   content: " ₽";
   color: #ab064e;
+}
+
+.history-table .total-return__wrapper {
+  padding: 15px;
+  background-color: #f3f2f0;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.history-table .total-return__buttons {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
 }
 
 .history-item-payment {
