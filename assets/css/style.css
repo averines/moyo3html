@@ -2102,7 +2102,6 @@ hr.dotted {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  text-transform: capitalize;
 }
 
 .category-menu__link::after {

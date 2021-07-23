@@ -1242,7 +1242,7 @@
     transition: $tr;
     position: relative;
     order: 1;
-    text-transform: capitalize;
+    // text-transform: capitalize;
 
     &::after {
       order: 3;
