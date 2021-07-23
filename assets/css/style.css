@@ -9270,6 +9270,58 @@ textarea {
   background-image: url(../img/icons/subcategories/611.svg);
 }
 
+.subcategories-icons__link[data-subcategory-id="701"]::before {
+  background-image: url(../img/icons/subcategories/701.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="702"]::before {
+  background-image: url(../img/icons/subcategories/702.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="703"]::before {
+  background-image: url(../img/icons/subcategories/703.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="704"]::before {
+  background-image: url(../img/icons/subcategories/704.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="705"]::before {
+  background-image: url(../img/icons/subcategories/705.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="706"]::before {
+  background-image: url(../img/icons/subcategories/706.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="707"]::before {
+  background-image: url(../img/icons/subcategories/707.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="708"]::before {
+  background-image: url(../img/icons/subcategories/708.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="709"]::before {
+  background-image: url(../img/icons/subcategories/709.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="710"]::before {
+  background-image: url(../img/icons/subcategories/710.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="711"]::before {
+  background-image: url(../img/icons/subcategories/711.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="712"]::before {
+  background-image: url(../img/icons/subcategories/712.svg);
+}
+
+.subcategories-icons__link[data-subcategory-id="713"]::before {
+  background-image: url(../img/icons/subcategories/713.svg);
+}
+
 .subcategories-icons__link:hover {
   opacity: 0.8;
 }

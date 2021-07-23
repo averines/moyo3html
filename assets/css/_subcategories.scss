@@ -32,7 +32,7 @@
             transition: $tr;
         }
 
-        // основные
+        // Основные
         @for $i from 1001 through 1004 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -42,7 +42,7 @@
         }
 
 
-        // женщинам
+        // Женщинам
         @for $i from 101 through 118 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -51,7 +51,7 @@
             }
         }
 
-        // // девочкам
+        // Девочкам
         @for $i from 201 through 219 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -60,7 +60,7 @@
             }
         }
 
-        // // мужчинам
+        // Мужчинам
         @for $i from 301 through 312 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -69,7 +69,7 @@
             }
         }
 
-        // // мальчикам
+        // мальчикам
         @for $i from 401 through 415 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -78,7 +78,7 @@
             }
         }
 
-        // // Малышам
+        // Малышам
         @for $i from 501 through 512 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -87,7 +87,7 @@
             }
         }
 
-        // //игрушки
+        // Игрушки
         @for $i from 601 through 611 {
             &[data-subcategory-id="#{$i}"] {
                 &::before {
@@ -95,6 +95,15 @@
                 }
             }
         }
+
+        // Для дома
+        @for $i from 701 through 713 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }        
 
         &:hover {
             opacity: 0.8;
