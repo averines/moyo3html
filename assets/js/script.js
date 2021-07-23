@@ -1395,9 +1395,6 @@ const needloginBlocks = document.querySelectorAll('.needlogin')
 const priceWrapperBlocks = document.querySelectorAll('.js-product-price-wrapper')
 const productFavoriteBtns = document.querySelectorAll('.product-favorite-btn')
 
-
-
-
 let userIsLogged = localStorage.getItem('userLogged')
 
 if (menuUserLogged && menuUserNotLogged) {
@@ -1413,7 +1410,7 @@ if (menuUserLogged && menuUserNotLogged) {
             })
 
             productFavoriteBtns.forEach(productFavoriteBtn => {
-                productFavoriteBtn.style.display = 'block'
+                productFavoriteBtn.style.display = 'flex'
             })
 
             priceWrapperBlocks.forEach(priceWrapperBlock => {
@@ -1559,6 +1556,7 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
 $('[data-fancybox="product-gallery"]').fancybox({
     protect: true,
     backFocus: false,
+    loop: true,
     buttons: [
         "zoom",
         //"share",

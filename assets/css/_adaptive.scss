@@ -642,6 +642,10 @@
       width: 100px;
     }
 
+    .js-product-price-wrapper {
+      flex-direction: column;
+    }
+
     .needlogin {
       border: 1px solid $line-light;
       padding: 15px;

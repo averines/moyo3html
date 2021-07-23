@@ -5440,6 +5440,10 @@ hr.dotted {
   min-width: 100px;
 }
 
+.product-table .price__base {
+  font-weight: 600;
+}
+
 .icon-info {
   display: inline-block;
   width: 20px;
@@ -10053,6 +10057,12 @@ textarea {
   }
   .product-info__brand-logo {
     width: 100px;
+  }
+  .product-info .js-product-price-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .product-info .needlogin {
     border: 1px solid #d9d9d9;

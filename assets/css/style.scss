@@ -4497,6 +4497,12 @@
     font-size: 0.95em;
     min-width: 100px;
   }
+
+  .price {
+    &__base {
+      font-weight: 600;
+    }
+  }
 }
 
 .icon-info {
