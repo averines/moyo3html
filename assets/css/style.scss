@@ -2450,7 +2450,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 0.5em;
-  row-gap: 0.2em;
+  row-gap: 0.1em;
   align-items: center;
   font-size: 0.9em;
 
@@ -2461,7 +2461,7 @@
 
   &__old {
     text-decoration: line-through;
-    font-size: 11px;
+    font-size: 12px;
     color: $black;
 
     &::after {
@@ -2471,7 +2471,7 @@
 
   &__profit {
     color: $special-2;
-    font-size: 11px;
+    font-size: 12px;
     clear: both;
 
     &::before {
@@ -2500,8 +2500,8 @@
   }
 
   &__base {
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 800;
+    font-size: 14px;
 
     &::after {
       content: " ₽";
@@ -2776,7 +2776,6 @@
     width: 100%;
   }
 }
-
 
 .pagination {
   max-width: 100%;
@@ -4227,26 +4226,6 @@
       filter: grayscale(1) brightness(10);
     }
   }
-
-  // &.is-active {
-  //   filter: none;
-  // }
-
-  // span {
-  //   position: absolute;
-  //   top: 0;
-  //   right: calc(50% - 7px);
-  //   display: block;
-  //   width: 15px;
-  //   height: 15px;
-  //   background: url(../img/icons/favorite_.svg) no-repeat center;
-  //   background-size: 100%;
-  //   animation: spiral 1s forwards ease-in-out;
-  // }
-
-  // &:hover {
-  //   transform: scale(1.05);
-  // }
 }
 
 .product-info {
@@ -4310,6 +4289,14 @@
     .price__base {
       font-size: 19px;
     }
+  }
+
+  .product__action-time {
+    color: $special-1;
+    font-size: 14px;
+    text-align: left;
+    max-width: none;
+    margin-top: 5px;
   }
 
   .product-status {
@@ -7192,6 +7179,14 @@ textarea {
     flex-shrink: 0;
     flex-grow: 1;
     max-width: 500px;
+
+    .product__action-time {
+      color: $special-1;
+      font-size: 14px;
+      text-align: left;
+      max-width: none;
+      margin-top: 5px;
+    }
   }
 
   .product-info__brand-logo {

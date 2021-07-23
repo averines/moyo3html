@@ -2512,6 +2512,28 @@
     max-width: 100%;
     padding-left: $gap-big;
     padding-right: $gap-big;
+
+    .price {
+      &__old {
+        font-size: 13px;
+      }
+      &__profit {
+        font-size: 13px;
+      }      
+      &__base {
+        font-size: 16px;
+      }
+      &__discount {
+        font-size: 13px;
+      }
+
+      .product-wrapper {
+        .product__action-time {
+          font-size: 15px;
+        }
+      }
+
+    }
   }
 
   .products {
