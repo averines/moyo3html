@@ -1733,3 +1733,21 @@ if (orderItems.length > 0) {
 
     })
 }
+
+
+const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
+categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
+    let parentLink = categoryMenuItemAccordion.querySelector('.category-menu__link.accordion__title')
+    let childMenu = categoryMenuItemAccordion.querySelector('.subcategory-menu')
+
+    let childMenuLink = document.createElement('a')
+    childMenuLink.classList.add('subcategory-menu__item')
+    childMenuLink.classList.add('subcategory-menu__item--special')
+    childMenuLink.setAttribute('href', parentLink.getAttribute('href'))
+    childMenuLink.innerHTML = 'Все подкатегории'
+    childMenu.insertBefore(childMenuLink, childMenu.querySelector('.subcategory-menu__item'))
+
+    parentLink.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+})

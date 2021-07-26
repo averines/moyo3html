@@ -1119,23 +1119,6 @@
     cursor: pointer;
     transition: $tr;
 
-    > span {
-      margin-left: auto;
-      margin-right: 35px;
-      font-size: 11px;
-      color: $special-6;
-      border: 1px solid $special-6-l;
-      padding: 0.3em 0.6em;
-      border-radius: 3px;
-      font-weight: 600;
-      letter-spacing: initial;
-
-      &::before {
-        content: "Новинок ";
-        font-weight: 400;
-      }
-    }
-
     &::before {
       content: "";
       width: 28px;
@@ -1193,7 +1176,8 @@
 
   &__content {
     background-color: $white;
-    padding: 0 1em;
+    // padding: 0 1em;
+    padding: 0;
     margin: 0;
     list-style: none;
   }
@@ -1238,41 +1222,50 @@
     display: flex;
     align-items: center;
     color: $text;
-    padding: 0.9em 1em 0.9em 2em;
+    // padding: 0.9em 1em 0.9em 2em;
+    padding: 0.9em 1.5em 0.9em 1.5em;
     transition: $tr;
     position: relative;
     order: 1;
     // text-transform: capitalize;
 
-    &::after {
-      order: 3;
-      content: "";
-      display: block;
-      position: absolute;
-      top: calc(50% - 4px);
-      right: 5px;
-      width: 8px;
-      height: 8px;
-      background: url(../img/icons/arrow.svg) no-repeat center;
-      background-size: contain;
-      transform: scale(-1, 1) translateX(5px);
-      opacity: 0;
-      transition: $tr;
-    }
+    // &::after {
+    //   order: 3;
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: calc(50% - 4px);
+    //   right: 5px;
+    //   width: 8px;
+    //   height: 8px;
+    //   background: url(../img/icons/arrow.svg) no-repeat center;
+    //   background-size: contain;
+    //   transform: scale(-1, 1) translateX(5px);
+    //   // opacity: 0;
+    //   transition: $tr;
+    // }
 
     &:hover {
-      opacity: 0.6;
+      // opacity: 0.6;
+      color: $text-light;
     }
 
-    &.is-active {
-      opacity: 0.6;
-      &.is-active::after {
-        opacity: 1;
-        transform: scale(-1, 1) translateX(0);
-      }
-    }
+    // &.is-active {
+    //   opacity: 0.6;
+    //   &.is-active::after {
+    //     opacity: 1;
+    //     transform: scale(-1, 1) translateX(0);
+    //   }
+    // }
   }
 }
+
+.category-menu__subtitle {
+      font-size: 0.9em;
+      color: $text-light;
+      margin-left: 0.5em;
+      font-weight: 400;
+    }
 
 .subcategory-menu {
   margin: 0;
@@ -1293,13 +1286,6 @@
       line-height: 1.2;
       cursor: pointer;
       transition: $tr;
-
-      span {
-        font-size: 0.9em;
-        color: $text-light;
-        margin-left: 0.5em;
-        font-weight: 400;
-      }
     }
   }
 }
@@ -7602,6 +7588,76 @@ textarea {
 
     > a {
       color: $main;
+    }
+  }
+}
+
+.subcategory-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  &__item {
+    color: $text;
+    text-decoration: none;
+    display: flex;
+    padding: 0.5em 1.5em 0.5em 2.5em;
+    font-size: 14px;
+    transition: $tr;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      color: $text-light;
+
+      .menu-badge {
+        &--subcategory {
+          background-color: $special-6-l + 30;
+        }
+      }
+    }
+
+    &--special {
+      color: $main;
+    }
+  }
+}
+
+.accordion__item.is-active {
+  > .subcategory-menu {
+    padding-bottom: 1em;
+  }
+}
+
+.menu-badge {
+  margin-left: auto;
+  margin-right: 35px;
+  font-size: 11px;
+  color: $line-light;
+  border: 1px solid $line-light;
+  padding: 0.3em 0.6em;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: initial;
+  transition: $tr;
+
+  &::before {
+    content: "";
+    font-weight: 400;
+  }
+
+  &--new {
+    color: $special-6;
+    border: 1px solid $special-6-l;
+    &::before {
+      content: "Новинок ";
+    }
+  }
+
+  &--subcategory {
+    margin-right: 0;
+    &::before {
+      content: "";
     }
   }
 }
