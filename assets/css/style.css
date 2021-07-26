@@ -8921,6 +8921,13 @@ textarea {
   content: "";
 }
 
+.menu-catalog-subcategories {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .subcategories-icons {
   margin: 4em 0;
   padding: 0;
@@ -9751,6 +9758,7 @@ textarea {
   }
   .main-slider .main-slide__content {
     height: auto;
+    width: 220px;
     width: 40%;
     max-width: 590px;
     background-color: rgba(16, 16, 16, 0.9);
@@ -10616,6 +10624,50 @@ textarea {
   .error-menu__item:last-child::after {
     display: none;
   }
+  .menu-catalog-subcategories {
+    position: absolute;
+    background-color: white;
+    left: 350px;
+    top: 0;
+    height: 100vh;
+    width: 350px;
+    overflow-y: scroll;
+    padding: 20px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .menu-catalog-subcategories::-webkit-scrollbar {
+    width: 5px;
+  }
+  .menu-catalog-subcategories::-webkit-scrollbar-thumb {
+    height: 4px;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+  }
+  .menu-catalog-subcategories.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .category-menu__item.accordion .accordion__item .category-menu__link::after {
+    background: url(../img/icons/arrow.svg) no-repeat center;
+    background-size: 25%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    opacity: 0.5;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .category-menu__item.accordion .accordion__item .category-menu__link:hover::after {
+    opacity: 0.9;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -10687,7 +10739,7 @@ textarea {
     height: 355px;
   }
   .main-slider .main-slide__content {
-    height: 290px;
+    height: 276px;
     width: 410px;
     padding: 40px 40px 80px 40px;
   }
@@ -11287,7 +11339,7 @@ textarea {
   .main-slider .main-slide__content {
     width: 40%;
     padding: 40px 40px 60px 40px;
-    height: 340px;
+    height: 330px;
   }
   .main-slider .main-slide__title {
     font-size: 36px;
@@ -11768,7 +11820,7 @@ textarea {
     height: 500px;
   }
   .main-slider .main-slide__content {
-    height: 360px;
+    height: 344px;
   }
   .products {
     -webkit-column-gap: 10px;

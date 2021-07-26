@@ -5,6 +5,10 @@ const menuCatalogWrapper = document.querySelector('.menu-catalog-wrapper')
 const documentBody = document.querySelector('body')
 let menuCatalogIsActive = false
 
+const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
+const menuCatalogSubcategoriesBlock = document.querySelector('.menu-catalog-subcategories')
+
+
 const menuCatalogOpen = function () {
     menuCatalogIsActive = true
     menuCatalogBtn.classList.add('is-active')
@@ -19,6 +23,7 @@ const menuCatalogClose = function () {
     menuCatalogWrapper.classList.remove('is-active')
     menuCatalogBlock.classList.remove('is-active')
     documentBody.classList.remove('body-overlay')
+    menuCatalogSubcategoriesBlock.classList.remove('is-active')
 }
 
 menuCatalogBtn.addEventListener('click', () => {
@@ -32,9 +37,59 @@ menuCatalogWrapper.addEventListener('click', (e) => {
         menuCatalogClose();
         subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
         categoryItem.classList.remove('is-active') // прячем список субкатегорий 
-        catalogContent.classList.remove('is-active') //  прячем обертку
+        catalogContent.classList.remove('is-active') // прячем обертку
     }
 })
+
+
+
+categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
+    let parentLink = categoryMenuItemAccordion.querySelector('.category-menu__link.accordion__title')
+    let childMenu = categoryMenuItemAccordion.querySelector('.subcategory-menu')
+
+    let childMenuLink = document.createElement('a')
+    childMenuLink.classList.add('subcategory-menu__item')
+    childMenuLink.classList.add('subcategory-menu__item--special')
+    childMenuLink.setAttribute('href', parentLink.getAttribute('href'))
+    childMenuLink.innerHTML = 'Все подкатегории'
+    childMenu.insertBefore(childMenuLink, childMenu.querySelector('.subcategory-menu__item'))
+    let dublicateMenu = childMenu.cloneNode(true)
+
+
+    if (document.body.clientWidth < 768) {
+        parentLink.addEventListener('click', (e) => {
+            e.preventDefault();
+        })
+    } else {
+        parentLink.addEventListener('mouseover', () => {
+            menuCatalogSubcategoriesBlock.classList.add('is-active')
+            menuCatalogSubcategoriesBlock.innerHTML = ''
+            menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
+        })
+    }
+
+    window.addEventListener('resize', () => {
+        if (document.body.clientWidth < 768) {
+            parentLink.addEventListener('click', (e) => {
+                e.preventDefault();
+            })
+        } else {
+            parentLink.addEventListener('mouseover', () => {
+                menuCatalogSubcategoriesBlock.classList.add('is-active')
+                menuCatalogSubcategoriesBlock.innerHTML = ''
+                menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
+            })
+        }
+    });
+})
+
+
+
+
+
+
+
+
 
 // меню фильтров на странице подкатегории (в каталоге)
 const menuFilterBtn = document.getElementById('btn-filter')
@@ -325,41 +380,41 @@ const categoriesItems = document.querySelectorAll('.category-menu__link')
 let subCategoryItem
 let categoryItem
 
-[...categoriesItems].forEach(item => {
+// [...categoriesItems].forEach(item => {
 
-    // при наведении
-    item.addEventListener('mouseover', () => {
-        if (categoryItem) { categoryItem.classList.remove('is-active') } // делаем нективным пункты меню
+//     // при наведении
+//     item.addEventListener('mouseover', () => {
+//         if (categoryItem) { categoryItem.classList.remove('is-active') } // делаем нективным пункты меню
 
-        if (item.dataset.subcategoryId) { // если указан data-subcategory-id (знаем какую категорию показывать)
-            if (subCategoryItem) {
-                subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
-            }
+//         if (item.dataset.subcategoryId) { // если указан data-subcategory-id (знаем какую категорию показывать)
+//             if (subCategoryItem) {
+//                 subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+//             }
 
-            catalogContent.classList.add('is-active')
-            subCategoryItem = document.querySelector(`.menu-catalog-content__item[data-subcategory-id="${item.dataset.subcategoryId}"]`)
-            subCategoryItem.classList.add('is-active') // отображаем список субкатегорий
+//             catalogContent.classList.add('is-active')
+//             subCategoryItem = document.querySelector(`.menu-catalog-content__item[data-subcategory-id="${item.dataset.subcategoryId}"]`)
+//             subCategoryItem.classList.add('is-active') // отображаем список субкатегорий
 
-            categoryItem = item
-            categoryItem.classList.add('is-active') // делаем активным пункт меню
-        } else {
-            if (subCategoryItem) {
-                subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
-                catalogContent.classList.remove('is-active') //  прячем обертку
-            }
-        }
-    })
+//             categoryItem = item
+//             categoryItem.classList.add('is-active') // делаем активным пункт меню
+//         } else {
+//             if (subCategoryItem) {
+//                 subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+//                 catalogContent.classList.remove('is-active') //  прячем обертку
+//             }
+//         }
+//     })
 
-    // при отведении
-    item.addEventListener('mouseout', (e) => {
-        if (item.dataset.subcategoryId && e.relatedTarget && e.relatedTarget.classList.value.includes('menu')) { // если переводим мышку на контент субкатегории
-            item.classList.add('is-active') // делаем активным пункт меню
-        } else {
-            item.classList.remove('is-active') // иначе делаем этот пункт не активным
-            subCategoryItem.classList.remove('is-active') // прячем список субкатегорий
-        }
-    })
-})
+//     // при отведении
+//     item.addEventListener('mouseout', (e) => {
+//         if (item.dataset.subcategoryId && e.relatedTarget && e.relatedTarget.classList.value.includes('menu')) { // если переводим мышку на контент субкатегории
+//             item.classList.add('is-active') // делаем активным пункт меню
+//         } else {
+//             item.classList.remove('is-active') // иначе делаем этот пункт не активным
+//             subCategoryItem.classList.remove('is-active') // прячем список субкатегорий
+//         }
+//     })
+// })
 
 
 // кнопка добавления в избранное
@@ -1734,20 +1789,3 @@ if (orderItems.length > 0) {
     })
 }
 
-
-const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
-categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
-    let parentLink = categoryMenuItemAccordion.querySelector('.category-menu__link.accordion__title')
-    let childMenu = categoryMenuItemAccordion.querySelector('.subcategory-menu')
-
-    let childMenuLink = document.createElement('a')
-    childMenuLink.classList.add('subcategory-menu__item')
-    childMenuLink.classList.add('subcategory-menu__item--special')
-    childMenuLink.setAttribute('href', parentLink.getAttribute('href'))
-    childMenuLink.innerHTML = 'Все подкатегории'
-    childMenu.insertBefore(childMenuLink, childMenu.querySelector('.subcategory-menu__item'))
-
-    parentLink.addEventListener('click', (e) => {
-        e.preventDefault();
-    })
-})

@@ -7662,6 +7662,15 @@ textarea {
   }
 }
 
+
+  .menu-catalog-subcategories {
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+
 @import "subcategories";
 @import "animations";
 @import "adaptive";
