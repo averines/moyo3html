@@ -2525,7 +2525,6 @@ hr.dotted {
 .main-slider .main-slide__pic {
   display: block;
   width: 100%;
-  height: 190px;
 }
 
 .main-slider .main-slide__pic img {
@@ -9514,9 +9513,6 @@ textarea {
     padding: 13px;
     width: 45px;
   }
-  .main-slider .main-slide__pic {
-    height: 220px;
-  }
   .main-slider .main-slide__title {
     max-width: 90%;
     font-size: 18px;
@@ -9567,10 +9563,7 @@ textarea {
     width: 168px;
   }
   .main-slider .main-slide__pic {
-    width: 100%;
-    display: block;
-    height: 150px;
-    overflow: hidden;
+    height: 180px;
   }
 }
 
@@ -9579,6 +9572,9 @@ textarea {
     margin-top: 0;
     width: 100%;
     padding: 0 1em;
+  }
+  .main-slider .main-slide__pic {
+    height: 220px;
   }
   .modal__form .form-row .form-group {
     margin-bottom: 0;
@@ -9730,7 +9726,7 @@ textarea {
   .main-slider .main-slide__pic {
     width: 100%;
     display: block;
-    height: 240px;
+    height: 280px;
     overflow: hidden;
   }
   .main-slider .main-slide__container-outer {
@@ -9755,10 +9751,10 @@ textarea {
   }
   .main-slider .main-slide__content {
     height: auto;
-    height: 200px;
-    width: 405px;
+    width: 40%;
+    max-width: 590px;
     background-color: rgba(16, 16, 16, 0.9);
-    padding: 2em 2em 4em 2em;
+    padding: 1em 1em 4em 1em;
   }
   .main-slider .main-slide__title {
     font-size: 22px;
@@ -10691,8 +10687,8 @@ textarea {
     height: 355px;
   }
   .main-slider .main-slide__content {
-    height: 275px;
-    width: 455px;
+    height: 290px;
+    width: 410px;
     padding: 40px 40px 80px 40px;
   }
   .main-slider .main-slide__title {
@@ -11286,12 +11282,12 @@ textarea {
     display: block;
   }
   .main-slider .main-slide__pic {
-    height: 360px;
+    height: 380px;
   }
   .main-slider .main-slide__content {
-    width: 590px;
-    padding: 50px 45px 100px 45px;
-    height: 320px;
+    width: 40%;
+    padding: 40px 40px 60px 40px;
+    height: 340px;
   }
   .main-slider .main-slide__title {
     font-size: 36px;
@@ -11549,6 +11545,13 @@ textarea {
   }
   .header-main__navigation a {
     padding: 1em;
+  }
+  .main-slider .main-slide__pic {
+    height: 500px;
+  }
+  .main-slider .main-slide__content {
+    height: 360px;
+    padding: 55px;
   }
   .container--pagination {
     position: initial;

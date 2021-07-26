@@ -15,9 +15,9 @@
   }
   .main-slider {
     .main-slide {
-      &__pic {
-        height: 220px;
-      }
+      // &__pic {
+      //   height: 220px;
+      // }
 
       &__title {
         max-width: 90%;
@@ -87,10 +87,7 @@
   .main-slider {
     .main-slide {
       &__pic {
-        width: 100%;
-        display: block;
-        height: 150px;
-        overflow: hidden;
+        height: 180px;
       }
     }  
   }
@@ -101,6 +98,14 @@
     margin-top: 0;
     width: 100%;
     padding: 0 1em;
+  }
+
+  .main-slider {
+    .main-slide {
+      &__pic {
+        height: 220px;
+      }
+    }  
   }
 
   .modal__form {
@@ -273,7 +278,7 @@
       &__pic {
         width: 100%;
         display: block;
-        height: 240px;
+        height: 280px;
         overflow: hidden;
       }
 
@@ -297,10 +302,12 @@
 
       &__content {
         height: auto;
-        height: 200px;
-        width: 405px;
+        // height: 250px;
+        // width: 320px;
+        width: 40%;
+        max-width: 590px;
         background-color: transparentize($black, 0.1);
-        padding: 2em 2em 4em 2em;
+        padding: 1em 1em 4em 1em;
       }
 
       &__title {
@@ -1305,8 +1312,8 @@
       }
 
       &__content {
-        height: 275px;
-        width: 455px;
+        height: 290px;
+        width: 410px;
         padding: 40px 40px 80px 40px;
       }
 
@@ -1997,13 +2004,14 @@
   .main-slider {
     .main-slide {
       &__pic {
-        height: 360px;
+        height: 380px;
       }
 
       &__content {
-        width: 590px;
-        padding: 50px 45px 100px 45px;
-        height: 320px;
+        // width: 500px;
+        width: 40%;
+        padding: 40px 40px 60px 40px;
+        height: 340px;
       }
 
       &__title {
@@ -2304,6 +2312,18 @@
       }
     }
   }
+
+  .main-slider {
+    .main-slide {
+      &__pic {
+        height: 500px;
+      }
+      &__content {
+        height: 360px;
+        padding: 55px;
+      }
+    }  
+  }   
 
   .container--pagination {
     position: initial;
