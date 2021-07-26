@@ -3526,6 +3526,7 @@ hr.dotted {
 .price__base {
   font-weight: 800;
   font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 .price__base::after {
@@ -9531,6 +9532,12 @@ textarea {
   .error__pic .error-pic__img {
     width: 168px;
   }
+  .main-slider .main-slide__pic {
+    width: 100%;
+    display: block;
+    height: 150px;
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -9689,7 +9696,7 @@ textarea {
   .main-slider .main-slide__pic {
     width: 100%;
     display: block;
-    height: 355px;
+    height: 240px;
     overflow: hidden;
   }
   .main-slider .main-slide__container-outer {
@@ -9714,7 +9721,7 @@ textarea {
   }
   .main-slider .main-slide__content {
     height: auto;
-    height: 275px;
+    height: 200px;
     width: 405px;
     background-color: rgba(16, 16, 16, 0.9);
     padding: 2em 2em 4em 2em;
@@ -11245,12 +11252,12 @@ textarea {
     display: block;
   }
   .main-slider .main-slide__pic {
-    height: 500px;
+    height: 360px;
   }
   .main-slider .main-slide__content {
     width: 590px;
     padding: 50px 45px 100px 45px;
-    height: 345px;
+    height: 320px;
   }
   .main-slider .main-slide__title {
     font-size: 36px;
@@ -11719,6 +11726,12 @@ textarea {
   }
   .container--big .price .product-wrapper .product__action-time {
     font-size: 15px;
+  }
+  .main-slider .main-slide__pic {
+    height: 500px;
+  }
+  .main-slider .main-slide__content {
+    height: 360px;
   }
   .products {
     -webkit-column-gap: 10px;
