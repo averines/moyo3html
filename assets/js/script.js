@@ -439,46 +439,63 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 
 
 // переключение цвета в карточке товара
-var colorVariantStartId
+// var colorVariantStartId
+// const colorVariantsItems = document.getElementsByClassName('color-variants__item');
+// colorVariantsItems.forEach(item => {
+//     item.addEventListener('mouseover', (e) => {
+//         e.preventDefault()
+//         let colorVariants = item.parentElement
+//         let colorVariantId = item.dataset.colorVariant
 
-const colorVariantsItems = document.getElementsByClassName('color-variants__item');
-[...colorVariantsItems].forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault()
+//         let colorVariantsLocalItems = colorVariants.getElementsByClassName('color-variants__item');
 
-        let colorVariants = item.parentElement
-        let colorVariantId = item.dataset.colorVariant
+//         if (!colorVariantStartId) {
+//             colorVariantStartId = colorVariantsLocalItems[0].dataset.colorVariant;
+//         }
 
-        let colorVariantsLocalItems = colorVariants.getElementsByClassName('color-variants__item');
+//         [...colorVariantsLocalItems].forEach(item => { item.classList.remove('is-active') })
+//         item.classList.add('is-active')
 
-        if (!colorVariantStartId) {
-            colorVariantStartId = colorVariantsLocalItems[0].dataset.colorVariant;
-        }
+//         let product = item.closest('.product')
+//         let productPictire = product.querySelector('.product__pic picture')
+//         let productPictireSources = productPictire.querySelectorAll('source')
 
-        [...colorVariantsLocalItems].forEach(item => { item.classList.remove('is-active') })
-        item.classList.add('is-active')
+//         let productPictireImg = productPictire.querySelectorAll('img')[0]
 
-        let product = item.closest('.product')
-        let productPictire = product.querySelector('.product__pic picture')
-        let productPictireSources = productPictire.querySelectorAll('source')
+//         let productPictireImgSrc = productPictireImg.getAttribute('src')
+//         let replaceId = new RegExp(`${colorVariantStartId}`, 'gi')
+//         let srcsetNew = productPictireImgSrc.replace(replaceId, colorVariantId)
+//         productPictireImg.setAttribute('src', srcsetNew)
 
-        let productPictireImg = productPictire.querySelectorAll('img')[0]
+//         for (let source of productPictireSources) {
+//             srcset = source.getAttribute('srcset')
+//             srcsetNew = srcset.replace(replaceId, colorVariantId)
+//             source.setAttribute('srcset', srcsetNew)
 
-        let productPictireImgSrc = productPictireImg.getAttribute('src')
-        let replaceId = new RegExp(`${colorVariantStartId}`, 'gi')
-        let srcsetNew = productPictireImgSrc.replace(replaceId, colorVariantId)
-        productPictireImg.setAttribute('src', srcsetNew)
+//         }
 
-        for (let source of productPictireSources) {
-            srcset = source.getAttribute('srcset')
-            srcsetNew = srcset.replace(replaceId, colorVariantId)
-            source.setAttribute('srcset', srcsetNew)
+//         colorVariantStartId = colorVariantId
+//     })
+// })
 
-        }
 
-        colorVariantStartId = colorVariantId
+
+const products = document.querySelectorAll('.product')
+if (products.length > 0) {
+    products.forEach(product => {
+        let productPicSource = product.querySelector('.product__pic source')
+        let productPicImg = product.querySelector('.product__pic img')
+        let productColors = product.querySelectorAll('.color-variants__item')
+        productColors.forEach(productColor => {
+            productColor.addEventListener('mouseover', () => {
+                let productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-pic1-300`
+                productPicSource.setAttribute('srcset', productPicPath+'.webp')
+                productPicImg.setAttribute('src', productPicPath+'.jpg')
+            })
+        })
+        
     })
-})
+}
 
 
 // переключение сортировки в каталоге
@@ -635,10 +652,6 @@ function progressDiagram() {
     });
 }
 progressDiagram()
-
-
-// вывод значении линией
-
 
 
 // tiny slider
@@ -987,7 +1000,6 @@ $(document).ready(function () {
     }
 });
 
-
 const mapModalBtns = document.querySelectorAll('.js-mapmodal')
 let myMapModal;
 mapModalBtns.forEach(mapModalBtn => {
@@ -1093,60 +1105,6 @@ if (customSelectItems.length > 0) {
 }
 
 //мультибегунок
-// const multirangeItems = document.querySelectorAll('.filter-range')
-// if (multirangeItems.length > 0) {
-//     multirangeItems.forEach(item => {
-//         let inputs = item.querySelectorAll('.range-inputs input')
-//         let rangeSlider = item.querySelector('.range-inputs__slider')
-//         let inputStart = item.querySelector('.range-inputs__start')
-//         let inputEnd = item.querySelector('.range-inputs__end')
-
-
-//         let inputStartValue = inputStart.value;
-//         let inputEndValue = inputEnd.value;
-
-//         let inputStartMax = inputStart.max;
-//         let inputStartMin = inputStart.min;
-
-//         let totalWidth = inputStartMax - inputStartMin
-
-//         inputs.forEach(input => {
-//             input.addEventListener('mouseover', (e) => {
-//                 input.classList.add('is-active')
-//             })
-//             input.addEventListener('mouseout', (e) => {
-//                 input.classList.remove('is-active')
-//             })
-//         })
-
-//         inputStart.addEventListener('input', (e) => {
-//             inputEnd.min = e.target.value
-
-//             inputMaxWidthOffset = ((e.target.value - inputStartValue) * 100) / totalWidth
-//             inputEnd.style.width = 100 - inputMaxWidthOffset + '%'
-
-//             rangeSlider.style.left = inputMaxWidthOffset + '%'
-//             rangeSlider.style.width = 100 - inputMaxWidthOffset + '%'
-
-//             // slideWidth = ((inputStartMax - e.target.value) * 100) / totalWidth
-//             // rangeSlider.style.width = slideWidth + '%'
-//         })
-
-//         inputEnd.addEventListener('input', (e) => {
-//             inputStartMax = e.target.value
-
-//             inputMinWidthOffset = ((inputEndValue - e.target.value) * 100) / (inputEndValue - inputStartValue)
-//             inputStart.style.width = 100 - inputMinWidthOffset + '%'
-
-//             rangeSlider.style.right = inputMinWidthOffset + '%'
-//             rangeSlider.style.width = 100 - inputMinWidthOffset + '%'
-
-//             // slideWidth = 100 - ((inputEndValue - e.target.value) * 100) / totalWidth
-//             // rangeSlider.style.width = slideWidth + '%'
-//         })
-//     })
-// }
-
 var $rangeSlider = $(".js-range-slider"),
     $inputFrom = $(".js-range-from"),
     $inputTo = $(".js-range-to"),
@@ -1385,13 +1343,11 @@ if (deliveryWrapper) {
     })
 }
 
-
+// кнопка Бренды в Категории для десктопа и мобильной версии
 const btnBrands = document.querySelector('.js-btn-brands')
 if (btnBrands) {
     const menuItemBrands = document.querySelector('.js-menu-item-brands')
-
     btnBrands.addEventListener('click', (e) => { btnBrandsHandler(e) })
-
     function btnBrandsHandler(e) {
         if (document.body.clientWidth < 768) {
             e.preventDefault()
@@ -1578,22 +1534,6 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
     })
 
     const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
-
-
-    // swiperProductGallery.on('slideChange', function (e) {
-
-    //     swiperProductThumbsItems.forEach(thumbSlide => {
-    //         thumbSlide.classList.remove('is-active')
-    //     })
-    //     let activeNum = parseInt(e.activeIndex)
-    //     console.log(activeNum + 5);
-    //     swiperProductThumbsItems[e.activeIndex].classList.add('is-active')
-
-    //     // console.log(e.activeIndex);
-    //     // swiperProductThumbs.slideToLoop(e.activeIndex)
-    // })
-
-
     swiperProductThumbsItems.forEach(item => {
         item.addEventListener('mouseover', () => {
             swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
@@ -1681,7 +1621,6 @@ window.addEventListener('resize', () => {
         $.fancybox.close();
     }
 }, false);
-
 
 
 
