@@ -1263,7 +1263,7 @@
     }
 
   }
-    
+
 
   .category-menu__item.accordion {
     .accordion__item {
@@ -2394,7 +2394,7 @@
     &--top {
       position: absolute;
       right: 0;
-      top: 40px;
+      top: 70px;
       left: 0;
     }
 
@@ -2636,6 +2636,12 @@
       }
 
     }
+  }
+
+  .container--pagination {
+    max-width: 100%;
+    padding-left: $gap-big;
+    padding-right: $gap-big;
   }
 
   .main-slider {

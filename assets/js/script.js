@@ -84,13 +84,6 @@ categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
 })
 
 
-
-
-
-
-
-
-
 // меню фильтров на странице подкатегории (в каталоге)
 const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
@@ -1579,7 +1572,7 @@ if (document.querySelectorAll('.product-gallery').length > 0) {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 grabCursor: false,
-                speed: 100,
+                speed: 0,
             }
         }
     })
