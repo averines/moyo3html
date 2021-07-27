@@ -1261,11 +1261,11 @@
 }
 
 .category-menu__subtitle {
-      font-size: 0.9em;
-      color: $text-light;
-      margin-left: 0.5em;
-      font-weight: 400;
-    }
+  font-size: 0.9em;
+  color: $text-light;
+  margin-left: 0.5em;
+  font-weight: 400;
+}
 
 .subcategory-menu {
   margin: 0;
@@ -2765,7 +2765,6 @@
   display: flex;
   align-items: baseline;
 
-
   &__counter {
     font-size: 12px;
     // margin-left: 0.75em;
@@ -2779,11 +2778,10 @@
     display: flex;
     flex-direction: column;
 
-      &__header {
-    margin-bottom: 5px;
+    &__header {
+      margin-bottom: 5px;
+    }
   }
-  }
-
 }
 
 .pagebanner {
@@ -5053,6 +5051,7 @@
     img {
       display: block;
       width: 100%;
+      border-radius: 4px;
     }
   }
 
@@ -6569,6 +6568,10 @@
           td {
             text-align: center;
             justify-content: center;
+
+            &.return-item-td {
+            text-align: right;
+            }
           }
         }
       }
@@ -7678,14 +7681,12 @@ textarea {
   }
 }
 
-
-  .menu-catalog-subcategories {
-    position: absolute;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-  }
-
+.menu-catalog-subcategories {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
 
 @import "subcategories";
 @import "animations";

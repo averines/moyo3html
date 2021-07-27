@@ -187,6 +187,15 @@ h5,
   }
 }
 
+ol {
+  li {
+    margin: 0.75em;
+    a {
+      color: $main;
+    }
+  }
+}
+
 .link-callback {
   color: $text-white-light;
   font-size: 12px;
@@ -218,6 +227,11 @@ h5,
 
 .align-end {
   align-items: flex-end;
+}
+
+.justify-self-end {
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .justify-between {
@@ -281,6 +295,15 @@ h5,
     font-size: 0.7em;
     padding: 0.3em 1em;
     transform: translateY(-100%);
+  }
+
+  &--gray {
+    border-color: $line-light;
+    background-color: $bg-light;
+    &::before {
+      content: "Уведомление";
+      background-color: $text-light;
+    }
   }
 }
 

@@ -159,6 +159,14 @@ h5,
   content: " ₽";
 }
 
+ol li {
+  margin: 0.75em;
+}
+
+ol li a {
+  color: #ab064e;
+}
+
 .link-callback {
   color: #f1b4c8;
   font-size: 12px;
@@ -200,6 +208,12 @@ h5,
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.justify-self-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .justify-between {
@@ -275,6 +289,16 @@ h5,
   padding: 0.3em 1em;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.alert--gray {
+  border-color: #d9d9d9;
+  background-color: #f3f2f0;
+}
+
+.alert--gray::before {
+  content: "Уведомление";
+  background-color: #777;
 }
 
 .btn {
@@ -6032,6 +6056,7 @@ hr.dotted {
 .order-item__pic img {
   display: block;
   width: 100%;
+  border-radius: 4px;
 }
 
 .order-item__info {
@@ -7697,6 +7722,10 @@ hr.dotted {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.order-view .order-item__table tbody tr td.return-item-td {
+  text-align: right;
 }
 
 .order-view .order-item__info {
@@ -11772,7 +11801,7 @@ textarea {
     padding-bottom: 200px;
   }
   .order-item__info-wrapper {
-    min-width: 500px;
+    min-width: 450px;
   }
   .order-view .status-icons__item {
     width: 33px;

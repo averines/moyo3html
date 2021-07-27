@@ -1708,16 +1708,17 @@ if (orderItems.length > 0) {
 
     orderItems.forEach(orderItem => {
         let orderItemremoveBtn = orderItem.querySelector('.order-item__remove')
-
-        orderItemremoveBtn.addEventListener('click', () => {
-            orderItem.remove()
-            orderItemsQuantity--
-            console.log(orderItemsQuantity);
-            if (orderItemsQuantity == 0) {
-                window.location.href = 'personal-cart-empty.html';
-            }
-        })
-
+        
+        if (orderItemremoveBtn) {
+            orderItemremoveBtn.addEventListener('click', () => {
+                orderItem.remove()
+                orderItemsQuantity--
+                console.log(orderItemsQuantity);
+                if (orderItemsQuantity == 0) {
+                    window.location.href = 'personal-cart-empty.html';
+                }
+            })
+        }
     })
 }
 
