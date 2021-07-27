@@ -3777,12 +3777,25 @@ hr.dotted {
 }
 
 .pagetitle__counter {
-  font-size: 11px;
-  margin-left: 0.75em;
+  font-size: 12px;
 }
 
 .pagetitle__text {
   font-size: 0.8em;
+}
+
+.pagetitle__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pagetitle__wrapper__header {
+  margin-bottom: 5px;
 }
 
 .pagebanner__video {
@@ -3903,6 +3916,11 @@ hr.dotted {
 .pagination__link--active {
   color: #ab064e;
   text-decoration: underline;
+}
+
+.pagination--top {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .togglers {
@@ -9850,7 +9868,7 @@ textarea {
     display: flex;
     -webkit-column-gap: 0;
             column-gap: 0;
-    margin-top: 0;
+    margin-top: 15px;
   }
   .togglers .toggler-sort-wrapper {
     -ms-flex-item-align: center;
@@ -9930,7 +9948,7 @@ textarea {
   .pagination--top {
     position: absolute;
     right: 15px;
-    top: 40px;
+    top: 50px;
     width: 280px;
   }
   .pagination--bottom {
@@ -11608,6 +11626,19 @@ textarea {
   .container--pagination {
     position: initial;
   }
+  .pagetitle__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pagetitle__counter {
+    margin-top: 1.5em;
+    margin-left: 10px;
+  }
   .pagination {
     pointer-events: none;
     width: 100%;
@@ -11616,7 +11647,7 @@ textarea {
   .pagination--top {
     position: absolute;
     right: 0;
-    top: 70px;
+    top: 50px;
     left: 0;
   }
   .pagination--bottom {

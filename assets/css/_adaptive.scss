@@ -402,7 +402,7 @@
   .togglers {
     display: flex;
     column-gap: 0;
-    margin-top: 0;
+    margin-top: 15px;
 
     .toggler-sort-wrapper {
       align-self: center;
@@ -485,7 +485,7 @@
     &--top {
       position: absolute;
       right: 15px;
-      top: 40px;
+      top: 50px;
       width: 280px;
     }
 
@@ -2386,6 +2386,18 @@
     position: initial;
   }
 
+  .pagetitle {
+    &__wrapper {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__counter {
+      margin-top: 1.5em;
+      margin-left: 10px;
+    }
+  }
+
   .pagination {
     pointer-events: none;
     width: 100%;
@@ -2394,7 +2406,7 @@
     &--top {
       position: absolute;
       right: 0;
-      top: 70px;
+      top: 50px;
       left: 0;
     }
 
