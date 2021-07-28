@@ -6195,6 +6195,12 @@
       flex-direction: column;
       row-gap: 5px;
     }
+
+    &__message {
+      font-size: 0.85em;
+      margin: 1em 0;
+
+    }
   }
 }
 

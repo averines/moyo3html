@@ -7324,6 +7324,11 @@ hr.dotted {
   row-gap: 5px;
 }
 
+.history-table .total-return__message {
+  font-size: 0.85em;
+  margin: 1em 0;
+}
+
 .history-item-payment {
   margin-top: 10px;
 }

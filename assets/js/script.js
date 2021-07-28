@@ -1,12 +1,16 @@
 // главное меню
+const documentBody = document.querySelector('body')
 const menuCatalogBtn = document.getElementById('btn-catalog')
 const menuCatalogBlock = document.querySelector('.menu-catalog-categories')
 const menuCatalogWrapper = document.querySelector('.menu-catalog-wrapper')
-const documentBody = document.querySelector('body')
-let menuCatalogIsActive = false
-
-const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
+// const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
+const categoryMenuItems = document.querySelectorAll('.category-menu__item')
 const menuCatalogSubcategoriesBlock = document.querySelector('.menu-catalog-subcategories')
+const catalogContent = document.querySelector('.menu-catalog-content')
+const categoriesItems = document.querySelectorAll('.category-menu__link')
+let subCategoryItem
+let categoryItem
+let menuCatalogIsActive = false
 
 
 const menuCatalogOpen = function () {
@@ -22,7 +26,7 @@ const menuCatalogClose = function () {
     menuCatalogBtn.classList.remove('is-active')
     menuCatalogWrapper.classList.remove('is-active')
     menuCatalogBlock.classList.remove('is-active')
-    documentBody.classList.remove('body-overlay')
+    documentBody.classList.remove('body-overlay') // для того чтобы не прыгало из-за исчезания полосы прокрутки
     menuCatalogSubcategoriesBlock.classList.remove('is-active')
 }
 
@@ -35,40 +39,27 @@ menuCatalogWrapper.addEventListener('click', (e) => {
     let target = e.target.className
     if (target.includes('menu-catalog-wrapper') || target.includes('modal__close')) {
         menuCatalogClose();
-        subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
-        categoryItem.classList.remove('is-active') // прячем список субкатегорий 
+        // subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
+        // categoryItem.classList.remove('is-active') // прячем список субкатегорий 
         catalogContent.classList.remove('is-active') // прячем обертку
     }
 })
 
+categoryMenuItems.forEach(categoryMenuItem => {
+    let parentLink = categoryMenuItem.querySelector('.category-menu__link.accordion__title')
+    let childMenu = categoryMenuItem.querySelector('.subcategory-menu')
 
+    if (parentLink) {
+        // создание ссылки на все категории
+        let childMenuLink = document.createElement('a')
+        childMenuLink.classList.add('subcategory-menu__item')
+        childMenuLink.classList.add('subcategory-menu__item--special')
+        childMenuLink.setAttribute('href', parentLink.getAttribute('href'))
+        childMenuLink.innerHTML = 'Все подкатегории'
+        childMenu.insertBefore(childMenuLink, childMenu.querySelector('.subcategory-menu__item'))
 
-categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
-    let parentLink = categoryMenuItemAccordion.querySelector('.category-menu__link.accordion__title')
-    let childMenu = categoryMenuItemAccordion.querySelector('.subcategory-menu')
+        let dublicateMenu = childMenu.cloneNode(true)
 
-    let childMenuLink = document.createElement('a')
-    childMenuLink.classList.add('subcategory-menu__item')
-    childMenuLink.classList.add('subcategory-menu__item--special')
-    childMenuLink.setAttribute('href', parentLink.getAttribute('href'))
-    childMenuLink.innerHTML = 'Все подкатегории'
-    childMenu.insertBefore(childMenuLink, childMenu.querySelector('.subcategory-menu__item'))
-    let dublicateMenu = childMenu.cloneNode(true)
-
-
-    if (document.body.clientWidth < 768) {
-        parentLink.addEventListener('click', (e) => {
-            e.preventDefault();
-        })
-    } else {
-        parentLink.addEventListener('mouseover', () => {
-            menuCatalogSubcategoriesBlock.classList.add('is-active')
-            menuCatalogSubcategoriesBlock.innerHTML = ''
-            menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
-        })
-    }
-
-    window.addEventListener('resize', () => {
         if (document.body.clientWidth < 768) {
             parentLink.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -80,7 +71,27 @@ categoryMenuItemsAccordion.forEach(categoryMenuItemAccordion => {
                 menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
             })
         }
-    });
+
+        window.addEventListener('resize', () => {
+            if (document.body.clientWidth < 768) {
+                parentLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                })
+            } else {
+                parentLink.addEventListener('mouseover', () => {
+                    menuCatalogSubcategoriesBlock.classList.add('is-active')
+                    menuCatalogSubcategoriesBlock.innerHTML = ''
+                    menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
+                })
+
+                categoryMenuItemAccordion.querySelector('.accordion__item').classList.remove('is-active')
+            }
+        });
+    } else {
+        
+    }
+
+
 })
 
 
@@ -322,11 +333,6 @@ for (let accordion of accordions) {
 }
 
 
-// меню каталога
-const catalogContent = document.querySelector('.menu-catalog-content')
-const categoriesItems = document.querySelectorAll('.category-menu__link')
-let subCategoryItem
-let categoryItem
 
 // [...categoriesItems].forEach(item => {
 
@@ -366,8 +372,6 @@ let categoryItem
 
 
 // кнопка добавления в избранное
-
-
 const favorites = document.getElementsByClassName('product__favorite');
 [...favorites].forEach(item => {
     item.addEventListener('click', () => {
@@ -434,7 +438,6 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 //         colorVariantStartId = colorVariantId
 //     })
 // })
-
 
 
 const products = document.querySelectorAll('.product')
@@ -529,7 +532,7 @@ if (products.length > 0) {
 }
 
 
-// переключение сортировки в каталоге
+// имитация переключения сортировки в каталоге
 const togglerSort = document.querySelector('.toggler-sort')
 if (togglerSort) {
     const togglerSortBtns = togglerSort.querySelectorAll('.toggler-sort__item')
@@ -554,7 +557,7 @@ if (togglersItems.length > 0) {
     })
 }
 
-//переключение количества элементов на странице
+// имитация переключение количества элементов на странице
 const togglerCount = document.querySelector('.toggler-count')
 if (togglerCount) {
     const togglerCountBtns = togglerCount.querySelectorAll('.toggler-count__item')
@@ -1754,15 +1757,37 @@ if (orderItems.length > 0) {
 }
 
 // имитация показа сообщения об отравленном возврате
-const totalReturnWrapper = document.querySelector('.total-return__wrapper')
-if (totalReturnWrapper) {
-    let totalReturnBtnDeposit = totalReturnWrapper.querySelector('.js-total-return-btn-deposit')
-    totalReturnBtnDeposit.addEventListener('click', () => {
-        totalReturnWrapper.innerHTML = '<span class="text-small">Возврат<br>зачислен <br>на депозит</span>'
+const totalReturnWrappers = document.querySelectorAll('.total-return__wrapper')
+if (totalReturnWrappers.length > 0) {
+
+    totalReturnWrappers.forEach(totalReturnWrapper => {
+        let totalReturnBtnDeposit = totalReturnWrapper.querySelector('.js-total-return-btn-deposit')
+        let totalReturnBtnCard = totalReturnWrapper.querySelector('.js-total-return-btn-card')
+        let totalReturnBtnModalCard = totalReturnWrapper.querySelector('.js-total-return-btn-modal-card')
+
+        totalReturnBtnDeposit.addEventListener('click', () => {
+            totalReturnBtnDeposit.remove()
+            totalReturnBtnModalCard.remove()
+
+            let message = document.createElement('div')
+            message.innerHTML = 'Возврат<br>зачислен <br>на депозит'
+            message.classList.add('total-return__message')
+            totalReturnWrapper.insertBefore(message, totalReturnWrapper.querySelector('.total-return__buttons'))
+            totalReturnBtnCard.remove()
+
+        })
+
+
+        totalReturnBtnModalCard.addEventListener('click', () => {
+            totalReturnBtnCard.innerHTML = 'Подробнее'
+            totalReturnBtnModalCard.remove()
+            totalReturnBtnDeposit.remove()
+
+            let message = document.createElement('div')
+            message.innerHTML = 'Возврат будет отправлен <br>на ваш счет/карту в течение 10 дней'
+            message.classList.add('total-return__message')
+            totalReturnWrapper.insertBefore(message, totalReturnWrapper.querySelector('.total-return__buttons'))
+        })
     })
 
-    let totalReturnBtnCard = totalReturnWrapper.querySelector('.js-total-return-btn-card')
-    totalReturnBtnCard.addEventListener('click', () => {
-        totalReturnWrapper.innerHTML = '<span class="text-small">Возврат<br>отправлен <br>на ваш счет/карту</span>'
-    })
 }
