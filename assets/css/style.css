@@ -7734,6 +7734,9 @@ hr.dotted {
   row-gap: 5px;
   text-align: left;
   white-space: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .order-view .order-item__table tbody tr td .return-item-status__date {
