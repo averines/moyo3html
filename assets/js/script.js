@@ -1807,3 +1807,13 @@ if (totalReturnWrappers.length > 0) {
     })
 
 }
+
+// имитация отказа от части товара в Истории заказа
+const refuseBtns = document.querySelectorAll('.js-refuse-btn')
+if (refuseBtns.length > 0) {
+    refuseBtns.forEach(refuseBtn => {
+        refuseBtn.addEventListener('click', () => {
+            refuseBtn.closest('tr').remove()
+        })
+    })
+}
