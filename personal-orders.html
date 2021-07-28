@@ -972,7 +972,30 @@
                             <div class="total-return__summ">-1 655,00</div>
                             <div class="total-return__buttons">
                               <button class="btn btn--mini btn-white" data-fancybox data-src="#modalreturnmoney">Вернуть</button>
-                              <button class="btn btn--mini btn-white">Зачислить на&nbsp;депозит</button>
+                              <button class="btn btn--mini btn-white js-total-return-btn-deposit">Зачислить на&nbsp;депозит</button>
+                            </div>
+                            <div class="modals">
+                              <div class="modals__item modal" id="modalreturnmoney">
+                                <div class="modal__title">Возврат средств</div>
+                                <div class="modal__content p-3">
+                                  <p>Прошу вернуть денежные средства, излишне перечисленные 17.07.2021 г. в сумме <span class="text-bold">"Десять тысяч шестьсот тридцать один рубль 33 копейки"</span> по заказу <span
+                                      class="text-bold">№22492 от 07.07.2021 г.</span> </p>
+                                  <p>Возврат вышеуказанной суммы прошу произвести на ту же карту/счёт, с которых была произведена оплата.</p>
+                                  <p class="h4 mt-2">Возврат осуществляется за следующие товары:</p>
+                                  <ul class="marker mb-4 text-small">
+                                    <li>Брюки PLAYTODAY 22011003 (р.152), 1 шт, 683,80 р.</li>
+                                    <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
+                                    <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
+                                    <li>Шапка PLAYTODAY 12111559 (р.54), 1 шт, 168,79 р.</li>
+                                    <li>Толстовка PLAYTODAY 12121132 (р.152), 1 шт, 656,87 р.</li>
+                                    <li>Футболка PLAYTODAY 22011099 (р.164), 1 шт, 370,25 р.</li>
+                                    <li>Футболка PLAYTODAY 22011100 (р.164), 1 шт, 204,98 р.</li>
+                                    <li>Футболка PLAYTODAY 220122004 (р.152), 1 шт, 271,59 р.</li>
+                                    <li>Блуза PLAYTODAY 22021066 (р.128), 1 шт, 554,67 р.</li>
+                                  </ul>
+                                  <button class="btn btn-main js-total-return-btn-card" onclick="$.fancybox.close();">Всё верно, отправить письмо</button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1138,41 +1161,7 @@
                 </div>
               </div>
             </div>
-            <div class="modals">
-              <div class="modals__item modal" id="historyItem1">
-                <div class="modal__title">Просмотр заказа 1</div>
-              </div>
-              <div class="modals__item modal" id="historyItem2">
-                <div class="modal__title">Просмотр заказа 2</div>
-              </div>
-              <div class="modals__item modal" id="historyItem3">
-                <div class="modal__title">Просмотр заказа 3</div>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modals">
-      <div class="modals__item modal" id="modalreturnmoney">
-        <div class="modal__title">Возврат средств</div>
-        <div class="modal__content p-3">
-          <p>Прошу вернуть денежные средства, излишне перечисленные 17.07.2021 г. в сумме <span class="text-bold">"Десять тысяч шестьсот тридцать один рубль 33 копейки"</span> по заказу <span class="text-bold">№22492 от 07.07.2021 г.</span> </p>
-          <p>Возврат вышеуказанной суммы прошу произвести на ту же карту/счёт, с которых была произведена оплата.</p>
-          <p class="h4 mt-2">Возврат осуществляется за следующие товары:</p>
-          <ul class="marker mb-4 text-small">
-            <li>Брюки PLAYTODAY 22011003 (р.152), 1 шт, 683,80 р.</li>
-            <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
-            <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
-            <li>Шапка PLAYTODAY 12111559 (р.54), 1 шт, 168,79 р.</li>
-            <li>Толстовка PLAYTODAY 12121132 (р.152), 1 шт, 656,87 р.</li>
-            <li>Футболка PLAYTODAY 22011099 (р.164), 1 шт, 370,25 р.</li>
-            <li>Футболка PLAYTODAY 22011100 (р.164), 1 шт, 204,98 р.</li>
-            <li>Футболка PLAYTODAY 220122004 (р.152), 1 шт, 271,59 р.</li>
-            <li>Блуза PLAYTODAY 22021066 (р.128), 1 шт, 554,67 р.</li>
-          </ul>
-          <button class="btn btn-main" onclick="$.fancybox.close();">Всё верно, отправить письмо</button>
         </div>
       </div>
     </div>

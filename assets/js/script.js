@@ -438,9 +438,6 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 
 
 const products = document.querySelectorAll('.product')
-
-
-
 if (products.length > 0) {
     products.forEach(product => {
         let productPicSource = product.querySelector('.product__pic source')
@@ -448,6 +445,8 @@ if (products.length > 0) {
         let productColors = product.querySelectorAll('.color-variants__item')
         let productColorPicIndex = 0
         let swapProductPicTimer
+        let productActionTime = product.querySelector('.product__info .product__action-time')
+        let nowDate = Date.now();
 
         function swapProductPic(picsArray, productColor) {
             console.log('меняю фотки');
@@ -459,7 +458,6 @@ if (products.length > 0) {
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(picsArray, productColor)
             }, 700)
-
         }
 
         productColors.forEach(productColor => {
@@ -491,6 +489,41 @@ if (products.length > 0) {
             })
 
         })
+
+        // вывод дней до завершения акции со склонением
+        if (productActionTime) {
+            if (productActionTime.dataset.actionTime) {
+                let productActionDate = new Date(productActionTime.dataset.actionTime)
+                let productActionTimeframe = Math.floor((productActionDate - nowDate) / (1000 * 60 * 60 * 24) % 30)
+
+                if (productActionTimeframe > 0) {
+                    let dayword
+                    let endword = 'Осталось'
+                    switch (productActionTimeframe) {
+                        case 1:
+                        case 21:
+                        case 31:
+                            endword = 'Остался'
+                            dayword = 'день'
+                            break
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 22:
+                        case 23:
+                        case 24:
+                            dayword = 'дня'
+                            break
+                        default:
+                         dayword = 'дней'
+                    }
+                    productActionTime.innerHTML = `${endword} ${productActionTimeframe} ${dayword}`
+                } else {
+                    productActionTime.innerHTML = `Акция завершена`
+                }
+                
+            }
+        }
         
     })
 }
@@ -1720,5 +1753,16 @@ if (orderItems.length > 0) {
     })
 }
 
+// имитация показа сообщения об отравленном возврате
+const totalReturnWrapper = document.querySelector('.total-return__wrapper')
+if (totalReturnWrapper) {
+    let totalReturnBtnDeposit = totalReturnWrapper.querySelector('.js-total-return-btn-deposit')
+    totalReturnBtnDeposit.addEventListener('click', () => {
+        totalReturnWrapper.innerHTML = '<span class="text-small">Возврат<br>зачислен <br>на депозит</span>'
+    })
 
-
+    let totalReturnBtnCard = totalReturnWrapper.querySelector('.js-total-return-btn-card')
+    totalReturnBtnCard.addEventListener('click', () => {
+        totalReturnWrapper.innerHTML = '<span class="text-small">Возврат<br>отправлен <br>на ваш счет/карту</span>'
+    })
+}
