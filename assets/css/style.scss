@@ -6569,8 +6569,33 @@
             text-align: center;
             justify-content: center;
 
-            &.return-item-td {
-            text-align: right;
+            &.return-item-status {
+              text-align: left;
+            }
+
+            .return-item-status {
+              &__date { 
+                border: 1px solid $line-light;
+                padding: 0.3em 0.5em;
+                font-size: 12px;
+                border-radius: 3px;
+                margin-right: 0.5em;
+              }
+
+              &__message {
+                &--standart {
+                  color: $text
+                }
+                &--inprogress {
+                  color: $special-7;
+                }
+                &--bad {
+                  color: $special-4;
+                }
+                &--good {
+                  color: $special-2
+                }                                                
+              }
             }
           }
         }
