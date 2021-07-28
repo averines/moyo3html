@@ -6568,12 +6568,15 @@
           td {
             text-align: center;
             justify-content: center;
-
-            &.return-item-status {
-              text-align: left;
-            }
+            white-space: nowrap;
 
             .return-item-status {
+              display: flex;
+              flex-wrap: wrap;
+              row-gap: 5px;
+              text-align: left;
+              white-space: normal;
+
               &__date { 
                 border: 1px solid $line-light;
                 padding: 0.3em 0.5em;

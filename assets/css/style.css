@@ -7722,10 +7722,18 @@ hr.dotted {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
 
-.order-view .order-item__table tbody tr td.return-item-status {
+.order-view .order-item__table tbody tr td .return-item-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 5px;
   text-align: left;
+  white-space: normal;
 }
 
 .order-view .order-item__table tbody tr td .return-item-status__date {
