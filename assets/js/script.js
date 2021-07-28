@@ -438,35 +438,58 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 
 
 const products = document.querySelectorAll('.product')
+
+
+
 if (products.length > 0) {
     products.forEach(product => {
         let productPicSource = product.querySelector('.product__pic source')
         let productPicImg = product.querySelector('.product__pic img')
         let productColors = product.querySelectorAll('.color-variants__item')
+        let productColorPicIndex = 0
+        let swapProductPicTimer
+
+        function swapProductPic(picsArray, productColor) {
+            console.log('меняю фотки');
+            productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
+            swapProductPicTimer = setTimeout(function () {
+                console.log('сменил фотку');
+                productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-${picsArray[productColorPicIndex]}-300`
+                productPicSource.setAttribute('srcset', productPicPath + '.webp')
+                productPicImg.setAttribute('src', productPicPath + '.jpg')
+                swapProductPic(picsArray, productColor)
+            }, 700)
+
+        }
 
         productColors.forEach(productColor => {
+            let colorPics
+            if (productColor.dataset.colorPics) {
+                colorPics = productColor.dataset.colorPics.replace(/\s/g, '');
+                colorPics = colorPics.split(',');
+            }
+
+            //изменение фото товара в карточке товара при наведении на thumb
             productColor.addEventListener('mouseover', () => {
+                console.log('ставлю первую фотку');
                 let productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-pic1-300`
                 productPicSource.setAttribute('srcset', productPicPath+'.webp')
                 productPicImg.setAttribute('src', productPicPath+'.jpg')
+                swapProductPic(colorPics, productColor)
 
-                // перелистывание фото товара при наведении на thumb
-                if (productColor.dataset.colorPics) {
-                    let colorPics = productColor.dataset.colorPics.replace(/\s/g, '');
-                    colorPics = colorPics.split(',');
-
-                    colorPics.forEach((colorPic, index) => {
-                        setTimeout(() => {
-                            productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-${colorPic}-300`
-                            productPicSource.setAttribute('srcset', productPicPath + '.webp')
-                            productPicImg.setAttribute('src', productPicPath + '.jpg')
-                        }, 700 * index);
-                    })
-                } else {
-                    console.log('не указаны номера фото для цветов (атрибут data-color-pics)');
-                }
-
+                productColors.forEach(productColor => {
+                    productColor.classList.remove('is-active')
+                })
+                productColor.classList.add('is-active')
             })
+
+            //прекращение листания при отведении курсоа с thumb
+            productColor.addEventListener('mouseout', () => {
+                console.log('ставлю первую фотку для ранее наведенного товара');
+                console.log('прекращаю менять фотки');
+                clearTimeout(swapProductPicTimer);
+            })
+
         })
         
     })
