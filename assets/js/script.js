@@ -3,8 +3,9 @@ const documentBody = document.querySelector('body')
 const menuCatalogBtn = document.getElementById('btn-catalog')
 const menuCatalogBlock = document.querySelector('.menu-catalog-categories')
 const menuCatalogWrapper = document.querySelector('.menu-catalog-wrapper')
-// const categoryMenuItemsAccordion = document.querySelectorAll('.category-menu__item.accordion')
-const categoryMenuItems = document.querySelectorAll('.category-menu__item')
+const categoryMenuAccordionItems = document.querySelectorAll('.category-menu__item.accordion')
+const categoryMenuStandartItems = document.querySelectorAll('.category-menu__item:not(.accordion):not(.accordion__item)')
+const parentLinks = document.querySelectorAll('.category-menu__link.accordion__title')
 const menuCatalogSubcategoriesBlock = document.querySelector('.menu-catalog-subcategories')
 const catalogContent = document.querySelector('.menu-catalog-content')
 const categoriesItems = document.querySelectorAll('.category-menu__link')
@@ -45,9 +46,10 @@ menuCatalogWrapper.addEventListener('click', (e) => {
     }
 })
 
-categoryMenuItems.forEach(categoryMenuItem => {
-    let parentLink = categoryMenuItem.querySelector('.category-menu__link.accordion__title')
-    let childMenu = categoryMenuItem.querySelector('.subcategory-menu')
+// при наведение на пункты меню с аккордионом
+categoryMenuAccordionItems.forEach(categoryMenuAccordionItem => {
+    let parentLink = categoryMenuAccordionItem.querySelector('.category-menu__link.accordion__title')
+    let childMenu = categoryMenuAccordionItem.querySelector('.subcategory-menu')
 
     if (parentLink) {
         // создание ссылки на все категории
@@ -60,40 +62,54 @@ categoryMenuItems.forEach(categoryMenuItem => {
 
         let dublicateMenu = childMenu.cloneNode(true)
 
-        if (document.body.clientWidth < 768) {
-            parentLink.addEventListener('click', (e) => {
-                e.preventDefault();
-            })
-        } else {
-            parentLink.addEventListener('mouseover', () => {
-                menuCatalogSubcategoriesBlock.classList.add('is-active')
-                menuCatalogSubcategoriesBlock.innerHTML = ''
-                menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
-            })
-        }
-
-        window.addEventListener('resize', () => {
+        function parentLinkHandler() {
             if (document.body.clientWidth < 768) {
                 parentLink.addEventListener('click', (e) => {
                     e.preventDefault();
                 })
             } else {
                 parentLink.addEventListener('mouseover', () => {
+                    
+                    parentLinks.forEach(item => {
+                        item.classList.remove('is-active')
+                    })
+
+                    parentLink.classList.add('is-active')
+
                     menuCatalogSubcategoriesBlock.classList.add('is-active')
                     menuCatalogSubcategoriesBlock.innerHTML = ''
                     menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
                 })
 
+
+                // parentLink.addEventListener('mouseout', (e) => {
+                //     if (e.relatedTarget.classList.contains('menu-catalog-categories')) {
+                //         console.log('перешел в меню');
+                //         parentLink.classList.add('is-active')
+                //     } else {
+                //         console.log('yt в меню!');
+                //         parentLink.classList.remove('is-active')
+                //     }
+                // })
+            }
+        }
+        parentLinkHandler()
+
+        window.addEventListener('resize', () => {
+            parentLinkHandler()
+            if (document.body.clientWidth >= 768) {
                 categoryMenuItemAccordion.querySelector('.accordion__item').classList.remove('is-active')
             }
-        });
-    } else {
-        
+        })
     }
-
-
 })
 
+// при наведение на пункты меню, которые не имеют дочерних элементов (не являются аккордионом)
+categoryMenuStandartItems.forEach(categoryMenuStandartItem => {
+    categoryMenuStandartItem.addEventListener('mouseover', () => {
+        menuCatalogSubcategoriesBlock.classList.remove('is-active')
+    })
+})
 
 // меню фильтров на странице подкатегории (в каталоге)
 const menuFilterBtn = document.getElementById('btn-filter')
