@@ -98,7 +98,7 @@ categoryMenuAccordionItems.forEach(categoryMenuAccordionItem => {
         window.addEventListener('resize', () => {
             parentLinkHandler()
             if (document.body.clientWidth >= 768) {
-                categoryMenuItemAccordion.querySelector('.accordion__item').classList.remove('is-active')
+                    categoryMenuAccordionItem.querySelector('.accordion__item').classList.remove('is-active')
             }
         })
     }
