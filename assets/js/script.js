@@ -446,6 +446,7 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 // })
 
 
+// действия с продуктом===================================================
 const products = document.querySelectorAll('.product-wrapper .product')
 if (products.length > 0) {
     products.forEach(product => {
@@ -453,6 +454,7 @@ if (products.length > 0) {
         let productPicSource = product.querySelector('.product__pic source')
         let productPicImg = product.querySelector('.product__pic img')
         let productColors = product.querySelectorAll('.color-variants__item')
+        let productSizes = product.querySelectorAll('.size-variants__item')
         let productColorPicIndex = 0
         let swapProductPicTimer
         let productActionTime = product.querySelector('.product__info .product__action-time')
@@ -466,7 +468,7 @@ if (products.length > 0) {
         }
 
         function swapProductPic(picsArray, productColorActiveId) {
-            console.log('меняю фотки');
+            // console.log('меняю фотки');
             productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
             swapProductPicTimer = setTimeout(function () {
                 console.log('сменил фотку');
@@ -475,6 +477,17 @@ if (products.length > 0) {
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(picsArray, productColorActiveId)
             }, 1000)
+        }
+
+        //смена доступных размеров при наведении на thumb
+        function swapProductSizes(productColorActiveId) {
+            productSizes.forEach(productSize => {
+                if (productSize.dataset.colorId == productColorActiveId) {
+                    productSize.classList.add('is-showed')
+                } else {
+                    productSize.classList.remove('is-showed')
+                }
+            })
         }
 
         //листание фото товара в мини-карточке товара при наведении на фото
@@ -490,30 +503,29 @@ if (products.length > 0) {
             productPicSource.setAttribute('srcset', productPicPath + '.webp')
             productPicImg.setAttribute('src', productPicPath + '.jpg')
             clearTimeout(swapProductPicTimer);
+            swapProductSizes(productColorActiveId)
         })
 
         productColors.forEach(productColor => {
             //листание фото товара в мини-карточке товара при наведении на thumb
             productColor.addEventListener('mouseover', () => {
-                console.log('ставлю первую фотку');
+                // console.log('ставлю первую фотку');
                 productColorActiveId = productColor.dataset.colorId
                 let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(colorPics, productColorActiveId)
+                swapProductSizes(productColorActiveId)
             })
 
             //прекращение листания при отведении курсоа с thumb
             productColor.addEventListener('mouseout', () => {
-                console.log('ставлю первую фотку для ранее наведенного товара');
-                console.log('прекращаю менять фотки');
+                // console.log('ставлю первую фотку для ранее наведенного товара');
+                // console.log('прекращаю менять фотки');
                 clearTimeout(swapProductPicTimer);
+                swapProductSizes(productColorActiveId)
             })
         })
-
-
-
-
 
         // вывод дней до завершения акции со склонением
         if (productActionTime) {
@@ -550,9 +562,6 @@ if (products.length > 0) {
 
     })
 }
-
-
-
 
 
 

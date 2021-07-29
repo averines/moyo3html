@@ -2353,18 +2353,9 @@
   position: relative;
   border-radius: 0 0 4px 0;
 
-  // &__list {
-  //   width: 100%;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   column-gap: 4px;
-  //   row-gap: 4px;
-  // }
-
   &__item {
-    display: block;
+    display: none;
     text-decoration: none;
-    // outline: 1px solid $line-dark;
     border: 1px solid $line-dark;
     padding: 0.5em;
     font-size: 0.7em;
@@ -2374,15 +2365,17 @@
 
     &:hover {
       border-color: $text-light;
-      // outline-color: $text-light;
       border-color: $text-light;
     }
 
     &.is-active {
       background-color: $text-light;
-      // outline-color: $text-light;
       border-color: $text-light;
       color: $white;
+    }
+
+    &.is-showed {
+      display: block;
     }
   }
 

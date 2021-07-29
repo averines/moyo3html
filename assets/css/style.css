@@ -3341,7 +3341,7 @@ hr.dotted {
 }
 
 .size-variants__item {
-  display: block;
+  display: none;
   text-decoration: none;
   border: 1px solid #cdcdcd;
   padding: 0.5em;
@@ -3361,6 +3361,10 @@ hr.dotted {
   background-color: #777;
   border-color: #777;
   color: white;
+}
+
+.size-variants__item.is-showed {
+  display: block;
 }
 
 .size-variants--inmodal {
