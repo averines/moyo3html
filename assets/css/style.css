@@ -11598,7 +11598,7 @@ textarea {
         grid-template-columns: 2fr 6fr;
   }
   .menu-filters-wrapper {
-    top: 0;
+    top: 120px;
   }
   .size-variants {
     -webkit-box-pack: center;
@@ -11941,6 +11941,9 @@ textarea {
   }
   .modal-product-container .product-gallery .product-gallery-slider {
     width: 450px;
+  }
+  .menu-filters-wrapper {
+    top: 0;
   }
 }
 
