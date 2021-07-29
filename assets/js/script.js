@@ -13,7 +13,6 @@ let subCategoryItem
 let categoryItem
 let menuCatalogIsActive = false
 
-
 const menuCatalogOpen = function () {
     menuCatalogIsActive = true
     menuCatalogBtn.classList.add('is-active')
@@ -42,7 +41,9 @@ menuCatalogWrapper.addEventListener('click', (e) => {
         menuCatalogClose();
         // subCategoryItem.classList.remove('is-active') // прячем список субкатегорий 
         // categoryItem.classList.remove('is-active') // прячем список субкатегорий 
-        catalogContent.classList.remove('is-active') // прячем обертку
+        if (catalogContent) {
+            catalogContent.classList.remove('is-active') // прячем обертку 
+        }
     }
 })
 
@@ -63,45 +64,36 @@ categoryMenuAccordionItems.forEach(categoryMenuAccordionItem => {
         let dublicateMenu = childMenu.cloneNode(true)
 
         function parentLinkHandler() {
-            if (document.body.clientWidth < 768) {
-                parentLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                })
-            } else {
+            parentLink.addEventListener('click', (e) => {
+                e.preventDefault();
+            })
+
+            if (document.body.clientWidth >= 768) {
+                parentLink.classList.add('is-disabled') // отключаем функционал аккордиона
                 parentLink.addEventListener('mouseover', () => {
-                    
                     parentLinks.forEach(item => {
                         item.classList.remove('is-active')
                     })
 
                     parentLink.classList.add('is-active')
-
                     menuCatalogSubcategoriesBlock.classList.add('is-active')
                     menuCatalogSubcategoriesBlock.innerHTML = ''
                     menuCatalogSubcategoriesBlock.appendChild(dublicateMenu)
                 })
-
-
-                // parentLink.addEventListener('mouseout', (e) => {
-                //     if (e.relatedTarget.classList.contains('menu-catalog-categories')) {
-                //         console.log('перешел в меню');
-                //         parentLink.classList.add('is-active')
-                //     } else {
-                //         console.log('yt в меню!');
-                //         parentLink.classList.remove('is-active')
-                //     }
-                // })
+            } else {
+                parentLink.classList.remove('is-disabled') // включаем функционал аккордиона
             }
         }
         parentLinkHandler()
 
         window.addEventListener('resize', () => {
             parentLinkHandler()
-            if (document.body.clientWidth >= 768) {
-                    categoryMenuAccordionItem.querySelector('.accordion__item').classList.remove('is-active')
+            if (document.body.clientWidth > 768) {
+                categoryMenuAccordionItem.querySelector('.accordion__item').classList.remove('is-active')
             }
         })
     }
+
 })
 
 // при наведение на пункты меню, которые не имеют дочерних элементов (не являются аккордионом)
@@ -301,7 +293,6 @@ window.addEventListener('resize', () => {
 
 // аккордионы (раскрывающиеся списки)
 const accordions = document.getElementsByClassName('accordion')
-
 for (let accordion of accordions) {
     let accordionItems = accordion.querySelectorAll('.accordion__item')
     let accordionItemsClass = accordionItems[0].classList
@@ -311,7 +302,7 @@ for (let accordion of accordions) {
     for (let accordionItem of filteredAccordionItems) {
         let accordionActive = accordionItem.dataset.active
 
-        // при загрузке страницы разворачивать элемент аккрдиона если у него указан атрибут data-active="768". 
+        // при загрузке страницы разворачивать элемент аккордиона если у него указан атрибут data-active="768".
         if (
             accordionActive > 0
             && document.body.clientWidth >= accordionActive
@@ -322,7 +313,11 @@ for (let accordion of accordions) {
 
         let accordionTitle = accordionItem.querySelector('.accordion__title')
         accordionTitle.addEventListener('click', (e) => {
-            accordionItem.classList.toggle('is-active')
+            if (!e.target.classList.contains('is-disabled')) {
+                accordionItem.classList.toggle('is-active')
+            } else {
+                console.log('этот элемент аккордиона заблокирован!');
+            }
         })
 
         // при ресайзе развернуть элемент аккордиона и прекратить его функционал, если указан параметр data-disable="768"
@@ -347,7 +342,6 @@ for (let accordion of accordions) {
 
     }
 }
-
 
 
 // [...categoriesItems].forEach(item => {
@@ -388,6 +382,7 @@ for (let accordion of accordions) {
 
 
 // кнопка добавления в избранное
+
 const favorites = document.getElementsByClassName('product__favorite');
 [...favorites].forEach(item => {
     item.addEventListener('click', () => {
@@ -490,8 +485,8 @@ if (products.length > 0) {
             productColor.addEventListener('mouseover', () => {
                 console.log('ставлю первую фотку');
                 let productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-pic1-300`
-                productPicSource.setAttribute('srcset', productPicPath+'.webp')
-                productPicImg.setAttribute('src', productPicPath+'.jpg')
+                productPicSource.setAttribute('srcset', productPicPath + '.webp')
+                productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(colorPics, productColor)
 
                 productColors.forEach(productColor => {
@@ -534,16 +529,16 @@ if (products.length > 0) {
                             dayword = 'дня'
                             break
                         default:
-                         dayword = 'дней'
+                            dayword = 'дней'
                     }
                     productActionTime.innerHTML = `${endword} ${productActionTimeframe} ${dayword}`
                 } else {
                     productActionTime.innerHTML = `Акция завершена`
                 }
-                
+
             }
         }
-        
+
     })
 }
 
@@ -684,7 +679,6 @@ if (dropArea) {
         }
     }
 }
-
 
 
 // вывод значений диаграммой
@@ -1501,7 +1495,7 @@ if (menuUserLogged && menuUserNotLogged) {
     }
 
     if (setIsNotLoggedBtns && userIsLogged) {
-        setIsNotLoggedBtns.forEach(setIsNotLoggedBtn => { 
+        setIsNotLoggedBtns.forEach(setIsNotLoggedBtn => {
             setIsNotLoggedBtn.addEventListener('click', () => {
                 localStorage.setItem('userLogged', 0)
                 menuUserNotLogged.style.display = 'block'
@@ -1679,7 +1673,7 @@ const brandCateroryListItems = document.querySelectorAll('.category-list__item')
 if (brandCateroryListItems.length > 0) {
     brandCateroryListItems.forEach(brandCateroryListItem => {
         brandCateroryListItem.addEventListener('click', () => {
-            brandCateroryListItems.forEach( item => {
+            brandCateroryListItems.forEach(item => {
                 item.classList.remove('is-active')
             })
             brandCateroryListItem.classList.add('is-active')
@@ -1722,7 +1716,7 @@ if (quantityCounters.length > 0) {
 
         let quantityCounterValue = parseInt(quantityCounterValueElement.innerHTML)
         let orderProductRow = quantityCounter.closest('tr')
-        
+
         quantityCounterDecrease.addEventListener('click', () => {
             quantityCounterValue--
             quantityCounterValueElement.innerHTML = quantityCounterValue
@@ -1748,7 +1742,7 @@ if (quantityCounters.length > 0) {
             }
         })
     })
-    
+
 }
 
 // удаление строки с целым товаром из корзины и перенаправление в пустую корзину
@@ -1758,7 +1752,7 @@ if (orderItems.length > 0) {
 
     orderItems.forEach(orderItem => {
         let orderItemremoveBtn = orderItem.querySelector('.order-item__remove')
-        
+
         if (orderItemremoveBtn) {
             orderItemremoveBtn.addEventListener('click', () => {
                 orderItem.remove()

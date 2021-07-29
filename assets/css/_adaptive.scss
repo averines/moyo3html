@@ -1229,7 +1229,6 @@
     }
   }
 
-
   .menu-catalog-subcategories {
     position: absolute;
     background-color: $white;
@@ -1238,7 +1237,7 @@
     height: 100vh;
     width: 350px;
     overflow-y: scroll;
-    padding: 20px;
+    padding: 20px 10px 20px 5px;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
@@ -1264,8 +1263,7 @@
 
   }
 
-
-  .category-menu__item.accordion {
+    .category-menu__item {
     .accordion__item {
       .category-menu__link {
         &::after{
@@ -1285,8 +1283,7 @@
         }
       }
     }
-  }
-
+  }  
 }
 
 // lg
@@ -1907,6 +1904,7 @@
       }
     }
   }
+
 }
 
 //xl

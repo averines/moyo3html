@@ -1079,8 +1079,8 @@
   overflow: hidden;
   overflow-y: scroll;
   top: 0;
-  left: -80%;
-  width: 80%;
+  left: -85%;
+  width: 85%;
   height: 100vh;
   transition: left 0.1s ease-in-out, box-shadow 2s ease-in-out;
 
@@ -7686,7 +7686,7 @@ textarea {
 .menu-badge {
   margin-left: auto;
   margin-right: 35px;
-  font-size: 11px;
+  font-size: 10px;
   color: $line-light;
   border: 1px solid $line-light;
   padding: 0.3em 0.6em;
