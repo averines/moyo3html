@@ -89,7 +89,7 @@
       &__pic {
         height: 180px;
       }
-    }  
+    }
   }
 }
 
@@ -105,7 +105,7 @@
       &__pic {
         height: 220px;
       }
-    }  
+    }
   }
 
   .modal__form {
@@ -1260,13 +1260,12 @@
       pointer-events: all;
       transform: translateX(0);
     }
-
   }
 
-    .category-menu__item {
+  .category-menu__item {
     .accordion__item {
       .category-menu__link {
-        &::after{
+        &::after {
           background: url(../img/icons/arrow.svg) no-repeat center;
           background-size: 25%;
           transform: rotate(180deg);
@@ -1279,11 +1278,11 @@
           }
         }
         &.is-active {
-          background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 100%);;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(250, 250, 250, 1) 100%);
         }
       }
     }
-  }  
+  }
 }
 
 // lg
@@ -1590,6 +1589,12 @@
 
         &__quick-view {
           display: flex;
+        }
+
+        &__pic {
+          img {
+            border-radius: 0;
+          }
         }
       }
 
@@ -1904,7 +1909,6 @@
       }
     }
   }
-
 }
 
 //xl
@@ -2336,13 +2340,22 @@
   }
 
   .price {
-    flex-basis: 65%;
-  }
-
-  .product {
-    &__action-time {
-      text-align: right;
-      max-width: 55px;
+    &__old {
+      font-size: 12px;
+    }
+    &__profit {
+      font-size: 12px;
+    }
+    &__base {
+      font-size: 13px;
+    }
+    &__discount {
+      font-size: 12px;
+    }
+    .product-wrapper {
+      .product__action-time {
+        font-size: 15px;
+      }
     }
   }
 }
@@ -2380,8 +2393,8 @@
         height: 360px;
         padding: 55px;
       }
-    }  
-  }   
+    }
+  }
 
   .container--pagination {
     position: initial;
@@ -2479,6 +2492,14 @@
 
   .price {
     font-size: 1em;
+    flex-basis: 65%;
+  }
+
+  .product {
+    &__action-time {
+      text-align: right;
+      max-width: 55px;
+    }
   }
 
   .product-info {
@@ -2634,20 +2655,18 @@
       }
       &__profit {
         font-size: 13px;
-      }      
+      }
       &__base {
         font-size: 16px;
       }
       &__discount {
         font-size: 13px;
       }
-
       .product-wrapper {
         .product__action-time {
           font-size: 15px;
         }
       }
-
     }
   }
 
@@ -2665,8 +2684,8 @@
       &__content {
         height: 344px;
       }
-    }  
-  }  
+    }
+  }
 
   .products {
     column-gap: 10px;

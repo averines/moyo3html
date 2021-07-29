@@ -2455,7 +2455,7 @@
   column-gap: 0.5em;
   row-gap: 0.1em;
   align-items: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
 
   &__break {
     flex-basis: 100%;
@@ -2464,7 +2464,7 @@
 
   &__old {
     text-decoration: line-through;
-    font-size: 12px;
+    font-size: 11px;
     color: $black;
 
     &::after {
@@ -2474,7 +2474,7 @@
 
   &__profit {
     color: $special-2;
-    font-size: 12px;
+    font-size: 11px;
     clear: both;
 
     &::before {
@@ -2504,8 +2504,8 @@
 
   &__base {
     font-weight: 800;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+    font-size: 12px;
+    // letter-spacing: 0.03em;
 
     &::after {
       content: " ₽";

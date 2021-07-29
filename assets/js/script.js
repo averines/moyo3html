@@ -531,9 +531,7 @@ if (products.length > 0) {
                         default:
                             dayword = 'дней'
                     }
-                    productActionTime.innerHTML = `${endword} ${productActionTimeframe} ${dayword}`
-                } else {
-                    productActionTime.innerHTML = `Акция завершена`
+                    productActionTime.innerHTML = `${endword} ${productActionTimeframe}&nbsp;${dayword}`
                 }
 
             }
@@ -824,7 +822,7 @@ productSliders.forEach(element => {
         gutter: 10,
         responsive: {
             1024: {
-                items: 6,
+                items: 5,
                 gutter: 15,
             },
         }

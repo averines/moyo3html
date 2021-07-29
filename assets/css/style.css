@@ -3447,7 +3447,7 @@ hr.dotted {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .price__break {
@@ -3458,7 +3458,7 @@ hr.dotted {
 
 .price__old {
   text-decoration: line-through;
-  font-size: 12px;
+  font-size: 11px;
   color: #101010;
 }
 
@@ -3468,7 +3468,7 @@ hr.dotted {
 
 .price__profit {
   color: #038184;
-  font-size: 12px;
+  font-size: 11px;
   clear: both;
 }
 
@@ -3500,8 +3500,7 @@ hr.dotted {
 
 .price__base {
   font-weight: 800;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+  font-size: 12px;
 }
 
 .price__base::after {
@@ -11012,6 +11011,9 @@ textarea {
     display: -ms-flexbox;
     display: flex;
   }
+  .product-wrapper:hover .product__pic img {
+    border-radius: 0;
+  }
   .product-wrapper:hover .color-variants {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11665,13 +11667,20 @@ textarea {
   .body-overlay {
     padding-right: 18px;
   }
-  .price {
-    -ms-flex-preferred-size: 65%;
-        flex-basis: 65%;
+  .price__old {
+    font-size: 12px;
   }
-  .product__action-time {
-    text-align: right;
-    max-width: 55px;
+  .price__profit {
+    font-size: 12px;
+  }
+  .price__base {
+    font-size: 13px;
+  }
+  .price__discount {
+    font-size: 12px;
+  }
+  .price .product-wrapper .product__action-time {
+    font-size: 15px;
   }
 }
 
@@ -11786,6 +11795,12 @@ textarea {
   }
   .price {
     font-size: 1em;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
+  }
+  .product__action-time {
+    text-align: right;
+    max-width: 55px;
   }
   .product-info__price {
     font-size: 1.25em;
