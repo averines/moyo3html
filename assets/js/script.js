@@ -455,7 +455,6 @@ if (products.length > 0) {
         let productColors = product.querySelectorAll('.color-variants__item')
         let productColorPicIndex = 0
         let swapProductPicTimer
-        let swapStop = false
         let productActionTime = product.querySelector('.product__info .product__action-time')
         let nowDate = Date.now();
         let productColorActiveId
@@ -469,7 +468,6 @@ if (products.length > 0) {
         function swapProductPic(picsArray, productColorActiveId) {
             console.log('меняю фотки');
             productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
-            console.log(productColorPicIndex);
             swapProductPicTimer = setTimeout(function () {
                 console.log('сменил фотку');
                 productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-${picsArray[productColorPicIndex]}-300`
@@ -503,11 +501,6 @@ if (products.length > 0) {
                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(colorPics, productColorActiveId)
-
-                productColors.forEach(productColor => {
-                    productColor.classList.remove('is-active')
-                })
-                productColor.classList.add('is-active')
             })
 
             //прекращение листания при отведении курсоа с thumb
@@ -515,9 +508,6 @@ if (products.length > 0) {
                 console.log('ставлю первую фотку для ранее наведенного товара');
                 console.log('прекращаю менять фотки');
                 clearTimeout(swapProductPicTimer);
-                productColors.forEach(productColor => {
-                    productColor.classList.remove('is-active')
-                })
             })
         })
 
