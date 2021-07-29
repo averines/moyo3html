@@ -1816,9 +1816,11 @@ if (totalReturnWrappers.length > 0) {
             totalReturnBtnDeposit.remove()
 
             let message = document.createElement('div')
-            message.innerHTML = 'Возврат будет отправлен <br>на ваш счет/карту в течение 10 дней'
+            message.innerHTML = 'Возврат будет отправлен <br>на ваш счет/карту в течение 10 дней.'
             message.classList.add('total-return__message')
             totalReturnWrapper.insertBefore(message, totalReturnWrapper.querySelector('.total-return__buttons'))
+
+            setTimeout(function () { message.innerHTML = '28.07.2021 ВОЗВРАЩЕНО 2650 ₽' }, 2000)
         })
     })
 
