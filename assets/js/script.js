@@ -1819,8 +1819,9 @@ if (totalReturnWrappers.length > 0) {
 const refuseBtns = document.querySelectorAll('.js-refuse-btn')
 if (refuseBtns.length > 0) {
     refuseBtns.forEach(refuseBtn => {
+        let parentRow = refuseBtn.closest('tr')
         refuseBtn.addEventListener('click', () => {
-            refuseBtn.closest('tr').remove()
+            parentRow.remove()
         })
     })
 }

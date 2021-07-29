@@ -1820,6 +1820,10 @@ hr.dotted {
   transition: all 0.2s ease-in-out;
 }
 
+.dropdown-products .products-mini li picture, .dropdown-products .products-mini li img {
+  border-radius: 4px;
+}
+
 .dropdown-products .products-mini li:hover {
   background-color: #f3f2f0;
 }
@@ -12085,6 +12089,10 @@ textarea {
 
 .p-3 {
   padding: 3em;
+}
+
+.p-4 {
+  padding: 4em;
 }
 
 .pl-1 {

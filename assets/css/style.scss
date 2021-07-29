@@ -945,6 +945,10 @@
       padding: 0 $gap;
       transition: $tr;
 
+      picture, img {
+        border-radius: 4px;
+      }
+
       &:hover {
         background-color: $bg-light;
 
