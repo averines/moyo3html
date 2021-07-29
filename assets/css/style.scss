@@ -3407,39 +3407,62 @@
       width: 16px;
       height: 16px;
       border: 1px solid $line-light;
+      // border-radius: 50%;
     }
 
     &--1::after {
-      background-color: #fff;
+      background-color: rgb(248, 246, 246);
     }
 
     &--2::after {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(18, 18, 18, 1) 51%, rgba(0, 0, 0, 1) 100%);
+      // background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(18, 18, 18, 1) 51%, rgba(0, 0, 0, 1) 100%);
+      background: #f5f5dc;
     }
 
     &--3::after {
-      background-color: #f5f5dc;
+      background-color: #add8e6;
     }
 
     &--4::after {
-      background-color: #808080;
+      background-color: #ffe54f;
     }
 
     &--5::after {
-      background-color: #008000;
+      background-color: #41a541;
     }
 
     &--6::after {
-      background-color: #800080;
+      background-color: #944835;
     }
 
     &--7::after {
-      background-color: #3eb489;
+      background-color: #d12a2a;
     }
 
     &--8::after {
-      background: linear-gradient(90deg, #ff0000 6.25%, #fe8900 18.68%, #e4f86e 31.14%, #39d63f 43.6%, #49dce6 56.34%, #4db9e5 69.22%, #5574e4 81.45%, #d92ba8 93.75%);
+      // background: linear-gradient(90deg, #ff0000 6.25%, #fe8900 18.68%, #e4f86e 31.14%, #39d63f 43.6%, #49dce6 56.34%, #4db9e5 69.22%, #5574e4 81.45%, #d92ba8 93.75%);
+      background: rgb(255, 162, 22);
     }
+
+    &--9::after {
+      background-color: #ff90c7;
+    }   
+    
+    &--10::after {
+      background-color: #a8a7a8;
+    }
+
+    &--11::after {
+      background-color: #1e5b94;
+    } 
+    
+    &--12::after {
+      background-color: #8e28b6;
+    }
+
+    &--13::after {
+      background-color: #2d2d30;
+    }     
   }
 }
 

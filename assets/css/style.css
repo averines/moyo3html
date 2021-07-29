@@ -4536,36 +4536,55 @@ hr.dotted {
 }
 
 .filter-checkbox .icon-color--1::after {
-  background-color: #fff;
+  background-color: #f8f6f6;
 }
 
 .filter-checkbox .icon-color--2::after {
-  background: linear-gradient(135deg, white 0%, white 50%, #121212 51%, black 100%);
+  background: #f5f5dc;
 }
 
 .filter-checkbox .icon-color--3::after {
-  background-color: #f5f5dc;
+  background-color: #add8e6;
 }
 
 .filter-checkbox .icon-color--4::after {
-  background-color: #808080;
+  background-color: #ffe54f;
 }
 
 .filter-checkbox .icon-color--5::after {
-  background-color: #008000;
+  background-color: #41a541;
 }
 
 .filter-checkbox .icon-color--6::after {
-  background-color: #800080;
+  background-color: #944835;
 }
 
 .filter-checkbox .icon-color--7::after {
-  background-color: #3eb489;
+  background-color: #d12a2a;
 }
 
 .filter-checkbox .icon-color--8::after {
-  background: -webkit-gradient(linear, left top, right top, color-stop(6.25%, #ff0000), color-stop(18.68%, #fe8900), color-stop(31.14%, #e4f86e), color-stop(43.6%, #39d63f), color-stop(56.34%, #49dce6), color-stop(69.22%, #4db9e5), color-stop(81.45%, #5574e4), color-stop(93.75%, #d92ba8));
-  background: linear-gradient(90deg, #ff0000 6.25%, #fe8900 18.68%, #e4f86e 31.14%, #39d63f 43.6%, #49dce6 56.34%, #4db9e5 69.22%, #5574e4 81.45%, #d92ba8 93.75%);
+  background: #ffa216;
+}
+
+.filter-checkbox .icon-color--9::after {
+  background-color: #ff90c7;
+}
+
+.filter-checkbox .icon-color--10::after {
+  background-color: #a8a7a8;
+}
+
+.filter-checkbox .icon-color--11::after {
+  background-color: #1e5b94;
+}
+
+.filter-checkbox .icon-color--12::after {
+  background-color: #8e28b6;
+}
+
+.filter-checkbox .icon-color--13::after {
+  background-color: #2d2d30;
 }
 
 .filter-range {
