@@ -224,7 +224,6 @@ const scrollLinks = document.querySelectorAll('.scroll-link')
 const searchBtnOpen = document.querySelector('.btn-search')
 const searchBtnClose = document.querySelector('.search__close')
 const searchWindow = document.querySelector('.search')
-
 searchBtnOpen.addEventListener('click', (e) => {
     e.preventDefault()
     searchWindow.classList.add('is-active')
@@ -239,7 +238,6 @@ searchBtnClose.addEventListener('click', (e) => {
 // информационное меню
 const menuInfoBtn = document.querySelector('.btn-info')
 const menuInfoWindow = document.querySelector('.menu-info')
-
 menuInfoBtn.addEventListener('click', (e) => {
     e.preventDefault()
     //отключаем другое меню
@@ -255,7 +253,6 @@ menuInfoBtn.addEventListener('click', (e) => {
 // меню авторизованного пользователя
 const menuUserBtn = document.querySelector('.btn-user')
 const menuUserWindow = document.querySelector('.menu-user')
-
 menuUserBtn.addEventListener('click', (e) => {
     e.preventDefault()
     //отключаем другое меню
@@ -269,8 +266,6 @@ menuUserBtn.addEventListener('click', (e) => {
 
 // сброс развернутых элементов при переходе в десктопный режим
 let clientWidth = document.body.clientWidth
-
-// слайдер на странице продукта
 
 
 window.addEventListener('resize', () => {
@@ -451,43 +446,63 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 // })
 
 
-const products = document.querySelectorAll('.product')
+const products = document.querySelectorAll('.product-wrapper .product')
 if (products.length > 0) {
     products.forEach(product => {
+        let productPic = product.querySelector('.product__pic')
         let productPicSource = product.querySelector('.product__pic source')
         let productPicImg = product.querySelector('.product__pic img')
         let productColors = product.querySelectorAll('.color-variants__item')
         let productColorPicIndex = 0
         let swapProductPicTimer
+        let swapStop = false
         let productActionTime = product.querySelector('.product__info .product__action-time')
         let nowDate = Date.now();
+        let productColorActiveId
+        let colorPics
 
-        function swapProductPic(picsArray, productColor) {
-            console.log('меняю фотки');
-            productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
-            swapProductPicTimer = setTimeout(function () {
-                console.log('сменил фотку');
-                productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-${picsArray[productColorPicIndex]}-300`
-                productPicSource.setAttribute('srcset', productPicPath + '.webp')
-                productPicImg.setAttribute('src', productPicPath + '.jpg')
-                swapProductPic(picsArray, productColor)
-            }, 700)
+        if (productColors.length > 0) {
+            productColorActiveId = productColors[0].dataset.colorId
+            colorPics = productColors[0].dataset.colorPics ? productColors[0].dataset.colorPics.replace(/\s/g, '').split(',') : ''
         }
 
-        productColors.forEach(productColor => {
-            let colorPics
-            if (productColor.dataset.colorPics) {
-                colorPics = productColor.dataset.colorPics.replace(/\s/g, '');
-                colorPics = colorPics.split(',');
-            }
-
-            //изменение фото товара в карточке товара при наведении на thumb
-            productColor.addEventListener('mouseover', () => {
-                console.log('ставлю первую фотку');
-                let productPicPath = `./i/products/300/${product.dataset.productId}-${productColor.dataset.colorId}-pic1-300`
+        function swapProductPic(picsArray, productColorActiveId) {
+            console.log('меняю фотки');
+            productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
+            console.log(productColorPicIndex);
+            swapProductPicTimer = setTimeout(function () {
+                console.log('сменил фотку');
+                productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-${picsArray[productColorPicIndex]}-300`
                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
-                swapProductPic(colorPics, productColor)
+                swapProductPic(picsArray, productColorActiveId)
+            }, 1000)
+        }
+
+        //листание фото товара в мини-карточке товара при наведении на фото
+        productPic.addEventListener('mouseover', () => {
+            swapProductPic(colorPics, productColorActiveId)
+        })
+
+        //прекращение листания при отведении курсора с фото
+        productPic.addEventListener('mouseout', () => {
+            productColorActiveId = productColors[0].dataset.colorId
+            productColorPicIndex = 0
+            let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+            productPicSource.setAttribute('srcset', productPicPath + '.webp')
+            productPicImg.setAttribute('src', productPicPath + '.jpg')
+            clearTimeout(swapProductPicTimer);
+        })
+
+        productColors.forEach(productColor => {
+            //листание фото товара в мини-карточке товара при наведении на thumb
+            productColor.addEventListener('mouseover', () => {
+                console.log('ставлю первую фотку');
+                productColorActiveId = productColor.dataset.colorId
+                let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+                productPicSource.setAttribute('srcset', productPicPath + '.webp')
+                productPicImg.setAttribute('src', productPicPath + '.jpg')
+                swapProductPic(colorPics, productColorActiveId)
 
                 productColors.forEach(productColor => {
                     productColor.classList.remove('is-active')
@@ -500,9 +515,15 @@ if (products.length > 0) {
                 console.log('ставлю первую фотку для ранее наведенного товара');
                 console.log('прекращаю менять фотки');
                 clearTimeout(swapProductPicTimer);
+                productColors.forEach(productColor => {
+                    productColor.classList.remove('is-active')
+                })
             })
-
         })
+
+
+
+
 
         // вывод дней до завершения акции со склонением
         if (productActionTime) {
@@ -539,6 +560,10 @@ if (products.length > 0) {
 
     })
 }
+
+
+
+
 
 
 // имитация переключения сортировки в каталоге

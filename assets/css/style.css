@@ -3317,7 +3317,7 @@ hr.dotted {
   border-radius: 2px;
 }
 
-.color-variants__item.is-active {
+.color-variants__item:hover {
   outline-color: #777;
 }
 

@@ -2332,7 +2332,7 @@
       border-radius: 2px;
     }
 
-    &.is-active {
+    &:hover{
       outline-color: $text-light;
     }
   }
