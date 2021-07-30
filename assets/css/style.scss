@@ -3400,12 +3400,13 @@
 
   .icon-color {
     margin-right: 5px;
+    margin-left: 5px;
 
     &::after {
       content: "";
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
       border: 1px solid $line-light;
       // border-radius: 50%;
     }

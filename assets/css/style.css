@@ -4525,13 +4525,14 @@ hr.dotted {
 
 .filter-checkbox .icon-color {
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 .filter-checkbox .icon-color::after {
   content: "";
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   border: 1px solid #d9d9d9;
 }
 
