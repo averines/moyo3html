@@ -3817,7 +3817,15 @@
 }
 
 .feedbacks {
-  margin: 1em 0;
+  margin: 2em;
+}
+
+.feedback-wrapper {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 }
 
 .feedback {
@@ -4170,89 +4178,9 @@
 .product-container {
   column-gap: 2em;
   margin-bottom: 2em;
+  background-color: $white;
 }
 
-// .product-gallery {
-//   margin-bottom: 2em;
-//   display: flex;
-// }
-
-// .product-preview-slider {
-//   display: none;
-//   // max-height: 385px;
-//   overflow: hidden;
-//   padding: 3px;
-//   background-color: $bg-dark;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 2px;
-
-//   &__item {
-//     outline: 2px solid transparent;
-//     outline-offset: -2px;
-//     transition: $tr;
-
-//     picture,
-//     img {
-//       display: block;
-//       width: 100%;
-//     }
-
-//     &.is-active {
-//       outline-color: $main;
-//       z-index: 1;
-//     }
-//     &:hover {
-//       cursor: pointer;
-//     }
-//   }
-// }
-
-// .product-gallery-slider {
-//   &__item {
-//     max-width: 250px;
-//     position: relative;
-
-//     img {
-//       display: block;
-//       width: 100%;
-//     }
-//   }
-
-//   &__download {
-//     width: 20px;
-//     height: 20px;
-//     position: absolute;
-//     bottom: 5px;
-//     right: 20px;
-//     background: url(../img/icons/download.svg) no-repeat center;
-//     transition: $tr;
-
-//     &:hover {
-//       opacity: 0.8;
-//     }
-//   }
-
-//   &__sticky {
-//     &::after {
-//       display: inline-block;
-//       position: absolute;
-//       bottom: 0;
-//       background-color: $special-1;
-//       color: $white;
-//       font-size: 0.65em;
-//       text-transform: uppercase;
-//       padding: 0.33em 1em;
-//       z-index: 1;
-//     }
-//   }
-
-//   &__sticky--new {
-//     &::after {
-//       content: "Новинка";
-//     }
-//   }
-// }
 
 .product-favorite {
   z-index: 4;

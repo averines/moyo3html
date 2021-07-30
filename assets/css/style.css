@@ -4821,7 +4821,15 @@ hr.dotted {
 }
 
 .feedbacks {
-  margin: 1em 0;
+  margin: 2em;
+}
+
+.feedback-wrapper {
+  display: none;
+}
+
+.feedback-wrapper.is-active {
+  display: block;
 }
 
 .feedback {
@@ -5143,6 +5151,7 @@ hr.dotted {
   -webkit-column-gap: 2em;
           column-gap: 2em;
   margin-bottom: 2em;
+  background-color: white;
 }
 
 .product-favorite {

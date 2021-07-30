@@ -1836,3 +1836,14 @@ if (refuseBtns.length > 0) {
         })
     })
 }
+
+
+// открытие закрытие блока с формой для написания отзыва
+const feedbackStartBtn = document.querySelector('.js-feedback-start')
+const feedbackWrapper = document.querySelector('.feedback-wrapper')
+
+if (feedbackStartBtn) {
+    feedbackStartBtn.addEventListener('click', () => {
+        feedbackWrapper.classList.toggle('is-active')
+    })
+}
