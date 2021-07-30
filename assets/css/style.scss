@@ -3363,14 +3363,16 @@
     }
 
     input {
-      margin: -3px 12px 0 0;
+      margin: -5px 12px 0 0;
+      // opacity: 0;
+      // visibility: hidden;
 
       &::before {
         content: "";
         display: block;
         background-color: $white;
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         border: 1px solid $line-dark;
         z-index: 2;
       }
@@ -6667,7 +6669,7 @@
 
   .status-icons {
     display: flex;
-    column-gap: 10px;
+    column-gap: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
