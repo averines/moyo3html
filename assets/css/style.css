@@ -6159,6 +6159,7 @@ hr.dotted {
           align-items: flex-start;
   -webkit-column-gap: 1em;
           column-gap: 1em;
+  min-height: 200px;
 }
 
 .order-item__pic {
