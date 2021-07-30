@@ -5070,7 +5070,8 @@
   }
 
   &__pic {
-    max-width: 130px;
+    max-width: 120px;
+    min-width: 100px;
     position: relative;
 
     img {
