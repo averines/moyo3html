@@ -3303,7 +3303,7 @@ hr.dotted {
 
 .product__quickview .modal-product-container .needlogin__title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .product__quickview .modal-product-gallery {
@@ -3571,7 +3571,7 @@ hr.dotted {
   color: white;
   background-color: #038184;
   display: inline-block;
-  padding: 0.15em 0.4em;
+  padding: 0.1em 0.4em;
   font-size: 11px;
   border-radius: 2px;
   font-weight: 600;
@@ -3592,6 +3592,10 @@ hr.dotted {
 
 .price__base::after {
   content: " ₽";
+}
+
+.price__description {
+  font-size: 12px;
 }
 
 .section-bigcategories {
@@ -8988,20 +8992,29 @@ textarea {
   color: #777;
 }
 
+.needlogin {
+  margin-top: 12px;
+}
+
 .needlogin__title {
-  font-size: 14px;
-  margin: 0.5em 0 0.75em 0;
+  font-size: 12px;
+  margin: 0.5em 0 0 0;
+  color: #ab064e;
 }
 
 .needlogin__description {
-  color: #777;
+  color: #ab064e;
   font-size: 12px;
   line-height: 1.4;
-  font-style: italic;
 }
 
 .needlogin__description > a {
   color: #ab064e;
+}
+
+.needlogin__description > a:hover {
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .subcategory-menu {
@@ -10283,8 +10296,8 @@ textarea {
   }
   .product-info .needlogin__title {
     font-weight: 600;
-    font-size: 17px;
-    margin: 0.3em 0;
+    font-size: 14px;
+    margin: 0.5em 0 0 0;
   }
   .product-colors-slider__item {
     width: 70px;
@@ -12005,6 +12018,9 @@ textarea {
     left: 7px;
     right: 7px;
     bottom: 7px;
+  }
+  .product-wrapper .needlogin .price__break {
+    display: none;
   }
 }
 

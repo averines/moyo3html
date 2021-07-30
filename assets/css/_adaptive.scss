@@ -668,10 +668,11 @@
       border: 1px solid $line-light;
       padding: 15px;
       max-width: 55%;
+
       &__title {
         font-weight: 600;
-        font-size: 17px;
-        margin: 0.3em 0;
+        font-size: 14px;
+        margin: 0.5em 0 0 0;
       }
     }
   }
@@ -1593,6 +1594,7 @@
   }
 
   .product-wrapper {
+
     &:hover {
       .product {
         position: absolute;
@@ -1623,7 +1625,8 @@
 
       .size-variants {
         display: flex;
-      }
+      }  
+    
     }
   }
 
@@ -2668,6 +2671,13 @@
       bottom: 7px;
     }
   }  
+
+    .product-wrapper {
+      .needlogin {
+      .price__break {
+        display: none;
+      }
+    }  }
 }
 
 @media screen and (min-width: 1900px) {
