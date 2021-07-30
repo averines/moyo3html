@@ -647,6 +647,7 @@
   }
 
   .product-info {
+    padding-top: 1em;
     .product-status {
       display: block;
     }
@@ -747,13 +748,20 @@
       tr {
         td {
           border-bottom: none;
+        .price-discount {
+          display: block;
         }
 
-        // &:first-child {
-        //   td {
-        //     padding-top: 4em;
-        //   }
-        // }
+        .price-base, .order-item__cost, .price-profit{
+          &::after {
+            content: ' ₽';
+          }
+        }
+
+        .quantity-counter {
+          column-gap: 10px;
+        }          
+        }
       }
     }
   }
@@ -1021,18 +1029,18 @@
     }
   }
 
-  .diagram {
-    width: 90px;
-    height: 90px;
+  // .diagram {
+  //   width: 90px;
+  //   height: 90px;
 
-    .diagram-text {
-      font-size: 18px;
-      top: 7px;
-      left: 7px;
-      right: 7px;
-      bottom: 7px;
-    }
-  }
+  //   .diagram-text {
+  //     font-size: 18px;
+  //     top: 7px;
+  //     left: 7px;
+  //     right: 7px;
+  //     bottom: 7px;
+  //   }
+  // }
 
   .menu-filters {
     &__wrapper {
@@ -1283,6 +1291,11 @@
       }
     }
   }
+
+  .product-container {
+  background-color: $white;
+}
+
 }
 
 // lg
@@ -1755,18 +1768,6 @@
     }
   }
 
-  .diagram {
-    width: 128px;
-    height: 128px;
-
-    .diagram-text {
-      font-size: 28px;
-      top: 8px;
-      left: 8px;
-      right: 8px;
-      bottom: 8px;
-    }
-  }
 
   .pagetitle {
     &__counter {
@@ -2643,6 +2644,19 @@
 
   .menu-filters-wrapper {
     top: 0;
+  }  
+
+  .diagram {
+    width: 90px;
+    height: 90px;
+
+    .diagram-text {
+      font-size: 26px;
+      top: 7px;
+      left: 7px;
+      right: 7px;
+      bottom: 7px;
+    }
   }  
 }
 
