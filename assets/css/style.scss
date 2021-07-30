@@ -4915,6 +4915,16 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+
+      &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 4px;
+      background-color: $line-light;
+      border-radius: 3px;
+    }
 }
 
 .table {
@@ -5064,7 +5074,7 @@
   &__info-wrapper {
     display: flex;
     align-items: flex-start;
-    column-gap: 1em;
+    column-gap: 15px;
     min-height: 200px;
     // position: relative;
   }
@@ -5225,11 +5235,13 @@
       + .popup-info__content {
         visibility: visible;
         opacity: 1;
+        display: block;
       }
     }
   }
 
   &__content {
+    display: none;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;

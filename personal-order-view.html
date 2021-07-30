@@ -3617,13 +3617,19 @@
 
                         <p class="text-left">Укажите количество ранее заказанного товара, которое вы хотите вернуть</p>
                         <div class="form-row">
-                          <input type="text" placeholder="">
+                          <div class="form-group">
+                          <input type="number" max="2" min="1" value="1">
+                          </div>
                         </div>
                         <div class="form-row">
                           <div class="form-group">
                             <textarea name="" id="" cols="30" rows="5" placeholder="Опишите дефект"></textarea>
                           </div>
                         </div>
+                          <div class="feedback-form__upload-wrapper mb-3" draggable="true" id="feedback-form__upload-wrapper">
+                            <input type="file" id="feedback-form-file" multiple accept="image/*" onchange="handleFiles(this.files)">
+                            <label for="feedback-form-file">Кликните или перетащите, чтобы загрузить фото</label>
+                          </div>
                         <div class="d-flex flex-column align-center">
                           <button class="btn btn-main" type="submit" disabled>Отправить</button>
                         </div>

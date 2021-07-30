@@ -5992,6 +5992,16 @@ hr.dotted {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.table-responsive::-webkit-scrollbar {
+  width: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  height: 4px;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+}
+
 .table {
   vertical-align: top;
   width: 100%;
@@ -6157,8 +6167,8 @@ hr.dotted {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-column-gap: 1em;
-          column-gap: 1em;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
   min-height: 200px;
 }
 
@@ -6334,9 +6344,11 @@ hr.dotted {
 .popup-info__btn:hover + .popup-info__content {
   visibility: visible;
   opacity: 1;
+  display: block;
 }
 
 .popup-info__content {
+  display: none;
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
