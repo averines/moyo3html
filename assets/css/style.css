@@ -10336,6 +10336,9 @@ textarea {
     -webkit-column-gap: 10px;
             column-gap: 10px;
   }
+  .order-item__table tbody tr td:first-child .popup-info {
+    display: block;
+  }
   .current-discount__content {
     display: -ms-grid;
     display: grid;
@@ -11915,6 +11918,10 @@ textarea {
   }
   .order-item__info-wrapper {
     min-width: 450px;
+  }
+  .order-view .status-icons {
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
   }
   .order-view .status-icons__item {
     width: 33px;

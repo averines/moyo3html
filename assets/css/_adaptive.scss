@@ -760,7 +760,13 @@
 
         .quantity-counter {
           column-gap: 10px;
-        }          
+        }  
+        
+          &:first-child{
+            .popup-info {
+              display: block;
+            }
+          } 
         }
       }
     }
@@ -2578,6 +2584,10 @@
   }
 
   .order-view {
+     .status-icons {
+      column-gap: 10px;
+     }
+
     .status-icons__item {
       width: 33px;
       height: 24px;
