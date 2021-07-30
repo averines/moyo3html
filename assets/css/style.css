@@ -6585,6 +6585,8 @@ hr.dotted {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .order-buttons .btn {
@@ -7499,7 +7501,7 @@ hr.dotted {
 .history-item-status__item {
   text-align: center;
   padding: 5px;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .history-item-status__item.status-doc {
@@ -8976,8 +8978,8 @@ textarea {
 
 .needlogin__description {
   color: #777;
-  font-size: 13.5px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.4;
   font-style: italic;
 }
 

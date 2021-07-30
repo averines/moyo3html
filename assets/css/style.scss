@@ -5464,6 +5464,7 @@
   // flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   .btn {
     display: block;
@@ -6295,7 +6296,7 @@
   &__item {
     text-align: center;
     padding: 5px;
-    font-size: 11px;
+    font-size: 10px;
 
     &.status-doc {
       color: $text;
@@ -7615,8 +7616,8 @@ textarea {
 
   &__description {
     color: $text-light;
-    font-size: 13.5px;
-    line-height: 1.45;
+    font-size: 12px;
+    line-height: 1.4;
     font-style: italic;
 
     > a {
