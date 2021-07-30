@@ -3750,6 +3750,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-wrap: wrap;
+    row-gap: 15px;
 
     li {
       margin-bottom: 0.5em;
