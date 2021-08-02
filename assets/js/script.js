@@ -447,7 +447,7 @@ const sizeVariantsItems = document.getElementsByClassName('size-variants__item')
 
 
 // действия с продуктом===================================================
-const products = document.querySelectorAll('.product-wrapper .product')
+const products = document.querySelectorAll('.product-wrapper > .product')
 if (products.length > 0) {
     products.forEach(product => {
         let productPic = product.querySelector('.product__pic')
@@ -480,17 +480,24 @@ if (products.length > 0) {
         }
 
         //смена доступных размеров при наведении на thumb
-        function swapProductSizes(productColorActiveId) {
-            productSizes.forEach(productSize => {
-                if (productSize.dataset.colorId == productColorActiveId) {
-                    productSize.classList.add('is-showed')
-                } else {
-                    productSize.classList.remove('is-showed')
-                }
-            })
+        if (productSizes.length > 0) {
+            function swapProductSizes(productColorActiveId) {
+                productSizes.forEach(productSize => {
+                    if (productSize.dataset.colorId == productColorActiveId) {
+                        productSize.classList.add('is-showed')
+                    } else {
+                        productSize.classList.remove('is-showed')
+                    }
+                })
+            }
         }
 
+
         //листание фото товара в мини-карточке товара при наведении на фото
+
+        if(colorPics) {
+
+        }
         productPic.addEventListener('mouseover', () => {
             swapProductPic(colorPics, productColorActiveId)
         })
@@ -1623,7 +1630,7 @@ $('[data-fancybox="product-gallery"]').fancybox({
 });
 
 // новый слайдер в модальном окне фансибокс
-$("[data-fancybox='modal']").fancybox({
+$(".product__quick-view").fancybox({
     afterShow: function (instance, slide) {
         if (document.querySelectorAll('.product-gallery').length > 0) {
             const swiperProductThumbs = new Swiper('.product-thumbs', {
