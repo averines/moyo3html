@@ -1726,7 +1726,8 @@ function checkOrdeiItemRowValue(ordeiItemRow) {
 }
 
 // имитация изменения количества товара в корзине
-const quantityCounters = document.querySelectorAll('.order-item .order-item__table .quantity-counter')
+// const quantityCounters = document.querySelectorAll('.order-item .order-item__table .quantity-counter')
+const quantityCounters = document.querySelectorAll('.quantity-counter')
 if (quantityCounters.length > 0) {
 
     quantityCounters.forEach(quantityCounter => {
@@ -1748,10 +1749,12 @@ if (quantityCounters.length > 0) {
 
             if (quantityCounterValue < 1) {
                 orderProductRow.style.display = 'none';
-                if (checkOrdeiItemRowValue(ordeiItemRow)) {
-                    console.log('ok');
-                } else {
-                    ordeiItemRow.classList.add('is-empty')
+                if (ordeiItemRow) {
+                    if (checkOrdeiItemRowValue(ordeiItemRow)) {
+                        console.log('ok');
+                    } else {
+                        ordeiItemRow.classList.add('is-empty')
+                    }
                 }
             }
         })
@@ -1845,5 +1848,18 @@ const feedbackWrapper = document.querySelector('.feedback-wrapper')
 if (feedbackStartBtn) {
     feedbackStartBtn.addEventListener('click', () => {
         feedbackWrapper.classList.toggle('is-active')
+    })
+}
+
+
+// линии рейтинга на странице продукта
+const starsLinesItems = documentBody.querySelectorAll('.stars-lines__item')
+if (starsLinesItems) {
+    starsLinesItems.forEach(starsLinesItem => {
+        let starsLine = starsLinesItem.querySelector('.stars-lines__line')
+        let starsLineMainValue = document.createElement('div')
+        starsLineMainValue.classList.add('stars-lines__value')
+        starsLineMainValue.style.width = starsLinesItem.dataset.feedbackPercent + '%'
+        starsLine.appendChild(starsLineMainValue)
     })
 }

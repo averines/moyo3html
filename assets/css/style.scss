@@ -3994,9 +3994,11 @@
 }
 
 .stats-rating {
-  background-color: $bg-light;
+  // background-color: $bg-light;
   padding: 1em;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   &__info {
     margin-right: 1em;
@@ -4061,15 +4063,22 @@
     margin: 0 0.5em;
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      background-color: $main;
-      top: 0;
-      left: 0;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: $main;
+    //   top: 0;
+    //   left: 0;
+    // }   
+  }
+
+  &__value {
+    height: 100%;
+    background-color: $main;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -5411,6 +5420,11 @@
       transform: scale(0.8);
     }
   }
+      &--standart {
+      .quantity-counter__btn--delete {
+        background: url(../img/icons/minus.svg) no-repeat center;
+      }
+    }
 }
 
 .order-info {

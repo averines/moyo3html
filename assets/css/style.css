@@ -5026,11 +5026,15 @@ hr.dotted {
 }
 
 .stats-rating {
-  background-color: #f3f2f0;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .stats-rating__info {
@@ -5112,10 +5116,7 @@ hr.dotted {
   position: relative;
 }
 
-.stars-lines__line::before {
-  content: "";
-  position: absolute;
-  width: 50%;
+.stars-lines__value {
   height: 100%;
   background-color: #ab064e;
   top: 0;
@@ -6523,6 +6524,10 @@ hr.dotted {
 .quantity-counter__btn:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+.quantity-counter--standart .quantity-counter__btn--delete {
+  background: url(../img/icons/minus.svg) no-repeat center;
 }
 
 .order-info {
@@ -10375,8 +10380,10 @@ textarea {
   .order-item__table tbody tr td .price-discount {
     display: block;
   }
-  .order-item__table tbody tr td .price-base::after, .order-item__table tbody tr td .order-item__cost::after, .order-item__table tbody tr td .price-profit::after {
-    content: ' ₽';
+  .order-item__table tbody tr td .price-base::after,
+  .order-item__table tbody tr td .order-item__cost::after,
+  .order-item__table tbody tr td .price-profit::after {
+    content: " ₽";
   }
   .order-item__table tbody tr td .quantity-counter {
     -webkit-column-gap: 10px;
@@ -12023,18 +12030,21 @@ textarea {
     top: 0;
   }
   .diagram {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
   }
   .diagram .diagram-text {
-    font-size: 26px;
-    top: 7px;
-    left: 7px;
-    right: 7px;
-    bottom: 7px;
+    font-size: 22px;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
   }
   .product-wrapper .needlogin .price__break {
     display: none;
+  }
+  .feedbacks {
+    margin: 2em 2em 4em 5em;
   }
 }
 

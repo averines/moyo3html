@@ -749,25 +749,27 @@
       tr {
         td {
           border-bottom: none;
-        .price-discount {
-          display: block;
-        }
-
-        .price-base, .order-item__cost, .price-profit{
-          &::after {
-            content: ' ₽';
+          .price-discount {
+            display: block;
           }
-        }
 
-        .quantity-counter {
-          column-gap: 10px;
-        }  
-        
-          &:first-child{
+          .price-base,
+          .order-item__cost,
+          .price-profit {
+            &::after {
+              content: " ₽";
+            }
+          }
+
+          .quantity-counter {
+            column-gap: 10px;
+          }
+
+          &:first-child {
             .popup-info {
               display: block;
             }
-          } 
+          }
         }
       }
     }
@@ -1300,9 +1302,8 @@
   }
 
   .product-container {
-  background-color: $white;
-}
-
+    background-color: $white;
+  }
 }
 
 // lg
@@ -1594,7 +1595,6 @@
   }
 
   .product-wrapper {
-
     &:hover {
       .product {
         position: absolute;
@@ -1625,8 +1625,7 @@
 
       .size-variants {
         display: flex;
-      }  
-    
+      }
     }
   }
 
@@ -1776,7 +1775,6 @@
       }
     }
   }
-
 
   .pagetitle {
     &__counter {
@@ -2587,9 +2585,9 @@
   }
 
   .order-view {
-     .status-icons {
+    .status-icons {
       column-gap: 10px;
-     }
+    }
 
     .status-icons__item {
       width: 33px;
@@ -2657,27 +2655,32 @@
 
   .menu-filters-wrapper {
     top: 0;
-  }  
+  }
 
   .diagram {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
 
     .diagram-text {
-      font-size: 26px;
-      top: 7px;
-      left: 7px;
-      right: 7px;
-      bottom: 7px;
+      font-size: 22px;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
     }
-  }  
+  }
 
-    .product-wrapper {
-      .needlogin {
+  .product-wrapper {
+    .needlogin {
       .price__break {
         display: none;
       }
-    }  }
+    }
+  }
+
+  .feedbacks {
+    margin: 2em 2em 4em 5em;
+  }
 }
 
 @media screen and (min-width: 1900px) {

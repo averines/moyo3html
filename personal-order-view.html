@@ -3616,11 +3616,13 @@
                         </div>
 
                         <p class="text-left">Укажите количество ранее заказанного товара, которое вы хотите вернуть</p>
-                        <div class="form-row">
-                          <div class="form-group">
-                          <input type="number" max="2" min="1" value="1">
-                          </div>
+                        <div class="quantity-counter quantity-counter--standart mb-2">
+                          <button type="button" class="quantity-counter__btn quantity-counter__btn--decrease"></button>
+                          <div class="quantity-counter__value">2</div>
+                          <button type="button" class="quantity-counter__btn quantity-counter__btn--increase"></button>
                         </div>
+
+
                         <div class="form-row">
                           <div class="form-group">
                             <textarea name="" id="" cols="30" rows="5" placeholder="Опишите дефект"></textarea>
