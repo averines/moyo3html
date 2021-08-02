@@ -2185,8 +2185,8 @@
     &__quick-view {
       position: absolute;
       top: 150px;
-      right: 0;
-      left: 0;
+      right: auto;
+      left: calc(50% - 80px);
       z-index: 4;
       text-decoration: none;
       color: $text-light;
@@ -2199,11 +2199,14 @@
       align-items: center;
       justify-content: center;
       column-gap: 5px;
-      max-width: 130px;
+      width: 160px;
       display: none;
       text-align: center;
       transition: $tr;
       border-radius: 3px;
+      cursor: pointer;
+      border: none;
+      
 
       &::before {
         content: "Быстрый просмотр";
