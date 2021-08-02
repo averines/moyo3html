@@ -673,6 +673,10 @@
     color: $white;
     padding: 0.75em 20px;
   }
+
+  &--middle {
+    max-width: 860px;
+  }
 }
 
 // формы в модальных окнах

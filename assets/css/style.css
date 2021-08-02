@@ -58,6 +58,10 @@ main.page-main .page-main__content-wrapper {
   width: 100%;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,6 +237,10 @@ ol li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.row-gap-1 {
+  row-gap: 1em;
 }
 
 .list-clear {
@@ -1521,6 +1529,10 @@ hr.dotted {
   background-color: #ab064e;
   color: white;
   padding: 0.75em 20px;
+}
+
+.modal--middle {
+  max-width: 860px;
 }
 
 .modal__form {
@@ -12181,6 +12193,10 @@ textarea {
 
 .ml-1 {
   margin-left: 1em;
+}
+
+.ml-5 {
+  margin-left: 5em;
 }
 
 .p-0 {

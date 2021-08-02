@@ -1794,7 +1794,7 @@ if (totalReturnWrappers.length > 0) {
 
     totalReturnWrappers.forEach(totalReturnWrapper => {
         let totalReturnBtnDeposit = totalReturnWrapper.querySelector('.js-total-return-btn-deposit')
-        let totalReturnBtnCard = totalReturnWrapper.querySelector('.js-total-return-btn-card')
+        let totalReturnBtnCards = totalReturnWrapper.querySelectorAll('.js-total-return-btn-card')
         let totalReturnBtnModalCard = totalReturnWrapper.querySelector('.js-total-return-btn-modal-card')
 
         totalReturnBtnDeposit.addEventListener('click', () => {
@@ -1805,13 +1805,13 @@ if (totalReturnWrappers.length > 0) {
             message.innerHTML = 'Возврат<br>зачислен <br>на депозит'
             message.classList.add('total-return__message')
             totalReturnWrapper.insertBefore(message, totalReturnWrapper.querySelector('.total-return__buttons'))
-            totalReturnBtnCard.remove()
+            totalReturnBtnCards.remove()
 
         })
 
 
         totalReturnBtnModalCard.addEventListener('click', () => {
-            totalReturnBtnCard.innerHTML = 'Подробнее'
+            totalReturnBtnCards.innerHTML = 'Подробнее'
             totalReturnBtnModalCard.remove()
             totalReturnBtnDeposit.remove()
 

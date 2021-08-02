@@ -2078,17 +2078,22 @@
                             <div class="total-return__title">К возврату</div>
                             <div class="total-return__summ">-10 631,33</div>
                             <div class="total-return__buttons">
-                              <button class="btn btn--mini btn-white js-total-return-btn-card" data-fancybox data-src="#modalreturnmoney">Вернуть</button>
+                              <button class="btn btn--mini btn-white js-total-return-btn-card" data-fancybox data-src="#modalreturnmoney1">Вернуть (физ.)</button>
+                              <button class="btn btn--mini btn-white js-total-return-btn-card" data-fancybox data-src="#modalreturnmoney2">Вернуть (юр.)</button>
                               <button class="btn btn--mini btn-white js-total-return-btn-deposit">Зачислить на&nbsp;депозит</button>
                             </div>
                             <div class="modals">
-                              <div class="modals__item modal" id="modalreturnmoney">
+                              <div class="modals__item modal modal--middle" id="modalreturnmoney1">
                                 <div class="modal__title">Возврат средств</div>
                                 <div class="modal__content p-3">
+                                  <p class="ml-auto w-50">
+                                    ИП Потапову Леониду Викторовичу<br>
+                                    от Петрова Максима Борисовича
+                                  </p>
                                   <p>Прошу вернуть денежные средства, излишне перечисленные 17.07.2021 г. в сумме <span class="text-bold">10 631,33 (Десять тысяч шестьсот тридцать один рубль 33
-                                      копейки)</span> по заказу <span class="text-bold">№22492 от 07.07.2021 г.</span> </p>
-                                  <p>Возврат вышеуказанной суммы прошу произвести на ту же карту/счёт, с которых была произведена оплата.</p>
-                                  <p class="h4 mt-2">Возврат осуществляется за следующие товары:</p>
+                                      копейки)</span> по заказу <span class="text-bold">О-52877 от 07.07.2021 г.</span> </p>
+                                  <p>Возврат вышеуказанной суммы прошу произвести на ту же карту/счёт, с которой была произведена оплата.</p>
+                                  <p>Возврат осуществляется за следующие товары:</p>
                                   <ul class="marker mb-4 text-small">
                                     <li>Брюки PLAYTODAY 22011003 (р.152), 1 шт, 683,80 р.</li>
                                     <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
@@ -2100,7 +2105,53 @@
                                     <li>Футболка PLAYTODAY 220122004 (р.152), 1 шт, 271,59 р.</li>
                                     <li>Блуза PLAYTODAY 22021066 (р.128), 1 шт, 554,67 р.</li>
                                   </ul>
-                                  <button class="btn btn-main js-total-return-btn-modal-card" onclick="$.fancybox.close();">Всё верно, отправить письмо</button>
+                                  <div class="d-flex justify-center">
+                                    <button class="btn btn-main js-total-return-btn-modal-card" onclick="$.fancybox.close();">Всё верно, подвтерждаю</button>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="modals__item modal modal--middle" id="modalreturnmoney2">
+                                <div class="modal__title">Возврат средств</div>
+                                <div class="modal__content p-3">
+                                  <p class="ml-auto w-50">
+                                    ИП Потапову Леониду Викторовичу<br>
+                                    от ООО "РОМАШКА"
+                                  </p>
+                                  <p>Прошу вернуть денежные средства, излишне перечисленные 17.07.2021 г. в сумме <span class="text-bold">10 631,33 (Десять тысяч шестьсот тридцать один рубль 33
+                                      копейки)</span> по заказу <span class="text-bold">О-52877 от 07.07.2021 г.</span> </p>
+                                  <p>Возврат вышеуказанной суммы прошу произвести на ту же карту/счёт, с которой была произведена оплата.</p>
+                                  <p>Возврат осуществляется за следующие товары:</p>
+                                  <ul class="marker mb-4 text-small">
+                                    <li>Брюки PLAYTODAY 22011003 (р.152), 1 шт, 683,80 р.</li>
+                                    <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
+                                    <li>Толстовка PLAYTODAY 12111414 (р.164), 1 шт, 624,92 р.</li>
+                                    <li>Шапка PLAYTODAY 12111559 (р.54), 1 шт, 168,79 р.</li>
+                                    <li>Толстовка PLAYTODAY 12121132 (р.152), 1 шт, 656,87 р.</li>
+                                    <li>Футболка PLAYTODAY 22011099 (р.164), 1 шт, 370,25 р.</li>
+                                    <li>Футболка PLAYTODAY 22011100 (р.164), 1 шт, 204,98 р.</li>
+                                    <li>Футболка PLAYTODAY 220122004 (р.152), 1 шт, 271,59 р.</li>
+                                    <li>Блуза PLAYTODAY 22021066 (р.128), 1 шт, 554,67 р.</li>
+                                  </ul>
+                                  <p>Денежные средства прошу произвести по следующим реквизитам:</p>
+                                  <p>
+                                    ООО "РОМАШКА"<br>
+                                    ИНН 7715501044400<br>
+                                    р/с 40702850225668877<br>
+                                    Банк: АО АЛЬФА БАНК г Москва<br>
+                                    к/с 3010185120000547<br>
+                                    БИК: 044500255
+                                  </p>
+                                  <div class="d-flex justify-between">
+                                    <p>подпись ____________________</p>
+                                    <p>дата 02.08.2021 год</p>
+                                  </div>
+                                  <p>М. П.</p>
+                                  <div class="d-flex flex-column row-gap-1">
+                                    <a class="btn btn-white">Скачать заявление</a>
+                                    <input type="file">
+                                    <button class="btn btn-main" onclick="$.fancybox.close();">Отправить</button>
+                                  </div>
                                 </div>
                               </div>
                             </div>

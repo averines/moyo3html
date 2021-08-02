@@ -92,6 +92,10 @@ main {
   width: 100%;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .d-flex {
   display: flex;
 }
@@ -244,6 +248,10 @@ ol {
 
 .flex-column {
   flex-direction: column;
+}
+
+.row-gap-1 {
+  row-gap: 1em;
 }
 
 .list-clear {
