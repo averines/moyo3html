@@ -2309,7 +2309,7 @@
   width: 1130px;
   display: none;
   padding: 30px;
-  min-height: calc(100vh - 15px);
+  // min-height: calc(100vh - 15px);
 
   &-wrapper {
     border: 20px solid $white;
@@ -2461,6 +2461,7 @@
     display: flex;
     padding: 0;
     .size-variants__item {
+      display: block;
       padding: 0.75em 1em;
       border-color: $line-light;
       pointer-events: none;

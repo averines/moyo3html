@@ -1563,7 +1563,6 @@ if (paymentListItems.length > 0) {
 }
 
 
-
 // новый слайдер
 if (document.querySelectorAll('.product-gallery').length > 0) {
     const swiperProductThumbs = new Swiper('.product-thumbs', {
