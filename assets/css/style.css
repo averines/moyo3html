@@ -3051,6 +3051,12 @@ hr.dotted {
   border-radius: 0 4px 4px 0;
 }
 
+.product-mini-slider-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .products {
   display: -ms-grid;
   display: grid;
@@ -3568,6 +3574,7 @@ hr.dotted {
 }
 
 .price__profit {
+  white-space: nowrap;
   color: #038184;
   font-size: 11px;
   clear: both;
@@ -3582,6 +3589,7 @@ hr.dotted {
 }
 
 .price__discount {
+  white-space: nowrap;
   color: white;
   background-color: #038184;
   display: inline-block;
@@ -3600,6 +3608,7 @@ hr.dotted {
 }
 
 .price__base {
+  white-space: nowrap;
   font-weight: 800;
   font-size: 12px;
 }
@@ -6788,11 +6797,16 @@ hr.dotted {
   content: " ₽";
 }
 
+.price-base {
+  white-space: nowrap;
+}
+
 .price-base::after {
   content: " ₽";
 }
 
 .price-profit {
+  white-space: nowrap;
   color: #038184;
   font-size: 0.9em;
 }
@@ -6806,6 +6820,7 @@ hr.dotted {
 }
 
 .price-discount {
+  white-space: nowrap;
   color: white;
   background-color: #038184;
   display: inline-block;
@@ -9122,6 +9137,23 @@ textarea {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.modal-product-container-left {
+  max-width: 600px;
+}
+
+.products-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.products-flex .product__pic {
+  width: auto;
+  height: auto;
 }
 
 .subcategories-icons {

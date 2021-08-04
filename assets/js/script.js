@@ -860,6 +860,29 @@ productSliders.forEach(element => {
     });
 });
 
+const productSliders4 = document.querySelectorAll('.product-mini-slider-4');
+productSliders4.forEach(element => {
+    const slider = tns({
+        container: element,
+        items: 3,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: true,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 10,
+        responsive: {
+            1024: {
+                items: 4,
+                gutter: 15,
+            },
+        }
+    });
+});
+
 
 
 const productColorsSliderContainer = document.querySelectorAll('.product-colors-slider')

@@ -2092,6 +2092,10 @@
   }
 }
 
+.product-mini-slider-4 {
+  display: flex;
+}
+
 // товары
 .products {
   display: grid;
@@ -2551,6 +2555,7 @@
   }
 
   &__profit {
+    white-space: nowrap;
     color: $special-2;
     font-size: 11px;
     clear: both;
@@ -2564,6 +2569,7 @@
   }
 
   &__discount {
+    white-space: nowrap;
     color: $white;
     background-color: $special-2;
     display: inline-block;
@@ -2581,6 +2587,7 @@
   }
 
   &__base {
+    white-space: nowrap;
     font-weight: 800;
     font-size: 12px;
     // letter-spacing: 0.03em;
@@ -5649,12 +5656,14 @@
 }
 
 .price-base {
+  white-space: nowrap;
   &::after {
     content: " ₽";
   }
 }
 
 .price-profit {
+   white-space: nowrap;
   color: $special-2;
   font-size: 0.9em;
 
@@ -5667,6 +5676,7 @@
 }
 
 .price-discount {
+   white-space: nowrap;
   color: $white;
   background-color: $special-2;
   display: inline-block;
@@ -7748,6 +7758,20 @@ textarea {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.modal-product-container-left {
+  max-width: 600px
+}
+
+.products-flex {
+  display: flex;
+  column-gap: 15px;
+
+  .product__pic {
+    width: auto;
+    height: auto;
+  }
 }
 
 @import "subcategories";
