@@ -1426,15 +1426,28 @@ if (brandMixerEl) {
 
 // выбор блока при выборе доставки
 const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper')
+const deliveryAddressWrapper = document.querySelector('.js-delivery-type-warning')
+console.log(deliveryAddressWrapper);
+
 if (deliveryWrapper) {
     let deliveryRadioItems = deliveryWrapper.querySelectorAll('.form-group__radio')
     let deliveryChooseItems = deliveryWrapper.querySelectorAll('.choose-item')
+    let deliveryInsuranceItems = deliveryWrapper.querySelectorAll('.delivery-insurance')
+
     deliveryRadioItems.forEach(item => {
+
         item.addEventListener('click', () => {
             deliveryChooseItems.forEach(item => {
                 item.classList.remove('is-choosen')
             })
+
+            deliveryInsuranceItems.forEach(item => {
+                item.classList.remove('is-active')
+            })
+
             item.closest('.choose-item').classList.add('is-choosen')
+            deliveryAddressWrapper.classList.add('is-warning')
+            item.closest('.choose-item').querySelector('.delivery-insurance').classList.add('is-active')
         })
     })
 }
@@ -1892,3 +1905,15 @@ if (starsLinesItems) {
         starsLine.appendChild(starsLineMainValue)
     })
 }
+
+// // предупреждение о необходимости проверить адрес доставки при оформлении заказа
+// const deliveryTypeWarningItems = document.querySelectorAll('.js-delivery-type-warning .form-group')
+
+// if (deliveryTypeWarningItems.length > 0) {
+//     deliveryTypeWarningItems.forEach(deliveryTypeWarningItem => {
+//         console.log(deliveryTypeWarningItem);
+//         deliveryTypeWarningItem.addEventListener('click', () => {
+//             console.log(deliveryTypeWarningItem)
+//         })
+//     })
+// }

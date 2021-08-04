@@ -8344,6 +8344,11 @@ hr.dotted {
   cursor: pointer;
 }
 
+.choose-wrapper__item.is-warning {
+  outline: 1px solid #ab064e;
+  margin-bottom: 10px;
+}
+
 .choose-wrapper.accordion .accordion__item .accordion__title::after {
   background: url(../img/icons/arrow.svg) no-repeat center;
   background-size: 35%;
@@ -8420,6 +8425,9 @@ hr.dotted {
           column-gap: 10px;
   cursor: pointer;
   margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-group__radio + label::before {
@@ -8434,6 +8442,8 @@ hr.dotted {
           transform: translateY(1px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .form-group__radio + label:hover {
@@ -9170,6 +9180,21 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.delivery-type-warning .form-group__radio:checked + label::after {
+  content: 'Проверьте адрес доставки';
+  color: #ab064e;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.delivery-insurance {
+  display: none;
+}
+
+.delivery-insurance.is-active {
+  display: block;
 }
 
 .subcategories-icons {
