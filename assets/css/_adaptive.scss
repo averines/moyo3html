@@ -1917,6 +1917,10 @@
       }
     }
   }
+
+  .order-button-wrapper {
+    column-gap: 10px;
+  }
 }
 
 //xl
@@ -2616,6 +2620,11 @@
 
     .more-block {
       width: 100%;
+
+      .table-responsive {
+        overflow: visible;
+      }
+
     }
   }
 
