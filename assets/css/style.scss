@@ -672,6 +672,11 @@
     background-color: $main;
     color: $white;
     padding: 0.75em 20px;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    padding: 10px;
   }
 
   &--middle {
@@ -5238,6 +5243,10 @@
       display: block;
     }
   }
+
+  .popup-info {
+    display: none;
+  }
 }
 
 .popup-info-wrapper {
@@ -5341,10 +5350,11 @@
   thead {
     tr {
       td {
-        padding: 0.75em 0.3em;
-        font-size: 0.75em;
+        padding: 0.75em 0.2em;
+        font-size: 0.7em;
         border-bottom: 2px solid $line-dark;
         border-top: 2px solid $line-dark;
+        white-space: nowrap;
       }
     }
   }
@@ -5353,8 +5363,8 @@
     tr {
       border-bottom: 1px solid $line-light;
       td {
-        font-size: 14px;
-        padding: 8px 5px;
+        font-size: 12px;
+        padding: 8px 3px;
         border: none;
         white-space: nowrap;
         height: 40px;
@@ -7773,6 +7783,11 @@ textarea {
     height: auto;
   }
 }
+
+.order-button-wrapper {
+  display: flex;
+}
+
 
 @import "subcategories";
 @import "animations";
