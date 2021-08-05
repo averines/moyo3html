@@ -4507,6 +4507,13 @@
       border-radius: 4px;
     }
   }
+
+  &--mini {
+    margin: 0 0 1em 0;
+    .product-colors-slider__item {
+      width: 55px;
+    }
+  }
 }
 
 .product-color-info {
