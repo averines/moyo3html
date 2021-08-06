@@ -6629,7 +6629,8 @@
   }
 
   &__back-btn {
-    cursor: pointer;
+    transform: translateY(-25px);
+    cursor: pointer; 
     border: none;
     background-color: $main;
     color: $white;
