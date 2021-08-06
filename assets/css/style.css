@@ -1841,12 +1841,18 @@ hr.dotted {
   border-radius: 4px;
 }
 
+.dropdown-products .products-mini li .product__info {
+  background-color: transparent;
+}
+
 .dropdown-products .products-mini li:hover {
   background-color: #f3f2f0;
 }
 
 .dropdown-products .products-mini li:hover .product {
   border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .dropdown-products .products-mini li:hover + li .product {
@@ -3142,9 +3148,9 @@ hr.dotted {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
   background-color: white;
   border-radius: 0 0 5px 5px;

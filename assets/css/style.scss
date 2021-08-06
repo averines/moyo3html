@@ -958,12 +958,18 @@
         border-radius: 4px;
       }
 
+        .product__info {
+          background-color: transparent;
+        }
+
       &:hover {
         background-color: $bg-light;
 
         .product {
           border-color: transparent;
+          box-shadow: none;
         }
+
         & + li .product {
           border-color: transparent;
         }
@@ -2175,7 +2181,8 @@
 
     &__info {
       display: flex;
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
+      flex-direction: column;
       // row-gap: 1em;
       padding: 10px;
       background-color: $white;
