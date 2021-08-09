@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Все страницы</title>
+  <title>Выбор оплаты</title>
   <meta name="description"
     content="Стильная одежда мелким оптом по низкой цене для всех без исключения! Закажите одежду для всей семьи по оптовым ценам или совершите совместную покупку | Optmoyo.ru" />
   <meta name="robots" content="index, follow">
@@ -1884,82 +1884,167 @@
       <nav>
         <ol class="breadcrumbs">
           <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
-          <li><span>Все страницы</span></li>
+          <li><span>Выбор оплаты</span></li>
         </ol>
       </nav>
-      <div class="pagetitle">
-        <h1 class="pagetitle__header">Все сверстанные страницы</h1>
-      </div>
     </div>
-    <div class="container">
 
-      <div class="allpageslist">
-        <div>
-          <h4>Основные</h4>
-          <ul class="marker mb-3">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="category-woman.html">Категория Женщинам</a></li>
-            <li><a href="category-girl.html">Категория Девочкам</a></li>
-            <li><a href="category-man.html">Категория Мужчинам</a></li>
-            <li><a href="category-boy.html">Категория Мальчикам</a></li>
-            <li><a href="category-home.html">Категория Для дома</a></li>
-            <li><a href="category-toy.html">Категория Игрушки</a></li>
-            <li><a href="subcategory.html">Подкатегория</a></li>
-            <li><a href="product.html">Товар</a></li>
-            <li><a href="brand.html">Бренд</a></li>
-            <li><a href="brands.html">Бренды</a></li>
-          </ul>
+    <div class="container cabinet-header-wrapper">
+      <div class="pagetitle">
+        <h1 class="pagetitle__header">Личный кабинет</h1>
+        <div class="pagetitle__text">Имя пользователя</div>
+      </div>
+      <a href="index.html" class="btn-logout js-user-set-not-logged">Выйти</a>
+    </div>
+
+    <div class="container">
+      <div class="tabs mt-3">
+        <div class="tabs-titles">
+          <a class="tabs-titles__item" href="personal-favorites.html">Избранное</a>
+          <a class="tabs-titles__item is-active" href="personal-cart.html">Корзина</a>
+          <a class="tabs-titles__item" href="personal-data-fiz.html">Личные данные</a>
+          <a class="tabs-titles__item" href="personal-orders.html">История заказов</a>
+          <a class="tabs-titles__item" href="personal-discounts.html">Скидки и бонусы</a>
+          <a class="tabs-titles__item" href="personal-return.html">Рекламация</a>
         </div>
-        <div>
-          <h4>Служебные</h4>
-          <ul class="marker mb-3">
-            <li><a href="404.html">Ошибка 404</a></li>
-            <li><a href="500.html">Ошибка 500</a></li>
-          </ul>
+        <div class="tabs-content">
+          <div class="tabs-content__item my-2">
+            <div class="order-progress-list">
+              <div class="order-progress-list__item progress-item progress-item--active">
+                <div class="progress-item__icon"><img src="./assets/img/icons/order-progress/01.svg" alt=""></div>
+                <div class="progress-item__title">Корзина</div>
+              </div>
+              <div class="order-progress-list__separator order-progress-list__separator--active"></div>
+              <div class="order-progress-list__item progress-item progress-item--active">
+                <div class="progress-item__icon progress-item__icon--delivery">
+                  <img src="./assets/img/icons/order-progress/02.svg" alt="">
+                </div>
+                <div class="progress-item__title">Доставка</div>
+              </div>
+              <div class="order-progress-list__separator order-progress-list__separator--active"></div>
+              <div class="order-progress-list__item progress-item progress-item--active">
+                <div class="progress-item__icon"><img src="./assets/img/icons/order-progress/03.svg" alt=""></div>
+                <div class="progress-item__title">Оплата</div>
+              </div>
+            </div>
+
+            <div class="order-progress-payment-wrapper choose-wrapper accordion">
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/payment-money.svg" alt="Способы оплаты">
+                  Способы оплаты
+                </div>
+                <div class="choose-item__content accordion__content">
+                  <div class="payment-choose-list">
+                    <div class="payment-choose-list__item is-active">
+                      <div class="form-row">
+                        <div class="form-group">
+                          <img class="form-group__icon" src="./assets/img/icons/payment-money.svg" alt="">
+                          <input type="radio" class="form-group__radio" value="paymenttype1" id="paymenttype1" name="paymenttype">
+                          <label for="paymenttype1">Оплата наличными</label>
+                        </div>
+                        <div class="form-row__description">Оплата наличными или картой при получении заказа в офисе</div>
+                      </div>
+                    </div>
+                    <div class="payment-choose-list__item is-disabled">
+                      <div class="form-row">
+                        <div class="form-group">
+                          <img class="form-group__icon" src="./assets/img/icons/payment-letter.svg" alt="">
+                          <input type="radio" class="form-group__radio" value="paymenttype2" id="paymenttype2" name="paymenttype" checked>
+                          <label for="paymenttype2">Безналичная оплата</label>
+                        </div>
+                        <div class="form-row__description">Будет выставлен счет (на сайте в личном кабинете и по электронной почте)</div>
+
+                      </div>
+                    </div>
+                    <div class="payment-choose-list__item">
+                      <div class="form-row">
+                        <div class="form-group">
+                          <img class="form-group__icon" src="./assets/img/icons/payment-card-2.svg" alt="">
+                          <input type="radio" class="form-group__radio" value="paymenttype3" id="paymenttype3" name="paymenttype">
+                          <label for="paymenttype3">Оплата картой на&nbsp;сайте</label>
+                        </div>
+                        <div class="form-row__description">Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками)</div>
+                      </div>
+                    </div>
+                    <div class="payment-choose-list__item">
+                      <div class="form-row">
+                        <div class="form-group">
+                          <img class="form-group__icon" src="./assets/img/icons/payment-deposit.svg" alt="">
+                          <input type="radio" class="form-group__radio" value="paymenttype4" id="paymenttype4" name="paymenttype">
+                          <label for="paymenttype4">Оплата с депозита <span class="text-nowrap">88 234,00 ₽</span></label>
+                        </div>
+                        <div class="form-row__description">Оплата заказа с депозита</div>
+                      </div>
+                      <form action="/" class="js-form-check mt-2" method="GET">
+                        <div class="form-row">
+                          <div class="form-group">
+                            <input class="form-group__input" type="text" placeholder="Введите сумму" required>
+                            <button class="btn btn-main" type="submit" disabled>Оплатить</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-progress-address-wrapper choose-wrapper accordion">
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">
+                  <img src="./assets/img/icons/comments.svg" alt="Комментарий к заказу">
+                  Комментарий к заказу
+                </div>
+                <div class="choose-item__content accordion__content comment-wrapper">
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Ваш комментарий к заказу (не обязательно)"></textarea>
+                </div>
+              </div>
+              <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
+                <div class="choose-item__title accordion__title">Стоимость заказа</div>
+                <div class="choose-item__content accordion__content">
+                  <div class="order-info order-info--indelyverytab">
+                    <ul class="order-info-list">
+                      <li>
+                        <div class="order-info-list__title">Общая стоимость товаров</div>
+                        <div class="order-info-list__value order-info-list__value--black">1 234,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Скидка</div>
+                        <div class="order-info-list__value">234,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Скидка по промокоду</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Накопительная скидка</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                      <li>
+                        <div class="order-info-list__title">Бонус за выкуп</div>
+                        <div class="order-info-list__value">0,00</div>
+                      </li>
+                    </ul>
+                    <div class="order-info-total">
+                      Итого:
+                      <div class="total">1 234,00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-buttons">
+              <a class="btn btn-white" href="personal-order-delivery.html">Назад к доставке</a>
+              <a class="btn btn-main" href="personal-online-payment.html">Отправить заказ</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4>Информационные</h4>
-          <ul class="marker mb-3">
-            <li><a href="info-about.html">О нас</a></li>
-            <li><a href="info-contacts.html">Контакты</a></li>
-            <li><a href="info-delivery.html">Доставка</a></li>
-            <li><a href="info-faq.html">Вопросы-ответы</a></li>
-            <li><a href="info-partnership.html">Сотрудничество</a></li>
-            <li><a href="info-conditions.html">Условия работы</a></li>
-            <li><a href="info-payment.html">Оплата</a></li>
-            <li><a href="info-return.html">Возврат</a></li>
-            <li><a href="info-sizes.html">Размеры</a></li>
-            <li><a href="info-api.html">API</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Личный кабинет</h4>
-          <ul class="marker mb-3">
-            <li><a href="personal-cart.html">Корзина</a></li>
-            <li><a href="personal-cart-empty.html">Корзина пустая</a></li>
-            <li><a href="personal-cart-empty.html">Корзина с дозаказом</a></li>
-            <li><a href="personal-discounts.html">Бонусы и скидки</a></li>
-            <li><a href="personal-favorites.html">Избранное</a></li>
-            <li><a href="personal-orders.html">История заказов</a></li>
-            <li><a href="personal-order-view.html">Просмотр заказа</a></li>
-            <li><a href="personal-data-fiz.html">Личные данные физ. лица</a></li>
-            <li><a href="personal-data-ip.html">Личные данные ИП</a></li>
-            <li><a href="personal-data-ooo.html">Личные данные ООО</a></li>
-            <li><a href="personal-data-ip-firsttime.html">Заполнение данных для ИП в первый раз</a></li>
-            <li><a href="personal-data-ooo-firsttime.html">Заполнение данных для ООО в первый раз</a></li>
-            <li><a href="personal-return.html">Рекламация</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Оформление заказа</h4>
-          <ul class="marker mb-3">
-            <li><a href="personal-order-delivery.html">Выбор доставки</a></li>
-            <li><a href="personal-order-payment.html">Выбор оплаты</a></li>
-            <li><a href="personal-order-payment-fiz.html">Выбор оплаты для физ.лиц</a></li>
-            <li><a href="personal-online-payment.html">Онлайн-оплата</a></li>
-            <li><a href="personal-order-sent.html">Заказ отправлен</a></li>
-          </ul>
-        </div>
+
+        <p class="my-3">Пояснение для Вадима <br>
+          Для физических лиц выбор безналичный оплаты недоступен ( применен css-класс "is-disabled" для "payment-choose-list__item")
+        </p>
       </div>
     </div>
   </main>

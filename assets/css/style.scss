@@ -7059,7 +7059,7 @@
   &__item {
     border-bottom: 4px solid transparent;
     transition: $tr;
-    cursor: pointer;
+    // cursor: pointer;
 
     &.is-warning {
       outline: 1px solid $main;
@@ -7321,7 +7321,6 @@ textarea {
       }
     }
   }
-}
 
 .payment-choose-list {
   display: flex;
@@ -7352,8 +7351,20 @@ textarea {
     .form-group__radio:checked ~ .form-row__description {
       color: $text;
     }
+
+      &.is-disabled {
+        pointer-events: none;
+        background-color: $line-light + 10;
+
+        &:hover {
+          cursor: initial;
+        }
+      }    
   }
+}  
 }
+
+
 
 
 .contacts-map__modal {
