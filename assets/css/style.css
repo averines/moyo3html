@@ -366,6 +366,12 @@ ol li a {
   opacity: 1;
 }
 
+.btn-main.is-disabled {
+  border-color: #777;
+  pointer-events: none;
+  background-color: #777;
+}
+
 .btn-gray {
   color: white;
   background-color: #777;

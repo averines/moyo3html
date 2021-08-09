@@ -1896,6 +1896,7 @@ if (feedbackStartBtn) {
 
 // линии рейтинга на странице продукта
 const starsLinesItems = documentBody.querySelectorAll('.stars-lines__item')
+
 if (starsLinesItems) {
     starsLinesItems.forEach(starsLinesItem => {
         let starsLine = starsLinesItem.querySelector('.stars-lines__line')
@@ -1917,3 +1918,18 @@ if (starsLinesItems) {
 //         })
 //     })
 // }
+
+
+const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
+if (btnGotoOrderPayment) {
+    btnGotoOrderPayment.classList.add('is-disabled')
+}
+
+const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
+if (orderPaymentAddressRadioItems.length > 0) {
+    orderPaymentAddressRadioItems.forEach(orderPaymentAddressRadioItem => {
+        orderPaymentAddressRadioItem.addEventListener('click', () => {
+            btnGotoOrderPayment.classList.remove('is-disabled')
+        })
+    })
+}

@@ -366,6 +366,12 @@ ol {
         opacity: 1;
       }
     }
+
+    &.is-disabled {
+      border-color: $text-light;
+      pointer-events: none;
+      background-color: $text-light;
+    }
   }
 
   &-gray {
