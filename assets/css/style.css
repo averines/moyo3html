@@ -376,6 +376,17 @@ ol li a {
   background-color: #686868;
 }
 
+.btn-gray-light {
+  color: #3d3d3c;
+  background-color: #f3f2f0;
+  border: 1px solid #d9d9d9;
+  min-width: auto;
+}
+
+.btn-gray-light:hover {
+  background-color: #e4e3e1;
+}
+
 .btn-white {
   background-color: white;
   min-width: auto;

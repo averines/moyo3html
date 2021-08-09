@@ -378,6 +378,17 @@ ol {
     }
   }
 
+  &-gray-light {
+    color: $text;
+    background-color: $bg-light;
+    border: 1px solid $line-light;
+    min-width: auto;
+
+    &:hover {
+      background-color: $bg-light - 15;
+    }
+  }  
+
   &-white {
     background-color: $white;
     min-width: auto;
