@@ -2027,7 +2027,6 @@
                 </div>
               </div>
             </div>
-
             <div class="order-progress-address-wrapper choose-wrapper accordion">
               <div class="choose-wrapper__item is-active choose-item accordion__item js-delivery-type-warning" data-disable="750">
                 <div class="choose-item__title accordion__title">
@@ -2048,6 +2047,48 @@
                     </div>
                   </div>
                   <button class="btn btn-white mt-2" data-fancybox data-src="#modalInfo5">Добавить новый адрес</button>
+                  <div class="modals">
+                    <div class="modals__item modal" id="modalInfo5">
+                      <div class="modal__title">Новый адрес доставки</div>
+                      <form class="modal__form js-form-check" action="/" method="POST">
+                        <div class="form-row">
+                          <div class="form-group form-group--required">
+                            <input id="user-delivery-index" type="text" name="user-delivery-index" required />
+                            <label for="user-delivery-index">Почтовый индекс</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group">
+                            <input id="user-delivery-region" type="text" name="user-delivery-region" />
+                            <label for="user-delivery-region">Регион, область, район</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group form-group--required">
+                            <input id="user-delivery-city" type="text" name="user-delivery-city" required />
+                            <label for="user-delivery-city">Населенный пункт</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group form-group--required">
+                            <input id="user-delivery-street" type="text" name="user-delivery-street" required />
+                            <label for="user-delivery-street">Улица</label>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group form-group--required">
+                            <input id="user-delivery-house" type="text" name="user-delivery-house" required />
+                            <label for="user-delivery-house">Дом, стр./корп.</label>
+                          </div>
+                          <div class="form-group form-group--required">
+                            <input id="user-delivery-apartment" type="text" name="user-delivery-apartment" required />
+                            <label for="user-delivery-apartment">Кв./офис</label>
+                          </div>
+                        </div>
+                        <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="choose-wrapper__item is-active choose-item accordion__item" data-disable="750">
@@ -2084,7 +2125,6 @@
                 </div>
               </div>
             </div>
-
             <div class="order-buttons">
               <a class="btn btn-white" href="personal-cart.html">Назад к корзине</a>
               <a class="btn btn-gray" href="personal-order-payment.html">Далее к оплате</a>
