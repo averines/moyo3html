@@ -397,6 +397,31 @@ ol li a {
   background-color: #f0f0f0;
 }
 
+.btn-delete {
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  background: url(../img/icons/close.svg) no-repeat center;
+  background-size: 70%;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  opacity: 0.65;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+.btn-delete:active {
+  background-size: 60%;
+}
+
 .btn-burger {
   padding: 8px 8px 8px 0;
   display: inline-block;
@@ -7009,31 +7034,6 @@ hr.dotted {
   font-size: 15px;
 }
 
-.info-plate .btn-delete {
-  width: 15px;
-  height: 15px;
-  border: none;
-  cursor: pointer;
-  background: url(../img/icons/close.svg) no-repeat center;
-  background-size: 70%;
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
-  opacity: 0.65;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.info-plate .btn-delete:hover {
-  opacity: 1;
-}
-
-.info-plate .btn-delete:active {
-  background-size: 60%;
-}
-
 .info-plate .form-group__select {
   width: 100%;
 }
@@ -8454,7 +8454,8 @@ hr.dotted {
   -webkit-column-gap: 10px;
           column-gap: 10px;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
