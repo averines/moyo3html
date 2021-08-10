@@ -750,6 +750,10 @@ ol li a {
   font-weight: 600;
 }
 
+.text-special-7 {
+  color: #1978b8;
+}
+
 .text-small {
   font-size: 0.85em;
 }
@@ -8678,6 +8682,23 @@ textarea {
   padding-left: 20px;
   line-height: 1.3;
   margin-top: -7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.order-progress-payment-wrapper .payment-choose-list__item .form-row__description span {
+  font-size: 0.9em;
+  margin-top: 1em;
+  padding: 0.25em 0.75em;
+  border: 1px solid #1978b8;
 }
 
 .order-progress-payment-wrapper .payment-choose-list__item .form-row .form-group label {
