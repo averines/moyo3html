@@ -728,18 +728,18 @@ progressDiagram()
 
 
 // tiny slider
-const mainSliderContainer = document.querySelectorAll('.main-slider')
-let mainSlider = mainSliderContainer.length > 0 ?
-    tns({
-        container: mainSliderContainer[0],
-        items: 1,
-        slideBy: 'page',
-        autoplay: false,
-        controls: false,
-        mouseDrag: true,
-        swipeAngle: 60
-    })
-    : "";
+// const mainSliderContainer = document.querySelectorAll('.main-slider')
+// let mainSlider = mainSliderContainer.length > 0 ?
+//     tns({
+//         container: mainSliderContainer[0],
+//         items: 1,
+//         slideBy: 'page',
+//         autoplay: false,
+//         controls: false,
+//         mouseDrag: true,
+//         swipeAngle: 60
+//     })
+//     : "";
 
 const postSliderPopularContainer = document.querySelectorAll('.post-slider-popular')
 let postSliderPopular = postSliderPopularContainer.length > 0 ?
@@ -1978,3 +1978,70 @@ if (starsLinesItems) {
 //         })
 //     })
 // }
+
+
+const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: 1,
+    setWrapperSize: true,
+    spaceBetween: 0,
+    navigation: false,
+    pagination: false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            // allowTouchMove: false,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            grabCursor: false,
+            speed: 300,
+        }
+    }
+});
+
+swiperMainSliderPicture.on('slideNextTransitionEnd', function () {
+    swiperMainSliderContent.slideNext();
+});
+
+swiperMainSliderPicture.on('slidePrevTransitionEnd', function () {
+    swiperMainSliderContent.slidePrev();
+});
+
+
+const swiperMainSliderContent = new Swiper('.m-slider__content', {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: 1,
+    setWrapperSize: true,
+    spaceBetween: 0,
+    navigation: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            allowTouchMove: false,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            grabCursor: false,
+            speed: 0,
+        }
+    }
+});
+
+// swiperMainSliderContent.on('slideNextTransitionEnd', function () {
+//     swiperMainSliderPicture.slideTo(1);
+// });
+
+// swiperMainSliderContent.on('slidePrevTransitionEnd', function () {
+//     swiperMainSliderPicture.slideTo(2);
+// });
