@@ -9267,6 +9267,17 @@ textarea {
   display: block;
 }
 
+.page-main .main-slider-imitator-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.main-slider-imitator {
+  height: 350px;
+  background-color: #ccc;
+}
+
 .subcategories-icons {
   margin: 4em 0;
   padding: 0;

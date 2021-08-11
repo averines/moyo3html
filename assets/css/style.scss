@@ -7833,6 +7833,18 @@ textarea {
   }
 }
 
+.page-main {
+  .main-slider-imitator-wrapper {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.main-slider-imitator {
+  height: 350px;
+  background-color: #ccc;
+}
+
 
 @import "subcategories";
 @import "animations";
