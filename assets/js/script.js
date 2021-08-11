@@ -1427,16 +1427,33 @@ if (brandMixerEl) {
 // выбор блока при выборе доставки
 const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper')
 const deliveryAddressWrapper = document.querySelector('.js-delivery-type-warning')
+const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
+const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
 
+if (btnGotoOrderPayment) { btnGotoOrderPayment.classList.add('is-disabled') }
+
+let deliveryAddressIsChoosen = false
+let deliveryTypeIsChoosen = false
+
+if (orderPaymentAddressRadioItems.length > 0) {
+    orderPaymentAddressRadioItems.forEach(orderPaymentAddressRadioItem => {
+        orderPaymentAddressRadioItem.addEventListener('click', () => {
+            deliveryAddressIsChoosen = true
+            if (deliveryAddressIsChoosen & deliveryTypeIsChoosen) {
+                btnGotoOrderPayment.classList.remove('is-disabled')
+            }
+        })
+    })
+}
 
 if (deliveryWrapper) {
     let deliveryRadioItems = deliveryWrapper.querySelectorAll('.form-group__radio')
     let deliveryChooseItems = deliveryWrapper.querySelectorAll('.choose-item')
     let deliveryInsuranceItems = deliveryWrapper.querySelectorAll('.delivery-insurance')
 
-    
 
     deliveryRadioItems.forEach(item => {
+        // прячем адреса доставки, если выбран самовывоз
         if (!item.closest('.choose-item').classList.contains('delivery-type-warning')) {
             item.addEventListener('click', () => {
                 deliveryAddressWrapper.style.display = 'none'
@@ -1444,6 +1461,9 @@ if (deliveryWrapper) {
                     item.classList.remove('is-choosen')
                 })
                 item.closest('.choose-item').classList.add('is-choosen')
+
+                // снимаем блокировку с кнопки Далее
+                btnGotoOrderPayment.classList.remove('is-disabled')
             })
         } else {
             item.addEventListener('click', () => {
@@ -1455,15 +1475,27 @@ if (deliveryWrapper) {
                     item.classList.remove('is-active')
                 })
 
+                deliveryTypeIsChoosen = true
+
                 item.closest('.choose-item').classList.add('is-choosen')
                 deliveryAddressWrapper.style.display = 'block'
                 deliveryAddressWrapper.classList.add('is-warning')
                 item.closest('.choose-item').querySelector('.delivery-insurance').classList.add('is-active')
+
+                // блокируем кнопку Далее
+                btnGotoOrderPayment.classList.add('is-disabled')
+
+                if (deliveryAddressIsChoosen & deliveryTypeIsChoosen) {
+                    btnGotoOrderPayment.classList.remove('is-disabled')
+                }
             })
         }
-
     })
 }
+
+
+
+
 
 // кнопка Бренды в Категории для десктопа и мобильной версии
 const btnBrands = document.querySelector('.js-btn-brands')
@@ -1933,16 +1965,16 @@ if (starsLinesItems) {
 // }
 
 
-const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
-if (btnGotoOrderPayment) {
-    btnGotoOrderPayment.classList.add('is-disabled')
-}
+// const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
+// if (btnGotoOrderPayment) {
+//     btnGotoOrderPayment.classList.add('is-disabled')
+// }
 
-const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
-if (orderPaymentAddressRadioItems.length > 0) {
-    orderPaymentAddressRadioItems.forEach(orderPaymentAddressRadioItem => {
-        orderPaymentAddressRadioItem.addEventListener('click', () => {
-            btnGotoOrderPayment.classList.remove('is-disabled')
-        })
-    })
-}
+// const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
+// if (orderPaymentAddressRadioItems.length > 0) {
+//     orderPaymentAddressRadioItems.forEach(orderPaymentAddressRadioItem => {
+//         orderPaymentAddressRadioItem.addEventListener('click', () => {
+//             btnGotoOrderPayment.classList.remove('is-disabled')
+//         })
+//     })
+// }
