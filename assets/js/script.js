@@ -1434,6 +1434,7 @@ if (deliveryWrapper) {
     let deliveryChooseItems = deliveryWrapper.querySelectorAll('.choose-item')
     let deliveryInsuranceItems = deliveryWrapper.querySelectorAll('.delivery-insurance')
 
+    
 
     deliveryRadioItems.forEach(item => {
         if (!item.closest('.choose-item').classList.contains('delivery-type-warning')) {
