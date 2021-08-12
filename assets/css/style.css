@@ -4481,6 +4481,12 @@ hr.dotted {
   color: #ab064e;
 }
 
+.menu-filters-wrapper .menu-filters__apply {
+  margin-left: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
 .menu-filters-wrapper .menu-filters .filter-item {
   border-bottom: 1px solid #d9d9d9;
   -webkit-transition: all 0.2s ease-in-out;
@@ -10958,6 +10964,9 @@ textarea {
   }
   .menu-filters__wrapper {
     max-width: 250px;
+  }
+  .menu-filters__apply {
+    display: none;
   }
   .cart-empty {
     padding-top: 100px;
