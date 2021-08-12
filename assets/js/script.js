@@ -1987,7 +1987,11 @@ const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
     setWrapperSize: true,
     spaceBetween: 0,
     navigation: false,
-    pagination: false,
+    pagination: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
