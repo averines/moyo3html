@@ -1438,7 +1438,6 @@ const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper
 const deliveryAddressWrapper = document.querySelector('.js-delivery-type-warning')
 const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
 const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
-
 if (btnGotoOrderPayment) { btnGotoOrderPayment.classList.add('is-disabled') }
 
 let deliveryAddressIsChoosen = false
@@ -1446,6 +1445,14 @@ let deliveryTypeIsChoosen = false
 
 if (orderPaymentAddressRadioItems.length > 0) {
     orderPaymentAddressRadioItems.forEach(orderPaymentAddressRadioItem => {
+        let orderPaymentAddressRadioItemDelete = orderPaymentAddressRadioItem.parentNode.querySelector('.btn-delete')
+        orderPaymentAddressRadioItemDelete.addEventListener('click', () => {
+            orderPaymentAddressRadioItemDelete.parentNode.remove()
+            deliveryAddressIsChoosen = false
+            btnGotoOrderPayment.classList.add('is-disabled')
+        })
+
+
         orderPaymentAddressRadioItem.addEventListener('click', () => {
             deliveryAddressIsChoosen = true
             if (deliveryAddressIsChoosen & deliveryTypeIsChoosen) {
