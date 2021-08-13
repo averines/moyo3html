@@ -1176,6 +1176,9 @@ hr.dotted {
   outline: none;
   -webkit-box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
           box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+  font-size: 1.5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .header-main .search__submit, .header-main .search__close {

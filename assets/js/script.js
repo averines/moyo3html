@@ -153,7 +153,7 @@ if (menuFilterWrapper) {
     })
 }
 
-if(menuFiltersApplyBtn) {
+if (menuFiltersApplyBtn) {
     menuFiltersApplyBtn.addEventListener('click', () => {
         menuFilterClose()
     })
@@ -504,7 +504,7 @@ if (products.length > 0) {
 
         //листание фото товара в мини-карточке товара при наведении на фото
 
-        if(colorPics) {
+        if (colorPics) {
 
         }
         productPic.addEventListener('mouseover', () => {
@@ -1994,93 +1994,95 @@ if (starsLinesItems) {
 //         })
 //     })
 // }
-
-
-const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
-    loop: true,
-    grabCursor: true,
-    slidesPerView: 1,
-    setWrapperSize: true,
-    spaceBetween: 0,
-    navigation: false,
-    pagination: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        768: {
-            // allowTouchMove: false,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            grabCursor: false,
-            speed: 300,
+const mainSlider = document.querySelector('.m-slider__picture')
+if (mainSlider) {
+    const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        setWrapperSize: true,
+        spaceBetween: 0,
+        navigation: false,
+        pagination: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                // allowTouchMove: false,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                grabCursor: false,
+                speed: 300,
+            }
         }
-    }
-});
+    });
 
-let nextStepsCount = 0
-let prevStepsCount = 0
+    let nextStepsCount = 0
+    let prevStepsCount = 0
 
-swiperMainSliderPicture.on('slideNextTransitionEnd', function () {
-    if (nextStepsCount <1) {
-        nextStepsCount++
-        swiperMainSliderContent.slideNext();
-    }
-    nextStepsCount = 0
-});
-
-swiperMainSliderPicture.on('slidePrevTransitionEnd', function () {
-    if (prevStepsCount < 1) {
-        prevStepsCount++
-        swiperMainSliderContent.slidePrev();
-    }
-    prevStepsCount = 0
-});
-
-
-const swiperMainSliderContent = new Swiper('.m-slider__content', {
-    loop: true,
-    grabCursor: true,
-    slidesPerView: 1,
-    setWrapperSize: true,
-    spaceBetween: 0,
-    navigation: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        768: {
-            allowTouchMove: false,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            grabCursor: false,
-            speed: 0,
+    swiperMainSliderPicture.on('slideNextTransitionEnd', function () {
+        if (nextStepsCount < 1) {
+            nextStepsCount++
+            swiperMainSliderContent.slideNext();
         }
-    }
-});
+        nextStepsCount = 0
+    });
 
-swiperMainSliderContent.on('slideNextTransitionEnd', function () {
-    if (nextStepsCount < 1) {
-        nextStepsCount++
-        swiperMainSliderPicture.slideNext();
-    }
-});
+    swiperMainSliderPicture.on('slidePrevTransitionEnd', function () {
+        if (prevStepsCount < 1) {
+            prevStepsCount++
+            swiperMainSliderContent.slidePrev();
+        }
+        prevStepsCount = 0
+    });
 
-swiperMainSliderContent.on('slidePrevTransitionEnd', function () {
-    if (prevStepsCount < 1) {
-        prevStepsCount++
-        swiperMainSliderPicture.slidePrev();
-    }
-});
+
+    const swiperMainSliderContent = new Swiper('.m-slider__content', {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        setWrapperSize: true,
+        spaceBetween: 0,
+        navigation: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                allowTouchMove: false,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                grabCursor: false,
+                speed: 0,
+            }
+        }
+    });
+
+    swiperMainSliderContent.on('slideNextTransitionEnd', function () {
+        if (nextStepsCount < 1) {
+            nextStepsCount++
+            swiperMainSliderPicture.slideNext();
+        }
+    });
+
+    swiperMainSliderContent.on('slidePrevTransitionEnd', function () {
+        if (prevStepsCount < 1) {
+            prevStepsCount++
+            swiperMainSliderPicture.slidePrev();
+        }
+    });
+
+}
 
 
