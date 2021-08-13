@@ -110,6 +110,8 @@ const menuFilterWrapper = document.querySelector('.menu-filters-wrapper')
 const menuFilterCloseBtn = document.querySelector('.menu-filters__close')
 const menuFilterCheckboxItems = document.querySelectorAll('.filter-checkbox__item input')
 const selectedFiltersWrapper = document.querySelector('.selected-filters')
+const menuFiltersApplyBtn = document.querySelector('.menu-filters__apply')
+
 let menuFilterIsActive = false
 
 const menuFilterOpen = function () {
@@ -150,6 +152,13 @@ if (menuFilterWrapper) {
         }
     })
 }
+
+if(menuFiltersApplyBtn) {
+    menuFiltersApplyBtn.addEventListener('click', () => {
+        menuFilterClose()
+    })
+}
+
 
 // отображение выбранных фильтров на странице
 if (menuFilterCheckboxItems) {
@@ -2066,3 +2075,5 @@ swiperMainSliderContent.on('slidePrevTransitionEnd', function () {
         swiperMainSliderPicture.slidePrev();
     }
 });
+
+
