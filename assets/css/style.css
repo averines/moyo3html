@@ -6045,6 +6045,15 @@ hr.dotted {
   font-size: 0.9em;
 }
 
+.return-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
+}
+
 .list-docs {
   margin: 0;
   padding: 0;

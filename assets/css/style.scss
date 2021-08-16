@@ -4924,6 +4924,12 @@
   }
 }
 
+.return-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
 .list-docs {
   margin: 0;
   padding: 0;
