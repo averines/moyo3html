@@ -6052,6 +6052,8 @@ hr.dotted {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 10px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
 }
 
 .list-docs {
