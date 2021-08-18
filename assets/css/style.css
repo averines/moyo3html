@@ -9283,11 +9283,14 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   top: 45px;
+  z-index: 0;
+  background-color: red;
 }
 
 .page-main__content-wrapper {
   position: relative;
   z-index: 999995;
+  background-color: yellow;
 }
 
 .m-slider {
@@ -11942,10 +11945,6 @@ textarea {
   .page-main .m-slider-wrapper {
     top: 0px;
     z-index: 1;
-  }
-  .page-main__content-wrapper {
-    z-index: 999999;
-    min-height: auto;
   }
   .section-title-wrapper {
     margin-bottom: 2em;

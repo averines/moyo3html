@@ -7835,13 +7835,15 @@ textarea {
     top: 45px;
     // top: 0;
     // overflow: hidden;
-    // z-index: 0;
+    z-index: 0;
+    background-color: red;
   }
 
   &__content-wrapper {
     position: relative;
     z-index: 999995;
     // min-height: 100vh;
+    background-color: yellow;
   }
 }
 
