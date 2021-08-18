@@ -2007,14 +2007,15 @@
           </div>
 
           <div class="feedback-stats mb-1">
-            <div class="feedback-stats__rating stats-rating">
+            <div class="feedback-stats__rating stats-rating" 
+            itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
               <div class="stats-rating__info">
-                <div class="stats-rating__number">4.0</div>
+                <div class="stats-rating__number" itemprop="ratingValue">4.0</div>
                 <div class="stats-rating__stars feedback-stars">
                   <div class="feedback-stars__filled" data-feedback-stars="4"></div>
                   <div class="feedback-stars__stroked"></div>
                 </div>
-                <div class="stats-rating__quantity">Отзывов: 99</div>
+                <div class="stats-rating__quantity">Отзывов: <span itemprop="reviewCount">99</span></div>
               </div>
               <div class="stats-stars__lines stars-lines">
                 <div class="stars-lines__item" data-feedback-percent="68">
@@ -2132,18 +2133,24 @@
             </div>
           </div>
             <div class="feedbacks">
-              <div class="feedbacks__item feedback">
+              <div class="feedbacks__item feedback" itemprop="review" itemscope itemtype="https://schema.org/Review">
                 <div class="feedback__header">
-                  <div class="feedback__user">Валентина Пшеничная</div>
-                  <div class="feedback__date">20.11.2021</div>
+                  <div class="feedback__user" itemprop="author">Валентина Пшеничная</div>
+                  <div class="feedback__date" itemprop="datePublished" content="2021-11-20">20.11.2021</div>
                 </div>
-                <div class="feedback__stars"></div>
+                <div class="feedback-stars mb-1" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <div class="feedback-stars__filled" data-feedback-stars="4"></div>
+                  <meta itemprop="worstRating" content="1">
+                  <meta itemprop="bestRating" content="5">
+                  <meta itemprop="ratingValue" content="4">
+                  <div class="feedback-stars__stroked"></div>
+                </div>
                 <div class="feedback__size feedback-size">
                   <div class="feedback-size__title">134</div>
                   <div class="feedback-size__description">Соответствует</div>
                 </div>
                 <div class="feedback__content feedback-content">
-                  <div class="feedback-content__text">Короткое женское платье прямого кроя с поясом на талии из
+                  <div class="feedback-content__text" itemprop="reviewBody">Короткое женское платье прямого кроя с поясом на талии из
                     основной ткани. Рукава длинные с манжетами на кнопке, спинка с застежкой на пуговицу.</div>
                 </div>
               </div>
@@ -2198,6 +2205,7 @@
           <div class="pagetitle">
             <h1 class="pagetitle__header" itemprop="name">Платье Vittoria Vicci</h1>
             <div class="pagetitle__infotext infotext">
+              <link itemprop="availability" href="http://schema.org/InStock">
               <div class="infotext__status" itemprop="availability" href="http://schema.org/InStock">Товар в наличии</div> /
               <div class="infotext__purchased">Купили <span>1 раз</span></div>
             </div>
