@@ -9291,7 +9291,8 @@ textarea {
 }
 
 .page-main__content-wrapper {
-  z-index: 2;
+  z-index: 99999;
+  min-height: 100vh;
 }
 
 .m-slider {
