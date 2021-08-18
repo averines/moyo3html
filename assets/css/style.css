@@ -9271,12 +9271,16 @@ textarea {
 .page-main .m-slider-wrapper {
   position: -webkit-sticky;
   position: sticky;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   top: 45px;
   z-index: 0;
   background-color: red;
 }
 
 .page-main__content-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   position: relative;
   z-index: 999995;
   background-color: yellow;

@@ -7831,6 +7831,7 @@ textarea {
 .page-main {
   .m-slider-wrapper {
     position: sticky;
+    transform: translate3d(0,0,0);
     // position: absolute;
     top: 45px;
     // top: 0;
@@ -7840,6 +7841,7 @@ textarea {
   }
 
   &__content-wrapper {
+    transform: translate3d(0,0,0);
     position: relative;
     z-index: 999995;
     // min-height: 100vh;
