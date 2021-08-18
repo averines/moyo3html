@@ -7849,13 +7849,13 @@ textarea {
   .m-slider-wrapper {
     position: sticky;
     // position: absolute;
-    top: 0;
-    overflow: hidden;
+    top: 45px;
+    // overflow: hidden;
     z-index: 1;
   }
 
   &__content-wrapper {
-    z-index: 99999;
+    z-index: 999999;
     min-height: 100vh;
   }
 }

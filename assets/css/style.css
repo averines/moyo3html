@@ -9285,13 +9285,12 @@ textarea {
 .page-main .m-slider-wrapper {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  overflow: hidden;
+  top: 45px;
   z-index: 1;
 }
 
 .page-main__content-wrapper {
-  z-index: 99999;
+  z-index: 999999;
   min-height: 100vh;
 }
 
@@ -11929,36 +11928,13 @@ textarea {
   .product-wrapper .product__quick-view::after {
     display: block;
   }
-  .main-slider .main-slide__pic {
-    height: 380px;
+  .page-main .m-slider-wrapper {
+    top: 0px;
+    z-index: 1;
   }
-  .main-slider .main-slide__content {
-    width: 40%;
-    padding: 40px 40px 60px 40px;
-    height: 330px;
-  }
-  .main-slider .main-slide__title {
-    font-size: 36px;
-    line-height: 0.95;
-    max-width: 100%;
-  }
-  .main-slider .main-slide__description {
-    max-width: 90%;
-  }
-  .main-slider .main-slide__link {
-    letter-spacing: 0.1em;
-    font-size: 0.75em;
-    font-weight: 400;
-    bottom: 45px;
-    padding: 0.75em 2.5em;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-  }
-  .main-slider .main-slide__link:hover {
-    background-color: #ab064e;
-    border-color: #ab064e;
-  }
-  .main-slider .main-slide__link::after {
-    display: none;
+  .page-main__content-wrapper {
+    z-index: 999999;
+    min-height: none;
   }
   .section-title-wrapper {
     margin-bottom: 2em;
