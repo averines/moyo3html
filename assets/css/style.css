@@ -1787,7 +1787,7 @@ hr.dotted {
   top: 55px;
   width: 400px;
   border-radius: 4px;
-  z-index: 6;
+  z-index: 9999999;
 }
 
 .dropdown-products::after {
