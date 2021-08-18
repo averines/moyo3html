@@ -9282,7 +9282,7 @@ textarea {
 .page-main .m-slider-wrapper {
   position: -webkit-sticky;
   position: sticky;
-  top: 45px;
+  top: 0;
 }
 
 .page-main__content-wrapper {
