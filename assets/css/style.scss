@@ -7848,8 +7848,14 @@ textarea {
 .page-main {
   .m-slider-wrapper {
     position: sticky;
+    // position: absolute;
     top: 0;
     overflow: hidden;
+    z-index: 1;
+  }
+
+  &__content-wrapper {
+    z-index: 2;
   }
 }
 
