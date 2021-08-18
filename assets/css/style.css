@@ -9283,10 +9283,11 @@ textarea {
   position: -webkit-sticky;
   position: sticky;
   top: 45px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .page-main__content-wrapper {
+  position: relative;
   z-index: 999999;
   min-height: 100vh;
 }

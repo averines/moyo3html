@@ -7834,10 +7834,11 @@ textarea {
     // position: absolute;
     top: 45px;
     // overflow: hidden;
-    z-index: 1;
+    z-index: 0;
   }
 
   &__content-wrapper {
+    position: relative;
     z-index: 999999;
     min-height: 100vh;
   }
