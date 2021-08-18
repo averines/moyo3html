@@ -838,7 +838,7 @@ hr.dotted {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999999;
   background-color: #ab064e;
   background: url(../img/header-bg-1024.jpg) no-repeat center, -webkit-gradient(linear, left top, right top, from(#870873), to(#be1860));
   background: url(../img/header-bg-1024.jpg) no-repeat center, linear-gradient(90deg, #870873 0%, #be1860 100%);
