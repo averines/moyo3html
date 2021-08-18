@@ -1898,16 +1898,20 @@
           <a class="tabs-titles__item is-active" href="info-contacts.html">Контакты</a>
         </div>
         <div class="tabs-content">
-          <div class="tabs-content__item mt-2 mb-4" data-tabid="contacts">
+          <div class="tabs-content__item mt-2 mb-4" data-tabid="contacts" itemscope itemtype="https://schema.org/LocalBusiness">
+            <meta itemprop="name" content="Optmoyo.ru">
+            <meta itemprop="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения! Закажите одежду для всей семьи по оптовым ценам или совершите совместную покупку">
             <h2 class="h4">Контактная информация</h2>
             <ul class="list-contacts">
               <li class="list-contacts__item contacts-item">
                 <div class="contacts-item__icon">
                   <img src="./assets/img/icons/info/08.svg" alt="Контакты">
                 </div>
-                <div class="contacts-item__info">
+                <div class="contacts-item__info" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                   Адрес офиса и пункта выдачи: <br>
-                  г. Москва, Окружной проезд, 30А
+                  <meta itemprop="addressRegion" content="Московская область">
+                  <meta itemprop="postalCode" content="105077">
+                  <span itemprop="addressLocality">г. Москва</span>, <span itemprop="streetAddress">Окружной проезд, 30А</span>
                 </div>
               </li>
 
@@ -1917,9 +1921,9 @@
                 </div>
                 <div class="contacts-item__info">
                   Оптовый отдел
-                  <a href="mailto:info@optmoyo.ru">info@optmoyo.ru</a><br>
-                  <a href="tel:+74996088925">8 (499) 608-89-25</a><br>
-                  <a href="tel:+78003012575">8 (800) 301-25-75</a>
+                  <a href="mailto:info@optmoyo.ru" itemprop="email">info@optmoyo.ru</a><br>
+                  <a href="tel:+74996088925" itemprop="telephone">8 (499) 608-89-25</a><br>
+                  <a href="tel:+78003012575" itemprop="telephone">8 (800) 301-25-75</a>
                 </div>
               </li>
 
@@ -1939,7 +1943,7 @@
                 </div>
                 <div class="contacts-item__info">
                   Время работы менеджеров по продажам: <br>
-                  Пн-Пт: 10.00 - 20.00,<br>
+                  <span itemprop="openingHours" content="Mo-Fr 10:00-20:00">Пн-Пт: 10.00 - 20.00</span>,<br>
                   Сб-Вс: выходные
                 </div>
               </li>
