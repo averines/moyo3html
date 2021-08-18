@@ -11874,6 +11874,10 @@ textarea {
   .header-main .search__close {
     display: none;
   }
+  .header-main .search__input:focus {
+    font-size: 13.3px;
+    padding: 10px 50px 10px 15px;
+  }
   .header-main .btn-info,
   .header-main .btn-search,
   .header-main .btn-login,

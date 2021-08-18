@@ -2087,6 +2087,13 @@
         &__close {
           display: none;
         }
+        &__input {
+        &:focus {
+          font-size: 13.3px;
+          padding: 10px 50px 10px 15px;
+        }
+      }
+
       }
 
       .btn-info,
