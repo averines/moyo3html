@@ -833,6 +833,10 @@ hr.dotted {
   font-style: italic;
 }
 
+.fancybox-container {
+  z-index: 9999999;
+}
+
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -1540,6 +1544,7 @@ hr.dotted {
 .modals__item {
   display: none;
   min-height: calc(100vh - 15px);
+  z-index: 9999999;
 }
 
 .modals__item.modalsizestable {

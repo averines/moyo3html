@@ -640,6 +640,7 @@
   &__item {
     display: none;
     min-height: calc(100vh - 15px);
+    z-index: 9999999;
 
     &.modalsizestable {
       min-height: 0;

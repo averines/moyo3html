@@ -1994,6 +1994,8 @@ if (starsLinesItems) {
 //         })
 //     })
 // }
+
+
 const mainSlider = document.querySelector('.m-slider__picture')
 if (mainSlider) {
     const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
