@@ -1881,7 +1881,10 @@
     </div>
   </header>
 
-  <main>
+  <main itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+    <meta itemprop="lowPrice" content="1250">
+    <meta itemprop="highPrice" content="1495">
+
     <div class="container container--pagination">
       <nav>
         <ol class="breadcrumbs">
@@ -1894,7 +1897,7 @@
       <div class="pagetitle">
         <div class="pagetitle__wrapper">
           <h1 class="pagetitle__header">Платья</h1>
-          <div class="pagetitle__counter">1000 товаров</div>
+          <div class="pagetitle__counter" itemprop="offerCount">1000 товаров</div>
         </div>
         <a href="#filter" id="btn-filter" class="btn-filter" aria-label="Фильтры">Фильтры</a>
       </div>
