@@ -1893,7 +1893,7 @@
       </nav>
     </div>
 
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/Product">
       <div class="product-container">
 
         <div class="left-panel">
@@ -1902,7 +1902,7 @@
               <div class="product-thumbs swiper-container">
                 <div class="swiper-wrapper">
                   <div class="product-thumbs__item swiper-slide">
-                    <picture>
+                    <picture itemprop="image">
                       <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
                       <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Новая коллекция весна-лето от Brioni">
                     </picture>
@@ -2196,19 +2196,20 @@
           </div>
 
           <div class="pagetitle">
-            <h1 class="pagetitle__header">Платье Vittoria Vicci</h1>
+            <h1 class="pagetitle__header" itemprop="name">Платье Vittoria Vicci</h1>
             <div class="pagetitle__infotext infotext">
-              <div class="infotext__status">Товар в наличии</div> /
+              <div class="infotext__status" itemprop="availability" href="http://schema.org/InStock">Товар в наличии</div> /
               <div class="infotext__purchased">Купили <span>1 раз</span></div>
             </div>
           </div>
 
-          <div class="js-product-price-wrapper">
+          <div class="js-product-price-wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="RUB" />
             <div class="product-info__price price">
               <div class="price__old">2 830,00</div>
               <div class="price__profit">175,00</div>
               <div class="price__break"></div>
-              <div class="price__base">2 655,00</div>
+              <div class="price__base" itemprop="price">2 655,00</div>
               <div class="price__discount">13</div>
             </div>
             <div class="product__action-time">Осталось 3 дня</div>
@@ -2435,7 +2436,7 @@
           <div class="product-accordion accordion">
             <div class="accordion__item" data-active="768">
               <div class="accordion__title">Описание</div>
-              <div class="accordion__content">
+              <div class="accordion__content"  itemprop="description">
                 <p>Короткое женское платье прямого кроя с поясом на талии из основной ткани. Рукава длинные с манжетами
                   на кнопке, спинка с застежкой на пуговицу. Отличное платье для любительниц строго стиля и минимализма
                   в одежде. Отличный выбор для современной женщины. ВНИМАНИЕ!!! Города, закрытые для отгрузки:
