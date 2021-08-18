@@ -2100,6 +2100,18 @@
         .btn-favorites {
           display: block;
         }
+
+              // показываем список избранного при наведении на иконку избранного
+      &:hover {
+        .dropdown-products {
+          // display: block;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          max-height: 1000px;
+          transform: translateY(-10px);
+        }
+      }
       }
 
       .cart-mini {
@@ -2127,6 +2139,7 @@
         // показываем список товаров в корзине при наведении на иконку корзины
         &:hover {
           .dropdown-products {
+            // display: block;
             opacity: 1;
             visibility: visible;
             pointer-events: all;
@@ -2139,6 +2152,7 @@
   }
 
   .dropdown-products {
+    display: block;
     &__items {
       max-height: 600px;
     }

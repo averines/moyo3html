@@ -1258,15 +1258,6 @@ hr.dotted {
   border-top-color: transparent;
 }
 
-.header-main .favorites:hover .dropdown-products {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-  max-height: 1000px;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
 .header-main .btn-login {
   padding-left: 10px;
   padding-right: 10px;
@@ -1781,6 +1772,7 @@ hr.dotted {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: none;
   max-height: 0;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
@@ -11886,6 +11878,14 @@ textarea {
   .header-main .favorites .btn-favorites {
     display: block;
   }
+  .header-main .favorites:hover .dropdown-products {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    max-height: 1000px;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
   .header-main .cart-mini .btn-cart {
     width: 80px;
     -webkit-box-orient: vertical;
@@ -11916,6 +11916,9 @@ textarea {
     max-height: 1000px;
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+  }
+  .dropdown-products {
+    display: block;
   }
   .dropdown-products__items {
     max-height: 600px;

@@ -387,16 +387,6 @@
         }
       }
 
-      // показываем список избранного при наведении на иконку избранного
-      &:hover {
-        .dropdown-products {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: all;
-          max-height: 1000px;
-          transform: translateY(-10px);
-        }
-      }
     }
 
     .btn-login {
@@ -865,6 +855,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: none;
   max-height: 0;
   transform: translateY(10px);
   transition: $tr;
