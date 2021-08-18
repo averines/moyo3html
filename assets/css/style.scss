@@ -7829,23 +7829,19 @@ textarea {
 }
 
 .page-main {
-  //  overflow: auto;
     -webkit-overflow-scrolling: touch;
 
   .m-slider-wrapper {
     position: sticky;
     top: 0;
     z-index: 0;
-    background-color: red;
   }
 
   &__content-wrapper {
     transform: translate3d(0,0,0);
     position: relative;
-
     z-index: 999995;
-    // min-height: 100vh;
-    background-color: yellow;
+    background-color: #f9f9f9;
   }
 }
 

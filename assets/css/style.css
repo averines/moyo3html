@@ -9277,7 +9277,6 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 0;
-  background-color: red;
 }
 
 .page-main__content-wrapper {
@@ -9285,7 +9284,7 @@ textarea {
           transform: translate3d(0, 0, 0);
   position: relative;
   z-index: 999995;
-  background-color: yellow;
+  background-color: #f9f9f9;
 }
 
 .m-slider {
