@@ -257,14 +257,8 @@
       display: none;
       border-radius: 2px;
       width: 100%;
-
-      // старый вариант
-      // background: transparentize($white, 0.2);
-      // overflow: hidden;
       margin-right: 15px;
       min-width: 250px;
-
-      // новый вариант
       position: absolute;
       display: none;
       align-items: center;
@@ -282,10 +276,7 @@
         position: relative;
         width: 100%;
         display: block;
-
-        // новый вариант
         margin: 10px 50px 10px 5px;
-        // background-color: transparentize($white, $amount: 0.2);
         border-radius: 3px;
       }
 
