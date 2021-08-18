@@ -11946,7 +11946,7 @@ textarea {
   }
   .page-main__content-wrapper {
     z-index: 999999;
-    min-height: none;
+    min-height: auto;
   }
   .section-title-wrapper {
     margin-bottom: 2em;
