@@ -19,10 +19,6 @@ body {
   position: relative;
 }
 
-main {
-  min-height: 50vh;
-}
-
 main.page-main .tns-outer {
   position: -webkit-sticky;
   position: sticky;
