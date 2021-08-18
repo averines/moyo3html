@@ -19,17 +19,6 @@ body {
   position: relative;
 }
 
-main.page-main .tns-outer {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-main.page-main .page-main__content-wrapper {
-  background-color: #f9f9f9;
-  position: relative;
-}
-
 .container {
   max-width: 1470px;
   padding-left: 15px;
