@@ -834,7 +834,7 @@ hr.dotted {
 }
 
 .fancybox-container {
-  z-index: 9999999;
+  z-index: 999999;
 }
 
 .header {
@@ -9287,8 +9287,7 @@ textarea {
 
 .page-main__content-wrapper {
   position: relative;
-  z-index: 999999;
-  min-height: 100vh;
+  z-index: 999995;
 }
 
 .m-slider {
