@@ -1996,6 +1996,7 @@ if (starsLinesItems) {
 // }
 
 
+// слайдер на главной
 const mainSlider = document.querySelector('.m-slider__picture')
 if (mainSlider) {
     const swiperMainSliderPicture = new Swiper('.m-slider__picture', {
@@ -2006,6 +2007,7 @@ if (mainSlider) {
         spaceBetween: 0,
         navigation: false,
         pagination: true,
+        speed: 200,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -2025,33 +2027,15 @@ if (mainSlider) {
         }
     });
 
-    let nextStepsCount = 0
-    let prevStepsCount = 0
-
-    swiperMainSliderPicture.on('slideNextTransitionEnd', function () {
-        if (nextStepsCount < 1) {
-            nextStepsCount++
-            swiperMainSliderContent.slideNext();
-        }
-        nextStepsCount = 0
-    });
-
-    swiperMainSliderPicture.on('slidePrevTransitionEnd', function () {
-        if (prevStepsCount < 1) {
-            prevStepsCount++
-            swiperMainSliderContent.slidePrev();
-        }
-        prevStepsCount = 0
-    });
-
-
     const swiperMainSliderContent = new Swiper('.m-slider__content', {
         loop: true,
-        grabCursor: true,
+        grabCursor: false,
         slidesPerView: 1,
         setWrapperSize: true,
         spaceBetween: 0,
-        navigation: true,
+        navigation: false,
+        allowTouchMove: false,
+        speed: 250,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -2066,22 +2050,47 @@ if (mainSlider) {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 grabCursor: false,
-                speed: 0,
+                speed: 250,
             }
         }
     });
 
+    let nextStepsCount = 0
+    let prevStepsCount = 0
+    let doNextStep = true
+    let doPrevStep = true
+
+    swiperMainSliderPicture.on('slideNextTransitionStart', function () {
+        console.log(doNextStep);
+        if (doNextStep) {
+            swiperMainSliderContent.slideNext();
+            doNextStep = false
+        }
+    });
+
+    swiperMainSliderPicture.on('slidePrevTransitionStart', function () {
+        console.log(doPrevStep);
+        if (doPrevStep) {
+            swiperMainSliderContent.slidePrev();
+            doPrevStep = false
+        }
+    });
+
     swiperMainSliderContent.on('slideNextTransitionEnd', function () {
-        if (nextStepsCount < 1) {
-            nextStepsCount++
+        console.log(doNextStep);
+        if (doNextStep) {
             swiperMainSliderPicture.slideNext();
+        } else {
+            doNextStep = true
         }
     });
 
     swiperMainSliderContent.on('slidePrevTransitionEnd', function () {
-        if (prevStepsCount < 1) {
-            prevStepsCount++
+        console.log(doPrevStep);
+        if (doPrevStep) {
             swiperMainSliderPicture.slidePrev();
+        } else {
+            doPrevStep = true
         }
     });
 
