@@ -504,6 +504,26 @@
     column-gap: 20px;
     display: grid;
     grid-template-columns: 300px auto;
+    grid-template-rows: 700px 1fr 1fr;
+
+     grid-template-areas:
+        "picture info"
+        "feedback info";
+
+        .left-panel {
+          grid-area: picture;
+          align-self: start;
+        }
+
+        .product-feedback {
+          grid-area: feedback;
+          align-self: start;
+        }
+        
+        .product-info{
+          grid-area: info;
+          align-self: start;
+        }        
   }
 
   .product-thumbs {

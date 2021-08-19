@@ -4219,6 +4219,23 @@
 .product-container {
   column-gap: 2em;
   margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .left-panel {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .product-info {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .product-feedback {
+    order: 3;
+  }
 }
 
 .product-favorite {
