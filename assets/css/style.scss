@@ -6870,6 +6870,21 @@
   flex-direction: column;
   column-gap: 20px;
 
+  &__item {
+    text-decoration: none;
+    color: $text;
+    padding: 20px;
+    transition: $tr;
+
+    &:hover {
+      background-color: $bg-dark + 35;
+
+       .choose-variants__link {
+         border-block-color: $main;
+       }
+    }
+  }
+
   &__link {
     display: block;
     margin-top: 15px;

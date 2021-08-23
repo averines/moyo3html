@@ -8188,6 +8188,22 @@ hr.dotted {
           column-gap: 20px;
 }
 
+.choose-variants__item {
+  text-decoration: none;
+  color: #3d3d3c;
+  padding: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.choose-variants__item:hover {
+  background-color: #e7e7e7;
+}
+
+.choose-variants__item:hover .choose-variants__link {
+  border-block-color: #ab064e;
+}
+
 .choose-variants__link {
   display: block;
   margin-top: 15px;
