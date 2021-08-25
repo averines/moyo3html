@@ -11765,14 +11765,15 @@ textarea {
   .order-progress-payment-wrapper .payment-choose-list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -webkit-column-gap: 15px;
             column-gap: 15px;
     margin: 0;
   }
   .order-progress-payment-wrapper .payment-choose-list__item {
     background-color: #f3f2f0;
+    min-height: 250px;
     padding: 15px;
     cursor: initial;
     border-bottom: 4px solid transparent;

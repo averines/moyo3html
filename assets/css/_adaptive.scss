@@ -1898,12 +1898,13 @@
 
     .payment-choose-list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       column-gap: 15px;
       margin: 0;
 
       &__item {
         background-color: $bg-light;
+        min-height: 250px;
         padding: 15px;
         cursor: initial;
         border-bottom: 4px solid transparent;
