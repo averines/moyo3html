@@ -19,6 +19,10 @@ body {
   position: relative;
 }
 
+main {
+  min-height: 70vh;
+}
+
 .container {
   max-width: 1470px;
   padding-left: 15px;
@@ -9485,6 +9489,13 @@ textarea {
           transform: scale(-1, 1);
   -webkit-filter: brightness(2);
           filter: brightness(2);
+}
+
+.warning {
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  font-size: 13px;
+  display: inline-block;
 }
 
 .subcategories-icons {

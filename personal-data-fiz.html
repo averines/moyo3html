@@ -1931,7 +1931,9 @@
                 <div class="info-plate">
                   <div class="info-plate__title">ИП Македонский А.С. / ИНН&nbsp;7707083893</div>
                   <div class="info-plate__content">
-                    <p>Для изменения имени, фамилии, отчества, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
+                    <p class="text-main text-bold">ID Клиента: 254816</p>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo9">Изменить</button>
+                    <!-- <p>Для изменения имени, фамилии, отчества, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p> -->
                   </div>
                 </div>
                 <div class="info-plate">
@@ -1948,8 +1950,8 @@
                     <p><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз.</p>
                     <button class="btn btn-gray" data-fancybox data-src="#modalInfo3">Изменить</button>
                     <p>Информация о городе доставки берется из данных при регистрации на сайте.
-                      Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру:
-                      <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                      <!-- Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру:
+                      <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a> -->
                     </p>
                   </div>
                 </div>
@@ -1971,8 +1973,10 @@
                     </ul>
                     <button class="btn btn-gray" data-fancybox data-src="#modalInfo5">Изменить</button>
                     <p><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого
-                      заказа. Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ,
-                      позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                      заказа. 
+                      <!-- Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ,
+                      позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75 -->
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -2089,10 +2093,11 @@
                   <div class="form-row">
                     <div class="form-group form-group--required">
                       <input id="user-delivery-new-city" type="text" name="user-delivery-new-city" required />
-                      <label for="user-delivery-new-city">Текущий город доставки</label>
+                      <label for="user-delivery-new-city">Город доставки</label>
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo4">
@@ -2151,6 +2156,7 @@
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo6">
@@ -2265,6 +2271,30 @@
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo9">
+                <div class="modal__title">Изменение ФИО</div>
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-surname-new" type="text" name="user-surname-new" required />
+                      <label for="user-surname-new">Фамилия</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-name-new" type="text" name="user-name-new" required />
+                      <label for="user-name-new">Имя</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-patronymic-new" type="text" name="user-patronymic-new" required />
+                      <label for="user-patronymic-new">Отчество</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" type="submit" disabled>Изменить</button>
                 </form>
               </div>
             </div>

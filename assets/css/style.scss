@@ -8033,7 +8033,17 @@ textarea {
   }
 }
 
+
+.warning {
+  padding: 10px;
+  border: 1px solid $line-light;
+  font-size: 13px;
+  display: inline-block;
+}
+
 @import "subcategories";
 @import "animations";
 @import "adaptive";
 @import "margins";
+
+
