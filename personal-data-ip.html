@@ -1914,11 +1914,11 @@
                 <div class="info-plate">
                   <div class="info-plate__title">Сумма на Вашем депозите</div>
                   <div class="info-plate__content">
-                    <div class="text-main text-bold after-rub">2 468,00</div>
-                    <div class="form-group mt-1 info-plate__grid-1-1">
+                    <div class="text-big text-bold after-rub">2 468,00</div>
+                    <!-- <div class="form-group mt-1 info-plate__grid-1-1">
                       <input class="form-group__input" type="text" placeholder="Введите сумму">
                       <button class="btn btn-main">Пополнить</button>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="info-plate">
@@ -1932,8 +1932,8 @@
                   <div class="info-plate__title">ИП Македонский А.С. / ИНН&nbsp;7707083893</div>
                   <div class="info-plate__content">
                     <p class="text-main text-bold">ID Клиента: 254816</p>
-                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo1">Изменить</button>
-                    <p>Для изменения формы собственности, названия организации, ИНН, ФИО, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p>
+                    <button class="btn btn-gray" data-fancybox data-src="#modalInfo9">Изменить</button>
+                    <!-- <p>Для изменения формы собственности, названия организации, ИНН, ФИО, позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a></p> -->
                   </div>
                 </div>
                 <div class="info-plate-wrapper">
@@ -1991,8 +1991,8 @@
                     <p><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз.</p>
                     <button class="btn btn-gray" data-fancybox data-src="#modalInfo3">Изменить</button>
                     <p>Информация о городе доставки берется из данных при регистрации на сайте.
-                      Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру:
-                      <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                      <!-- Если Вы хотите изменить город доставки и у Вас есть оплаченный заказ, позвоните нашему менеджеру:
+                      <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a> -->
                     </p>
                   </div>
                 </div>
@@ -2012,8 +2012,9 @@
                     </ul>
                     <button class="btn btn-gray" data-fancybox data-src="#modalInfo5">Изменить</button>
                     <p><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого
-                      заказа. Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ,
-                      позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                      заказа. 
+                      <!-- Если в дальнейшем Вы хотите изменить адрес доставки и у Вас есть отправленный нам заказ,
+                      позвоните нашему менеджеру: <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a> -->
                     </p>
                   </div>
                 </div>
@@ -2117,11 +2118,11 @@
                             <img src="./assets/img/icons/flags/05.svg" alt="Россия">
                           </div>
                         </div>
-            
                       </div>
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo3">
@@ -2134,6 +2135,7 @@
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo4">
@@ -2152,6 +2154,7 @@
                     </div>
                   </div>
                   <button class="btn btn-main" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo5">
@@ -2192,6 +2195,7 @@
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
               <div class="modals__item modal" id="modalInfo6">
@@ -2306,6 +2310,19 @@
                     </div>
                   </div>
                   <button class="btn btn-main" type="submit" disabled>Сохранить</button>
+                </form>
+              </div>
+              <div class="modals__item modal" id="modalInfo9">
+                <div class="modal__title">Изменение ИНН</div>
+                <form class="modal__form js-form-check" action="personal-data-fiz.html" method="GET">
+                  <div class="form-row">
+                    <div class="form-group form-group--required">
+                      <input id="user-inn-new" type="text" name="user-inn-new" required />
+                      <label for="user-inn-new">ИНН</label>
+                    </div>
+                  </div>
+                  <button class="btn btn-main" type="submit" disabled>Изменить</button>
+                  <p class="mb-1">Новые данные станут активны после проверки менеджером</p>
                 </form>
               </div>
             </div>
