@@ -5544,11 +5544,22 @@
     margin-left: 0.5em;
     font-weight: 600;
     font-size: 19px;
+    white-space: nowrap;
 
     &::after {
       content: " ₽";
     }
   }
+
+  .total-old {
+    font-size: 14px;
+    margin-right: 15px;
+    &__summ {
+            text-decoration: line-through;
+      white-space: nowrap;
+    }
+
+    }
 }
 
 .order-buttons {
@@ -5820,6 +5831,7 @@
   &__content {
     font-size: 14px;
     margin-top: 0.75em;
+
     p {
       margin: 0.75em 0;
     }
@@ -8037,9 +8049,19 @@ textarea {
 
 .warning {
   padding: 10px;
-  border: 1px solid $line-light;
+  border: 1px solid $main;
   font-size: 13px;
   display: inline-block;
+  color: $main;
+
+  &--good {
+    color: $special-2;
+    border-color: $special-2;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.4s infinite alternate ease-in-out;
 }
 
 @import "subcategories";

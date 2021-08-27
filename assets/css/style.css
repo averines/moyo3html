@@ -6727,10 +6727,21 @@ hr.dotted {
   margin-left: 0.5em;
   font-weight: 600;
   font-size: 19px;
+  white-space: nowrap;
 }
 
 .order-info-total .total::after {
   content: " ₽";
+}
+
+.order-info-total .total-old {
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.order-info-total .total-old__summ {
+  text-decoration: line-through;
+  white-space: nowrap;
 }
 
 .order-buttons {
@@ -9493,9 +9504,20 @@ textarea {
 
 .warning {
   padding: 10px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #ab064e;
   font-size: 13px;
   display: inline-block;
+  color: #ab064e;
+}
+
+.warning--good {
+  color: #038184;
+  border-color: #038184;
+}
+
+.animate-blink {
+  -webkit-animation: blink 0.4s infinite alternate ease-in-out;
+          animation: blink 0.4s infinite alternate ease-in-out;
 }
 
 .subcategories-icons {
@@ -10078,6 +10100,24 @@ textarea {
     -webkit-transform: translateY(-12px) translateX(2px) scale(0.6);
             transform: translateY(-12px) translateX(2px) scale(0.6);
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -10900,6 +10940,13 @@ textarea {
   }
   .info-plate__content p:last-child {
     margin-bottom: 0;
+  }
+  .info-plate__content .text-big {
+    font-size: 1.2em;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
   }
   .info-plate .btn-main {
     font-size: 15px;
@@ -12705,6 +12752,14 @@ textarea {
 
 .ml-1 {
   margin-left: 1em;
+}
+
+.mr-2 {
+  margin-right: 2em;
+}
+
+.ml-2 {
+  margin-left: 2em;
 }
 
 .ml-5 {

@@ -905,7 +905,16 @@
       p:last-child {
         margin-bottom: 0;
       }
+
+      .text-big {
+        font-size: 1.2em;
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }      
     }
+
 
     .btn-main {
       font-size: 15px;
