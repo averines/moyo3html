@@ -504,26 +504,34 @@
     column-gap: 20px;
     display: grid;
     grid-template-columns: 300px auto;
-    grid-template-rows: 700px 1fr 1fr;
+    grid-template-rows: 450px 1fr;
 
-     grid-template-areas:
-        "picture info"
-        "feedback info";
+    grid-template-areas:
+      "picture info"
+      "feedback info";
 
-        .left-panel {
-          grid-area: picture;
-          align-self: start;
-        }
+    .left-panel {
+      grid-area: picture;
+      align-self: start;
+    }
 
-        .product-feedback {
-          grid-area: feedback;
-          align-self: start;
-        }
-        
-        .product-info{
-          grid-area: info;
-          align-self: start;
-        }        
+    .product-feedback.product-accordion {
+      margin-top: 0;
+      
+      .accordion__title {
+        display: none;
+      }
+    }
+
+    .product-feedback {
+      grid-area: feedback;
+      align-self: start;
+    }
+
+    .product-info {
+      grid-area: info;
+      align-self: start;
+    }
   }
 
   .product-thumbs {
@@ -912,9 +920,8 @@
         position: absolute;
         bottom: 20px;
         right: 20px;
-      }      
+      }
     }
-
 
     .btn-main {
       font-size: 15px;
@@ -1765,6 +1772,15 @@
 
   .product-container {
     grid-template-columns: 350px auto;
+    grid-template-rows: auto;
+
+    .product-accordion {
+      margin-top: 0;
+
+      .accordion__title {
+        display: none;
+      }
+    }
   }
 
   .product-gallery {
@@ -2033,7 +2049,7 @@
         font-size: 14px;
       }
     }
-  }  
+  }
 }
 
 //xl
@@ -2118,12 +2134,11 @@
           display: none;
         }
         &__input {
-        &:focus {
-          font-size: 13.3px;
-          padding: 10px 50px 10px 15px;
+          &:focus {
+            font-size: 13.3px;
+            padding: 10px 50px 10px 15px;
+          }
         }
-      }
-
       }
 
       .btn-info,
@@ -2138,17 +2153,17 @@
           display: block;
         }
 
-              // показываем список избранного при наведении на иконку избранного
-      &:hover {
-        .dropdown-products {
-          // display: block;
-          opacity: 1;
-          visibility: visible;
-          pointer-events: all;
-          max-height: 1000px;
-          transform: translateY(-10px);
+        // показываем список избранного при наведении на иконку избранного
+        &:hover {
+          .dropdown-products {
+            // display: block;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            max-height: 1000px;
+            transform: translateY(-10px);
+          }
         }
-      }
       }
 
       .cart-mini {
@@ -2209,17 +2224,17 @@
     }
   }
 
-.page-main {
-  .m-slider-wrapper {
-    top: 0px;
-    z-index: 1;
-  }
+  .page-main {
+    .m-slider-wrapper {
+      top: 0px;
+      z-index: 1;
+    }
 
-  // &__content-wrapper {
-  //   z-index: 999999;
-  //   min-height: auto;
-  // }
-}  
+    // &__content-wrapper {
+    //   z-index: 999999;
+    //   min-height: auto;
+    // }
+  }
 
   // .main-slider {
   //   .main-slide {
@@ -2983,7 +2998,7 @@
         }
       }
     }
-  }    
+  }
 }
 
 @media screen and (max-height: 1000px) and (min-width: 1200px) {
