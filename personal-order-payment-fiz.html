@@ -1944,6 +1944,15 @@
                           <label for="paymenttype1">Оплата наличными</label>
                         </div>
                         <div class="form-row__description">Оплата наличными или картой при получении заказа в офисе</div>
+                        <form action="/" class="js-form-check mt-2" method="GET">
+                          <div class="form-row">
+                            <div class="form-group">
+                              <p>Оплата с депозита (На депозите <span class="after-rub">2 450,00</span>)</p>
+                              <input class="form-group__input" type="text" placeholder="Введите сумму" required>
+                              <button class="btn btn-main" type="submit" disabled>Оплатить с депозита</button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                     </div>
                     <div class="payment-choose-list__item is-disabled">
@@ -1966,9 +1975,18 @@
                           <label for="paymenttype3">Оплата картой на&nbsp;сайте</label>
                         </div>
                         <div class="form-row__description">Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками)</div>
+                        <form action="/" class="js-form-check mt-2" method="GET">
+                          <div class="form-row">
+                            <div class="form-group">
+                              <p>Оплата с депозита (На депозите <span class="after-rub">2 450,00</span>)</p>
+                              <input class="form-group__input" type="text" placeholder="Введите сумму" required>
+                              <button class="btn btn-main" type="submit" disabled>Оплатить с депозита</button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                     </div>
-                    <div class="payment-choose-list__item">
+                    <!-- <div class="payment-choose-list__item">
                       <div class="form-row">
                         <div class="form-group">
                           <img class="form-group__icon" src="./assets/img/icons/payment-deposit.svg" alt="">
@@ -1985,7 +2003,7 @@
                           </div>
                         </div>
                       </form>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
