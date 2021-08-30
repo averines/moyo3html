@@ -1966,6 +1966,11 @@
                       <div class="d-flex justify-between align-end">
                         <div class="history-item__payment history-item-payment">
                           <a class="history-item-payment__link btn btn-main" href="personal-online-payment.html">Оплатить онлайн</a>
+                          <form action="/" class="js-form-check form-deposit" method="GET">
+                            <div class="text-small">Списать с депозита (<span class="after-rub text-nowrap">2 250,00</span>)</div>
+                            <input class="form-group__input" type="text" placeholder="Введите сумму" required>
+                            <button class="btn btn-main btn--md" type="submit" disabled>Списать</button>
+                          </form>
                         </div>
                         <a class="more-link d-md-none" href="#">Подробнее</a>
                       </div>
