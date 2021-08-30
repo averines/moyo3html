@@ -2136,6 +2136,7 @@
   position: relative;
   height: 100%;
 }
+
 .product {
   display: block;
   position: relative;
@@ -2178,7 +2179,8 @@
   }
 
   &__header {
-    display: none;
+    // display: none;
+    padding-bottom: 10px;
   }
 
   &__brand {

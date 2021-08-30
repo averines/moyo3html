@@ -269,8 +269,6 @@ ol li a {
   border-top: 1px solid #ab064e;
   position: relative;
   margin-top: 1em;
-  background: #f9f2f2;
-  padding-left: 1.5em;
   padding-right: 1.5em;
 }
 
@@ -3194,7 +3192,7 @@ hr.dotted {
 }
 
 .product__header {
-  display: none;
+  padding-bottom: 10px;
 }
 
 .product__brand {
@@ -11615,7 +11613,6 @@ textarea {
   }
   .product-wrapper:hover .product__header {
     display: block;
-    margin-top: 10px;
   }
   .product-wrapper:hover .product__link {
     z-index: 3;
