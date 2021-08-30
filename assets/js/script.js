@@ -2096,4 +2096,16 @@ if (mainSlider) {
 
 }
 
+const feedbacksToggleBtn = documentBody.querySelector('.js-feedbacks-toggle')
+const feedbacksToggleBlock = documentBody.querySelector('.feedbacks')
 
+if (feedbacksToggleBtn) {
+    feedbacksToggleBtn.addEventListener('click', () => {
+        if (feedbacksToggleBtn.innerHTML == 'Показать отзывы') {
+            feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
+        } else {
+            feedbacksToggleBtn.innerHTML = 'Показать отзывы'
+        }
+        feedbacksToggleBlock.classList.toggle('is-active')
+    })
+}
