@@ -4225,7 +4225,6 @@
 
 .product-container {
   column-gap: 2em;
-  margin-bottom: 2em;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -4322,14 +4321,14 @@
     }
   }
 
-  &:hover {
-    color: $white;
-    background-color: $main;
-    border-color: transparent;
-    &::after {
-      filter: grayscale(1) brightness(10);
-    }
-  }
+  // &:hover {
+  //   color: $white;
+  //   background-color: $main;
+  //   border-color: transparent;
+  //   &::after {
+  //     filter: grayscale(1) brightness(10);
+  //   }
+  // }
 }
 
 .product-info {
