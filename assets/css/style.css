@@ -5390,7 +5390,7 @@ hr.dotted {
 
 .product-info {
   position: relative;
-  background: linear-gradient(50deg, rgba(255, 255, 255, 0) 82%, white 100%);
+  background: linear-gradient(-70deg, rgba(255, 255, 255, 0) 70%, white 100%);
 }
 
 .product-info .pagetitle {
@@ -5419,13 +5419,11 @@ hr.dotted {
 }
 
 .product-info__brand-logo {
-  width: 70px;
+  width: 90px;
   display: block;
-  position: absolute;
-  right: 15px;
-  top: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  padding: 10px 0 15px 5px;
 }
 
 .product-info__brand-logo img {
@@ -10629,6 +10627,12 @@ textarea {
         -ms-grid-row-align: start;
         align-self: start;
   }
+  .product-container .product-info__brand-logo {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 0;
+  }
   .product-thumbs {
     display: block;
   }
@@ -12347,6 +12351,30 @@ textarea {
   }
   .price .product-wrapper .product__action-time {
     font-size: 15px;
+  }
+  .feedbacks {
+    position: relative;
+  }
+  .feedbacks::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    position: absolute;
+    background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .feedbacks:hover::after {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .feedbacks-toggle {
+    display: none;
   }
 }
 

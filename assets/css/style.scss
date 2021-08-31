@@ -4334,7 +4334,7 @@
 
 .product-info {
   position: relative;
-  background: linear-gradient(50deg, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(-70deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%);
 
   .pagetitle {
     display: block;
@@ -4357,12 +4357,13 @@
   }
 
   &__brand-logo {
-    width: 70px;
+    width: 90px;
     display: block;
-    position: absolute;
-    right: 15px;
-    top: 15px;
+    // position: absolute;
+    // right: 15px;
+    // top: 15px;
     transition: $tr;
+    padding: 10px 0 15px 5px;
 
     img {
       display: block;

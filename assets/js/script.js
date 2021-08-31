@@ -2096,6 +2096,8 @@ if (mainSlider) {
 
 }
 
+
+// кнопка показать/скрыть отзывы на странице товара
 const feedbacksToggleBtn = documentBody.querySelector('.js-feedbacks-toggle')
 const feedbacksToggleBlock = documentBody.querySelector('.feedbacks')
 
@@ -2108,4 +2110,21 @@ if (feedbacksToggleBtn) {
         }
         feedbacksToggleBlock.classList.toggle('is-active')
     })
+
+    if (document.body.clientWidth >= 1200) {
+        feedbacksToggleBlock.classList.add('is-active')
+    }
+
+
+    window.addEventListener('resize', () => {
+        if (document.body.clientWidth >= 1200) {
+            feedbacksToggleBlock.classList.add('is-active')
+            feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
+        } else {
+            feedbacksToggleBlock.classList.remove('is-active')
+            feedbacksToggleBtn.innerHTML = 'Показать отзывы'
+        }
+    })
+
+
 }
