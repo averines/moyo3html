@@ -2570,6 +2570,19 @@
     &::after {
       content: " ₽";
     }
+
+  }
+
+  &__opt {
+    padding-top: 5px;
+    font-size: 12px;
+
+    &::before {
+      content: "Оптовая цена ";
+    }
+    &::after {
+      content: " ₽";
+    }
   }
 
   &__discount {
@@ -4393,6 +4406,7 @@
     .price__base {
       font-size: 19px;
     }
+   
   }
 
   .product__action-time {

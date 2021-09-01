@@ -3648,6 +3648,19 @@ hr.dotted {
   content: " ₽";
 }
 
+.price__opt {
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.price__opt::before {
+  content: "Оптовая цена ";
+}
+
+.price__opt::after {
+  content: " ₽";
+}
+
 .price__discount {
   white-space: nowrap;
   color: white;
