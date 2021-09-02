@@ -3404,7 +3404,6 @@ hr.dotted {
   font-size: 14px;
   text-align: left;
   max-width: none;
-  margin-top: 5px;
 }
 
 .product__quickview .product-info__brand-logo {
@@ -3693,7 +3692,8 @@ hr.dotted {
 
 .price__description {
   font-size: 12px;
-  max-width: 330px;
+  max-width: 280px;
+  line-height: 1.5;
 }
 
 .section-bigcategories {

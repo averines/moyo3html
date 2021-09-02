@@ -2349,7 +2349,7 @@
       font-size: 14px;
       text-align: left;
       max-width: none;
-      margin-top: 5px;
+      // margin-top: 5px;
     }
   }
 
@@ -2617,7 +2617,8 @@
 
   &__description {
     font-size: 12px;
-    max-width: 330px;
+    max-width: 280px;
+    line-height: 1.5;
   }
 }
 
