@@ -2576,6 +2576,7 @@
   &__opt {
     padding-top: 5px;
     font-size: 12px;
+    white-space: nowrap;
 
     &::before {
       content: "Оптовая цена ";

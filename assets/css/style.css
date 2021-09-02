@@ -3651,6 +3651,7 @@ hr.dotted {
 .price__opt {
   padding-top: 5px;
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .price__opt::before {
@@ -3692,6 +3693,7 @@ hr.dotted {
 
 .price__description {
   font-size: 12px;
+  max-width: 330px;
 }
 
 .section-bigcategories {
