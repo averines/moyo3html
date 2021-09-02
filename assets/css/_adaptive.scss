@@ -685,6 +685,7 @@
     padding-top: 1em;
     .product-status {
       display: block;
+      padding-bottom: 10px;
     }
 
     &__price {
@@ -1811,7 +1812,7 @@
   }
 
   .product-info {
-    padding: 2em 3em;
+    padding: 1em 3em;
 
     &__brand-logo {
       right: 3em;
@@ -2367,7 +2368,7 @@
 
   .product-info {
     background-color: $white;
-    padding: 3em 3em;
+    padding: 1em 3em 3em 3em;
 
     &__brand-logo {
       width: 120px;
@@ -2729,7 +2730,7 @@
   }
 
   .product-info {
-    padding: 4em 6em;
+    padding: 1em 6em 4em 6em;
 
     &__brand-logo {
       width: 120px;

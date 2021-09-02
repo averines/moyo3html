@@ -10786,6 +10786,7 @@ textarea {
   }
   .product-info .product-status {
     display: block;
+    padding-bottom: 10px;
   }
   .product-info__price {
     font-size: 1.25em;
@@ -11777,7 +11778,7 @@ textarea {
     width: 90px;
   }
   .product-info {
-    padding: 2em 3em;
+    padding: 1em 3em;
   }
   .product-info__brand-logo {
     right: 3em;
@@ -12191,7 +12192,7 @@ textarea {
   }
   .product-info {
     background-color: white;
-    padding: 3em 3em;
+    padding: 1em 3em 3em 3em;
   }
   .product-info__brand-logo {
     width: 120px;
@@ -12507,7 +12508,7 @@ textarea {
     width: 105px;
   }
   .product-info {
-    padding: 4em 6em;
+    padding: 1em 6em 4em 6em;
   }
   .product-info__brand-logo {
     width: 120px;
