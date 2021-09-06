@@ -2575,13 +2575,20 @@
 
   &__opt {
     padding-top: 5px;
-    font-size: 12px;
     white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+    color: $main;
 
     &::before {
+      color: $text;
+      font-size: 13px;
       content: "Оптовая цена ";
+      font-weight: 400;
     }
     &::after {
+     color: $main;
+      font-size: 13px;
       content: " ₽";
     }
   }
@@ -4585,7 +4592,7 @@
 //таблица с доступными размерами выбранного цвета
 .product-table {
   &.table td {
-    padding: 0.85em 0.75em;
+    padding: 0.3em 0.75em;
   }
 
   thead {

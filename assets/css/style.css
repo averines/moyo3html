@@ -3649,15 +3649,22 @@ hr.dotted {
 
 .price__opt {
   padding-top: 5px;
-  font-size: 12px;
   white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ab064e;
 }
 
 .price__opt::before {
+  color: #3d3d3c;
+  font-size: 13px;
   content: "Оптовая цена ";
+  font-weight: 400;
 }
 
 .price__opt::after {
+  color: #ab064e;
+  font-size: 13px;
   content: " ₽";
 }
 
@@ -5667,7 +5674,7 @@ hr.dotted {
 }
 
 .product-table.table td {
-  padding: 0.85em 0.75em;
+  padding: 0.3em 0.75em;
 }
 
 .product-table thead td {
