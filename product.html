@@ -2343,8 +2343,8 @@
           <div class="product-color-info">
             <div class="product-color-info__header">
               <div class="product-color-info__title">Размер и количество</div>
-              <a class="product-color-info__link" data-fancybox data-src="#modalsizestable" href="javascript:;">Таблица
-                размеров</a>
+              <a class="product-color-info__link" data-fancybox data-src="#modalsizestable" href="javascript:;">
+                Таблица размеров</a>
             </div>
 
             <div class="table-responsive- mt-1">
@@ -2445,6 +2445,15 @@
               <div class="product-total__count">88</div>
               <div class="product-total__cost">2 655,00</div>
             </div>
+
+            <div class="modals">
+              <div class="modals__item modal">
+                <div id="modalsizestable">
+                  <div class="modal__title">Таблица размеров</div>
+                  <div class="modal__content">Таблица размеров</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="alert alert--attention mt-4">
@@ -2492,11 +2501,14 @@
     </div>
 
     <div class="product-buy">
-      <button class="product-buy__btn">Добавить в корзину</button>
+      <button class="product-buy__btn product-buy__btn--showsizes"></button>
+      <a class="product-buy__btn product-buy__btn--tocart" href="personal-cart.html">Перейти в корзину</a>
+      <!-- 
       <div class="product-buy__info buy-info">
         <div class="buy-info__title">Товаров <a href="personal-cart.html">в корзине</a>  : 20 шт.</div>
         <div class="buy-info__total">На сумму: <span class="after-rub">23 580,00</span></div>
       </div>
+     -->
 
       <div class="product-color-info">
         <button class="product-buy__close"></button>

@@ -7,19 +7,25 @@
     z-index: 999;
     display: flex;
     align-items: center;
-    column-gap: 30px;
+    column-gap: 15px;
+    row-gap: 15px;
     box-shadow: 0 0 25px rgba(57, 56, 59, 0.4);
-    height: 70px;
+    // height: 70px;
+    flex-wrap: wrap;
 
     &__btn {
+        // flex-grow: 1;
         cursor: pointer;
         border: none;
         background-color: $special-6;
         color: #fff;
-        font-size: 15px;
-        padding: 0.75em 1.25em;
+        font-size: 13px;
+        padding: 0.75em 1em;
         border-radius: 3px;
         transition: background-color 0.2s ease-in-out;
+        text-decoration: none;
+        text-align: center;
+        // white-space: nowrap;
 
         &:hover {
             background-color: $special-6 - 10;
@@ -27,6 +33,27 @@
 
         &:active {
             transform: translateY(2px);
+        }
+
+        &--showsizes {
+            &::before {
+                content: "Показать размеры";
+            }
+        }
+
+        &--tocart {
+            background-color: $main;
+            &:hover {
+                background-color: $main-hover;
+            }
+        }
+
+        &.is-active {
+            &.product-buy__btn--showsizes {
+                &::before{
+                    content: "Скрыть размеры";
+                }
+            }
         }
     }
 

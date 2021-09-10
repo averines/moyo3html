@@ -835,7 +835,7 @@ hr.dotted {
 }
 
 .fancybox-container {
-  z-index: 999999;
+  z-index: 99999999;
 }
 
 .header {
@@ -12923,11 +12923,13 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 15px;
   -webkit-box-shadow: 0 0 25px rgba(57, 56, 59, 0.4);
           box-shadow: 0 0 25px rgba(57, 56, 59, 0.4);
-  height: 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .product-buy__btn {
@@ -12935,11 +12937,13 @@ textarea {
   border: none;
   background-color: #01a976;
   color: #fff;
-  font-size: 15px;
-  padding: 0.75em 1.25em;
+  font-size: 13px;
+  padding: 0.75em 1em;
   border-radius: 3px;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
 }
 
 .product-buy__btn:hover {
@@ -12949,6 +12953,22 @@ textarea {
 .product-buy__btn:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.product-buy__btn--showsizes::before {
+  content: "Показать размеры";
+}
+
+.product-buy__btn--tocart {
+  background-color: #ab064e;
+}
+
+.product-buy__btn--tocart:hover {
+  background-color: #c00a5a;
+}
+
+.product-buy__btn.is-active.product-buy__btn--showsizes::before {
+  content: "Скрыть размеры";
 }
 
 .product-buy__close {
