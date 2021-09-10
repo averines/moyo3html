@@ -2128,3 +2128,19 @@ if (feedbacksToggleBtn) {
 
 
 }
+
+// кпопка показать/скрыть таблицу с размерами на странице продукта
+const productBuy = documentBody.querySelector('.product-buy')
+if (productBuy) {
+    const productBuyClose = productBuy.querySelector('.product-buy__close')
+    const productBuyBtn = productBuy.querySelector('.product-buy__btn')
+    const productBuyTable = productBuy.querySelector('.product-color-info')
+
+    productBuyBtn.addEventListener('click', () => {
+        productBuyTable.classList.toggle('is-active')
+    })
+
+    productBuyClose.addEventListener('click', () => {
+        productBuyTable.classList.toggle('is-active')
+    })
+}

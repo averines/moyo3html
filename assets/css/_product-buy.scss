@@ -1,0 +1,90 @@
+.product-buy {
+    background-color: $bg-light;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    box-shadow: 0 0 25px rgba(57, 56, 59, 0.4);
+    height: 70px;
+
+    &__btn {
+        cursor: pointer;
+        border: none;
+        background-color: $special-6;
+        color: #fff;
+        font-size: 15px;
+        padding: 0.75em 1.25em;
+        border-radius: 3px;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $special-6 - 10;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 35px;
+        height: 35px;
+        background: url(../img/icons/close.svg) no-repeat center;
+        background-size: 33%;
+        filter: brightness(0);
+        border: none;
+        opacity: 0.5;
+        transition: opacity 0.15s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .product-color-info {
+        position: absolute;
+        bottom: 70px;
+        background-color: #fff;
+        left: 0;
+        width: 100%;
+        padding: 15px 15px 30px 15px;
+        box-shadow: 0 -10px 10px rgba(57, 56, 59, 0.1);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        max-height: 0;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            max-height: 500px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.buy-info {
+    font-size: 0.9em;
+    line-height: 1.4em;
+
+    &__title > a{
+        color: $main;
+    }
+
+    &__total > span {
+        font-weight: 600;
+    }
+}
