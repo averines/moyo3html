@@ -2146,3 +2146,19 @@ if (productBuy) {
         productBuyTable.classList.toggle('is-active')
     })
 }
+
+
+// плавная прокрутка к якорю
+// на странице
+$("body").on('click', '[href*="#"]', function (e) {
+    var fixed_offset = 100;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+    e.preventDefault();
+});
+
+// на другой странице
+let myHash = location.hash;
+location.hash = '';
+if (myHash[1] != undefined) { 
+    $('html, body').animate({ scrollTop: $(myHash).offset().top - 70 }, 500); //скроллим за полсекунды
+};
