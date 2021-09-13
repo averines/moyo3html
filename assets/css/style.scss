@@ -2613,8 +2613,8 @@
 
   &__base {
     white-space: nowrap;
-    font-weight: 800;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 13px;
     // letter-spacing: 0.03em;
 
     &::after {
@@ -4651,7 +4651,7 @@
   }
 
   &__cost {
-    font-weight: 800;
+    font-weight: 600;
 
     &::after {
       content: " ₽";

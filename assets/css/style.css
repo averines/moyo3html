@@ -3689,8 +3689,8 @@ hr.dotted {
 
 .price__base {
   white-space: nowrap;
-  font-weight: 800;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .price__base::after {
@@ -5735,7 +5735,7 @@ hr.dotted {
 }
 
 .product-total__cost {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .product-total__cost::after {
@@ -12359,7 +12359,7 @@ textarea {
     font-size: 12px;
   }
   .price__base {
-    font-size: 13px;
+    font-size: 17px;
   }
   .price__discount {
     font-size: 12px;
@@ -12665,7 +12665,7 @@ textarea {
     font-size: 13px;
   }
   .container--big .price__base {
-    font-size: 16px;
+    font-size: 18px;
   }
   .container--big .price__discount {
     font-size: 13px;
