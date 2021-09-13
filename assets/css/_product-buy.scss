@@ -14,13 +14,13 @@
     flex-wrap: wrap;
 
     &__btn {
-        // flex-grow: 1;
+        flex-grow: 1;
         cursor: pointer;
         border: none;
         background-color: $special-6;
         color: #fff;
         font-size: 13px;
-        padding: 0.75em 1em;
+        padding: 0.8em 1em;
         border-radius: 3px;
         transition: background-color 0.2s ease-in-out;
         text-decoration: none;
@@ -78,7 +78,7 @@
 
     .product-color-info {
         position: absolute;
-        bottom: 70px;
+        bottom: 65px;
         background-color: #fff;
         left: 0;
         width: 100%;
