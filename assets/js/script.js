@@ -1583,9 +1583,9 @@ if (menuUserLogged && menuUserNotLogged) {
                 needloginBlock.style.display = 'none'
             })
 
-            productFavoriteBtns.forEach(productFavoriteBtn => {
-                productFavoriteBtn.style.display = 'flex'
-            })
+            // productFavoriteBtns.forEach(productFavoriteBtn => {
+            //     productFavoriteBtn.style.display = 'flex'
+            // })
 
             priceWrapperBlocks.forEach(priceWrapperBlock => {
                 priceWrapperBlock.style.display = 'flex'
@@ -1603,9 +1603,9 @@ if (menuUserLogged && menuUserNotLogged) {
                 needloginBlock.style.display = 'block'
             })
 
-            productFavoriteBtns.forEach(productFavoriteBtn => {
-                productFavoriteBtn.style.display = 'none'
-            })
+            // productFavoriteBtns.forEach(productFavoriteBtn => {
+            //     productFavoriteBtn.style.display = 'none'
+            // })
 
             priceWrapperBlocks.forEach(priceWrapperBlock => {
                 priceWrapperBlock.style.display = 'none'

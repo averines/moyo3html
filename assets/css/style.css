@@ -5718,6 +5718,9 @@ hr.dotted {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   -webkit-column-gap: 0.3em;
           column-gap: 0.3em;
@@ -5732,7 +5735,7 @@ hr.dotted {
 }
 
 .product-total__cost {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .product-total__cost::after {
@@ -10604,7 +10607,7 @@ textarea {
         grid-template-columns: 300px auto;
     -ms-grid-rows: 400px 1fr;
         grid-template-rows: 400px 1fr;
-        grid-template-areas: "picture info" "feedback info";
+        grid-template-areas: "picture info" "feedback info";
   }
   .product-container .left-panel {
     -ms-grid-row: 1;
