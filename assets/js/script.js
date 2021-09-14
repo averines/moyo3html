@@ -2144,6 +2144,7 @@ if (productBuy) {
 
     productBuyClose.addEventListener('click', () => {
         productBuyTable.classList.toggle('is-active')
+        productBuyShowSizes.classList.toggle('is-active')
     })
 }
 
