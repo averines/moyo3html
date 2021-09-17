@@ -103,6 +103,8 @@ categoryMenuStandartItems.forEach(categoryMenuStandartItem => {
     })
 })
 
+
+
 // меню фильтров на странице подкатегории (в каталоге)
 const menuFilterBtn = document.getElementById('btn-filter')
 const menuFilterBlock = document.querySelector('.menu-filters')
