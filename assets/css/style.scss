@@ -2613,8 +2613,8 @@
 
   &__base {
     white-space: nowrap;
-    font-weight: 800;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 13px;
     // letter-spacing: 0.03em;
 
     &::after {
@@ -4638,6 +4638,7 @@
   display: flex;
   margin-top: 1.5em;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
   column-gap: 0.3em;
 

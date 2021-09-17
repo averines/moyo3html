@@ -3689,8 +3689,8 @@ hr.dotted {
 
 .price__base {
   white-space: nowrap;
-  font-weight: 800;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 .price__base::after {
@@ -5718,6 +5718,9 @@ hr.dotted {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   -webkit-column-gap: 0.3em;
           column-gap: 0.3em;
@@ -10604,7 +10607,7 @@ textarea {
         grid-template-columns: 300px auto;
     -ms-grid-rows: 400px 1fr;
         grid-template-rows: 400px 1fr;
-        grid-template-areas: "picture info" "feedback info";
+        grid-template-areas: "picture info" "feedback info";
   }
   .product-container .left-panel {
     -ms-grid-row: 1;
@@ -12356,7 +12359,7 @@ textarea {
     font-size: 12px;
   }
   .price__base {
-    font-size: 13px;
+    font-size: 17px;
   }
   .price__discount {
     font-size: 12px;
@@ -12662,7 +12665,7 @@ textarea {
     font-size: 13px;
   }
   .container--big .price__base {
-    font-size: 16px;
+    font-size: 18px;
   }
   .container--big .price__discount {
     font-size: 13px;
@@ -12933,12 +12936,15 @@ textarea {
 }
 
 .product-buy__btn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   cursor: pointer;
   border: none;
   background-color: #01a976;
   color: #fff;
   font-size: 13px;
-  padding: 0.75em 1em;
+  padding: 0.8em 1em;
   border-radius: 3px;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
@@ -12994,7 +13000,7 @@ textarea {
 
 .product-buy .product-color-info {
   position: absolute;
-  bottom: 70px;
+  bottom: 65px;
   background-color: #fff;
   left: 0;
   width: 100%;
