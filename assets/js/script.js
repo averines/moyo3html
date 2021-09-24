@@ -388,7 +388,6 @@ for (let accordion of accordions) {
 
 
 // кнопка добавления в избранное
-
 const favorites = document.getElementsByClassName('product__favorite');
 [...favorites].forEach(item => {
     item.addEventListener('click', () => {
