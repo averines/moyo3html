@@ -388,7 +388,7 @@
   }
 
   .subcategories-icons {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     &__link {
       font-size: 0.75em;
@@ -396,7 +396,7 @@
   }
 
   .products {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .togglers {
@@ -513,11 +513,13 @@
     .left-panel {
       grid-area: picture;
       align-self: start;
+      grid-row: 1;
+      grid-column: 1;
     }
 
     .product-feedback.product-accordion {
       margin-top: 0;
-      
+
       .accordion__title {
         display: none;
       }
@@ -526,18 +528,22 @@
     .product-feedback {
       grid-area: feedback;
       align-self: start;
+      grid-row: 2;
+      grid-column: 1;
     }
 
     .product-info {
       grid-area: info;
       align-self: start;
+      grid-row: 1;
+      grid-column: 2;
 
-        &__brand-logo {
-          position: absolute;
-          right: 15px;
-          top: 15px;
-          padding: 0;
-        }
+      &__brand-logo {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        padding: 0;
+      }
     }
   }
 
@@ -1214,7 +1220,7 @@
     }
   }
 
-.error-wrapper {
+  .error-wrapper {
     margin: 100px auto 100px auto;
     max-width: 994px;
   }
@@ -1644,7 +1650,7 @@
 
   .product-mini-slider {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     &__item:nth-child(7n) {
       .color-variants {
@@ -1684,7 +1690,7 @@
   }
 
   .products {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .product-wrapper {
@@ -1782,7 +1788,6 @@
   .product-container {
     grid-template-columns: 350px auto;
     grid-template-rows: 450px 1fr;
-
 
     .product-accordion {
       margin-top: 0;
@@ -2061,10 +2066,9 @@
     }
   }
 
-    .extraorder {
-      padding-right: 200px;
+  .extraorder {
+    padding-right: 200px;
   }
-
 }
 
 //xl
@@ -2325,7 +2329,7 @@
   }
 
   .subcategories-icons {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     &__link {
       font-size: 0.75em;
@@ -2352,19 +2356,19 @@
     }
   }
 
-  .product-wrapper {
-    .product {
-      &__favorite {
-        width: 36px;
-        height: 36px;
+  // .product-wrapper {
+  //   .product {
+  //     &__favorite {
+  //       width: 36px;
+  //       height: 36px;
 
-        &::before {
-          width: 16px;
-          height: 16px;
-        }
-      }
-    }
-  }
+  //       &::before {
+  //         width: 16px;
+  //         height: 16px;
+  //       }
+  //     }
+  //   }
+  // }
 
   .product-info {
     background-color: $white;
@@ -2479,7 +2483,7 @@
 
   .accordion--brand-filter {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
     column-gap: 15px;
 
     .accordion__title {
@@ -2541,6 +2545,18 @@
     &__discount {
       font-size: 12px;
     }
+
+ &__opt {
+    font-size: 13px;
+
+
+    &::before {
+      font-size: 13px;
+    }
+    &::after {
+      font-size: 13px;
+    }
+  }    
     .product-wrapper {
       .product__action-time {
         font-size: 15px;
@@ -2552,13 +2568,13 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 100%;
       height: 100%;
       max-height: 350px;
       position: absolute;
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
       bottom: 0;
       left: 0;
       transition: $tr;
@@ -2633,7 +2649,6 @@
     pointer-events: none;
     width: 100%;
     max-width: none;
-
 
     &--top {
       position: absolute;
@@ -2710,7 +2725,7 @@
 
   .price {
     font-size: 1em;
-    flex-basis: 65%;
+    flex-basis: 75%;
   }
 
   .product {
@@ -2946,12 +2961,12 @@
   .products {
     column-gap: 10px;
 
-    .product {
-      &__favorite {
-        width: 36px;
-        height: 36px;
-      }
-    }
+    // .product {
+    //   &__favorite {
+    //     width: 36px;
+    //     height: 36px;
+    //   }
+    // }
   }
 
   .list-suppliers {

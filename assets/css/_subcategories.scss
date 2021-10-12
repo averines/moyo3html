@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: $gap * 3 $gap;
 
     &__link {

@@ -1017,8 +1017,9 @@ const removeIsActive = (items) => {
     })
 }
 
+
 //табы
-const tabsContainers = document.querySelectorAll('.js-tabs')
+const tabsContainers = document.querySelectorAll('[data-action="tabs"]')
 if (tabsContainers.length > 0) {
     tabsContainers.forEach(tabsContainer => {
         let tabsContentItems = tabsContainer.querySelectorAll('.tabs-content__item')
@@ -1106,7 +1107,8 @@ $(document).ready(function () {
     }
 });
 
-const mapModalBtns = document.querySelectorAll('.js-mapmodal')
+
+const mapModalBtns = document.querySelectorAll('[data-action="mapmodal"]')
 let myMapModal;
 mapModalBtns.forEach(mapModalBtn => {
     mapModalBtn.addEventListener('click', () => {
@@ -1211,9 +1213,9 @@ if (customSelectItems.length > 0) {
 }
 
 //мультибегунок
-var $rangeSlider = $(".js-range-slider"),
-    $inputFrom = $(".js-range-from"),
-    $inputTo = $(".js-range-to"),
+var $rangeSlider = $('[data-action="range-slider"]'),
+    $inputFrom = $('[data-action="range-from"]'),
+    $inputTo = $('[data-action="range-to"]'),
     rangeInstance,
     rangeMin = 100,
     rangeMax = 1000,
@@ -1274,8 +1276,9 @@ if ($rangeSlider.length > 0) {
 }
 
 
+
 // проверка форм перед отправкой
-const formsCheck = document.querySelectorAll('.js-form-check')
+const formsCheck = document.querySelectorAll('[data-action="form-check"]')
 if (formsCheck) {
     formsCheck.forEach(form => {
         let requiredInputs = form.querySelectorAll('[required]')
@@ -1330,12 +1333,13 @@ function singleFormCheck(form) {
     })
 }
 
+
 // форма входа с кодом телефона
-const formPhoneCode = document.querySelector('.js-form-phone-code')
+const formPhoneCode = document.querySelector('[data-action="form-phone-code"]')
 if (formPhoneCode) {
-    let btnCode = formPhoneCode.querySelector('.js-btn-code')
-    let btnLogin = formPhoneCode.querySelector('.js-btn-login')
-    let inputCode = formPhoneCode.querySelector('.js-input-code')
+    let btnCode = formPhoneCode.querySelector('[data-action="btn-code"]')
+    let btnLogin = formPhoneCode.querySelector('[data-action="btn-login"]')
+    let inputCode = formPhoneCode.querySelector('[data-action="input-code"]')
 
     inputCode.style.display = 'none'
     btnLogin.style.display = 'none'
@@ -1356,14 +1360,15 @@ if (formPhoneCode) {
     })
 }
 
+
 // форма регистрации с кодом телефона
-const formPhoneCodeRegistration = document.querySelectorAll('.js-form-phone-code-registration')
+const formPhoneCodeRegistration = document.querySelectorAll('[data-action="form-phone-code-registration"]')
 if (formPhoneCodeRegistration) {
     formPhoneCodeRegistration.forEach(form => {
-        let btnCodeWrapper = form.querySelector('.js-btn-code-wrapper')
-        let btnCode = form.querySelector('.js-btn-code')
-        let btnRegistration = form.querySelector('.js-btn-registration')
-        let inputCode = form.querySelector('.js-input-code')
+        let btnCodeWrapper = form.querySelector('[data-action="btn-code-wrapper"]')
+        let btnCode = form.querySelector('[data-action="btn-code"]')
+        let btnRegistration = form.querySelector('[data-action="btn-registration"]')
+        let inputCode = form.querySelector('[data-action="input-code"]')
 
         inputCode.style.display = 'none'
 
@@ -1383,11 +1388,12 @@ if (formPhoneCodeRegistration) {
     })
 }
 
+
 // форма адреса при регистрации
-const formAddressRegistration = document.querySelector('.js-form-registration-address')
+const formAddressRegistration = document.querySelector('[data-action="form-registration-address"]')
 if (formAddressRegistration) {
     let addressDoubleCheckbox = document.getElementById('type2-addressdouble')
-    let addressType2 = formAddressRegistration.querySelector('.js-form-registration-address-type2')
+    let addressType2 = formAddressRegistration.querySelector('[data-action="form-registration-address-type2"]')
     let addresType2Inputs = addressType2.querySelectorAll('input')
 
     function hideaddressType2() {
@@ -1436,8 +1442,8 @@ if (brandMixerEl) {
 
 // выбор блока при выборе доставки
 const deliveryWrapper = document.querySelector('.order-progress-delivery-wrapper')
-const deliveryAddressWrapper = document.querySelector('.js-delivery-type-warning')
-const btnGotoOrderPayment = documentBody.querySelector('.js-goto-order-payment')
+const deliveryAddressWrapper = document.querySelector('[data-action="delivery-type-warning"]')
+const btnGotoOrderPayment = documentBody.querySelector('[data-action="goto-order-payment"]')
 const orderPaymentAddressRadioItems = documentBody.querySelectorAll('.order-progress-address-wrapper .form-group__radio')
 if (btnGotoOrderPayment) { btnGotoOrderPayment.classList.add('is-disabled') }
 
@@ -1515,9 +1521,9 @@ if (deliveryWrapper) {
 
 
 // кнопка Бренды в Категории для десктопа и мобильной версии
-const btnBrands = document.querySelector('.js-btn-brands')
+const btnBrands = document.querySelector('[data-action="btn-brands"]')
 if (btnBrands) {
-    const menuItemBrands = document.querySelector('.js-menu-item-brands')
+    const menuItemBrands = document.querySelector('[data-action="menu-item-brands"]')
     btnBrands.addEventListener('click', (e) => { btnBrandsHandler(e) })
     function btnBrandsHandler(e) {
         if (document.body.clientWidth < 768) {
@@ -1556,18 +1562,19 @@ if (formGroups.length > 0) {
     })
 }
 
+
 // эмуляция входа пользователя
-const menuUserLogged = document.querySelector('.js-menu-user-is-logged')
-const menuUserNotLogged = document.querySelector('.js-menu-user-is-not-logged')
+const menuUserLogged = document.querySelector('[data-action="menu-user-is-logged"]')
+const menuUserNotLogged = document.querySelector('[data-action="menu-user-is-not-logged"]')
 
-const userButtonsLogin = document.querySelector('.js-user-buttons-login')
-const userButtonsUser = document.querySelector('.js-user-buttons-user')
+const userButtonsLogin = document.querySelector('[data-action="user-buttons-login"]')
+const userButtonsUser = document.querySelector('[data-action="user-buttons-user"]')
 
-const setIsLoggedBtn = document.querySelector('.js-user-set-logged')
-const setIsNotLoggedBtns = document.querySelectorAll('.js-user-set-not-logged')
+const setIsLoggedBtn = document.querySelector('[data-action="user-set-logged"]')
+const setIsNotLoggedBtns = document.querySelectorAll('[data-action="user-set-not-logged"]')
 
 const needloginBlocks = document.querySelectorAll('.needlogin')
-const priceWrapperBlocks = document.querySelectorAll('.js-product-price-wrapper')
+const priceWrapperBlocks = document.querySelectorAll('[data-action="product-price-wrapper"]')
 const productFavoriteBtns = document.querySelectorAll('.product-favorite-btn')
 
 let userIsLogged = localStorage.getItem('userLogged')
@@ -1631,8 +1638,6 @@ if (menuUserLogged && menuUserNotLogged) {
                 userButtonsUser.classList.add('is-hidden')
             })
         })
-
-
     }
 }
 
@@ -1900,9 +1905,9 @@ const totalReturnWrappers = document.querySelectorAll('.total-return__wrapper')
 if (totalReturnWrappers.length > 0) {
 
     totalReturnWrappers.forEach(totalReturnWrapper => {
-        let totalReturnBtnDeposit = totalReturnWrapper.querySelector('.js-total-return-btn-deposit')
-        let totalReturnBtnCards = totalReturnWrapper.querySelectorAll('.js-total-return-btn-card')
-        let totalReturnBtnModalCard = totalReturnWrapper.querySelector('.js-total-return-btn-modal-card')
+        let totalReturnBtnDeposit = totalReturnWrapper.querySelector('[data-action="total-return-btn-deposit"]')
+        let totalReturnBtnCards = totalReturnWrapper.querySelectorAll('[data-action="total-return-btn-card"]')
+        let totalReturnBtnModalCard = totalReturnWrapper.querySelector('[data-action="total-return-btn-modal-card"]')
 
         totalReturnBtnDeposit.addEventListener('click', () => {
             totalReturnBtnDeposit.remove()
@@ -1934,7 +1939,7 @@ if (totalReturnWrappers.length > 0) {
 }
 
 // имитация отказа от части товара в Истории заказа
-const refuseBtns = document.querySelectorAll('.js-refuse-btn')
+const refuseBtns = document.querySelectorAll('[data-action="refuse-btn"]')
 if (refuseBtns.length > 0) {
     refuseBtns.forEach(refuseBtn => {
         let parentRow = refuseBtn.closest('tr')
@@ -1946,7 +1951,7 @@ if (refuseBtns.length > 0) {
 
 
 // открытие закрытие блока с формой для написания отзыва
-const feedbackStartBtn = document.querySelector('.js-feedback-start')
+const feedbackStartBtn = document.querySelector('[data-action="feedback-start"]')
 const feedbackWrapper = document.querySelector('.feedback-wrapper')
 
 if (feedbackStartBtn) {
@@ -2099,7 +2104,7 @@ if (mainSlider) {
 
 
 // кнопка показать/скрыть отзывы на странице товара
-const feedbacksToggleBtn = documentBody.querySelector('.js-feedbacks-toggle')
+const feedbacksToggleBtn = documentBody.querySelector('[data-action="feedbacks-toggle"]')
 const feedbacksToggleBlock = documentBody.querySelector('.feedbacks')
 
 if (feedbacksToggleBtn) {
