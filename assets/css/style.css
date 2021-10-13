@@ -1880,6 +1880,9 @@ hr.dotted {
 .dropdown-products .products-mini li picture,
 .dropdown-products .products-mini li img {
   border-radius: 4px;
+  background-color: #f3f2f0;
+  display: block;
+  font-size: 12px;
 }
 
 .dropdown-products .products-mini li .product__info {

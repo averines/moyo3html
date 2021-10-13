@@ -943,6 +943,9 @@
       picture,
       img {
         border-radius: 4px;
+        background-color: $bg-light;
+        display: block;
+        font-size: 12px;
       }
 
       .product__info {
