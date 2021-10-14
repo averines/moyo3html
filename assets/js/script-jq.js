@@ -1,9 +1,203 @@
-// плавная прокрутка к якорю на этой странице 
-$("body").on('click', '[href*="#"]', function (e) {
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-    e.preventDefault();
+// tiny slider
+const postSliderPopularContainer = document.querySelectorAll('.post-slider-popular')
+let postSliderPopular = postSliderPopularContainer.length > 0 ?
+    tns({
+        container: postSliderPopularContainer[0],
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        gutter: 15,
+        responsive: {
+            420: {
+                items: 2
+            },
+            768: {
+                items: 4
+            },
+            1900: {
+                gutter: 20
+            }
+        }
+    })
+    : "";
+
+const postSliderActionsContainer = document.querySelectorAll('.post-slider-actions')
+let postSliderActions = postSliderActionsContainer.length > 0 ?
+    tns({
+        container: postSliderActionsContainer[0],
+        items: 1,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        gutter: 15,
+        responsive: {
+            768: {
+                items: 3
+            },
+            1900: {
+                gutter: 20
+            }
+        }
+    })
+    : "";
+
+const categoriesMainSliderContainer = document.querySelectorAll('.categories-slider')
+let categoriesMainSlider = categoriesMainSliderContainer.length > 0 ?
+    tns({
+        container: categoriesMainSliderContainer[0],
+        items: 3,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 10,
+        responsive: {
+            768: {
+                items: 6,
+            },
+
+            1024: {
+                gutter: 20,
+            },
+        }
+    })
+    : "";
+
+const categoriesPartnerSliderContainer = document.querySelectorAll('.bigcategories-slider')
+var categoriesPartnerSlider = categoriesPartnerSliderContainer.length > 0 ?
+    tns({
+        container: categoriesPartnerSliderContainer[0],
+        items: 3,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 0,
+        responsive: {
+            768: {
+                items: 6,
+            }
+        }
+    })
+    : "";
+
+
+const productSliders = document.querySelectorAll('.product-mini-slider');
+productSliders.forEach(element => {
+    const slider = tns({
+        container: element,
+        items: 3,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: true,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 10,
+        responsive: {
+            1024: {
+                items: 5,
+                gutter: 15,
+            },
+        }
+    });
 });
+
+const productSliders4 = document.querySelectorAll('.product-mini-slider-4');
+productSliders4.forEach(element => {
+    const slider = tns({
+        container: element,
+        items: 3,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: true,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 10,
+        responsive: {
+            1024: {
+                items: 4,
+                gutter: 15,
+            },
+        }
+    });
+});
+
+
+
+const productColorsSliderContainer = document.querySelectorAll('.product-colors-slider')
+var productColorsSlider = productColorsSliderContainer.length > 0 ?
+    tns({
+        container: productColorsSliderContainer[0],
+        items: 4,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 5,
+        responsive: {
+            768: {
+                items: 6,
+            }
+        }
+    })
+    : "";
+
+
+//слайдер для букв в фильтре брендов
+const brandFilterTitles = document.querySelectorAll('.brand-filter-slider')
+if (brandFilterTitles.length > 0) {
+    let brandFilterTitlesSlider = tns({
+        container: brandFilterTitles[0],
+        items: 5,
+        slideBy: 'page',
+        autoplay: false,
+        controls: false,
+        nav: false,
+        loop: false,
+        mouseDrag: true,
+        swipeAngle: 60,
+        autoWidth: true,
+        gutter: 0,
+        responsive: {
+            768: {
+                items: 6,
+                autoWidth: false,
+            }
+        }
+    })
+}
+
+
+
+// плавная прокрутка к якорю на этой странице 
+// $("body").on('click', '[href*="#"]', function (e) {
+//     var fixed_offset = 100;
+//     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+//     e.preventDefault();
+// });
 
 // плавная прокрутка к якорю на другой странице
 let myHash = location.hash;

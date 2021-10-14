@@ -101,37 +101,48 @@
         min-width: 220px;
         box-shadow: 0 2px 50px transparentize($black, 0.9);
 
+        &__link {
+          opacity: 1;
+          font-size: 0.9rem;
+          color: $text;
+          padding: 0.75em 0;
+          border-top: 1px dotted $line-light;
+          text-align: left;
+          background: none;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }        
+
         li {
           padding: 0 1em;
 
-          a {
-            opacity: 1;
-            font-size: 0.9rem;
-            color: $text;
-            padding: 0.75em 0;
-            border-top: 1px dotted $line-light;
-          }
-
           &:first-child {
-            a {
+            .menu-child__link {
               border-top: none;
             }
           }
 
           &:hover {
             background-color: $bg-light;
+            
 
-            a {
+            .menu-child__link {
               border-color: transparent;
+              color: $text;
             }
 
             + li {
-              a {
+              .menu-child__link {
                 border-color: transparent;
               }
             }
           }
         }
+
+
       }
     }
 
@@ -601,6 +612,9 @@
       padding: 2em 0.5em;
       border-radius: 3px;
       transition: $tr;
+      background: none;
+      border: none;
+      cursor: pointer;
 
       > img {
         width: 22px;

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вопросы-ответы</title>
   <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения! | Optmoyo.ru">
-  
+
   <meta property="og:title" content="Главная">
   <meta property="og:description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
   <meta property="og:url" content="https://optmoyo.ru">
@@ -51,20 +51,21 @@
             <li class="menu-top__item menu-top__item--parent d-none" data-action="menu-user-is-logged">
               <span><a data-fancybox data-src="#modallogin" href="javascript:;">Личный кабинет</a></span>
               <ul class="menu-child">
-                <li><a href="personal-favorites.html">Избранное</a></li>
-                <li><a href="personal-cart.html">Корзина</a></li>
-                <li><a href="personal-data-fiz.html">Личные данные</a></li>
-                <li><a href="personal-orders.html">История заказов</a></li>
-                <li><a href="personal-discounts.html">Скидки и бонусы</a></li>
-                <li><a href="#" data-action="user-set-not-logged">
+                <li><a class="menu-child__link" href="personal-favorites.html">Избранное</a></li>
+                <li><a class="menu-child__link" href="personal-cart.html">Корзина</a></li>
+                <li><a class="menu-child__link" href="personal-data-fiz.html">Личные данные</a></li>
+                <li><a class="menu-child__link" href="personal-orders.html">История заказов</a></li>
+                <li><a class="menu-child__link" href="personal-discounts.html">Скидки и бонусы</a></li>
+                <li>
+                  <button class="menu-child__link" data-action="user-set-not-logged">
                     <svg class="mr-05" width="14" height="16" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.80273 5.25183L14.2825 9.73261L9.80273 14.2144" stroke="#777" stroke-width="1.3849" />
                       <path d="M14.2637 9.73254H5.26367" stroke="#777" stroke-width="1.3849" />
                       <path d="M15.5098 15.7433C12.1912 19.0629 6.80869 19.0629 3.48912 15.7433C0.16955 12.4237 0.169551 7.04222 3.48912 3.72265C6.80869 0.403079 12.1912 0.403079 15.5098 3.72265"
                         stroke="#777" stroke-width="1.3849" />
                     </svg>
-                    Выйти
-                  </a>
+                    Выход
+                  </button>
                 </li>
               </ul>
             </li>
@@ -74,18 +75,18 @@
             <li class="menu-top__item menu-top__item--parent">
               <span>О покупках</span>
               <ul class="menu-child">
-                <li><a href="info-sizes.html">Размеры</a></li>
-                <li><a href="info-delivery.html">Доставка</a></li>
-                <li><a href="info-payment.html">Оплата</a></li>
-                <li><a href="info-faq.html">Ответы на вопросы</a></li>
+                <li><a class="menu-child__link" href="info-sizes.html">Размеры</a></li>
+                <li><a class="menu-child__link" href="info-delivery.html">Доставка</a></li>
+                <li><a class="menu-child__link" href="info-payment.html">Оплата</a></li>
+                <li><a class="menu-child__link" href="info-faq.html">Ответы на вопросы</a></li>
               </ul>
             </li>
             <li class="menu-top__item menu-top__item--parent">
               <span>О магазине</span>
               <ul class="menu-child">
-                <li><a href="info-about.html">О нас</a></li>
-                <li><a href="info-conditions.html">Условия работы</a></li>
-                <li><a href="info-contacts.html">Контакты</a></li>
+                <li><a class="menu-child__link" href="info-about.html">О нас</a></li>
+                <li><a class="menu-child__link" href="info-conditions.html">Условия работы</a></li>
+                <li><a class="menu-child__link" href="info-contacts.html">Контакты</a></li>
               </ul>
             </li>
             <li class="menu-top__item"><a href="info-partnership.html">Сотрудничество</a></li>
@@ -488,25 +489,25 @@
       </ul>
       <div class="menu-user">
         <a href="personal-data-fiz.html" class="menu-user__item">
-          <img src="./assets/img/icons/user.svg" alt="Личные данные" />
+          <img src="./assets/img/icons/user.svg" alt="Личные данные">
           Личные данные
         </a>
         <a href="personal-orders.html" class="menu-user__item">
-          <img src="./assets/img/icons/history.svg" alt="История заказов" />
+          <img src="./assets/img/icons/history.svg" alt="История заказов">
           История заказов
         </a>
         <a href="personal-discounts.html" class="menu-user__item">
-          <img src="./assets/img/icons/bonus.svg" alt="Скидки и бонусы" />
+          <img src="./assets/img/icons/bonus.svg" alt="Скидки и бонусы">
           Скидки и&nbsp;бонусы
         </a>
         <a href="personal-favorites.html" class="menu-user__item">
-          <img src="./assets/img/icons/favorites.svg" alt="Избранное" />
+          <img src="./assets/img/icons/favorites.svg" alt="Избранное">
           Избранное
         </a>
-        <a href="index.html" class="menu-user__item" data-action="user-set-not-logged">
-          <img src="./assets/img/icons/logout.svg" alt="Выход" />
+        <button class="menu-user__item" data-action="user-set-not-logged">
+          <img src="./assets/img/icons/logout.svg" alt="Выход">
           Выход
-        </a>
+        </button>
       </div>
       <div class="menu-catalog-wrapper">
         <ul class="menu-catalog-categories accordion">
