@@ -1,0 +1,11 @@
+.after-pz {
+    &::after {
+        content: " шт.";
+    }
+}
+
+.after-currency {
+    &::after {
+        content: " ₽";
+    }
+}

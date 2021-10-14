@@ -1,0 +1,46 @@
+.rating-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    position: relative;
+
+    &__number {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    &__stars {
+        &.feedback-stars {
+            width: 100px;
+
+            .feedback-stars__filled {
+                height: 19px;
+            }
+
+            .feedback-stars__stroked {
+                height: 19px;
+            }
+        }
+    }
+
+    &__count {
+        font-size: 13px;
+        color: $text-l;
+    }
+
+    &__btn {
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 1.4;
+        color: $text-l;
+        border-bottom: 1px dashed $text-l;
+        transition: $tr;
+        padding-top: 5px;
+
+        &:hover {
+            border-bottom-color: transparent;
+            color: $text;
+        }
+    }
+}

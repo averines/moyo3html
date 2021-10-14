@@ -1,0 +1,132 @@
+.product-pics {
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        background-color: #fff;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 3px;
+            overflow: hidden;
+
+            > img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 6px;
+        padding-top: 10px;
+        padding-bottom: 3px;
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+
+        &.swiper-pagination-bullets {
+            .swiper-pagination-bullet {
+                background-color: $text-l;
+                width: 5px;
+                height: 5px;
+                margin: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+
+        &.swiper-pagination-lock {
+            display: none;
+        }
+    }
+
+    &__nav {
+        opacity: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        top: calc(50% - 50px);
+        bottom: 0;
+        left: 0;
+        bottom: 27px;
+        transition: opacity 0.15s ease-in-out;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: block;
+            width: 40px;
+            height: 70px;
+            background-color: transparentize($black, 0.95);
+            right: 0;
+            left: auto;
+            transition: transform 0.15s ease-in-out;
+
+            &::after {
+                display: block;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background: url(../img/icons/arrow-right.svg) no-repeat center;
+                background-size: 25%;
+                filter: brightness(3);
+            }
+
+            &:hover {
+                transform: scale(1.075);
+            }
+        }
+
+        .swiper-button-prev {
+            left: 0;
+            &::after {
+                transform: scale(-1, 1);
+            }
+        }
+    }
+
+    &__download {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        background: url(../img/icons/download.svg) no-repeat center;
+        transition: opacity 0.15s ease-in-out;
+
+        @media screen and (min-width: 1200px) {
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            .product-pics__nav {
+                opacity: 1;
+            }
+        }
+    }
+}

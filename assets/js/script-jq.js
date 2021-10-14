@@ -475,3 +475,135 @@ window.addEventListener('resize', () => {
         $.fancybox.close();
     }
 }, false);
+
+
+
+// скрипты для страницы товара =============================================
+
+// слайдер на странице товара
+if (document.querySelectorAll('.product-gallery').length > 0) {
+
+    // слайдер фоток на странице товара
+    const swiperProductPics = new Swiper('.product-pics', {
+        loop: false,
+        grabCursor: true,
+        slidesPerView: 1.3,
+        setWrapperSize: true,
+        spaceBetween: 5,
+        allowTouchMove: true,
+        wrapperClass: 'product-pics__wrapper',
+        slideClass: 'product-pics__item',
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '.product-pics__pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            550: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            650: {
+                slidesPerView: 1.75,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2.2,
+                spaceBetween: 10,
+            },
+            960: {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            },
+            1024: {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+            }
+        }
+    })
+
+    // слайдер превью на странице товара
+    const swiperProductThumbs = new Swiper('.product-thumbs', {
+        loop: true,
+        // autoHeight: true,
+        direction: 'vertical',
+        grabCursor: true,
+        slidesPerView: 5,
+        setWrapperSize: true,
+        spaceBetween: 5,
+        allowTouchMove: true,
+        wrapperClass: 'product-thumbs__wrapper',
+        slideClass: 'product-thumbs__item',
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+                watchOverflow: true,
+            },
+        }
+    })
+
+    const productThumbsItems = document.querySelectorAll('.product-thumbs__item')
+    productThumbsItems.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            // console.log(swiperProductPics);
+            swiperProductPics.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1, 0, false);
+        })
+    })
+}
+
+
+// слайдер цветов на странице товара
+if (document.querySelectorAll('.container--page-product .product-colors').length > 0) {
+    const swiperProductСolors = new Swiper('.container--page-product .product-colors', {
+        loop: false,
+        grabCursor: true,
+        slidesPerView: 4.5,
+        setWrapperSize: true,
+        spaceBetween: 0,
+        allowTouchMove: true,
+        wrapperClass: 'product-colors__wrapper',
+        slideClass: 'product-colors__item',
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            500: {
+                slidesPerView: 'auto',
+                watchOverflow: true,
+            },
+            600: {
+                slidesPerView: 6,
+                watchOverflow: true,
+            },
+
+        }
+    })
+}
+
+
+// слайдер цветов в Быстром просмотре
+if (document.querySelectorAll('.product-quickview .product-colors').length > 0) {
+    const swiperQuickviewProductСolors = new Swiper('.product-quickview .product-colors', {
+        loop: false,
+        grabCursor: true,
+        slidesPerView: 6,
+        setWrapperSize: true,
+        spaceBetween: 0,
+        allowTouchMove: true,
+        wrapperClass: 'product-colors__wrapper',
+        slideClass: 'product-colors__item',
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+    })
+}

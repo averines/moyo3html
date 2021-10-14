@@ -1,0 +1,47 @@
+.social-share {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 25px;
+
+    &__item {
+        display: block;
+        width: 32px;
+        height: 22px;
+        background-size: 100%;
+        border-left: 1px solid $line-l;
+        opacity: 0.6;
+        transition: opacity 0.15s ease-in-out, border-color 0.5s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+            border-left-color: $line-l + 20;
+        }
+        
+
+        &:last-child {
+            border-right: 1px solid $line-l;
+        }
+    
+
+        &--vk {
+            background: url(../img/icons/social/vk.svg) no-repeat center;
+        }
+        &--fb {
+            background: url(../img/icons/social/fb.svg) no-repeat center;
+        }
+        &--tw {
+            background: url(../img/icons/social/tw.svg) no-repeat center;
+        }
+        &--ig {
+            background: url(../img/icons/social/ig.svg) no-repeat center;
+        }        
+        &--ma {
+            background: url(../img/icons/social/ma.svg) no-repeat center;
+        }
+        &--ok {
+            background: url(../img/icons/social/ok.svg) no-repeat center;
+        }                                  
+    }
+
+}

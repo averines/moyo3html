@@ -1,0 +1,100 @@
+.product-feedback {
+    @media screen and (min-width: 1024px) {
+        grid-area: feedback;
+        background-color: #fff;
+        margin-top: 0;
+    }
+
+    &__overall {
+        padding: 30px 0 30px 0;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        border-bottom: 1px solid $line-l;
+
+        @media screen and (min-width: 768px) {
+            padding: 60px;
+            column-gap: 50px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 40px 30px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 60px;
+        }            
+    }
+
+    &__messages {
+        @media screen and (min-width: 768px) {
+            padding: 0 60px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 0 30px;
+        }        
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 30px 30px 30px;
+        }
+    }
+
+    &__sizes {
+        padding: 60px;
+    }
+
+    &__togglers {
+        padding: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            padding: 30px 60px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding: 30px;
+        }        
+    }
+
+    &__add {
+        background-color: $special-2;
+        color: #fff;
+        font-size: 14px;
+        border: none;
+        padding: 0.5em 1.5em;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: $tr;
+
+        &:hover {
+            background-color: $special-2 - 10;
+        }
+
+        &.is-active {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+            background-color: $special-2 - 10;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    &__all {
+        display: none;
+
+        &::before {
+            content: "Показать все отзывы";
+        }
+
+        &.is-showed {
+            display: inline-block;
+        }
+
+        &.is-active {
+            &::before {
+                content: "Свернуть отзывы";
+            }
+        }
+    }
+}

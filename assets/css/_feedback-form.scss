@@ -1,0 +1,68 @@
+.feedback-form {
+    padding: 0 20px;
+    background-color: $bg-l;
+
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.15s ease-in-out;
+    max-height: 0;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 60px;
+    }
+
+    &.is-active {
+        max-height: 2000px;
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__input {
+        border: none;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+
+    &__submit {
+        width: 100%;
+        background-color: $special-2;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 4px;
+        transition: background-color 0.15s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $special-2 - 10;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

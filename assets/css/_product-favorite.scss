@@ -1,0 +1,35 @@
+.product-favorite {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url(../img/icons/favorites-stroked.svg) no-repeat center;
+    background-size: 53%;
+    cursor: pointer;
+    transition: background-image 0.2s, transform 0.1s ease-in-out;
+
+    &.is-active {
+        background: url(../img/icons/favorites-filled.svg) no-repeat center;
+        background-size: 53%;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    > span {
+        width: 10px;
+        height: 10px;
+        display: block;
+        background: url(../img/icons/favorites-filled.svg) no-repeat center;
+        background-size: 100%;
+        animation: favorites 1s ease-in-out;
+        position: absolute;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+    }
+}

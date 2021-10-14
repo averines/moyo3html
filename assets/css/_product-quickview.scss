@@ -1,0 +1,99 @@
+.product-quickview {
+    display: grid;
+    grid-template-columns: 404px auto;
+    // grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+    column-gap: 40px;
+
+    @media screen and (min-width: 1200px) {
+        column-gap: 50px;
+    }
+
+    .product-gallery {
+        grid-area: auto;
+        display: grid;
+        grid-template-columns: 64px auto;
+
+        .product-thumbs__item {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .product-info {
+        grid-area: auto;
+        padding: 0;
+        // max-width: 400px;
+        display: flex;
+        flex-direction: column;
+
+
+        &__share {
+            display: none;
+        }
+
+        &__price {
+            padding-bottom: 30px;
+        }
+
+        &__brand {
+            flex-direction: column;
+        }
+
+        &__text {
+            padding-top: 20px;
+        }
+
+        &__title {
+            display: inline-block;
+            padding: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $line-l;
+            transition: $tr;
+
+            &:hover {
+                color: $main;
+                border-block-color: $line-l;
+            }
+        }        
+
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            align-items: flex-start;
+            align-content: flex-start;
+            height: 100%;
+            column-gap: 40px;
+            grid-template-areas:
+                "header header"
+                "price moreinfo"
+                "properties moreinfo"
+                "colors colors"
+                "sizes sizes"
+                "text text";
+        }
+    }
+
+    .product-thumbs {
+        min-height: 0;
+        max-height: none;
+        height: 504px;
+    }
+
+    .product-thumbs__wrapper {
+        min-height: 0;
+        max-height: none;
+        height: 504px;
+    }
+
+    .product-colors {
+        max-width: 440px;
+
+        &__item {
+            picture {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.popup-info {
+    &__btn {
+        width: 1.5em;
+        height: 1.5em;
+        display: block;
+        border: none;
+        background: url(../img/icons/info-popup.svg) no-repeat center;
+        background-size: 85%;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: $tr;
+
+        &:hover {
+            opacity: 1;
+
+            + .popup-info__content {
+                opacity: 1;
+                visibility: visible;
+                max-height: 300px;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgb(228, 228, 228);
+        padding: 15px;
+        font-size: 12px;
+        z-index: 1;
+        border-radius: 5px;
+        color: $text-d;
+
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transform: translateY(10px);
+
+        transition: transform 0.15s ease-in-out;
+
+        > p {
+            font-size: 12.5px;
+            margin: 0 0 3px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// .product-table__row {
+//     position: relative;
+//     &:last-child {
+//         .popup-info {
+//             &__content {
+//                 top: -100%;
+//             }
+//         }
+//     }
+// }

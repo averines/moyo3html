@@ -386,32 +386,46 @@ for (let accordion of accordions) {
 
 
 // кнопка добавления в избранное
-const favorites = document.getElementsByClassName('product__favorite');
-[...favorites].forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('is-active')
-        item.insertAdjacentHTML('afterbegin', '<span></span>')
-        setTimeout(function () { item.innerHTML = '' }, 1000)
-    })
-})
+// const favorites = document.getElementsByClassName('product__favorite');
+// [...favorites].forEach(item => {
+//     item.addEventListener('click', () => {
+//         item.classList.toggle('is-active')
+//         item.insertAdjacentHTML('afterbegin', '<span></span>')
+//         setTimeout(function () { item.innerHTML = '' }, 1000)
+//     })
+// })
 
-// кнопка добавления в избранное на странице товара
-const favoritesBtns = document.getElementsByClassName('product-favorite-btn');
-[...favoritesBtns].forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('is-active')
-    })
-})
+// // кнопка добавления в избранное на странице товара
+// const favoritesBtns = document.getElementsByClassName('product-favorite-btn');
+// [...favoritesBtns].forEach(item => {
+//     item.addEventListener('click', () => {
+//         item.classList.toggle('is-active')
+//     })
+// })
 
-// кнопка добавления размера в корзину
-const sizeVariantsItems = document.getElementsByClassName('size-variants__item');
-[...sizeVariantsItems].forEach(item => {
-    item.addEventListener('click', (e) => {
-        e.preventDefault()
-        item.classList.toggle('is-active')
-    })
-})
+// // кнопка добавления размера в корзину
+// const sizeVariantsItems = document.getElementsByClassName('size-variants__item');
+// [...sizeVariantsItems].forEach(item => {
+//     item.addEventListener('click', (e) => {
+//         e.preventDefault()
+//         item.classList.toggle('is-active')
+//     })
+// })
 
+
+// кнопка добавления в избранное
+const favoritesBtns = document.querySelectorAll('.product-favorite')
+if (favoritesBtns) {
+    favoritesBtns.forEach(favoritesBtn => {
+        favoritesBtn.addEventListener('click', () => {
+            if (!favoritesBtn.classList.contains('is-active')) {
+                favoritesBtn.insertAdjacentHTML('afterbegin', '<span></span>')
+                setTimeout(function () { favoritesBtn.innerHTML = '' }, 1000)
+            }
+            favoritesBtn.classList.toggle('is-active')
+        })
+    })
+}
 
 // переключение цвета в карточке товара
 // var colorVariantStartId
@@ -645,92 +659,92 @@ if (togglerCount) {
 
 
 // загрузка файлов в отзыв перетаскиванием
-const dropArea = document.getElementById('feedback-form__upload-wrapper');
+// const dropArea = document.getElementById('feedback-form__upload-wrapper');
 
-if (dropArea) {
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false)
-    })
-
-
-    dropArea.addEventListener('dragenter', dropAreaHighlight, false)
-    dropArea.addEventListener('dragover', dropAreaHighlight, false)
-
-    dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
-    dropArea.addEventListener('drop', dropAreaUnhighlight, false)
-    dropArea.addEventListener('drop', dropHandle, false)
+// if (dropArea) {
+//     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+//         dropArea.addEventListener(eventName, preventDefaults, false)
+//     })
 
 
+//     dropArea.addEventListener('dragenter', dropAreaHighlight, false)
+//     dropArea.addEventListener('dragover', dropAreaHighlight, false)
 
-    function preventDefaults(e) {
-        e.preventDefault()
-        e.stopPropagation()
-    }
+//     dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
+//     dropArea.addEventListener('drop', dropAreaUnhighlight, false)
+//     dropArea.addEventListener('drop', dropHandle, false)
 
-    function dropAreaHighlight() {
-        dropArea.classList.add('highlight')
-    }
 
-    function dropAreaUnhighlight() {
-        dropArea.classList.remove('highlight')
-    }
 
-    function dropHandle(e) {
-        let dt = e.dataTransfer
-        let files = dt.files;
-        handleFiles(files)
-    }
+//     function preventDefaults(e) {
+//         e.preventDefault()
+//         e.stopPropagation()
+//     }
 
-    function handleFiles(files) {
-        files = [...files]
-        // files.forEach(uploadFile)
-        files.forEach(previewFile)
-    }
+//     function dropAreaHighlight() {
+//         dropArea.classList.add('highlight')
+//     }
 
-    function uploadFile(file) {
-        var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
-        var xhr = new XMLHttpRequest()
-        var formData = new FormData()
-        xhr.open('POST', url, true)
-        xhr.addEventListener('readystatechange', function (e) {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // Готово. Информируем пользователя
-            }
-            else if (xhr.readyState == 4 && xhr.status != 200) {
-                // Ошибка. Информируем пользователя
-            }
-        })
-        formData.append('file', file)
-        xhr.send(formData)
-    }
+//     function dropAreaUnhighlight() {
+//         dropArea.classList.remove('highlight')
+//     }
 
-    function previewFile(file) {
-        let reader = new FileReader()
-        reader.readAsDataURL(file)
-        reader.onloadend = function () {
-            let img = document.createElement('img')
-            img.src = reader.result
-            document.getElementById('feedback-form__upload-preview').appendChild(img)
-        }
-    }
-}
+//     function dropHandle(e) {
+//         let dt = e.dataTransfer
+//         let files = dt.files;
+//         handleFiles(files)
+//     }
+
+//     function handleFiles(files) {
+//         files = [...files]
+//         // files.forEach(uploadFile)
+//         files.forEach(previewFile)
+//     }
+
+//     function uploadFile(file) {
+//         var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
+//         var xhr = new XMLHttpRequest()
+//         var formData = new FormData()
+//         xhr.open('POST', url, true)
+//         xhr.addEventListener('readystatechange', function (e) {
+//             if (xhr.readyState == 4 && xhr.status == 200) {
+//                 // Готово. Информируем пользователя
+//             }
+//             else if (xhr.readyState == 4 && xhr.status != 200) {
+//                 // Ошибка. Информируем пользователя
+//             }
+//         })
+//         formData.append('file', file)
+//         xhr.send(formData)
+//     }
+
+//     function previewFile(file) {
+//         let reader = new FileReader()
+//         reader.readAsDataURL(file)
+//         reader.onloadend = function () {
+//             let img = document.createElement('img')
+//             img.src = reader.result
+//             document.getElementById('feedback-form__upload-preview').appendChild(img)
+//         }
+//     }
+// }
 
 
 // вывод значений диаграммой
-function progressDiagram() {
-    let diagramBox = document.querySelectorAll('.diagram');
-    diagramBox.forEach((box) => {
-        let circle = box.querySelector('.diagram-circle')
-        let deg = (360 * box.dataset.percent) / 100;
+// function progressDiagram() {
+//     let diagramBox = document.querySelectorAll('.diagram');
+//     diagramBox.forEach((box) => {
+//         let circle = box.querySelector('.diagram-circle')
+//         let deg = (360 * box.dataset.percent) / 100;
 
-        if (box.dataset.percent >= 50) {
-            circle.style.background = `linear-gradient(${deg}deg, transparent 50%, #ab064e 50%), linear-gradient(180deg, transparent 50%, #ab064e 50%)`
-        } else {
-            circle.style.background = `linear-gradient(180deg, #cdcdcd 50%, transparent 50%), linear-gradient(${deg}deg, transparent 50%, #ab064e 50%)`
-        }
-    });
-}
-progressDiagram()
+//         if (box.dataset.percent >= 50) {
+//             circle.style.background = `linear-gradient(${deg}deg, transparent 50%, #ab064e 50%), linear-gradient(180deg, transparent 50%, #ab064e 50%)`
+//         } else {
+//             circle.style.background = `linear-gradient(180deg, #cdcdcd 50%, transparent 50%), linear-gradient(${deg}deg, transparent 50%, #ab064e 50%)`
+//         }
+//     });
+// }
+// progressDiagram()
 
 
 
@@ -1260,54 +1274,54 @@ if (paymentListItems.length > 0) {
 
 
 // новый слайдер
-if (document.querySelectorAll('.product-gallery').length > 0) {
-    const swiperProductThumbs = new Swiper('.product-thumbs', {
-        direction: 'vertical',
-        loop: true,
-        grabCursor: false,
-        slidesPerView: 4,
-        setWrapperSize: true,
-        spaceBetween: 4,
-        allowTouchMove: false,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    })
+// if (document.querySelectorAll('.product-gallery').length > 0) {
+//     const swiperProductThumbs = new Swiper('.product-thumbs', {
+//         direction: 'vertical',
+//         loop: true,
+//         grabCursor: false,
+//         slidesPerView: 4,
+//         setWrapperSize: true,
+//         spaceBetween: 4,
+//         allowTouchMove: false,
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//     })
 
-    const swiperProductGallery = new Swiper('.product-gallery-slider', {
-        loop: true,
-        grabCursor: true,
-        slidesPerView: 2,
-        setWrapperSize: true,
-        spaceBetween: 10,
-        navigation: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            768: {
-                // allowTouchMove: false,
-                slidesPerView: 1,
-                spaceBetween: 0,
-                grabCursor: false,
-                speed: 0,
-            }
-        }
-    })
+//     const swiperProductGallery = new Swiper('.product-gallery-slider', {
+//         loop: true,
+//         grabCursor: true,
+//         slidesPerView: 2,
+//         setWrapperSize: true,
+//         spaceBetween: 10,
+//         navigation: true,
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
+//         breakpoints: {
+//             768: {
+//                 // allowTouchMove: false,
+//                 slidesPerView: 1,
+//                 spaceBetween: 0,
+//                 grabCursor: false,
+//                 speed: 0,
+//             }
+//         }
+//     })
 
-    const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
-    swiperProductThumbsItems.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
-        })
-    })
-}
+//     const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
+//     swiperProductThumbsItems.forEach(item => {
+//         item.addEventListener('mouseover', () => {
+//             swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
+//         })
+//     })
+// }
 
 
 
@@ -1459,28 +1473,28 @@ if (refuseBtns.length > 0) {
 
 
 // открытие закрытие блока с формой для написания отзыва
-const feedbackStartBtn = document.querySelector('[data-action="feedback-start"]')
-const feedbackWrapper = document.querySelector('.feedback-wrapper')
+// const feedbackStartBtn = document.querySelector('[data-action="feedback-start"]')
+// const feedbackWrapper = document.querySelector('.feedback-wrapper')
 
-if (feedbackStartBtn) {
-    feedbackStartBtn.addEventListener('click', () => {
-        feedbackWrapper.classList.toggle('is-active')
-    })
-}
+// if (feedbackStartBtn) {
+//     feedbackStartBtn.addEventListener('click', () => {
+//         feedbackWrapper.classList.toggle('is-active')
+//     })
+// }
 
 
 // линии рейтинга на странице продукта
-const starsLinesItems = documentBody.querySelectorAll('.stars-lines__item')
+// const starsLinesItems = documentBody.querySelectorAll('.stars-lines__item')
 
-if (starsLinesItems) {
-    starsLinesItems.forEach(starsLinesItem => {
-        let starsLine = starsLinesItem.querySelector('.stars-lines__line')
-        let starsLineMainValue = document.createElement('div')
-        starsLineMainValue.classList.add('stars-lines__value')
-        starsLineMainValue.style.width = starsLinesItem.dataset.feedbackPercent + '%'
-        starsLine.appendChild(starsLineMainValue)
-    })
-}
+// if (starsLinesItems) {
+//     starsLinesItems.forEach(starsLinesItem => {
+//         let starsLine = starsLinesItem.querySelector('.stars-lines__line')
+//         let starsLineMainValue = document.createElement('div')
+//         starsLineMainValue.classList.add('stars-lines__value')
+//         starsLineMainValue.style.width = starsLinesItem.dataset.feedbackPercent + '%'
+//         starsLine.appendChild(starsLineMainValue)
+//     })
+// }
 
 // предупреждение о необходимости проверить адрес доставки при оформлении заказа
 // const deliveryTypeWarningItems = document.querySelectorAll('.js-delivery-type-warning .form-group')
@@ -1608,52 +1622,320 @@ if (mainSlider) {
 
 
 // кнопка показать/скрыть отзывы на странице товара
-const feedbacksToggleBtn = documentBody.querySelector('[data-action="feedbacks-toggle"]')
-const feedbacksToggleBlock = documentBody.querySelector('.feedbacks')
+// const feedbacksToggleBtn = documentBody.querySelector('[data-action="feedbacks-toggle"]')
+// const feedbacksToggleBlock = documentBody.querySelector('.feedbacks')
 
-if (feedbacksToggleBtn) {
-    feedbacksToggleBtn.addEventListener('click', () => {
-        if (feedbacksToggleBtn.innerHTML == 'Показать отзывы') {
-            feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
-        } else {
-            feedbacksToggleBtn.innerHTML = 'Показать отзывы'
-        }
-        feedbacksToggleBlock.classList.toggle('is-active')
+// if (feedbacksToggleBtn) {
+//     feedbacksToggleBtn.addEventListener('click', () => {
+//         if (feedbacksToggleBtn.innerHTML == 'Показать отзывы') {
+//             feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
+//         } else {
+//             feedbacksToggleBtn.innerHTML = 'Показать отзывы'
+//         }
+//         feedbacksToggleBlock.classList.toggle('is-active')
+//     })
+
+//     if (document.body.clientWidth >= 1200) {
+//         feedbacksToggleBlock.classList.add('is-active')
+//     }
+
+
+//     window.addEventListener('resize', () => {
+//         if (document.body.clientWidth >= 1200) {
+//             feedbacksToggleBlock.classList.add('is-active')
+//             feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
+//         } else {
+//             feedbacksToggleBlock.classList.remove('is-active')
+//             feedbacksToggleBtn.innerHTML = 'Показать отзывы'
+//         }
+//     })
+
+
+// }
+
+
+// кпопка показать/скрыть таблицу с размерами на странице продукта
+// const productBuy = documentBody.querySelector('.product-buy')
+// if (productBuy) {
+//     const productBuyClose = productBuy.querySelector('.product-buy__close')
+//     const productBuyShowSizes = productBuy.querySelector('.product-buy__btn--showsizes')
+//     const productBuyTable = productBuy.querySelector('.product-color-info')
+
+//     productBuyShowSizes.addEventListener('click', () => {
+//         productBuyTable.classList.toggle('is-active')
+//         productBuyShowSizes.classList.toggle('is-active')
+//     })
+
+//     productBuyClose.addEventListener('click', () => {
+//         productBuyTable.classList.toggle('is-active')
+//         productBuyShowSizes.classList.toggle('is-active')
+//     })
+// }
+
+// скрипты для страницы товара =============================================
+
+// показать/скрыть дополнительные характеристики на странице товара
+const productProperties = document.querySelector('.product-properties')
+if (productProperties) {
+    const productPropertiesBtn = productProperties.querySelector('.product-properties__btn')
+    const productPropertiesMore = productProperties.querySelector('.product-properties__more')
+
+    productPropertiesBtn.addEventListener('click', () => {
+        productPropertiesBtn.classList.toggle('is-active')
+        productPropertiesMore.classList.toggle('is-active')
+    })
+}
+
+// рейтинг товара: графики распределение оценок в виде линий
+const ratingLines = document.querySelectorAll('.rating-lines__item')
+if (ratingLines) {
+    ratingLines.forEach(ratingLine => {
+        feedbackPercent = ratingLine.dataset.feedbackPercent
+        ratingLine.querySelector('.rating-lines__percent').innerHTML = feedbackPercent
+        ratingLine.querySelector('.rating-lines__value').style.width = feedbackPercent + '%'
+    })
+}
+
+// рейтинг товара: графики соответствия размеру
+const ratingSizesLines = document.querySelectorAll('.rating-sizes__item')
+if (ratingSizesLines) {
+    ratingSizesLines.forEach(ratingSizesLine => {
+        feedbackSizePercent = ratingSizesLine.dataset.feedbackSizePercent
+        ratingSizesLine.querySelector('.rating-sizes__percent').innerHTML = feedbackSizePercent
+        ratingSizesLine.querySelector('.rating-sizes__value').style.width = feedbackSizePercent + '%'
+    })
+}
+
+// рейтинг товара: графики соответствия размеру в виде звезд
+const ratingNumberBtn = document.querySelector('.rating-number__btn')
+const ratingStars = document.querySelector('.rating-stars')
+if (ratingNumberBtn && ratingStars) {
+    ratingNumberBtn.addEventListener('mouseover', () => {
+        ratingStars.classList.add('is-active')
+    })
+    ratingNumberBtn.addEventListener('mouseout', () => {
+        ratingStars.classList.remove('is-active')
+    })
+}
+
+// показать/скрыть все размеры в таблице товара, если размеров больше 8
+const productTableWrapper = document.querySelector('.product-table-wrapper')
+const productTableBtn = document.querySelector('.product-table__btn')
+const poductsTableRows = document.querySelectorAll('.product-table__row')
+if (poductsTableRows.length > 8) {
+    if (productTableWrapper && productTableBtn) {
+        productTableBtn.addEventListener('click', () => {
+            productTableBtn.classList.toggle('is-active')
+            productTableWrapper.classList.toggle('is-active')
+        })
+    }
+} else {
+    if (productTableWrapper && productTableBtn) {
+        productTableWrapper.classList.remove('product-table-wrapper')
+        productTableBtn.style.display = 'none'
+    }
+}
+
+
+// имитация добавления размера в корзину
+const productTableQuantityItems = document.querySelectorAll('.product-table .quantity')
+if (productTableQuantityItems) {
+    productTableQuantityItems.forEach(productTableQuantityItem => {
+        const plus = productTableQuantityItem.querySelector('.quantity__btn--plus')
+        const minus = productTableQuantityItem.querySelector('.quantity__btn--minus')
+        const input = productTableQuantityItem.querySelector('.quantity__input')
+        const parentRow = input.closest('tr')
+        let inputValue = 0
+
+        input.addEventListener('change', () => {
+            updateTotal()
+        })
+
+        plus.addEventListener('click', () => {
+            inputValue = Number(input.value) + 1
+            input.value = inputValue
+
+            if (inputValue >= 1) {
+                // minus.classList.remove('quantity__btn--delete')
+                parentRow.classList.add('is-added')
+                minus.disabled = false
+            }
+
+            // if (inputValue == 1) {
+            //     minus.classList.add('quantity__btn--delete')
+            // }
+
+            updateTotal()
+        })
+
+        minus.addEventListener('click', () => {
+            if (inputValue > 0) {
+                inputValue = Number(input.value) - 1
+                input.value = inputValue
+                minus.disabled = false
+            }
+
+            // if (inputValue == 1) {
+            //     minus.classList.add('quantity__btn--delete')
+            // }
+
+            if (inputValue == 0) {
+                parentRow.classList.remove('is-added')
+                // minus.classList.remove('quantity__btn--delete')
+                minus.disabled = true
+            }
+
+            updateTotal()
+        })
+    })
+}
+
+// обновление подитога на странице товара
+const productTotalCostEl = document.querySelector('.product-table__total .after-currency')
+const productTotalQuantityEl = document.querySelector('.product-table__total .after-pz')
+const productTotalEl = document.querySelector('[data-action="product-table-total"]')
+
+function updateTotal() {
+    let productTotalCost = 0
+    let productTotalQuantity = 0
+
+    poductsTableRows.forEach(poductsTableRow => {
+        const inputVal = poductsTableRow.querySelector('.quantity__input').value
+        const price = poductsTableRow.querySelector('.product-price__base').innerHTML.replace(/\s/g, '');
+
+        productTotalCost = productTotalCost + (Number(inputVal) * price)
+        productTotalQuantity = productTotalQuantity + Number(inputVal)
+    })
+    productTotalEl.classList.add('is-animated')
+    productTotalCostEl.innerHTML = productTotalCost.toLocaleString('ru')
+    productTotalQuantityEl.innerHTML = productTotalQuantity
+
+    setTimeout(() => { productTotalEl.classList.remove('is-animated') }, 100);
+}
+
+
+// показ отзывов
+const productFeedbackItems = document.querySelectorAll('.feedback-messages__item')
+const productFeedbackAllBtn = document.querySelector('.product-feedback__all')
+
+
+// показываем кнопку разворачивания отзывов, если их больше одного
+if (productFeedbackItems) {
+    if (productFeedbackItems.length > 2) {
+        productFeedbackAllBtn.classList.add('is-showed')
+        productFeedbackAllBtn.addEventListener('click', () => {
+            productFeedbackAllBtn.classList.toggle('is-active')
+            productFeedbackItems.forEach(productFeedbackItem => {
+                productFeedbackItem.classList.toggle('is-showed')
+            })
+        })
+    }
+}
+
+// форма добавления отзыва
+const productFeedbackForm = document.querySelector('.feedback-form')
+const productFeedbackAddBtn = document.querySelector('.product-feedback__add')
+if (productFeedbackForm && productFeedbackAddBtn) {
+    productFeedbackAddBtn.addEventListener('click', () => {
+        productFeedbackForm.classList.toggle('is-active')
+        productFeedbackAddBtn.classList.toggle('is-active')
+
+    })
+}
+
+// загрузка файлов в отзыв перетаскиванием
+const dropArea = document.querySelector('.form-file');
+if (dropArea) {
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false)
     })
 
-    if (document.body.clientWidth >= 1200) {
-        feedbacksToggleBlock.classList.add('is-active')
+    dropArea.addEventListener('dragenter', dropAreaHighlight, false)
+    dropArea.addEventListener('dragover', dropAreaHighlight, false)
+    dropArea.addEventListener('dragleave', dropAreaUnhighlight, false)
+    dropArea.addEventListener('drop', dropAreaUnhighlight, false)
+    dropArea.addEventListener('drop', dropHandle, false)
+
+
+    function preventDefaults(e) {
+        e.preventDefault()
+        e.stopPropagation()
     }
 
+    function dropAreaHighlight() {
+        dropArea.classList.add('is-highlight')
+    }
 
-    window.addEventListener('resize', () => {
-        if (document.body.clientWidth >= 1200) {
-            feedbacksToggleBlock.classList.add('is-active')
-            feedbacksToggleBtn.innerHTML = 'Скрыть отзывы'
-        } else {
-            feedbacksToggleBlock.classList.remove('is-active')
-            feedbacksToggleBtn.innerHTML = 'Показать отзывы'
+    function dropAreaUnhighlight() {
+        dropArea.classList.remove('is-highlight')
+    }
+
+    function dropHandle(e) {
+        let dt = e.dataTransfer
+        let files = dt.files;
+        handleFiles(files)
+    }
+
+    function handleFiles(files) {
+        files = [...files]
+        // files.forEach(uploadFile)
+        files.forEach(previewFile)
+    }
+
+    function uploadFile(file) {
+        var url = 'ВАШ URL ДЛЯ ЗАГРУЗКИ ФАЙЛОВ'
+        var xhr = new XMLHttpRequest()
+        var formData = new FormData()
+        xhr.open('POST', url, true)
+        xhr.addEventListener('readystatechange', function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Готово. Информируем пользователя
+            }
+            else if (xhr.readyState == 4 && xhr.status != 200) {
+                // Ошибка. Информируем пользователя
+            }
+        })
+        formData.append('file', file)
+        xhr.send(formData)
+    }
+
+    function previewFile(file) {
+        let reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onloadend = function () {
+            let img = document.createElement('img')
+            img.src = reader.result
+            document.querySelector('.form-file-prewiew').appendChild(img)
         }
-    })
-
-
+    }
 }
 
 
 // кпопка показать/скрыть таблицу с размерами на странице продукта
-const productBuy = documentBody.querySelector('.product-buy')
+const productBuy = document.querySelector('.product-buy')
 if (productBuy) {
-    const productBuyClose = productBuy.querySelector('.product-buy__close')
+    const productBuyCloseBtn = productBuy.querySelector('.product-buy__close')
     const productBuyShowSizes = productBuy.querySelector('.product-buy__btn--showsizes')
-    const productBuyTable = productBuy.querySelector('.product-color-info')
+    const productBuyTable = productBuy.querySelector('.product-buy__table')
+    const productBuyOverlay = productBuy.querySelector('.product-buy__overlay')
 
     productBuyShowSizes.addEventListener('click', () => {
         productBuyTable.classList.toggle('is-active')
         productBuyShowSizes.classList.toggle('is-active')
+        productBuyOverlay.classList.toggle('is-active')
     })
 
-    productBuyClose.addEventListener('click', () => {
+    function productBuyClose() {
         productBuyTable.classList.toggle('is-active')
         productBuyShowSizes.classList.toggle('is-active')
+        productBuyOverlay.classList.toggle('is-active')
+    }
+
+    productBuyCloseBtn.addEventListener('click', () => {
+        productBuyClose()
+    })
+
+    productBuyOverlay.addEventListener('click', () => {
+        productBuyClose()
     })
 }

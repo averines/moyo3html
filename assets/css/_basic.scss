@@ -1,5 +1,5 @@
 $main: #ab064e;
-$main-light: #f2cfde;
+$main-l: #f2cfde;
 $main-hover: #c00a5a;
 
 $white: rgba(#fff, 1);
@@ -14,16 +14,18 @@ $special-6: #01a976;
 $special-6-l: #c0dad3;
 $special-7: #1978b8;
 
+
 $text: #3d3d3c;
-$text-dark: #555;
-$text-light: #777;
+$text-d: #555;
+$text-l: #777;
 $text-main-light: #d9aacd;
 $text-white-light: #f1b4c8;
 
-$line-dark: #cdcdcd;
-$line-light: #d9d9d9;
-$bg-light: #f3f2f0;
+$line-d: #cdcdcd;
+$line-l: #d9d9d9;
+$bg-l: #f3f2f0;
 $bg-dark: #c4c4c4;
+$body: #f9f9f9;
 
 $gap: 15px;
 $gap-big: 20px;
@@ -47,7 +49,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: $text;
-  background-color: #f9f9f9;
+  background-color: $body;
   position: relative;
 }
 
@@ -157,6 +159,7 @@ h3,
   font-size: 20px;
   letter-spacing: $ls;
   font-weight: 400;
+  padding-bottom: 15px;
 }
 
 h4,
@@ -306,11 +309,11 @@ ol {
   }
 
   &--gray {
-    border-color: $line-light;
-    background-color: $bg-light;
+    border-color: $line-l;
+    background-color: $bg-l;
     &::before {
       content: "Уведомление";
-      background-color: $text-light;
+      background-color: $text-l;
     }
   }
 }
@@ -368,9 +371,9 @@ ol {
 
     &:disabled {
       background-color: transparent;
-      color: $text-light;
+      color: $text-l;
       opacity: 0.8;
-      border-color: $line-dark;
+      border-color: $line-d;
 
       &:hover {
         opacity: 1;
@@ -378,37 +381,37 @@ ol {
     }
 
     &.is-disabled {
-      border-color: $text-light;
+      border-color: $text-l;
       pointer-events: none;
-      background-color: $text-light;
+      background-color: $text-l;
     }
   }
 
   &-gray {
     color: $white;
-    background-color: $text-light;
+    background-color: $text-l;
     min-width: auto;
 
     &:hover {
-      background-color: $text-light - 15;
+      background-color: $text-l - 15;
     }
   }
 
   &-gray-light {
     color: $text;
-    background-color: $bg-light;
-    border: 1px solid $line-light;
+    background-color: $bg-l;
+    border: 1px solid $line-l;
     min-width: auto;
 
     &:hover {
-      background-color: $bg-light - 15;
+      background-color: $bg-l - 15;
     }
   }
 
   &-white {
     background-color: $white;
     min-width: auto;
-    border: 1px solid $line-light;
+    border: 1px solid $line-l;
 
     &:hover {
       background-color: $white - 15;
@@ -511,7 +514,7 @@ ol {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: $ls;
-  color: $text-dark;
+  color: $text-d;
   text-decoration: none;
   border-bottom: 1px dashed $text;
   margin-left: auto;
@@ -638,7 +641,7 @@ ol {
 
 .accordion--standart {
   .accordion__title {
-    color: $text-dark;
+    color: $text-d;
     font-size: 14px;
     font-weight: 600;
     padding: 15px 30px 15px 0;
@@ -647,11 +650,11 @@ ol {
     justify-content: space-between;
     cursor: pointer;
     transition: $tr;
-    border-top: 1px solid $line-light;
+    border-top: 1px solid $line-l;
     line-height: 1.4;
 
     &:hover {
-      background: linear-gradient(270deg, $bg-light 0%, transparent 100%);
+      background: linear-gradient(270deg, $bg-l 0%, transparent 100%);
     }
 
     &::after {
@@ -688,7 +691,7 @@ ol {
 
 .accordion--brand-filter {
   .accordion__title {
-    color: $text-dark;
+    color: $text-d;
     font-size: 11px;
     text-transform: uppercase;
     font-weight: 600;
@@ -698,11 +701,11 @@ ol {
     justify-content: space-between;
     cursor: pointer;
     transition: $tr;
-    border-bottom: 3px solid $line-light;
+    border-bottom: 3px solid $line-l;
     line-height: 1.4;
 
     &:hover {
-      background: linear-gradient(270deg, $bg-light 0%, transparent 100%);
+      background: linear-gradient(270deg, $bg-l 0%, transparent 100%);
     }
 
     &::after {
@@ -720,7 +723,7 @@ ol {
   .accordion__item {
     &.is-active {
       .accordion__title {
-        border-bottom: 3px solid $line-light;
+        border-bottom: 3px solid $line-l;
 
         &::after {
           background-image: url(../img/icons/arrow.svg);
@@ -753,7 +756,7 @@ ol {
 }
 
 .text-muted {
-  color: $text-light;
+  color: $text-l;
 }
 
 .text-main {
@@ -799,11 +802,11 @@ p {
 hr {
   height: 0;
   border: none;
-  border-bottom: 2px solid $line-dark;
+  border-bottom: 2px solid $line-d;
   margin: 2em 0;
 
   &.dotted {
-    border-bottom: 2px dotted $line-dark;
+    border-bottom: 2px dotted $line-d;
   }
 }
 
@@ -850,4 +853,32 @@ hr {
 
 .fancybox-container {
   z-index: 99999999;
+}
+
+
+.container--page-product {
+  padding-top: 15px;
+
+  .h3 {
+    padding-top: 30px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 516px 1fr;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+      "gallery info"
+      "feedback info";
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 620px 1fr;
+  }
+
+  @media screen and (min-width: 1400px) {
+    // grid-template-columns: 703px auto;
+  }
 }

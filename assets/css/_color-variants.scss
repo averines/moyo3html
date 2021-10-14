@@ -1,0 +1,26 @@
+.color-variants {
+    flex-direction: column;
+    row-gap: 3px;
+    position: absolute;
+    right: -70px;
+    top: 0;
+    width: 70px;
+    z-index: 2;
+    background-color: #fff;
+    height: 100%;
+    padding: 5px;
+
+    &__item {
+        display: block;
+        cursor: pointer;
+
+        > img {
+            display: block;
+            width: 100%;
+        }
+
+        &.is-active {
+            outline: 1px solid $main-l;
+        }
+    }
+}

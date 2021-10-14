@@ -1,0 +1,32 @@
+.feedback-stars-form {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+
+    > input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        &:checked {
+            & ~ label {
+                background: url(../img/icons/star-filled.svg) no-repeat center;
+            }
+        }
+    }
+
+    > label {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icons/star-stroked.svg) no-repeat center;
+        display: block;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+}

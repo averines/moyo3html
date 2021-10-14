@@ -1,0 +1,54 @@
+.product-colors {
+    overflow: hidden;
+    max-width: 600px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 700px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 380px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        max-width: 800px;
+    }
+
+    &__wrapper {
+        display: flex;
+        column-gap: 3px;
+        overflow: hidden;
+    }
+
+    &__item {
+        padding: 2px;
+        display: block;
+        transition: opacity 0.15s ease-in-out;
+        margin: 0;
+
+        picture {
+            // width: 100%;
+            display: block;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 0;
+
+            > img {
+                // width: 100%;
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &:not(.is-active):hover {
+            opacity: 0.8;
+        }
+
+        &.is-active {
+            picture {
+                box-shadow: 0 0 1px 2px $main;
+            }
+        }
+    }
+}

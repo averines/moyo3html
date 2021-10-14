@@ -106,7 +106,7 @@
           font-size: 0.9rem;
           color: $text;
           padding: 0.75em 0;
-          border-top: 1px dotted $line-light;
+          border-top: 1px dotted $line-l;
           text-align: left;
           background: none;
           border: none;
@@ -126,7 +126,7 @@
           }
 
           &:hover {
-            background-color: $bg-light;
+            background-color: $bg-l;
             
 
             .menu-child__link {
@@ -297,7 +297,7 @@
         padding: 10px 50px 10px 15px;
         background: none;
         transition: $tr;
-        background-color: $main-light;
+        background-color: $main-l;
         border-radius: 2px;
 
         &:hover {
@@ -492,7 +492,7 @@
         font-size: 0.85em;
         letter-spacing: $ls;
         font-weight: 600;
-        background-color: $bg-light;
+        background-color: $bg-l;
         display: block;
         width: 100%;
         cursor: pointer;
@@ -503,7 +503,7 @@
         align-items: center;
 
         &:hover {
-          background-color: $bg-light - 5;
+          background-color: $bg-l - 5;
         }
 
         &::after {
@@ -543,7 +543,7 @@
         li {
           padding: 0.75em 0;
           margin: 0 1em;
-          border-top: 1px dotted $line-light;
+          border-top: 1px dotted $line-l;
 
           a {
             text-decoration: none;
@@ -664,7 +664,7 @@
   border: 10px solid $white;
   width: 100%;
   max-width: 580px;
-  background-color: $bg-light;
+  background-color: $bg-l;
 
   &__title {
     font-size: 1.1em;
@@ -718,7 +718,7 @@
         left: 0;
         position: absolute;
         font-size: 14px;
-        color: $text-light;
+        color: $text-l;
         transition: top 0.2s $cub1;
       }
 
@@ -728,7 +728,7 @@
         padding: 0.5em 0.5em 0.5em 0;
         border: none;
         font-size: 18px;
-        border-bottom: 1px dashed $line-dark;
+        border-bottom: 1px dashed $line-d;
         transition: $tr;
 
         &:focus {
@@ -779,13 +779,13 @@
     transition: $tr;
 
     &:hover {
-      color: $text-light;
+      color: $text-l;
     }
 
     &::after {
       display: none;
       content: "•";
-      color: $text-light;
+      color: $text-l;
       margin-left: 0.5em;
     }
   }
@@ -838,7 +838,7 @@
 
   &__text {
     font-size: 0.85em;
-    color: $text-light;
+    color: $text-l;
   }
 
   .link-modal {
@@ -898,7 +898,7 @@
 
     &::-webkit-scrollbar-thumb {
       height: 4px;
-      background-color: $line-light;
+      background-color: $line-l;
       border-radius: 3px;
     }
 
@@ -926,7 +926,7 @@
 
   .cart-dropdown {
     padding: $gap;
-    color: $text-light;
+    color: $text-l;
 
     &__count {
       color: $text;
@@ -957,7 +957,7 @@
       picture,
       img {
         border-radius: 4px;
-        background-color: $bg-light;
+        background-color: $bg-l;
         display: block;
         font-size: 12px;
       }
@@ -967,7 +967,7 @@
       }
 
       &:hover {
-        background-color: $bg-light;
+        background-color: $bg-l;
 
         .product {
           border-color: transparent;
@@ -982,7 +982,7 @@
   }
 
   .product {
-    border-top: 1px dashed $line-light;
+    border-top: 1px dashed $line-l;
     padding: 15px 0;
     display: flex;
     column-gap: $gap;
@@ -1020,7 +1020,7 @@
         }
 
         &__value {
-          color: $text-light;
+          color: $text-l;
         }
       }
     }
@@ -1097,7 +1097,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: $bg-light;
+  background-color: $bg-l;
   position: fixed;
   overflow: hidden;
   overflow-y: scroll;
@@ -1134,7 +1134,7 @@
     font-size: 0.75em;
     letter-spacing: $ls;
     font-weight: 600;
-    background-color: $bg-light;
+    background-color: $bg-l;
     padding: 0.8em 1em;
     display: flex;
     align-items: center;
@@ -1155,7 +1155,7 @@
     }
 
     &:hover {
-      background-color: $bg-light - 7;
+      background-color: $bg-l - 7;
     }
   }
 
@@ -1206,7 +1206,7 @@
   }
 
   &__item {
-    border-bottom: 1px dashed $line-light;
+    border-bottom: 1px dashed $line-l;
 
     &:last-child {
       border-bottom: none;
@@ -1270,7 +1270,7 @@
 
     &:hover {
       // opacity: 0.6;
-      color: $text-light;
+      color: $text-l;
     }
 
     // &.is-active {
@@ -1285,7 +1285,7 @@
 
 .category-menu__subtitle {
   font-size: 0.9em;
-  color: $text-light;
+  color: $text-l;
   margin-left: 0.5em;
   font-weight: 400;
 }
@@ -1372,7 +1372,7 @@
 
       &:hover {
         opacity: 0.8;
-        border-bottom-color: $line-dark;
+        border-bottom-color: $line-d;
       }
     }
   }
@@ -1408,7 +1408,7 @@
 
 // футер
 .footer {
-  background-color: $bg-light;
+  background-color: $bg-l;
 
   .footer-top {
     &__contacts {
@@ -1422,7 +1422,7 @@
       flex-direction: column;
 
       .link-phone {
-        color: $text-dark;
+        color: $text-d;
         font-size: 16px;
         font-weight: 600;
         text-decoration: none;
@@ -1437,7 +1437,7 @@
         text-transform: uppercase;
         border: none;
         font-size: 10px;
-        color: $text-dark;
+        color: $text-d;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -1483,7 +1483,7 @@
       .link-map {
         text-transform: uppercase;
         font-size: 10px;
-        color: $text-dark;
+        color: $text-d;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -1521,7 +1521,7 @@
           text-transform: uppercase;
           font-size: 10px;
           font-weight: 600;
-          color: $text-dark;
+          color: $text-d;
           margin-bottom: 10px;
         }
 
@@ -1590,10 +1590,10 @@
     .footer-menu__item {
       padding-top: 12px;
       padding-bottom: 12px;
-      border-bottom: 1px dashed $line-light;
+      border-bottom: 1px dashed $line-l;
 
       > a {
-        color: $text-dark;
+        color: $text-d;
         text-decoration: none;
         font-size: 15px;
         letter-spacing: $ls;
@@ -1618,12 +1618,12 @@
     }
 
     &__title {
-      color: $text-dark;
+      color: $text-d;
       text-transform: uppercase;
       letter-spacing: $ls;
       font-size: 13px;
       font-weight: 600;
-      background-color: $bg-light;
+      background-color: $bg-l;
       padding: 15px;
       display: flex;
       align-items: center;
@@ -1637,7 +1637,7 @@
       }
 
       &:hover {
-        background-color: $bg-light - 5%;
+        background-color: $bg-l - 5%;
       }
     }
   }
@@ -1841,7 +1841,7 @@
 .section-actions {
   padding-top: 3em;
   padding-bottom: 3em;
-  background-color: $bg-light;
+  background-color: $bg-l;
 }
 
 .section-categories {
@@ -1908,7 +1908,7 @@
 
     &__info {
       padding: 15px 15px 40px 15px;
-      background-color: $bg-light;
+      background-color: $bg-l;
       min-height: 130px;
       position: relative;
       flex-grow: 1;
@@ -2084,7 +2084,7 @@
       display: block;
       width: 1px;
       height: 0.8em;
-      background-color: $line-dark;
+      background-color: $line-d;
       margin-right: 10px;
     }
   }
@@ -2215,7 +2215,7 @@
     left: calc(50% - 80px);
     z-index: 4;
     text-decoration: none;
-    color: $text-light;
+    color: $text-l;
     background-color: $white;
     opacity: 0.8;
     font-size: 0.7em;
@@ -2398,7 +2398,7 @@
   .product-table.table {
     thead {
       td {
-        background-color: $bg-light;
+        background-color: $bg-l;
       }
     }
   }
@@ -2460,7 +2460,7 @@
     }
 
     &:hover {
-      outline-color: $text-light;
+      outline-color: $text-l;
     }
   }
 }
@@ -2479,7 +2479,7 @@
   &__item {
     display: none;
     text-decoration: none;
-    border: 1px solid $line-dark;
+    border: 1px solid $line-d;
     padding: 0.5em;
     font-size: 0.7em;
     color: $text;
@@ -2487,13 +2487,13 @@
     border-radius: 3px;
 
     &:hover {
-      border-color: $text-light;
-      border-color: $text-light;
+      border-color: $text-l;
+      border-color: $text-l;
     }
 
     &.is-active {
-      background-color: $text-light;
-      border-color: $text-light;
+      background-color: $text-l;
+      border-color: $text-l;
       color: $white;
     }
 
@@ -2508,7 +2508,7 @@
     .size-variants__item {
       display: block;
       padding: 0.75em 1em;
-      border-color: $line-light;
+      border-color: $line-l;
       pointer-events: none;
     }
   }
@@ -2898,7 +2898,7 @@
       }
     }
     a {
-      color: $text-light;
+      color: $text-l;
       text-decoration: none;
       transition: $tr;
       &:hover {
@@ -2966,7 +2966,7 @@
     align-items: center;
     width: 36px;
     height: 36px;
-    border: 1px solid $line-dark;
+    border: 1px solid $line-d;
     background-color: $white;
     overflow: hidden;
     border-radius: 4px 0 0 4px;
@@ -3028,7 +3028,7 @@
     padding: 7px;
 
     &:hover {
-      background-color: $line-light + 20%;
+      background-color: $line-l + 20%;
     }
 
     &--active {
@@ -3093,7 +3093,7 @@
       align-items: center;
       cursor: pointer;
       background-color: $white;
-      border-bottom: 1px dashed $line-light;
+      border-bottom: 1px dashed $line-l;
       margin: 0 13px;
       padding: 11px 0;
       // transition: background-color 0.2s ease-in-out;
@@ -3103,12 +3103,12 @@
       }
 
       &:hover {
-        background: linear-gradient(90deg, transparent 0%, $bg-light + 5 50%, transparent 100%);
+        background: linear-gradient(90deg, transparent 0%, $bg-l + 5 50%, transparent 100%);
       }
 
       &.is-active {
         display: flex;
-        background-color: $bg-light;
+        background-color: $bg-l;
         margin: 0;
         padding: 10px 13px;
         border-bottom: none;
@@ -3138,7 +3138,7 @@
         }
 
         &:hover {
-          background: $bg-light;
+          background: $bg-l;
         }
       }
     }
@@ -3154,7 +3154,7 @@
       align-items: center;
       cursor: pointer;
       background-color: $white;
-      border-bottom: 1px dashed $line-light;
+      border-bottom: 1px dashed $line-l;
       margin: 0 13px;
       padding: 11px 0;
       // transition: background-color 0.2s ease-in-out;
@@ -3164,13 +3164,13 @@
       }
 
       &:hover {
-        background: linear-gradient(90deg, transparent 0%, $bg-light + 5 50%, transparent 100%);
+        background: linear-gradient(90deg, transparent 0%, $bg-l + 5 50%, transparent 100%);
       }
 
       &.is-active {
         display: flex;
         align-items: center;
-        background-color: $bg-light;
+        background-color: $bg-l;
         margin: 0;
         padding: 10px 13px;
         border-bottom: none;
@@ -3197,7 +3197,7 @@
         }
 
         &:hover {
-          background: $bg-light;
+          background: $bg-l;
         }
       }
     }
@@ -3209,12 +3209,12 @@
   gap: 10px;
 
   &__item {
-    background-color: $bg-light;
+    background-color: $bg-l;
     padding: 5px 5px 5px 10px;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    color: $text-dark;
+    color: $text-d;
     font-size: 12px;
     transition: $tr;
     cursor: pointer;
@@ -3232,7 +3232,7 @@
     }
 
     &:hover {
-      box-shadow: 0 2px 4px $line-dark;
+      box-shadow: 0 2px 4px $line-d;
 
       &::after {
         background-color: $special-1;
@@ -3313,9 +3313,9 @@
     }
 
     &__title {
-      background-color: $bg-light;
+      background-color: $bg-l;
       font-weight: 600;
-      color: $text-dark;
+      color: $text-d;
       font-size: 15px;
       padding: 14px 20px;
       display: flex;
@@ -3362,7 +3362,7 @@
     }
 
     .filter-item {
-      border-bottom: 1px solid $line-light;
+      border-bottom: 1px solid $line-l;
       transition: $tr;
 
       &__title {
@@ -3384,7 +3384,7 @@
 
       &.is-active {
         .filter-item__title {
-          border-bottom-color: $line-light;
+          border-bottom-color: $line-l;
           &::after {
             background: url(../img/icons/arrow-down.svg) no-repeat center;
             background-size: 50%;
@@ -3426,10 +3426,10 @@
   }
 
   &__item {
-    color: $text-light;
+    color: $text-l;
     font-size: 14px;
     padding: 12px 0;
-    border-bottom: 1px dashed $line-light;
+    border-bottom: 1px dashed $line-l;
     display: flex;
     align-items: center;
 
@@ -3459,7 +3459,7 @@
         background-color: $white;
         width: 18px;
         height: 18px;
-        border: 1px solid $line-dark;
+        border: 1px solid $line-d;
         z-index: 2;
       }
 
@@ -3497,7 +3497,7 @@
       display: block;
       width: 24px;
       height: 24px;
-      border: 1px solid $line-light;
+      border: 1px solid $line-l;
       // border-radius: 50%;
     }
 
@@ -3564,7 +3564,7 @@
 //     display: flex;
 //     align-items: center;
 //     column-gap: 15px;
-//     color: $text-light;
+//     color: $text-l;
 //   }
 
 //   .range-values__item {
@@ -3572,8 +3572,8 @@
 //     text-align: center;
 //     font-size: 14px;
 //     line-height: 18px;
-//     color: $text-light;
-//     border: 1px solid $line-light;
+//     color: $text-l;
+//     border: 1px solid $line-l;
 //     padding: 5px 15px;
 //     border-radius: 4px;
 //     display: flex;
@@ -3590,7 +3590,7 @@
 //       text-align: right;
 //       font-size: 14px;
 //       line-height: 18px;
-//       color: $text-light;
+//       color: $text-l;
 //     }
 //   }
 
@@ -3607,7 +3607,7 @@
 //       left: 0;
 //       width: 100%;
 //       border-radius: 2px;
-//       background: $bg-light;
+//       background: $bg-l;
 //       pointer-events: none;
 //       position: absolute;
 //       top: 50%;
@@ -3617,7 +3617,7 @@
 
 //     .range-inputs__slider {
 //       width: 100%;
-//       background-color: $line-light;
+//       background-color: $line-l;
 //       border-radius: 4px;
 //       position: absolute;
 //       top: 50%;
@@ -3655,7 +3655,7 @@
 //         pointer-events: all;
 //         cursor: pointer;
 //         background-color: $white;
-//         border: 4px solid $line-light;
+//         border: 4px solid $line-l;
 //         width: 20px;
 //         height: 20px;
 //         border-radius: 50%;
@@ -3666,7 +3666,7 @@
 //         pointer-events: all;
 //         cursor: pointer;
 //         background-color: $white;
-//         border: 4px solid $line-light;
+//         border: 4px solid $line-l;
 //         width: 20px;
 //         height: 20px;
 //         border-radius: 50%;
@@ -3677,7 +3677,7 @@
 //         pointer-events: all;
 //         cursor: pointer;
 //         background-color: $white;
-//         border: 4px solid $line-light;
+//         border: 4px solid $line-l;
 //         width: 20px;
 //         height: 20px;
 //         border-radius: 50%;
@@ -3702,7 +3702,7 @@
     display: flex;
     align-items: center;
     column-gap: 15px;
-    color: $text-light;
+    color: $text-l;
     justify-content: space-between;
 
     input {
@@ -3711,9 +3711,9 @@
       height: 30px;
       font-size: 14px;
       line-height: 18px;
-      color: $text-light;
+      color: $text-l;
       border-radius: 4px;
-      border: 1px solid $line-light;
+      border: 1px solid $line-l;
       padding: 7px 10px;
     }
   }
@@ -3726,21 +3726,21 @@
   .irs-min,
   .irs-max {
     font-size: 12px;
-    color: $text-light;
+    color: $text-l;
     top: 10px;
   }
 
   .irs--round {
     .irs-line {
-      background-color: $line-light + 5;
+      background-color: $line-l + 5;
       height: 6px;
     }
     .irs-bar {
-      background-color: $line-dark;
+      background-color: $line-d;
       height: 6px;
     }
     .irs-handle {
-      border-color: $line-dark;
+      border-color: $line-d;
       box-shadow: none;
       cursor: pointer;
       &:hover {
@@ -3750,12 +3750,12 @@
     }
 
     .irs-single {
-      background-color: $text-dark;
+      background-color: $text-d;
       font-size: 12px;
       top: 3px;
 
       &::before {
-        border-top-color: $text-dark;
+        border-top-color: $text-d;
       }
     }
   }
@@ -3780,8 +3780,8 @@
     font-weight: 600;
     font-size: 0.95em;
     padding: 0.75em 0;
-    border-top: 1px solid $line-light;
-    border-bottom: 1px solid $line-light;
+    border-top: 1px solid $line-l;
+    border-bottom: 1px solid $line-l;
     cursor: pointer;
   }
 
@@ -3794,7 +3794,7 @@
   dl {
     display: flex;
     font-size: 0.95em;
-    border-bottom: 1px solid transparentize($line-light, 0.5);
+    border-bottom: 1px solid transparentize($line-l, 0.5);
     padding: 0.5em 0;
     margin: 0;
 
@@ -3810,7 +3810,7 @@
 
 // отзывы на странице товара
 .feedback-form {
-  background-color: $bg-light;
+  background-color: $bg-l;
   padding: 2em 1em;
 
   &__row {
@@ -3860,7 +3860,7 @@
   }
 
   &__upload-wrapper {
-    border: 1px dashed $line-dark;
+    border: 1px dashed $line-d;
     background-color: $white;
     padding: 1em;
     border-radius: 4px;
@@ -3874,7 +3874,7 @@
       font-size: 12.5px;
       line-height: 1.3;
       display: flex;
-      color: $text-light;
+      color: $text-l;
 
       &::before {
         content: "";
@@ -3928,7 +3928,7 @@
 .feedback {
   margin: 2.5em 0;
   &__header {
-    border-bottom: 2px dotted $line-dark;
+    border-bottom: 2px dotted $line-d;
     display: flex;
     flex-wrap: wrap;
     column-gap: 1em;
@@ -4015,50 +4015,50 @@
   column-gap: 1em;
 }
 
-.feedback-stars {
-  position: relative;
-  width: 100px;
-  margin-right: auto;
+// .feedback-stars {
+//   position: relative;
+//   width: 100px;
+//   margin-right: auto;
 
-  &__filled {
-    width: 0%;
-    height: 19px;
-    background: url(../img/icons/star-filled.svg) repeat-x;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: contain;
+//   &__filled {
+//     width: 0%;
+//     height: 19px;
+//     background: url(../img/icons/star-filled.svg) repeat-x;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-size: contain;
 
-    &[data-feedback-stars="1"] {
-      width: 20%;
-    }
-    &[data-feedback-stars="2"] {
-      width: 40%;
-    }
-    &[data-feedback-stars="3"] {
-      width: 60%;
-    }
-    &[data-feedback-stars="4"] {
-      width: 80%;
-    }
-    &[data-feedback-stars="5"] {
-      width: 100%;
-    }
-  }
+//     &[data-feedback-stars="1"] {
+//       width: 20%;
+//     }
+//     &[data-feedback-stars="2"] {
+//       width: 40%;
+//     }
+//     &[data-feedback-stars="3"] {
+//       width: 60%;
+//     }
+//     &[data-feedback-stars="4"] {
+//       width: 80%;
+//     }
+//     &[data-feedback-stars="5"] {
+//       width: 100%;
+//     }
+//   }
 
-  &__stroked {
-    width: 146px;
-    width: 100%;
-    height: 19px;
-    background: url(../img/icons/star-stroked.svg) repeat-x;
-    // background-position-x: -5px;
-    background-size: contain;
-    position: relative;
-  }
-}
+//   &__stroked {
+//     width: 146px;
+//     width: 100%;
+//     height: 19px;
+//     background: url(../img/icons/star-stroked.svg) repeat-x;
+//     // background-position-x: -5px;
+//     background-size: contain;
+//     position: relative;
+//   }
+// }
 
 .feedback-result {
-  background-color: $bg-light;
+  background-color: $bg-l;
   padding: 2em;
 
   &__text {
@@ -4074,7 +4074,7 @@
 }
 
 .stats-rating {
-  // background-color: $bg-light;
+  // background-color: $bg-l;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -4139,7 +4139,7 @@
   &__line {
     width: 95px;
     height: 6px;
-    background-color: $line-dark;
+    background-color: $line-d;
     margin: 0 0.5em;
     position: relative;
 
@@ -4167,7 +4167,7 @@
 //   height: 70px;
 //   border-radius: 50%;
 //   background: $main;
-//   // background: $line-dark;
+//   // background: $line-d;
 //   position: relative;
 //   overflow: hidden;
 //   // transform: scale(1, -1);
@@ -4204,7 +4204,7 @@
 //       position: absolute;
 //       width: 50%;
 //       height: 100%;
-//       background: $line-dark;
+//       background: $line-d;
 //       // background: $main;
 //     }
 //   }
@@ -4244,7 +4244,7 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
-  background: $line-dark;
+  background: $line-d;
   position: relative;
 
   .diagram-circle {
@@ -4304,90 +4304,90 @@
   }
 }
 
-.product-favorite {
-  z-index: 4;
-  display: block;
-  width: 28px;
-  height: 28px;
-  background: url(../img/icons/favorite.svg) no-repeat center;
-  background-size: 55%;
-  filter: grayscale(1);
-  transition: all 0.1s ease-in-out;
-  margin-left: auto;
+// .product-favorite {
+//   z-index: 4;
+//   display: block;
+//   width: 28px;
+//   height: 28px;
+//   background: url(../img/icons/favorite.svg) no-repeat center;
+//   background-size: 55%;
+//   filter: grayscale(1);
+//   transition: all 0.1s ease-in-out;
+//   margin-left: auto;
 
-  &:active {
-    transform: scale(0.9);
-  }
+//   &:active {
+//     transform: scale(0.9);
+//   }
 
-  &.is-active {
-    filter: none;
-  }
+//   &.is-active {
+//     filter: none;
+//   }
 
-  span {
-    position: absolute;
-    top: 0;
-    right: calc(50% - 7px);
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: url(../img/icons/favorite_.svg) no-repeat center;
-    background-size: 100%;
-    animation: spiral 1s forwards ease-in-out;
-  }
+//   span {
+//     position: absolute;
+//     top: 0;
+//     right: calc(50% - 7px);
+//     display: block;
+//     width: 15px;
+//     height: 15px;
+//     background: url(../img/icons/favorite_.svg) no-repeat center;
+//     background-size: 100%;
+//     animation: spiral 1s forwards ease-in-out;
+//   }
 
-  &:hover {
-    transform: scale(1.05);
-  }
-}
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }
 
-.product-favorite-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $text-light;
+// .product-favorite-btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: $text-l;
 
-  &::before {
-    content: "Добавить в избранное";
-  }
+//   &::before {
+//     content: "Добавить в избранное";
+//   }
 
-  &::after {
-    content: "";
-    z-index: 4;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: url(../img/icons/favorite.svg) no-repeat center;
-    background-size: 100%;
-    filter: grayscale(1);
-    transition: all 0.1s ease-in-out;
-    margin-left: 7px;
-    margin-right: 0;
-  }
+//   &::after {
+//     content: "";
+//     z-index: 4;
+//     display: block;
+//     width: 16px;
+//     height: 16px;
+//     background: url(../img/icons/favorite.svg) no-repeat center;
+//     background-size: 100%;
+//     filter: grayscale(1);
+//     transition: all 0.1s ease-in-out;
+//     margin-left: 7px;
+//     margin-right: 0;
+//   }
 
-  &.is-active {
-    color: $white;
-    background-color: $main;
-    border-color: transparent;
+//   &.is-active {
+//     color: $white;
+//     background-color: $main;
+//     border-color: transparent;
 
-    &::before {
-      content: "В избранном";
-    }
+//     &::before {
+//       content: "В избранном";
+//     }
 
-    &::after {
-      transform: scale(0.9);
-      filter: grayscale(1) brightness(10);
-    }
-  }
+//     &::after {
+//       transform: scale(0.9);
+//       filter: grayscale(1) brightness(10);
+//     }
+//   }
 
-  // &:hover {
-  //   color: $white;
-  //   background-color: $main;
-  //   border-color: transparent;
-  //   &::after {
-  //     filter: grayscale(1) brightness(10);
-  //   }
-  // }
-}
+//   // &:hover {
+//   //   color: $white;
+//   //   background-color: $main;
+//   //   border-color: transparent;
+//   //   &::after {
+//   //     filter: grayscale(1) brightness(10);
+//   //   }
+//   // }
+// }
 
 .product-info {
   position: relative;
@@ -4480,15 +4480,15 @@
     }
   }
 
-  .feedback-stars {
-    width: 140px;
-    &__filled {
-      height: 28px;
-    }
-    &__stroked {
-      height: 28px;
-    }
-  }
+  // .feedback-stars {
+  //   width: 140px;
+  //   &__filled {
+  //     height: 28px;
+  //   }
+  //   &__stroked {
+  //     height: 28px;
+  //   }
+  // }
 }
 
 .specifications-wrapper {
@@ -4575,32 +4575,32 @@
 }
 
 //выбор цвета на странице товара
-.product-colors {
-  margin-top: 3em;
+// .product-colors {
+//   margin-top: 3em;
 
-  &__title {
-    font-weight: bold;
-    font-size: 15px;
-  }
+//   &__title {
+//     font-weight: bold;
+//     font-size: 15px;
+//   }
 
-  .product-colors-slider {
-    border-top: 1px solid $line-light;
-    padding-top: 20px;
-    margin-top: 15px;
+//   .product-colors-slider {
+//     border-top: 1px solid $line-l;
+//     padding-top: 20px;
+//     margin-top: 15px;
 
-    img {
-      display: block;
-      border-radius: 4px;
-    }
-  }
+//     img {
+//       display: block;
+//       border-radius: 4px;
+//     }
+//   }
 
-  &--mini {
-    margin: 0 0 1em 0;
-    .product-colors-slider__item {
-      width: 55px;
-    }
-  }
-}
+//   &--mini {
+//     margin: 0 0 1em 0;
+//     .product-colors-slider__item {
+//       width: 55px;
+//     }
+//   }
+// }
 
 .product-color-info {
   &__header {
@@ -4618,7 +4618,7 @@
 
   &__link {
     font-weight: 400;
-    color: $text-light;
+    color: $text-l;
     font-size: 14px;
   }
 }
@@ -4637,7 +4637,7 @@
 
   tbody {
     tr {
-      border-bottom: 2px dotted $line-light;
+      border-bottom: 2px dotted $line-l;
     }
   }
 
@@ -4709,16 +4709,16 @@
     text-decoration: none;
     padding: 14px;
     color: $text;
-    // border-bottom: 2px solid $line-dark; это для табов в виде слайдера
+    // border-bottom: 2px solid $line-d; это для табов в виде слайдера
     border: 2px solid transparent;
-    border-top-color: $line-dark;
+    border-top-color: $line-d;
     flex-grow: 1;
     transition: background-color 0.2s ease-in-out;
-    // border-bottom: 4px solid $line-dark;
+    // border-bottom: 4px solid $line-d;
     // padding: 14px 24px;
 
     &:hover {
-      background-color: $bg-light;
+      background-color: $bg-l;
     }
 
     &:first-child {
@@ -4780,7 +4780,7 @@
     }
 
     &__description {
-      color: $text-light;
+      color: $text-l;
       font-size: 10px;
       text-transform: initial;
     }
@@ -4922,7 +4922,7 @@
   margin: 0;
   padding: 3em 2em;
   list-style: none;
-  background-color: $bg-light;
+  background-color: $bg-l;
 
   &__item {
     margin: 0 0 2em 0;
@@ -4938,7 +4938,7 @@
 
   &__number {
     font-size: 2.5em;
-    color: $line-dark - 20;
+    color: $line-d - 20;
     width: 1.5em;
     flex-grow: 0;
     flex-shrink: 0;
@@ -5014,7 +5014,7 @@
     }
 
     a {
-      color: $text-dark;
+      color: $text-d;
       text-decoration: underline;
       font-size: 0.9em;
     }
@@ -5057,7 +5057,7 @@
 
   &::-webkit-scrollbar-thumb {
     height: 4px;
-    background-color: $line-light;
+    background-color: $line-l;
     border-radius: 3px;
   }
 }
@@ -5079,7 +5079,7 @@
   }
 
   thead tr td {
-    background: $bg-light;
+    background: $bg-l;
   }
 
   tbody tr:nth-child(2n - 1) td {
@@ -5087,7 +5087,7 @@
   }
 
   tbody tr:hover td {
-    background-color: $bg-light - 10;
+    background-color: $bg-l - 10;
   }
 
   tbody tr td {
@@ -5117,7 +5117,7 @@
 
   &-border {
     tbody tr {
-      border-bottom: 2px solid $bg-light;
+      border-bottom: 2px solid $bg-l;
 
       &:last-child {
         border-bottom: none;
@@ -5195,7 +5195,7 @@
 
 .order-header {
   display: none;
-  border-bottom: 2px solid $line-light;
+  border-bottom: 2px solid $line-l;
   padding: 0.75em 0;
   margin-bottom: 2em;
   font-size: 0.8em;
@@ -5241,7 +5241,7 @@
 
   &__favorite {
     font-size: 14px;
-    color: $text-light;
+    color: $text-l;
 
     &::before {
       content: "Перенести в избранное";
@@ -5278,7 +5278,7 @@
 
   &__editsizes {
     font-size: 0.9em;
-    color: $text-light;
+    color: $text-l;
   }
 
   &__modal {
@@ -5309,7 +5309,7 @@
 
   &__table {
     .price {
-      border-bottom: 1px solid $line-light;
+      border-bottom: 1px solid $line-l;
       margin-bottom: 0.3em;
       padding-bottom: 0.3em;
     }
@@ -5345,73 +5345,73 @@
     }
   }
 
-  .popup-info {
-    display: none;
-  }
+  // .popup-info {
+  //   display: none;
+  // }
 }
 
-.popup-info-wrapper {
-  display: flex;
-  column-gap: 7px;
-  align-items: center;
-}
+// .popup-info-wrapper {
+//   display: flex;
+//   column-gap: 7px;
+//   align-items: center;
+// }
 
-.popup-info {
-  display: inline-block;
-  position: relative;
+// .popup-info {
+//   display: inline-block;
+//   position: relative;
 
-  &__btn {
-    width: 20px;
-    height: 20px;
-    background: url(../img/icons/info.svg) no-repeat center;
-    background-size: 75%;
-    filter: grayscale(1);
-    cursor: pointer;
+//   &__btn {
+//     width: 20px;
+//     height: 20px;
+//     background: url(../img/icons/info.svg) no-repeat center;
+//     background-size: 75%;
+//     filter: grayscale(1);
+//     cursor: pointer;
 
-    &:hover {
-      filter: grayscale(1) brightness(0.5);
+//     &:hover {
+//       filter: grayscale(1) brightness(0.5);
 
-      + .popup-info__content {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-      }
-    }
-  }
+//       + .popup-info__content {
+//         visibility: visible;
+//         opacity: 1;
+//         display: block;
+//       }
+//     }
+//   }
 
-  &__content {
-    display: none;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: -210px;
-    border-radius: 4px;
-    color: #fff;
-    padding: 12px;
-    font-size: 12px;
-    background-color: $text;
-    width: 200px;
-    z-index: 10;
+//   &__content {
+//     display: none;
+//     pointer-events: none;
+//     visibility: hidden;
+//     opacity: 0;
+//     position: absolute;
+//     top: 0;
+//     right: -210px;
+//     border-radius: 4px;
+//     color: #fff;
+//     padding: 12px;
+//     font-size: 12px;
+//     background-color: $text;
+//     width: 200px;
+//     z-index: 10;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 5px;
-      left: -13px;
-      width: 0;
-      height: 0;
-      border: 7px solid transparent;
-      border-right: 10px solid $text;
-    }
+//     &::before {
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       top: 5px;
+//       left: -13px;
+//       width: 0;
+//       height: 0;
+//       border: 7px solid transparent;
+//       border-right: 10px solid $text;
+//     }
 
-    p {
-      margin: 0;
-    }
-  }
-}
+//     p {
+//       margin: 0;
+//     }
+//   }
+// }
 
 .order-item-modal {
   padding: $gap !important;
@@ -5430,7 +5430,7 @@
   .table {
     tbody {
       tr {
-        border-bottom: 1px solid $line-light;
+        border-bottom: 1px solid $line-l;
         td {
           padding-top: 0;
           padding-bottom: 0;
@@ -5446,15 +5446,15 @@
   margin-top: 1.5em;
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid $line-dark;
+  border-bottom: 2px solid $line-d;
 
   thead {
     tr {
       td {
         padding: 0.75em 0.2em;
         font-size: 0.7em;
-        border-bottom: 2px solid $line-dark;
-        border-top: 2px solid $line-dark;
+        border-bottom: 2px solid $line-d;
+        border-top: 2px solid $line-d;
         white-space: nowrap;
       }
     }
@@ -5462,7 +5462,7 @@
 
   tbody {
     tr {
-      border-bottom: 1px solid $line-light;
+      border-bottom: 1px solid $line-l;
       td {
         font-size: 12px;
         padding: 8px 3px;
@@ -5486,11 +5486,11 @@
           column-gap: 5px;
         }
 
-        &:first-child {
-          .popup-info {
-            display: none;
-          }
-        }
+        // &:first-child {
+        //   .popup-info {
+        //     display: none;
+        //   }
+        // }
       }
     }
   }
@@ -5532,7 +5532,7 @@
 
     &:hover {
       opacity: 1;
-      background-color: $bg-light;
+      background-color: $bg-l;
     }
 
     &:active {
@@ -5547,7 +5547,7 @@
 }
 
 .order-info {
-  background-color: $bg-light;
+  background-color: $bg-l;
   padding: 30px 20px;
   margin-bottom: 0.5em;
 
@@ -5572,14 +5572,14 @@
     margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed $text-light;
+    border-bottom: 1px dashed $text-l;
   }
 
   &__title {
     font-size: 0.85em;
     padding-right: 0.3em;
     transform: translateY(4px);
-    background-color: $bg-light;
+    background-color: $bg-l;
   }
 
   &__value {
@@ -5588,7 +5588,7 @@
     color: $main;
     padding-left: 0.3em;
     transform: translateY(4px);
-    background-color: $bg-light;
+    background-color: $bg-l;
 
     &::after {
       content: " ₽";
@@ -5692,7 +5692,7 @@
 }
 
 .order-status {
-  background-color: $bg-light;
+  background-color: $bg-l;
   padding: 30px 20px;
   margin-bottom: 0.5em;
 
@@ -5719,7 +5719,7 @@
   &__input {
     padding: 0.75em 0.5em;
     background-color: $white;
-    border: 1px dashed $text-light;
+    border: 1px dashed $text-l;
     border-right: none;
     flex-shrink: 1;
     flex-grow: 1;
@@ -5731,12 +5731,12 @@
     color: $white;
     border: none;
     border-radius: 0 4px 4px 0;
-    background-color: $text-light;
+    background-color: $text-l;
     padding: 0.5em 1em;
 
     &:hover {
       cursor: pointer;
-      background-color: $text-light - 10;
+      background-color: $text-l - 10;
     }
 
     &.is-active {
@@ -5746,8 +5746,8 @@
 
   &__text {
     background-color: $white;
-    border-top: 1px solid $line-dark;
-    border-bottom: 1px solid $line-dark;
+    border-top: 1px solid $line-d;
+    border-bottom: 1px solid $line-d;
     padding: 0.75em 0.5em;
     font-size: 0.85em;
     flex-grow: 1;
@@ -5824,7 +5824,7 @@
     height: 40px;
     line-height: 1.4;
     border-radius: 0;
-    border: 1px solid $line-light;
+    border: 1px solid $line-l;
     min-width: 50px;
   }
 
@@ -5842,7 +5842,7 @@
       background-color: $white;
       width: 16px;
       height: 16px;
-      border: 1px solid $line-dark;
+      border: 1px solid $line-d;
       z-index: 2;
     }
 
@@ -5858,9 +5858,9 @@
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: $text-light;
+    color: $text-l;
     line-height: 1.4;
-    border: 1px solid $line-dark;
+    border: 1px solid $line-d;
     border-radius: 0;
     appearance: none;
     padding: 7px 20px 7px 10px;
@@ -5880,13 +5880,13 @@
 }
 
 .info-plate-wrapper {
-  background-color: $bg-light;
+  background-color: $bg-l;
   padding: 20px 0 20px 20px;
 }
 
 .info-plate {
   padding: 15px;
-  background-color: $bg-light;
+  background-color: $bg-l;
   margin-bottom: 10px;
 
   &__title {
@@ -5992,12 +5992,12 @@
     font-size: 16px;
     font-weight: 600;
     padding: 1em;
-    background-color: $bg-light;
+    background-color: $bg-l;
     margin-bottom: 5px;
   }
 
   &__content {
-    background-color: $bg-light;
+    background-color: $bg-l;
   }
 }
 
@@ -6011,19 +6011,19 @@
     font-size: 14px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed $line-light;
+    border-bottom: 1px dashed $line-l;
     align-items: flex-end;
   }
 
   &__title {
-    background-color: $bg-light;
+    background-color: $bg-l;
     transform: translateY(2px);
     padding-right: 0.2em;
   }
 
   &__value {
     font-weight: 600;
-    background-color: $bg-light;
+    background-color: $bg-l;
     transform: translateY(2px);
     padding-left: 0.2em;
 
@@ -6144,14 +6144,14 @@
   &__header {
     display: none;
     padding: 0.5em;
-    border-bottom: 2px solid $line-light;
+    border-bottom: 2px solid $line-l;
     font-size: 0.8em;
   }
 }
 
 .history-item {
   padding: 1.5em 0;
-  border-bottom: 2px dotted $line-dark;
+  border-bottom: 2px dotted $line-d;
   display: flex;
   flex-direction: column;
   font-size: 14px;
@@ -6265,7 +6265,7 @@
 
 .more-link {
   font-size: 12px;
-  color: $text-dark;
+  color: $text-d;
   margin-top: 1em;
   display: flex;
   align-items: center;
@@ -6312,7 +6312,7 @@
   width: 100%;
 
   &__head {
-    border: 2px solid $line-dark;
+    border: 2px solid $line-d;
     border-left: none;
     border-right: none;
     display: grid;
@@ -6383,9 +6383,9 @@
     }
 
     &__wrapper {
-      // border: 1px solid $line-light;
+      // border: 1px solid $line-l;
       padding: 15px;
-      background-color: $bg-light;
+      background-color: $bg-l;
       border-radius: 3px;
       margin-top: 15px;
     }
@@ -6439,7 +6439,7 @@
 }
 
 .history-item-status {
-  border-top: 2px dotted $line-light;
+  border-top: 2px dotted $line-l;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 10px;
@@ -6583,14 +6583,14 @@
   &__option {
     cursor: pointer;
     padding: 10px 18px;
-    border-bottom: 1px dotted $line-dark;
+    border-bottom: 1px dotted $line-d;
 
     &:last-child {
       border-bottom: none;
     }
 
     &:hover {
-      background-color: $bg-light;
+      background-color: $bg-l;
     }
   }
 }
@@ -6619,7 +6619,7 @@
   margin-top: 30px;
   line-height: 1.4;
   &__item {
-    background: url(../img/icons/plus-small.svg) no-repeat top 10px left 10px $bg-light;
+    background: url(../img/icons/plus-small.svg) no-repeat top 10px left 10px $bg-l;
     padding: 10px 7px 7px 32px;
     margin-bottom: 2px;
     font-size: 10px;
@@ -6628,7 +6628,7 @@
   }
 
   &__link {
-    color: $text-light;
+    color: $text-l;
   }
 
   &__content {
@@ -6661,7 +6661,7 @@
       font-size: 14px;
     }
     .status-doc {
-      color: $text-light;
+      color: $text-l;
       font-size: 14px;
       transition: $tr;
 
@@ -6745,7 +6745,7 @@
   }
 
   .order-item {
-    border-bottom: 2px dotted $line-dark;
+    border-bottom: 2px dotted $line-d;
     padding-bottom: 17px;
     margin-bottom: 17px;
 
@@ -6786,7 +6786,7 @@
               align-items: center;
 
               &__date {
-                border: 1px solid $line-light;
+                border: 1px solid $line-l;
                 padding: 0.3em 0.5em;
                 font-size: 12px;
                 border-radius: 3px;
@@ -7078,7 +7078,7 @@
 
 .form-group-wrapper {
   &__title {
-    border-bottom: 2px solid $text-light;
+    border-bottom: 2px solid $text-l;
     padding: 15px 0;
     text-align: left;
     margin-bottom: 25px;
@@ -7183,7 +7183,7 @@
         background-color: transparent;
         border-bottom-color: transparent;
         .choose-item__title {
-          background-color: $bg-light;
+          background-color: $bg-l;
         }
       }
     }
@@ -7199,7 +7199,7 @@
 .choose-item {
   &__title {
     font-size: 15px;
-    background-color: $bg-light;
+    background-color: $bg-l;
     padding: 0 15px;
     height: 40px;
     line-height: 40px;
@@ -7230,7 +7230,7 @@
   position: absolute;
 
   & + label {
-    color: $text-light;
+    color: $text-l;
     display: flex;
     align-items: flex-start;
     column-gap: 10px;
@@ -7244,7 +7244,7 @@
       display: block;
       width: 14px;
       height: 14px;
-      border: 1px solid $line-dark;
+      border: 1px solid $line-d;
       background-color: $white;
       border-radius: 50%;
       transform: translateY(1px);
@@ -7296,12 +7296,12 @@
 
       &.mixitup-control-active {
         color: $main;
-        background-color: $bg-light;
+        background-color: $bg-l;
       }
 
       &:hover {
         opacity: 0.8;
-        background-color: $bg-light;
+        background-color: $bg-l;
       }
 
       &:first-child {
@@ -7321,7 +7321,7 @@
           display: block;
           width: 1px;
           height: 12px;
-          background-color: $line-light;
+          background-color: $line-l;
           position: absolute;
           top: 0;
           left: -1px;
@@ -7353,7 +7353,7 @@
       line-height: 1.3;
       padding: 11px 0;
       text-decoration: none;
-      border-bottom: 1px dashed $line-light;
+      border-bottom: 1px dashed $line-l;
       transition: opacity 0.2s ease-in-out;
 
       img {
@@ -7421,7 +7421,7 @@ textarea {
     &__item {
       .form-row__description {
         font-size: 14px;
-        color: $text-light;
+        color: $text-l;
         padding-left: 20px;
         line-height: 1.3;
         margin-top: -7px;
@@ -7440,7 +7440,7 @@ textarea {
       .form-row {
         .form-group {
           label {
-            color: $text-light;
+            color: $text-l;
             font-weight: 600;
             font-size: 14px;
           }
@@ -7454,7 +7454,7 @@ textarea {
 
       &.is-disabled {
         pointer-events: none;
-        background-color: $line-light + 10;
+        background-color: $line-l + 10;
 
         &:hover {
           cursor: initial;
@@ -7473,9 +7473,9 @@ textarea {
   overflow-y: hidden;
 }
 
-.product-gallery {
-  margin-bottom: 20px;
-}
+// .product-gallery {
+//   margin-bottom: 20px;
+// }
 
 .product-thumbs {
   display: none;
@@ -7599,7 +7599,7 @@ textarea {
       background-color: $text;
       width: 7px;
       height: 7px;
-      border: 1px solid $bg-light;
+      border: 1px solid $bg-l;
       opacity: 1;
     }
 
@@ -7680,7 +7680,7 @@ textarea {
   row-gap: 10px;
 
   .category-list-title {
-    color: $text-light;
+    color: $text-l;
     font-size: 13px;
     padding: 0.5em 0;
     display: inline-block;
@@ -7695,18 +7695,18 @@ textarea {
     &__item {
       font-size: 14px;
       padding: 0.5em 0.75em;
-      border: 1px solid $line-light;
+      border: 1px solid $line-l;
       border-radius: 3px;
       cursor: pointer;
       transition: $tr;
 
       &:hover {
-        background-color: $bg-light;
+        background-color: $bg-l;
       }
 
       &.is-active {
         border-color: $text;
-        background-color: $bg-light;
+        background-color: $bg-l;
       }
     }
   }
@@ -7749,7 +7749,7 @@ textarea {
   }
 
   &__info {
-    background: $bg-light;
+    background: $bg-l;
     padding: 15px 15px 35px 15px;
   }
 
@@ -7793,12 +7793,12 @@ textarea {
     text-decoration: none;
     color: $text;
     padding: 1em;
-    border-bottom: 1px solid $line-light;
+    border-bottom: 1px solid $line-l;
     font-size: 14px;
     transition: $tr;
 
     &:hover {
-      color: $text-light;
+      color: $text-l;
     }
   }
 }
@@ -7849,7 +7849,7 @@ textarea {
     align-items: center;
 
     &:hover {
-      color: $text-light;
+      color: $text-l;
 
       .menu-badge {
         &--subcategory {
@@ -7874,8 +7874,8 @@ textarea {
   margin-left: auto;
   margin-right: 35px;
   font-size: 10px;
-  color: $line-light;
-  border: 1px solid $line-light;
+  color: $line-l;
+  border: 1px solid $line-l;
   padding: 0.3em 0.6em;
   border-radius: 3px;
   font-weight: 600;
@@ -8154,4 +8154,47 @@ textarea {
 @import "adaptive";
 @import "margins";
 
+
+// новые стили
+
+
+
+
+@import "product-price";
+@import "product-gallery";
+@import "product-pics";
+@import "product-thumbs";
+@import "product-info";
+@import "product-properties";
+@import "product-favorite";
+@import "product-colors";
+@import "product-sizes";
+@import "product-table";
+@import "product-feedback";
 @import "product-buy";
+@import "quantity";
+
+@import "rating-number";
+@import "rating-lines";
+@import "rating-sizes";
+@import "rating-stars";
+
+@import "form";
+@import "feedback-stars";
+@import "feedback-stars-form";
+@import "feedback-messages";
+@import "feedback-form";
+
+@import "popup-info";
+@import "warning";
+@import "social-share";
+@import "after";
+@import "quote-image";
+@import "alert";
+@import "_icons";
+
+@import "product-card";
+@import "size-variants";
+@import "color-variants";
+@import "badges";
+@import "product-quickview";

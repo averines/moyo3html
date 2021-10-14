@@ -1,0 +1,10 @@
+.icon-star {
+    width: 15px;
+    height: 15px;
+    background: url(../img/icons/star-filled.svg) no-repeat center;
+    background-size: 100%;
+
+    &--stroked {
+        background: url(../img/icons/star-stroked.svg) no-repeat center;
+    }
+}

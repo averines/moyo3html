@@ -1,0 +1,90 @@
+.quantity {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+
+    &__btn {
+        width: 2.5em;
+        height: 1.85em;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.05s ease, box-shadow 0.1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            &:active {
+                box-shadow: none;
+                transform: scale(0.95);
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--minus {
+            background-color: $bg-l;
+
+            &:hover {
+                background-color: $line-l;
+                box-shadow: 0 0 10px $bg-l;
+            }
+
+            &::after {
+                background: url(../img/icons/minus.svg) no-repeat center;
+                background-size: 25%;
+            }
+        }
+
+        &--plus {
+            background-color: $bg-l;
+
+            &:hover {
+                background-color: $special-2;
+                box-shadow: 0 0 10px transparentize($special-2, 0.7);
+
+                &::after {
+                    filter: brightness(5);
+                }
+            }
+
+            &::after {
+                background: url(../img/icons/plus.svg) no-repeat center;
+                background-size: 25%;
+            }
+        }
+
+        &--delete {
+            background-color: $bg-l;
+
+            &:hover {
+                background-color: $line-l;
+                box-shadow: 0 0 10px $bg-l;
+            }
+
+            &::after {
+                background: url(../img/icons/bin-1.svg) no-repeat center;
+                background-size: 40%;
+            }
+        }
+
+        &:disabled {
+            transform: none;
+        }
+    }
+
+    &__input {
+        width: 33px;
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        line-height: 1.4;
+    }
+}

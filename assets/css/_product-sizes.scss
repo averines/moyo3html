@@ -1,0 +1,8 @@
+.product-sizes {
+    &__header {
+        display: flex;
+        align-items: baseline;
+        column-gap: 10px;
+        flex-wrap: wrap;
+    }
+}

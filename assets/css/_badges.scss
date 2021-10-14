@@ -1,0 +1,43 @@
+.badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2px;
+
+    &__item {
+        background-color: $line-d;
+        display: inline-block;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 0.3em 0.4em;
+
+        &--new {
+            background-color: $special-2;
+            &::before {
+                content: "NEW";
+            }
+        }
+
+        &--hit {
+            background-color: $text;
+            &::before {
+                content: "ХИТ";
+            }
+        }
+
+        &--action {
+            padding: 0.3em 0.6em;
+            background-color: $special-1;
+            margin-top: auto;
+
+            &::before {
+                content: "Акция до ";
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: 11px;
+            }
+        }
+    }
+}
