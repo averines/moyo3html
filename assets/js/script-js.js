@@ -777,21 +777,24 @@ if (tabsContainers.length > 0) {
     tabsContainers.forEach(tabsContainer => {
         let tabsContentItems = tabsContainer.querySelectorAll('.tabs-content__item')
         let tabsTitlesItems = tabsContainer.querySelectorAll('.tabs-titles__item')
-        if (window.location.hash) {
-            let hash = window.location.hash
+        // if (window.location.hash) {
+        //     let hash = window.location.hash
 
-            tabsTitlesItems.forEach((tabsTitlesItem, index) => {
-                if (tabsTitlesItem.hash == hash) {
-                    tabsTitlesItems[index].classList.add('is-active')
-                    tabsContentItems[index].classList.add('is-active')
-                    return
-                }
-            })
-        }
-        else {
-            tabsTitlesItems[0].classList.add('is-active')
-            tabsContentItems[0].classList.add('is-active')
-        }
+        //     tabsTitlesItems.forEach((tabsTitlesItem, index) => {
+        //         if (tabsTitlesItem.hash == hash) {
+        //             tabsTitlesItems[index].classList.add('is-active')
+        //             tabsContentItems[index].classList.add('is-active')
+        //             return
+        //         }
+        //     })
+        // }
+        // else {
+        //     tabsTitlesItems[0].classList.add('is-active')
+        //     tabsContentItems[0].classList.add('is-active')
+        // }
+
+        tabsTitlesItems[0].classList.add('is-active')
+        tabsContentItems[0].classList.add('is-active')
 
         tabsTitlesItems.forEach(tabsTitlesItem => {
             tabsTitlesItem.addEventListener('click', (e) => {
@@ -823,8 +826,6 @@ if (tabsContainers.length > 0) {
         })
     })
 }
-
-
 
 
 const orderStatusBtns = document.querySelectorAll('.order-status__btn')

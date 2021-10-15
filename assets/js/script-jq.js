@@ -200,11 +200,11 @@ if (brandFilterTitles.length > 0) {
 // });
 
 // плавная прокрутка к якорю на другой странице
-let myHash = location.hash;
-location.hash = '';
-if (myHash[1] != undefined) { 
-    $('html, body').animate({ scrollTop: $(myHash).offset().top - 70 }, 500); //скроллим за полсекунды
-};
+// let myHash = location.hash;
+// location.hash = '';
+// if (myHash[1] != undefined) { 
+//     $('html, body').animate({ scrollTop: $(myHash).offset().top - 70 }, 500); //скроллим за полсекунды
+// };
 
 //fancybox
 $('[data-fancybox="gallery-feedback"]').fancybox({
