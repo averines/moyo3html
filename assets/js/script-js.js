@@ -798,12 +798,12 @@ if (tabsContainers.length > 0) {
 
         tabsTitlesItems.forEach(tabsTitlesItem => {
             tabsTitlesItem.addEventListener('click', (e) => {
+                // if (tabsTitlesItem.getAttribute('href')[0] == '#') {
+                    // e.preventDefault()
 
-                if (tabsTitlesItem.getAttribute('href')[0] == '#') {
-
-                    e.preventDefault()
-
-                    let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
+                    // let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
+                    let activeContentTabId = tabsTitlesItem.dataset.tabTarget
+                console.log(activeContentTabId);
 
                     //убираем активный класс со всех заголовков
                     tabsTitlesItems.forEach(item => { item.classList.remove('is-active') })
@@ -811,7 +811,8 @@ if (tabsContainers.length > 0) {
                     // делаем активным кликнутый заголовок
                     tabsTitlesItem.classList.add('is-active')
 
-                    let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
+                    // let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
+                    let activeContentTab = tabsContainer.querySelector(`[data-tab-id="${activeContentTabId}"]`)
 
                     //убираем активный класс со всех элементов с контентом
                     tabsContentItems.forEach(item => { item.classList.remove('is-active') })
@@ -819,9 +820,9 @@ if (tabsContainers.length > 0) {
                     // делаем активным нужный контейнер с контентом
                     activeContentTab.classList.add('is-active')
 
-                } else {
-                    // console.log('нет решетки, клик работает как ссылка');
-                }
+                // } else {
+                //     // console.log('нет решетки, клик работает как ссылка');
+                // }
             })
         })
     })
@@ -855,6 +856,8 @@ if (moreItems.length > 0) {
 
 // показать/скрыть пароль
 const passwordItems = document.querySelectorAll('input[type="password"]')
+
+
 if (passwordItems.length > 0) {
     passwordItems.forEach(item => {
         let passwordBtn = item.parentNode.querySelector('.password-icon')
@@ -951,7 +954,74 @@ function singleFormCheck(form) {
 }
 
 
+// const needValidationForms = document.querySelectorAll('[data-form-action="need-validation"]')
+// if (needValidationForms.length > 0) {
+//     needValidationForms.forEach(needValidationForm => {
+//         const formNeedCheckBtn = needValidationForm.querySelector('button[type="submit"]')
+//         const needValidItems = needValidationForm.querySelectorAll('[data-form-needvalid]')
+        
+//         if (needValidItems.length > 0) {
+//             needValidItems.forEach(needValidItem => {
+//                 let needValidItemParent = needValidItem.closest('.form-group')
+//                 function setValid() {
+//                     needValidItemParent.classList.add('valid')
+//                     needValidItemParent.classList.remove('not-valid')
+//                 }
+
+//                 function setNotValid() {
+//                     needValidItemParent.classList.remove('valid')
+//                     needValidItemParent.classList.add('not-valid')
+//                 }
+
+//                 needValidItem.addEventListener('input', () => {
+//                     if (needValidItem.dataset.formMin) {
+//                         if (needValidItem.value.length < needValidItem.dataset.formMin) {
+//                             setNotValid()
+//                         } else {
+//                             setValid()
+//                         }
+//                     }
+
+//                     if (needValidItem.dataset.formMax) {
+//                         if (needValidItem.value.length > needValidItem.dataset.formMax) {
+//                             setNotValid()
+//                         } else {
+//                             setValid()
+//                         }
+//                     }
+
+//                     if (needValidItem.dataset.formRequired) {
+//                         if (needValidItem.value.length === 0) {
+//                             setNotValid()
+//                         } else {
+//                             setValid()
+//                         }
+//                     }
+//                 })
+//             })
+//         }
+
+//         if (formNeedCheckBtn) {
+//             formNeedCheckBtn.addEventListener('click', (e) => {
+//                 e.preventDefault()
+
+//                 needValidItems.forEach(needValidItem => {
+//                     if (needValidItems.classList.includes('not-valid')) {
+//                         console.log('есть невалидный');
+//                     } else {
+//                         console.log('dct валидны');
+//                     }
+//                 })
+//             })
+//         }
+//     })
+
+// }
+
+
+
 // форма входа с кодом телефона
+
 const formPhoneCode = document.querySelector('[data-action="form-phone-code"]')
 if (formPhoneCode) {
     let btnCode = formPhoneCode.querySelector('[data-action="btn-code"]')

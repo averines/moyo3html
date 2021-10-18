@@ -1,0 +1,26 @@
+.callback-phones {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    a {
+        white-space: nowrap;
+        font-size: 0.85em;
+        text-decoration: none;
+        color: $text;
+        // letter-spacing: $ls;
+        margin-right: 0.5em;
+        transition: $tr;
+
+        &:hover {
+            color: $text-l;
+        }
+
+        &::after {
+            display: none;
+            content: "•";
+            color: $text-l;
+            margin-left: 0.5em;
+        }
+    }
+}

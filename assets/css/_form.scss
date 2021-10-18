@@ -64,7 +64,6 @@
         color: $text-l;
         cursor: pointer;
         align-items: center;
-        
 
         &::before {
             flex-shrink: 0;
@@ -89,5 +88,84 @@
         overflow: hidden;
         box-shadow: 0 3px 6px 0 rgba(82, 78, 78, 0.4);
         display: block;
+    }
+}
+
+.form-text {
+    display: flex;
+    padding-bottom: 30px;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+    min-width: 100%;
+    flex-basis: 100%;
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__icon--map-marker {
+        background: url(../img/icons/map-marker.svg) no-repeat top center;
+    }
+
+    &__icon--clock {
+        background: url(../img/icons/clock.svg) no-repeat top center;
+    }
+
+    &__icon--phone {
+        background: url(../img/icons/phone.svg) no-repeat top center;
+    }
+
+    &__content {
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-size: 0.85em;
+        margin-bottom: 0.3em;
+    }
+
+    &__text {
+        font-size: 0.85em;
+        color: $text-l;
+    }
+
+    .link-modal {
+        display: inline-block;
+        font-size: 0.95em;
+        line-height: 1.4;
+        margin-left: 0.5em;
+        color: $main;
+        text-decoration: none;
+        border-bottom: 1px dotted $main;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &--phones {
+        min-width: 100%;
+        padding-bottom: 10px;
+
+        .callback-phones {
+            flex-direction: row;
+            a {
+                font-size: 1em;
+                font-weight: 600;
+
+                &::after {
+                    display: inline;
+                    opacity: 0.5;
+                }
+                &:last-child {
+                    margin-right: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

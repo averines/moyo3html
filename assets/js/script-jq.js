@@ -481,7 +481,7 @@ window.addEventListener('resize', () => {
 // скрипты для страницы товара =============================================
 
 // слайдер на странице товара
-if (document.querySelectorAll('.product-gallery').length > 0) {
+if (document.querySelectorAll('.container--page-product .product-gallery').length > 0) {
 
     // слайдер фоток на странице товара
     const swiperProductPics = new Swiper('.product-pics', {

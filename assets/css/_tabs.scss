@@ -1,0 +1,107 @@
+.tabs {
+    .tabs-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            display: flex;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 11px;
+            text-decoration: none;
+            padding: 14px;
+            color: $text;
+            border: 2px solid transparent;
+            border-top-color: $line-d;
+            flex-grow: 1;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $bg-l;
+            }
+
+            &:first-child {
+                border-top-color: transparent;
+            }
+
+            &.is-active {
+                border-color: $main;
+
+                font-weight: 600;
+
+                + .tabs-titles__item {
+                    border-top-color: transparent;
+                }
+
+                @media screen and (min-width: 768px) {
+                    &.is-active {
+                        border-color: $main;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                border: none;
+                border-bottom: 4px solid $line-d;
+                width: 20%;
+            }
+        }
+    }
+}
+
+.tabs--category {
+    margin-top: 20px;
+
+    .tabs-titles {
+        &__item {
+            padding: 3em;
+
+            &.is-active {
+                .tabs-title-category__pic {
+                    path {
+                        stroke: $main;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs-title-category {
+        display: flex;
+        column-gap: 7px;
+        align-items: center;
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 600;
+            padding-bottom: 0.4em;
+        }
+
+        &__description {
+            color: $text-l;
+            font-size: 10px;
+            text-transform: initial;
+        }
+    }
+}
+
+[data-action="tabs"] {
+    .tabs-content {
+        &__item {
+            display: none;
+
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+}

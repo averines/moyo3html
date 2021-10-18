@@ -369,16 +369,16 @@ ol {
       background-color: $main-hover;
     }
 
-    &:disabled {
-      background-color: transparent;
-      color: $text-l;
-      opacity: 0.8;
-      border-color: $line-d;
+    // &:disabled {
+    //   background-color: transparent;
+    //   color: $text-l;
+    //   opacity: 0.8;
+    //   border-color: $line-d;
 
-      &:hover {
-        opacity: 1;
-      }
-    }
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
 
     &.is-disabled {
       border-color: $text-l;
@@ -532,14 +532,25 @@ ol {
   display: none;
 }
 
+.btn-link {
+  background-color: transparent;
+  padding: 0;
+  display: inline;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  color: $text-l;
+}
+
 .password-icon {
-  width: 20px;
-  height: 20px;
-  background: url(../img/icons/eye.svg) no-repeat center;
-  background-size: 100%;
+  width: 30px;
+  height: 100%;
+  background: url(../img/icons/eye.svg) no-repeat;
+  background-size: 80%;
+  background-position: 10% 50%;
   display: block;
   position: absolute;
-  right: 0;
+  right: 40px;
   border: none;
   cursor: pointer;
 
@@ -557,11 +568,12 @@ ol {
   .fancybox-content {
     padding: 0;
   }
-  .modals__item {
-    .fancybox-close-small {
-      filter: brightness(4);
-    }
-  }
+
+  // .modals__item {
+  //   .fancybox-close-small {
+  //     filter: brightness(4);
+  //   }
+  // }
 
   .product__quickview {
     .fancybox-close-small {

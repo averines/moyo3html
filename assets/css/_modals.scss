@@ -1,0 +1,100 @@
+.modals {
+    &__item {
+        display: none;
+        border-radius: 6px;
+    }
+}
+
+.modal {
+    &__title {
+        padding: 30px 20px 20px 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__content {
+        padding: 20px;
+        position: relative;
+    }
+
+    &--callback {
+        width: 100%;
+        max-width: 450px;
+
+        @media screen and (min-width: 768px) {
+            .modal__title {
+                padding-top: 40px;
+                padding-left: 50px;
+            }
+            .modal__content {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            max-width: none;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 0.95em 1.5em;
+        }
+    }
+
+    &--login {
+        width: 100%;
+        max-width: 450px;
+
+        @media screen and (min-width: 768px) {
+            .modal__title {
+                padding-top: 40px;
+                padding-left: 50px;
+            }
+            .modal__content {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            max-width: none;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 0.95em 1.5em;
+        }
+    }
+
+    &--passwordrecover {
+        width: 100%;
+        max-width: 450px;
+
+        @media screen and (min-width: 768px) {
+            .modal__title {
+                padding-top: 40px;
+                padding-left: 50px;
+            }
+            .modal__content {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+            max-width: none;
+            font-size: 16px;
+            margin-top: 20px;
+            padding: 0.95em 1.5em;
+        }
+    }    
+
+    &--map {
+        width: 100%;
+        max-width: 750px;
+
+        > .modal__content {
+            height: 500px;
+        }
+    }
+}

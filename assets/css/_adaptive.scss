@@ -94,11 +94,11 @@
 }
 
 @media screen and (min-width: 600px) {
-  .form-text-wrapper {
-    margin-top: 0;
-    width: 100%;
-    padding: 0 1em;
-  }
+  // .form-text-wrapper {
+  //   margin-top: 0;
+  //   width: 100%;
+  //   padding: 0 1em;
+  // }
 
   .main-slider {
     .main-slide {
@@ -108,48 +108,19 @@
     }
   }
 
-  .modal__form {
-    .form-row {
-      .form-group {
-        margin-bottom: 0;
-      }
-    }
-  }
+  // .modal__form {
+  //   .form-row {
+  //     .form-group {
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  // }
 
-  .modallogin {
-    .modal__form {
-      padding: 0;
-    }
-  }
-
-  .form-text {
-    min-width: auto;
-    flex-basis: 50%;
-
-    &--phones {
-      min-width: 100%;
-      justify-content: center;
-      padding-bottom: 1em;
-
-      .callback-phones {
-        flex-direction: row;
-        a {
-          font-size: 1em;
-          font-weight: 600;
-
-          &::after {
-            display: inline;
-          }
-          &:last-child {
-            margin-right: 0;
-            &::after {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
+  // .modallogin {
+  //   .modal__form {
+  //     padding: 0;
+  //   }
+  // }
 
   .header {
     .menu-user {
@@ -642,20 +613,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .tabs-titles {
-    flex-direction: row;
-    display: flex;
 
-    &__item {
-      border: none;
-      border-bottom: 4px solid $line-d;
-      width: 20%;
-
-      &.is-active {
-        border-color: $main;
-      }
-    }
-  }
 
   .list-about {
     display: grid;
@@ -950,13 +908,13 @@
       right: 20px;
     }
 
-    .modal__form {
-      .btn-main {
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
-      }
-    }
+    // .modal__form {
+    //   .btn-main {
+    //     position: absolute;
+    //     right: 15px;
+    //     bottom: 15px;
+    //   }
+    // }
 
     .form-group__select {
       width: auto;
@@ -1525,38 +1483,38 @@
     }
   }
 
-  .modals {
-    &__item {
-      min-height: 350px;
-    }
-  }
+  // .modals {
+  //   &__item {
+  //     min-height: 350px;
+  //   }
+  // }
 
-  .modal {
-    &__title {
-      font-size: 1.3em;
-      padding: 0.5em 1em;
-    }
+  // .modal {
+  //   &__title {
+  //     font-size: 1.3em;
+  //     padding: 0.5em 1em;
+  //   }
 
-    &__form {
-      padding: 2em;
-      text-align: center;
+  //   &__form {
+  //     padding: 2em;
+  //     text-align: center;
 
-      .form-row {
-        display: flex;
-        column-gap: $gap;
-        margin-bottom: 2em;
-        flex-wrap: wrap;
+  //     .form-row {
+  //       display: flex;
+  //       column-gap: $gap;
+  //       margin-bottom: 2em;
+  //       flex-wrap: wrap;
 
-        .form-group {
-          flex-basis: 0;
-        }
-      }
-    }
-  }
+  //       .form-group {
+  //         flex-basis: 0;
+  //       }
+  //     }
+  //   }
+  // }
 
-  .form-text {
-    flex-basis: 0;
-  }
+  // .form-text {
+  //   flex-basis: 0;
+  // }
 
   .footer-top {
     padding-top: 45px;
@@ -1890,11 +1848,11 @@
     }
   }
 
-  .modallogin {
-    .form-row {
-      margin-bottom: 15px;
-    }
-  }
+  // .modallogin {
+  //   .form-row {
+  //     margin-bottom: 15px;
+  //   }
+  // }
 
   .choose-variants {
     margin-top: 30px;
