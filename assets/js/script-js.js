@@ -906,6 +906,7 @@ if (formsNeedCheck.length > 0) {
                 formGroup.classList.add('form-group--need-check')
 
                 input.addEventListener('input', (e) => {
+                    inputs = form.querySelectorAll('[data-check]')
                     checkInput(formGroup, input, e.target.value)
                     checkForm(form, inputs.length)
                 })
@@ -916,20 +917,6 @@ if (formsNeedCheck.length > 0) {
                 checkForm(form, inputs.length)
             })
         }
-    })
-}
-
-
-// на странице Регистрации - передаем в форму значение выбранного типа регистрации
-const registrationForm = document.querySelector('.form--registration')
-if (registrationForm) {
-    let typeInput = registrationForm.querySelector('input[type="hidden"]')
-    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item')
-    typeVariants.forEach(typeVariant => {
-        typeVariant.addEventListener('click', () => {
-            typeValue = typeVariant.dataset.tabTarget
-            typeInput.value = typeValue
-        })
     })
 }
 
@@ -953,6 +940,41 @@ function checkForm(form, inputsCount) {
         form.classList.remove('is-valid')
         submitBtn.setAttribute('disabled', 'disabled')
     }
+}
+
+// на странице Регистрации - передаем в форму значение выбранного типа регистрации
+const registrationForm = document.querySelector('.form--registration')
+if (registrationForm) {
+    let typeInput = registrationForm.querySelector('input[type="hidden"]')
+    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item')
+
+    let innInput = document.getElementById('registration-inn')
+    let innFormGroup = innInput.closest('.form-group')
+
+
+    function innCheck(typeValue) {
+        // прячем поле для инн
+        if (typeValue == 'type1') {
+            innInput.removeAttribute('data-check')
+            innFormGroup.style.display = 'none'
+        } else {
+            innInput.setAttribute('data-check', 'true')
+            innFormGroup.style.display = 'flex'
+        }
+    }
+
+    innCheck('type1')
+
+    typeVariants.forEach(typeVariant => {
+        typeVariant.addEventListener('click', () => {
+            typeValue = typeVariant.dataset.tabTarget
+            typeInput.value = typeValue
+            innCheck(typeValue)
+
+            let inputs = registrationForm.querySelectorAll('[data-check]')
+            checkForm(registrationForm, inputs.length)
+        })
+    })
 }
 
 
