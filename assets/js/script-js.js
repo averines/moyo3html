@@ -954,7 +954,7 @@ if (registrationForm) {
 
     function innCheck(typeValue) {
         // прячем поле для инн
-        if (typeValue == 'type1') {
+        if (typeValue !== 'type3') {
             innInput.removeAttribute('data-check')
             innFormGroup.style.display = 'none'
         } else {
