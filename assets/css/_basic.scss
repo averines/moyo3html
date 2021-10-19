@@ -70,25 +70,7 @@ main {
   }
 }
 
-.container {
-  max-width: 1470px;
-  padding-left: $gap;
-  padding-right: $gap;
-  margin: 0 auto;
-  position: relative;
-}
 
-.container--footer {
-  padding: 0;
-}
-
-.container--pr0 {
-  padding-right: 0;
-}
-
-.container--pl0 {
-  padding-left: 0;
-}
 
 .w-100 {
   width: 100%;

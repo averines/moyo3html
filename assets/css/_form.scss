@@ -1,6 +1,3 @@
-.form {
-}
-
 .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +163,151 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.form-minimal {
+    .form-row {
+        margin: 15px 0;
+
+        .form-group {
+            > input[type="text"] {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .form-group {
+        width: 100%;
+        position: relative;
+
+        &--required {
+            &::after {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 100%;
+                background: url(../img/icons/check-round.svg) no-repeat;
+                background-position: 20% 50%;
+                background-size: 45%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                filter: brightness(2) grayscale(1);
+            }
+        }
+
+        &.valid {
+            &::after {
+                filter: none;
+            }
+        }
+
+        input {
+            padding: 27px 40px 10px 20px;
+            border: 1px solid $line-d + 25;
+            font-size: 18px;
+            width: 100%;
+            margin-top: -1px;
+
+            &:focus,
+            &.not-empty {
+                outline: none;
+                + label {
+                    transform: translateY(-10px) scale(0.75);
+                    opacity: 0.8;
+                }
+            }
+
+            + label {
+                pointer-events: none;
+                top: auto;
+                color: $text-l;
+                font-size: 17px;
+                padding: 0 25px;
+                position: absolute;
+                transform: translateY(2px);
+                transition: transform 0.15s ease-in-out;
+                transform-origin: 0 0;
+            }
+        }
+    }
+
+    .form-block {
+        margin: 15px 0;
+        .form-group {
+            &:first-child {
+                > input[type="text"] {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+            }
+
+            &:last-child {
+                > input[type="text"] {
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+    }
+
+    
+    button[type="submit"] {
+        background-color: $special-6;
+         &:hover {
+               background-color: $special-6 - 20; 
+            }
+
+        &:focus {
+            outline: 2px solid black;
+        }
+
+        &:disabled {
+            background-color: $main;
+        }
+    }
+}
+
+.form--registration {
+    max-width: 450px;
+    padding-bottom: 150px;
+
+    .btn {
+        width: 100%;
+        max-width: none;
+        background-color: $main;
+        color: #fff;
+        font-size: 16px;
+        padding: 1.25em;
+
+        &:hover {
+            background-color: $main-hover;
+        }
+    }
+}
+
+.form-group {
+    &--need-check {
+        &::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 100%;
+            background: url(../img/icons/check-round.svg) no-repeat;
+            background-position: 20% 50%;
+            background-size: 45%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            filter: brightness(2) grayscale(1);
+        }
+    }
+
+    &.is-valid {
+        &::after {
+            filter: none;
         }
     }
 }

@@ -799,26 +799,25 @@ if (tabsContainers.length > 0) {
         tabsTitlesItems.forEach(tabsTitlesItem => {
             tabsTitlesItem.addEventListener('click', (e) => {
                 // if (tabsTitlesItem.getAttribute('href')[0] == '#') {
-                    // e.preventDefault()
+                // e.preventDefault()
 
-                    // let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
-                    let activeContentTabId = tabsTitlesItem.dataset.tabTarget
-                console.log(activeContentTabId);
+                // let activeContentTabId = tabsTitlesItem.getAttribute('href').split('#')[1]
+                let activeContentTabId = tabsTitlesItem.dataset.tabTarget
 
-                    //убираем активный класс со всех заголовков
-                    tabsTitlesItems.forEach(item => { item.classList.remove('is-active') })
+                //убираем активный класс со всех заголовков
+                tabsTitlesItems.forEach(item => { item.classList.remove('is-active') })
 
-                    // делаем активным кликнутый заголовок
-                    tabsTitlesItem.classList.add('is-active')
+                // делаем активным кликнутый заголовок
+                tabsTitlesItem.classList.add('is-active')
 
-                    // let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
-                    let activeContentTab = tabsContainer.querySelector(`[data-tab-id="${activeContentTabId}"]`)
+                // let activeContentTab = tabsContainer.querySelector(`[data-tabid="${activeContentTabId}"]`)
+                let activeContentTab = tabsContainer.querySelector(`[data-tab-id="${activeContentTabId}"]`)
 
-                    //убираем активный класс со всех элементов с контентом
-                    tabsContentItems.forEach(item => { item.classList.remove('is-active') })
+                //убираем активный класс со всех элементов с контентом
+                tabsContentItems.forEach(item => { item.classList.remove('is-active') })
 
-                    // делаем активным нужный контейнер с контентом
-                    activeContentTab.classList.add('is-active')
+                // делаем активным нужный контейнер с контентом
+                activeContentTab.classList.add('is-active')
 
                 // } else {
                 //     // console.log('нет решетки, клик работает как ссылка');
@@ -896,61 +895,64 @@ if (customSelectItems.length > 0) {
 }
 
 
-
 // проверка форм перед отправкой
-const formsCheck = document.querySelectorAll('[data-action="form-check"]')
-if (formsCheck) {
-    formsCheck.forEach(form => {
-        let requiredInputs = form.querySelectorAll('[required]')
-        let submitBtn = form.querySelector('button[type="submit"]')
-        const checkArrTrue = el => el == true
+const formsNeedCheck = document.querySelectorAll('form[data-check]')
+if (formsNeedCheck.length > 0) {
+    formsNeedCheck.forEach(form => {
+        let inputs = form.querySelectorAll('[data-check]')
+        if (inputs.length > 0) {
+            inputs.forEach(input => {
+                let formGroup = input.closest('.form-group')
+                formGroup.classList.add('form-group--need-check')
 
-        requiredInputs.forEach(input => {
-            input.addEventListener('input', (e) => {
-                let allInputsFilledArr = []
-
-                requiredInputs.forEach(input => {
-                    if (input.value) {
-                        allInputsFilledArr.push(true)
-                    } else {
-                        allInputsFilledArr.push(false)
-                    }
+                input.addEventListener('input', (e) => {
+                    checkInput(formGroup, input, e.target.value)
+                    checkForm(form, inputs.length)
                 })
 
-                if (allInputsFilledArr.every(checkArrTrue)) {
-                    submitBtn.removeAttribute('disabled')
-                } else {
-                    submitBtn.setAttribute('disabled', true)
-                }
             })
+
+            form.addEventListener('submit', (e) => {
+                checkForm(form, inputs.length)
+            })
+        }
+    })
+}
+
+
+// на странице Регистрации - передаем в форму значение выбранного типа регистрации
+const registrationForm = document.querySelector('.form--registration')
+if (registrationForm) {
+    let typeInput = registrationForm.querySelector('input[type="hidden"]')
+    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item')
+    typeVariants.forEach(typeVariant => {
+        typeVariant.addEventListener('click', () => {
+            typeValue = typeVariant.dataset.tabTarget
+            typeInput.value = typeValue
         })
     })
 }
 
-function singleFormCheck(form) {
-    let requiredInputs = form.querySelectorAll('input[required]')
-    let submitBtn = form.querySelector('button[type="submit"]')
 
-    requiredInputs.forEach(input => {
+function checkInput(par, el, val) {
+    //пока что тут проверка только на наличие значения
+    if (el.dataset.checkRequired == 'true' && val.replace(/\s/g, '').length > 0) {
+        par.classList.add('is-valid')
+    } else (par.classList.remove('is-valid'))
+}
 
-        input.addEventListener('input', (e) => {
-            let allInputsFilled = false
-
-            requiredInputs.forEach(input => {
-                if (input.value) {
-                    allInputsFilled = true
-                } else {
-                    allInputsFilled = false
-                }
-            })
-
-            if (allInputsFilled) {
-                submitBtn.removeAttribute('disabled')
-            } else {
-                submitBtn.setAttribute('disabled', true)
-            }
-        })
-    })
+function checkForm(form, inputsCount) {
+    let validInputsCount = form.querySelectorAll('.is-valid')
+    let submitBtn = form.querySelector('[type="submit"]')
+    if (inputsCount === validInputsCount.length) {
+        form.classList.add('is-valid')
+        form.classList.remove('is-invalid')
+        submitBtn.removeAttribute('disabled')
+    } else {
+        form.classList.add('is-invalid')
+        form.classList.remove('is-valid')
+        submitBtn.setAttribute('disabled', 'disabled')
+    }
 }
 
 
@@ -959,7 +961,7 @@ function singleFormCheck(form) {
 //     needValidationForms.forEach(needValidationForm => {
 //         const formNeedCheckBtn = needValidationForm.querySelector('button[type="submit"]')
 //         const needValidItems = needValidationForm.querySelectorAll('[data-form-needvalid]')
-        
+
 //         if (needValidItems.length > 0) {
 //             needValidItems.forEach(needValidItem => {
 //                 let needValidItemParent = needValidItem.closest('.form-group')

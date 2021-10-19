@@ -1,0 +1,32 @@
+.container {
+    max-width: 1470px;
+    padding-left: $gap;
+    padding-right: $gap;
+    margin: 0 auto;
+    position: relative;
+
+    &--footer {
+        padding: 0;
+    }
+
+    &--pr0 {
+        padding-right: 0;
+    }
+
+    &--pl0 {
+        padding-left: 0;
+    }
+
+    &--max600 {
+        max-width: 600px;
+    }
+
+    &--registration {
+        max-width: 600px;
+        margin-top: 30px;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 70px;
+        }
+    }
+}
