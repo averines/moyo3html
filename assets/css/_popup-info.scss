@@ -51,13 +51,9 @@
     }
 }
 
-// .product-table__row {
-//     position: relative;
-//     &:last-child {
-//         .popup-info {
-//             &__content {
-//                 top: -100%;
-//             }
-//         }
-//     }
-// }
+
+.popup-info-wrapper {
+    display: flex;
+    column-gap: 7px;
+    align-items: center;
+}

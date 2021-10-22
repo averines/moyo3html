@@ -1,11 +1,7 @@
-.modals {
-    &__item {
-        display: none;
-        border-radius: 6px;
-    }
-}
-
 .modal {
+    display: none;
+    border-radius: 6px;
+
     &__title {
         padding: 30px 20px 20px 20px;
         font-size: 20px;
@@ -87,7 +83,7 @@
             margin-top: 20px;
             padding: 0.95em 1.5em;
         }
-    }    
+    }
 
     &--map {
         width: 100%;
@@ -96,5 +92,39 @@
         > .modal__content {
             height: 500px;
         }
+    }
+
+    &--quickview {
+        width: 1000px;
+        padding: 40px;
+
+        &.fancybox-content {
+            padding: 40px;
+        }
+    }
+
+    &--sm {
+        width: 100%;
+        max-width: 450px;
+
+        @media screen and (min-width: 768px) {
+            .modal__title,
+            .modal__content {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .modal__content {
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    .btn-full {
+        width: 100%;
+        max-width: none;
+        font-size: 16px;
+        margin-top: 20px;
+        padding: 0.95em 1.5em;
     }
 }

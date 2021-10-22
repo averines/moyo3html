@@ -26,18 +26,22 @@
   <link rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="./assets/favicon/site.webmanifest">
   <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
-
+  
   <link rel="stylesheet" href="./assets/js/fancybox/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./assets/js/tiny-slider/tiny-slider.css">
+  <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/js/ion-range-slider/ion.rangeSlider.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
+  
   <script src="./assets/js/script-js.js" defer></script>
   <script src="./assets/js/jquery-3.6.0.min.js" defer></script>
   <script src="./assets/js/fancybox/jquery.fancybox.min.js" defer></script>
   <script src="./assets/js/tiny-slider/tiny-slider.js" defer></script>
+  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/mixitup/mixitup.min.js" defer></script>
-  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js" defer></script>
+  <script src="./assets/js/ion-range-slider/ion.rangeSlider.min.js" defer></script>
   <script src="./assets/js/script-jq.js" defer></script>
 </head>
 
@@ -2004,481 +2008,415 @@
 
     </section>
 
-    <section class="section-productslist">
-      <h2 class="visually-hidden">Заголовок блока категорий</h2>
-      <div class="container container--pr0">
-        <div class="product-group">
-          <div class="product-group__header">
-            <div class="product-group__title">Мужчинам</div>
-            <a class="product-group__link" href="subcategory.html">Смотреть все</a>
-          </div>
-          <div class="product-mini-slider">
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+    <div class="container">
+      <div class="products-section">
+        <div class="products-section__title products-section__title--center">
+          Ммужчинам
+          <a class="products-section__link" href="subcategory.html">Смотреть все</a>
+        </div>
+        <div class="slider-products">
+          <div class="products-pagination products-pagination--section-hits"></div>
+          <div class="products">
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
-            <div class="product-mini-slider__item">
-              <div class="product-wrapper">
-                <div class="product" data-product-id="11111">
-                  <div class="product__colors color-variants">
-                    <a class="color-variants__item" href="#" data-color-id="col1">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
-                        <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col2">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
-                        <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
-                      </picture>
-                    </a>
-                    <a class="color-variants__item" href="#" data-color-id="col3">
-                      <picture>
-                        <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
-                        <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
-                      </picture>
-                    </a>
-                  </div>
-                  <a class="product__favorite" href="#favorite" aria-label="В избранное"></a>
-                  <a class="product__quick-view"></a>
-                  <a class="product__link" href="product.html">
-                    <div class="product__pic">
-                      <div class="sticky-wrapper">
-                        <div class="product__sticky product__sticky--new"></div>
-                        <div class="product__sticky product__sticky--hit"></div>
-                        <div class="product__sticky product__sticky--action">26/06</div>
-                      </div>
-                      <picture>
-                        <!-- <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)"> -->
-                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
-                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
-                      </picture>
-                    </div>
-                    <div class="product__info">
-                      <div class="product__header">
-                        <div class="product__brand">Vittoria Vicci</div>
-                        <div class="product__title">Платье</div>
-                      </div>
-                      <div class="product__needlogin needlogin">
-                        <div class="needlogin__title">Оптовая цена закрыта</div>
-                        <div class="needlogin__description"><a data-fancybox data-src="#modallogin" href="javascript:;">Авторизуйтесь</a> или <a data-fancybox data-src="#modalregistration"
-                            href="javascript:;">зарегистрируетесь</a> в личном кабинете, чтобы увидеть оптовые цены.</div>
-                      </div>
-                      <div class="product__price-wrapper js-product-price-wrapper">
-                        <div class="product__price price">
-                          <div class="price__old">2 830,00</div>
-                          <div class="price__profit">175,00</div>
-                          <div class="price__break"></div>
-                          <div class="price__base">2 655,00</div>
-                          <div class="price__discount">13</div>
-                        </div>
-                        <div class="product__action-time" data-action-time="2021-07-31"></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="product__sizes size-variants">
-                    <a href="#" class="size-variants__item">40</a>
-                    <a href="#" class="size-variants__item">42</a>
-                    <a href="#" class="size-variants__item">44</a>
-                    <a href="#" class="size-variants__item">46</a>
-                    <a href="#" class="size-variants__item">48/50</a>
-                    <a href="#" class="size-variants__item">50</a>
-                    <a href="#" class="size-variants__item">52</a>
-                    <a href="#" class="size-variants__item">52-54</a>
-                    <a href="#" class="size-variants__item">54-56</a>
-                    <a href="#" class="size-variants__item">56-58</a>
-                    <a href="#" class="size-variants__item">56XL-58XXL</a>
-                    <a href="#" class="size-variants__item">60XL-70XXL</a>
+            <div class="product-card" data-product-id="11111">
+              <div class="product-card__wrapper">
+                <button class="product-card__quickview" data-fancybox data-src="#product-quickview">Быстрый просмотр</button>
+                <a class="product-card__link" href="product.html">
+                  <picture class="product-card__pic">
+                    <source type="image/webp" srcset="./i/products/470/11111-col1-pic1-470.webp" media="(min-width: 1366px)">
+                    <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                    <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-card__info"><button class="product-card__favorite product-favorite" aria-label="В избранное"></button>
+    
+                <div class="product-card__price product-price product-price--card-product">
+                  <div class="product-price__row">
+                    <div class="product-price__base">2 655</div>
                   </div>
                 </div>
+                <a class="product-card__header" href="product.html">
+                  <div class="product-card__title">Vittoria Vicci</div>
+                  <div class="product-card__subtitle">Платье</div>
+                </a>
+              </div>
+              <div class="product-card__sizes size-variants">
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">40</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">42</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">44</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">46</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">48/50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">50</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">52-54</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">54-56</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56-58</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">56XL-58XXL</a>
+                <a href="#" class="size-variants__item is-showed" data-color-id="col1">60XL-70XXL</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">52-54</a>
+                <a href="#" class="size-variants__item" data-color-id="col2">54-56</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">40</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">42</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">44</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">46</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">48/50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">50</a>
+                <a href="#" class="size-variants__item" data-color-id="col3">52</a>
+              </div>
+              <div class="product-card__colors color-variants">
+                <picture class="color-variants__item" data-color-id="col1" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                  <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col2" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.webp">
+                  <img src="./i/products/100/11111-col2-pic1-100.jpg" alt="Цвет 2">
+                </picture>
+                <picture class="color-variants__item" data-color-id="col3" data-color-pics="pic1, pic2, pic3, pic4, pic5">
+                  <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.webp">
+                  <img src="./i/products/100/11111-col3-pic1-100.jpg" alt="Цвет 3">
+                </picture>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">

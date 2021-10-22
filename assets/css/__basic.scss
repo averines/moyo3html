@@ -55,19 +55,6 @@ body {
 
 main {
   min-height: 70vh;
-  // border: 1px solid transparent;
-
-  &.page-main {
-    // .tns-outer {
-    //   position: sticky;
-    //   top: 0;
-    // }
-
-    // .page-main__content-wrapper {
-    //   background-color: #f9f9f9;
-    //   position: relative;
-    // }
-  }
 }
 
 
@@ -260,12 +247,12 @@ ol {
   flex-wrap: wrap;
 }
 
-[class^="col"] {
-  padding-left: $gap;
-  padding-right: $gap;
-  position: relative;
-  width: 100%;
-}
+// [class^="col"] {
+//   padding-left: $gap;
+//   padding-right: $gap;
+//   position: relative;
+//   width: 100%;
+// }
 
 .alert {
   font-size: 0.9em;

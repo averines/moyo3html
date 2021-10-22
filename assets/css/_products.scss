@@ -1,0 +1,259 @@
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-top: 20px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1400px) {
+        column-gap: 10px;
+        row-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.products-section {
+    padding-bottom: 50px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+
+    @media screen and (min-width: 1200px) {
+        overflow: visible;
+    }
+
+    &:hover {
+        z-index: 2;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        column-gap: 14px;
+        // padding-bottom: 15px;
+
+        // &.products-section__title--center {
+        //     justify-content: center;
+        //     flex-direction: column;
+
+        //     .products-section__link {
+        //         padding-top: 12px;
+        //         &::before {
+        //             display: none;
+        //         }
+        //     }
+        // }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        color: $text-l;
+        transition: color 0.15s ease-in-out;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 0.8em;
+            background-color: $line-l;
+            margin-right: 14px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .products {
+        display: flex;
+        column-gap: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .product {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .product-card__price {
+        font-size: 0.7em;
+    }
+
+    .product-price--card-product .product-price__date {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .product-price__discount {
+        font-size: 0.9em;
+    }
+
+    // .product-card__favorite {
+    //     top: auto;
+    //     bottom: 5px;
+    // }
+
+    // .product-card__header {
+    //     padding-right: 35px;
+    // }
+
+    .product-card {
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
+                border-radius: 0;
+
+                .product-card__sizes {
+                    display: none;
+                    box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__colors {
+                    display: none;
+                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__quickview {
+                    display: none;
+                }
+
+                .product-card__pic {
+                    border-top-right-radius: 4px;
+                }
+            }
+
+            &:nth-child(4n) {
+                .product-card__colors {
+                    right: auto;
+                    left: -70px;
+                    box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__sizes {
+                    left: -70px;
+                    padding-left: 85px;
+                }
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            &:hover {
+                box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
+                border-radius: 0;
+
+                .product-card__sizes {
+                    display: flex;
+                    box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__colors {
+                    display: flex;
+                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__quickview {
+                    display: block;
+                }
+
+                .product-card__pic {
+                    border-top-right-radius: 0;
+                }
+            }
+
+            &:nth-child(4n) {
+                .product-card__colors {
+                    left: auto;
+                    right: -70px;
+                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__sizes {
+                    left: auto;
+                    right: -70px;
+                    padding-left: 20px;
+                }
+            }
+
+            &:nth-child(6n) {
+                .product-card__colors {
+                    right: auto;
+                    left: -70px;
+                    box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
+                }
+
+                .product-card__sizes {
+                    left: -70px;
+                    padding-left: 85px;
+                }
+            }
+
+            &__info {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.products-pagination {
+    display: flex;
+    column-gap: 6px;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateY(-25px);
+
+    &.swiper-pagination-bullets {
+        z-index: 0;
+        pointer-events: none;
+
+        .swiper-pagination-bullet {
+            background-color: $text-l;
+            width: 5px;
+            height: 5px;
+            margin: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    }
+
+    &.swiper-pagination-lock {
+        display: none;
+    }
+}
+
+.products-pagination--section-hits {
+    transform: translateY(-5px);
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: $text-l;
+        border: 1px solid $bg-l;
+        opacity: 1;
+        transition: $tr;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: none;
+        border: 2px solid $main;
+        width: 8px;
+        height: 8px;
+    }
+}

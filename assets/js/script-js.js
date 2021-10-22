@@ -469,18 +469,139 @@ if (favoritesBtns) {
 
 
 // действия с продуктом===================================================
-const products = document.querySelectorAll('.product-wrapper > .product')
-if (products.length > 0) {
-    products.forEach(product => {
-        let productPic = product.querySelector('.product__pic')
-        let productPicSource = product.querySelector('.product__pic source')
-        let productPicImg = product.querySelector('.product__pic img')
-        let productColors = product.querySelectorAll('.color-variants__item')
-        let productSizes = product.querySelectorAll('.size-variants__item')
+// const products = document.querySelectorAll('.product-wrapper > .product')
+// if (products.length > 0) {
+//     products.forEach(product => {
+//         let productPic = product.querySelector('.product__pic')
+//         let productPicSource = product.querySelector('.product__pic source')
+//         let productPicImg = product.querySelector('.product__pic img')
+//         let productColors = product.querySelectorAll('.color-variants__item')
+//         let productSizes = product.querySelectorAll('.size-variants__item')
+//         let productColorPicIndex = 0
+//         let swapProductPicTimer
+//         let productActionTime = product.querySelector('.product__info .product__action-time')
+//         let nowDate = Date.now();
+//         let productColorActiveId
+//         let colorPics
+
+//         if (productColors.length > 0) {
+//             productColorActiveId = productColors[0].dataset.colorId
+//             colorPics = productColors[0].dataset.colorPics ? productColors[0].dataset.colorPics.replace(/\s/g, '').split(',') : ''
+//         }
+
+//         function swapProductPic(picsArray, productColorActiveId) {
+//             // console.log('меняю фотки');
+//             productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
+//             swapProductPicTimer = setTimeout(function () {
+//                 // console.log('сменил фотку');
+//                 productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-${picsArray[productColorPicIndex]}-300`
+//                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
+//                 productPicImg.setAttribute('src', productPicPath + '.jpg')
+//                 swapProductPic(picsArray, productColorActiveId)
+//             }, 1000)
+//         }
+
+//         //смена доступных размеров при наведении на thumb
+//         if (productSizes.length > 0) {
+//             function swapProductSizes(productColorActiveId) {
+//                 productSizes.forEach(productSize => {
+//                     if (productSize.dataset.colorId == productColorActiveId) {
+//                         productSize.classList.add('is-showed')
+//                     } else {
+//                         productSize.classList.remove('is-showed')
+//                     }
+//                 })
+//             }
+//         }
+
+
+//         //листание фото товара в мини-карточке товара при наведении на фото
+
+//         if (colorPics) {
+
+//         }
+//         productPic.addEventListener('mouseover', () => {
+//             swapProductPic(colorPics, productColorActiveId)
+//         })
+
+//         //прекращение листания при отведении курсора с фото
+//         productPic.addEventListener('mouseout', () => {
+//             productColorActiveId = productColors[0].dataset.colorId
+//             productColorPicIndex = 0
+//             let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+//             productPicSource.setAttribute('srcset', productPicPath + '.webp')
+//             productPicImg.setAttribute('src', productPicPath + '.jpg')
+//             clearTimeout(swapProductPicTimer);
+//             swapProductSizes(productColorActiveId)
+//         })
+
+//         productColors.forEach(productColor => {
+//             //листание фото товара в мини-карточке товара при наведении на thumb
+//             productColor.addEventListener('mouseover', () => {
+//                 // console.log('ставлю первую фотку');
+//                 productColorActiveId = productColor.dataset.colorId
+//                 let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+//                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
+//                 productPicImg.setAttribute('src', productPicPath + '.jpg')
+//                 swapProductPic(colorPics, productColorActiveId)
+//                 swapProductSizes(productColorActiveId)
+//             })
+
+//             //прекращение листания при отведении курсора с thumb
+//             productColor.addEventListener('mouseout', () => {
+//                 clearTimeout(swapProductPicTimer);
+//                 swapProductSizes(productColorActiveId)
+//             })
+//         })
+
+//         // вывод дней до завершения акции со склонением
+//         if (productActionTime) {
+//             if (productActionTime.dataset.actionTime) {
+//                 let productActionDate = new Date(productActionTime.dataset.actionTime)
+//                 let productActionTimeframe = Math.floor((productActionDate - nowDate) / (1000 * 60 * 60 * 24) % 30)
+
+//                 if (productActionTimeframe > 0) {
+//                     let dayword
+//                     let endword = 'Осталось'
+//                     switch (productActionTimeframe) {
+//                         case 1:
+//                         case 21:
+//                         case 31:
+//                             endword = 'Остался'
+//                             dayword = 'день'
+//                             break
+//                         case 2:
+//                         case 3:
+//                         case 4:
+//                         case 22:
+//                         case 23:
+//                         case 24:
+//                             dayword = 'дня'
+//                             break
+//                         default:
+//                             dayword = 'дней'
+//                     }
+//                     productActionTime.innerHTML = `${endword} ${productActionTimeframe}&nbsp;${dayword}`
+//                 }
+
+//             }
+//         }
+
+//     })
+// }
+
+// действия с мини-карточкой продукта===================================================
+const productsCards = document.querySelectorAll('.product-card')
+if (productsCards.length > 0) {
+    productsCards.forEach(productsCard => {
+        let productPic = productsCard.querySelector('.product-card__pic')
+        let productPicSource = productsCard.querySelector('.product-card__pic source')
+        let productPicImg = productsCard.querySelector('.product-card__pic img')
+        let productColors = productsCard.querySelectorAll('.color-variants__item')
+        let productSizes = productsCard.querySelectorAll('.size-variants__item')
+
         let productColorPicIndex = 0
         let swapProductPicTimer
-        let productActionTime = product.querySelector('.product__info .product__action-time')
-        let nowDate = Date.now();
         let productColorActiveId
         let colorPics
 
@@ -490,11 +611,9 @@ if (products.length > 0) {
         }
 
         function swapProductPic(picsArray, productColorActiveId) {
-            // console.log('меняю фотки');
             productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
             swapProductPicTimer = setTimeout(function () {
-                // console.log('сменил фотку');
-                productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-${picsArray[productColorPicIndex]}-300`
+                productPicPath = `./i/products/300/${productsCard.dataset.productId}-${productColorActiveId}-${picsArray[productColorPicIndex]}-300`
                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(picsArray, productColorActiveId)
@@ -514,21 +633,16 @@ if (products.length > 0) {
             }
         }
 
-
         //листание фото товара в мини-карточке товара при наведении на фото
-
-        if (colorPics) {
-
-        }
         productPic.addEventListener('mouseover', () => {
             swapProductPic(colorPics, productColorActiveId)
         })
 
         //прекращение листания при отведении курсора с фото
         productPic.addEventListener('mouseout', () => {
-            productColorActiveId = productColors[0].dataset.colorId
+            // productColorActiveId = productColors[0].dataset.colorId
             productColorPicIndex = 0
-            let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+            let productPicPath = `./i/products/300/${productsCard.dataset.productId}-${productColorActiveId}-pic1-300`
             productPicSource.setAttribute('srcset', productPicPath + '.webp')
             productPicImg.setAttribute('src', productPicPath + '.jpg')
             clearTimeout(swapProductPicTimer);
@@ -538,13 +652,18 @@ if (products.length > 0) {
         productColors.forEach(productColor => {
             //листание фото товара в мини-карточке товара при наведении на thumb
             productColor.addEventListener('mouseover', () => {
-                // console.log('ставлю первую фотку');
                 productColorActiveId = productColor.dataset.colorId
-                let productPicPath = `./i/products/300/${product.dataset.productId}-${productColorActiveId}-pic1-300`
+                let productPicPath = `./i/products/300/${productsCard.dataset.productId}-${productColorActiveId}-pic1-300`
                 productPicSource.setAttribute('srcset', productPicPath + '.webp')
                 productPicImg.setAttribute('src', productPicPath + '.jpg')
                 swapProductPic(colorPics, productColorActiveId)
                 swapProductSizes(productColorActiveId)
+
+                //подстветка активного пункта
+                productColors.forEach(item => {
+                    item.classList.remove('is-active')
+                })
+                productColor.classList.add('is-active')
             })
 
             //прекращение листания при отведении курсора с thumb
@@ -554,43 +673,8 @@ if (products.length > 0) {
             })
         })
 
-        // вывод дней до завершения акции со склонением
-        if (productActionTime) {
-            if (productActionTime.dataset.actionTime) {
-                let productActionDate = new Date(productActionTime.dataset.actionTime)
-                let productActionTimeframe = Math.floor((productActionDate - nowDate) / (1000 * 60 * 60 * 24) % 30)
-
-                if (productActionTimeframe > 0) {
-                    let dayword
-                    let endword = 'Осталось'
-                    switch (productActionTimeframe) {
-                        case 1:
-                        case 21:
-                        case 31:
-                            endword = 'Остался'
-                            dayword = 'день'
-                            break
-                        case 2:
-                        case 3:
-                        case 4:
-                        case 22:
-                        case 23:
-                        case 24:
-                            dayword = 'дня'
-                            break
-                        default:
-                            dayword = 'дней'
-                    }
-                    productActionTime.innerHTML = `${endword} ${productActionTimeframe}&nbsp;${dayword}`
-                }
-
-            }
-        }
-
     })
 }
-
-
 
 // имитация переключения сортировки в каталоге
 const togglerSort = document.querySelector('.toggler-sort')
@@ -855,8 +939,6 @@ if (moreItems.length > 0) {
 
 // показать/скрыть пароль
 const passwordItems = document.querySelectorAll('input[type="password"]')
-
-
 if (passwordItems.length > 0) {
     passwordItems.forEach(item => {
         let passwordBtn = item.parentNode.querySelector('.password-icon')
@@ -872,6 +954,8 @@ if (passwordItems.length > 0) {
     })
 }
 
+
+// измененный селект
 const customSelectItems = document.querySelectorAll('.custom-select')
 if (customSelectItems.length > 0) {
     customSelectItems.forEach(item => {
@@ -919,7 +1003,6 @@ if (formsNeedCheck.length > 0) {
         }
     })
 }
-
 
 function checkInput(par, el, val) {
     //пока что тут проверка только на наличие значения
@@ -1713,6 +1796,37 @@ if (mainSlider) {
         }
     });
 
+}
+
+
+// слайдер продуктов в группе (хиты категорий, похожие товары)
+if (document.querySelectorAll('.products-section').length > 0) {
+    const swiperProductsSections = new Swiper('.slider-products', {
+        loop: false,
+        grabCursor: true,
+        slidesPerView: 2,
+        setWrapperSize: true,
+        spaceBetween: 15,
+        allowTouchMove: true,
+        wrapperClass: 'products',
+        slideClass: 'product-card',
+        watchOverflow: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+            },
+            1200: {
+                slidesPerView: 6,
+                // spaceBetween: 20,
+                // grabCursor: false,
+                // allowTouchMove: false,
+            }
+        },
+        pagination: {
+            el: '.products-pagination',
+            clickable: false,
+        },
+    })
 }
 
 

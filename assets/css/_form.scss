@@ -253,12 +253,11 @@
         }
     }
 
-    
     button[type="submit"] {
         background-color: $special-6;
-         &:hover {
-               background-color: $special-6 - 20; 
-            }
+        &:hover {
+            background-color: $special-6 - 20;
+        }
 
         &:focus {
             outline: 2px solid black;
@@ -289,6 +288,9 @@
 }
 
 .form-group {
+    width: 100%;
+    position: relative;
+
     &--need-check {
         &::after {
             content: "";
@@ -308,6 +310,35 @@
     &.is-valid {
         &::after {
             filter: none;
+        }
+    }
+
+    input {
+        padding: 27px 40px 10px 20px;
+        border: 1px solid $line-d;
+        font-size: 18px;
+        width: 100%;
+        margin-top: -1px;
+
+        &:focus,
+        &.not-empty {
+            outline: none;
+            + label {
+                transform: translateY(-10px) scale(0.75);
+                opacity: 0.8;
+            }
+        }
+
+        + label {
+            pointer-events: none;
+            top: auto;
+            color: $text-l;
+            font-size: 17px;
+            padding: 0 25px;
+            position: absolute;
+            transform: translateY(2px);
+            transition: transform 0.15s ease-in-out;
+            transform-origin: 0 0;
         }
     }
 }
