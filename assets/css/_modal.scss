@@ -1,9 +1,11 @@
 .modal {
+    padding: 0;
+    border-radius: 5px;
     display: none;
-    border-radius: 6px;
 
     &__title {
-        padding: 30px 20px 20px 20px;
+        padding: 20px;
+        padding-top: 30px;
         font-size: 20px;
         font-weight: 600;
     }
@@ -19,12 +21,13 @@
 
         @media screen and (min-width: 768px) {
             .modal__title {
-                padding-top: 40px;
-                padding-left: 50px;
+                padding-top: 50px;
+                padding-left: 60px;
             }
             .modal__content {
-                padding-left: 50px;
-                padding-right: 50px;
+                padding-left: 60px;
+                padding-right: 60px;
+                padding-top: 0;
             }
         }
 
@@ -32,8 +35,10 @@
             width: 100%;
             max-width: none;
             font-size: 16px;
-            margin-top: 20px;
             padding: 0.95em 1.5em;
+        }
+        .modal-link {
+            margin-left: 6px;
         }
     }
 
@@ -47,8 +52,10 @@
                 padding-left: 50px;
             }
             .modal__content {
+                padding-top: 0;
                 padding-left: 50px;
                 padding-right: 50px;
+                padding-bottom: 50px;
             }
         }
 
@@ -56,12 +63,12 @@
             width: 100%;
             max-width: none;
             font-size: 16px;
-            margin-top: 20px;
-            padding: 0.95em 1.5em;
+            margin-top: 5px;
+            padding: 1em 1.5em;
         }
     }
 
-    &--passwordrecover {
+    &--recover {
         width: 100%;
         max-width: 450px;
 
@@ -73,6 +80,7 @@
             .modal__content {
                 padding-left: 50px;
                 padding-right: 50px;
+                padding-bottom: 60px;
             }
         }
 
@@ -95,36 +103,23 @@
     }
 
     &--quickview {
-        width: 1000px;
+        max-width: 1000px;
         padding: 40px;
-
-        &.fancybox-content {
-            padding: 40px;
-        }
     }
+}
 
-    &--sm {
-        width: 100%;
-        max-width: 450px;
+.modal-link {
+    padding: 0;
+    display: inline;
+    border: none;
+    color: $main;
+    background: none;
+    cursor: pointer;
+    border-bottom: 1px dashed $main-l;
+    line-height: 1.4;
+    transition: border-bottom-color 0.15s ease-in-out;
 
-        @media screen and (min-width: 768px) {
-            .modal__title,
-            .modal__content {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-
-            .modal__content {
-                padding-bottom: 60px;
-            }
-        }
-    }
-
-    .btn-full {
-        width: 100%;
-        max-width: none;
-        font-size: 16px;
-        margin-top: 20px;
-        padding: 0.95em 1.5em;
+    &:hover {
+        border-bottom-color: $main-l + 20;
     }
 }

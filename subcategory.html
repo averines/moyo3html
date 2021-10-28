@@ -27,14 +27,16 @@
   <link rel="manifest" href="./assets/favicon/site.webmanifest">
   <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
   
-  <link rel="stylesheet" href="./assets/js/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/js/fancybox/v4/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/js/tiny-slider/tiny-slider.css">
   <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/js/ion-range-slider/ion.rangeSlider.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   
   <script src="./assets/js/script-js.js" defer></script>
   <script src="./assets/js/jquery-3.6.0.min.js" defer></script>
-  <script src="./assets/js/fancybox/jquery.fancybox.min.js" defer></script>
+  <script src="./assets/js/fancybox/v4/jquery.fancybox.min.js"></script>
+  <script src="./assets/js/tiny-slider/tiny-slider.js" defer></script>
   <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/mixitup/mixitup.min.js" defer></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU" defer></script>
@@ -5338,19 +5340,19 @@
               <a class="link-phone" href="tel:+78003012575">8 (800) 301-25-75</a>
               <a class="link-callback" data-fancybox data-src="#modalcallback" href="javascript:;">Заказать звонок</a>
             </div>
-
+  
             <div class="footer-top__worktime worktime">
               <div class="worktime__item">Понедельник – пятница:<span> c 10:00 до 20:00</span></div>
               <div class="worktime__item">Суббота, воскресенье<span> – выходные дни</span></div>
             </div>
-
+  
             <div class="footer-top__address address">
               <div class="address__item">Москва | Окружной проезд | 30A</div>
               <div class="address__item">
                 <a class="link-map" data-action="mapmodal" data-fancybox data-src="#modalmap" href="javascript:;">Схема проезда</a>
               </div>
             </div>
-
+  
             <div class="footer-top__payment">
               <img src="./assets/img/icons/payment-visa.svg" alt="visa" loading="lazy" />
               <img src="./assets/img/icons/payment-mc.svg" alt="master card" loading="lazy" />
@@ -5383,499 +5385,373 @@
         <div class="footer-bottom__copyrights">2021 © OptMoyo.ru</div>
       </div>
     </div>
-    <div class="modals">
-      <div class="modals__item modal modalcallback" id="modalcallback">
+    <div>
+      <div class="modal modal--callback" id="modalcallback">
         <div class="modal__title">Обратный звонок</div>
-        <form class="modal__form" action="/" method="POST">
-          <div class="form-row">
-            <div class="form-group form-group--required">
-              <input id="callback-name" type="text" name="callback-name" required />
-              <label for="callback-name">Имя</label>
-            </div>
-            <div class="form-group form-group--required">
-              <input id="callback-phone" type="text" name="callback-phone" required />
-              <label for="callback-phone">Телефон</label>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-main">Позвоните мне</button>
-        </form>
-
-        <div class="form-text-wrapper">
-          <div class="form-text form-text--phones">
-            <div class="form-text__icon form-text__icon--phone"></div>
-            <div class="form-text__content callback-phones">
-              <a href="tel:+78003012527">8 (800) 301-25-75</a>
-              <a href="tel:+74996088925">8 (499) 608-89-25</a>
-            </div>
-          </div>
-          <div class="form-text">
-            <div class="form-text__icon form-text__icon--map-marker"></div>
-            <div class="form-text__content">
-              <div class="form-text__title">Адрес офиса и пункта выдачи:</div>
-              <div class="form-text__text">
-                г. Москва, м. Соколиная гора, <br>
-                Окружной проезд, 30А <br>
-                <a data-fancybox data-src="#modalmap" href="javascript:;" class="link-modal" data-action="mapmodal">Схема проезда</a>
+        <div class="modal__content">
+          <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+              <div class="form-group">
+                <input id="callback-name" type="text" name="callback-name">
+                <label for="callback-name">Имя</label>
+              </div>
+              <div class="form-group">
+                <input id="callback-phone" type="text" name="callback-phone" data-check data-check-required="true">
+                <label for="callback-phone">Телефон</label>
               </div>
             </div>
-          </div>
-          <div class="form-text">
-            <div class="form-text__icon form-text__icon--clock"></div>
-            <div class="form-text__content">
-              <div class="form-text__title">Время работы менеджеров:</div>
-              <div class="form-text__text">
-                Пн – Пт: 10:00 – 20:00 <br>
-                Сб – Вс: выходные
+            <button type="submit" class="btn btn-main" disabled>Позвоните мне</button>
+          </form>
+          <div class="mt-3">
+            <div class="form-text form-text--phones">
+              <div class="form-text__icon form-text__icon--phone"></div>
+              <div class="form-text__content callback-phones">
+                <a href="tel:+78003012527">8 (800) 301-25-75</a>
+                <a href="tel:+74996088925">8 (499) 608-89-25</a>
+              </div>
+            </div>
+            <div class="form-text">
+              <div class="form-text__icon form-text__icon--map-marker"></div>
+              <div class="form-text__content">
+                <div class="form-text__title">Адрес офиса и пункта выдачи:</div>
+                <div class="form-text__text">
+                  г. Москва, м. Соколиная гора, <br>
+                  Окружной проезд, 30А
+                  <button class="modal-link" data-fancybox data-src="#modalmap" data-action="mapmodal">Схема проезда</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-text">
+              <div class="form-text__icon form-text__icon--clock"></div>
+              <div class="form-text__content">
+                <div class="form-text__title">Время работы менеджеров:</div>
+                <div class="form-text__text">
+                  Пн – Пт: 10:00 – 20:00 <br>
+                  Сб – Вс: выходные
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="modals__item modal modalmap" id="modalmap">
+      <div class="modal modal--map" id="modalmap">
         <div class="modal__title">Схема проезда</div>
-        <div class="contacts-map__modal" id="js-map2"></div>
+        <div class="modal__content" id="js-map2"></div>
       </div>
-      <div class="modals__item modal modallogin" id="modallogin">
+      <div class="modal modal--login" id="modallogin">
         <div class="modal__title">Вход</div>
         <div class="modal__content">
-          <div class="tabs" data-action="tabs">
-            <div class="tabs-titles">
-              <a class="tabs-titles__item" href="#loginemail">По эл.почте</a>
-              <a class="tabs-titles__item" href="#loginphone">По телефону</a>
-            </div>
-            <div class="tabs-content">
-              <div class="tabs-content__item" data-tabid="loginemail">
-                <form action="personal-data-fiz.html" class="modal__form mt-2" data-action="form-check">
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="login-email" type="text" name="login-email" required>
-                      <label for="login-email">Эл. почта</label>
-                    </div>
-                    <div class="form-group form-group--required">
-                      <input id="login-password" type="password" name="login-password" required autocomplete="on">
-                      <label for="login-password">Пароль</label>
-                      <button type="button" class="password-icon"></button>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-column align-center">
-                    <p class="text-center">Забыли пароль? <a class="text-italic" data-fancybox data-src="#modalpasswordrecover" href="javascript:;">Восстановить</a></p>
-                    <button class="btn btn-main" data-action="user-set-logged" type="submit" disabled>Войти</button>
-                  </div>
-                </form>
+          <form action="personal-data-fiz.html" class="form-minimal" data-check>
+            <div class="form-block">
+              <div class="form-group">
+                <input id="login-email" type="text" name="login-email" data-check data-check-required="true">
+                <label for="login-email">Эл. почта</label>
               </div>
-              <div class="tabs-content__item" data-tabid="loginphone">
-                <form action="personal-data-fiz.html" class="modal__form mt-2 js-form-check " data-action="form-phone-code">
-                  <div class="form-row">
-                    <div class="form-group form-group--required">
-                      <input id="user-phone" type="text" name="user-phone" required>
-                      <label for="user-phone">Номер телефона</label>
-                      <input id="user-phone-country" type="text" name="user-phone-country" hidden="" value="">
-                      <div class="custom-select" data-input-id="user-phone-country">
-                        <div class="custom-select__selected">
-                          <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                        </div>
-                        <div class="custom-select__options">
-                          <div class="custom-select__option phone-country" data-value="+374" data-icon="./assets/img/icons/flags/01.svg">
-                            <div class="phone-country__code">+374</div>
-                            <div class="phone-country__title">Армения</div>
-                            <img src="./assets/img/icons/flags/01.svg" alt="Армения">
-                          </div>
-                          <div class="custom-select__option phone-country" data-value="+375" data-icon="./assets/img/icons/flags/02.svg">
-                            <div class="phone-country__code">+375</div>
-                            <div class="phone-country__title">Белоруссия</div>
-                            <img src="./assets/img/icons/flags/02.svg" alt="Белоруссия">
-                          </div>
-                          <div class="custom-select__option phone-country" data-value="+995" data-icon="./assets/img/icons/flags/03.svg">
-                            <div class="phone-country__code">+995</div>
-                            <div class="phone-country__title">Грузия</div>
-                            <img src="./assets/img/icons/flags/03.svg" alt="Грузия">
-                          </div>
-                          <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/04.svg">
-                            <div class="phone-country__code">+7</div>
-                            <div class="phone-country__title">Казахстан</div>
-                            <img src="./assets/img/icons/flags/04.svg" alt="Казахстан">
-                          </div>
-                          <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/05.svg">
-                            <div class="phone-country__code">+7</div>
-                            <div class="phone-country__title">Россия</div>
-                            <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group form-group--required" data-action="input-code">
-                      <input id="user-code" type="text" name="user-code">
-                      <label for="user-code">Код из СМС</label>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-column align-center mt-4">
-                    <button class="btn btn-main" data-action="btn-code" type="submit" disabled>Получить код</button>
-                    <button class="btn btn-main" data-action="btn-login" type="submit" disabled>Войти</button>
-                  </div>
-                </form>
+              <div class="form-group">
+                <input id="login-password" type="password" name="login-password" autocomplete="on" data-check data-check-required="true">
+                <label for="login-password">Пароль</label>
+                <button type="button" class="icon-password" aria-label="Показать пароль"></button>
               </div>
             </div>
-          </div>
-          <div class="d-flex flex-column align-center">
-            <p class="text-center text-small mt-3">Если Вы не зарегистрированы в нашем магазине, <br> пожалуйста,
-              зарегистрируйтесь!</p>
-            <a class="btn btn-main mb-3" data-fancybox data-src="#modalregistration" href="javascript:;">Зарегистрироваться</a>
-          </div>
+            <button class="btn btn-main" data-action="user-set-logged" type="submit" disabled>Войти</button>
+            <div class="text-center">
+              <button class="btn-link mt-1" data-fancybox data-src="#modalrecover">Забыли пароль?</button>
+            </div>
+          </form>
+          <p class="text-center text-small mt-2">Нет личного кабинета? <a href="personal-registration.html">Зарегистрироваться</a></p>
         </div>
       </div>
-      <div class="modals__item modal modalpasswordrecover" id="modalpasswordrecover">
+      <div class="modal modal--recover" id="modalrecover">
         <div class="modal__title">Восстановление пароля</div>
         <div class="modal__content">
-          <p class="text-italic">Пожалуйста, введите адрес электронной почты, на который мы вышлем Ваш новый пароль.</p>
-          <form action="/" class="modal__form" data-action="form-check">
+          <form action="/" class="form-minimal" data-check>
             <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="recover-email" type="text" name="recover-email" required>
+              <div class="form-group">
+                <input id="recover-email" type="text" name="recover-email" data-check data-check-required="true">
                 <label for="recover-email">Эл. почта</label>
               </div>
             </div>
-            <div class="d-flex flex-column align-center">
-              <button class="btn btn-main" type="submit" disabled>Восстановить</button>
-            </div>
+            <p class="text-italic">Введите адрес электронной почты, на который мы вышлем новый пароль.</p>
+            <button class="btn btn-main" type="submit" disabled>Восстановить</button>
           </form>
         </div>
       </div>
-      <div class="modals__item modal modalregistration" id="modalregistration">
-        <div class="modal__title">Регистрация</div>
-        <div class="modal__content">
-          <div class="choose-variants">
-            <a data-fancybox data-src="#modalregistrationtype3" href="javascript:;" class="choose-variants__item">
-              <div class="choose-variants__link">Розничная покупка</div>
-              <div class="choose-variants__text">
-                <p>Товар приобретается для личных целей по розничной стоимости.</p>
+      <div class="modal modal--quickview" id="product-quickview">
+        <div class="product-quickview">
+          <div>
+            <div class="product-gallery">
+              <div class="product-gallery__thumbs product-thumbs">
+                <div class="product-thumbs__wrapper">
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                      <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic2-100.webp">
+                      <img src="./i/products/100/11111-col1-pic2-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic3-100.webp">
+                      <img src="./i/products/100/11111-col1-pic3-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic4-100.webp">
+                      <img src="./i/products/100/11111-col1-pic4-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col2-pic3-100.webp">
+                      <img src="./i/products/100/11111-col2-pic3-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col2-pic3-100.webp">
+                      <img src="./i/products/100/11111-col2-pic3-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                  <div class="product-thumbs__item">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col2-pic3-100.webp">
+                      <img src="./i/products/100/11111-col2-pic3-100.jpg" alt="Платье Vittoria Vicci">
+                    </picture>
+                  </div>
+                </div>
               </div>
-            </a>
-            <a data-fancybox data-src="#modalregistrationtype1" href="javascript:;" class="choose-variants__item">
-              <div class="choose-variants__link">Оптом для себя от 7500 ₽</div>
-              <div class="choose-variants__text">
-                <p>Товар приобретается по оптовым ценам. Сумма покупки должна быть от 7500 ₽</p>
-                <p>Если Вы зарегистрируетесь «Оптом для себя», то мы будем считать, что у вас нет юридического лица и отгружать товар мы будем для личных целей.</p>
-                <p> При этой форме регистрации мы <span class="text-bold">не&nbsp;транслируем</span> маркировку через ЭДО или «Честный знак»</p>
+              <div class="product-gallery__pics product-pics">
+                <div class="product-pics__wrapper">
+                  <div class="product-pics__item">
+                    <a class="product-pics__download" href="./i/products/1330/11111-col1-pic1-1330.jpg" download></a>
+                    <a href="./i/products/1330/11111-col1-pic1-1330.webp">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/600/11111-col1-pic1-600.webp">
+                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic1-300.webp">
+                        <img src="./i/products/300/11111-col1-pic1-300.jpg" alt="Платье Vittoria Vicci">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="product-pics__item">
+                    <a class="product-pics__download" href="./i/products/1330/11111-col1-pic2-1330.jpg" download></a>
+                    <a href="./i/products/1330/11111-col1-pic2-1330.webp">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/600/11111-col1-pic2-600.webp">
+                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic2-300.webp">
+                        <img src="./i/products/300/11111-col1-pic2-300.jpg" alt="Платье Vittoria Vicci">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="product-pics__item">
+                    <a class="product-pics__download" href="./i/products/1330/11111-col1-pic3-1330.jpg" download></a>
+                    <a href="./i/products/1330/11111-col1-pic3-1330.webp">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/600/11111-col1-pic3-600.webp">
+                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic3-300.webp">
+                        <img src="./i/products/300/11111-col1-pic3-300.jpg" alt="Платье Vittoria Vicci">
+                      </picture>
+                    </a>
+                  </div>
+                  <div class="product-pics__item">
+                    <a class="product-pics__download" href="./i/products/1330/11111-col1-pic4-1330.jpg" download></a>
+                    <a href="./i/products/1330/11111-col1-pic4-1330.webp">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1200px)" srcset="./i/products/600/11111-col1-pic4-600.webp">
+                        <source type="image/webp" srcset="./i/products/300/11111-col1-pic4-300.webp">
+                        <img src="./i/products/300/11111-col1-pic4-300.jpg" alt="Платье Vittoria Vicci">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-pics__pagination"></div>
               </div>
-            </a>
-            <a class="choose-variants__item" data-fancybox data-src="#modalregistrationtype2" href="javascript:;">
-              <div class="choose-variants__link">Оптом для продажи от 7500 ₽</div>
-              <div class="choose-variants__text">
-                <p>Товар приобретается по оптовым ценам. Сумма покупки должна быть от 7500 ₽</p>
-                <p>Если Вы зарегистрируетесь «Оптом для продажи», то мы будем считать, что у вы юридическое лицо (ИП, ООО, АО) и отгружать товар мы будем для последующей продажи.</p>
-                <p>При этой форме регистрации мы <span class="text-bold">транслируем</span> маркировку через ЭДО или «Честный знак» и вы должны ее принять.</p>
-              </div>
-            </a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationtype1" id="modalregistrationtype1">
-        <div class="modal__title">Оптом для себя</div>
-        <div class="modal__content">
-          <form action="personal-data-ip.html" class="modal__form js-form-check" data-action="form-phone-code-registration">
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type1-surname" type="text" name="type1-surname" required>
-                <label for="type1-surname">Фамилия</label>
+          <div class="product-info">
+            <div class="product-info__price product-price product-price--page-product">
+              <div class="product-price__row">
+                <div class="product-price__old">2 830</div>
+                <div class="product-price__profit">175</div>
+                <div class="product-price__date">Осталось 3 дня</div>
               </div>
-              <div class="form-group form-group--required">
-                <input id="type1-city" type="text" name="type1-city" required>
-                <label for="type1-city">Город доставки</label>
+  
+              <div class="product-price__row">
+                <div class="product-price__base">2 655</div>
+                <div class="product-price__discount">15</div>
               </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type1-name" type="text" name="type1-name" required>
-                <label for="type1-name">Имя</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type1-email" type="text" name="type1-email" required>
-                <label for="type1-email">Эл. почта (логин)</label>
+  
+              <div class="product-price__opt">
+                Оптовая цена <span>2 236</span>
+                <div class="text-muted">Эта цена применится в Корзине при общей сумме заказа > 7500&nbsp;₽ по&nbsp;оптовым ценам</div>
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type1-patronymic" type="text" name="type1-patronymic" required>
-                <label for="type1-patronymic">Отчество</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type1-password" type="text" name="type1-password" required>
-                <label for="type1-password">Пароль</label>
-                <button type="button" class="password-icon"></button>
+            <div class="product-info__header">
+              <a class="product-info__title" href="product.html">Платье Vittoria Vicci 702669</a>
+              <div class="product-info__row">
+                <div class="product-info__counter">купили 7 раз</div>
+                <div class="product-info__stars feedback-stars feedback-stars--page-product">
+                  <div class="feedback-stars__filled" data-feedback-stars="4"></div>
+                  <div class="feedback-stars__stroked"></div>
+                </div>
+                <a class="product-info__link" href="/product.html#product-feedback">23 отзыва</a>
+                <button class="product-info__favorite product-favorite" aria-label="В избранное"></button>
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type1-phone" type="text" name="type1-phone" required>
-                <label for="type1-phone">Номер телефона</label>
-                <input id="type1-phone-country" type="text" name="user-phone-country" hidden="" value="">
-                <div class="custom-select" data-input-id="user-phone-country">
-                  <div class="custom-select__selected">
-                    <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                  </div>
-                  <div class="custom-select__options">
-                    <div class="custom-select__option phone-country" data-value="+374" data-icon="./assets/img/icons/flags/01.svg">
-                      <div class="phone-country__code">+374</div>
-                      <div class="phone-country__title">Армения</div>
-                      <img src="./assets/img/icons/flags/01.svg" alt="Армения">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+375" data-icon="./assets/img/icons/flags/02.svg">
-                      <div class="phone-country__code">+375</div>
-                      <div class="phone-country__title">Белоруссия</div>
-                      <img src="./assets/img/icons/flags/02.svg" alt="Белоруссия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+995" data-icon="./assets/img/icons/flags/03.svg">
-                      <div class="phone-country__code">+995</div>
-                      <div class="phone-country__title">Грузия</div>
-                      <img src="./assets/img/icons/flags/03.svg" alt="Грузия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/04.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Казахстан</div>
-                      <img src="./assets/img/icons/flags/04.svg" alt="Казахстан">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/05.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Россия</div>
-                      <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                    </div>
-                  </div>
+            <div class="product-info__properties product-properties">
+              <div class="product-properties__item">
+                <div class="product-properties__title">Артикул</div>
+                <div class="product-properties__text">1-20-2-2-02-702669</div>
+              </div>
+              <div class="product-properties__item">
+                <div class="product-properties__title">ID</div>
+                <div class="product-properties__text">702669</div>
+              </div>
+              <div class="product-properties__item">
+                <div class="product-properties__title">Цвет</div>
+                <div class="product-properties__text">Коричневый</div>
+              </div>
+              <div class="product-properties__item">
+                <div class="product-properties__title">Состав</div>
+                <div class="product-properties__text">95% Хлопок, 5% Спандекс</div>
+              </div>
+              <div class="product-properties__item">
+                <div class="product-properties__title">Сезон</div>
+                <div class="product-properties__text">Весна-Лето</div>
+              </div>
+              <button class="product-properties__btn" aria-label="Прочие характеристики"></button>
+  
+              <div class="product-properties__more">
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Длина</div>
+                  <div class="product-properties__text">Миди</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Фасон</div>
+                  <div class="product-properties__text">Полуприлегающий</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Рукав</div>
+                  <div class="product-properties__text">Длинные</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Вид застежки</div>
+                  <div class="product-properties__text">Без застежки</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Вырез горловины</div>
+                  <div class="product-properties__text">Круглый</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Рисунок</div>
+                  <div class="product-properties__text">Без рисунка</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Тип карманов</div>
+                  <div class="product-properties__text">Без карманов</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Декоративные элементы</div>
+                  <div class="product-properties__text">Разрезы</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Основная ткань</div>
+                  <div class="product-properties__text">Хлопок</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Стиль</div>
+                  <div class="product-properties__text">Повседневный</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Страна бренда</div>
+                  <div class="product-properties__text">Россия</div>
+                </div>
+                <div class="product-properties__item">
+                  <div class="product-properties__title">Страна производства</div>
+                  <div class="product-properties__text">Киргизия</div>
                 </div>
               </div>
-              <div class="form-group form-group--required">
-                <input id="type1-password-repeat" type="text" name="login-password" required>
-                <label for="type1-password-repeat">Повторите пароль</label>
-                <button type="button" class="password-icon"></button>
+  
+            </div>
+            <div class="product-info__moreinfo">
+              <div class="product-info__warning warning animate-blink">Этот товар возврату и&nbsp;обмену не&nbsp;подлежит</div>
+              <a class="product-info__brand" href="brand.html">
+                Другие товары<br>Vittoria Vicci
+                <img src="./i/brands/logos/01.png" alt="Vittoria Vicci" loading="lazy">
+              </a>
+              <div class="product-info__share social-share">
+                <a class="social-share__item social-share__item--vk" href="#" aria-label="VK"></a>
+                <a class="social-share__item social-share__item--fb" href="#" aria-label="Facebook"></a>
+                <a class="social-share__item social-share__item--tw" href="#" aria-label="Twiter"></a>
+                <a class="social-share__item social-share__item--ig" href="#" aria-label="Instagram"></a>
+                <a class="social-share__item social-share__item--ma" href="#" aria-label="Mail.ru"></a>
+                <a class="social-share__item social-share__item--ok" href="#" aria-label="Одноклассники"></a>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group" data-action="btn-code-wrapper">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-code" type="submit" disabled>Получить код</button>
-              </div>
-              <div class="form-group form-group--required" data-action="input-code">
-                <input id="type1-code" type="text" name="type1-code">
-                <label for="type1-code">Код из СМС</label>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-registration" type="submit" disabled>Зарегистрироваться</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationtype2" id="modalregistrationtype2">
-        <div class="modal__title">Оптом для продажи</div>
-        <div class="modal__content">
-          <form action="personal-data-ooo-firsttime.html" class="modal__form js-form-check" data-action="form-phone-code-registration">
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-surname" type="text" name="type2-surname" required>
-                <label for="type2-surname">Фамилия</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type2-city" type="text" name="type2-city" required>
-                <label for="type2-city">Город доставки</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-name" type="text" name="type2-name" required>
-                <label for="type2-name">Имя</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type2-email" type="text" name="type2-email" required>
-                <label for="type2-email">Эл. почта (логин)</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-patronymic" type="text" name="type2-patronymic" required>
-                <label for="type2-patronymic">Отчество</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type2-password" type="text" name="type2-password" required>
-                <label for="type2-password">Пароль</label>
-                <button type="button" class="password-icon"></button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-phone" type="text" name="type2-phone" required>
-                <label for="type2-phone">Номер телефона</label>
-                <input id="type2-phone-country" type="text" name="user-phone-country" hidden="" value="">
-                <div class="custom-select" data-input-id="user-phone-country">
-                  <div class="custom-select__selected">
-                    <img src="./assets/img/icons/flags/05.svg" alt="Россия">
+            <div class="product-info__colors">
+              <div class="h3">Варианты цветов</div>
+              <p>Выбранный цвет: <span>Коричневый</span></p>
+              <div class="product-colors">
+                <div class="product-colors__wrapper">
+                  <div class="product-colors__item is-active" title="Коричневый">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
                   </div>
-                  <div class="custom-select__options">
-                    <div class="custom-select__option phone-country" data-value="+374" data-icon="./assets/img/icons/flags/01.svg">
-                      <div class="phone-country__code">+374</div>
-                      <div class="phone-country__title">Армения</div>
-                      <img src="./assets/img/icons/flags/01.svg" alt="Армения">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+375" data-icon="./assets/img/icons/flags/02.svg">
-                      <div class="phone-country__code">+375</div>
-                      <div class="phone-country__title">Белоруссия</div>
-                      <img src="./assets/img/icons/flags/02.svg" alt="Белоруссия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+995" data-icon="./assets/img/icons/flags/03.svg">
-                      <div class="phone-country__code">+995</div>
-                      <div class="phone-country__title">Грузия</div>
-                      <img src="./assets/img/icons/flags/03.svg" alt="Грузия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/04.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Казахстан</div>
-                      <img src="./assets/img/icons/flags/04.svg" alt="Казахстан">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/05.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Россия</div>
-                      <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                    </div>
-                  </div>
+                  <a class="product-colors__item" href="#" title="Розовый">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
+                  </a>
+                  <a class="product-colors__item" href="#" title="Зеленый">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col3-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
+                  </a>
+                  <a class="product-colors__item" href="#" title="Очень красивый цвет, девочки, просто не могу">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
+                  </a>
+                  <a class="product-colors__item" href="#" title="Красный">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col2-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
+                  </a>
+                  <a class="product-colors__item" href="#" title="Оранжевый">
+                    <picture>
+                      <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.jpg">
+                      <img src="https://averines.github.io/moyo3html/i/products/100/11111-col1-pic1-100.jpg" alt="Цвет 1" class="tns-complete">
+                    </picture>
+                  </a>
                 </div>
               </div>
-              <div class="form-group form-group--required">
-                <input id="type2-password-repeat" type="text" name="login-password" required>
-                <label for="type2-password-repeat">Повторите пароль</label>
-                <button type="button" class="password-icon"></button>
+            </div>
+            <div class="product-info__text">
+              <div class="h3">Дополнительная информация</div>
+  
+              <div class="warning">
+                <p>Отгрузка данного товара осуществляется через 6-10 дней после заказа.</p>
+              </div>
+  
+              <div class="info-description">
+                <p>Короткое женское платье прямого кроя с поясом на талии из основной ткани. Рукава длинные с манжетами на кнопке, спинка с застежкой на пуговицу. Отличное платье для
+                  любительниц строго стиля и
+                  минимализма в одежде.</p>
+                <p>Отличный выбор для современной женщины. ВНИМАНИЕ!!! Города, закрытые для отгрузки: Хабаровск, Петропавловск-Камчатский, Владивосток, Краснодар, Самара, Шахты.</p>
               </div>
             </div>
-            <div class="form-row">
-              <div class="form-group" data-action="btn-code-wrapper">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-code" type="submit" disabled>Получить код</button>
-              </div>
-              <div class="form-group form-group--required" data-action="input-code">
-                <input id="type2-code" type="text" name="type2-code">
-                <label for="type2-code">Код из СМС</label>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-registration" type="submit" disabled data-fancybox data-src="#modalregistrationinn">Далее</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationtype3" id="modalregistrationtype3">
-        <div class="modal__title">Розничная покупка</div>
-        <div class="modal__content">
-          <form action="personal-data-fiz.html" class="modal__form js-form-check" data-action="form-phone-code-registration">
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type3-surname" type="text" name="type3-surname" required>
-                <label for="type3-surname">Фамилия</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type3-city" type="text" name="type3-city" required>
-                <label for="type3-city">Город доставки</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type3-name" type="text" name="type3-name" required>
-                <label for="type3-name">Имя</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type3-email" type="text" name="type3-email" required>
-                <label for="type3-email">Эл. почта (логин)</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type3-patronymic" type="text" name="type3-patronymic" required>
-                <label for="type3-patronymic">Отчество</label>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type3-password" type="text" name="type3-password" required>
-                <label for="type3-password">Пароль</label>
-                <button type="button" class="password-icon"></button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type3-phone" type="text" name="type3-phone" required>
-                <label for="type3-phone">Номер телефона</label>
-                <input id="type3-phone-country" type="text" name="user-phone-country" hidden="" value="">
-                <div class="custom-select" data-input-id="user-phone-country">
-                  <div class="custom-select__selected">
-                    <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                  </div>
-                  <div class="custom-select__options">
-                    <div class="custom-select__option phone-country" data-value="+374" data-icon="./assets/img/icons/flags/01.svg">
-                      <div class="phone-country__code">+374</div>
-                      <div class="phone-country__title">Армения</div>
-                      <img src="./assets/img/icons/flags/01.svg" alt="Армения">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+375" data-icon="./assets/img/icons/flags/02.svg">
-                      <div class="phone-country__code">+375</div>
-                      <div class="phone-country__title">Белоруссия</div>
-                      <img src="./assets/img/icons/flags/02.svg" alt="Белоруссия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+995" data-icon="./assets/img/icons/flags/03.svg">
-                      <div class="phone-country__code">+995</div>
-                      <div class="phone-country__title">Грузия</div>
-                      <img src="./assets/img/icons/flags/03.svg" alt="Грузия">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/04.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Казахстан</div>
-                      <img src="./assets/img/icons/flags/04.svg" alt="Казахстан">
-                    </div>
-                    <div class="custom-select__option phone-country" data-value="+7" data-icon="./assets/img/icons/flags/05.svg">
-                      <div class="phone-country__code">+7</div>
-                      <div class="phone-country__title">Россия</div>
-                      <img src="./assets/img/icons/flags/05.svg" alt="Россия">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group form-group--required">
-                <input id="type3-password-repeat" type="text" name="login-password" required>
-                <label for="type3-password-repeat">Повторите пароль</label>
-                <button type="button" class="password-icon"></button>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group" data-action="btn-code-wrapper">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-code" type="submit" disabled>Получить код</button>
-              </div>
-              <div class="form-group form-group--required" data-action="input-code">
-                <input id="type3-code" type="text" name="type3-code">
-                <label for="type3-code">Код из СМС</label>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-main mb-3 w-100" data-action="btn-registration" type="submit" disabled>Зарегистрироваться</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationinn" id="modalregistrationinn">
-        <div class="modal__title">Реквизиты организации</div>
-        <div class="modal__content">
-          <form action="personal-data-ooo-firsttime.html" class="modal__form" data-action="form-check">
-            <div class="form-row">
-              <div class="form-group form-group--required">
-                <input id="type2-bik" type="text" name="type2-bik" required>
-                <label for="type2-bik">ИНН</label>
-              </div>
-            </div>
-            <div class="d-flex flex-column align-center">
-              <button class="btn btn-main" type="submit" disabled data-fancybox data-src="#modalregistrationalert">Далее</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modals__item modal modalregistrationalert" id="modalregistrationalert">
-        <div class="modal__title">Подтверждение эл. почты</div>
-        <div class="modal__content p-3">
-          <p>Спасибо за регистрацию! На указанную вами эл. почту будет отправлено письмо с предложением подтвердить ваш электронный адрес и ссылка для входа в личный кабинет.</p>
-          <p>Перейдите по ссылке в этом письме и приступайте к покупкам!</p>
-          <button class="btn btn-main" onclick="$.fancybox.close(true);">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>

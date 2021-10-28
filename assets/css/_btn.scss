@@ -1,0 +1,184 @@
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    color: $text;
+    padding: 0.75em 1em;
+    background-color: $bg-l - 20;
+    text-align: center;
+    transition: background-color 0.15s ease-in-out;
+
+    &:hover {
+        background-color: $bg-l - 40;
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    &-main {
+        background-color: $main;
+        color: #fff;
+
+        &:hover {
+            background-color: $main-h;
+        }
+    }
+
+    &-white {
+        background-color: #fff;
+        color: $text;
+        border: 1px solid $line-l;
+
+        &:hover {
+            background-color: $bg-l;
+        }
+    }    
+}
+
+.btn-filter {
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px dashed $text;
+    color: $text;
+    padding: 0;
+    background: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: $tr;
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+.btn-link {
+    background-color: transparent;
+    padding: 0;
+    display: inline;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    color: $text-l;
+    transition: color 0.15s ease-in-out;
+    border-bottom: 1px dashed $text-l;
+
+    &:hover {
+        color: $text;
+        border-bottom-color: $line-l;
+    }
+}
+
+.btn-not-added {
+    &::after {
+        content: "Показать все доступные размеры";
+    }
+
+    &.is-active {
+        &::after {
+            content: "Скрыть недобавленные размеры";
+        }
+    }
+}
+
+.btn-bonus {
+    background-color: $text-l;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.15s ease-in-out;
+    height: 100%;
+    margin-left: auto;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $text-l - 10;
+    }
+
+    &::before {
+        content: "Применить";
+    }
+
+    &.is-active {
+        background-color: $main;
+        &::before {
+            content: "Бонус применен";
+        }
+    }
+}
+
+.btn-burger {
+  padding: 8px 8px 8px 0;
+  display: inline-block;
+  cursor: pointer;
+  transition: $tr;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  &:hover,
+  &.is-active:hover {
+    opacity: 0.7;
+  }
+
+  &__box {
+    width: 19px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
+    perspective: 30px;
+  }
+
+  &__inner {
+    display: block;
+    top: 50%;
+    margin-top: -1px;
+    transition: transform 0.15s $cub1, background-color 0s 0.1s $cub1;
+
+    &,
+    &::before,
+    &::after {
+      width: 19px;
+      height: 2px;
+      position: absolute;
+      background-color: $white;
+      transition: $tr;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      bottom: -7px;
+    }
+  }
+
+  &.is-active {
+    .btn-burger__inner {
+      background-color: transparent;
+      transform: rotateY(180deg);
+
+      &::before {
+        transform: translate3d(0, 7px, 0) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate3d(0, -7px, 0) rotate(-45deg);
+      }
+    }
+  }
+}
+

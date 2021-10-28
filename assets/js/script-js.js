@@ -941,7 +941,7 @@ if (moreItems.length > 0) {
 const passwordItems = document.querySelectorAll('input[type="password"]')
 if (passwordItems.length > 0) {
     passwordItems.forEach(item => {
-        let passwordBtn = item.parentNode.querySelector('.password-icon')
+        let passwordBtn = item.parentNode.querySelector('.icon-password')
         passwordBtn.addEventListener('click', (e) => {
             e.preventDefault;
             passwordBtn.classList.toggle('is-active')
@@ -953,7 +953,6 @@ if (passwordItems.length > 0) {
         })
     })
 }
-
 
 // измененный селект
 const customSelectItems = document.querySelectorAll('.custom-select')
@@ -979,6 +978,33 @@ if (customSelectItems.length > 0) {
 }
 
 
+const formPhoneCode = document.querySelector('[data-action="form-phone-code"]')
+if (formPhoneCode) {
+    let btnCode = formPhoneCode.querySelector('[data-action="btn-code"]')
+    let btnLogin = formPhoneCode.querySelector('[data-action="btn-login"]')
+    let inputCode = formPhoneCode.querySelector('[data-action="input-code"]')
+
+    inputCode.style.display = 'none'
+    btnLogin.style.display = 'none'
+
+    btnCode.addEventListener('click', (e) => {
+        e.preventDefault()
+        btnCode.style.display = 'none'
+        inputCode.style.display = 'block'
+        btnLogin.style.display = 'block'
+    })
+
+    inputCode.addEventListener('input', (e) => {
+        if (e.target.value) {
+            btnLogin.removeAttribute('disabled')
+        } else {
+            btnLogin.setAttribute('disabled', true)
+        }
+    })
+}
+
+
+
 // проверка форм перед отправкой
 const formsNeedCheck = document.querySelectorAll('form[data-check]')
 if (formsNeedCheck.length > 0) {
@@ -990,7 +1016,7 @@ if (formsNeedCheck.length > 0) {
                 formGroup.classList.add('form-group--need-check')
 
                 input.addEventListener('input', (e) => {
-                    inputs = form.querySelectorAll('[data-check]')
+                    // inputs = form.querySelectorAll('[data-check]')
                     checkInput(formGroup, input, e.target.value)
                     checkForm(form, inputs.length)
                 })
@@ -1060,100 +1086,30 @@ if (registrationForm) {
     })
 }
 
+//проверка инпутов в формах на пустоту
+const formGroups = document.querySelectorAll('.form-group')
+if (formGroups.length > 0) {
+    formGroups.forEach(formGroup => {
+        let formInputs = formGroup.querySelectorAll('input')
+        if (formInputs.length > 0) {
+            formInputs.forEach(formInput => {
+                if (!formInput.val) {
+                    formInput.classList.add('empty')
+                }
 
-// const needValidationForms = document.querySelectorAll('[data-form-action="need-validation"]')
-// if (needValidationForms.length > 0) {
-//     needValidationForms.forEach(needValidationForm => {
-//         const formNeedCheckBtn = needValidationForm.querySelector('button[type="submit"]')
-//         const needValidItems = needValidationForm.querySelectorAll('[data-form-needvalid]')
-
-//         if (needValidItems.length > 0) {
-//             needValidItems.forEach(needValidItem => {
-//                 let needValidItemParent = needValidItem.closest('.form-group')
-//                 function setValid() {
-//                     needValidItemParent.classList.add('valid')
-//                     needValidItemParent.classList.remove('not-valid')
-//                 }
-
-//                 function setNotValid() {
-//                     needValidItemParent.classList.remove('valid')
-//                     needValidItemParent.classList.add('not-valid')
-//                 }
-
-//                 needValidItem.addEventListener('input', () => {
-//                     if (needValidItem.dataset.formMin) {
-//                         if (needValidItem.value.length < needValidItem.dataset.formMin) {
-//                             setNotValid()
-//                         } else {
-//                             setValid()
-//                         }
-//                     }
-
-//                     if (needValidItem.dataset.formMax) {
-//                         if (needValidItem.value.length > needValidItem.dataset.formMax) {
-//                             setNotValid()
-//                         } else {
-//                             setValid()
-//                         }
-//                     }
-
-//                     if (needValidItem.dataset.formRequired) {
-//                         if (needValidItem.value.length === 0) {
-//                             setNotValid()
-//                         } else {
-//                             setValid()
-//                         }
-//                     }
-//                 })
-//             })
-//         }
-
-//         if (formNeedCheckBtn) {
-//             formNeedCheckBtn.addEventListener('click', (e) => {
-//                 e.preventDefault()
-
-//                 needValidItems.forEach(needValidItem => {
-//                     if (needValidItems.classList.includes('not-valid')) {
-//                         console.log('есть невалидный');
-//                     } else {
-//                         console.log('dct валидны');
-//                     }
-//                 })
-//             })
-//         }
-//     })
-
-// }
-
-
-
-// форма входа с кодом телефона
-
-const formPhoneCode = document.querySelector('[data-action="form-phone-code"]')
-if (formPhoneCode) {
-    let btnCode = formPhoneCode.querySelector('[data-action="btn-code"]')
-    let btnLogin = formPhoneCode.querySelector('[data-action="btn-login"]')
-    let inputCode = formPhoneCode.querySelector('[data-action="input-code"]')
-
-    inputCode.style.display = 'none'
-    btnLogin.style.display = 'none'
-
-    btnCode.addEventListener('click', (e) => {
-        e.preventDefault()
-        btnCode.style.display = 'none'
-        inputCode.style.display = 'block'
-        btnLogin.style.display = 'block'
-    })
-
-    inputCode.addEventListener('input', (e) => {
-        if (e.target.value) {
-            btnLogin.removeAttribute('disabled')
-        } else {
-            btnLogin.setAttribute('disabled', true)
+                formInput.addEventListener('input', (e) => {
+                    if (e.target.value) {
+                        formInput.classList.remove('empty')
+                        formInput.classList.add('not-empty')
+                    } else {
+                        formInput.classList.remove('not-empty')
+                        formInput.classList.add('empty')
+                    }
+                })
+            })
         }
     })
 }
-
 
 // форма регистрации с кодом телефона
 const formPhoneCodeRegistration = document.querySelectorAll('[data-action="form-phone-code-registration"]')
@@ -1319,32 +1275,6 @@ if (btnBrands) {
             }
         }
     }
-}
-
-
-//проверка инпутов в формах на пустоту
-const formGroups = document.querySelectorAll('.form-group')
-if (formGroups.length > 0) {
-    formGroups.forEach(formGroup => {
-        let formInputs = formGroup.querySelectorAll('input')
-        if (formInputs.length > 0) {
-            formInputs.forEach(formInput => {
-                if (!formInput.val) {
-                    formInput.classList.add('empty')
-                }
-
-                formInput.addEventListener('input', (e) => {
-                    if (e.target.value) {
-                        formInput.classList.remove('empty')
-                        formInput.classList.add('not-empty')
-                    } else {
-                        formInput.classList.remove('not-empty')
-                        formInput.classList.add('empty')
-                    }
-                })
-            })
-        }
-    })
 }
 
 

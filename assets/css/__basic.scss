@@ -1,40 +1,3 @@
-$main: #ab064e;
-$main-l: #f2cfde;
-$main-hover: #c00a5a;
-
-$white: rgba(#fff, 1);
-$black: rgba(#101010, 1);
-
-$special-1: #e7003e;
-$special-2: #038184;
-$special-3: #870873;
-$special-4: #be1860;
-$special-5: #c09507;
-$special-6: #01a976;
-$special-6-l: #c0dad3;
-$special-7: #1978b8;
-
-
-$text: #3d3d3c;
-$text-d: #555;
-$text-l: #777;
-$text-main-light: #d9aacd;
-$text-white-light: #f1b4c8;
-
-$line-d: #cdcdcd;
-$line-l: #d9d9d9;
-$bg-l: #f3f2f0;
-$bg-dark: #c4c4c4;
-$body: #f9f9f9;
-
-$gap: 15px;
-$gap-big: 20px;
-$ls: 0.05em;
-$tr: all 0.2s ease-in-out;
-
-$cub1: cubic-bezier(0.61, -0.44, 0.29, 1.4);
-$cub2: cubic-bezier(0.71, -0.4, 0.09, 0.99);
-
 *,
 *::after,
 *::before {
@@ -288,268 +251,198 @@ ol {
 }
 
 // кнопки
-.btn {
-  border-radius: 4px;
-  min-width: 220px;
-  max-width: 290px;
-  text-align: center;
-  padding: 0.7em 1.5em;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, transform 0.1s;
-  text-decoration: none;
-  color: $black;
-  white-space: nowrap;
+// .btn {
+//   border-radius: 4px;
+//   min-width: 220px;
+//   max-width: 290px;
+//   text-align: center;
+//   padding: 0.7em 1.5em;
+//   border: none;
+//   font-size: 15px;
+//   cursor: pointer;
+//   transition: background-color 0.2s ease-in-out, transform 0.1s;
+//   text-decoration: none;
+//   color: $black;
+//   white-space: nowrap;
 
-  &.btn--mini {
-    border-radius: 3px;
-    padding: 0.35em 0.5em;
-    font-size: 13px;
-    min-width: auto;
-    max-width: none;
-    white-space: normal;
-  }
+//   &.btn--mini {
+//     border-radius: 3px;
+//     padding: 0.35em 0.5em;
+//     font-size: 13px;
+//     min-width: auto;
+//     max-width: none;
+//     white-space: normal;
+//   }
 
-  &.btn--md {
-    display: inline-block;
-    border-radius: 3px;
-    padding: 0.5em;
-    font-size: 14px;
-    min-width: auto;
-    max-width: none;
-    white-space: normal;
-  }  
+//   &.btn--md {
+//     display: inline-block;
+//     border-radius: 3px;
+//     padding: 0.5em;
+//     font-size: 14px;
+//     min-width: auto;
+//     max-width: none;
+//     white-space: normal;
+//   }  
 
-  &:active {
-    transform: translateY(2px);
-  }
+//   &:active {
+//     transform: translateY(2px);
+//   }
 
-  &:focus {
-    outline: none;
-  }
+//   &:focus {
+//     outline: none;
+//   }
 
-  &-main {
-    background-color: $main;
-    border: 1px solid $main;
-    color: $white;
+//   &-main {
+//     background-color: $main;
+//     border: 1px solid $main;
+//     color: $white;
 
-    &:hover {
-      background-color: $main-hover;
-    }
+//     &:hover {
+//       background-color: $main-h;
+//     }
 
-    // &:disabled {
-    //   background-color: transparent;
-    //   color: $text-l;
-    //   opacity: 0.8;
-    //   border-color: $line-d;
+//     // &:disabled {
+//     //   background-color: transparent;
+//     //   color: $text-l;
+//     //   opacity: 0.8;
+//     //   border-color: $line-d;
 
-    //   &:hover {
-    //     opacity: 1;
-    //   }
-    // }
+//     //   &:hover {
+//     //     opacity: 1;
+//     //   }
+//     // }
 
-    &.is-disabled {
-      border-color: $text-l;
-      pointer-events: none;
-      background-color: $text-l;
-    }
-  }
+//     &.is-disabled {
+//       border-color: $text-l;
+//       pointer-events: none;
+//       background-color: $text-l;
+//     }
+//   }
 
-  &-gray {
-    color: $white;
-    background-color: $text-l;
-    min-width: auto;
+//   &-gray {
+//     color: $white;
+//     background-color: $text-l;
+//     min-width: auto;
 
-    &:hover {
-      background-color: $text-l - 15;
-    }
-  }
+//     &:hover {
+//       background-color: $text-l - 15;
+//     }
+//   }
 
-  &-gray-light {
-    color: $text;
-    background-color: $bg-l;
-    border: 1px solid $line-l;
-    min-width: auto;
+//   &-gray-light {
+//     color: $text;
+//     background-color: $bg-l;
+//     border: 1px solid $line-l;
+//     min-width: auto;
 
-    &:hover {
-      background-color: $bg-l - 15;
-    }
-  }
+//     &:hover {
+//       background-color: $bg-l - 15;
+//     }
+//   }
 
-  &-white {
-    background-color: $white;
-    min-width: auto;
-    border: 1px solid $line-l;
+//   &-white {
+//     background-color: $white;
+//     min-width: auto;
+//     border: 1px solid $line-l;
 
-    &:hover {
-      background-color: $white - 15;
-    }
-  }
-}
+//     &:hover {
+//       background-color: $white - 15;
+//     }
+//   }
+// }
 
-.btn-delete {
-  width: 15px;
-  height: 15px;
-  border: none;
-  cursor: pointer;
-  background: url(../img/icons/close.svg) no-repeat center;
-  background-size: 70%;
-  filter: brightness(0);
-  opacity: 0.65;
-  flex-grow: 0;
-  flex-shrink: 0;
+// .btn-delete {
+//   width: 15px;
+//   height: 15px;
+//   border: none;
+//   cursor: pointer;
+//   background: url(../img/icons/close.svg) no-repeat center;
+//   background-size: 70%;
+//   filter: brightness(0);
+//   opacity: 0.65;
+//   flex-grow: 0;
+//   flex-shrink: 0;
 
-  &:hover {
-    opacity: 1;
-  }
+//   &:hover {
+//     opacity: 1;
+//   }
 
-  &:active {
-    background-size: 60%;
-  }
-}
+//   &:active {
+//     background-size: 60%;
+//   }
+// }
 
-.btn-burger {
-  padding: 8px 8px 8px 0;
-  display: inline-block;
-  cursor: pointer;
-  transition: $tr;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
+// .btn-filter {
+//   font-size: 14px;
+//   font-weight: 600;
+//   letter-spacing: $ls;
+//   color: $text-d;
+//   text-decoration: none;
+//   border-bottom: 1px dashed $text;
+//   margin-left: auto;
 
-  &:hover,
-  &.is-active:hover {
-    opacity: 0.7;
-  }
+//   &.is-active {
+//     color: $main;
+//     border-bottom-color: $main;
+//   }
+// }
 
-  &__box {
-    width: 19px;
-    height: 14px;
-    display: inline-block;
-    position: relative;
-    perspective: 30px;
-  }
+// .btn-logout {
+//   color: $main;
+//   font-size: 0.9em;
+//   margin-top: 0.5em;
+//   display: none;
+// }
 
-  &__inner {
-    display: block;
-    top: 50%;
-    margin-top: -1px;
-    transition: transform 0.15s $cub1, background-color 0s 0.1s $cub1;
+// .btn-link {
+//   background-color: transparent;
+//   padding: 0;
+//   display: inline;
+//   text-decoration: underline;
+//   cursor: pointer;
+//   border: none;
+//   color: $text-l;
+// }
 
-    &,
-    &::before,
-    &::after {
-      width: 19px;
-      height: 2px;
-      position: absolute;
-      background-color: $white;
-      transition: $tr;
-    }
+// .password-icon {
+//   width: 30px;
+//   height: 100%;
+//   background: url(../img/icons/eye.svg) no-repeat;
+//   background-size: 80%;
+//   background-position: 10% 50%;
+//   display: block;
+//   position: absolute;
+//   right: 40px;
+//   border: none;
+//   cursor: pointer;
 
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-    }
-
-    &::before {
-      top: -7px;
-    }
-
-    &::after {
-      bottom: -7px;
-    }
-  }
-
-  &.is-active {
-    .btn-burger__inner {
-      background-color: transparent;
-      transform: rotateY(180deg);
-
-      &::before {
-        transform: translate3d(0, 7px, 0) rotate(45deg);
-      }
-
-      &::after {
-        transform: translate3d(0, -7px, 0) rotate(-45deg);
-      }
-    }
-  }
-}
-
-.btn-filter {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: $ls;
-  color: $text-d;
-  text-decoration: none;
-  border-bottom: 1px dashed $text;
-  margin-left: auto;
-
-  &.is-active {
-    color: $main;
-    border-bottom-color: $main;
-  }
-}
-
-.btn-logout {
-  color: $main;
-  font-size: 0.9em;
-  margin-top: 0.5em;
-  display: none;
-}
-
-.btn-link {
-  background-color: transparent;
-  padding: 0;
-  display: inline;
-  text-decoration: underline;
-  cursor: pointer;
-  border: none;
-  color: $text-l;
-}
-
-.password-icon {
-  width: 30px;
-  height: 100%;
-  background: url(../img/icons/eye.svg) no-repeat;
-  background-size: 80%;
-  background-position: 10% 50%;
-  display: block;
-  position: absolute;
-  right: 40px;
-  border: none;
-  cursor: pointer;
-
-  &.is-active {
-    filter: brightness(0);
-  }
-}
+//   &.is-active {
+//     filter: brightness(0);
+//   }
+// }
 
 // фансибокс
-.fancybox-is-open .fancybox-bg {
-  opacity: 0.6;
-}
+// .fancybox-is-open .fancybox-bg {
+//   opacity: 0.6;
+// }
 
-.fancybox-container {
-  .fancybox-content {
-    padding: 0;
-  }
+// .fancybox-container {
+//   .fancybox-content {
+//     padding: 0;
+//   }
 
-  // .modals__item {
-  //   .fancybox-close-small {
-  //     filter: brightness(4);
-  //   }
-  // }
+//   // .modals__item {
+//   //   .fancybox-close-small {
+//   //     filter: brightness(4);
+//   //   }
+//   // }
 
-  .product__quickview {
-    .fancybox-close-small {
-      filter: none;
-    }
-  }
-}
+//   .product__quickview {
+//     .fancybox-close-small {
+//       filter: none;
+//     }
+//   }
+// }
 
 // аккордион
 .accordion {
@@ -832,8 +725,8 @@ hr {
   font-style: italic;
 }
 
-.fancybox-container {
-  z-index: 99999999;
+.fancybox__container {
+  z-index: 9999999999;
 }
 
 

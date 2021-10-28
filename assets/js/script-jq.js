@@ -94,7 +94,6 @@ var categoriesPartnerSlider = categoriesPartnerSliderContainer.length > 0 ?
     })
     : "";
 
-
 const productSliders = document.querySelectorAll('.product-mini-slider');
 productSliders.forEach(element => {
     const slider = tns({
@@ -140,7 +139,6 @@ productSliders4.forEach(element => {
         }
     });
 });
-
 
 
 const productColorsSliderContainer = document.querySelectorAll('.product-colors-slider')
@@ -191,7 +189,6 @@ if (brandFilterTitles.length > 0) {
 }
 
 
-
 // плавная прокрутка к якорю на этой странице 
 // $("body").on('click', '[href*="#"]', function (e) {
 //     var fixed_offset = 100;
@@ -206,57 +203,144 @@ if (brandFilterTitles.length > 0) {
 //     $('html, body').animate({ scrollTop: $(myHash).offset().top - 70 }, 500); //скроллим за полсекунды
 // };
 
-//fancybox
-$('[data-fancybox="gallery-feedback"]').fancybox({
-    backFocus: false,
-    hash: false,
-    loop: false,
-    protect: false,
-    buttons: ["close"],
-    image: {
-        preload: false
-    },
-    animationDuration: 400,
-    animationEffect: "fade",
-    transitionDuration: 1400,
-    transitionEffect: "fade",
-    lang: "ru",
-    i18n: {
-        ru: {
-            CLOSE: "Закрыть",
-            NEXT: "Вперед",
-            PREV: "Назад",
-            ERROR: "К сожалению, запрошенный контент невозможно загрузить.<br/> Пожалуйста, попробуйте позже.",
-            THUMBS: "Превью"
-        }
-    }
+
+Fancybox.bind("[data-fancybox]", {
+    infinite: false,
+    // closeButton: 'inside'
+    dragToClose: false,
 });
 
+
 //fancybox
-$('[data-fancybox="gallery-feedback"]').fancybox({
-    backFocus: false,
-    hash: false,
-    loop: false,
-    protect: false,
-    buttons: ["close"],
-    image: {
-        preload: false
-    },
-    animationDuration: 400,
-    animationEffect: "fade",
-    transitionDuration: 1400,
-    transitionEffect: "fade",
-    lang: "ru",
-    i18n: {
-        ru: {
-            CLOSE: "Закрыть",
-            NEXT: "Вперед",
-            PREV: "Назад",
-            ERROR: "К сожалению, запрошенный контент невозможно загрузить.<br/> Пожалуйста, попробуйте позже.",
-            THUMBS: "Превью"
-        }
-    }
-});
+// $('[data-fancybox="gallery-feedback"]').fancybox({
+//     backFocus: false,
+//     hash: false,
+//     loop: false,
+//     protect: false,
+//     buttons: ["close"],
+//     image: {
+//         preload: false
+//     },
+//     animationDuration: 400,
+//     animationEffect: "fade",
+//     transitionDuration: 1400,
+//     transitionEffect: "fade",
+//     lang: "ru",
+//     i18n: {
+//         ru: {
+//             CLOSE: "Закрыть",
+//             NEXT: "Вперед",
+//             PREV: "Назад",
+//             ERROR: "К сожалению, запрошенный контент невозможно загрузить.<br/> Пожалуйста, попробуйте позже.",
+//             THUMBS: "Превью"
+//         }
+//     }
+// });
+
+// //fancybox
+// $('[data-fancybox="gallery-feedback"]').fancybox({
+//     backFocus: false,
+//     hash: false,
+//     loop: false,
+//     protect: false,
+//     buttons: ["close"],
+//     image: {
+//         preload: false
+//     },
+//     animationDuration: 400,
+//     animationEffect: "fade",
+//     transitionDuration: 1400,
+//     transitionEffect: "fade",
+//     lang: "ru",
+//     i18n: {
+//         ru: {
+//             CLOSE: "Закрыть",
+//             NEXT: "Вперед",
+//             PREV: "Назад",
+//             ERROR: "К сожалению, запрошенный контент невозможно загрузить.<br/> Пожалуйста, попробуйте позже.",
+//             THUMBS: "Превью"
+//         }
+//     }
+// });
+
+// $('[data-fancybox="product-gallery"]').fancybox({
+//     protect: true,
+//     backFocus: false,
+//     loop: true,
+//     buttons: [
+//         "zoom",
+//         //"share",
+//         // "slideShow",
+//         //"fullScreen",
+//         //"download",
+//         "thumbs",
+//         "close"
+//     ],
+// });
+
+
+// новый слайдер в модальном окне фансибокс
+// $(".product__quick-view").fancybox({
+//     afterShow: function (instance, slide) {
+//         if (document.querySelectorAll('.product-gallery').length > 0) {
+//             const swiperProductThumbs = new Swiper('.product-thumbs', {
+//                 direction: 'vertical',
+//                 loop: true,
+//                 grabCursor: false,
+//                 slidesPerView: 4,
+//                 setWrapperSize: true,
+//                 spaceBetween: 4,
+//                 allowTouchMove: false,
+//                 navigation: {
+//                     nextEl: '.swiper-button-next',
+//                     prevEl: '.swiper-button-prev',
+//                 },
+//             })
+
+//             const swiperProductGallery = new Swiper('.product-gallery-slider', {
+//                 loop: true,
+//                 grabCursor: true,
+//                 slidesPerView: 2,
+//                 setWrapperSize: true,
+//                 spaceBetween: 10,
+//                 navigation: true,
+//                 pagination: {
+//                     el: '.swiper-pagination',
+//                     clickable: true,
+//                 },
+//                 navigation: {
+//                     nextEl: '.swiper-button-next',
+//                     prevEl: '.swiper-button-prev',
+//                 },
+//                 breakpoints: {
+//                     768: {
+//                         // allowTouchMove: false,
+//                         slidesPerView: 1,
+//                         spaceBetween: 0,
+//                         grabCursor: false,
+//                         speed: 0,
+//                     }
+//                 }
+//             })
+
+//             const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
+
+//             swiperProductThumbsItems.forEach(item => {
+//                 item.addEventListener('mouseover', () => {
+//                     swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
+//                 })
+//             })
+//         }
+//     }
+// });
+
+
+// window.addEventListener('resize', () => {
+//     clientWidth = document.body.clientWidth;
+//     if (clientWidth < 1024) {
+//         $.fancybox.close();
+//     }
+// }, false);
 
 
 // Инициализация карты
@@ -397,84 +481,6 @@ if ($rangeSlider.length > 0) {
     })
 }
 
-$('[data-fancybox="product-gallery"]').fancybox({
-    protect: true,
-    backFocus: false,
-    loop: true,
-    buttons: [
-        "zoom",
-        //"share",
-        // "slideShow",
-        //"fullScreen",
-        //"download",
-        "thumbs",
-        "close"
-    ],
-});
-
-
-// новый слайдер в модальном окне фансибокс
-$(".product__quick-view").fancybox({
-    afterShow: function (instance, slide) {
-        if (document.querySelectorAll('.product-gallery').length > 0) {
-            const swiperProductThumbs = new Swiper('.product-thumbs', {
-                direction: 'vertical',
-                loop: true,
-                grabCursor: false,
-                slidesPerView: 4,
-                setWrapperSize: true,
-                spaceBetween: 4,
-                allowTouchMove: false,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            })
-
-            const swiperProductGallery = new Swiper('.product-gallery-slider', {
-                loop: true,
-                grabCursor: true,
-                slidesPerView: 2,
-                setWrapperSize: true,
-                spaceBetween: 10,
-                navigation: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    768: {
-                        // allowTouchMove: false,
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        grabCursor: false,
-                        speed: 0,
-                    }
-                }
-            })
-
-            const swiperProductThumbsItems = document.querySelectorAll('.product-thumbs__item')
-
-            swiperProductThumbsItems.forEach(item => {
-                item.addEventListener('mouseover', () => {
-                    swiperProductGallery.slideTo(parseInt(item.dataset.swiperSlideIndex) + 1);
-                })
-            })
-        }
-    }
-});
-
-
-window.addEventListener('resize', () => {
-    clientWidth = document.body.clientWidth;
-    if (clientWidth < 1024) {
-        $.fancybox.close();
-    }
-}, false);
 
 
 

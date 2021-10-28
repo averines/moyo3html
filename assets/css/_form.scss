@@ -112,6 +112,7 @@
 
     &__icon--phone {
         background: url(../img/icons/phone.svg) no-repeat top center;
+        filter: brightness(0.5);
     }
 
     &__content {
@@ -126,20 +127,6 @@
     &__text {
         font-size: 0.85em;
         color: $text-l;
-    }
-
-    .link-modal {
-        display: inline-block;
-        font-size: 0.95em;
-        line-height: 1.4;
-        margin-left: 0.5em;
-        color: $main;
-        text-decoration: none;
-        border-bottom: 1px dotted $main;
-
-        &:hover {
-            opacity: 0.7;
-        }
     }
 
     &--phones {
@@ -181,6 +168,7 @@
     .form-group {
         width: 100%;
         position: relative;
+        align-items: center;
 
         &--required {
             &::after {
@@ -206,7 +194,7 @@
 
         input {
             padding: 27px 40px 10px 20px;
-            border: 1px solid $line-d + 25;
+            border: 1px solid $line-l;
             font-size: 18px;
             width: 100%;
             margin-top: -1px;
@@ -226,6 +214,7 @@
                 color: $text-l;
                 font-size: 17px;
                 padding: 0 25px;
+                left: 0;
                 position: absolute;
                 transform: translateY(2px);
                 transition: transform 0.15s ease-in-out;
@@ -236,16 +225,17 @@
 
     .form-block {
         margin: 15px 0;
+
         .form-group {
             &:first-child {
-                > input[type="text"] {
+                > input[type="text"], > input[type="password"] {
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
                 }
             }
 
             &:last-child {
-                > input[type="text"] {
+                > input[type="text"], > input[type="password"] {
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
                 }
@@ -282,14 +272,17 @@
         padding: 1.25em;
 
         &:hover {
-            background-color: $main-hover;
+            background-color: $main-h;
         }
     }
 }
 
 .form-group {
-    width: 100%;
-    position: relative;
+    display: flex;
+
+    input {
+        border: 1px solid $line-l;
+    }
 
     &--need-check {
         &::after {
@@ -310,35 +303,6 @@
     &.is-valid {
         &::after {
             filter: none;
-        }
-    }
-
-    input {
-        padding: 27px 40px 10px 20px;
-        border: 1px solid $line-d;
-        font-size: 18px;
-        width: 100%;
-        margin-top: -1px;
-
-        &:focus,
-        &.not-empty {
-            outline: none;
-            + label {
-                transform: translateY(-10px) scale(0.75);
-                opacity: 0.8;
-            }
-        }
-
-        + label {
-            pointer-events: none;
-            top: auto;
-            color: $text-l;
-            font-size: 17px;
-            padding: 0 25px;
-            position: absolute;
-            transform: translateY(2px);
-            transition: transform 0.15s ease-in-out;
-            transform-origin: 0 0;
         }
     }
 }
