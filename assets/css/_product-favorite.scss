@@ -1,24 +1,25 @@
 .product-favorite {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border: none;
     background: url(../img/icons/favorites-stroked.svg) no-repeat center;
-    background-size: 53%;
+    background-size: 48%;
     cursor: pointer;
-    transition: background-image 0.2s, transform 0.1s ease-in-out;
+    transition: background-image 0.2s, transform 0.05s ease-in-out, opacity 0.15s ease-in-out;
 
     &.is-active {
         background: url(../img/icons/favorites-filled.svg) no-repeat center;
-        background-size: 53%;
+        background-size: 48%;
     }
 
     &:hover {
-        transform: scale(1.05);
+        // transform: scale(1.02);
+        opacity: 0.7;
     }
 
     &:active {
-        transform: scale(0.95);
+        transform: translateY(2px);
     }
 
     > span {

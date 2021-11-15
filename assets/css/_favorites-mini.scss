@@ -1,0 +1,53 @@
+.favorites-mini {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        position: relative;
+    }
+
+    &__icon {
+        display: block;
+        text-decoration: none;
+        background: url(../img/icons/favorites-stroked-white.svg) no-repeat center;
+        background-size: 55%;
+        width: 35px;
+        height: 36px;
+        opacity: 0.7;
+        transition: opacity 0.15s ease-in-out;
+
+        @media screen and (min-width: 400px) {
+            width: 45px;
+            background-size: 45%;
+        }
+    }
+
+    &__count {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+
+        @media screen and (min-width: 400px) {
+        top: -2px;
+        }        
+    }
+
+    &:hover {
+        .favorites-mini__icon {
+            opacity: 1;
+        }
+
+        .favorites-mini__dropdown {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transform: translateY(5px);
+        }
+    }
+}

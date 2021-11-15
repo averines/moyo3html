@@ -31,7 +31,7 @@
 .form-file {
     border: 1px dashed $line-l;
     padding: 20px 15px;
-    background-color: $bg-l + 5;
+    background-color: lighten($bg-ll, 5);
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.15s ease-in-out;
@@ -42,7 +42,7 @@
     }
 
     &:hover {
-        background-color: $bg-l + 7;
+        background-color: lighten($bg-ll, 5);
     }
 
     &.is-highlight {
@@ -155,8 +155,14 @@
 }
 
 .form-minimal {
+    position: relative;
+
     .form-row {
         margin: 15px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
 
         .form-group {
             > input[type="text"] {
@@ -197,10 +203,17 @@
             border: 1px solid $line-l;
             font-size: 18px;
             width: 100%;
-            margin-top: -1px;
+            // margin-top: -1px;
+
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
 
             &:focus,
-            &.not-empty {
+            &.not-empty,
+            &:focus-within {
                 outline: none;
                 + label {
                     transform: translateY(-10px) scale(0.75);
@@ -225,28 +238,34 @@
 
     .form-block {
         margin: 15px 0;
+        border-radius: 5px;
+        border: 1px solid $line-l;
+        overflow: hidden;
+        background-color: #fff;
 
         .form-group {
-            &:first-child {
-                > input[type="text"], > input[type="password"] {
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                }
+            margin: 0;
+
+            input {
+                border: none;
+                border-bottom: 1px solid $line-ll;
             }
 
             &:last-child {
-                > input[type="text"], > input[type="password"] {
-                    border-bottom-left-radius: 5px;
-                    border-bottom-right-radius: 5px;
+                > input[type="text"],
+                > input[type="password"] {
+                    border: none;
                 }
             }
         }
     }
 
     button[type="submit"] {
-        background-color: $special-6;
+        color: #fff;
+        background-color: $main;
+
         &:hover {
-            background-color: $special-6 - 20;
+            background-color: $main-h;
         }
 
         &:focus {
@@ -254,7 +273,7 @@
         }
 
         &:disabled {
-            background-color: $main;
+            background-color: $disabled;
         }
     }
 }
@@ -266,14 +285,8 @@
     .btn {
         width: 100%;
         max-width: none;
-        background-color: $main;
-        color: #fff;
         font-size: 16px;
         padding: 1.25em;
-
-        &:hover {
-            background-color: $main-h;
-        }
     }
 }
 
@@ -281,7 +294,7 @@
     display: flex;
 
     input {
-        border: 1px solid $line-l;
+        border: 1px solid $line-ll;
     }
 
     &--need-check {

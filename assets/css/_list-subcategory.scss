@@ -1,0 +1,160 @@
+.list-subcategory {
+    margin: 50px 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px 15px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        transition: $tr;
+        text-transform: uppercase;
+        text-align: center;
+        color: $text-l;
+        font-weight: 600;
+        font-size: 10px;
+        row-gap: 15px;
+        max-width: 85px;
+        margin: 0 auto;
+
+        &::before {
+            content: "";
+            width: 55px;
+            height: 55px;
+            display: inline-block;
+            background-position: center;
+            background-size: contain;
+            transition: $tr;
+            // border: 2px solid $text-ll;
+            // border-radius: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        // Основные
+        @for $i from 1001 through 1004 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Женщинам
+        @for $i from 101 through 118 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Девочкам
+        @for $i from 201 through 219 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Мужчинам
+        @for $i from 301 through 312 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // мальчикам
+        @for $i from 401 through 415 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Малышам
+        @for $i from 501 through 512 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Игрушки
+        @for $i from 601 through 611 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        // Для дома
+        @for $i from 701 through 713 {
+            &[data-subcategory-id="#{$i}"] {
+                &::before {
+                    background-image: url(../img/icons/subcategories/#{$i}.svg);
+                }
+            }
+        }
+
+        &:hover {
+            opacity: 0.8;
+
+            &::before {
+                transform: translateY(-5px);
+            }
+        }
+
+        &--special {
+            color: $main;
+
+            &::before {
+                border-color: $main;
+            }
+        }
+        &--special-2 {
+            color: $special-7;
+
+            &::before {
+                border-color: $special-7;
+            }
+        }
+
+        &--special-3 {
+            color: $main;
+
+            // &::before {
+            // border: none;
+            // border-radius: 0;
+            // background-size: 150%;
+            // }
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.65em;
+        color: $text-l;
+        text-align: center;
+        margin-top: 1em;
+    }
+}

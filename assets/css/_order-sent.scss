@@ -1,0 +1,34 @@
+.order-sent {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    max-width: 1200px;
+
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__content{
+        max-width: 600px;
+    }
+
+    &__pic {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+
+        @media screen and (min-width: 768px) {
+            margin-top: -50px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-top: -100px;
+        }       
+    }
+}

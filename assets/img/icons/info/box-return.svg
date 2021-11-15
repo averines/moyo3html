@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1,
+            .cls-2,
+            .cls-3 {
+                fill: none;
+                stroke: #bf016f;
+            }
+
+            .cls-1,
+            .cls-3 {
+                stroke-width: 2px;
+            }
+
+            .cls-2 {
+                stroke-width: 1.2px;
+            }
+
+            .cls-3 {
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+        </style>
+    </defs>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Слой_1-2" data-name="Слой 1">
+            <path class="cls-1" d="M17.28,10.64l-8.57,3v9.94l8.57,2.91,8.58-2.91V13.63Z" />
+            <path class="cls-2" d="M25.86,13.63l-8.57,2.94L8.71,13.63" />
+            <path class="cls-2" d="M17.28,26.19V16.57" />
+            <path class="cls-2" d="M13.12,12l8.34,3" />
+            <path class="cls-3" d="M5.68,10.22H1V5.54" />
+            <path class="cls-1" d="M4.24,31.22A17.66,17.66,0,1,0,1.55,9.63" />
+        </g>
+    </g>
+</svg>

@@ -6,12 +6,12 @@
     border-radius: 4px;
     color: $text;
     padding: 0.75em 1em;
-    background-color: $bg-l - 20;
+    background-color: darken($bg-l, 10);
     text-align: center;
     transition: background-color 0.15s ease-in-out;
 
     &:hover {
-        background-color: $bg-l - 40;
+        background-color: darken($bg-l, 10);
     }
 
     &:active {
@@ -64,7 +64,7 @@
     border: none;
     color: $text-l;
     transition: color 0.15s ease-in-out;
-    border-bottom: 1px dashed $text-l;
+    border-bottom: 1px dashed $text-ll;
 
     &:hover {
         color: $text;
@@ -97,7 +97,7 @@
     white-space: nowrap;
 
     &:hover {
-        background-color: $text-l - 10;
+        background-color: darken($text-l, 10);
     }
 
     &::before {
@@ -112,73 +112,13 @@
     }
 }
 
-.btn-burger {
-  padding: 8px 8px 8px 0;
-  display: inline-block;
-  cursor: pointer;
-  transition: $tr;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible;
+.btn-submit {
+    margin-top: 30px;
+    background-color: $special-6;
+    color: #fff;
+    padding: 15px 30px;
 
-  &:hover,
-  &.is-active:hover {
-    opacity: 0.7;
-  }
-
-  &__box {
-    width: 19px;
-    height: 14px;
-    display: inline-block;
-    position: relative;
-    perspective: 30px;
-  }
-
-  &__inner {
-    display: block;
-    top: 50%;
-    margin-top: -1px;
-    transition: transform 0.15s $cub1, background-color 0s 0.1s $cub1;
-
-    &,
-    &::before,
-    &::after {
-      width: 19px;
-      height: 2px;
-      position: absolute;
-      background-color: $white;
-      transition: $tr;
+    &:hover {
+        background-color: $special-6-d;
     }
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-    }
-
-    &::before {
-      top: -7px;
-    }
-
-    &::after {
-      bottom: -7px;
-    }
-  }
-
-  &.is-active {
-    .btn-burger__inner {
-      background-color: transparent;
-      transform: rotateY(180deg);
-
-      &::before {
-        transform: translate3d(0, 7px, 0) rotate(45deg);
-      }
-
-      &::after {
-        transform: translate3d(0, -7px, 0) rotate(-45deg);
-      }
-    }
-  }
 }
-

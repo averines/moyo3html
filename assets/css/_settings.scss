@@ -1,0 +1,200 @@
+.settings {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.setting-switch {
+    position: relative;
+    background-color: $bg-l;
+    border-radius: 5px;
+    padding: 30px 20px;
+
+    &__button {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+
+        > input[type="checkbox"] {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+            &:checked {
+                + label {
+                    background-color: $special-6;
+                    &::before {
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
+
+        > label {
+            position: relative;
+            cursor: pointer;
+            display: block;
+            width: 44px;
+            height: 24px;
+            background-color: $text-ll;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+
+            &::before {
+                content: "";
+                // box-sizing: unset;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                transform: translateX(-50%);
+                margin: 2px;
+                transition: all 0.15s ease-in-out;
+                box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
+
+.setting {
+    &__header {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $text-l;
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.4;
+        padding-top: 5px;
+        color: $text-l;
+    }
+}
+
+.setting-select {
+    border: 1px solid $line-l;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 15px;
+
+    .setting-title {
+        font-weight: 400;
+        font-size: 14px;
+        color: $text-ll;
+        padding: 15px 20px 0 20px;
+    }
+
+    &__container {
+        width: 100%;
+        height: 35px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            transform: translateY(-10px);
+            margin-right: 5px;
+            background: url(../img/icons/arrow-down.svg) no-repeat center;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        padding: 0 20px;
+        display: none;
+        font-size: 18px;
+
+        order: 2;
+        border-top: 1px solid $line-ll;
+
+        &:hover {
+            background-color: $bg-l;
+        }
+
+        // &:not(.active) {
+        //     transition: background-color 0.15s ease-in-out;
+        // }
+
+        &.is-active {
+            display: flex;
+            order: 1;
+            border: none;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.is-active {
+        .setting-select__container {
+            &::after {
+                transform: translateY(-10px) scale(1, -1);
+            }
+        }
+        .setting-select__content {
+            position: absolute;
+            z-index: 1;
+            background-color: $body;
+            box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 0 0 5px 5px;
+
+            .setting-select__item {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+.setting-list {
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__item {
+        display: flex;
+        column-gap: 20px;
+        align-items: flex-start;
+
+        .item-title {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+        .item-description {
+            font-weight: 400;
+            font-size: 13px;
+            color: $text-ll;
+            line-height: 1.3;
+            padding-top: 3px;
+        }        
+    }
+}

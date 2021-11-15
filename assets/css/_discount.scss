@@ -1,0 +1,162 @@
+.discount-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    &__pic {
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        &__pic {
+            order: 1;
+        }
+
+        &__text {
+            max-width: 700px;
+        }
+    }
+}
+
+.discount-number {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3em;
+
+    &__percent {
+        color: $special-3;
+        font-weight: 600;
+        font-size: 5.7em;
+        line-height: 1em;
+        margin-bottom: -0.29em;
+        position: relative;
+
+        &::after {
+            content: "%";
+            font-size: 0.6em;
+            font-weight: 600;
+            margin-left: -0.2em;
+        }
+
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 45%;
+            right: -85%;
+            width: 126px;
+            height: 62px;
+            background: url(../img/coins.svg) no-repeat center;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #fff;
+        background-color: #900583;
+        display: inline-block;
+        padding: 0 1.5em 0 1em;
+        position: relative;
+        height: 34px;
+        line-height: 34px;
+
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 34px;
+            top: 0;
+            left: -10px;
+            background: url(../img/triangle1.svg) no-repeat top right;
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 132px;
+            height: 14px;
+            bottom: -14px;
+            right: 0;
+            background: url(../img/triangle2.svg) no-repeat top right;
+            background-size: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        font-size: 0.85em;
+        position: relative;
+    }
+
+    &__total {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+
+.discount-table {
+    margin-top: 3em;
+    margin-bottom: 2em;
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 1em;
+        background-color: $bg-l;
+        margin-bottom: 5px;
+    }
+
+    &__content {
+        background-color: $bg-l;
+    }
+}
+
+.discount--history {
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.discount-wrapper {
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        column-gap: 50px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        column-gap: 80px;
+    }
+}
+
+.discount-tables {
+    .discount-table__title {
+        background-color: $main-d;
+        color: #fff;
+
+    @media screen and (min-width: 768px) {
+        background-color: $bg-l;
+        color: $text;
+    }        
+    }
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+}

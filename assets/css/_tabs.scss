@@ -1,107 +1,101 @@
 .tabs {
-    .tabs-titles {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    &--category {
+        padding-top: 30px;
+        padding-bottom: 30px;
 
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            display: flex;
+        .tabs-titles {
+            &__item {
+                padding: 30px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.tabs-titles {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__item {
+        flex-grow: 1;
+        text-decoration: none;
+        color: $text-d;
+        border: 2px solid transparent;
+        border-top: 2px solid $line-l;
+        transition: background-color 0.15s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $bg-l;
         }
 
-        &__item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 11px;
-            text-decoration: none;
-            padding: 14px;
-            color: $text;
-            border: 2px solid transparent;
-            border-top-color: $line-d;
-            flex-grow: 1;
-            transition: background-color 0.2s ease-in-out;
+        &:first-child {
+            border-top-color: transparent;
+        }
 
-            &:hover {
-                background-color: $bg-l;
-            }
+        &.is-active {
+            border-color: $main;
+            background-color: $bg-l;
 
-            &:first-child {
+            + .tabs-titles__item {
                 border-top-color: transparent;
             }
 
-            &.is-active {
-                border-color: $main;
-
-                font-weight: 600;
-
-                + .tabs-titles__item {
-                    border-top-color: transparent;
-                }
-
-                @media screen and (min-width: 768px) {
-                    &.is-active {
-                        border-color: $main;
-                    }
-                }
+            svg path {
+                stroke: $main;
             }
+        }
 
-            @media screen and (min-width: 768px) {
-                border: none;
-                border-bottom: 4px solid $line-d;
-                width: 20%;
+        @media screen and (min-width: 768px) {
+            border: none;
+            border-bottom: 4px solid $line-l;
+            transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+            &.is-active {
+                border-bottom-color: $main;
+                background-color: $bg-l;
+
+                svg path {
+                    stroke: $main;
+                }
             }
         }
     }
 }
 
-.tabs--category {
-    margin-top: 20px;
+.tabs-content {
+    &__item {
+        display: none;
 
-    .tabs-titles {
-        &__item {
-            padding: 3em;
-
-            &.is-active {
-                .tabs-title-category__pic {
-                    path {
-                        stroke: $main;
-                    }
-                }
-            }
-        }
-    }
-
-    .tabs-title-category {
-        display: flex;
-        column-gap: 7px;
-        align-items: center;
-
-        &__title {
-            text-transform: uppercase;
-            font-size: 11px;
-            font-weight: 600;
-            padding-bottom: 0.4em;
-        }
-
-        &__description {
-            color: $text-l;
-            font-size: 10px;
-            text-transform: initial;
+        &.is-active {
+            display: block;
         }
     }
 }
 
-[data-action="tabs"] {
-    .tabs-content {
-        &__item {
-            display: none;
+.tabs-title-category {
+    display: flex;
+    column-gap: 10px;
 
-            &.is-active {
-                display: block;
-            }
-        }
+    &__info {
+        text-align: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+
+    &__description {
+        color: $text-l;
+        font-size: 10px;
+        text-transform: initial;
     }
 }

@@ -2,7 +2,7 @@
     background-color: #fff;
     width: 100%;
     position: relative;
-    min-height: 400px;
+    // min-height: 400px;
     border-radius: 3px;
 
     &__wrapper {
@@ -22,6 +22,7 @@
         > img {
             display: block;
             width: 100%;
+            height: auto;
         }
     }
 
@@ -45,7 +46,7 @@
 
     &__header {
         padding-top: 15px;
-        padding-right: 35px;
+        // padding-right: 35px;
         display: block;
         text-decoration: none;
         display: flex;
@@ -74,9 +75,9 @@
 
     &__favorite {
         position: absolute;
-        right: 5px;
-        top: auto;
-        bottom: 5px;
+        right: 0;
+        top: 0;
+        // bottom: 5px;
     }
 
     &__quickview {

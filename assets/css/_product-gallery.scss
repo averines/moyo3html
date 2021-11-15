@@ -1,18 +1,18 @@
-.product-gallery {
-    display: flex;
-    align-self: flex-start;
+// .product-gallery {
+//     display: flex;
+//     align-self: flex-start;
 
-    &__thumbs {
-        display: none;
+//     &__thumbs {
+//         display: none;
         
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
-    }
+//         @media screen and (min-width: 1024px) {
+//             display: block;
+//         }
+//     }
 
-    @media screen and (min-width: 1024px) {
-        grid-area: gallery;
-        background-color: #fff;
-        column-gap: 5px;
-    }
-}
+//     @media screen and (min-width: 1024px) {
+//         grid-area: gallery;
+//         background-color: #fff;
+//         column-gap: 5px;
+//     }
+// }

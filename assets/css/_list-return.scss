@@ -1,0 +1,41 @@
+.list-return {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  column-gap: 20px;
+
+  @media screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.return-item {
+  padding: 1.5em;
+  background-color: #fff;
+
+  &__title {
+    font-weight: 600;
+    font-size: 0.95em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid $main;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.return-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 15px;
+}

@@ -15,7 +15,7 @@
 
         &:hover {
             opacity: 1;
-            border-left-color: $line-l + 20;
+            border-left-color: lighten($line-l, 5);
         }
         
 

@@ -1,0 +1,19 @@
+<div class="modal modal--recover">
+<div class="modal__title">Восстановление пароля</div>
+<div class="modal__content">
+    <form action="/" class="form-minimal" data-check>
+        <div class="form-row">
+            <div class="form-group">
+                <input id="recover-email" type="text" name="recover-email" data-check data-check-required="true">
+                <label for="recover-email">Эл. почта</label>
+            </div>
+        </div>
+        <p class="text-italic">Введите адрес электронной почты, на который мы вышлем новый пароль.</p>
+        <button class="btn btn-main" type="submit" disabled>Восстановить</button>
+    </form>
+</div>
+</div>
+
+<script>
+    formsHandler()
+</script>

@@ -1,5 +1,5 @@
 .alert {
-    background-color: $bg-l;
+    background-color: $bg-ll;
     padding: 20px;
     position: relative;
     border-radius: 3px;
@@ -49,10 +49,10 @@
     }
 
     &--main {
-        background-color: $main-l;
+        background-color: $main-lll;
         background-color: #fff;
         color: $main;
-        border-color: $main-l;
+        border-color: $main-ll;
     }
 
 

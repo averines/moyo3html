@@ -1,7 +1,8 @@
 .modal {
     padding: 0;
     border-radius: 5px;
-    display: none;
+    background-color: #fff;
+    margin: auto;
 
     &__title {
         padding: 20px;
@@ -98,13 +99,41 @@
         max-width: 750px;
 
         > .modal__content {
-            height: 500px;
+            height: 550px;
+            min-width: 300px;
+
+            @media screen and (min-width: 400px) {
+                width: 360px;
+            }
+
+            @media screen and (min-width: 600px) {
+                width: 560px;
+            }
+
+            @media screen and (min-width: 700px) {
+                width: 660px;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 700px;
+            }
         }
     }
 
     &--quickview {
-        max-width: 1000px;
-        padding: 40px;
+        max-width: 960px;
+    }
+
+    &--letter {
+        max-width: 700px;
+        > .modal__content {
+            @media screen and (min-width: 700px) {
+                padding: 60px 60px 100px 60px;
+            }
+            @media screen and (min-width: 1024px) {
+                padding: 80px 80px 100px 80px;
+            }
+        }
     }
 }
 
@@ -115,11 +144,11 @@
     color: $main;
     background: none;
     cursor: pointer;
-    border-bottom: 1px dashed $main-l;
+    border-bottom: 1px dashed $main-ll;
     line-height: 1.4;
     transition: border-bottom-color 0.15s ease-in-out;
 
     &:hover {
-        border-bottom-color: $main-l + 20;
+        border-bottom-color: $main-lll;
     }
 }

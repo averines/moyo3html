@@ -30,7 +30,7 @@
     &__line {
         width: 100%;
         height: 4px;
-        background-color: $line-l;
+        background-color: $line-ll;
         border-radius: 4px;
         overflow: hidden;
         margin-top: 3px;
@@ -45,6 +45,6 @@
     &__value {
         height: 100%;
         width: 0;
-        background-color: $special-1;
+        background-color: $special-1-l;
     }
 }

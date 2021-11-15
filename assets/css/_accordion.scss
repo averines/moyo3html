@@ -1,0 +1,151 @@
+.accordion {
+    &.accordion--enabled {
+        display: flex;
+        flex-direction: column;
+
+        > .accordion__item {
+            &.is-opened {
+                > .accordion__content {
+                    max-height: 10000px;
+                    transition: max-height 0.3s ease-in-out;
+
+                    @media screen and (min-width: 1200px) {
+                        max-height: 2000px;
+                    }
+                }
+                > .accordion__title {
+                    &::after {
+                        transform: scale(1, -1);
+                    }
+                }
+            }
+
+            > .accordion__title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background: url(../img/icons/arrow-down.svg) no-repeat center;
+                    width: 10px;
+                    height: 10px;
+                    transition: $tr;
+                    margin-left: 15px;
+                }
+            }
+
+            .accordion__content {
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+
+        &.accordion--std {
+            > .accordion__item {
+                > .accordion__title {
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    border-bottom: 1px solid $line-ll;
+                    border-top: 1px solid $line-ll;
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin-top: -1px;
+
+                    &:hover {
+                        background: linear-gradient(90deg, transparent, $bg-l 10%, $bg-l 90%, transparent);
+                    }
+                }
+
+                &.is-opened {
+                    > .accordion__content {
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.accordion--brand-filter {
+        @media screen and (min-width: 1200px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 20px;
+        }
+
+        > .accordion__item {
+            > .accordion__title {
+                color: $text;
+                font-size: 11px;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+                border-bottom: 3px solid $line-l;
+                line-height: 1.4;
+
+                @media screen and (min-width: 1200px) {
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    height: 60px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            &.is-opened {
+                > .accordion__content {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    &.accordion--disabled {
+        .accordion__item {
+            padding-bottom: 30px;
+
+            > .accordion__title {
+                display: flex;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &.accordion--pointeroff {
+        > .accordion__item {
+            > .accordion__title {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &.accordion--content-no-show {
+        .accordion__item {
+            &.is-opened {
+                .accordion__title {
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+                }
+                .accordion__content {
+                    padding: 0;
+                    max-height: 0;
+                }
+            }
+        }
+    }
+}

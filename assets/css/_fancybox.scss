@@ -1,0 +1,26 @@
+.fancybox {
+    &__backdrop {
+        background-color: $overlay;
+    }
+}
+
+.fancybox__content > .carousel__button.is-close {
+    top: 0px;
+    right: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    filter: brightness(0.5);
+    &:hover {
+        filter: brightness(0.1);
+    }
+}
+
+.carousel__button {
+    width: 40px;
+    height: 40px;
+    svg {
+        filter: none;
+        width: 37%;
+        height: 37%;
+    }
+}

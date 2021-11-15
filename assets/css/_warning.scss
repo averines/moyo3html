@@ -1,6 +1,6 @@
 .warning {
     padding: 5px 8px;
-    border: 1px solid $main-l;
+    border: 1px solid $main-ll;
     font-size: 13px;
     display: inline-block;
     color: $main;
@@ -14,5 +14,10 @@
     > p:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
-    }    
+    }
+
+    &--good {
+        color: $special-6;
+        border-color: $special-6;
+    }
 }

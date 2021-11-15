@@ -1,0 +1,55 @@
+.status {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    align-items: center;
+
+    &::before {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        animation: zoomin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &--good {
+        &::before {
+            width: 45px;
+            height: 45px;
+            background: url(../img/icons/status-good.svg) no-repeat center;
+            background-size: 100%;
+        }
+    }
+
+    &--bad {
+        &::before {
+            width: 30px;
+            height: 30px;
+            background: url(../img/icons/status-bad.svg) no-repeat center;
+            background-size: 100%;
+        }
+    }
+
+    &__message {
+        font-size: 16px;
+        line-height: 1.45;
+        animation: slideup 0.3s ease-in-out;
+    }
+}
+
+.is-waiting {
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../img/loading.svg) no-repeat center rgba(255, 255, 255, 0.74);
+        opacity: 1;
+        z-index: 10000;
+    }
+}

@@ -1,32 +1,77 @@
+.container-wrapper {
+    background-color: $bg-l;
+}
+
 .container {
     max-width: 1470px;
-    padding-left: $gap;
-    padding-right: $gap;
+    padding: 0 15px;
     margin: 0 auto;
-    position: relative;
 
-    &--footer {
-        padding: 0;
+    &--fullwidth {
+        max-width: none;
+        padding: 0 15px;
+    }
+
+    &--p0 {
+        padding-left: 0;
+        padding-right: 0;
+
+        @media screen and (min-width: 768px) {
+            padding: 0 15px;
+        }
     }
 
     &--pr0 {
         padding-right: 0;
-    }
 
-    &--pl0 {
-        padding-left: 0;
-    }
+        @media screen and (min-width: 768px) {
+            padding-right: 15px;
+        }
+    }    
 
-    &--max600 {
-        max-width: 600px;
+    &--bg {
+        background-color: $bg-l;
     }
 
     &--registration {
         max-width: 600px;
         margin-top: 30px;
 
+        .h2 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
         @media screen and (min-width: 1024px) {
             margin-top: 70px;
         }
+    }
+
+    &--page-product {
+        padding-top: 15px;
+
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: 516px 1fr;
+            grid-template-rows: max-content 1fr;
+            grid-template-areas:
+                "gallery info"
+                "feedback info";
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 620px 1fr;
+        }
+
+        @media screen and (min-width: 1400px) {
+            // grid-template-columns: 703px auto;
+        }
+    }
+
+    &--max700 {
+        max-width: 700px;
     }
 }

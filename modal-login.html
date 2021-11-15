@@ -1,0 +1,36 @@
+<div class="modal modal--login">
+    <div class="modal__title">Вход</div>
+
+    <div class="modal__content">
+        <div class="status status--good">
+            <div class="status__message">Вы успешно авторизованы на сайте</div>
+        </div>
+        <div class="status status--bad">
+            <div class="status__message">Ошибка авторизации. <br> Неправильно указан логин или пароль</div>
+        </div>
+        <div class="is-waiting">Этот блок в ожидании. Класс "is-waiting" можно применить к любому элементу, например, к форме, которая ниже"</div>
+
+        <form action="personal-data-fiz.html" class="form-minimal" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="login-email" type="text" name="login-email" data-check data-check-required="true">
+                    <label for="login-email">Эл. почта</label>
+                </div>
+                <div class="form-group">
+                    <input id="login-password" type="password" name="login-password" autocomplete="on" data-check data-check-required="true">
+                    <label for="login-password">Пароль</label>
+                    <button type="button" class="icon-password" aria-label="Показать пароль"></button>
+                </div>
+            </div>
+            <button class="btn btn-main" data-action="user-set-logged" type="submit" disabled>Войти</button>
+            <div class="text-center">
+                <button class="btn-link mt-1" data-fancybox data-type="ajax" data-src="modal-recover.html">Забыли пароль?</button>
+            </div>
+        </form>
+        <p class="text-center text-small mt-2">Нет личного кабинета? <a href="personal-registration.html">Зарегистрироваться</a></p>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

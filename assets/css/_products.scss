@@ -21,14 +21,15 @@
 }
 
 .products-section {
-    padding-bottom: 50px;
+    padding-top: 50px;
     width: 100%;
-    overflow: hidden;
     z-index: 1;
     position: relative;
 
     @media screen and (min-width: 1200px) {
-        overflow: visible;
+        .carousel__viewport {
+            overflow: visible;
+        }
     }
 
     &:hover {
@@ -40,20 +41,21 @@
         font-weight: 600;
         font-size: 14px;
         display: flex;
+        align-items: center;
         column-gap: 14px;
-        // padding-bottom: 15px;
+        padding-bottom: 15px;
 
-        // &.products-section__title--center {
-        //     justify-content: center;
-        //     flex-direction: column;
+        &.products-section__title--center {
+            justify-content: center;
+            flex-direction: column;
 
-        //     .products-section__link {
-        //         padding-top: 12px;
-        //         &::before {
-        //             display: none;
-        //         }
-        //     }
-        // }
+            .products-section__link {
+                padding-top: 12px;
+                &::before {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__link {
@@ -82,10 +84,20 @@
     }
 
     .products {
-        display: flex;
-        column-gap: 0;
-        width: 100%;
-        margin: 0;
+        display: block;
+        margin: 0 -5px;
+
+        @media screen and (min-width: 1200px) {
+            margin: 0 -7px;
+
+            // прячем навигацию для фансибокс слайдера
+            &.has-dots {
+                margin-bottom: 0;
+            }
+            .carousel__dots {
+                display: none;
+            }
+        }
     }
 
     .product {
@@ -106,16 +118,20 @@
         font-size: 0.9em;
     }
 
-    // .product-card__favorite {
-    //     top: auto;
-    //     bottom: 5px;
-    // }
-
-    // .product-card__header {
-    //     padding-right: 35px;
-    // }
-
     .product-card {
+        padding: 0;
+        margin: 0 5px;
+        overflow: visible;
+        width: calc(50% - 10px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc(25% - 10px);
+        }
+
         @media screen and (min-width: 1024px) {
             &:hover {
                 box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
@@ -153,7 +169,11 @@
                 }
             }
         }
+
         @media screen and (min-width: 1200px) {
+            margin: 0 7px;
+            width: calc(16.7% - 14px);
+
             &:hover {
                 box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
                 border-radius: 0;
@@ -211,49 +231,32 @@
     }
 }
 
-.products-pagination {
-    display: flex;
-    column-gap: 6px;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    transform: translateY(-25px);
+.section--hits {
+    .products {
+        margin-top: 25px;
+        
+        // навигация для фансибокс слайдера
+        &.has-dots {
+            .carousel__dots {
+                top: -10px;
+                justify-content: center;
+                .carousel__dot {
+                    width: 12px;
+                    height: 12px;
+                    &:after {
+                        width: 4px;
+                        height: 4px;
+                        background-color: $text-l;
+                    }
 
-    &.swiper-pagination-bullets {
-        z-index: 0;
-        pointer-events: none;
-
-        .swiper-pagination-bullet {
-            background-color: $text-l;
-            width: 5px;
-            height: 5px;
-            margin: 0;
-            transition: opacity 0.3s ease-in-out;
+                    &.is-selected {
+                        &:after {
+                            opacity: 1;
+                            background-color: $main;
+                        }
+                    }
+                }
+            }
         }
-    }
-
-    &.swiper-pagination-lock {
-        display: none;
-    }
-}
-
-.products-pagination--section-hits {
-    transform: translateY(-5px);
-
-    .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-        background: $text-l;
-        border: 1px solid $bg-l;
-        opacity: 1;
-        transition: $tr;
-    }
-
-    .swiper-pagination-bullet-active {
-        opacity: 1;
-        background: none;
-        border: 2px solid $main;
-        width: 8px;
-        height: 8px;
     }
 }

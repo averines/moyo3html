@@ -8,7 +8,6 @@
         font-size: 0.85em;
         text-decoration: none;
         color: $text;
-        // letter-spacing: $ls;
         margin-right: 0.5em;
         transition: $tr;
 
@@ -19,7 +18,7 @@
         &::after {
             display: none;
             content: "•";
-            color: $text-l;
+            color: $text-ll;
             margin-left: 0.5em;
         }
     }

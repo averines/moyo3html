@@ -1,0 +1,52 @@
+.conditions {
+    padding-top: 15px;
+
+      @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        column-gap: 20px;
+      }
+}
+
+.conditions-list {
+    background-color: $bg-l;
+    background: url(../img/triangle.svg) no-repeat center bottom -1px  $bg-l;
+    background-size: 100%;
+    padding: 35px 25px 45px 23px;
+    margin: 0;
+    margin-bottom: 40px;
+    list-style: none;
+
+    @media screen and (min-width: 992px) {
+        margin-bottom: 0;
+    }    
+
+    &__item {
+        padding-bottom: 20px;
+    }
+}
+
+.conditions-item {
+    display: flex;
+    column-gap: 20px;
+
+    &__number {
+        font-size: 36px;
+        color: $text-ll;
+        font-weight: 600;
+        margin-top: -3px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: 14px;
+
+        > p:first-child {
+        margin-top: 3px}
+    }
+}

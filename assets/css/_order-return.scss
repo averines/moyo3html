@@ -1,0 +1,12 @@
+.order-return {
+    margin-top: 120px;
+    position: relative;
+    padding-bottom: 50px;
+
+    &__title {
+        position: absolute;
+        font-weight: 600;
+        font-size: 20px;
+        top: -36px;
+    }
+}

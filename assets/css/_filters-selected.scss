@@ -1,0 +1,36 @@
+.filters-selected {
+    display: flex;
+    gap: 10px;
+
+    &__item {
+        background-color: $bg-l;
+        padding: 5px 5px 5px 10px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        color: $text-d;
+        font-size: 12px;
+        transition: $tr;
+        cursor: pointer;
+
+        &::after {
+            display: block;
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: url(../img/icons/close-white.svg) no-repeat center #d5d5d5;
+            background-size: 40%;
+            border-radius: 50%;
+            margin-left: 10px;
+            transition: $tr;
+        }
+
+        &:hover {
+            box-shadow: 0 2px 4px $line-d;
+
+            &::after {
+                background-color: $special-1;
+            }
+        }
+    }
+}

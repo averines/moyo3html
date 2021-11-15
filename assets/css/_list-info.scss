@@ -1,0 +1,48 @@
+.list-info {
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 1em;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $line-l;
+    align-items: flex-end;
+  }
+
+  &__title {
+    background-color: $bg-l;
+    transform: translateY(2px);
+    padding-right: 0.2em;
+    line-height: 1.3;
+  }
+
+  &__value {
+    font-weight: 600;
+    background-color: $bg-l;
+    transform: translateY(2px);
+    padding-left: 0.2em;
+
+    &--plus {
+        color: $special-2;
+
+        &::before {
+            content: "+ ";
+        }
+    }
+
+    &--minus {
+        color: $special-1;
+
+        &::before {
+            content: "- ";
+        }
+    }    
+
+    &::after {
+      content: " ₽";
+    }
+  }
+}

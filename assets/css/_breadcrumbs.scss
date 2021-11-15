@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin: 0;
+  padding: 18px 0 0 0;
+  list-style: none;
+
+  li {
+    padding: 3px 0;
+
+    &::after {
+      content: "/";
+      padding: 0 10px;
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+        display: none;
+        padding: 0;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      color: $text-l;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+    }
+  }
+}

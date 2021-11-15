@@ -1,0 +1,358 @@
+.menu-catalog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    transition: background-color 0.4s ease-in-out;
+    z-index: 100;
+
+    &__btn-open {
+        flex-shrink: 0;
+        border: none;
+        width: 35px;
+        height: 35px;
+        background: url(../img/icons/burger.svg) no-repeat left center;
+        cursor: pointer;
+        margin-right: 5px;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &.is-showed {
+        width: 100%;
+        height: 100%;
+        background-color: $overlay;
+
+        .categories {
+            left: 0;
+            box-shadow: 0 0 10px transparentize($black, 0.9);
+            transition: left 0.15s ease-in-out;
+        }
+    }
+}
+
+// Женщинам, девочкам
+.categories {
+    background-color: $bg-l;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    top: 0;
+    left: -85%;
+    width: 85%;
+    height: 100vh;
+    transition: left 0.1s ease-in-out, box-shadow 2s ease-in-out;
+
+    @media screen and (min-width: 650px) {
+        width: 350px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 4px;
+        background-color: #d9d9d9;
+        border-radius: 3px;
+    }
+
+    &__item {
+        border-bottom: 1px solid #fff;
+
+        // иконки категорий зависят от id категории,
+        // нужно будет их поправить в css, когда получим реальные id
+        &[data-category-id="1"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/woman.svg);
+            }
+        }
+        &[data-category-id="2"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/girl.svg);
+            }
+        }
+        &[data-category-id="3"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/man.svg);
+            }
+        }
+        &[data-category-id="4"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/boy.svg);
+            }
+        }
+        &[data-category-id="5"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/home.svg);
+            }
+        }
+        &[data-category-id="6"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/toy.svg);
+            }
+        }
+        &[data-category-id="7"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/brand.svg);
+            }
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 0.75em;
+        letter-spacing: $ls;
+        font-weight: 600;
+        background-color: $bg-l;
+        padding: 16px 15px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        cursor: pointer;
+        transition: $tr;
+
+        &:hover {
+            background: linear-gradient(90deg, darken($bg-l, 3) 25%, $bg-l 100%);
+        }
+
+        // иконка категории
+        &::before {
+            content: "";
+            width: 28px;
+            height: 28px;
+            display: block;
+            background-size: 100%;
+            margin-right: 8px;
+            transform: translateY(-1px);
+        }
+
+        &.accordion__title {
+            justify-content: flex-start !important;
+            // стрелка аккордиона
+            &::after {
+                margin-left: auto !important;
+            }
+        }
+    }
+
+    &__content {
+        background-color: #fff;
+    }
+}
+
+// малышам, подросткам
+.categories-group {
+    &__item {
+        > .accordion__title {
+            padding-right: 15px;
+            &::after {
+                transform: scale(0.8);
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 15px 20px;
+
+        > span {
+            font-weight: 400;
+            color: $text-l;
+            font-size: 11px;
+        }
+    }
+}
+
+// Костюмы, Верха, Большие размеры
+.subcategories {
+    &__item {
+        border-bottom: 1px dashed $line-ll;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: $text;
+        padding: 13px 15px 13px 20px;
+        transition: all 0.15s ease-in-out;
+        position: relative;
+        order: 1;
+
+        &.accordion__title {
+            &::after {
+                transform: scale(0.8);
+                opacity: 0.5;
+
+                @media screen and (min-width: 768px) {
+                    transform: rotate(-90deg) scale(0.8);
+                }
+            }
+        }
+
+        &:hover,
+        &.is-active {
+            background: linear-gradient(90deg, #fff 0%, lighten($bg-l, 2) 100%);
+            color: $text-l;
+        }
+
+        &--special {
+            color: $main;
+            font-weight: 600;
+        }
+
+        &--action {
+            padding-left: 55px;
+            &::before {
+                content: "";
+                display: block;
+                background: url(../img/icons/subcategories/1003.svg) no-repeat center;
+                background-size: 100%;
+                width: 28px;
+                height: 28px;
+                position: absolute;
+                left: 20px;
+            }
+        }
+    }
+}
+
+// Бомберы, Жакеты, Пуховики
+.subcategory-menu {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    background-color: #fff;
+
+    &__item {
+        text-decoration: none;
+        color: $text;
+        font-size: 14px;
+        padding: 0.5em 10px 0.5em 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover {
+            color: $text-l;
+        }
+
+        &--special {
+            color: $main;
+        }
+    }
+
+    .category-menu__item {
+        .category-menu__title {
+            text-transform: uppercase;
+            font-size: 0.75em;
+            letter-spacing: $ls;
+            font-weight: 600;
+            background-color: #fff;
+            padding: 1em 1em 1em 1.5em;
+            display: flex;
+            align-items: center;
+            line-height: 1.2;
+            cursor: pointer;
+            transition: $tr;
+        }
+    }
+}
+
+// подкатегории
+.subcategory-menu-cloned {
+    margin: 0;
+    padding: 25px 0;
+    left: 350px;
+    position: relative;
+    background-color: transparent;
+    max-width: 350px;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+    overflow-y: scroll;
+    background-color: #fff;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 4px;
+        background-color: #d9d9d9;
+        border-radius: 3px;
+    }
+
+    &.is-active {
+        @media screen and (min-width: 768px) {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.accordion__item.is-opened {
+    > .subcategory-menu {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+.menu-badge {
+    margin-left: 15px;
+    margin-right: 5px;
+    font-size: 10px;
+    color: $line-l;
+    border: 1px solid $line-l;
+    padding: 0.3em 0.6em;
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: $tr;
+
+    &::before {
+        content: "";
+        font-weight: 400;
+    }
+
+    &--new {
+        color: $special-6;
+        border: 1px solid $special-6-l;
+        &::before {
+            content: "Новинок ";
+        }
+    }
+
+    &--subcategory {
+        margin-right: 0;
+        &::before {
+            content: "";
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

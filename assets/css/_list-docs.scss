@@ -1,0 +1,33 @@
+.list-docs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 1.5em;
+    display: flex;
+    column-gap: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $text;
+      text-decoration: underline;
+      font-size: 0.9em;
+    }
+  }
+
+  &__item--xls {
+    &::before {
+      flex-grow: 0;
+      flex-shrink: 0;
+      content: "";
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      background: url(../img/icons/xls.svg) no-repeat;
+    }
+  }
+}

@@ -20,6 +20,7 @@
         column-gap: 15px;
         row-gap: 15px;
         box-shadow: 0 0 25px rgba(57, 56, 59, 0.2);
+        // flex-wrap: wrap;
     }
 
     &__btn {
@@ -44,7 +45,7 @@
             background-color: $special-2;
 
             &:hover {
-                background-color: $special-2 - 10;
+                background-color: darken($special-2, 10);
             }
 
             &::after {
@@ -62,7 +63,7 @@
             background-color: $main;
 
             &:hover {
-                background-color: $main - 10;
+                background-color: darken($main, 10);
             }
         }
     }

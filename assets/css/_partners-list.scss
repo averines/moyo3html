@@ -1,0 +1,14 @@
+.partners-list {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+
+    &__item {
+        transition: $tr;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

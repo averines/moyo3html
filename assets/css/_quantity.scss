@@ -30,11 +30,11 @@
         }
 
         &--minus {
-            background-color: $bg-l;
+            background-color: $bg-ll;
 
             &:hover {
                 background-color: $line-l;
-                box-shadow: 0 0 10px $bg-l;
+                box-shadow: 0 0 10px $bg-ll;
             }
 
             &::after {
@@ -44,7 +44,7 @@
         }
 
         &--plus {
-            background-color: $bg-l;
+            background-color: $bg-ll;
 
             &:hover {
                 background-color: $special-2;
@@ -62,11 +62,11 @@
         }
 
         &--delete {
-            background-color: $bg-l;
+            background-color: $bg-ll;
 
             &:hover {
                 background-color: $line-l;
-                box-shadow: 0 0 10px $bg-l;
+                box-shadow: 0 0 10px $bg-ll;
             }
 
             &::after {

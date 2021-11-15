@@ -1,0 +1,222 @@
+.posts-sm {
+    padding: 10px 0;
+    display: flex;
+
+    @media screen and (min-width: 768px) {
+        padding: 40px 0;
+    }
+
+    // прячем навигацию для фансибокс слайдера
+    @media screen and (min-width: 1024px) {
+        &.has-dots {
+            margin-bottom: 0;
+        }
+        .carousel__dots {
+            display: none;
+        }
+    }
+}
+
+.post-sm {
+    max-width: 50%;
+
+    @media screen and (min-width: 414px) {
+        padding: 0 17px;
+        border-right: 1px solid $line-d;
+
+        &:first-child {
+            border-left: 1px solid $line-d;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 25%;
+    }
+
+    &__content {
+        padding-top: 15px;
+    }
+
+    &__pic {
+        display: block;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+        transition: opacity 0.15s ease-in-out;
+        color: $text;
+        padding-top: 10px;
+        display: inline-block;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__description {
+        padding-top: 5px;
+        font-size: 14px;
+    }
+}
+
+.posts-md {
+    display: flex;
+    padding-top: 10px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 30px;
+    }
+
+    // прячем навигацию для фансибокс слайдера
+    @media screen and (min-width: 1024px) {
+        &.has-dots {
+            margin-bottom: 0;
+        }
+        .carousel__dots {
+            display: none;
+        }
+    }
+}
+
+.post-md {
+    width: 100%;
+    padding: 0;
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: calc(50% - 10px);
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: calc(33% - 10px);
+    }
+
+    &__pic {
+        display: block;
+        overflow: hidden;
+
+        img {
+            display: block;
+            transition: transform 1s ease-in-out;
+            width: 100%;
+            height: auto;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 30px;
+        padding-right: 30%;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+        transition: opacity 0.15s ease-in-out;
+        color: $text;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__description {
+        padding-top: 5px;
+        padding-bottom: 15px;
+        font-size: 14px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $text;
+        margin-top: auto;
+        transition: color 0.1s ease-in;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+
+        &:hover {
+            color: $main-h;
+
+            &::after {
+                transform: translateX(3px);
+            }
+        }
+
+        &::after {
+            transition: transform 0.15s ease-in-out;
+            content: "";
+            // transform: translateY(-1px);
+            width: 1em;
+            height: 1em;
+            display: block;
+            background: url(../img/icons/arrow-right.svg) no-repeat center;
+            background-size: 50%;
+        }
+    }
+
+    &__badge {
+        background-color: $special-2;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        width: 75px;
+        height: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -13px;
+        left: -1px;
+    }
+}
+
+// для слайдера fancybox
+.carousel__dots {
+    justify-content: flex-end;
+    pointer-events: none;
+
+    .carousel__dot {
+        width: 15px;
+        height: 15px;
+
+        &::after {
+            width: 5px;
+            height: 5px;
+        }
+    }
+}
