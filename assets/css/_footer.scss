@@ -18,10 +18,11 @@ footer {
     }
 
     .footer-bottom {
-        font-size: 14px;
+        font-size: 10px;
+        text-transform: uppercase;
         padding: 12px 0;
         background-color: $text;
-        color: #ebebec;
+        color: #fff;
         text-align: right;
     }
 
@@ -176,14 +177,14 @@ footer {
 
     .social-list__item {
         filter: none;
-        border-color: $line-dd;
+        border-color: darken($line-d, 5);
 
         &:last-child {
-            border-color: $line-dd;
+            border-color: darken($line-d, 5);
         }
 
         &:hover {
-            border-color: lighten($line-dd, 2);
+            border-color: darken($line-d, 1);
         }
     }
 }

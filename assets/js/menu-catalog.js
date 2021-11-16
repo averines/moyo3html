@@ -40,7 +40,6 @@ if (menuСatalogWrapper) {
                     parentAccordion.classList.add('accordion--content-no-show');
                 }
 
-
                 subcategoriesLink.addEventListener('mouseover', () => {
                     if (subcategoryMenu) {
                         // делаем этот пункт активным
@@ -61,7 +60,9 @@ if (menuСatalogWrapper) {
                 });
             } else {
                 // включаем функционал аккордиона
-                parentAccordion.classList.remove('accordion--content-no-show');
+                if (parentAccordion) {
+                    parentAccordion.classList.remove('accordion--content-no-show');
+                }
             }
         }
 

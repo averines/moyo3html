@@ -30,6 +30,10 @@ body {
   position: relative;
 }
 
+.main-page__content {
+  background-color: $body;
+}
+
 main {
   min-height: 70vh;
   padding-bottom: 40px;

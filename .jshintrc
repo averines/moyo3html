@@ -17,6 +17,7 @@
         "Swiper": false,
         "Fancybox": false,
         "ymaps": false,
-        "mixitup": false
+        "mixitup": false,
+        "Carousel": false
     }
 }

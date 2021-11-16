@@ -54,7 +54,7 @@
         @media screen and (min-width: 1024px) {
             display: grid;
             align-items: stretch;
-            grid-template-columns: 516px 1fr;
+            grid-template-columns: 450px 1fr;
             grid-template-rows: max-content 1fr;
             grid-template-areas:
                 "gallery info"
@@ -63,7 +63,7 @@
         }
 
         @media screen and (min-width: 1200px) {
-            grid-template-columns: 620px 1fr;
+            grid-template-columns: 600px 1fr;
         }
 
         @media screen and (min-width: 1400px) {

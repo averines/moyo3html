@@ -125,24 +125,24 @@ if (document.querySelector('.container--page-product')) {
 
 
 let sliderGalleryProduct;
+let sliderThumbsProduct;
 
-// слайдер фото на странице товара
 if (document.querySelector('.container--page-product')) {
+    // слайдер фото на странице товара
     sliderGalleryProduct = new Carousel(document.querySelector(".container--page-product .product-pics.carousel"), {
         infinite: false,
         Navigation: false,
-        Dots: false,
+        Dots: true,
         friction: 0.89,
         slidesPerPage: 1,
         slidesToSlide: 1,
         fill: true,
         center: false,
+        placeFocusBack: false,
     });
-}
 
-// слайдер превью на странице товара
-if (document.querySelector('.container--page-product')) {
-    let sliderThumbsProduct = new Carousel(document.querySelector(".container--page-product .product-thumbs.carousel"), {
+    // слайдер превью на странице товара
+    sliderThumbsProduct = new Carousel(document.querySelector(".container--page-product .product-thumbs.carousel"), {
         infinite: false,
         Navigation: false,
         Dots: false,
@@ -154,6 +154,37 @@ if (document.querySelector('.container--page-product')) {
         Sync: {
             target: sliderGalleryProduct,
             friction: 0
+        },
+    });
+
+    Fancybox.bind('[data-fancybox="product-pics"]', {
+        infinite: false,
+        dragToClose: true,
+        placeFocusBack: false,
+        Toolbar: {
+            display: [
+                // { id: "prev", position: "center" },
+                { id: "counter", position: "right" },
+                // { id: "next", position: "center" },
+                // {zoom: false},
+                // "slideshow",
+                // "fullscreen",
+                "download",
+                // "thumbs",
+                "close",
+            ],
+            autoEnable: false
+        },
+        Thumbs: false,
+        Carousel: {
+            friction: 0.75,
+            on: {
+                change: (that) => {
+                    sliderGalleryProduct.slideTo(sliderGalleryProduct.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
         },
     });
 }

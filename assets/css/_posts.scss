@@ -1,10 +1,15 @@
 .posts-sm {
     padding: 10px 0;
     display: flex;
+    margin: 0 -7px;
 
     @media screen and (min-width: 768px) {
         padding: 40px 0;
     }
+
+    @media screen and (min-width: 1024px) {
+        margin: 0 -10px;
+    }    
 
     // прячем навигацию для фансибокс слайдера
     @media screen and (min-width: 1024px) {
@@ -18,23 +23,28 @@
 }
 
 .post-sm {
-    max-width: 50%;
+    max-width: calc(50% - 14px);
+    margin: 0 7px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: $bg-l;
 
-    @media screen and (min-width: 414px) {
-        padding: 0 17px;
-        border-right: 1px solid $line-d;
+    // @media screen and (min-width: 414px) {
+    // padding: 0 17px;
+    // border-right: 1px solid $line-d;
 
-        &:first-child {
-            border-left: 1px solid $line-d;
-        }
-    }
+    // &:first-child {
+    //     border-left: 1px solid $line-d;
+    // }
+    // }
 
     @media screen and (min-width: 1024px) {
-        max-width: 25%;
+        max-width: calc(25% - 20px);
+        margin: 0 10px;
     }
 
     &__content {
-        padding-top: 15px;
+        padding: 20px 20px 50px 20px;
     }
 
     &__pic {
@@ -61,7 +71,7 @@
         text-decoration: none;
         transition: opacity 0.15s ease-in-out;
         color: $text;
-        padding-top: 10px;
+        // padding-top: 10px;
         display: inline-block;
 
         &:hover {
@@ -114,6 +124,7 @@
     &__pic {
         display: block;
         overflow: hidden;
+        border-radius: 5px;
 
         img {
             display: block;
