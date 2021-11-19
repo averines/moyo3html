@@ -130,9 +130,9 @@ let sliderThumbsProduct;
 if (document.querySelector('.container--page-product')) {
     // слайдер фото на странице товара
     sliderGalleryProduct = new Carousel(document.querySelector(".container--page-product .product-pics.carousel"), {
-        infinite: false,
-        Navigation: false,
-        Dots: true,
+        infinite: true,
+        Navigation: true,
+        Dots: false,
         friction: 0.89,
         slidesPerPage: 1,
         slidesToSlide: 1,
@@ -143,8 +143,8 @@ if (document.querySelector('.container--page-product')) {
 
     // слайдер превью на странице товара
     sliderThumbsProduct = new Carousel(document.querySelector(".container--page-product .product-thumbs.carousel"), {
-        infinite: false,
-        Navigation: false,
+        infinite: true,
+        Navigation: true,
         Dots: false,
         friction: 0.89,
         slidesPerPage: "auto",
@@ -212,7 +212,7 @@ function productQuickViewHandler() {
     // слайдер фото в быстром просмотре
     sliderGalleryProductQuickview = new Carousel(document.querySelector(".product-quickview .product-pics.carousel"), {
         infinite: false,
-        Navigation: false,
+        Navigation: true,
         Dots: false,
         friction: 0.89,
         slidesPerPage: 1,
@@ -240,7 +240,7 @@ function productQuickViewHandler() {
     // слайдер похожих товаров в быстром просмотре
     sliderSimilarProductsQuickview = new Carousel(document.querySelector(".product-quickview .products-similar.carousel"), {
         infinite: false,
-        Navigation: false,
+        Navigation: true,
         Dots: false,
         friction: 0.89,
         slidesPerPage: 2,

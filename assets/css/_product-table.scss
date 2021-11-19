@@ -55,7 +55,7 @@
 
                 &.is-added {
                     td:first-child {
-                        background: linear-gradient(270deg, rgba(214, 241, 183, 0.25) 0%, rgba(214, 241, 183, 0) 100%);
+                        background: linear-gradient(270deg, rgba(183, 241, 195, 0.25) 0%, rgba(183, 241, 195, 0) 100%);
                     }
                 }
             }
@@ -192,7 +192,7 @@
 
             &.is-added {
                 td {
-                    background: rgba(214, 241, 183, 0.25);
+                    background: rgba(183, 241, 195, 0.25);
                 }
                 .quantity__btn {
                     box-shadow: 0 2px 3px 0 rgba(44, 50, 70, 0.2);

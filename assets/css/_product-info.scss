@@ -18,7 +18,7 @@
     }
 
     @media screen and (min-width: 1300px) {
-        padding-left: 80px;
+        padding-left: 100px;
     }
 
     &__header {
@@ -51,7 +51,7 @@
 
     &__price {
         @media screen and (min-width: 768px) {
-            order: 2;
+            // order: 2;
             font-size: 1.1em;
 
             .product-price__opt {
@@ -59,9 +59,9 @@
             }
         }
 
-        @media screen and (min-width: 1024px) {
-            order: 1;
-        }
+        // @media screen and (min-width: 1024px) {
+        //     order: 1;
+        // }
     }
 
     &__properties {
@@ -106,8 +106,11 @@
         display: flex;
         column-gap: 30px;
 
+        @media screen and (min-width: 1200px) {
+            column-gap: 70px;
+        }
+
         .product-price {
-            // order: 0;
             max-width: 320px;
         }
 
