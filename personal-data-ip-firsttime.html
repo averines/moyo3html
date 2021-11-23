@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все страницы</title>
+    <title>Личный кабинет - Личные данные</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -18,7 +18,7 @@
     <meta property="og:image:secure_url" content="https://averines.github.io/moyo3html/assets/img/og.png">
     <meta property="og:image:type" content="image/png">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
 
     <meta name="theme-color" content="#973c8e">
     <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any">
@@ -1362,8 +1362,8 @@
                     <div class="menu-user__btn">
 
                         <!-- эта ссылка для неавторизованного пользователя.
-                                     класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
-                                     is-hidden можно удалить -->
+                                             класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
+                                             is-hidden можно удалить -->
                         <button class="menu-user__icon is-hidden" data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
 
                         <!-- эта ссылка отображается для авторизованного пользователя -->
@@ -1633,79 +1633,205 @@
 
     <main>
         <div class="container">
-            <div class="allpageslist">
-                <div>
-                    <h4>Основные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="index.html">Главная</a></li>
-                        <li class="checked"><a href="category-woman.html">Категория Женщинам</a></li>
-                        <li class="checked"><a href="category-girl.html">Категория Девочкам</a></li>
-                        <li class="checked"><a href="category-man.html">Категория Мужчинам</a></li>
-                        <li class="checked"><a href="category-boy.html">Категория Мальчикам</a></li>
-                        <li class="checked"><a href="category-home.html">Категория Для дома</a></li>
-                        <li class="checked"><a href="category-toy.html">Категория Игрушки</a></li>
-                        <li class="checked"><a href="subcategory.html">Подкатегория</a></li>
-                        <li class="checked"><a href="product.html">Товар</a></li>
-                        <li class="checked"><a href="brand.html">Бренд</a></li>
-                        <li class="checked"><a href="brands.html">Бренды</a></li>
-                    </ul>
+            <nav>
+                <ol class="breadcrumbs">
+                    <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
+                    <li><span>Корзина</span></li>
+                </ol>
+            </nav>
+            <div class="pagetitle pagetitle--column">
+                <h1 class="pagetitle__header">Личный кабинет</h1>
+                <div class="pagetitle__counter">Имя пользователя</div>
+            </div>
+            <div class="menu-tabs mt-1">
+                <a class="menu-tabs__item" href="personal-favorites.html">Избранное</a>
+                <a class="menu-tabs__item" href="personal-cart.html">Корзина</a>
+                <span class="menu-tabs__item is-active">Личные данные</span>
+                <a class="menu-tabs__item" href="personal-orders.html">История заказов</a>
+                <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
+                <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
+            </div>
+
+            <div class="settings-wrapper">
+                <div class="settings">
+                    <div class="setting setting--boxed">
+                        <div class="setting__title">Сумма на вашем депозите</div>
+                        <div class="setting__content">
+                            <span class="text-bold text-lg text-nowrap">0, 00 ₽</span>
+                        </div>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Логин и пароль</div>
+                            <div class="setting__content">
+                                <span class="text-main">Логин: mylogin@mail.ru</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-password.html">Изменить пароль</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">ИП Македонский А.С. / ИНН 7707083893</div>
+                            <div class="setting__content">
+                                <span class="text-main">ID Клиента: 254816</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-data-ip.html">Изменить</button>
+                    </div>
+                    <div class="setting-group">
+                        <div class="setting">
+                            <div class="setting__info">
+                                <div class="setting__title">Банковские реквизиты</div>
+                                <div class="setting__content">
+                                    <p>Пожалуйста, внимательно заполните свои реквизиты.</p>
+                                    <p>В дальнейшем для редактирования реквизитов нужно будет звонить нашему менеджеру:
+                                        <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                                    </p>
+                                    <form class="form-minimal" action="/" method="POST" data-check>
+                                        <div class="form-block">
+                                            <div class="form-group">
+                                                <input id="bank-bik" type="text" name="bank-bik" data-check data-check-required="true">
+                                                <label for="bank-bik">БИК</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="bank-title" type="text" name="bank-title" data-check data-check-required="true">
+                                                <label for="bank-title">Название банка</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="bank-ks" type="text" name="bank-ks" data-check data-check-required="true">
+                                                <label for="bank-ks">К/С</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="bank-rs" type="text" name="bank-rs" data-check data-check-required="true">
+                                                <label for="bank-rs">Р/С</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting">
+                            <div class="setting__info">
+                                <div class="setting__title">Юридический адрес</div>
+                                <div class="setting__content">
+                                    123456, Россия, Москва, ул. Названная, д. 888, стр. 2, оф. 205
+                                    <div class="form-row">
+                                        <div class="form-checkbox">
+                                            <input id="address-equal" type="checkbox" data-action="address-equal" checked>
+                                            <label for="address-equal">Юр. адрес совпадает с фактическим</label>
+                                        </div>
+                                    </div>
+                                    <form class="form-minimal" action="/" method="POST" data-check>
+                                        <div class="form-block">
+                                            <div class="form-group">
+                                                <input id="address-index" type="text" name="address-index" data-check data-check-required="true">
+                                                <label for="address-index">Почтовый индекс</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="address-region" type="text" name="address-region" data-check data-check-required="true">
+                                                <label for="address-region">Регион, область, район</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="address-city" type="text" name="address-city" data-check data-check-required="true">
+                                                <label for="address-city">Населенный пункт</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="address-street" type="text" name="address-street" data-check data-check-required="true">
+                                                <label for="address-street">Улица</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <input id="address-building" type="text" name="address-building" data-check data-check-required="true">
+                                                <label for="address-building">Дом, стр./корп.</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="address-appartment" type="text" name="address-appartment" data-check data-check-required="true">
+                                                <label for="address-appartment">Кв./офис</label>
+                                            </div>
+                                        </div>
+                                        <p>Пожалуйста, внимательно заполните фактический адрес.</p>
+                                        <p>В дальнейшем для редактирования адреса нужно будет звонить нашему менеджеру:
+                                            <a href="tel:+88003012575" class="text-nowrap">+7 800 301-25-75</a>
+                                        </p>
+                                        <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting">
+                            <div class="setting__info">
+                                <div class="setting__title">Телефон</div>
+                                <div class="setting__content">+7 123 456-78-90</div>
+                            </div>
+                            <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-phone.html">Изменить</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div>
-                    <h4>Личный кабинет</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="personal-registration.html">Регистрация</a></li>
-                        <li class="checked"><a href="personal-discounts.html">Бонусы и скидки</a></li>
-                        <li class="checked"><a href="personal-favorites.html">Избранное</a></li>
-                        <li class="checked"><a href="personal-cart.html">Корзина</a></li>
-                        <li class="checked"><a href="personal-cart-empty.html">Корзина пустая</a></li>
-                        <li class="checked"><a href="personal-cart-addition.html">Корзина с дозаказом</a></li>
-                        <li><a href="personal-orders.html">История заказов</a></li>
-                        <li><a href="personal-order-view.html">Просмотр заказа</a></li>
-                        <li class="checked"><a href="personal-data-fiz.html">Личные данные физ. лица</a></li>
-                        <li class="checked"><a href="personal-data-ip.html">Личные данные ИП</a></li>
-                        <li class="checked"><a href="personal-data-ooo.html">Личные данные ООО</a></li>
-                        <li class="checked"><a href="personal-data-ip-firsttime.html">Заполнение данных для ИП в первый раз</a></li>
-                        <li class="checked"><a href="personal-data-ooo-firsttime.html">Заполнение данных для ООО в первый раз</a></li>
-                        <li class="checked"><a href="personal-return.html">Рекламация</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Оформление заказа</h4>
-                    <ul class="marker mb-3">
-                        <li><a href="personal-order-delivery.html">Выбор доставки</a></li>
-                        <li><a href="personal-order-payment.html">Выбор оплаты</a></li>
-                        <li><a href="personal-order-payment-fiz.html">Выбор оплаты для физ.лиц</a></li>
-                        <li><a href="personal-online-payment.html">Онлайн-оплата</a></li>
-                        <li class="checked"><a href="personal-order-sent.html">Заказ отправлен</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Информационные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="info-about.html">О нас</a></li>
-                        <li class="checked"><a href="info-conditions.html">Условия работы</a></li>
-                        <li class="checked"><a href="info-contacts.html">Контакты</a></li>
-
-                        <li class="checked"><a href="info-sizes.html">Размеры</a></li>
-                        <li class="checked"><a href="info-delivery.html">Доставка</a></li>
-                        <li class="checked"><a href="info-payment.html">Оплата</a></li>
-                        <li class="checked"><a href="info-faq.html">Ответы на вопросы</a></li>
-                        <li class="checked"><a href="info-return.html">Возврат</a></li>
-
-                        <li class="checked"><a href="info-partnership.html">Сотрудничество/Поставщикам</a></li>
-                        <li><a href="info-api.html">API</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Служебные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="404.html">Ошибка 404</a></li>
-                        <li class="checked"><a href="500.html">Ошибка 500</a></li>
-                    </ul>
+                <div class="settings">
+                    <div>
+                        <div class="setting setting-select">
+                            <div class="setting-title">Транспортная компания</div>
+                            <div class="setting-select__container">
+                                <div class="setting-select__content">
+                                    <div class="setting-select__item is-active">ПЭК</div>
+                                    <div class="setting-select__item">Байкал-Сервис</div>
+                                    <div class="setting-select__item">Возовоз</div>
+                                    <div class="setting-select__item">Деловые линии</div>
+                                    <div class="setting-select__item">Желдорэкспедиция</div>
+                                    <div class="setting-select__item">Энергия</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm">Новые данные о ТК станут активны после проверки менеджером в течение 12 часов с момента изменения.</p>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Город доставки</div>
+                            <div class="setting__content">
+                                г. Александрополь
+                                <p class="text-sm"><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз. Информация о городе доставки берется из данных при регистрации на
+                                    сайте.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-city.html">Изменить</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Адреса доставки</div>
+                            <div class="setting__content">
+                                <p class="text-sm mt-2"><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-addresses.html">Добавить</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Гостевые логины</div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-guestlogin.html">Добавить</button>
+                    </div>
+                    <div class="setting setting-select">
+                        <div class="setting-title">Показывать парсер СП</div>
+                        <div class="setting-select__container">
+                            <div class="setting-select__content">
+                                <div class="setting-select__item is-active">TurboParser</div>
+                                <div class="setting-select__item">SuperParser</div>
+                                <div class="setting-select__item">MegaParser</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting setting--boxed setting-switch">
+                        <div class="setting__info">
+                            <div class="setting__title">Рассылка</div>
+                            <div class="setting__content">Получать рассылку об акциях и новинках</div>
+                        </div>
+                        <div class="setting-switch__button">
+                            <input type="checkbox" id="setting-subscribe" checked>
+                            <label for="setting-subscribe"></label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,21 @@
+<div class="modal modal--sm">
+    <div class="modal__title">
+        Изменить телефон
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="phone-number" type="text" name="phone-number" data-check data-check-required="true">
+                    <label for="phone-number">Новый номер телефона</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+            <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки</p>
+        </form>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

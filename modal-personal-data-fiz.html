@@ -1,0 +1,28 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Изменить ФИО
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="data-surnane" type="text" name="data-surnane" data-check data-check-required="true">
+                    <label for="data-surnane">Фамилия</label>
+                </div>
+                <div class="form-group">
+                    <input id="data-name" type="text" name="data-name" data-check data-check-required="true">
+                    <label for="data-name">Имя</label>
+                </div>
+                <div class="form-group">
+                    <input id="data-patronymic" type="text" name="data-patronymic" data-check data-check-required="true">
+                    <label for="data-patronymic">Отчество</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

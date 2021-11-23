@@ -1,0 +1,45 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Новый адрес доставки
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="delivery-address-index" type="text" name="delivery-address-index" data-check data-check-required="true">
+                    <label for="delivery-address-index">Почтовый индекс</label>
+                </div>
+                <div class="form-group">
+                    <input id="delivery-address-region" type="text" name="delivery-address-region" data-check data-check-required="true">
+                    <label for="delivery-address-region">Регион, область, район</label>
+                </div>
+                <div class="form-group">
+                    <input id="delivery-address-city" type="text" name="delivery-address-city" data-check data-check-required="true">
+                    <label for="delivery-address-city">Населенный пункт</label>
+                </div>
+                <div class="form-group">
+                    <input id="delivery-address-street" type="text" name="delivery-address-street" data-check data-check-required="true">
+                    <label for="delivery-address-street">Улица</label>
+                </div>
+            </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input id="delivery-address-building" type="text" name="delivery-address-building" data-check data-check-required="true">
+                        <label for="delivery-address-building">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="delivery-address-appartment" type="text" name="delivery-address-appartment" data-check data-check-required="true">
+                        <label for="delivery-address-appartment">Кв./офис</label>
+                    </div>
+                </div>
+  
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+        <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки</p>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

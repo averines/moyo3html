@@ -1,0 +1,42 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Добавить гостевой логин
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal mt-1" action="/" method="POST" data-check>
+            <div class="form-row">
+                <div class="form-group">
+                    <input id="guestlogin-email" type="text" name="guestlogin-email" data-check data-check-required="true">
+                    <label for="guestlogin-email">Гостевая эл. почта</label>
+                </div>
+            </div>
+            <p class="text-sm mb-2">Письма на эту почту не отправляются</p>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="guestlogin-password" type="text" name="guestlogin-password" data-check data-check-required="true">
+                    <label for="guestlogin-password">Пароль</label>
+                </div>
+                <div class="form-group">
+                    <input id="guestlogin-charge-percent" type="text" name="guestlogin-charge-percent" data-check data-check-required="true">
+                    <label for="guestlogin-charge-percent">Наценка в процентах</label>
+                </div>
+                <div class="form-group">
+                    <input id="guestlogin-charge-rub" type="text" name="guestlogin-charge-rub" data-check data-check-required="true">
+                    <label for="guestlogin-charge-rub">Фиксированная наценка в рублях</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-checkbox">
+                    <input id="guestlogin-round-prices" type="checkbox" name="guestlogin-round-prices">
+                    <label for="guestlogin-round-prices">Округлять цены до целых рублей вверх?</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

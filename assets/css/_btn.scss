@@ -35,7 +35,33 @@
         &:hover {
             background-color: $bg-l;
         }
-    }    
+    }
+
+    &-gray {
+        color: $text-l;
+        background-color: #e8e9e9;
+
+        &:hover {
+            color: $text;
+            background-color: darken(#e8e9e9, 5);
+        }
+    }
+
+    &-gray-outline {
+        color: $text-l;
+        background-color: transparent;
+        border: 1px solid $line-d;
+
+        &:hover {
+            color: $text;
+            background-color: $line-d;
+        }
+    }
+
+    &--small {
+        font-size: 13px;
+        padding: 0.6em 1.1em;
+    }
 }
 
 .btn-filter {
@@ -120,5 +146,24 @@
 
     &:hover {
         background-color: $special-6-d;
+    }
+}
+
+.btn-delete {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background: url(../img/icons//close.svg) no-repeat center/55%;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        transform: scale(0.9);
     }
 }

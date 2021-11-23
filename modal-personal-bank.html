@@ -1,0 +1,33 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Изменить банковские реквизиты
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="bank-bik" type="text" name="bank-bik" data-check data-check-required="true">
+                    <label for="bank-bik">БИК</label>
+                </div>
+                <div class="form-group">
+                    <input id="bank-title" type="text" name="bank-title" data-check data-check-required="true">
+                    <label for="bank-title">Название банка</label>
+                </div>
+                <div class="form-group">
+                    <input id="bank-ks" type="text" name="bank-ks" data-check data-check-required="true">
+                    <label for="bank-ks">К/С</label>
+                </div>
+                <div class="form-group">
+                    <input id="bank-rs" type="text" name="bank-rs" data-check data-check-required="true">
+                    <label for="bank-rs">Р/С</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+        <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки</p>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

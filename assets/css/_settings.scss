@@ -1,22 +1,105 @@
-.settings {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 50px;
+.settings-wrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 15px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        padding-top: 20px;
+        align-items: flex-start;
+    }
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @media screen and (min-width: 900px) {
+        row-gap: 20px;
+    }
+}
+
+.setting {
+    display: flex;
+    column-gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    &__content {
+        font-size: 14px;
+
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            > li {
+                margin: 7px 0;
+
+                > span {
+                    display: inline-block;
+                    color: $text-l;
+                    min-width: 50px;
+                }
+            }
+        }
+
+        // > form {
+        //     width: 100%;
+        // }
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.4;
+        color: $text-l;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        width: 100%;
+    }
+
+    &--boxed {
+        padding: 20px 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(84, 85, 87, 0.05);
+        border-radius: 5px;
+
+        @media screen and (min-width: 600px) {
+            padding: 25px 20px 25px 30px;
+        }
+    }
+
+    .btn {
+        white-space: nowrap;
+    }
 }
 
 .setting-switch {
     position: relative;
-    background-color: $bg-l;
-    border-radius: 5px;
-    padding: 30px 20px;
+    flex-direction: row;
 
     &__button {
-        position: absolute;
-        right: 20px;
-        top: 30px;
+        // position: absolute;
+        // right: 20px;
+        // top: 30px;
 
         > input[type="checkbox"] {
             opacity: 0;
@@ -45,7 +128,7 @@
             align-items: center;
             justify-content: center;
             padding: 0 1px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) inset;
 
             &::before {
                 content: "";
@@ -64,37 +147,29 @@
     }
 }
 
-.setting {
-    &__header {
-        text-transform: uppercase;
-        font-size: 12px;
-        color: $text-l;
-    }
-
-    &__title {
-        font-weight: 600;
-    }
-
-    &__description {
-        font-size: 14px;
-        line-height: 1.4;
-        padding-top: 5px;
-        color: $text-l;
-    }
-}
-
 .setting-select {
-    border: 1px solid $line-l;
+    // border: 1px solid lighten($line-l, 5);
+    box-shadow: 0 4px 15px rgba(84, 85, 87, 0.05);
     border-radius: 5px;
     cursor: pointer;
     position: relative;
     padding-bottom: 15px;
+    background-color: #fff;
+    row-gap: 0;
+
+    @media screen and (min-width: 600px) {
+        flex-direction: column;
+    }
 
     .setting-title {
         font-weight: 400;
         font-size: 14px;
         color: $text-ll;
         padding: 15px 20px 0 20px;
+
+        @media screen and (min-width: 900px) {
+            padding-left: 30px;
+        }
     }
 
     &__container {
@@ -107,8 +182,8 @@
             top: 20px;
             right: 25px;
             content: "";
-            width: 15px;
-            height: 15px;
+            width: 12px;
+            height: 12px;
             display: block;
             transform: translateY(-10px);
             margin-right: 5px;
@@ -128,25 +203,28 @@
         align-items: center;
         padding: 0 20px;
         display: none;
-        font-size: 18px;
-
+        font-size: 16px;
         order: 2;
         border-top: 1px solid $line-ll;
+        background-color: #fff;
+
+        @media screen and (min-width: 900px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
         &:hover {
             background-color: $bg-l;
         }
 
-        // &:not(.active) {
-        //     transition: background-color 0.15s ease-in-out;
-        // }
-
         &.is-active {
             display: flex;
             order: 1;
             border: none;
+            // font-weight: 600;
+
             &:hover {
-                background-color: transparent;
+                background-color: #fff;
             }
         }
     }
@@ -161,8 +239,13 @@
             position: absolute;
             z-index: 1;
             background-color: $body;
-            box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
             border-radius: 0 0 5px 5px;
+            border-top: none;
+            overflow: hidden;
+            // border: 1px solid #fff;
+            // margin: 0 -1px;
+            // width: calc(100% + 2px);
 
             .setting-select__item {
                 display: flex;
@@ -171,30 +254,41 @@
     }
 }
 
-
 .setting-list {
-    padding: 20px 0 20px 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
+    margin: 10px 0 0 0;
+    list-style: none;
 
     &__item {
-        display: flex;
-        column-gap: 20px;
-        align-items: flex-start;
+        position: relative;
+        padding-left: 28px;
+        line-height: 1.3;
 
-        .item-title {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 1.3;
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
-
-        .item-description {
-            font-weight: 400;
-            font-size: 13px;
+        span {
             color: $text-ll;
-            line-height: 1.3;
-            padding-top: 3px;
-        }        
+            white-space: nowrap;
+        }
+    }
+}
+
+.setting-group {
+    padding: 20px 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(84, 85, 87, 0.05);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    @media screen and (min-width: 600px) {
+        padding: 25px 20px 25px 30px;
     }
 }

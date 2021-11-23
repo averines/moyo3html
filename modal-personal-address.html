@@ -1,0 +1,45 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Изменить фактический адрес
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="address-index" type="text" name="address-index" data-check data-check-required="true">
+                    <label for="address-index">Почтовый индекс</label>
+                </div>
+                <div class="form-group">
+                    <input id="address-region" type="text" name="address-region" data-check data-check-required="true">
+                    <label for="address-region">Регион, область, район</label>
+                </div>
+                <div class="form-group">
+                    <input id="address-city" type="text" name="address-city" data-check data-check-required="true">
+                    <label for="address-city">Населенный пункт</label>
+                </div>
+                <div class="form-group">
+                    <input id="address-street" type="text" name="address-street" data-check data-check-required="true">
+                    <label for="address-street">Улица</label>
+                </div>
+            </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input id="address-building" type="text" name="address-building" data-check data-check-required="true">
+                        <label for="address-building">Дом, стр./корп.</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="address-appartment" type="text" name="address-appartment" data-check data-check-required="true">
+                        <label for="address-appartment">Кв./офис</label>
+                    </div>
+                </div>
+  
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+        <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки</p>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

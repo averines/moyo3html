@@ -1,0 +1,25 @@
+<div class="modal modal--md">
+    <div class="modal__title">
+        Изменить ИНН
+    </div>
+    <div class="modal__content">
+        <form class="form-minimal" action="/" method="POST" data-check>
+            <div class="form-block">
+                <div class="form-group">
+                    <input id="data-inn" type="text" name="data-inn" data-check data-check-required="true">
+                    <label for="data-inn">ИНН</label>
+                </div>
+                <div class="form-group">
+                    <input id="data-kpp" type="text" name="data-kpp" data-check data-check-required="true">
+                    <label for="data-kpp">КПП</label>
+                </div>
+            </div>
+            <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки.</p>
+            <button type="submit" class="btn btn-main" disabled>Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    formsHandler()
+</script>

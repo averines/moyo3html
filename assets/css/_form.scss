@@ -2,6 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 25px;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
 
     > label {
         display: flex;
@@ -127,6 +134,10 @@
     &__text {
         font-size: 0.85em;
         color: $text-l;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
     }
 
     &--phones {
@@ -276,6 +287,10 @@
             background-color: $disabled;
         }
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
 .form--registration {
@@ -316,6 +331,42 @@
     &.is-valid {
         &::after {
             filter: none;
+        }
+    }
+}
+
+.form-checkbox {
+    input {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        + label {
+            display: flex;
+            column-gap: 10px;
+            cursor: pointer;
+
+            &::before {
+                cursor: pointer;
+                content: "";
+                display: block;
+                width: 22px;
+                height: 22px;
+                border-radius: 3px;
+                border: 1px solid $line-l;
+                background: no-repeat center -5px /55% #fff;
+                transform: translateY(-4px);
+                transition: all 0.15s ease-in-out;
+            }
+        }
+
+        &:checked {
+            + label {
+                &::before {
+                    background: url(../img/icons/check.svg) no-repeat center/55% #fff;
+                }
+            }
         }
     }
 }

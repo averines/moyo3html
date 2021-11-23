@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>Личный кабинет - Личные данные</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-    
+
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
     <script src="./assets/js.min.js" defer></script>
 </head>
@@ -39,10 +39,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-    
+
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-    
+
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -74,7 +74,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-    
+
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1319,15 +1319,15 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-    
-    
+
+
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1360,12 +1360,12 @@
                 <button class="menu-top__btn" aria-label="Открыть информационное меню"></button>
                 <div class="menu-user">
                     <div class="menu-user__btn">
-    
+
                         <!-- эта ссылка для неавторизованного пользователя.
                                              класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
                                              is-hidden можно удалить -->
                         <button class="menu-user__icon is-hidden" data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
-    
+
                         <!-- эта ссылка отображается для авторизованного пользователя -->
                         <a class="menu-user__icon menu-user__icon--logged" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
                     </div>
@@ -1651,57 +1651,114 @@
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
             </div>
-
-            <div class="settings">
-                <div class="setting">
-                    <div class="setting__header">Гостевые логины</div>
-                    <div class="setting-list">
-                        <div class="setting-list__item">
-                            <div>
-                                <div class="item-title">guestemail@yandex.ru</div>
-                                <div class="item-description">(наценка 10% + 50₽)</div>
-                            </div>
-                            <button>Удалить</button>
-                        </div>
-                        <div class="setting-list__item">
-                            <div>
-                                <div class="item-title">email@yandex.ru</div>
-                                <div class="item-description">(наценка 10% + 50₽)</div>
-                            </div>
-                            <button>Удалить</button>
-                        </div>
-                        <div class="setting-list__item">
-                            <div>
-                                <div class="item-title">guest@yandex.ru</div>
-                                <div class="item-description">(наценка 15% + 150₽)</div>
-                            </div>
-                            <button>Удалить</button>
+            <div class="settings-wrapper">
+                <div class="settings">
+                    <div class="setting setting--boxed">
+                        <div class="setting__title">Сумма на вашем депозите</div>
+                        <div class="setting__content">
+                            <span class="text-bold text-lg text-nowrap">2 468,00 ₽</span>
                         </div>
                     </div>
-                    <button class="btn btn-white">Добавить гостевой логин</button>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Логин и пароль</div>
+                            <div class="setting__content">
+                                <span class="text-main">Логин: mylogin@mail.ru</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-password.html">Изменить пароль</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Македонский А.С.</div>
+                            <div class="setting__content">
+                                <span class="text-main">ID Клиента: 254816</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-data-fiz.html">Изменить</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Телефон</div>
+                            <div class="setting__content">+7 123 456-78-90</div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-phone.html">Изменить</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Город доставки</div>
+                            <div class="setting__content">
+                                г. Александрополь
+                                <p class="text-sm"><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз. Информация о городе доставки берется из данных при регистрации на
+                                    сайте.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-city.html">Изменить</button>
+                    </div>
+                    <div>
+                        <div class="setting setting-select">
+                            <div class="setting-title">Транспортная компания</div>
+                            <div class="setting-select__container">
+                                <div class="setting-select__content">
+                                    <div class="setting-select__item is-active">ПЭК</div>
+                                    <div class="setting-select__item">Байкал-Сервис</div>
+                                    <div class="setting-select__item">Возовоз</div>
+                                    <div class="setting-select__item">Деловые линии</div>
+                                    <div class="setting-select__item">Желдорэкспедиция</div>
+                                    <div class="setting-select__item">Энергия</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm">Новые данные о ТК станут активны после проверки менеджером в течение 12 часов с момента изменения.</p>
+                    </div>
                 </div>
-
-                <div class="setting setting-select">
-                    <div class="setting-title">Показывать парсер СП</div>
-                    <div class="setting-select__container">
-                        <div class="setting-select__content">
-                            <div class="setting-select__item is-active">TurboParser</div>
-                            <div class="setting-select__item">SuperParser</div>
-                            <div class="setting-select__item">MegaParser</div>
+                <div class="settings">
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Адреса доставки</div>
+                            <div class="setting__content">
+                                <ul class="setting-list">
+                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> 108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</li>
+                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> 125548, Россия, Новотроицк, ул. Чапаева, 23</li>
+                                </ul>
+                                <p class="text-sm mt-2"><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа.</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-addresses.html">Добавить</button>
+                    </div>
+                    <div class="setting setting--boxed">
+                        <div class="setting__info">
+                            <div class="setting__title">Гостевые логины</div>
+                            <div class="setting__content">
+                                <ul class="setting-list">
+                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> guest@yandex.ru <span>(наценка 10% + 50₽)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-guestlogin.html">Добавить</button>
+                    </div>
+                    <div class="setting setting-select">
+                        <div class="setting-title">Показывать парсер СП</div>
+                        <div class="setting-select__container">
+                            <div class="setting-select__content">
+                                <div class="setting-select__item is-active">TurboParser</div>
+                                <div class="setting-select__item">SuperParser</div>
+                                <div class="setting-select__item">MegaParser</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting setting--boxed setting-switch">
+                        <div class="setting__info">
+                            <div class="setting__title">Рассылка</div>
+                            <div class="setting__content">Получать рассылку об акциях и новинках</div>
+                        </div>
+                        <div class="setting-switch__button">
+                            <input type="checkbox" id="setting-subscribe" checked>
+                            <label for="setting-subscribe"></label>
                         </div>
                     </div>
                 </div>
-                <div class="setting setting-switch">
-                    <div class="setting__title">Рассылка</div>
-                    <div class="setting__description">Получать рассылку об акциях и новинках</div>
-                    <div class="setting-switch__button">
-                        <input type="checkbox" id="setting-subscribe">
-                        <label for="setting-subscribe"></label>
-                    </div>
-                </div>
-                <button class="btn btn-submit">Сохранить</button>
             </div>
-
         </div>
     </main>
 
