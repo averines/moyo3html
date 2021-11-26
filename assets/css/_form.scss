@@ -307,6 +307,7 @@
 
 .form-group {
     display: flex;
+    position: relative;
 
     input {
         border: 1px solid $line-ll;

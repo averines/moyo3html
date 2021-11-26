@@ -47,6 +47,15 @@
         }
     }
 
+    &-good {
+        color: #fff;
+        background-color: $special-2;
+
+        &:hover {
+            background-color: darken($special-2, 5);
+        }
+    }    
+
     &-gray-outline {
         color: $text-l;
         background-color: transparent;
@@ -61,6 +70,10 @@
     &--small {
         font-size: 13px;
         padding: 0.6em 1.1em;
+    }
+
+    &:disabled {
+        background-color: $disabled;
     }
 }
 

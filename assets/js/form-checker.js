@@ -108,7 +108,6 @@ function formsHandler() {
         });
     }
 
-
     // показать/скрыть пароль
     const passwordItems = document.querySelectorAll('input[type="password"]');
     if (passwordItems.length > 0) {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>История заказов</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-    
+
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
     <script src="./assets/js.min.js" defer></script>
 </head>
@@ -39,10 +39,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-    
+
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-    
+
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -74,7 +74,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-    
+
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1319,15 +1319,15 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-    
-    
+
+
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1360,12 +1360,12 @@
                 <button class="menu-top__btn" aria-label="Открыть информационное меню"></button>
                 <div class="menu-user">
                     <div class="menu-user__btn">
-    
+
                         <!-- эта ссылка для неавторизованного пользователя.
                                              класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
                                              is-hidden можно удалить -->
                         <button class="menu-user__icon is-hidden" data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
-    
+
                         <!-- эта ссылка отображается для авторизованного пользователя -->
                         <a class="menu-user__icon menu-user__icon--logged" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
                     </div>
@@ -1636,7 +1636,7 @@
             <nav>
                 <ol class="breadcrumbs">
                     <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
-                    <li><span>Корзина</span></li>
+                    <li><span>История заказов</span></li>
                 </ol>
             </nav>
             <div class="pagetitle pagetitle--column">
@@ -1651,7 +1651,228 @@
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
             </div>
-
+            <div class="orders">
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--new">Новый</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский-Перепелкин А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--processed">Обрабатывается</div>
+                        <div class="order-info">
+                            <div class="order-info__title">№3894 <span>от 01.12.2021</span></div>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <a href="#" class="btn btn-main btn--small">Оплатить онлайн</a>
+                            </div>
+                        </div>
+                        <form class="payment-deposit" action="/" data-check>
+                            <fieldset>
+                                <legend>Списать с депозита (2 250,00 ₽)</legend>
+                                <div class="form-group">
+                                    <input type="text" name="payment-deposit-sum" placeholder="Сумма" data-check data-check-required="true">
+                                </div>
+                                <button type="submit" class="btn btn-main btn--small" disabled>Списать</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--packed">Упакован</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                        <div class="payment-return">
+                            <div class="payment-return__content">К возврату <span>10 250,00 ₽</span></div>
+                            <button class="btn btn-good btn--small" data-fancybox data-type="ajax" data-src="modal-return-fiz.html">Вернуть</button>
+                            <button class="btn btn-good btn--small">Зачислить на депозит</button>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--send">Отправлен</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский-Перепелкин А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                    <div class="order-extra">
+                        <div class="order-extra__item">
+                            <a href="personal-order-view.html#order-extra-1" class="order-extra__link">Дозаказ №2487 от 12.12.2021</a>
+                            <div class="order-extra__info">12 350,66 ₽ <span>18 шт.</span> </div>
+                        </div>
+                        <div class="order-extra__item">
+                            <a href="personal-order-view.html#order-extra-2" class="order-extra__link">Дозаказ №2488 от 13.12.2021</a>
+                            <div class="order-extra__info">5 280,00 ₽ <span>12 шт.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--paid">Оплачен</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский-Перепелкин А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--canceled">Отменен</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский-Перепелкин А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__content">
+                        <div class="order-status order-status--onpack">На упаковке</div>
+                        <div class="order-info">
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
+                            <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
+                            <div class="order-info__detail">Получатель: <span>ИП Македонский-Перепелкин А.С.</span></div>
+                        </div>
+                    </div>
+                    <div class="order-payment">
+                        <div class="payment">
+                            <div class="payment-info">
+                                <div class="payment-info__sum">12 655,00 ₽</div>
+                                <div class="payment-info__quantity">Товаров: 10 шт.</div>
+                            </div>
+                            <div class="payment-status">
+                                <div class="payment-status__success">Заказ оплачен</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-icons">
+                        <a class="order-icons__item docs docs--1" href="#">Счет-договор</a>
+                        <a class="order-icons__item docs docs--2" href="#">Накладная Торг12</a>
+                        <a class="order-icons__item docs docs--3" href="#">Спецификация</a>
+                        <div class="order-icons__item statuses statuses--1">Товар подтвердил поставщик</div>
+                        <div class="order-icons__item statuses statuses--2">Товар собран на складе</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -1733,14 +1954,14 @@
                                 <a class="footer-contacts__link" href="tel:+74996088925">8 (499) 608-89-25</a>
                                 <a class="footer-contacts__link" href="tel:+78003012575">8 (800) 301-25-75</a>
                                 <button class="footer-contacts__btn footer-contacts__btn--phone" data-fancybox data-type="ajax" data-src="modal-callback.html">Заказать звонок</button>
+                            </div>
+                            <div class=" footer-contacts__item">
+                                <div class="footer-contacts__text">
+                                    <div class="text-nowrap"><span class="text-bold">ПОНЕДЕЛЬНИК – ПЯТНИЦА:</span> С 10:00 ДО 20:00</div>
+                                    <div class="text-nowrap"><span class="text-bold">СУББОТА, ВОСКРЕСЕНЬЕ</span> – ВЫХОДНЫЕ ДНИ</div>
+                                    <div class="text-nowrap"><span class="text-bold">МОСКВА | ОКРУЖНОЙ ПРОЕЗД | 30А</span></div>
                                 </div>
-                                <div class=" footer-contacts__item">
-                                    <div class="footer-contacts__text">
-                                        <div class="text-nowrap"><span class="text-bold">ПОНЕДЕЛЬНИК – ПЯТНИЦА:</span> С 10:00 ДО 20:00</div>
-                                        <div class="text-nowrap"><span class="text-bold">СУББОТА, ВОСКРЕСЕНЬЕ</span> – ВЫХОДНЫЕ ДНИ</div>
-                                        <div class="text-nowrap"><span class="text-bold">МОСКВА | ОКРУЖНОЙ ПРОЕЗД | 30А</span></div>
-                                    </div>
-                                    <button class="footer-contacts__btn footer-contacts__btn--map" data-fancybox data-type="ajax" data-src="modal-map.html">Схема проезда</button>
+                                <button class="footer-contacts__btn footer-contacts__btn--map" data-fancybox data-type="ajax" data-src="modal-map.html">Схема проезда</button>
                             </div>
                             <div class="footer-contacts__item">
                                 <div>

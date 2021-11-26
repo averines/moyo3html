@@ -96,7 +96,7 @@ p {
     transition: color 0.15s ease-in-out;
 
     &:hover {
-      color: $main -40;
+      color: $main-h;
       text-decoration: none;
     }
   }
@@ -303,7 +303,7 @@ ol {
       transition: color 0.15s ease-in-out;
 
       &:hover {
-        color: $main -40;
+        color: $main-h;
         text-decoration: none;
       }
     }
