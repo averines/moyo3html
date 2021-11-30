@@ -9,7 +9,7 @@
             "format": "compressed"
         }
     ],
-    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.autoprefix": [
         "defaults"
     ]

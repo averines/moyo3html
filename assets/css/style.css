@@ -1016,7 +1016,7 @@ footer .footer-container {
 @media screen and (min-width: 1200px) {
   .menu-top {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     -moz-column-gap: 12px;
          column-gap: 12px;
     margin: 0;
@@ -1058,6 +1058,7 @@ footer .footer-container {
     align-items: center;
     -moz-column-gap: 3px;
          column-gap: 3px;
+    padding-top: 3px;
   }
   .menu-top__item--parent::after {
     content: "";
@@ -9852,4 +9853,4 @@ footer .footer-container {
 
 .ml-auto {
   margin-left: auto;
-}/*# sourceMappingURL=style.css.map */
+}
