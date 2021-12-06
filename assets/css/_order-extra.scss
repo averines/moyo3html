@@ -1,0 +1,102 @@
+.order-extra {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: 40%;
+    }
+
+    &__item {
+        border: 1px solid $line-l;
+        border-radius: 4px;
+        padding: 7px 15px 7px 5px;
+        position: relative;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url(../img/icons/plus.svg) no-repeat center;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        color: $text-l;
+        font-size: 13px;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+    }
+
+    &__info {
+        padding-top: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        white-space: nowrap;
+
+        > span {
+            font-weight: 400;
+            color: $text-l;
+            font-size: 12px;
+            padding-left: 5px;
+        }
+    }
+}
+
+.order-extra-header {
+    background-color: #fff;
+    padding: 20px 40px 20px 15px;
+    box-shadow: 0 8px 12px rgb(20 20 20 / 5%);
+    position: relative;
+    border-radius: 6px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 70px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(../img/icons/plus.svg) no-repeat center;
+    }
+
+    .order-extra__title {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        font-size: 12px;
+
+        > span {
+            font-weight: 600;
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .order-extra__info {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: right;
+
+        > span {
+            font-weight: 400;
+            font-size: 13px;
+            padding-bottom: 5px;
+        }
+    }
+}

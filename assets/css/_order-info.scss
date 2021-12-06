@@ -1,0 +1,40 @@
+.order-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: flex-start;
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        color: $text;
+        border-bottom: 1px solid $text-ll;
+        text-decoration: none;
+        line-height: 1.2;
+        transition: all 0.15s ease-in-out;
+        margin-bottom: 7px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        > span {
+            font-weight: 400;
+            font-size: 13px;
+            // color: $text-l;
+        }
+    }
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &__item {
+        font-size: 13px;
+        font-weight: 600;
+        > span {
+            font-weight: 400;
+        }
+    }
+}

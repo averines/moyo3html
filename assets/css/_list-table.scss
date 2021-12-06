@@ -1,4 +1,4 @@
-.cart-table {
+.list-table {
     border-collapse: collapse;
 
     thead {
@@ -26,7 +26,7 @@
                     text-align: left;
                 }
 
-                &.cart-table-header__return {
+                &.list-table-header__return {
                     @media screen and (min-width: 1024px) {
                         width: 350px;
                         flex-shrink: 0;
@@ -91,7 +91,7 @@
     }
 }
 
-.cart-table-header {
+.list-table-header {
     &__size {
         white-space: nowrap;
         &::after {

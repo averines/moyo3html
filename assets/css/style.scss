@@ -94,8 +94,8 @@
 @import "badges";
 @import "product-quickview";
 
-@import "cart-products";
-@import "cart-table";
+@import "list-products";
+@import "list-table";
 @import "cart-info";
 @import "cart-total";
 @import "cart-empty";
@@ -112,6 +112,11 @@
 @import "settings";
 @import "status";
 @import "orders";
-@import "order";
+@import "order-header";
+@import "order-status";
+@import "order-extra";
+@import "order-info";
+@import "product-icons";
+@import "payment";
 
 @import "_margins";

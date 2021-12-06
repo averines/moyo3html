@@ -1,15 +1,15 @@
 "use strict";
 
 // действия с товаром в корзине ================
-const cartProductItems = document.querySelectorAll('.cart-product');
+const cartProductItems = document.querySelectorAll('.list-product');
 if (cartProductItems.length > 0) {
     cartProductItems.forEach(cartProductItem => {
-        let allSizesItems = cartProductItem.querySelectorAll('.cart-table tbody tr');
+        let allSizesItems = cartProductItem.querySelectorAll('.list-table tbody tr');
         let allSizesBtn = cartProductItem.querySelector('[data-action="show-not-added"]');
         if (allSizesItems.length > 0) {
             allSizesItems.forEach(sizeRow => {
-                let sizeRowTotal = sizeRow.querySelector('.cart-table__total');
-                let sizeRowPrice = sizeRow.querySelector('.cart-table__price');
+                let sizeRowTotal = sizeRow.querySelector('.list-table__total');
+                let sizeRowPrice = sizeRow.querySelector('.list-table__price');
             });
         }
 

@@ -1,10 +1,19 @@
-.cart-products {
+.list-products {
     @media screen and (min-width: 768px) {
         margin-top: 50px;
     }
+
+    &--fail {
+        margin: 0;
+        margin-top: -20px;
+
+        .list-product__pic {
+            opacity: 0.5;
+        }
+    }
 }
 
-.cart-product {
+.list-product {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -27,21 +36,29 @@
     &__pic {
         display: block;
         text-decoration: none;
+        transition: all 0.15s ease-in-out;
 
         picture,
         img {
             background-color: $bg-l;
             font-size: 12px;
             display: block;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        &:hover {
+            opacity: 0.9;
         }
     }
 
     &__brand {
         font-weight: 600;
+        font-size: 15px;
     }
 
     &__title {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     &__remove {
@@ -99,6 +116,13 @@
         }
     }
 
+    &__fail {
+        color: $main;
+        font-weight: 600;
+        font-size: 13px;
+        padding-top: 30px;
+    }
+
     &:first-child {
         @media screen and (min-width: 768px) {
             border-top: 1px solid $line-d;
@@ -107,7 +131,7 @@
 
     &:not(:first-child) {
         @media screen and (min-width: 768px) {
-            .cart-product__table {
+            .list-product__table {
                 thead tr th {
                     height: 0;
                     overflow: hidden;
@@ -120,7 +144,7 @@
 
     @media screen and (min-width: 768px) {
         &:first-child {
-            .cart-table {
+            .list-table {
                 margin-top: -70px;
                 thead tr th {
                     border-bottom: none;
@@ -133,7 +157,7 @@
         }
 
         &:not(:first-child) {
-            .cart-table thead tr th {
+            .list-table thead tr th {
                 opacity: 0;
                 border-bottom: none;
             }
@@ -145,12 +169,12 @@
     }
 }
 
-.cart-properties {
-    padding-top: 10px;
+.list-properties {
+    padding-top: 15px;
 
     &__item {
         font-size: 13px;
-        padding-bottom: 4px;
+        padding-bottom: 3px;
         > span {
             color: $text-l;
         }

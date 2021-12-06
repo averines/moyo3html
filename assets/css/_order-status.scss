@@ -1,0 +1,67 @@
+.order-status {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 33px;
+        background: url(../img/icons/box.svg) no-repeat center/100%;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 22px;
+        height: 22px;
+        left: 24px;
+        top: 12px;
+    }
+
+    &--new {
+        &::after {
+            background: url(../img/icons/order-statuses/01.svg) no-repeat center/100%;
+        }
+    }
+
+    &--processed {
+        &::after {
+            background: url(../img/icons/order-statuses/02.svg) no-repeat center/100%;
+        }
+    }
+
+    &--packed {
+        &::after {
+            background: url(../img/icons/order-statuses/03.svg) no-repeat center/100%;
+        }
+    }
+
+    &--send {
+        &::after {
+            background: url(../img/icons/order-statuses/04.svg) no-repeat center/100%;
+        }
+    }
+    &--paid {
+        &::after {
+            background: url(../img/icons/order-statuses/05.svg) no-repeat center/100%;
+        }
+    }
+
+    &--canceled {
+        &::after {
+            background: url(../img/icons/order-statuses/06.svg) no-repeat center/100%;
+        }
+    }
+
+    &--onpack {
+        &::after {
+            background: url(../img/icons/order-statuses/07.svg) no-repeat center/100%;
+        }
+    }
+}
