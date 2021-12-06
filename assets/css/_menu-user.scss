@@ -9,10 +9,6 @@
         position: relative;
 
         &:hover {
-            .menu-user__icon {
-                opacity: 1;
-            }
-
             .dropdown-user {
                 opacity: 1;
                 visibility: visible;
@@ -26,10 +22,6 @@
 
     @media screen and (max-width: 1200px) {
         &.is-active {
-            .menu-user__icon {
-                opacity: 1;
-            }
-
             .dropdown-user {
                 max-height: 150px;
                 opacity: 1;
@@ -40,13 +32,9 @@
         }
     }
 
-    &__btn {
-        position: relative;
-
-        &:hover {
-            .menu-user__icon {
-                opacity: 1;
-            }
+    &:hover {
+        .menu-user__icon {
+            opacity: 1;
         }
     }
 
@@ -56,7 +44,7 @@
         text-decoration: none;
         width: 35px;
         height: 36px;
-        background: url(../img/icons/login.svg) no-repeat center;
+        background: url(../img/icons/user.svg) no-repeat center;
         background-size: 55%;
         opacity: 0.7;
         transition: opacity 0.15s ease-in-out;
@@ -64,19 +52,6 @@
         @media screen and (min-width: 400px) {
             background-size: 45%;
             width: 45px;
-        }
-
-        &.is-hidden {
-            display: none;
-        }
-
-        &--logged {
-            background: url(../img/icons/user.svg) no-repeat center;
-            background-size: 55%;
-
-            @media screen and (min-width: 400px) {
-                background-size: 45%;
-            }
         }
     }
 }
@@ -208,5 +183,31 @@
             right: 19px;
             transform: rotate(45deg);
         }
+    }
+}
+
+.btn-login {
+    border: none;
+    text-decoration: none;
+    width: 35px;
+    height: 36px;
+    background: url(../img/icons/login.svg) no-repeat center;
+    background-size: 55%;
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media screen and (min-width: 400px) {
+        background-size: 45%;
+        width: 45px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 10px;
     }
 }

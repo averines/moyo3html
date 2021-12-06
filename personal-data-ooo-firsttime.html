@@ -1358,17 +1358,13 @@
                 </div>
                 <button class="search__btn" aria-label="Показать строку поиска"></button>
                 <button class="menu-top__btn" aria-label="Открыть информационное меню"></button>
+
+                <!-- для неавторизованного. класс "is-hidden" можно удалить -->
+                <button class="btn-login is-hidden" data-fancybox data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
+
+                <!-- для авторизованного-->
                 <div class="menu-user">
-                    <div class="menu-user__btn">
-
-                        <!-- эта ссылка для неавторизованного пользователя.
-                                             класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
-                                             is-hidden можно удалить -->
-                        <button class="menu-user__icon is-hidden" data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
-
-                        <!-- эта ссылка отображается для авторизованного пользователя -->
-                        <a class="menu-user__icon menu-user__icon--logged" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
-                    </div>
+                    <a class="menu-user__icon" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
                     <ul class="menu-user__dropdown dropdown-user">
                         <li class="dropdown-user__item">
                             <a class="dropdown-user__link" href="personal-data-fiz.html">

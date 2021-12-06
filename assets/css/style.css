@@ -318,6 +318,10 @@ ol li > a:hover {
        column-gap: 20px;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .container-wrapper {
   background-color: #f3f2f0;
 }
@@ -1545,9 +1549,6 @@ footer .footer-container {
     margin-left: 10px;
     position: relative;
   }
-  .menu-user:hover .menu-user__icon {
-    opacity: 1;
-  }
   .menu-user:hover .dropdown-user {
     opacity: 1;
     visibility: visible;
@@ -1558,9 +1559,6 @@ footer .footer-container {
   }
 }
 @media screen and (max-width: 1200px) {
-  .menu-user.is-active .menu-user__icon {
-    opacity: 1;
-  }
   .menu-user.is-active .dropdown-user {
     max-height: 150px;
     opacity: 1;
@@ -1569,10 +1567,7 @@ footer .footer-container {
     padding: 5px;
   }
 }
-.menu-user__btn {
-  position: relative;
-}
-.menu-user__btn:hover .menu-user__icon {
+.menu-user:hover .menu-user__icon {
   opacity: 1;
 }
 .menu-user__icon {
@@ -1581,7 +1576,7 @@ footer .footer-container {
   text-decoration: none;
   width: 35px;
   height: 36px;
-  background: url(../img/icons/login.svg) no-repeat center;
+  background: url(../img/icons/user.svg) no-repeat center;
   background-size: 55%;
   opacity: 0.7;
   transition: opacity 0.15s ease-in-out;
@@ -1590,18 +1585,6 @@ footer .footer-container {
   .menu-user__icon {
     background-size: 45%;
     width: 45px;
-  }
-}
-.menu-user__icon.is-hidden {
-  display: none;
-}
-.menu-user__icon--logged {
-  background: url(../img/icons/user.svg) no-repeat center;
-  background-size: 55%;
-}
-@media screen and (min-width: 400px) {
-  .menu-user__icon--logged {
-    background-size: 45%;
   }
 }
 
@@ -1720,6 +1703,33 @@ footer .footer-container {
     top: -4px;
     right: 19px;
     transform: rotate(45deg);
+  }
+}
+
+.btn-login {
+  border: none;
+  text-decoration: none;
+  width: 35px;
+  height: 36px;
+  background: url(../img/icons/login.svg) no-repeat center;
+  background-size: 55%;
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.btn-login:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 400px) {
+  .btn-login {
+    background-size: 45%;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-login {
+    margin-left: 10px;
   }
 }
 
@@ -9525,6 +9535,11 @@ footer .footer-container {
 }
 .order-payment .payment-return__content > span {
   font-weight: 600;
+}
+.order-payment .payment-return__controls {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .order-icons {

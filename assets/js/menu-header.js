@@ -3,22 +3,26 @@
 // показать/скрыть меню пользователя в шапке
 const menuUser = document.querySelector('.menu-user');
 if (menuUser) {
-    const menuUserBtn = menuUser.querySelector('.menu-user__btn');
+    const menuUserBtn = menuUser.querySelector('.menu-user__icon');
+    if (menuUserBtn) {
+        menuUserBtn.addEventListener('click', (e) => {
+            if (document.body.clientWidth <= 1200) {
+                e.preventDefault();
+            }
 
-    menuUserBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        menuUser.classList.toggle('is-active');
+            menuUser.classList.toggle('is-active');
 
-        // прячем другие меню при активации меню пользователя
-        menuTop.classList.remove('is-active');
-        menuTopBtn.classList.remove('is-active');
-    });
+            // прячем другие меню при активации меню пользователя
+            menuTop.classList.remove('is-active');
+            menuTopBtn.classList.remove('is-active');
+        });
 
-    window.addEventListener('resize', () => {
-        if (document.body.clientWidth > 1200) {
-            menuUser.classList.remove('is-active');
-        }
-    });
+        window.addEventListener('resize', () => {
+            if (document.body.clientWidth > 1200) {
+                menuUser.classList.remove('is-active');
+            }
+        });
+    }
 }
 
 // показать/скрыть меню информации в шапке

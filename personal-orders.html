@@ -1358,17 +1358,13 @@
                 </div>
                 <button class="search__btn" aria-label="Показать строку поиска"></button>
                 <button class="menu-top__btn" aria-label="Открыть информационное меню"></button>
+
+                <!-- для неавторизованного. класс "is-hidden" можно удалить -->
+                <button class="btn-login is-hidden" data-fancybox data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
+
+                <!-- для авторизованного-->
                 <div class="menu-user">
-                    <div class="menu-user__btn">
-
-                        <!-- эта ссылка для неавторизованного пользователя.
-                                             класс is-hidden сейчас её прячет, чтобы не показывалось сразу два пункта.
-                                             is-hidden можно удалить -->
-                        <button class="menu-user__icon is-hidden" data-type="ajax" data-src="modal-login.html" aria-label="Вход / Регистрация"></button>
-
-                        <!-- эта ссылка отображается для авторизованного пользователя -->
-                        <a class="menu-user__icon menu-user__icon--logged" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
-                    </div>
+                    <a class="menu-user__icon" href="/personal-data-fiz.html" aria-label="Личный кабинет"></a>
                     <ul class="menu-user__dropdown dropdown-user">
                         <li class="dropdown-user__item">
                             <a class="dropdown-user__link" href="personal-data-fiz.html">
@@ -1684,7 +1680,7 @@
                     <div class="order__content">
                         <div class="order-status order-status--processed">Обрабатывается</div>
                         <div class="order-info">
-                            <div class="order-info__title">№3894 <span>от 01.12.2021</span></div>
+                            <a class="order-info__title" href="personal-order-view.html">№3894 <span>от 01.12.2021</span></a>
                             <div class="order-info__detail">Доставка: <span>Самовывоз</span></div>
                             <div class="order-info__detail">Получатель: <span>ИП Македонский А.С.</span></div>
                         </div>
@@ -1738,8 +1734,10 @@
                         </div>
                         <div class="payment-return">
                             <div class="payment-return__content">К возврату <span>10 250,00 ₽</span></div>
-                            <button class="btn btn-good btn--small" data-fancybox data-type="ajax" data-src="modal-return-fiz.html">Вернуть</button>
-                            <button class="btn btn-good btn--small">Зачислить на депозит</button>
+                            <div class="payment-return__controls">
+                                <button class="btn btn-good btn--small" data-fancybox data-type="ajax" data-src="modal-return-fiz.html">Вернуть</button>
+                                <button class="btn btn-good btn--small">Зачислить на депозит</button>
+                            </div>
                         </div>
                     </div>
                     <div class="order-icons">
