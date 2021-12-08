@@ -53,17 +53,22 @@
 }
 
 .order-extra-header {
-    background-color: #fff;
-    padding: 20px 40px 20px 15px;
-    box-shadow: 0 8px 12px rgb(20 20 20 / 5%);
+    // background-color: #fff;
+    padding: 20px 0;
+    // box-shadow: 0 8px 12px rgb(20 20 20 / 5%);
     position: relative;
-    border-radius: 6px;
+    // border-radius: 6px;
+    border-bottom: 1px solid $line-d;
     display: flex;
     column-gap: 10px;
     align-items: center;
     justify-content: space-between;
     margin-top: 60px;
-    margin-bottom: 70px;
+
+    @media screen and (min-width: 768px) {
+            padding: 20px 40px 20px 0;
+                margin-bottom: 70px;
+        }    
 
     &::before {
         content: "";

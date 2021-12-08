@@ -123,20 +123,24 @@
         padding-top: 30px;
     }
 
-    &:first-child {
-        @media screen and (min-width: 768px) {
-            border-top: 1px solid $line-d;
-        }
-    }
+    // &:first-child {
+    //     @media screen and (min-width: 768px) {
+    //         border-top: 1px solid $line-d;
+    //     }
+    // }
 
     &:not(:first-child) {
         @media screen and (min-width: 768px) {
             .list-product__table {
-                thead tr th {
-                    height: 0;
-                    overflow: hidden;
-                    padding-top: 0;
-                    padding-bottom: 0;
+                thead {
+                    visibility: collapse;
+
+                    tr th {
+                        height: 0;
+                        overflow: hidden;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
