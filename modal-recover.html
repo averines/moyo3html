@@ -1,7 +1,7 @@
 <div class="modal modal--recover">
 <div class="modal__title">Восстановление пароля</div>
 <div class="modal__content">
-    <form action="/" class="form-minimal" data-check>
+    <form action="/" class="form-minimal" data-check id="modal-recover">
         <div class="form-row">
             <div class="form-group">
                 <input id="recover-email" type="text" name="recover-email" data-check data-check-required="true">
@@ -15,5 +15,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-recover")
 </script>

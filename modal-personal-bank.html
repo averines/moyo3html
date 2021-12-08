@@ -3,7 +3,7 @@
         Изменить банковские реквизиты
     </div>
     <div class="modal__content">
-        <form class="form-minimal" action="/" method="POST" data-check>
+        <form class="form-minimal" action="/" method="POST" data-check id="modal-personal-bank">
             <div class="form-block">
                 <div class="form-group">
                     <input id="bank-bik" type="text" name="bank-bik" data-check data-check-required="true">
@@ -29,5 +29,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-personal-bank")
 </script>

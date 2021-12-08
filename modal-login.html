@@ -2,15 +2,15 @@
     <div class="modal__title">Вход</div>
 
     <div class="modal__content">
-        <div class="status status--good">
+        <!-- <div class="status status--good">
             <div class="status__message">Вы успешно авторизованы на сайте</div>
         </div>
         <div class="status status--bad">
             <div class="status__message">Ошибка авторизации. <br> Неправильно указан логин или пароль</div>
         </div>
-        <div class="is-waiting">Этот блок в ожидании. Класс "is-waiting" можно применить к любому элементу, например, к форме, которая ниже</div>
+        <div class="is-waiting">Этот блок в ожидании. Класс "is-waiting" можно применить к любому элементу, например, к форме, которая ниже</div> -->
 
-        <form action="personal-data-fiz.html" class="form-minimal" data-check>
+        <form action="personal-data-fiz.html" class="form-minimal" data-check id="modal-login" >
             <div class="form-block">
                 <div class="form-group">
                     <input id="login-email" type="text" name="login-email" data-check data-check-required="true">
@@ -32,5 +32,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-login")
 </script>

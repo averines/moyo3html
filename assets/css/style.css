@@ -1663,14 +1663,14 @@ footer .footer-container {
     box-shadow: 0 5px 50px rgba(16, 16, 16, 0.1);
     overflow: visible;
   }
-  .dropdown-user__item--logout > button {
+  .dropdown-user__item--logout > .dropdown-user__link {
     border: none;
     display: flex;
     flex-direction: row;
     -moz-column-gap: 7px;
          column-gap: 7px;
   }
-  .dropdown-user__item--logout > button::before {
+  .dropdown-user__item--logout > .dropdown-user__link::before {
     content: "";
     display: inline-block;
     width: 1em;

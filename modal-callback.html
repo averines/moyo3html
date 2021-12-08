@@ -1,7 +1,7 @@
 <div class="modal modal--callback">
     <div class="modal__title">Обратный звонок</div>
     <div class="modal__content">
-        <form class="form-minimal" action="/" method="POST" data-check>
+        <form class="form-minimal" action="/" method="POST" data-check id="modal-callback">
             <div class="form-block">
                 <div class="form-group">
                     <input id="callback-name" type="text" name="callback-name">
@@ -48,5 +48,5 @@
 </div>
 
 <script>
-    formsHandler()    
+    modalFormHandler("modal-callback")
 </script>

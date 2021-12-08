@@ -3,7 +3,7 @@
         Изменить ИНН
     </div>
     <div class="modal__content">
-        <form class="form-minimal" action="/" method="POST" data-check>
+        <form class="form-minimal" action="/" method="POST" data-check id="modal-personal-data">
             <div class="form-block">
                 <div class="form-group">
                     <input id="data-inn" type="text" name="data-inn" data-check data-check-required="true">
@@ -17,5 +17,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-personal-data")
 </script>

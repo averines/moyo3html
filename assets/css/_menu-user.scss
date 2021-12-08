@@ -136,7 +136,7 @@
 
         &__item {
             &--logout {
-                > button {
+                > .dropdown-user__link {
                     border: none;
                     display: flex;
                     flex-direction: row;

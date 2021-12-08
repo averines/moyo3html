@@ -32,3 +32,37 @@ if (addressEqualEl) {
         addressEqualForm.classList.toggle('is-hidden');
     });
 }
+
+
+// на странице Регистрации
+const registrationForm = document.querySelector('.form--registration');
+let innCheck;
+if (registrationForm) {
+    let typeInput = registrationForm.querySelector('input[type="hidden"]');
+    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item');
+    let innInput = document.getElementById('registration-inn');
+    let innFormRow = innInput.closest('.form-row');
+
+    // прячем поле для инн
+    innCheck = function (typeValue) {
+        if (typeValue == 'type3') {
+            innInput.setAttribute('data-check', 'true');
+            innFormRow.style.display = 'flex';
+        } else {
+            innInput.removeAttribute('data-check');
+            innFormRow.style.display = 'none';
+        }
+    };
+
+    innCheck('type1');
+
+    // передаем в форму значение выбранного типа регистрации
+    typeVariants.forEach(typeVariant => {
+        typeVariant.addEventListener('click', () => {
+            let typeValue = typeVariant.dataset.tabTarget;
+            typeInput.value = typeValue;
+            innCheck(typeValue);
+            checkForm(registrationForm);
+        });
+    });
+}

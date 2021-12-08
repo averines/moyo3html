@@ -3,7 +3,7 @@
         Изменить фактический адрес
     </div>
     <div class="modal__content">
-        <form class="form-minimal" action="/" method="POST" data-check>
+        <form class="form-minimal" action="/" method="POST" data-check id="modal-personal-address">
             <div class="form-block">
                 <div class="form-group">
                     <input id="address-index" type="text" name="address-index" data-check data-check-required="true">
@@ -41,5 +41,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-personal-address")
 </script>

@@ -1,7 +1,13 @@
+"use strict";
+
+
 Fancybox.bind("[data-fancybox]", {
     infinite: false,
     dragToClose: false,
     groupAll: false,
+    autoFocus: false,
+    trapFocus: false,
+    placeFocusBack: false,
     l10n: {
         CLOSE: "Закрыть",
         NEXT: "Вперед",
@@ -13,7 +19,12 @@ Fancybox.bind("[data-fancybox]", {
         AJAX_NOT_FOUND: "Ошибка при загрузке AJAX: Not Found",
         AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: Forbidden",
         IFRAME_ERROR: "Ошибка при загрузке",
-    }
+    },
+    // on: {
+    //     "*": (event, fancybox, slide) => {
+    //         console.log(`event: ${event}`);
+    //     }
+    // }
 });
 
 

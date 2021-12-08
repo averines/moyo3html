@@ -3,7 +3,7 @@
         Новый адрес доставки
     </div>
     <div class="modal__content">
-        <form class="form-minimal" action="/" method="POST" data-check>
+        <form class="form-minimal" action="/" method="POST" data-check id="modal-personal-delivery-addresses">
             <div class="form-block">
                 <div class="form-group">
                     <input id="delivery-address-index" type="text" name="delivery-address-index" data-check data-check-required="true">
@@ -23,17 +23,17 @@
                 </div>
             </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <input id="delivery-address-building" type="text" name="delivery-address-building" data-check data-check-required="true">
-                        <label for="delivery-address-building">Дом, стр./корп.</label>
-                    </div>
-                    <div class="form-group">
-                        <input id="delivery-address-appartment" type="text" name="delivery-address-appartment" data-check data-check-required="true">
-                        <label for="delivery-address-appartment">Кв./офис</label>
-                    </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input id="delivery-address-building" type="text" name="delivery-address-building" data-check data-check-required="true">
+                    <label for="delivery-address-building">Дом, стр./корп.</label>
                 </div>
-  
+                <div class="form-group">
+                    <input id="delivery-address-appartment" type="text" name="delivery-address-appartment" data-check data-check-required="true">
+                    <label for="delivery-address-appartment">Кв./офис</label>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-main" disabled>Сохранить</button>
         </form>
         <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки</p>
@@ -41,5 +41,5 @@
 </div>
 
 <script>
-    formsHandler()
+    modalFormHandler("modal-personal-delivery-addresses")
 </script>
