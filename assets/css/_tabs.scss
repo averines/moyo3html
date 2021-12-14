@@ -74,6 +74,7 @@
 
         &.is-active {
             display: block;
+            animation: fade 0.33s ease-in-out;
         }
     }
 }
@@ -97,5 +98,15 @@
         color: $text-l;
         font-size: 10px;
         text-transform: initial;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

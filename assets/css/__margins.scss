@@ -1,39 +1,39 @@
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .pt-#{$i},
   .py-#{$i} {
     padding-top: 1em * $i;
   }
 }
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .pb-#{$i},
   .py-#{$i} {
     padding-bottom: 1em * $i;
   }
 }
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .mt-#{$i},
   .my-#{$i} {
     margin-top: 1em * $i;
   }
 }
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .mb-#{$i},
   .my-#{$i} {
     margin-bottom: 1em * $i;
   }
 }
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .mx-#{$i},
   .ml-#{$i} {
     margin-left: 1em * $i;
   }
 }
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
   .mx-#{$i},
   .mr-#{$i} {
     margin-right: 1em * $i;

@@ -27,7 +27,7 @@
         @media screen and (min-width: 768px) {
             padding-right: 15px;
         }
-    }    
+    }
 
     &--bg {
         background-color: $bg-l;
@@ -73,5 +73,26 @@
 
     &--max700 {
         max-width: 700px;
+    }
+}
+
+.container-sm {
+    max-width: 580px;
+    margin: 0 auto;
+
+    .settings {
+        margin-top: 10px;
+        row-gap: 10px;
+    }
+}
+
+.order-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
     }
 }

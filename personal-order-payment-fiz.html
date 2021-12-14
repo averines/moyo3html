@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор доставки</title>
+    <title>Выбор оплаты</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -1646,6 +1646,7 @@
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
             </div>
+
             <div class="order-progress">
                 <div class="order-progress__item">
                     <img src="./assets/img/icons/order-progress/01.svg" alt="Корзина">
@@ -1656,108 +1657,42 @@
                     <img src="./assets/img/icons/order-progress/02.svg" alt="Доставка">
                     Доставка
                 </div>
-                <div class="order-progress__separator order-progress__separator--disabled"></div>
-                <div class="order-progress__item order-progress__item--disabled">
+                <div class="order-progress__separator"></div>
+                <div class="order-progress__item">
                     <img src="./assets/img/icons/order-progress/03.svg" alt="Оплата">
                     Оплата
                 </div>
             </div>
             <div class="container-sm">
-                <p class="h2 text-bold pb-1">Выберите <br> вариант получения заказа:</p>
+                <p class="h1 text-bold pb-1">Выберите способ оплаты:</p>
                 <div class="tabs-variants" data-action="tabs">
-                    <div class="tabs-titles">
+                    <div class="tabs-titles tabs-titles--lg-">
                         <button class="tabs-titles__item" data-tab-target="type1">
-                            <span class="icon icon--map"></span>
-                            Самовывоз <span>со склада OptMoyo.ru</span>
-                        </button>
-                        <button class="tabs-titles__item" data-tab-target="type2">
-                            <span class="icon icon--transport"></span>
-                            Транспортная компания
+                            <span class="icon icon--money"></span>
+                            Оплата наличными
                         </button>
                         <button class="tabs-titles__item" data-tab-target="type3">
-                            <span class="icon icon--post"></span>
-                            Доставка почтой
+                            <span class="icon icon--card"></span>
+                            Оплата картой на сайте
                         </button>
                     </div>
                     <div class="tabs-content">
                         <div class="tabs-content__item" data-tab-id="type1">
-                            <div class="alert my-1">
-                                <p>Вы можете забрать заказ самостоятельно по адресу: <br><span class="text-bold">г. Москва, Окружной проезд, 30А</span></p>
-                            </div>
-                        </div>
-                        <div class="tabs-content__item" data-tab-id="type2">
-                            <div class="alert my-1">
-                                <p>Доставка до транспортной компании &mdash; бесплатно.</p>
-                            </div>
-                            <div class="setting setting-select">
-                                <div class="setting-title setting-title--bold">Выберите транспортную компанию</div>
-                                <div class="setting-select__container">
-                                    <div class="setting-select__content">
-                                        <div class="setting-select__item is-active">ПЭК</div>
-                                        <div class="setting-select__item">Байкал-Сервис</div>
-                                        <div class="setting-select__item">Возовоз</div>
-                                        <div class="setting-select__item">Деловые линии</div>
-                                        <div class="setting-select__item">Желдорэкспедиция</div>
-                                        <div class="setting-select__item">Энергия</div>
-                                    </div>
-                                </div>
+                            <div class="alert mb-2 mt-1">
+                                <p>Оплата наличными или картой при получении заказа в офисе.</p>
+                                <div class="text-sm text-italic">У вас на депозите 2 530,00 ₽</div>
                             </div>
                         </div>
                         <div class="tabs-content__item" data-tab-id="type3">
-                            <div class="alert my-1">
-                                <p>Доставка до вашего города оплачивается отдельно, согласно тарифам почтовой организации. Будет выставлен отдельный счет на
-                                    доставку.</p>
-                            </div>
-                            <div class="setting setting-select">
-                                <div class="setting-title setting-title--bold">Выберите службу доставки</div>
-                                <div class="setting-select__container">
-                                    <div class="setting-select__content">
-                                        <div class="setting-select__item is-active">EMS</div>
-                                        <div class="setting-select__item">СДЕК</div>
-                                        <div class="setting-select__item">Почта России</div>
-                                        <div class="setting-select__item">DPD</div>
-                                    </div>
-                                </div>
+                            <div class="alert mb-2 mt-1">
+                                <p>Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).</p>
+                                <div class="text-sm text-italic">У вас на депозите 2 530,00 ₽</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div data-delivery-id="order-delivery-info" class="is-hidden">
-                    <div class="settings">
-                        <div class="setting setting--boxed setting-switch">
-                            <div class="setting__info">
-                                <div class="setting__title">Страховать груз?</div>
-                                <div class="setting__content">При утере груза транспортная компания полностью возместит его стоимость.</div>
-                            </div>
-                            <div class="setting-switch__button">
-                                <input type="checkbox" id="order-insurance-1">
-                                <label for="order-insurance-1"></label>
-                            </div>
-                        </div>
-                        <div class="setting setting--boxed">
-                            <div class="setting__info">
-                                <div class="setting__title">Выберите адрес доставки</div>
-                                <div class="setting__content">
-                                    <div class="custom-radio">
-                                        <div class="custom-radio__item">
-                                            <div class="custom-radio__group">
-                                                <input type="radio" name="delivery-address" id="delivery-address-1">
-                                                <label for="delivery-address-1">108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</label>
-                                            </div>
-                                        </div>
-                                        <div class="custom-radio__item">
-                                            <div class="custom-radio__group">
-                                                <input type="radio" name="delivery-address" id="delivery-address-2">
-                                                <label for="delivery-address-2">125548, Россия, Новотроицк, ул. Чапаева, 23</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-addresses.html">Добавить</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="h1 text-bold">Комментарий к заказу</div>
+                <textarea class="order-comment" name="" id="" cols="30" rows="10" placeholder="Ваш комментарий к заказу (не обязательно)"></textarea>
                 <div class="cart-info__content mt-3">
                     <div class="h2 pt-0">Стоимость заказа</div>
                     <div class="cart-total">
@@ -1793,8 +1728,8 @@
                     </div>
                 </div>
                 <div class="order-buttons">
-                    <a class="btn btn-white" href="personal-cart.html">Назад к корзине</a>
-                    <a class="btn btn-main" href="personal-order-payment.html">Далее к оплате</a>
+                    <a class="btn btn-white" href="personal-order-delivery.html">Назад к выбору доставки</a>
+                    <a class="btn btn-main" href="personal-order-sent.html">Отправить заказ</a>
                 </div>
             </div>
         </div>

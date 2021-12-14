@@ -66,3 +66,30 @@ if (registrationForm) {
         });
     });
 }
+
+// на странице выбора Доставки
+const orderDeliveryInfo = document.querySelector('[data-delivery-id="order-delivery-info"]');
+let deliveryCheck;
+
+if (orderDeliveryInfo) {
+    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item');
+    // прячем дополнительные поля в доставке
+    deliveryCheck = function (typeValue) {
+        if (typeValue == 'type1') {
+            orderDeliveryInfo.style.display = 'none';
+        } else {
+            orderDeliveryInfo.style.display = 'block';
+        }
+    };
+
+    deliveryCheck('type1');
+
+    // передаем в форму значение выбранного типа регистрации
+    typeVariants.forEach(typeVariant => {
+        typeVariant.addEventListener('click', () => {
+            let typeValue = typeVariant.dataset.tabTarget;
+            // typeInput.value = typeValue;
+            deliveryCheck(typeValue);
+        });
+    });
+}

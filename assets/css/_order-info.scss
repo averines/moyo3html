@@ -38,3 +38,15 @@
         }
     }
 }
+
+.order-comment {
+    width: 100%;
+    resize: vertical;
+    margin: 0;
+    padding: 15px 20px;
+    border-radius: 0;
+    border: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $text;
+}

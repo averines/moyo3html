@@ -28,7 +28,8 @@
     }
 
     &__btn {
-        background-color: $text-l;
+        // background-color: $text-l;
+        background-color: $special-2;
         border: none;
         border-radius: 0 3px 3px 0;
         cursor: pointer;
@@ -40,7 +41,7 @@
         white-space: nowrap;
 
         &:hover {
-            background-color: darken($text-l, 10);
+            background-color: $special-2-l;
         }
 
         &::before {
