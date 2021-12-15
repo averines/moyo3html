@@ -109,6 +109,11 @@
         > img {
             width: 24px;
             height: 24px;
+            filter: brightness(10);
+
+            @media screen and (min-width: 1200px) {
+         
+            }
         }
 
         &:hover {
@@ -141,14 +146,21 @@
                     display: flex;
                     flex-direction: row;
                     column-gap: 7px;
-
-                    &::before {
-                        content: "";
-                        display: inline-block;
+                    
+                    > img {
                         width: 1em;
                         height: 1em;
-                        background: url(../img/icons/logout.svg) no-repeat center;
+                        display: inline-block;
+                        filter: none;
                     }
+
+                    // &::before {
+                    //     content: "";
+                    //     display: inline-block;
+                    //     width: 1em;
+                    //     height: 1em;
+                    //     background: url(../img/icons/logout.svg) no-repeat center;
+                    // }
                 }
             }
         }

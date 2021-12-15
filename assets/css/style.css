@@ -113,10 +113,6 @@ p a:hover {
   font-size: 13px;
 }
 
-.text-lg {
-  font-size: 17px;
-}
-
 .text-nowrap {
   white-space: nowrap;
 }
@@ -660,7 +656,7 @@ ol li > a:hover {
 }
 
 header {
-  background: url(../img/header-bg-1024.jpg) no-repeat center #8a0183;
+  background: url(../img/header-bg-1024.jpg) no-repeat center #ab064e;
   background-size: 100% 100%, cover;
   position: -webkit-sticky;
   position: sticky;
@@ -671,7 +667,7 @@ header {
 @media screen and (min-width: 1200px) {
   header {
     height: 120px;
-    background: url(../img/header-bg-2600.jpg) no-repeat center #8a0183;
+    background: url(../img/header-bg-2600.jpg) no-repeat center #ab064e;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -722,14 +718,15 @@ header {
 .logo {
   margin-right: auto;
   height: 30px;
+  width: 90px;
   flex-shrink: 0;
   text-indent: -1000em;
   background: url(../img/logo.svg) no-repeat center left;
-  background-size: auto 90%;
+  background-size: 100% 100%;
 }
 @media screen and (min-width: 468px) {
   .logo {
-    width: 151px;
+    width: 120px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1270,11 +1267,15 @@ footer .footer-container {
   height: 35px;
   background: url(../img/icons/burger.svg) no-repeat left center;
   cursor: pointer;
-  margin-right: 5px;
   transition: all 0.15s ease-in-out;
 }
 .menu-catalog__btn-open:hover {
   opacity: 0.8;
+}
+@media screen and (min-width: 468px) {
+  .menu-catalog__btn-open {
+    margin-right: 5px;
+  }
 }
 .menu-catalog.is-showed {
   width: 100%;
@@ -1686,6 +1687,7 @@ footer .footer-container {
 .dropdown-user__link > img {
   width: 24px;
   height: 24px;
+  filter: brightness(10);
 }
 .dropdown-user__link:hover {
   background-color: #e3148d;
@@ -1716,12 +1718,11 @@ footer .footer-container {
     -moz-column-gap: 7px;
          column-gap: 7px;
   }
-  .dropdown-user__item--logout > .dropdown-user__link::before {
-    content: "";
-    display: inline-block;
+  .dropdown-user__item--logout > .dropdown-user__link > img {
     width: 1em;
     height: 1em;
-    background: url(../img/icons/logout.svg) no-repeat center;
+    display: inline-block;
+    filter: none;
   }
   .dropdown-user__link {
     border-radius: 0;
@@ -8657,17 +8658,18 @@ footer .footer-container {
   flex-direction: column;
   row-gap: 10px;
   background-color: #fff;
+  box-shadow: 0 20px 100px #0000000d;
   border-radius: 6px;
+  flex-wrap: nowrap;
 }
 @media screen and (min-width: 992px) {
   .cart-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
   }
 }
 .cart-info__content {
-  background-color: #fff;
-  border-radius: 6px;
+  flex-grow: 1;
+  flex-basis: 50%;
   padding: 40px 20px 30px 20px;
 }
 @media screen and (min-width: 992px) {
@@ -10162,7 +10164,6 @@ footer .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px dotted #d9d9d9;
   padding-bottom: 30px;
   padding-top: 15px;
   -moz-column-gap: 25px;

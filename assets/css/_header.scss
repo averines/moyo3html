@@ -1,5 +1,5 @@
 header {
-    background: url(../img/header-bg-1024.jpg) no-repeat center #8a0183;
+    background: url(../img/header-bg-1024.jpg) no-repeat center $main;
     background-size: 100% 100%, cover;
     position: sticky;
     top: 0;
@@ -8,7 +8,7 @@ header {
 
     @media screen and (min-width: 1200px) {
         height: 120px;
-        background: url(../img/header-bg-2600.jpg) no-repeat center #8a0183;
+        background: url(../img/header-bg-2600.jpg) no-repeat center $main;
     }
 
     @media screen and (min-width: 1200px) {
@@ -57,13 +57,14 @@ header {
 .logo {
     margin-right: auto;
     height: 30px;
+    width: 90px;
     flex-shrink: 0;
     text-indent: -1000em;
     background: url(../img/logo.svg) no-repeat center left;
-    background-size: auto 90%;
+    background-size: 100% 100%;
 
     @media screen and (min-width: 468px) {
-        width: 151px;
+        width: 120px;
     }
 
     @media screen and (min-width: 1200px) {

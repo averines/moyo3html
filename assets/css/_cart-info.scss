@@ -4,23 +4,32 @@
     row-gap: 10px;
     // background-color: $bg-d;
     background-color: #fff;
+    box-shadow: 0 20px 100px #0000000d;
     border-radius: 6px;
+    flex-wrap: nowrap;
 
     @media screen and (min-width: 992px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        flex-direction: row;
     }
 
     &__content {
-        // background-color: $bg-d;
-        background-color: #fff;
-        border-radius: 6px;
+        flex-grow: 1;
+        flex-basis: 50%;
+        // box-shadow: 0 5px 100px #0000000d;
+        // background-color: #fff;
+        // border-radius: 6px;
         padding: 40px 20px 30px 20px;
 
         @media screen and (min-width: 992px) {
             padding: 40px 30px 30px 30px;
         }
     }
+
+    // > &__content {
+    //     box-shadow: none;
+    // }
 
     &__row {
         // border-top: 1px solid $line-d;
