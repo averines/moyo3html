@@ -4,9 +4,9 @@
     align-items: center;
     // border-bottom: 1px dotted $line-l;
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-top: 30px;
     column-gap: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
         justify-content: center;
@@ -30,6 +30,10 @@
             > img {
                 filter: grayscale(1) brightness(3);
             }
+        }
+
+        &--active {
+            font-weight: 600;
         }
 
         @media screen and (min-width: 768px) {

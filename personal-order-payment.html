@@ -1658,137 +1658,106 @@
                     Доставка
                 </div>
                 <div class="order-progress__separator"></div>
-                <div class="order-progress__item">
+                <div class="order-progress__item order-progress__item--active">
                     <img src="./assets/img/icons/order-progress/03.svg" alt="Оплата">
                     Оплата
                 </div>
             </div>
-            <div class="container-sm">
-                <p class="h1 text-bold pb-1">Выберите способ оплаты:</p>
-                <div class="tabs-variants" data-action="tabs">
-                    <div class="tabs-titles tabs-titles--lg-">
-                        <button class="tabs-titles__item" data-tab-target="type1">
-                            <span class="icon icon--money"></span>
-                            Оплата наличными
-                        </button>
-                        <button class="tabs-titles__item" data-tab-target="type2">
-                            <span class="icon icon--letter"></span>
-                            Безналичная оплата
-                        </button>
-                        <button class="tabs-titles__item" data-tab-target="type3">
-                            <span class="icon icon--card"></span>
-                            Оплата картой на сайте
-                        </button>
-                    </div>
-                    <div class="tabs-content">
-                        <div class="tabs-content__item" data-tab-id="type1">
-                            <div class="alert mb-2 mt-1">
-                                <p>Оплата наличными или картой при получении заказа в офисе.</p>
-                                <div class="text-sm text-italic">У вас на депозите 2 530,00 ₽</div>
-                                <div class="text-sm text-italic">Списать сумму с депозита можно после выставления счета в разделе История заказов.</div>
-                            </div>
-                        </div>
-                        <div class="tabs-content__item" data-tab-id="type2">
-                            <div class="alert mb-2 mt-1">
-                                <p>Будет выставлен счет на сайте в личном кабинете и по электронной почте.</p>
-                                <div class="text-special">Недоступно для физ.лиц</div>
-                            </div>
-                        </div>
-                        <div class="tabs-content__item" data-tab-id="type3">
-                            <div class="alert mb-2 mt-1">
-                                <p>Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).</p>
-                                <div class="text-sm text-italic">У вас на депозите 2 530,00 ₽</div>
-                                <div class="text-sm text-italic">Списать сумму с депозита можно после выставления счета в разделе История заказов.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="h1 text-bold">Комментарий к заказу</div>
-                <textarea class="order-comment" name="" id="" cols="30" rows="10" placeholder="Ваш комментарий к заказу (не обязательно)"></textarea>
-                <!-- <p class="h2 text-bold pb-1 pt-3">Выберите способ оплаты:</p>
-                <div class="tabs-variants" data-action="tabs">
-                    <div class="tabs-titles tabs-titles--vertical">
-                        <div class="tabs-titles__wrap">
-                            <button class="tabs-titles__item" data-tab-target="type1">
-                                <span class="icon icon--map"></span>
-                                Оплата наличными
-                            </button>
-                            <div class="tabs-titles__description">
-                                Оплата наличными или картой при получении заказа в офисе.
-                            </div>
-                        </div>
-                        <div class="tabs-titles__wrap">
-                            <button class="tabs-titles__item" data-tab-target="type2">
-                                <span class="icon icon--transport"></span>
-                                Безналичная оплата
-                            </button>
-                            <div class="tabs-titles__description">
-                                Будет выставлен счет на сайте в личном кабинете и по электронной почте.
-                                <div class="text-special">Недоступно для физ.лиц</div>
-                            </div>
-                        </div>
-                        <div class="tabs-titles__wrap">
-                            <button class="tabs-titles__item" data-tab-target="type3">
-                                <span class="icon icon--post"></span>
-                                Оплата картой на сайте
-                            </button>
-                            <div class="tabs-titles__description">
-                                Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).
-                                <div class="text-sm text-italic">У вас на депозите 2 530,00 ₽</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tabs-content">
-                        <div class="tabs-content__item" data-tab-id="type1">
-                        </div>
-                        <div class="tabs-content__item" data-tab-id="type2">
-                        </div>
-                        <div class="tabs-content__item" data-tab-id="type3">
-                        </div>
-                    </div>
-                </div> -->
 
-                <div class="cart-info mt-3">
-                    <div class="cart-info__content">
-                        <div class="h2 pt-0">Стоимость заказа</div>
-                        <div class="cart-total">
-                            <div class="cart-total__item">
-                                <div class="cart-total__title">Общая стоимость товаров</div>
-                                <div class="cart-total__value">1 234,00 ₽</div>
-                            </div>
-                            <div class="cart-total__item">
-                                <div class="cart-total__title">Скидка</div>
-                                <div class="cart-total__value cart-total__value--special">234,00 ₽</div>
-                            </div>
-                            <div class="cart-total__item">
-                                <div class="cart-total__title">Скидка по промокоду</div>
-                                <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
-                            </div>
-                            <div class="cart-total__item">
-                                <div class="cart-total__title">Накопительная скидка</div>
-                                <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
-                            </div>
-                            <div class="cart-total__item">
-                                <div class="cart-total__title">Бонус за выкуп</div>
-                                <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
-                            </div>
-                        </div>
-                        <div class="cart-info__total">
-                            <div class="cart-info__warning">
-                                <div class="warning warning--good animate-blink">
-                                    Сумма заказа пересчитана по оптовым ценам
+            <div class="order-prepare">
+                <div>
+                    <div class="prepare-wrap">
+                        <div class="prepare-wrap__title">Выберите способ оплаты:</div>
+                        <div class="tabs-variants" data-action="tabs">
+                            <div class="tabs-titles tabs-titles--vertical">
+                                <div class="tabs-titles__wrap">
+                                    <button class="tabs-titles__item" data-tab-target="type4">
+                                        <span class="icon icon--money"></span>
+                                        Оплата наличными
+                                    </button>
+                                    <div class="tabs-titles__description">
+                                        Оплата наличными или картой при получении заказа в офисе.
+                                    </div>
                                 </div>
-                                <div class="cart-info__text">Было: <span class="text-deleted">1 575,00 ₽</span></div>
+                                <div class="tabs-titles__wrap">
+                                    <button class="tabs-titles__item" data-tab-target="type5">
+                                        <span class="icon icon--letter"></span>
+                                        Безналичная оплата
+                                    </button>
+                                    <div class="tabs-titles__description">
+                                        Будет выставлен счет на сайте в личном кабинете и по электронной почте.
+                                        <div class="text-special">Недоступно для физ.лиц</div>
+                                    </div>
+                                </div>
+                                <div class="tabs-titles__wrap">
+                                    <button class="tabs-titles__item" data-tab-target="type6">
+                                        <span class="icon icon--card"></span>
+                                        Оплата картой на&nbsp;сайте
+                                    </button>
+                                    <div class="tabs-titles__description">
+                                        Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).
+                                    </div>
+                                </div>
                             </div>
-                            Стало: <span>1 234,00 ₽</span>
+                            <div class="tabs-content">
+                                <div class="tabs-content__item" data-tab-id="type4">
+                                    <hr class="mb-2">
+                                    <div class="text-italic">У вас на депозите 2 530,00 ₽</div>
+                                    <div class="text-italic">Списать сумму с депозита можно после выставления счета в разделе История заказов.</div>
+                                </div>
+                                <div class="tabs-content__item" data-tab-id="type5">
+                                </div>
+                                <div class="tabs-content__item" data-tab-id="type6">
+                                    <hr class="mb-2">
+                                    <div class="text-italic">У вас на депозите 2 530,00 ₽</div>
+                                    <div class="text-italic">Списать сумму с депозита можно после выставления счета в разделе История заказов.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="order-buttons">
-                    <a class="btn btn-white" href="personal-order-delivery.html">Назад к выбору доставки</a>
-                    <a class="btn btn-main" href="personal-order-sent.html">Отправить заказ</a>
+
+                <div>
+                    <div class="cart-info">
+                        <div class="cart-info__content">
+                            <div class="cart-total">
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">Общая стоимость товаров</div>
+                                    <div class="cart-total__value">1 234,00 ₽</div>
+                                </div>
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">Скидка</div>
+                                    <div class="cart-total__value cart-total__value--special">234,00 ₽</div>
+                                </div>
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">Скидка по промокоду</div>
+                                    <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
+                                </div>
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">Накопительная скидка</div>
+                                    <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
+                                </div>
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">Бонус за выкуп</div>
+                                    <div class="cart-total__value cart-total__value--special">0,00 ₽</div>
+                                </div>
+                            </div>
+                            <div class="cart-info__total">
+                                <div class="cart-info__warning">
+                                    <div class="warning warning--good animate-blink">
+                                        Сумма заказа пересчитана по оптовым ценам
+                                    </div>
+                                    <div class="cart-info__text">Было: <span class="text-deleted">1 575,00 ₽</span></div>
+                                </div>
+                                Стало: <span>1 234,00 ₽</span>
+                            </div>
+                            <a class="btn btn-main btn--big mt-2 w-100 d-block" href="personal-order-sent.html">Отправить заказ</a>
+                        </div>
+                    </div>
+                    <a class="btn-back" href="personal-order-delivery.html">Назад к выбору Доставки</a>
                 </div>
             </div>
+
         </div>
     </main>
 

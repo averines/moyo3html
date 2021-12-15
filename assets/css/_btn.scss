@@ -181,3 +181,37 @@
         transform: scale(0.9);
     }
 }
+
+.btn--big {
+    font-size: 17px;
+    padding: 0.9em 1em;
+}
+
+.btn-back {
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    color: $text-l;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 0.7em;
+        height: 0.7em;
+        background: url(../img/icons/arrow-right.svg) no-repeat center;
+        transform: scale(-1, 1);
+        transition: all 0.15s ease-in-out;
+    }
+    &:hover {
+        color: $text;
+        &::before {
+            transform: scale(-1, 1) translateX(2px);
+        }
+    }
+}

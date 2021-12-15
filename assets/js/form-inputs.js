@@ -68,17 +68,17 @@ if (registrationForm) {
 }
 
 // на странице выбора Доставки
-const orderDeliveryInfo = document.querySelector('[data-delivery-id="order-delivery-info"]');
+const orderDeliveryInfo = document.querySelector('[data-delivery-content]');
 let deliveryCheck;
 
 if (orderDeliveryInfo) {
-    let typeVariants = document.querySelectorAll('.tabs-variants .tabs-titles__item');
+    let typeVariants = document.querySelectorAll('[data-delivery-select] .tabs-titles__item');
     // прячем дополнительные поля в доставке
     deliveryCheck = function (typeValue) {
-        if (typeValue == 'type1') {
-            orderDeliveryInfo.style.display = 'none';
-        } else {
+        if (typeValue == 'type2' || typeValue == 'type3') {
             orderDeliveryInfo.style.display = 'block';
+        } else {
+            orderDeliveryInfo.style.display = 'none';
         }
     };
 
