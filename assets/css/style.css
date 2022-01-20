@@ -1542,6 +1542,7 @@ footer .footer-container {
 }
 .menu-badge--subcategory {
   margin-right: 0;
+  margin-left: auto;
 }
 .menu-badge--subcategory::before {
   content: "";
@@ -3328,6 +3329,27 @@ footer .footer-container {
   .product-price--table-product {
     row-gap: 3px;
   }
+}
+
+.price-hidden {
+  padding-top: 5px;
+}
+.price-hidden__title {
+  font-size: 12px;
+}
+.price-hidden__btn {
+  cursor: pointer;
+  color: #ab064e;
+  font-size: 11px;
+  text-align: left;
+  padding: 3px 0;
+  border: none;
+  display: inline;
+  background: none;
+  transition: all 0.15s ease-in-out;
+}
+.price-hidden__btn:hover {
+  opacity: 0.7;
 }
 
 .modal {
@@ -7843,6 +7865,13 @@ footer .footer-container {
   padding: 15px;
   align-content: space-between;
   position: relative;
+}
+.product-card__warning {
+  padding: 0.5em;
+  font-size: 11px;
+  background-color: #d0e7e1;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 .product-card__header {
   padding-top: 15px;
