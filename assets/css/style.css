@@ -1311,6 +1311,7 @@ footer .footer-container {
 @media screen and (min-width: 650px) {
   .categories {
     width: 350px;
+    padding-bottom: 250px;
   }
 }
 .categories::-webkit-scrollbar {
@@ -1346,7 +1347,6 @@ footer .footer-container {
   background-image: url(../img/icons/categories/brand.svg);
 }
 .categories__title {
-  text-transform: uppercase;
   font-size: 0.75em;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -1538,7 +1538,7 @@ footer .footer-container {
   border: 1px solid #0c9294;
 }
 .menu-badge--new::before {
-  content: "Новинок ";
+  content: "Новых ";
 }
 .menu-badge--subcategory {
   margin-right: 0;
@@ -2484,7 +2484,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 1200px) {
   .accordion.accordion--enabled > .accordion__item.is-opened > .accordion__content {
-    max-height: 2000px;
+    max-height: 3000px;
   }
 }
 .accordion.accordion--enabled > .accordion__item.is-opened > .accordion__title::after {
