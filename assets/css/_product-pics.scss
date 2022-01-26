@@ -9,6 +9,7 @@
         height: 40px;
         background: url(../img/icons/download.svg) no-repeat center;
         transition: opacity 0.15s ease-in-out;
+        color: transparent;
 
         @media screen and (min-width: 1200px) {
             width: 50px;

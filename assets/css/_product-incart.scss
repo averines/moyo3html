@@ -1,0 +1,10 @@
+.product-incart {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: url(../img/icons/cart-main.svg) no-repeat center;
+    background-size: 48%;
+    cursor: pointer;
+    transition: background-image 0.2s, transform 0.05s ease-in-out, opacity 0.15s ease-in-out;
+}

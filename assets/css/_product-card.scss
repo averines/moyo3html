@@ -87,6 +87,12 @@
         top: 0;
     }
 
+    &__incart {
+        position: absolute;
+        right: 0;
+        top: 40px;
+    }    
+
     &__quickview {
         display: none;
         position: absolute;
