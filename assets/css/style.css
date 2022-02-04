@@ -7850,38 +7850,6 @@ footer .footer-container {
 .product-card__wrapper {
   position: relative;
   height: 100%;
-  display: grid;
-  grid-template-rows: 1.7fr 1fr;
-}
-@media screen and (min-width: 400px) {
-  .product-card__wrapper {
-    grid-template-rows: 2.5fr 1fr;
-  }
-}
-@media screen and (min-width: 600px) {
-  .product-card__wrapper {
-    grid-template-rows: 3fr 1fr;
-  }
-}
-@media screen and (min-width: 768px) {
-  .product-card__wrapper {
-    grid-template-rows: 2.5fr 1fr;
-  }
-}
-@media screen and (min-width: 900px) {
-  .product-card__wrapper {
-    grid-template-rows: 2.8fr 1fr;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .product-card__wrapper {
-    grid-template-rows: 3fr 1fr;
-  }
-}
-@media screen and (min-width: 2400px) {
-  .product-card__wrapper {
-    grid-template-rows: 4fr 1fr;
-  }
 }
 .product-card__content {
   position: relative;
@@ -8047,44 +8015,6 @@ footer .footer-container {
   }
   .product-card__info {
     padding: 20px;
-  }
-}
-.product-card.carousel__slide .product-card__wrapper {
-  grid-template-rows: 1.5fr 1fr;
-}
-@media screen and (min-width: 400px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 1.7fr 1fr;
-  }
-}
-@media screen and (min-width: 500px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 2fr 1fr;
-  }
-}
-@media screen and (min-width: 600px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 2.5fr 1fr;
-  }
-}
-@media screen and (min-width: 768px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 1.5fr 1fr;
-  }
-}
-@media screen and (min-width: 900px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 2fr 1fr;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 1.6fr 1fr;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .product-card.carousel__slide .product-card__wrapper {
-    grid-template-rows: 2.1fr 1fr;
   }
 }
 
