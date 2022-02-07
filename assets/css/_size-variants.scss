@@ -4,10 +4,14 @@
     row-gap: 5px;
     padding: 15px 15px 20px 15px;
     position: absolute;
-    width: calc(100% + 70px);
+    width: calc(100% + 85px);
     background-color: #fff;
     z-index: 3;
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 6px 6px;
+
+    @media screen and (min-width: 1400px) {
+        left: 0;
+    }
 
     &__item {
         display: none;

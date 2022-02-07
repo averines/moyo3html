@@ -1,5 +1,5 @@
 .product-card {
-  background-color: #fff;
+  // background-color: #fff;
   width: 100%;
   position: relative;
   border-radius: 3px;
@@ -7,6 +7,8 @@
   &__wrapper {
     position: relative;
     height: 100%;
+    background-color: #fff;
+    border-radius: 6px;
     // display: grid;
     // grid-template-rows: 1.7fr 1fr;
 
@@ -67,7 +69,8 @@
     // width: 100%;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 3px 3px 0 0;
+    // border-radius: 3px 3px 0 0;
+    border-radius: 6px;
     overflow: hidden;
 
     > img {
@@ -93,6 +96,7 @@
     padding: 15px;
     align-content: space-between;
     position: relative;
+    border-radius: 0 0 6px 6px;
   }
 
   &__warning {
@@ -174,17 +178,17 @@
 
   @media screen and (min-width: 1024px) {
     &:hover {
-      box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
-      border-radius: 0;
+      // box-shadow: 0 6px 8px rgba(100, 100, 100, 0.25);
+      // border-radius: 0;
 
       .product-card__sizes {
         display: flex;
-        box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
+        box-shadow: 0 6px 8px rgba(100, 100, 100, 0.25);
       }
 
       .product-card__colors {
         display: flex;
-        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
+        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.25);
       }
 
       .product-card__quickview {
@@ -192,88 +196,106 @@
       }
 
       .product-card__pic {
-        border-top-right-radius: 0;
+        // border-top-right-radius: 0;
       }
     }
 
     &:nth-child(4n) {
       .product-card__colors {
         right: auto;
-        left: -70px;
-        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
+        left: -85px;
+        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.25);
       }
 
       .product-card__sizes {
-        left: -70px;
+        left: -85px;
         padding-left: 85px;
       }
     }
   }
 
   @media screen and (min-width: 1400px) {
+    background-color: transparent;
+    padding: 15px 15px 0 15px;
+    border-radius: 6px 0 0 0;
+
+    &:hover {
+      background-color: #fff;
+    }
+
     &:nth-child(4n) {
       .product-card__colors {
         left: auto;
-        right: -70px;
-        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
+        right: -85px;
+        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.25);
       }
 
       .product-card__sizes {
         left: auto;
-        right: -70px;
+        right: -85px;
         padding-left: 20px;
       }
     }
 
     &:nth-child(6n) {
+      border-radius: 0 6px 0 0;
+
       .product-card__colors {
         right: auto;
-        left: -70px;
-        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
+        left: -85px;
+        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.25);
+        padding: 15px 0 0 15px;
       }
 
       .product-card__sizes {
-        left: -70px;
+        left: -85px;
         padding-left: 85px;
       }
+
+      // &:hover {
+      //   padding: 15px 15px 0 0;
+      // }
     }
 
     &__info {
       padding: 20px;
+      background-color: #fff;
     }
   }
 
-  // &.carousel__slide {
-  //   .product-card__wrapper {
-  //     grid-template-rows: 1.5fr 1fr;
+  &.carousel__slide {
 
-  //     @media screen and (min-width: 400px) {
-  //       grid-template-rows: 1.7fr 1fr;
-  //     }
 
-  //     @media screen and (min-width: 500px) {
-  //       grid-template-rows: 2fr 1fr;
-  //     }      
+    // .product-card__wrapper {
+    //   grid-template-rows: 1.5fr 1fr;
 
-  //     @media screen and (min-width: 600px) {
-  //       grid-template-rows: 2.5fr 1fr;
-  //     }
+    //   @media screen and (min-width: 400px) {
+    //     grid-template-rows: 1.7fr 1fr;
+    //   }
 
-  //     @media screen and (min-width: 768px) {
-  //       grid-template-rows: 1.5fr 1fr;
-  //     }
+    //   @media screen and (min-width: 500px) {
+    //     grid-template-rows: 2fr 1fr;
+    //   }
 
-  //     @media screen and (min-width: 900px) {
-  //       grid-template-rows: 2fr 1fr;
-  //     }      
+    //   @media screen and (min-width: 600px) {
+    //     grid-template-rows: 2.5fr 1fr;
+    //   }
 
-  //     @media screen and (min-width: 1200px) {
-  //       grid-template-rows: 1.6fr 1fr;
-  //     }
+    //   @media screen and (min-width: 768px) {
+    //     grid-template-rows: 1.5fr 1fr;
+    //   }
 
-  //     @media screen and (min-width: 1400px) {
-  //       grid-template-rows: 2.1fr 1fr;
-  //     }
-  //   }
-  // }
+    //   @media screen and (min-width: 900px) {
+    //     grid-template-rows: 2fr 1fr;
+    //   }
+
+    //   @media screen and (min-width: 1200px) {
+    //     grid-template-rows: 1.6fr 1fr;
+    //   }
+
+    //   @media screen and (min-width: 1400px) {
+    //     grid-template-rows: 2.1fr 1fr;
+    //   }
+    // }
+  }
 }
