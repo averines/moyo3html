@@ -27,11 +27,11 @@ if (productsCards.length > 0) {
 
             swapProductPicTimer = setTimeout(function () {
                 if (picsArray[productColorPicIndex] == productColorActiveId) {
-                    productPicPath0 = `https://cdn2.moyo.moda/ws/main/900x1350/${picsArray[productColorPicIndex]}`;
-                    productPicPath1 = `https://cdn2.moyo.moda/ws/main/320x480/${picsArray[productColorPicIndex]}`;
+                    productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${picsArray[productColorPicIndex]}`;
+                    productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${picsArray[productColorPicIndex]}`;
                 } else {
-                    productPicPath0 = `https://cdn2.moyo.moda/ws/extra/900x1350/${picsArray[productColorPicIndex]}`;
-                    productPicPath1 = `https://cdn2.moyo.moda/ws/extra/320x480/${picsArray[productColorPicIndex]}`;
+                    productPicPath0 = `https://cdn1.moyo.moda/ws/extra/470x705/${picsArray[productColorPicIndex]}`;
+                    productPicPath1 = `https://cdn1.moyo.moda/ws/extra/300x450/${picsArray[productColorPicIndex]}`;
                 }
 
                 productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
@@ -53,8 +53,8 @@ if (productsCards.length > 0) {
             // productColorActiveId = productColors[0].dataset.colorId
             productColorPicIndex = 0;
 
-            let productPicPath0 = `https://cdn2.moyo.moda/ws/main/900x1350/${productsCard.dataset.productId}`;
-            let productPicPath1 = `https://cdn2.moyo.moda/ws/main/320x480/${productsCard.dataset.productId}`;
+            let productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${productsCard.dataset.productId}`;
+            let productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${productsCard.dataset.productId}`;
 
             productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
             productPicSources[1].setAttribute('srcset', productPicPath1 + '.webp');
@@ -72,8 +72,8 @@ if (productsCards.length > 0) {
                 productColorActiveId = productColor.dataset.colorId;
                 colorPics = productColor.dataset.colorPics.replace(/\s/g, '').split(',');
 
-                productPicPath0 = `https://cdn2.moyo.moda/ws/main/900x1350/${productColorActiveId}`;
-                productPicPath1 = `https://cdn2.moyo.moda/ws/main/320x480/${productColorActiveId}`;
+                productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${productColorActiveId}`;
+                productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${productColorActiveId}`;
 
                 productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
                 productPicSources[1].setAttribute('srcset', productPicPath1 + '.webp');
