@@ -6,6 +6,9 @@ const productsCards = document.querySelectorAll('.product-card');
 if (productsCards.length > 0) {
     productsCards.forEach(productsCard => {
         let productWrapper = productsCard.querySelector('.product-card__wrapper');
+        let productLinkPic = productsCard.querySelector('.product-card__link');
+        let productLinkHeader = productsCard.querySelector('.product-card__header');
+        let productLinkPreview = productsCard.querySelector('.product-card__quickview');
         let productPicSources = productsCard.querySelectorAll('.product-card__pic source');
         let productPicImg = productsCard.querySelector('.product-card__pic img');
         let productColors = productsCard.querySelectorAll('.color-variants__item');
@@ -66,7 +69,7 @@ if (productsCards.length > 0) {
             }
         });
 
-        //листание фото товара в мини-карточке товара при наведении на thumb
+        //листание фото товара и изменение ссылки в мини-карточке товара при наведении на thumb
         productColors.forEach(productColor => {
             productColor.addEventListener('mouseover', () => {
                 productColorActiveId = productColor.dataset.colorId;
@@ -89,6 +92,11 @@ if (productsCards.length > 0) {
                     item.classList.remove('is-active');
                 });
                 productColor.classList.add('is-active');
+
+                //смена ссылки 
+                productLinkPic.href =`product/${productColorActiveId}`;
+                productLinkHeader.href =`product/${productColorActiveId}`;
+                productLinkPreview.dataset.src = `product/${productColorActiveId}`;
             });
 
             //прекращение листания при отведении курсора с thumb
