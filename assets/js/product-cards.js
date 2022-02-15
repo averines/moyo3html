@@ -1,126 +1,89 @@
 "use strict";
 
-
 // действия с мини-карточкой продукта===================================================
+
 const productsCards = document.querySelectorAll('.product-card');
 if (productsCards.length > 0) {
-    productsCards.forEach(productsCard => {
-        let productWrapper = productsCard.querySelector('.product-card__wrapper');
-        let productLinkPic = productsCard.querySelector('.product-card__link');
-        let productLinkHeader = productsCard.querySelector('.product-card__header');
-        let productLinkPreview = productsCard.querySelector('.product-card__quickview');
-        let productPicSources = productsCard.querySelectorAll('.product-card__pic source');
-        let productPicImg = productsCard.querySelector('.product-card__pic img');
-        let productColors = productsCard.querySelectorAll('.color-variants__item');
-        let productSizes = productsCard.querySelectorAll('.size-variants__item');
-        let productColorPicIndex = 0;
-        let productColorActiveId;
-        let swapProductPicTimer;
-        let colorPics;
-        let productPicPath0;
-        let productPicPath1;
+    productsCards.forEach(pCard => {
+        let pColors = pCard.querySelectorAll('.color-variants__item');
+        let pSizes = pCard.querySelectorAll('.size-variants__item');
+        let pPicSources = pCard.querySelectorAll('.product-card__pic source');
+        let pPicImg = pCard.querySelector('.product-card__pic img');
+        let swapImagesTimer;
 
-        if (productColors.length > 0) {
-            productColorActiveId = productColors[0].dataset.colorId;
-            colorPics = productColors[0].dataset.colorPics ? productColors[0].dataset.colorPics.replace(/\s/g, '').split(',') : '';
+
+        pCard.addEventListener('mouseover', (e) => {
+            if (e.target.classList.contains('color-variants__item')) {
+                updateColors(e.target.dataset.colorId);
+                updateSizes(e.target.dataset.colorId);
+                updateImage(e.target.dataset.colorId);
+                swapImages(e.target.dataset.images.replace(/\s/g, '').split(','), 1);
+            } else if (e.target.classList.contains('product-card__link')) {
+                slideImages(e.target, pColors[0].dataset.images.replace(/\s/g, '').split(','));
+            } else {
+                updateColors(pCard.dataset.productId);
+                updateSizes(pCard.dataset.productId);
+                updateImage(pCard.dataset.productId);
+                clearTimeout(swapImagesTimer);
+            }
+        }, true);
+
+
+        pCard.addEventListener('mouseout', () => {
+            updateColors();
+            updateSizes();
+            clearTimeout(swapImagesTimer);
+        });
+
+        function updateColors(colorId) {
+            pColors.forEach(pColor => {
+                if (pColor.dataset.colorId == colorId) {
+                    pColor.classList.add('is-active');
+                } else { pColor.classList.remove('is-active'); }
+            });
         }
 
-        function swapProductPic(picsArray, productColorActiveId) {
-            productColorPicIndex = productColorPicIndex == (picsArray.length - 1) ? 0 : productColorPicIndex + 1;
+        function updateSizes(colorId) {
+            pSizes.forEach(pSize => {
+                if (pSize.dataset.colorId == colorId) {
+                    pSize.classList.add('is-showed');
+                } else { pSize.classList.remove('is-showed'); }
+            });
+        }
 
-            swapProductPicTimer = setTimeout(function () {
-                if (picsArray[productColorPicIndex] == productColorActiveId) {
-                    productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${picsArray[productColorPicIndex]}`;
-                    productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${picsArray[productColorPicIndex]}`;
-                } else {
-                    productPicPath0 = `https://cdn1.moyo.moda/ws/extra/470x705/${picsArray[productColorPicIndex]}`;
-                    productPicPath1 = `https://cdn1.moyo.moda/ws/extra/300x450/${picsArray[productColorPicIndex]}`;
-                }
+        function updateImage(imageId) {
+            let cdnFolder = imageId.includes('-') ? "extra" : "main";
+            let path0 = `https://cdn1.moyo.moda/ws/${cdnFolder}/470x705/${imageId}`;
+            let path1 = `https://cdn1.moyo.moda/ws/${cdnFolder}/300x450/${imageId}`;
+            pPicSources[0].setAttribute('srcset', path0 + '.webp');
+            pPicSources[1].setAttribute('srcset', path1 + '.webp');
+            pPicImg.setAttribute('src', path0 + '.jpg');
+        }
 
-                productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
-                productPicSources[1].setAttribute('srcset', productPicPath1 + '.webp');
-                productPicImg.setAttribute('src', productPicPath0 + '.jpg');
-                swapProductPic(picsArray, productColorActiveId);
+        // авто-листание фоток
+        function swapImages(images, index) {
+            swapImagesTimer = setTimeout(function () {
+                updateImage(images[index]);
+                index = index == images.length - 1 ? 0 : index + 1;
+                swapImages(images, index);
             }, 1000);
         }
 
-
-        //листание фото товара в мини-карточке товара при наведении на фото
-        productWrapper.addEventListener('mouseover', () => {
-            swapProductPic(colorPics, productColorActiveId);
-        });
-
-
-        //прекращение листания при отведении курсора с фото
-        productWrapper.addEventListener('mouseout', () => {
-            // productColorActiveId = productColors[0].dataset.colorId
-            productColorPicIndex = 0;
-
-            let productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${productsCard.dataset.productId}`;
-            let productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${productsCard.dataset.productId}`;
-
-            productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
-            productPicSources[1].setAttribute('srcset', productPicPath1 + '.webp');
-            productPicImg.setAttribute('src', productPicPath0 + '.jpg');
-
-            clearTimeout(swapProductPicTimer);
-            if (productSizes.length > 0) {
-                swapProductSizes(productColorActiveId);
-            }
-        });
-
-        //листание фото товара и изменение ссылки в мини-карточке товара при наведении на thumb
-        productColors.forEach(productColor => {
-            productColor.addEventListener('mouseover', () => {
-                productColorActiveId = productColor.dataset.colorId;
-                colorPics = productColor.dataset.colorPics.replace(/\s/g, '').split(',');
-
-                productPicPath0 = `https://cdn1.moyo.moda/ws/main/470x705/${productColorActiveId}`;
-                productPicPath1 = `https://cdn1.moyo.moda/ws/main/300x450/${productColorActiveId}`;
-
-                productPicSources[0].setAttribute('srcset', productPicPath0 + '.webp');
-                productPicSources[1].setAttribute('srcset', productPicPath1 + '.webp');
-                productPicImg.setAttribute('src', productPicPath0 + '.jpg');
-
-                swapProductPic(colorPics, productColorActiveId);
-                if (productSizes.length > 0) {
-                    swapProductSizes(productColorActiveId);
-                }
-
-                //подстветка активного пункта
-                productColors.forEach(item => {
-                    item.classList.remove('is-active');
+        // ручное пролистывание фотки при шуршании по ней
+        function slideImages(el, images) {
+            let slider = document.createElement('div');
+            slider.classList.add('product-card-slider');
+            images.forEach(image => {
+                const sliderItem = document.createElement('div');
+                sliderItem.classList.add('product-card-slider__item');
+                sliderItem.dataset.imageId = image;
+                sliderItem.addEventListener('mouseover', () => {
+                    updateImage(image);
                 });
-                productColor.classList.add('is-active');
-
-                //смена ссылки 
-                productLinkPic.href =`product/${productColorActiveId}`;
-                productLinkHeader.href =`product/${productColorActiveId}`;
-                productLinkPreview.dataset.src = `product/${productColorActiveId}`;
+                slider.appendChild(sliderItem);
             });
-
-            //прекращение листания при отведении курсора с thumb
-            productColor.addEventListener('mouseout', () => {
-                clearTimeout(swapProductPicTimer);
-                if (productSizes.length > 0) {
-                    swapProductSizes(productColorActiveId);
-                }
-            });
-        });
-
-
-        //смена доступных размеров при наведении на thumb
-        let swapProductSizes;
-        if (productSizes.length > 0) {
-            swapProductSizes = function (productColorActiveId) {
-                productSizes.forEach(productSize => {
-                    if (productSize.dataset.colorId == productColorActiveId) {
-                        productSize.classList.add('is-showed');
-                    } else {
-                        productSize.classList.remove('is-showed');
-                    }
-                });
-            };
+            el.appendChild(slider);
         }
+
     });
 }

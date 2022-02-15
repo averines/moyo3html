@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 15px;
+    // margin: 0 -15px;
     row-gap: 15px;
     padding-top: 20px;
 
@@ -14,11 +15,11 @@
     }
 
     @media screen and (min-width: 1400px) {
-        // column-gap: 10px;
-        column-gap: 0;
+        column-gap: 20px;
+        // column-gap: 0;
         row-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        margin: 0 -15px;
+        // margin: 0 -15px;
     }
 }
 

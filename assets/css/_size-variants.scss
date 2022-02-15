@@ -1,17 +1,8 @@
 .size-variants {
+    display: flex;
     flex-wrap: wrap;
-    column-gap: 5px;
-    row-gap: 5px;
-    padding: 15px 15px 20px 15px;
-    position: absolute;
-    width: calc(100% + 85px);
-    background-color: #fff;
-    z-index: 3;
-    border-radius: 0 0 6px 6px;
-
-    @media screen and (min-width: 1400px) {
-        left: 0;
-    }
+    column-gap: 4px;
+    row-gap: 4px;
 
     &__item {
         display: none;
@@ -22,7 +13,7 @@
         font-size: 11px;
         border: 1px solid $line-l;
         padding: 0.5em;
-        border-radius: 3px;
+        border-radius: 4px;
 
         &:hover {
             border-color: $line-dd;
@@ -34,7 +25,9 @@
 
         &.is-active {
             border-color: $main;
+            border-color: $text;
             background-color: $main;
+            background-color: $text;
             color: #fff;
         }
     }

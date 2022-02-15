@@ -1,102 +1,119 @@
 .product-card {
-  // background-color: #fff;
-  width: 100%;
+  width: calc(100% / 2 - 10px);
+  margin: 0 5px;
+  padding-bottom: 20px;
   position: relative;
-  border-radius: 3px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
 
-  &__wrapper {
-    position: relative;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 6px;
-    // display: grid;
-    // grid-template-rows: 1.7fr 1fr;
+  @media screen and (min-width: 600px) {
+    width: calc(100% / 3 - 10px);
+  }
 
-    // @media screen and (min-width: 400px) {
-    //   grid-template-rows: 2.5fr 1fr;
-    // }
+  @media screen and (min-width: 1000px) {
+    width: calc(100% / 4 - 10px);
+  }
 
-    // @media screen and (min-width: 600px) {
-    //   grid-template-rows: 3fr 1fr;
-    // }
-
-    // @media screen and (min-width: 768px) {
-    //   grid-template-rows: 2.5fr 1fr;
-    // }
-
-    // @media screen and (min-width: 900px) {
-    //   grid-template-rows: 2.8fr 1fr;
-    // }
-
-    // @media screen and (min-width: 1200px) {
-    //   grid-template-rows: 3fr 1fr;
-    // }
-
-    // @media screen and (min-width: 2400px) {
-    //   grid-template-rows: 4fr 1fr;
-    // }
+  @media screen and (min-width: 1400px) {
+    width: calc(100% / 6 - 10px);
   }
 
   &__content {
     position: relative;
+    z-index: 1;
   }
 
   &__buttons {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    // min-height: 210px;
-    // border: 1px solid red;
-
-    &::before {
-      content: "";
-      display: block;
-      padding-top: 100%;
-    }
-  }
-
-  &__pic {
-    display: block;
-    // width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    // border-radius: 3px 3px 0 0;
-    border-radius: 6px;
-    overflow: hidden;
-
-    > img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    z-index: 1;
   }
 
   &__badges {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__favorite {
     position: absolute;
-    left: 0;
+    top: -5px;
     right: 0;
-    top: 0;
-    bottom: 0;
     z-index: 1;
+  }
+
+  &__pic {
     pointer-events: none;
+    img {
+      display: block;
+      border-radius: 8px;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    position: absolute;
+    display: block;
   }
 
   &__info {
-    display: flex;
+    z-index: 2;
+    padding: 15px 15px 0 15px;
+  }
+
+  &__price {
+    font-size: 0.8em;
+  }
+
+  &__header {
+    text-decoration: none;
+    display: inline-flex;
     flex-direction: column;
-    padding: 15px;
-    align-content: space-between;
-    position: relative;
-    border-radius: 0 0 6px 6px;
+    justify-content: flex-start;
+    transition: $tr;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    color: $text;
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    color: $text-l;
+  }
+
+  &__extra-wrapper {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    left: -10px;
+    bottom: -10px;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__extra {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 0;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    padding: 0 25px 25px 25px;
+    display: none;
   }
 
   &__warning {
@@ -107,195 +124,46 @@
     margin-bottom: 12px;
   }
 
-  &__header {
-    padding-top: 15px;
-    // padding-right: 35px;
-    display: block;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  &__title {
-    font-size: 14px;
-    font-weight: 600;
-    color: $text;
-  }
-
-  &__subtitle {
-    font-size: 13px;
-    color: $text-l;
-  }
-
-  &__price {
-    font-size: 0.8em;
-    padding-bottom: 0;
-  }
-
-  &__sizes {
-    display: none;
-  }
-
-  &__favorite {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
   &__incart {
     position: absolute;
     right: 0;
     top: 40px;
   }
 
-  &__quickview {
-    display: none;
-    position: absolute;
-    top: calc(50% - 20px);
-    width: 66%;
-    margin: 0 17%;
-    height: 36px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-    color: $text;
-    border-radius: 30px;
-    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    z-index: 4;
+
+    .product-card__extra-wrapper {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      z-index: -1;
+    }
+
+    .product-card__extra {
+      display: block;
+      background-color: #fff;
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    // .product-card__info {
+    //   padding-bottom: 5px;
+    // }
+  }
+}
+
+.product-card-slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    transition: all 0.15s ease-in-out;
+    opacity: 0;
 
     &:hover {
-      background-color: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    }
-
-    &:active {
-      transform: translateY(1px);
+      opacity: 1;
+      background: linear-gradient(0deg, transparent 90%, rgba(73, 73, 73, 0.1) 100%);
     }
   }
-
-  &__colors {
-    display: none;
-  }
-
-  @media screen and (min-width: 1024px) {
-    &:hover {
-      // box-shadow: 0 6px 8px rgba(100, 100, 100, 0.25);
-      // border-radius: 0;
-
-      .product-card__sizes {
-        display: flex;
-        box-shadow: 0 6px 8px rgba(100, 100, 100, 0.25);
-      }
-
-      .product-card__colors {
-        display: flex;
-        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.25);
-      }
-
-      .product-card__quickview {
-        display: block;
-      }
-
-      // .product-card__pic {
-      //   // border-top-right-radius: 0;
-      // }
-    }
-
-    &:nth-child(4n) {
-      .product-card__colors {
-        right: auto;
-        left: -85px;
-        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.25);
-      }
-
-      .product-card__sizes {
-        left: -85px;
-        padding-left: 85px;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1400px) {
-    background-color: transparent;
-    padding: 15px 15px 0 15px;
-    border-radius: 6px 0 0 0;
-
-    &:hover {
-      background-color: #fff;
-    }
-
-    &:nth-child(4n) {
-      .product-card__colors {
-        left: auto;
-        right: -85px;
-        box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.25);
-      }
-
-      .product-card__sizes {
-        left: auto;
-        right: -85px;
-        padding-left: 20px;
-      }
-    }
-
-    &:nth-child(6n) {
-      border-radius: 0 6px 0 0;
-
-      .product-card__colors {
-        right: auto;
-        left: -85px;
-        box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.25);
-        padding: 15px 0 0 15px;
-      }
-
-      .product-card__sizes {
-        left: -85px;
-        padding-left: 85px;
-      }
-
-      // &:hover {
-      //   padding: 15px 15px 0 0;
-      // }
-    }
-
-    &__info {
-      padding: 20px;
-      background-color: #fff;
-    }
-  }
-
-  // &.carousel__slide {
-
-
-  //   // .product-card__wrapper {
-  //   //   grid-template-rows: 1.5fr 1fr;
-
-  //   //   @media screen and (min-width: 400px) {
-  //   //     grid-template-rows: 1.7fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 500px) {
-  //   //     grid-template-rows: 2fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 600px) {
-  //   //     grid-template-rows: 2.5fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 768px) {
-  //   //     grid-template-rows: 1.5fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 900px) {
-  //   //     grid-template-rows: 2fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 1200px) {
-  //   //     grid-template-rows: 1.6fr 1fr;
-  //   //   }
-
-  //   //   @media screen and (min-width: 1400px) {
-  //   //     grid-template-rows: 2.1fr 1fr;
-  //   //   }
-  //   // }
-  // }
 }

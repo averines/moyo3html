@@ -3,7 +3,6 @@
     display: flex;
     column-gap: 0.75em;
     row-gap: 0.32em;
-    // align-items: center;
 
     &__col {
         display: flex;
@@ -19,6 +18,7 @@
 
     &__old {
         text-decoration: line-through;
+        color: $text-l;
         white-space: nowrap;
         font-size: 0.95em;
 
@@ -78,8 +78,8 @@
         max-width: 300px;
 
         > span {
-            font-weight: 600;
-            font-size: 13px;
+            // font-weight: 600;
+            font-size: 12px;
 
             &::after {
                 content: " ₽";

@@ -1,33 +1,98 @@
 .color-variants {
-    flex-direction: column;
+    display: flex;
     row-gap: 5px;
-    position: absolute;
-    right: -85px;
-    top: 0;
-    width: 85px;
-    z-index: 2;
-    background-color: #fff;
-    height: 100%;
-    padding: 5px 15px 5px 5px;
-    border-radius: 0 6px 0 0;
-
-    @media screen and (min-width: 1400px) {
-        padding: 15px 15px 0 0;
-    }
+    padding-top: 15px;
+    margin-left: -5px;
 
     &__item {
+        text-decoration: none;
+        width: 18px;
+        height: 18px;
         display: block;
-        cursor: pointer;
-        border-radius: 2px;
-        overflow: hidden;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: padding 0.15s ease-in-out;
 
-        > img {
+        &::after {
+            content: "";
             display: block;
+            background-color: rgb(228, 228, 228);
             width: 100%;
+            height: 100%;
+            border-radius: 50%;
         }
 
+        &:hover,
         &.is-active {
-            outline: 1px solid $main-l;
+            padding: 2px;
         }
+
+        &--green {
+            &::after {
+                background-color: rgb(143, 240, 156);
+            }
+        }
+        &--blue {
+            &::after {
+                background-color: rgb(61, 134, 230);
+            }
+        }  
+        &--yellow {
+            &::after {
+                background-color: rgb(255, 235, 124);
+            }
+        }   
+        &--red {
+            &::after {
+                background-color: rgb(255, 108, 97);
+            }
+        }
+        &--pink {
+            &::after {
+                background-color: rgb(255, 167, 215);
+            }
+        }   
+        
+        &--black {
+            &::after {
+                background-color: rgb(43, 43, 43);
+            }
+        }         
     }
 }
+
+// .color-variants {
+//     flex-direction: column;
+//     row-gap: 5px;
+//     position: absolute;
+//     right: -85px;
+//     top: 0;
+//     width: 85px;
+//     z-index: 2;
+//     background-color: #fff;
+//     height: 100%;
+//     padding: 5px 15px 5px 5px;
+//     border-radius: 0 6px 0 0;
+
+//     @media screen and (min-width: 1400px) {
+//         padding: 15px 15px 0 0;
+//     }
+
+//     &__item {
+//         display: block;
+//         cursor: pointer;
+//         border-radius: 2px;
+//         overflow: hidden;
+
+//         > img {
+//             display: block;
+//             width: 100%;
+//         }
+
+//         &.is-active {
+//             outline: 1px solid $main-l;
+//         }
+//     }
+// }
