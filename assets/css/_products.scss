@@ -1,280 +1,68 @@
 .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 15px;
-    // margin: 0 -15px;
-    row-gap: 15px;
-    padding-top: 20px;
-
-    @media screen and (min-width: 768px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @media screen and (min-width: 1024px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    @media screen and (min-width: 1400px) {
-        column-gap: 20px;
-        // column-gap: 0;
-        row-gap: 20px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        // margin: 0 -15px;
-    }
-}
-
-.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    row-gap: 30px;
     padding-top: 30px;
-    padding-bottom: 30px;
-    width: 100%;
-    z-index: 1;
-    position: relative;
 
-    @media screen and (min-width: 1200px) {
-        .carousel__viewport {
-            overflow: visible;
-        }
-    }
-
-    &:hover {
-        z-index: 2;
-    }
-
-    &__title {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        column-gap: 14px;
-        // padding-bottom: 15px;
-
-        &.products-section__title--center {
-            // justify-content: center;
-            // flex-direction: column;
-
-            .products-section__link {
-                padding-top: 12px;
-                &::before {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    &__link {
-        text-transform: uppercase;
-        font-size: 11px;
-        letter-spacing: 0.05em;
-        text-decoration: none;
-        color: $text-l;
-        transition: color 0.15s ease-in-out;
-        display: flex;
-        align-items: center;
-        font-weight: 400;
-
-        &::before {
-            content: "";
-            display: block;
-            width: 1px;
-            height: 0.8em;
-            background-color: $line-l;
-            margin-right: 14px;
-        }
-
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-
-    .products {
-        display: block;
-        margin: 0 -5px;
-
-        @media screen and (min-width: 1200px) {
-            margin: 0 -7px;
-
-            // прячем навигацию для фансибокс слайдера
-            &.has-dots {
-                margin-bottom: 0;
-            }
-            .carousel__dots {
-                display: none;
-            }
-        }
-    }
-
-    .product {
-        flex-shrink: 0;
-        width: 100%;
-        margin: 0 -15px;
-    }
-
-    .product-card__price {
-        font-size: 0.7em;
-    }
-
-    .product-price--card-product .product-price__date {
-        font-size: 11px;
-        white-space: nowrap;
-    }
-
-    .product-price__discount {
-        font-size: 0.9em;
-    }
-
-    .product-card {
-        // padding: 0;
-        // margin: 0 5px;
-        margin: 0;
-        overflow: visible;
-        width: calc(50% - 10px);
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        @media screen and (min-width: 768px) {
-            width: calc(25% - 10px);
-        }
-
-        @media screen and (min-width: 1024px) {
-            &:hover {
-                // box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
-                // border-radius: 0;
-
-                .product-card__sizes {
-                    display: none;
-                    box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
-                }
-
-                .product-card__colors {
-                    display: none;
-                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
-                }
-
-                .product-card__quickview {
-                    display: none;
-                }
-
-                // .product-card__pic {
-                //     border-top-right-radius: 4px;
-                // }
-            }
-
-            &:nth-child(4n) {
-                .product-card__colors {
-                    right: auto;
-                    left: -70px;
-                    box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
-                }
-
-                .product-card__sizes {
-                    left: -70px;
-                    padding-left: 85px;
-                }
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-            // margin: 0 7px;
-            // width: calc(16.7% - 14px);
-            width: 16.7%;
-
-            &:hover {
-                box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
-                // border-radius: 0;
-                background-color: #fff;
-
-                .product-card__sizes {
-                    display: flex;
-                    box-shadow: 0 6px 8px rgba(100, 100, 100, 0.1);
-                    left: 0;
-                }
-
-                .product-card__colors {
-                    display: flex;
-                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
-                    padding: 15px 15px 0 0;
-                }
-
-                .product-card__quickview {
-                    display: block;
-                }
-
-                // .product-card__pic {
-                //     border-top-right-radius: 0;
-                // }
-            }
-
-            &:nth-child(4n) {
-                .product-card__colors {
-                    left: auto;
-                    right: -85px;
-                    box-shadow: 7px 6px 8px rgba(100, 100, 100, 0.1);
-                }
-
-                .product-card__sizes {
-                    left: auto;
-                    right: -85px;
-                    padding-left: 20px;
-                }
-            }
-
-            &:nth-child(6n) {
-                .product-card__colors {
-                    padding: 15px 0 0 15px;
-                    right: auto;
-                    left: -85px;
-                    box-shadow: -7px 6px 8px rgba(100, 100, 100, 0.1);
-                    border-radius: 6px 0 0 0;
-                }
-
-                .product-card__sizes {
-                    left: -85px;
-                    padding-left: 85px;
-                }
-            }
-
-            &__info {
-                padding: 20px;
-            }
-        }
+    @media screen and (min-width: 1000px) {
+        margin: 0 -10px;
     }
 }
 
-.section--hits {
-    .products-section {
-        &:last-child {
-            padding-bottom: 0px;
-        }
-    }
+// .products {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     column-gap: 15px;
 
-    .products {
-        // margin-top: 25px;
+//     row-gap: 15px;
+//     padding-top: 20px;
 
-        // навигация для фансибокс слайдера
-        &.has-dots {
-            .carousel__dots {
-                top: -10px;
-                justify-content: flex-end;
-                .carousel__dot {
-                    width: 12px;
-                    height: 12px;
-                    &:after {
-                        width: 4px;
-                        height: 4px;
-                        background-color: $text-l;
-                    }
+//     @media screen and (min-width: 768px) {
+//         grid-template-columns: 1fr 1fr 1fr;
+//     }
 
-                    &.is-selected {
-                        &:after {
-                            opacity: 1;
-                            background-color: $main;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//     @media screen and (min-width: 1024px) {
+//         grid-template-columns: 1fr 1fr 1fr 1fr;
+//     }
+
+//     @media screen and (min-width: 1400px) {
+//         column-gap: 20px;
+//         row-gap: 20px;
+//         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+//     }
+// }
+
+// .section--hits {
+//     .products-section {
+//         &:last-child {
+//             padding-bottom: 0px;
+//         }
+//     }
+
+//     .products {
+//         // навигация для фансибокс слайдера
+//         &.has-dots {
+//             .carousel__dots {
+//                 top: -10px;
+//                 justify-content: flex-end;
+//                 .carousel__dot {
+//                     width: 12px;
+//                     height: 12px;
+//                     &:after {
+//                         width: 4px;
+//                         height: 4px;
+//                         background-color: $text-l;
+//                     }
+
+//                     &.is-selected {
+//                         &:after {
+//                             opacity: 1;
+//                             background-color: $main;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

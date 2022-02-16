@@ -11,7 +11,6 @@ if (productsCards.length > 0) {
         let pPicImg = pCard.querySelector('.product-card__pic img');
         let swapImagesTimer;
 
-
         pCard.addEventListener('mouseover', (e) => {
             if (e.target.classList.contains('color-variants__item')) {
                 updateColors(e.target.dataset.colorId);
@@ -28,13 +27,20 @@ if (productsCards.length > 0) {
             }
         }, true);
 
-
         pCard.addEventListener('mouseout', () => {
             updateColors();
             updateSizes();
             clearTimeout(swapImagesTimer);
         });
 
+        pCard.addEventListener('mouseleave', (e) => {
+            updateColors();
+            updateSizes();
+            updateImage(e.target.dataset.productId);
+            clearTimeout(swapImagesTimer);
+        });
+
+        // обновление иконок цветов
         function updateColors(colorId) {
             pColors.forEach(pColor => {
                 if (pColor.dataset.colorId == colorId) {
@@ -43,6 +49,7 @@ if (productsCards.length > 0) {
             });
         }
 
+        // обновление показываемых размеров
         function updateSizes(colorId) {
             pSizes.forEach(pSize => {
                 if (pSize.dataset.colorId == colorId) {
@@ -51,6 +58,7 @@ if (productsCards.length > 0) {
             });
         }
 
+        // обновление фотки
         function updateImage(imageId) {
             let cdnFolder = imageId.includes('-') ? "extra" : "main";
             let path0 = `https://cdn1.moyo.moda/ws/${cdnFolder}/470x705/${imageId}`;
@@ -69,10 +77,11 @@ if (productsCards.length > 0) {
             }, 1000);
         }
 
-        // ручное пролистывание фотки при шуршании по ней
+        // ручное листание фоток при шуршании по фотке
         function slideImages(el, images) {
             let slider = document.createElement('div');
             slider.classList.add('product-card-slider');
+            
             images.forEach(image => {
                 const sliderItem = document.createElement('div');
                 sliderItem.classList.add('product-card-slider__item');
@@ -82,6 +91,7 @@ if (productsCards.length > 0) {
                 });
                 slider.appendChild(sliderItem);
             });
+
             el.appendChild(slider);
         }
 

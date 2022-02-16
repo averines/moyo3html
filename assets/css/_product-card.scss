@@ -4,18 +4,36 @@
   padding-bottom: 20px;
   position: relative;
   background-color: #fff;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+
+
+  &:hover {
+    z-index: 99;
+
+    .product-card__extra-wrapper {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      z-index: -1;
+    }
+
+    .product-card__extra {
+      display: block;
+      background-color: #fff;
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+    }
+  }  
 
   @media screen and (min-width: 600px) {
     width: calc(100% / 3 - 10px);
   }
 
   @media screen and (min-width: 1000px) {
-    width: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 30px);
+    margin: 0 15px;
   }
 
   @media screen and (min-width: 1400px) {
-    width: calc(100% / 6 - 10px);
+    width: calc(100% / 6 - 30px);
   }
 
   &__content {
@@ -66,6 +84,10 @@
   &__info {
     z-index: 2;
     padding: 15px 15px 0 15px;
+
+    @media screen and (min-width: 1400px) {
+      padding: 25px 25px 0 25px;
+    }
   }
 
   &__price {
@@ -78,6 +100,7 @@
     flex-direction: column;
     justify-content: flex-start;
     transition: $tr;
+    padding-bottom: 20px;
 
     &:hover {
       opacity: 0.7;
@@ -95,6 +118,11 @@
     color: $text-l;
   }
 
+  &__colors {
+    position: absolute;
+    bottom: 15px;
+  }
+
   &__extra-wrapper {
     position: absolute;
     top: -10px;
@@ -102,18 +130,35 @@
     left: -10px;
     bottom: -10px;
     z-index: 1;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+
+    @media screen and (min-width: 1000px) {
+      top: -20px;
+      right: -20px;
+      left: -20px;
+      bottom: -20px;
+    }
   }
 
   &__extra {
     position: absolute;
-    top: calc(100% - 15px);
+    top: calc(100% - 10px);
     left: 0;
     right: 0;
     border-radius: 0 0 10px 10px;
     z-index: 2;
-    padding: 0 25px 25px 25px;
+    padding: 0 20px 20px 20px;
     display: none;
+
+    @media screen and (min-width: 1000px) {
+      top: calc(100% - 20px);
+      padding: 0 30px 30px 30px;
+    }
+
+    @media screen and (min-width: 1400px) {
+      top: calc(100% - 25px);
+      padding: 0 40px 30px 40px;
+    }
   }
 
   &__warning {
@@ -130,40 +175,4 @@
     top: 40px;
   }
 
-  &:hover {
-    z-index: 4;
-
-    .product-card__extra-wrapper {
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-      background-color: #fff;
-      z-index: -1;
-    }
-
-    .product-card__extra {
-      display: block;
-      background-color: #fff;
-      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    // .product-card__info {
-    //   padding-bottom: 5px;
-    // }
-  }
-}
-
-.product-card-slider {
-  width: 100%;
-  height: 100%;
-  display: flex;
-
-  &__item {
-    flex-grow: 1;
-    transition: all 0.15s ease-in-out;
-    opacity: 0;
-
-    &:hover {
-      opacity: 1;
-      background: linear-gradient(0deg, transparent 90%, rgba(73, 73, 73, 0.1) 100%);
-    }
-  }
 }

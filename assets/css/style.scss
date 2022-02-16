@@ -29,7 +29,6 @@
 @import "cart-mini";
 @import "favorites-mini";
 @import "dropdown-products";
-@import "product-price";
 @import "modal";
 @import "fancybox";
 @import "callback-phones";
@@ -50,8 +49,7 @@
 @import "pagination";
 @import "togglers";
 @import "filters-selected";
-// @import "products";
-@import "products2";
+
 @import "pagebanner";
 @import "banners";
 @import "tabs";
@@ -60,6 +58,8 @@
 @import "allpageslist";
 @import "table";
 
+@import "products";
+@import "product-price";
 @import "product-gallery";
 @import "product-pics";
 @import "product-thumbs";
@@ -72,7 +72,16 @@
 @import "product-table";
 @import "product-feedback";
 @import "product-buy";
+@import "products-section";
+@import "slider-products";
 @import "quantity";
+
+@import "product-card";
+@import "product-card-slider";
+// @import "product-quickview";
+@import "size-variants";
+@import "color-variants";
+@import "badges";
 
 @import "rating-number";
 @import "rating-lines";
@@ -89,12 +98,6 @@
 @import "social-share";
 @import "after";
 @import "form";
-
-@import "product-card";
-@import "size-variants";
-@import "color-variants";
-@import "badges";
-@import "product-quickview";
 
 @import "list-products";
 @import "list-table";
@@ -127,6 +130,5 @@
 @import "custom-radio";
 @import "box";
 @import "order-prepare";
-
 
 @import "_margins";

@@ -21,6 +21,7 @@
 
         &.is-showed {
             display: block;
+            animation: slideup 0.1s ease-in-out;
         }
 
         &.is-active {
@@ -29,6 +30,11 @@
             background-color: $main;
             background-color: $text;
             color: #fff;
+        }
+
+        &.off:hover {
+            border-color: $line-l !important;
+            cursor: default !important;
         }
     }
 }
