@@ -6,8 +6,8 @@
 
     &__item {
         text-decoration: none;
-        width: 18px;
-        height: 18px;
+        width: 17px;
+        height: 17px;
         display: block;
         padding: 5px;
         display: flex;
@@ -30,8 +30,8 @@
             display: none;
             position: absolute;
             content: "";
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             background-color: #fff;
             border-radius: 50%;
             // border-radius: 20%;
@@ -40,9 +40,12 @@
         &:hover,
         &.is-active {
             padding: 2px;
+
+            @media screen and (min-width: 1200px) {
+                padding: 3px;
+            }
+
             &::before {
-                // width: 4px;
-                // height: 4px;
                 opacity: 0;
             }
         }

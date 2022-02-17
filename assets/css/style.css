@@ -7463,8 +7463,8 @@ footer .footer-container {
 }
 .color-variants__item {
   text-decoration: none;
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   display: block;
   padding: 5px;
   display: flex;
@@ -7485,13 +7485,18 @@ footer .footer-container {
   display: none;
   position: absolute;
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background-color: #fff;
   border-radius: 50%;
 }
 .color-variants__item:hover, .color-variants__item.is-active {
   padding: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .color-variants__item:hover, .color-variants__item.is-active {
+    padding: 3px;
+  }
 }
 .color-variants__item:hover::before, .color-variants__item.is-active::before {
   opacity: 0;
