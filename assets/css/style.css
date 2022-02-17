@@ -7335,6 +7335,7 @@ footer .footer-container {
   font-weight: 600;
   font-size: 14px;
   color: #3d3d3c;
+  text-transform: uppercase;
 }
 .product-card__subtitle {
   font-size: 13px;
