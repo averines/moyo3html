@@ -28,9 +28,11 @@
     <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
+    <!-- <link rel="stylesheet" href="./assets/libs/ion-range-slider/ion.rangeSlider.min.css"> -->
     <link rel="stylesheet" href="./assets/css/style.min.css">
 
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
+    <!-- <script src="./assets/libs/ion-range-slider/ion.rangeSlider.min.js"></script> -->
     <script src="./assets/js.min.js" defer></script>
 </head>
 
@@ -1640,7 +1642,1421 @@
             <div class="pagetitle">
                 <h1 class="pagetitle__header">Платья</h1>
                 <div class="pagetitle__counter">1000 товаров</div>
-                <button class="pagetitle__btn btn-filter">Фильтры</button>
+                <button id="btn-filter" class="pagetitle__btn btn-filter">Фильтры</button>
+            </div>
+
+            <div class="menu-filters-wrapper">
+                <div class="menu-filters">
+                    <div class="menu-filters__title">
+                        <button class="menu-filters__close"></button>
+                        Фильтры
+                        <button class="menu-filters__clear" id="menu-filters-clear">Очистить</button>
+                    </div>
+                    <div class="menu-filters__content accordion">
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Основная ткань</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-1">
+                                        <label for="filter-checkbox-02-item-1">
+                                            <span class="filter-checkbox__title">Велсофт</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-2">
+                                        <label for="filter-checkbox-02-item-2">
+                                            <span class="filter-checkbox__title">Вискоза</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-3">
+                                        <label for="filter-checkbox-02-item-3">
+                                            <span class="filter-checkbox__title">Замша</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-4">
+                                        <label for="filter-checkbox-02-item-4">
+                                            <span class="filter-checkbox__title">Искусственный мех</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-5">
+                                        <label for="filter-checkbox-02-item-5">
+                                            <span class="filter-checkbox__title">Искусственный шелк</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-6">
+                                        <label for="filter-checkbox-02-item-6">
+                                            <span class="filter-checkbox__title">Искуственная кожа</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-7">
+                                        <label for="filter-checkbox-02-item-7">
+                                            <span class="filter-checkbox__title">Искуственный нубук</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-8">
+                                        <label for="filter-checkbox-02-item-8">
+                                            <span class="filter-checkbox__title">Кашемир</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-9">
+                                        <label for="filter-checkbox-02-item-9">
+                                            <span class="filter-checkbox__title">Лайкра</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-10">
+                                        <label for="filter-checkbox-02-item-10">
+                                            <span class="filter-checkbox__title">Лён</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-11">
+                                        <label for="filter-checkbox-02-item-11">
+                                            <span class="filter-checkbox__title">Микромодал</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-12">
+                                        <label for="filter-checkbox-02-item-12">
+                                            <span class="filter-checkbox__title">Микрофибра</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-13">
+                                        <label for="filter-checkbox-02-item-13">
+                                            <span class="filter-checkbox__title">Натуральная кожа</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-14">
+                                        <label for="filter-checkbox-02-item-14">
+                                            <span class="filter-checkbox__title">Натуральный нубук</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-15">
+                                        <label for="filter-checkbox-02-item-15">
+                                            <span class="filter-checkbox__title">Нейлон</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-16">
+                                        <label for="filter-checkbox-02-item-16">
+                                            <span class="filter-checkbox__title">Полиамид Полиуретан</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-17">
+                                        <label for="filter-checkbox-02-item-17">
+                                            <span class="filter-checkbox__title">Поливинилхлорид</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-18">
+                                        <label for="filter-checkbox-02-item-18">
+                                            <span class="filter-checkbox__title">Полиэстер</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-19">
+                                        <label for="filter-checkbox-02-item-19">
+                                            <span class="filter-checkbox__title">Тенсел Бамбук Акрил Модал</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-20">
+                                        <label for="filter-checkbox-02-item-20">
+                                            <span class="filter-checkbox__title">Хлопок</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-21">
+                                        <label for="filter-checkbox-02-item-21">
+                                            <span class="filter-checkbox__title">Шелк</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-22">
+                                        <label for="filter-checkbox-02-item-22">
+                                            <span class="filter-checkbox__title">Шерсть</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-02-item-23">
+                                        <label for="filter-checkbox-02-item-23">
+                                            <span class="filter-checkbox__title">Шифон</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Цвет</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-1">
+                                        <label for="filter-checkbox-03-item-1">
+                                            <span class="icon-color icon-color--white"></span>
+                                            <span class="filter-checkbox__title">Белый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-2">
+                                        <label for="filter-checkbox-03-item-2">
+                                            <span class="icon-color icon-color--biege"></span>
+                                            <span class="filter-checkbox__title">Бежевый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-3">
+                                        <label for="filter-checkbox-03-item-3">
+                                            <span class="icon-color icon-color--lightblue"></span>
+                                            <span class="filter-checkbox__title">Голубой</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-4">
+                                        <label for="filter-checkbox-03-item-4">
+                                            <span class="icon-color icon-color--yellow"></span>
+                                            <span class="filter-checkbox__title">Желтый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-5">
+                                        <label for="filter-checkbox-03-item-5">
+                                            <span class="icon-color icon-color--green"></span>
+                                            <span class="filter-checkbox__title">Зеленый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-6">
+                                        <label for="filter-checkbox-03-item-6">
+                                            <span class="icon-color icon-color--brown"></span>
+                                            <span class="filter-checkbox__title">Коричневый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-7">
+                                        <label for="filter-checkbox-03-item-7">
+                                            <span class="icon-color icon-color--red"></span>
+                                            <span class="filter-checkbox__title">Красный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-8">
+                                        <label for="filter-checkbox-03-item-8">
+                                            <span class="icon-color icon-color--orange"></span>
+                                            <span class="filter-checkbox__title">Оранжевый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-9">
+                                        <label for="filter-checkbox-03-item-9">
+                                            <span class="icon-color icon-color--magenta"></span>
+                                            <span class="filter-checkbox__title">Розовый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-10">
+                                        <label for="filter-checkbox-03-item-10">
+                                            <span class="icon-color icon-color--gray"></span>
+                                            <span class="filter-checkbox__title">Серый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-11">
+                                        <label for="filter-checkbox-03-item-11">
+                                            <span class="icon-color icon-color--blue"></span>
+                                            <span class="filter-checkbox__title">Синий</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-12">
+                                        <label for="filter-checkbox-03-item-12">
+                                            <span class="icon-color icon-color--purple"></span>
+                                            <span class="filter-checkbox__title">Фиолетовый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-03-item-13">
+                                        <label for="filter-checkbox-03-item-13">
+                                            <span class="icon-color icon-color--black"></span>
+                                            <span class="filter-checkbox__title">Черный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Размеры</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-1">
+                                        <label for="filter-checkbox-04-item-1">
+                                            <span class="filter-checkbox__title">23/32</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-2">
+                                        <label for="filter-checkbox-04-item-2">
+                                            <span class="filter-checkbox__title">23/34</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-3">
+                                        <label for="filter-checkbox-04-item-3">
+                                            <span class="filter-checkbox__title">24/32</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-4">
+                                        <label for="filter-checkbox-04-item-4">
+                                            <span class="filter-checkbox__title">24/34</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-5">
+                                        <label for="filter-checkbox-04-item-5">
+                                            <span class="filter-checkbox__title">25</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-6">
+                                        <label for="filter-checkbox-04-item-6">
+                                            <span class="filter-checkbox__title">25/32</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-7">
+                                        <label for="filter-checkbox-04-item-7">
+                                            <span class="filter-checkbox__title">25/34</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-8">
+                                        <label for="filter-checkbox-04-item-8">
+                                            <span class="filter-checkbox__title">26</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-9">
+                                        <label for="filter-checkbox-04-item-9">
+                                            <span class="filter-checkbox__title">26</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-04-item-10">
+                                        <label for="filter-checkbox-04-item-10">
+                                            <span class="filter-checkbox__title">26</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Сезон</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-05-item-1">
+                                        <label for="filter-checkbox-05-item-1">
+                                            <span class="filter-checkbox__title">Демисезон</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-05-item-2">
+                                        <label for="filter-checkbox-05-item-2">
+                                            <span class="filter-checkbox__title">Весна – Лето</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-05-item-3">
+                                        <label for="filter-checkbox-05-item-3">
+                                            <span class="filter-checkbox__title">Осень – Зима</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Длина</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-1">
+                                        <label for="filter-checkbox-06-item-1">
+                                            <span class="filter-checkbox__title">3/4</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-2">
+                                        <label for="filter-checkbox-06-item-2">
+                                            <span class="filter-checkbox__title">7/8</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-3">
+                                        <label for="filter-checkbox-06-item-3">
+                                            <span class="filter-checkbox__title">Длинная</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-4">
+                                        <label for="filter-checkbox-06-item-4">
+                                            <span class="filter-checkbox__title">До колена</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-5">
+                                        <label for="filter-checkbox-06-item-5">
+                                            <span class="filter-checkbox__title">Короткая</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-6">
+                                        <label for="filter-checkbox-06-item-6">
+                                            <span class="filter-checkbox__title">Длинная</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-7">
+                                        <label for="filter-checkbox-06-item-7">
+                                            <span class="filter-checkbox__title">Макси</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-8">
+                                        <label for="filter-checkbox-06-item-8">
+                                            <span class="filter-checkbox__title">Миди</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-9">
+                                        <label for="filter-checkbox-06-item-9">
+                                            <span class="filter-checkbox__title">Мини</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-10">
+                                        <label for="filter-checkbox-06-item-10">
+                                            <span class="filter-checkbox__title">Ниже колена</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-11">
+                                        <label for="filter-checkbox-06-item-11">
+                                            <span class="filter-checkbox__title">Полная</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-12">
+                                        <label for="filter-checkbox-06-item-12">
+                                            <span class="filter-checkbox__title">Средняя</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-13">
+                                        <label for="filter-checkbox-06-item-13">
+                                            <span class="filter-checkbox__title">Удлиненная</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-06-item-14">
+                                        <label for="filter-checkbox-06-item-14">
+                                            <span class="filter-checkbox__title">Укороченная</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Фасон</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-1">
+                                        <label for="filter-checkbox-07-item-1">
+                                            <span class="filter-checkbox__title">Зауженные Полуприталенный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-2">
+                                        <label for="filter-checkbox-07-item-2">
+                                            <span class="filter-checkbox__title">Кокон</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-3">
+                                        <label for="filter-checkbox-07-item-3">
+                                            <span class="filter-checkbox__title">Облегающий Клеш</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-4">
+                                        <label for="filter-checkbox-07-item-4">
+                                            <span class="filter-checkbox__title">Оверсайз</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-5">
+                                        <label for="filter-checkbox-07-item-5">
+                                            <span class="filter-checkbox__title">От бедра прямые</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-6">
+                                        <label for="filter-checkbox-07-item-6">
+                                            <span class="filter-checkbox__title">Полуприлегающий</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-7">
+                                        <label for="filter-checkbox-07-item-7">
+                                            <span class="filter-checkbox__title">Приталенный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-8">
+                                        <label for="filter-checkbox-07-item-8">
+                                            <span class="filter-checkbox__title">Прямой</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-9">
+                                        <label for="filter-checkbox-07-item-9">
+                                            <span class="filter-checkbox__title">Расклешенный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-10">
+                                        <label for="filter-checkbox-07-item-10">
+                                            <span class="filter-checkbox__title">Свободный крой</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-11">
+                                        <label for="filter-checkbox-07-item-11">
+                                            <span class="filter-checkbox__title">Слегка приуженные</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-12">
+                                        <label for="filter-checkbox-07-item-12">
+                                            <span class="filter-checkbox__title">Трапеция</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-13">
+                                        <label for="filter-checkbox-07-item-13">
+                                            <span class="filter-checkbox__title">Узкие</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-07-item-14">
+                                        <label for="filter-checkbox-07-item-14">
+                                            <span class="filter-checkbox__title">Футляр</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Рукав</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-1">
+                                        <label for="filter-checkbox-08-item-1">
+                                            <span class="filter-checkbox__title">3/4</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-2">
+                                        <label for="filter-checkbox-08-item-2">
+                                            <span class="filter-checkbox__title">Без рукавов</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-3">
+                                        <label for="filter-checkbox-08-item-3">
+                                            <span class="filter-checkbox__title">Волан</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-4">
+                                        <label for="filter-checkbox-08-item-4">
+                                            <span class="filter-checkbox__title">Длинные</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-5">
+                                        <label for="filter-checkbox-08-item-5">
+                                            <span class="filter-checkbox__title">До локтя</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-6">
+                                        <label for="filter-checkbox-08-item-6">
+                                            <span class="filter-checkbox__title">Короткие</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-7">
+                                        <label for="filter-checkbox-08-item-7">
+                                            <span class="filter-checkbox__title">Крылышки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-8">
+                                        <label for="filter-checkbox-08-item-8">
+                                            <span class="filter-checkbox__title">Летучая мышь</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-9">
+                                        <label for="filter-checkbox-08-item-9">
+                                            <span class="filter-checkbox__title">Ниже локтя</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-10">
+                                        <label for="filter-checkbox-08-item-10">
+                                            <span class="filter-checkbox__title">Реглан</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-11">
+                                        <label for="filter-checkbox-08-item-11">
+                                            <span class="filter-checkbox__title">С длинным рукавом реглан</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-08-item-12">
+                                        <label for="filter-checkbox-08-item-12">
+                                            <span class="filter-checkbox__title">С коротким рукавом реглан</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Вид застежки</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-1">
+                                        <label for="filter-checkbox-09-item-1">
+                                            <span class="filter-checkbox__title">Бант</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-2">
+                                        <label for="filter-checkbox-09-item-2">
+                                            <span class="filter-checkbox__title">Без застежки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-3">
+                                        <label for="filter-checkbox-09-item-3">
+                                            <span class="filter-checkbox__title">Булавка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-4">
+                                        <label for="filter-checkbox-09-item-4">
+                                            <span class="filter-checkbox__title">Завязки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-5">
+                                        <label for="filter-checkbox-09-item-5">
+                                            <span class="filter-checkbox__title">Имитация</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-6">
+                                        <label for="filter-checkbox-09-item-6">
+                                            <span class="filter-checkbox__title">Кнопки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-7">
+                                        <label for="filter-checkbox-09-item-7">
+                                            <span class="filter-checkbox__title">Крючки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-8">
+                                        <label for="filter-checkbox-09-item-8">
+                                            <span class="filter-checkbox__title">Крючок</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-9">
+                                        <label for="filter-checkbox-09-item-9">
+                                            <span class="filter-checkbox__title">Липучка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-10">
+                                        <label for="filter-checkbox-09-item-10">
+                                            <span class="filter-checkbox__title">Магнит</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-11">
+                                        <label for="filter-checkbox-09-item-11">
+                                            <span class="filter-checkbox__title">Молния</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-12">
+                                        <label for="filter-checkbox-09-item-12">
+                                            <span class="filter-checkbox__title">Нет</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-13">
+                                        <label for="filter-checkbox-09-item-13">
+                                            <span class="filter-checkbox__title">Пряжка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-14">
+                                        <label for="filter-checkbox-09-item-14">
+                                            <span class="filter-checkbox__title">Пуговица</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-15">
+                                        <label for="filter-checkbox-09-item-15">
+                                            <span class="filter-checkbox__title">Резинка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-16">
+                                        <label for="filter-checkbox-09-item-16">
+                                            <span class="filter-checkbox__title">Ремешок</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-17">
+                                        <label for="filter-checkbox-09-item-17">
+                                            <span class="filter-checkbox__title">С запахом</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-18">
+                                        <label for="filter-checkbox-09-item-18">
+                                            <span class="filter-checkbox__title">Цепочка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-09-item-19">
+                                        <label for="filter-checkbox-09-item-19">
+                                            <span class="filter-checkbox__title">Шнуровка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Вырез горловины</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-1">
+                                        <label for="filter-checkbox-10-item-1">
+                                            <span class="filter-checkbox__title">U-образный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-2">
+                                        <label for="filter-checkbox-10-item-2">
+                                            <span class="filter-checkbox__title">V-образный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-3">
+                                        <label for="filter-checkbox-10-item-3">
+                                            <span class="filter-checkbox__title">Воротник-стойка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-4">
+                                        <label for="filter-checkbox-10-item-4">
+                                            <span class="filter-checkbox__title">Высокий ворот</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-5">
+                                        <label for="filter-checkbox-10-item-5">
+                                            <span class="filter-checkbox__title">Декольте</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-6">
+                                        <label for="filter-checkbox-10-item-6">
+                                            <span class="filter-checkbox__title">Запах</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-7">
+                                        <label for="filter-checkbox-10-item-7">
+                                            <span class="filter-checkbox__title">Каре</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-8">
+                                        <label for="filter-checkbox-10-item-8">
+                                            <span class="filter-checkbox__title">Кармен</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-9">
+                                        <label for="filter-checkbox-10-item-9">
+                                            <span class="filter-checkbox__title">Качели</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-10">
+                                        <label for="filter-checkbox-10-item-10">
+                                            <span class="filter-checkbox__title">Лодочка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-11">
+                                        <label for="filter-checkbox-10-item-11">
+                                            <span class="filter-checkbox__title">На бретельках</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-12">
+                                        <label for="filter-checkbox-10-item-12">
+                                            <span class="filter-checkbox__title">Овальный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-13">
+                                        <label for="filter-checkbox-10-item-13">
+                                            <span class="filter-checkbox__title">Округлый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-14">
+                                        <label for="filter-checkbox-10-item-14">
+                                            <span class="filter-checkbox__title">Отложной воротник</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-15">
+                                        <label for="filter-checkbox-10-item-15">
+                                            <span class="filter-checkbox__title">Сердечко</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-16">
+                                        <label for="filter-checkbox-10-item-16">
+                                            <span class="filter-checkbox__title">Стоечка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-17">
+                                        <label for="filter-checkbox-10-item-17">
+                                            <span class="filter-checkbox__title">Фигурный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-10-item-18">
+                                        <label for="filter-checkbox-10-item-18">
+                                            <span class="filter-checkbox__title">Хомут</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Рисунок</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-1">
+                                        <label for="filter-checkbox-11-item-1">
+                                            <span class="filter-checkbox__title">Абстракция</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-2">
+                                        <label for="filter-checkbox-11-item-2">
+                                            <span class="filter-checkbox__title">Бабочки</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-3">
+                                        <label for="filter-checkbox-11-item-3">
+                                            <span class="filter-checkbox__title">Бант</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-4">
+                                        <label for="filter-checkbox-11-item-4">
+                                            <span class="filter-checkbox__title">Без рисунка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-5">
+                                        <label for="filter-checkbox-11-item-5">
+                                            <span class="filter-checkbox__title">Газетный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-6">
+                                        <label for="filter-checkbox-11-item-6">
+                                            <span class="filter-checkbox__title">Геометрия</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-7">
+                                        <label for="filter-checkbox-11-item-7">
+                                            <span class="filter-checkbox__title">Гжель</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-8">
+                                        <label for="filter-checkbox-11-item-8">
+                                            <span class="filter-checkbox__title">Горох</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-9">
+                                        <label for="filter-checkbox-11-item-9">
+                                            <span class="filter-checkbox__title">Гусиная лапка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-10">
+                                        <label for="filter-checkbox-11-item-10">
+                                            <span class="filter-checkbox__title">Девушка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-11">
+                                        <label for="filter-checkbox-11-item-11">
+                                            <span class="filter-checkbox__title">Животные, пейсли</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-12">
+                                        <label for="filter-checkbox-11-item-12">
+                                            <span class="filter-checkbox__title">Звезды</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-13">
+                                        <label for="filter-checkbox-11-item-13">
+                                            <span class="filter-checkbox__title">Зебра</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-14">
+                                        <label for="filter-checkbox-11-item-14">
+                                            <span class="filter-checkbox__title">Зигзаг</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-15">
+                                        <label for="filter-checkbox-11-item-15">
+                                            <span class="filter-checkbox__title">Клетка</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-16">
+                                        <label for="filter-checkbox-11-item-16">
+                                            <span class="filter-checkbox__title">Коллаж</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-17">
+                                        <label for="filter-checkbox-11-item-17">
+                                            <span class="filter-checkbox__title">Котики</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-18">
+                                        <label for="filter-checkbox-11-item-18">
+                                            <span class="filter-checkbox__title">Леопардовый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-19">
+                                        <label for="filter-checkbox-11-item-19">
+                                            <span class="filter-checkbox__title">Линии</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-20">
+                                        <label for="filter-checkbox-11-item-20">
+                                            <span class="filter-checkbox__title">Милитари</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-21">
+                                        <label for="filter-checkbox-11-item-21">
+                                            <span class="filter-checkbox__title">Монаграма</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-22">
+                                        <label for="filter-checkbox-11-item-22">
+                                            <span class="filter-checkbox__title">Морской</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-23">
+                                        <label for="filter-checkbox-11-item-23">
+                                            <span class="filter-checkbox__title">Надпись</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-24">
+                                        <label for="filter-checkbox-11-item-24">
+                                            <span class="filter-checkbox__title">Облака</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-25">
+                                        <label for="filter-checkbox-11-item-25">
+                                            <span class="filter-checkbox__title">Орнамент</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-26">
+                                        <label for="filter-checkbox-11-item-26">
+                                            <span class="filter-checkbox__title">Пейзаж</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-27">
+                                        <label for="filter-checkbox-11-item-27">
+                                            <span class="filter-checkbox__title">Полоска</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-28">
+                                        <label for="filter-checkbox-11-item-28">
+                                            <span class="filter-checkbox__title">Полоски</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-29">
+                                        <label for="filter-checkbox-11-item-29">
+                                            <span class="filter-checkbox__title">Портрет</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-30">
+                                        <label for="filter-checkbox-11-item-30">
+                                            <span class="filter-checkbox__title">Птицы</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-31">
+                                        <label for="filter-checkbox-11-item-31">
+                                            <span class="filter-checkbox__title">Разводы</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-32">
+                                        <label for="filter-checkbox-11-item-32">
+                                            <span class="filter-checkbox__title">Растительный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-33">
+                                        <label for="filter-checkbox-11-item-33">
+                                            <span class="filter-checkbox__title">Рептилия</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-34">
+                                        <label for="filter-checkbox-11-item-34">
+                                            <span class="filter-checkbox__title">Ромб</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-45">
+                                        <label for="filter-checkbox-11-item-45">
+                                            <span class="filter-checkbox__title">Сердце</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-56">
+                                        <label for="filter-checkbox-11-item-56">
+                                            <span class="filter-checkbox__title">Узор</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-37">
+                                        <label for="filter-checkbox-11-item-37">
+                                            <span class="filter-checkbox__title">Фантазийный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-38">
+                                        <label for="filter-checkbox-11-item-38">
+                                            <span class="filter-checkbox__title">Фрукты</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-39">
+                                        <label for="filter-checkbox-11-item-39">
+                                            <span class="filter-checkbox__title">Хохлама</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-40">
+                                        <label for="filter-checkbox-11-item-40">
+                                            <span class="filter-checkbox__title">Цветочный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-11-item-41">
+                                        <label for="filter-checkbox-11-item-41">
+                                            <span class="filter-checkbox__title">Цепи</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Тип карманов</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-1">
+                                        <label for="filter-checkbox-12-item-1">
+                                            <span class="filter-checkbox__title">Без карманов</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-2">
+                                        <label for="filter-checkbox-12-item-2">
+                                            <span class="filter-checkbox__title">Втачные</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-3">
+                                        <label for="filter-checkbox-12-item-3">
+                                            <span class="filter-checkbox__title">Кенгуру</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-4">
+                                        <label for="filter-checkbox-12-item-4">
+                                            <span class="filter-checkbox__title">Косой</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-5">
+                                        <label for="filter-checkbox-12-item-5">
+                                            <span class="filter-checkbox__title">Накладной</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-6">
+                                        <label for="filter-checkbox-12-item-6">
+                                            <span class="filter-checkbox__title">Потайной</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-7">
+                                        <label for="filter-checkbox-12-item-7">
+                                            <span class="filter-checkbox__title">Прорезной на молнии</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-8">
+                                        <label for="filter-checkbox-12-item-8">
+                                            <span class="filter-checkbox__title">Прорезной</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-12-item-9">
+                                        <label for="filter-checkbox-12-item-9">
+                                            <span class="filter-checkbox__title">Прорезные на пуговице</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Стиль</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-checkbox">
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-1">
+                                        <label for="filter-checkbox-13-item-1">
+                                            <span class="filter-checkbox__title">Базовый</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-2">
+                                        <label for="filter-checkbox-13-item-2">
+                                            <span class="filter-checkbox__title">Деловой</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-3">
+                                        <label for="filter-checkbox-13-item-3">
+                                            <span class="filter-checkbox__title">Нарядный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-4">
+                                        <label for="filter-checkbox-13-item-4">
+                                            <span class="filter-checkbox__title">Повседневный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-5">
+                                        <label for="filter-checkbox-13-item-5">
+                                            <span class="filter-checkbox__title">Романтический</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-6">
+                                        <label for="filter-checkbox-13-item-6">
+                                            <span class="filter-checkbox__title">Сексуальный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-7">
+                                        <label for="filter-checkbox-13-item-7">
+                                            <span class="filter-checkbox__title">Спортивный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter-checkbox__item">
+                                        <input type="checkbox" name="" id="filter-checkbox-13-item-8">
+                                        <label for="filter-checkbox-13-item-8">
+                                            <span class="filter-checkbox__title">Ультрамодный</span>
+                                            <span class="filter-checkbox__count">888</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-filters__item filter-item accordion__item">
+                            <div class="filter-item__title accordion__title">Цена</div>
+                            <div class="filter-item__content accordion__content">
+                                <div class="filter-range">
+                                    <div class="filter-range__controls">
+                                        <input type="text" " data-action=" range-from" value="0">
+                                        –
+                                        <input type="text" " data-action=" range-to" value="0">
+                                    </div>
+                                    <input type="text" data-action="range-slider" name="my_range" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-main menu-filters__apply">Применить</button>
+                </div>
             </div>
 
             <div class="pagination pagination--top">
@@ -2728,8 +4144,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"
@@ -2808,8 +4224,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"
@@ -2888,8 +4304,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"
@@ -2968,8 +4384,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"
@@ -3048,8 +4464,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"
@@ -3128,8 +4544,8 @@
                                 <div class="product-card__subtitle">Платье</div>
                             </a>
                             <div class="product-card__colors color-variants">
-                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta" href="product.html"
-                                    title="Розовый"></a>
+                                <a data-color-id="749316" data-images="749316,749316-n626060,749316-n626061,749316-n626062" class="color-variants__item color-variants__item--magenta"
+                                    href="product.html" title="Розовый"></a>
                                 <a data-color-id="655518" data-images="655518,655518-n511116,655518-n511115,655518-n511117" class="color-variants__item color-variants__item--green" href="product.html"
                                     title="Зеленый"></a>
                                 <a data-color-id="655519" data-images="655519,655519-n511119,655519-n511120,655519-n511118" class="color-variants__item color-variants__item--yellow"

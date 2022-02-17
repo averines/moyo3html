@@ -1,0 +1,382 @@
+//выпадающее меню с фильтрами в субкатегории
+.menu-filters-wrapper {
+    background-color: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    top: 45px;
+    left: 0;
+    transition: background-color 0.4s ease-in-out;
+    opacity: 0;
+    min-height: 100vw;
+    max-height: none;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 100;
+    background-color: transparent;
+    cursor: pointer;
+
+    &.is-active {
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .menu-filters {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        max-width: 320px;
+        transform: translateX(-50px);
+        transition: transform 0.1s ease-in-out, box-shadow 1s ease-in-out;
+        background-color: #fff;
+        box-shadow: 0 5px 15px transparentize($black, 0.7);
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: -34px;
+            width: 18px;
+            height: 18px;
+            background: url(../img/icons/close.svg) no-repeat center;
+            background-size: contain;
+            display: block;
+            border: none;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0s ease-in-out;
+            cursor: pointer;
+        }
+
+        &.is-active {
+            visibility: visible;
+            pointer-events: all;
+            max-height: 5000px;
+            opacity: 1;
+            transform: translateX(0);
+
+            &::after {
+                opacity: 0.6;
+                transition: opacity 0.5s ease-in-out;
+            }
+        }
+
+        &__title {
+            background-color: $bg-l;
+            font-weight: 600;
+            color: $text-d;
+            font-size: 15px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__content {
+            padding: 0 15px;
+        }
+
+        &__close {
+            cursor: pointer;
+            border: none;
+            background: url(../img/icons/arrow-right.svg) no-repeat center;
+            background-size: 50%;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            transition: $tr;
+            transform: scale(-1, 1);
+
+            &:hover {
+                opacity: 0.8;
+                transform: scale(-1.1, 1.1);
+            }
+        }
+
+        &__clear {
+            cursor: pointer;
+            border: none;
+            margin-left: auto;
+            font-size: 12px;
+            font-weight: 600;
+            transition: $tr;
+
+            &:hover {
+                color: $main;
+            }
+        }
+
+        &__apply {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 20px;
+            width: calc(100% - 30px);
+        }
+
+        .filter-item {
+            border-bottom: 1px solid $line-l;
+            transition: $tr;
+
+            &__title {
+                padding: 12px 0;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+
+                &::after {
+                    right: 0;
+                    background: url(../img/icons/arrow-down.svg) no-repeat center;
+                    background-size: 50%;
+                    transform: none;
+                }
+
+                &:hover {
+                    background: linear-gradient(90deg, rgba(199, 199, 199, 0) 0%, rgba(199, 199, 199, 0.1) 85%, rgba(199, 199, 199, 0) 100%);
+                }
+            }
+
+            &.is-active {
+                .filter-item__title {
+                    border-bottom-color: $line-l;
+                    &::after {
+                        background: url(../img/icons/arrow-down.svg) no-repeat center;
+                        background-size: 50%;
+                        transform: scale(1, -1);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            cursor: initial;
+        }
+    }
+
+    &:hover {
+        .menu-filters::after {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        top: 120px;
+    }
+}
+
+.filter-checkbox {
+    max-height: 327px;
+    overflow-y: scroll;
+    margin: 3px 0;
+
+    &--long {
+        max-height: 409px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 4px;
+        background-color: #d9d9d9;
+        border-radius: 3px;
+    }
+
+    &__item {
+        color: $text-l;
+        font-size: 14px;
+        padding: 12px 0;
+        border-bottom: 1px dashed $line-l;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        label {
+            cursor: pointer;
+            transition: $tr;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        input {
+            margin: -5px 12px 0 0;
+            // opacity: 0;
+            // visibility: hidden;
+
+            &::before {
+                content: "";
+                display: block;
+                background-color: #fff;
+                width: 18px;
+                height: 18px;
+                border: 1px solid $line-d;
+                z-index: 2;
+            }
+
+            &:checked {
+                &::before {
+                    background: url(../img/icons/check.svg) no-repeat center #fff;
+                    background-size: 70%;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__count {
+        font-size: 11px;
+        margin-left: 5px;
+
+        &::before {
+            content: "(";
+        }
+        &::after {
+            content: ")";
+        }
+    }
+
+    .icon-color {
+        margin-right: 5px;
+        margin-left: 5px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $line-l;
+            // border-radius: 50%;
+        }
+
+        &--white::after {
+            background-color: #f8f6f6;
+        }
+
+        &--biege::after {
+            background: #f5f5dc;
+        }
+
+        &--lightblue::after {
+            background-color: #add8e6;
+        }
+
+        &--yellow::after {
+            background-color: #ffe54f;
+        }
+
+        &--green::after {
+            background-color: #41a541;
+        }
+
+        &--brown::after {
+            background-color: #944835;
+        }
+
+        &--red::after {
+            background-color: #d12a2a;
+        }
+
+        &--orange::after {
+            background: #ffa216;
+        }
+
+        &--magenta::after {
+            background-color: #ff90c7;
+        }
+
+        &--gray::after {
+            background-color: #a8a7a8;
+        }
+
+        &--blue::after {
+            background-color: #1e5b94;
+        }
+
+        &--purple::after {
+            background-color: #8e28b6;
+        }
+
+        &--black::after {
+            background-color: #2d2d30;
+        }
+    }
+}
+
+.filter-range {
+    padding: 25px 0;
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        color: $text-l;
+        justify-content: space-between;
+
+        input {
+            min-width: 125px;
+            max-width: 150px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 18px;
+            color: $text-l;
+            border-radius: 4px;
+            border: 1px solid $line-l;
+            padding: 7px 10px;
+        }
+    }
+
+    .irs-from,
+    .irs-to {
+        display: none;
+    }
+
+    .irs-min,
+    .irs-max {
+        font-size: 12px;
+        color: $text-l;
+        top: 10px;
+    }
+
+    .irs--round {
+        .irs-line {
+            background-color: $line-l;
+            height: 6px;
+        }
+        .irs-bar {
+            background-color: $line-d;
+            height: 6px;
+        }
+        .irs-handle {
+            border-color: $line-d;
+            box-shadow: none;
+            cursor: pointer;
+            &:hover {
+                background-color: #fff;
+                transform: scale(1.05);
+            }
+        }
+
+        .irs-single {
+            background-color: $text-d;
+            font-size: 12px;
+            top: 3px;
+
+            &::before {
+                border-top-color: $text-d;
+            }
+        }
+    }
+}

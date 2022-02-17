@@ -50,16 +50,16 @@
             }
         }
 
+        &--lightblue {
+            &::after {
+                background-color: rgb(190, 218, 255);
+            }
+        }
+
         &--yellow {
             &::after {
                 background-color: rgb(255, 243, 68);
                 outline: 1px solid $line-l;
-            }
-        }
-
-        &--gray {
-            &::after {
-                background-color: rgb(187, 191, 194);
             }
         }
 
@@ -69,45 +69,9 @@
             }
         }
 
-        &--purple {
-            &::after {
-                background-color: rgb(208, 150, 247);
-            }
-        }
-
-        &--mint {
-            &::after {
-                background-color: rgb(163, 255, 186);
-            }
-        }
-
-        &--multi {
-            &::after {
-                background: linear-gradient(90deg, rgba(0,44,255,1) 50%, rgba(255,0,0,1) 50%);
-            }
-        }
-
-        &--lightblue {
-            &::after {
-                background-color: rgb(190, 218, 255);
-            }
-        }
-
         &--brown {
             &::after {
                 background-color: rgb(155, 91, 72);
-            }
-        }
-
-        &--magenta {
-            &::after {
-                background-color: rgb(255, 163, 209);
-            }
-        }
-
-        &--orange {
-            &::after {
-                background-color: rgb(255, 149, 50);
             }
         }
 
@@ -117,33 +81,33 @@
             }
         }
 
+        &--orange {
+            &::after {
+                background-color: rgb(255, 149, 50);
+            }
+        }
+
+        &--magenta {
+            &::after {
+                background-color: rgb(255, 163, 209);
+            }
+        }
+
+        &--gray {
+            &::after {
+                background-color: rgb(187, 191, 194);
+            }
+        }
+
         &--blue {
             &::after {
                 background-color: rgb(61, 134, 230);
             }
         }
 
-        &--burgundy {
+        &--purple {
             &::after {
-                background-color: rgb(184, 37, 0);
-            }
-        }
-
-        &--fuchsia {
-            &::after {
-                background-color: rgb(221, 52, 255);
-            }
-        }
-
-        &--turquoise {
-            &::after {
-                background-color: rgb(98, 232, 255);
-            }
-        }
-
-        &--animal {
-            &::after {
-                background-color: rgb(61, 134, 230);
+                background-color: rgb(208, 150, 247);
             }
         }
 
@@ -152,39 +116,43 @@
                 background-color: rgb(84, 86, 88);
             }
         }
+
+        // устаревшие========================
+
+        // &--mint {
+        //     &::after {
+        //         background-color: rgb(163, 255, 186);
+        //     }
+        // }
+
+        // &--multi {
+        //     &::after {
+        //         background: linear-gradient(90deg, rgba(0, 44, 255, 1) 50%, rgba(255, 0, 0, 1) 50%);
+        //     }
+        // }
+
+        // &--burgundy {
+        //     &::after {
+        //         background-color: rgb(184, 37, 0);
+        //     }
+        // }
+
+        // &--fuchsia {
+        //     &::after {
+        //         background-color: rgb(221, 52, 255);
+        //     }
+        // }
+
+        // &--turquoise {
+        //     &::after {
+        //         background-color: rgb(98, 232, 255);
+        //     }
+        // }
+
+        // &--animal {
+        //     &::after {
+        //         background-color: rgb(61, 134, 230);
+        //     }
+        // }
     }
 }
-
-// .color-variants {
-//     flex-direction: column;
-//     row-gap: 5px;
-//     position: absolute;
-//     right: -85px;
-//     top: 0;
-//     width: 85px;
-//     z-index: 2;
-//     background-color: #fff;
-//     height: 100%;
-//     padding: 5px 15px 5px 5px;
-//     border-radius: 0 6px 0 0;
-
-//     @media screen and (min-width: 1400px) {
-//         padding: 15px 15px 0 0;
-//     }
-
-//     &__item {
-//         display: block;
-//         cursor: pointer;
-//         border-radius: 2px;
-//         overflow: hidden;
-
-//         > img {
-//             display: block;
-//             width: 100%;
-//         }
-
-//         &.is-active {
-//             outline: 1px solid $main-l;
-//         }
-//     }
-// }

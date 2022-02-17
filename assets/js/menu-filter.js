@@ -52,7 +52,6 @@ if (menuFiltersApplyBtn) {
     });
 }
 
-
 // отображение выбранных фильтров на странице
 if (menuFilterCheckboxItems) {
     menuFilterCheckboxItems.forEach(item => {
@@ -63,13 +62,13 @@ if (menuFilterCheckboxItems) {
         item.addEventListener('change', () => {
             if (item.checked) {
                 let selectedFilterItem = document.createElement('a');
-                selectedFilterItem.classList.add('selected-filters__item');
+                selectedFilterItem.classList.add('filters-selected__item');
                 selectedFilterItem.dataset.id = item.id;
                 selectedFilterItem.innerHTML = itemTitle;
                 selectedFiltersWrapper.appendChild(selectedFilterItem);
 
                 // удалить выбранный фильтр при клике по нему
-                let selectedFiltersItems = selectedFiltersWrapper.querySelectorAll('.selected-filters__item');
+                let selectedFiltersItems = selectedFiltersWrapper.querySelectorAll('.filters-selected__item');
                 selectedFiltersItems.forEach(selectedFiltersItem => {
                     selectedFiltersItem.addEventListener('click', () => {
                         selectedFiltersItem.parentNode.removeChild(selectedFiltersItem);
