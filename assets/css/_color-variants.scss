@@ -9,11 +9,13 @@
         width: 18px;
         height: 18px;
         display: block;
-        padding: 5px;
+        // padding: 5px;
+        padding: 3px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: padding 0.15s ease-in-out;
+        position: relative;
 
         &::after {
             content: "";
@@ -22,11 +24,28 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            // border-radius: 20%;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            // opacity: 0.25;
+            border-radius: 50%;
+            // border-radius: 20%;
         }
 
         &:hover,
         &.is-active {
-            padding: 2px;
+            &::before {
+                       width: 4px;
+                    height: 4px;
+                // opacity: 0;
+            }
         }
 
         &--white {
@@ -58,8 +77,8 @@
 
         &--yellow {
             &::after {
-                background-color: rgb(255, 243, 68);
-                outline: 1px solid $line-l;
+                background-color: rgb(255, 220, 23);
+                // outline: 1px solid $line-l;
             }
         }
 
@@ -117,17 +136,26 @@
             }
         }
 
+        &--multi {
+            &::after {
+                background: linear-gradient(120deg, rgba(0, 44, 255, 1) 42%, rgba(255, 0, 0, 1) 42%);
+                background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
+            }
+
+            // &:hover {
+            //     &::before {
+            //         opacity: 1;
+            //         width: 6px;
+            //         height: 6px;
+            //     }
+            // }
+        }
+
         // устаревшие========================
 
         // &--mint {
         //     &::after {
         //         background-color: rgb(163, 255, 186);
-        //     }
-        // }
-
-        // &--multi {
-        //     &::after {
-        //         background: linear-gradient(90deg, rgba(0, 44, 255, 1) 50%, rgba(255, 0, 0, 1) 50%);
         //     }
         // }
 

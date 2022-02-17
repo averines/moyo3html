@@ -122,6 +122,9 @@
   &__colors {
     position: absolute;
     bottom: 15px;
+    font-size: 12px;
+    align-items: center;
+    color: $text-l;
   }
 
   &__extra-wrapper {

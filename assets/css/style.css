@@ -7344,6 +7344,9 @@ footer .footer-container {
 .product-card__colors {
   position: absolute;
   bottom: 15px;
+  font-size: 12px;
+  align-items: center;
+  color: #727272;
 }
 .product-card__extra-wrapper {
   position: absolute;
@@ -7463,11 +7466,12 @@ footer .footer-container {
   width: 18px;
   height: 18px;
   display: block;
-  padding: 5px;
+  padding: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: padding 0.15s ease-in-out;
+  position: relative;
 }
 .color-variants__item::after {
   content: "";
@@ -7477,8 +7481,18 @@ footer .footer-container {
   height: 100%;
   border-radius: 50%;
 }
-.color-variants__item:hover, .color-variants__item.is-active {
-  padding: 2px;
+.color-variants__item::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.color-variants__item:hover::before, .color-variants__item.is-active::before {
+  width: 4px;
+  height: 4px;
 }
 .color-variants__item--white::after {
   background-color: #fff;
@@ -7496,8 +7510,7 @@ footer .footer-container {
   background-color: #bedaff;
 }
 .color-variants__item--yellow::after {
-  background-color: #fff344;
-  outline: 1px solid #d9d9d9;
+  background-color: #ffdc17;
 }
 .color-variants__item--green::after {
   background-color: #a1fa6d;
@@ -7525,6 +7538,10 @@ footer .footer-container {
 }
 .color-variants__item--black::after {
   background-color: #545658;
+}
+.color-variants__item--multi::after {
+  background: linear-gradient(120deg, #002cff 42%, red 42%);
+  background: conic-gradient(lightblue, #2d76ff, #b921b9, red, orange, yellow, #71dd0b);
 }
 
 .badges {
