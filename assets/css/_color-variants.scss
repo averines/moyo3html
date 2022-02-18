@@ -1,32 +1,22 @@
 .color-variants {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 15px;
-    margin-left: -5px;
 
     &__item {
         text-decoration: none;
         width: 17px;
         height: 17px;
-        display: block;
-        padding: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: padding 0.15s ease-in-out;
         position: relative;
+        background-color: #b4b4b4;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        transition: all 0.1s ease-in-out;
 
+        // белый кружок
         &::after {
-            content: "";
-            display: block;
-            background-color: rgb(228, 228, 228);
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            // border-radius: 20%;
-        }
-
-        &::before {
             display: none;
             position: absolute;
             content: "";
@@ -34,162 +24,157 @@
             height: 5px;
             background-color: #fff;
             border-radius: 50%;
-            // border-radius: 20%;
+            transition: all 0.15s ease-in-out;
         }
 
-        &:hover,
-        &.is-active {
-            padding: 2px;
+        // надпись с названием цвета
+        &::before {
+            display: none;
+            bottom: calc(100% + 7px);
+            left: -3px;
+            padding: 0.35em 0.5em;
+            background: rgb(236, 236, 236);
+            color: $text-l;
+            // background: $text;
+            // color: #fff;
+            // box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+            font-size: 11px;
+            border-radius: 3px;
+            position: absolute;
+            content: attr(data-color-title);
+            z-index: 10;
+            line-height: 1;
+        }
 
-            @media screen and (min-width: 1200px) {
-                padding: 3px;
-            }
+        &:hover {
+            border-width: 2px;
 
             &::before {
-                opacity: 0;
+                display: block;
+            }
+
+            &::after {
+                @media screen and (min-width: 1200px) {
+                    display: block;
+                }
+            }
+        }
+
+        &.is-active {
+            border-width: 2px;
+
+            @media screen and (min-width: 1200px) {
+                border-width: 4px;
+                &::after {
+                    opacity: 0;
+                }
             }
         }
 
         @media screen and (min-width: 1200px) {
-            padding: 3px;
-            &::before {
+            border-width: 3px;
+            &::after {
                 display: block;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+            &.is-active {
+                border-width: 3px;
             }
         }
 
         &--white {
-            &::after {
-                background-color: #fff;
-                outline: 1px solid $line-l;
-            }
+            background-color: #fff;
+            outline: 1px solid $line-l;
         }
 
         &--blackwhite {
-            &::after {
-                background: linear-gradient(90deg, #fff 50%, rgb(62, 63, 65) 50%);
-                outline: 1px solid $line-l;
-            }
+            background: linear-gradient(90deg, #fff 50%, rgb(62, 63, 65) 50%);
+            outline: 1px solid $line-l;
         }
 
         &--biege {
-            &::after {
-                background-color: rgb(255, 236, 214);
-                outline: 1px solid $line-l;
-            }
+            background-color: rgb(255, 236, 214);
+            outline: 1px solid $line-l;
         }
 
         &--lightblue {
-            &::after {
-                background-color: rgb(190, 218, 255);
-            }
+            background-color: rgb(190, 218, 255);
         }
 
         &--yellow {
-            &::after {
-                background-color: rgb(255, 220, 23);
-                // outline: 1px solid $line-l;
-            }
+            background-color: rgb(255, 220, 23);
         }
 
         &--green {
-            &::after {
-                background-color: rgb(105, 209, 45);
-            }
+            background-color: rgb(105, 209, 45);
         }
 
         &--brown {
-            &::after {
-                background-color: rgb(155, 91, 72);
-            }
+            background-color: rgb(155, 91, 72);
         }
 
         &--red {
-            &::after {
-                background-color: rgb(255, 90, 78);
-            }
+            background-color: rgb(255, 90, 78);
         }
 
         &--orange {
-            &::after {
-                background-color: rgb(255, 149, 50);
-            }
+            background-color: rgb(255, 149, 50);
         }
 
         &--magenta {
-            &::after {
-                background-color: rgb(255, 163, 209);
-            }
+            background-color: rgb(255, 163, 209);
         }
 
         &--gray {
-            &::after {
-                background-color: rgb(187, 191, 194);
-            }
+            background-color: rgb(187, 191, 194);
         }
 
         &--blue {
-            &::after {
-                background-color: rgb(61, 134, 230);
-            }
+            background-color: rgb(61, 134, 230);
         }
 
         &--purple {
-            &::after {
-                background-color: rgb(208, 150, 247);
-            }
+            background-color: rgb(208, 150, 247);
         }
 
         &--black {
-            &::after {
-                background-color: rgb(84, 86, 88);
-            }
+            background-color: rgb(84, 86, 88);
         }
 
         &--multi {
-            &::after {
-                background: linear-gradient(120deg, rgba(0, 44, 255, 1) 42%, rgba(255, 0, 0, 1) 42%);
-                background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
-            }
-
-            // &:hover {
-            //     &::before {
-            //         opacity: 1;
-            //         width: 6px;
-            //         height: 6px;
-            //     }
-            // }
+            // background: linear-gradient(120deg, rgba(0, 44, 255, 1) 42%, rgba(255, 0, 0, 1) 42%);
+            background: linear-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
+            background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
         }
 
         // устаревшие========================
 
         // &--mint {
-        //     &::after {
         //         background-color: rgb(163, 255, 186);
-        //     }
         // }
 
         // &--burgundy {
-        //     &::after {
         //         background-color: rgb(184, 37, 0);
-        //     }
         // }
 
         // &--fuchsia {
-        //     &::after {
         //         background-color: rgb(221, 52, 255);
-        //     }
+
         // }
 
         // &--turquoise {
-        //     &::after {
         //         background-color: rgb(98, 232, 255);
-        //     }
+
         // }
 
         // &--animal {
-        //     &::after {
         //         background-color: rgb(61, 134, 230);
-        //     }
         // }
     }
 }

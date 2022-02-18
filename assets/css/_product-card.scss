@@ -1,11 +1,12 @@
 .product-card {
+  display: flex;
+  flex-direction: column;
   width: calc(100% / 2 - 10px);
   margin: 0 5px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   position: relative;
   background-color: #fff;
   border-radius: 10px;
-
 
   &:hover {
     z-index: 99;
@@ -21,7 +22,7 @@
       background-color: #fff;
       box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
     }
-  }  
+  }
 
   @media screen and (min-width: 600px) {
     width: calc(100% / 3 - 10px);
@@ -82,8 +83,13 @@
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 15px;
     z-index: 2;
     padding: 15px 15px 0 15px;
+    // padding: 0px 15px 0 15px;
 
     @media screen and (min-width: 1400px) {
       padding: 25px 25px 0 25px;
@@ -92,6 +98,7 @@
 
   &__price {
     font-size: 0.8em;
+    padding-bottom: 0;
   }
 
   &__header {
@@ -100,7 +107,7 @@
     flex-direction: column;
     justify-content: flex-start;
     transition: $tr;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
 
     &:hover {
       opacity: 0.7;
@@ -120,8 +127,7 @@
   }
 
   &__colors {
-    position: absolute;
-    bottom: 15px;
+    margin-top: auto;
     font-size: 12px;
     align-items: center;
     color: $text-l;
@@ -151,17 +157,17 @@
     right: 0;
     border-radius: 0 0 10px 10px;
     z-index: 2;
-    padding: 0 20px 20px 20px;
+    padding: 0 25px 20px 25px;
     display: none;
 
     @media screen and (min-width: 1000px) {
       top: calc(100% - 20px);
-      padding: 0 30px 30px 30px;
+      padding: 0 35px 30px 35px;
     }
 
     @media screen and (min-width: 1400px) {
       top: calc(100% - 25px);
-      padding: 0 40px 30px 40px;
+      padding: 0 45px 30px 45px;
     }
   }
 
@@ -178,5 +184,4 @@
     right: 0;
     top: 40px;
   }
-
 }

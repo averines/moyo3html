@@ -102,11 +102,13 @@
 
         > img {
             display: block;
+            background-color: #f3f3f3;
+            font-size: 12px;
         }
     }
 
     &:hover {
-        background-color: #f3f3f3;
+        background-color: #fafafa;
     }
 
     &::after {

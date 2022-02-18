@@ -91,6 +91,7 @@
         color: $main;
         font-size: 0.85em;
         text-align: right;
+        line-height: 0.8;
     }
 
     &--dropdown-product {
@@ -129,7 +130,7 @@
         .product-price__opt {
             padding-top: 5px;
         }
-    }    
+    }
 
     &--card-product {
         display: flex;
@@ -137,9 +138,9 @@
         flex-direction: column;
 
         .product-price__date {
-            font-size: 12px;
+            font-size: 11px;
         }
-    }    
+    }
 
     &--table-product {
         align-items: center;
@@ -172,7 +173,6 @@
         }
     }
 }
-
 
 .price-hidden {
     padding-top: 5px;
