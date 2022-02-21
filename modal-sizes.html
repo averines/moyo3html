@@ -1,8 +1,388 @@
-<div id="product-sizes" class="modal">
+<div id="product-sizes" class="modal modal--lg">
     <div class="modal__title">
         Таблица размеров
     </div>
     <div class="modal__content">
-        123
+        <div class="table-sizes">
+
+<!-- 
+    .card_new__table_size_block         => .table-sizes 
+    .card_new__table_size_block__title  => .table-title
+    .card_new__table_size_block__table  => .table
+    
+
+
+    при этом каждый .table нужно вложить в .table-responsive
+    для этого в SizeHelpers.cshtml и SizeHelpers2.cshtml:
+
+    `<div class="card_new__table_size_block__table">` заменить на
+    `<div class="table-responsive"><div class="table">`
+
+    и
+
+    `</table>` заменить на
+    `</table></div>`
+
+-->
+
+
+            <div class="table-title">Размеры</div>
+            <div class="card_new__table_size_block__table realps">
+                <p><b>Как определить размер одежды: (Верхняя одежда, платья, комбинезоны, блузки, майки, джемпера, жакеты и т.д. )</b></p>
+                <p>Пример: <b>164/170-104-110</b>, где (<b>164/170</b>) - рост (см.), (<b>104</b>) - обхват груди (см.) , <b>110</b> - обхват бедер (см.)</p>
+                <p><b>Как определить размер одежды: (Брюки,шорты, леггинсы, юбки)</b></p>
+                <p>Пример: <b>164/170-90</b>, где (<b>164/170</b>) - рост (см.), <b>90</b> - обхват бедер (см.)</p>
+                <p><b>Как определить размер белья: (Трусы)</b></p>
+                <p>Пример: <b>102</b>, где <b>102</b> - обхват бедер (см.)</p>
+                <p><b>Как определить размер головных уборов: (Шапки)</b></p>
+                <p>Пример: <b>56</b>, где (<b>56</b>) - обхват головы в (см.)</p>
+            </div>
+
+            <div class="table-title">Размеры</div>
+            <div class="table-responsive">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>Международный размер</td>
+                            <td>XS</td>
+                            <td>S</td>
+                            <td>M</td>
+                            <td>L</td>
+                            <td>XL</td>
+                            <td>XXL</td>
+                            <td>3XL</td>
+                        </tr>
+                        <tr>
+                            <td>Российский размер</td>
+                            <td>42</td>
+                            <td>44</td>
+                            <td>46</td>
+                            <td>48</td>
+                            <td>50</td>
+                            <td>52</td>
+                            <td>54</td>
+                        </tr>
+                        <tr>
+                            <td>Обхват груди (см.)</td>
+                            <td>82</td>
+                            <td>86</td>
+                            <td>90</td>
+                            <td>94</td>
+                            <td>98</td>
+                            <td>101</td>
+                            <td>105</td>
+                        </tr>
+                        <tr>
+                            <td>Обхват талии (см.)</td>
+                            <td>63</td>
+                            <td>67</td>
+                            <td>71</td>
+                            <td>75</td>
+                            <td>80</td>
+                            <td>84</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>Обхват бедер (см.)</td>
+                            <td>90</td>
+                            <td>94</td>
+                            <td>98</td>
+                            <td>102</td>
+                            <td>106</td>
+                            <td>110</td>
+                            <td>114</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p>Одно или два числа через точку с запятой означают рост, далее через тире идут объемы в сантиметрах.</p>
+
+            <div class="table-title">Размеры колготок</div>
+            <div class="table-responsive">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>См х кг</td>
+                            <td>45</td>
+                            <td>50</td>
+                            <td>55</td>
+                            <td>60</td>
+                            <td>65</td>
+                            <td>70</td>
+                            <td>75</td>
+                            <td>80</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>95</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>145/150</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>150/155</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg bgbn">1</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>155/160</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg bgbn">2</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>160/165</td>
+                            <td>&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg bgbn">3</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>165/170</td>
+                            <td>&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg bgbn">4</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>170/175</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg bgbn">5</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>175/180</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="blhg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg bgbn">6</td>
+                        </tr>
+                        <tr>
+                            <td>180/185</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                            <td class="bllg">&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-title">Размеры носков</div>
+            <div class="table-responsive">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>Длина стопы, см</td>
+                            <td>23</td>
+                            <td>23,5</td>
+                            <td>24,5</td>
+                            <td>25</td>
+                            <td>25,75</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td>32</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>Российский размер</td>
+                            <td>35</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td>38</td>
+                            <td>39</td>
+                            <td>40</td>
+                            <td>41</td>
+                            <td>42</td>
+                            <td>43</td>
+                            <td>44</td>
+                            <td>45</td>
+                            <td>46</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>Международный размер</td>
+                            <td>XS</td>
+                            <td>S</td>
+                            <td>S</td>
+                            <td>M</td>
+                            <td>M</td>
+                            <td>M</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>L</td>
+                            <td>XL</td>
+                            <td>XL</td>
+                            <td>XL</td>
+                            <td>XXL</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-title">Обхват груди</div>
+            <div class="table-responsive">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>Размер чашки</td>
+                            <td>65</td>
+                            <td>70</td>
+                            <td>75</td>
+                            <td>80</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>AA</td>
+                            <td>75-77</td>
+                            <td>80-82</td>
+                            <td>85-87</td>
+                            <td>90-92</td>
+                            <td>95-97</td>
+                            <td>100-102</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>77-79</td>
+                            <td>82-84</td>
+                            <td>87-89</td>
+                            <td>92-94</td>
+                            <td>97-99</td>
+                            <td>102-104</td>
+                            <td>107-109</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>79-81</td>
+                            <td>84-86</td>
+                            <td>89-91</td>
+                            <td>94-96</td>
+                            <td>99-101</td>
+                            <td>104-106</td>
+                            <td>109-111</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>81-83</td>
+                            <td>86-88</td>
+                            <td>91-93</td>
+                            <td>96-98</td>
+                            <td>101-103</td>
+                            <td>106-108</td>
+                            <td>111-113</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>83-85</td>
+                            <td>88-90</td>
+                            <td>93-95</td>
+                            <td>98-100</td>
+                            <td>103-105</td>
+                            <td>108-110</td>
+                            <td>113-115</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>85-87</td>
+                            <td>90-92</td>
+                            <td>95-97</td>
+                            <td>100-102</td>
+                            <td>105-107</td>
+                            <td>110-112</td>
+                            <td>115-117</td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td>87-89</td>
+                            <td>92-94</td>
+                            <td>97-99</td>
+                            <td>102-104</td>
+                            <td>107-109</td>
+                            <td>112-114</td>
+                            <td>117-119</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

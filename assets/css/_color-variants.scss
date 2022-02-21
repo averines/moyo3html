@@ -35,9 +35,6 @@
             padding: 0.35em 0.5em;
             background: rgb(236, 236, 236);
             color: $text-l;
-            // background: $text;
-            // color: #fff;
-            // box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
             font-size: 11px;
             border-radius: 3px;
             position: absolute;
@@ -90,17 +87,17 @@
 
         &--white {
             background-color: #fff;
-            outline: 1px solid $line-l;
+            box-shadow: 0 0 4px 0px $line-l inset;
         }
 
         &--blackwhite {
             background: linear-gradient(90deg, #fff 50%, rgb(62, 63, 65) 50%);
-            outline: 1px solid $line-l;
+            box-shadow: 0 0 4px 0px $line-l inset;
         }
 
         &--biege {
             background-color: rgb(255, 236, 214);
-            outline: 1px solid $line-l;
+            box-shadow: 0 0 4px 0px $line-l inset;
         }
 
         &--lightblue {
@@ -148,7 +145,6 @@
         }
 
         &--multi {
-            // background: linear-gradient(120deg, rgba(0, 44, 255, 1) 42%, rgba(255, 0, 0, 1) 42%);
             background: linear-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
             background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
         }
@@ -165,12 +161,10 @@
 
         // &--fuchsia {
         //         background-color: rgb(221, 52, 255);
-
         // }
 
         // &--turquoise {
         //         background-color: rgb(98, 232, 255);
-
         // }
 
         // &--animal {
