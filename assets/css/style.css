@@ -4789,6 +4789,11 @@ footer .footer-container {
   max-width: 200px;
   margin: auto;
 }
+@media screen and (min-width: 376px) {
+  .pagination__links {
+    max-width: 260px;
+  }
+}
 @media screen and (min-width: 1366px) {
   .pagination__links {
     position: absolute;
@@ -4806,7 +4811,7 @@ footer .footer-container {
   text-decoration: none;
   color: #3d3d3c;
   display: block;
-  padding: 0 10px;
+  padding: 0 5px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -4828,7 +4833,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 768px) {
   .pagination--top {
-    width: 300px;
+    width: 360px;
     position: absolute;
     right: 15px;
     top: 95px;
@@ -6342,14 +6347,14 @@ footer .footer-container {
   .product-info__brand {
     order: 5;
     font-size: 13px;
-    box-shadow: 0 2px 6px #ebebeb;
+    box-shadow: 0 2px 6px rgb(235, 235, 235);
     text-decoration: none;
     transition: all 0.15s ease-in-out;
     color: #727272;
   }
   .product-info__brand:hover {
     color: #3d3d3c;
-    box-shadow: 0 4px 8px #e4e4e4;
+    box-shadow: 0 4px 8px rgb(228, 228, 228);
   }
 }
 .product-info__favorite {
@@ -6631,7 +6636,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 768px) {
   .product-table tbody tr:hover td:first-child {
-    background: linear-gradient(90deg, white 25%, white 100%);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 25%, white 100%);
   }
   .product-table tbody tr.is-added td:first-child {
     background: linear-gradient(270deg, rgba(183, 241, 195, 0.25) 0%, rgba(183, 241, 195, 0) 100%);
@@ -7111,13 +7116,13 @@ footer .footer-container {
 }
 @media screen and (min-width: 900px) {
   .products-section .product-card {
-    width: calc(100% / 3 - 10px);
+    width: calc(33.3333333333% - 10px);
     margin: 0 5px;
   }
 }
 @media screen and (min-width: 1400px) {
   .products-section .product-card {
-    width: calc(100% / 6 - 20px);
+    width: calc(16.6666666667% - 20px);
     margin: 0 10px;
   }
 }
@@ -7149,7 +7154,7 @@ footer .footer-container {
   overflow: visible;
 }
 .products-section .slider-products .product-card {
-  width: calc(100% / 2 - 10px);
+  width: calc(50% - 10px);
   margin: 15px 5px 30px 5px;
   padding: 0;
   overflow: visible;
@@ -7160,22 +7165,22 @@ footer .footer-container {
 }
 @media screen and (min-width: 600px) {
   .products-section .slider-products .product-card {
-    width: calc(100% / 3 - 10px);
+    width: calc(33.3333333333% - 10px);
   }
 }
 @media screen and (min-width: 900px) {
   .products-section .slider-products .product-card {
-    width: calc(100% / 4 - 10px);
+    width: calc(25% - 10px);
   }
 }
 @media screen and (min-width: 1000px) {
   .products-section .slider-products .product-card {
-    width: calc(100% / 5 - 10px);
+    width: calc(20% - 10px);
   }
 }
 @media screen and (min-width: 1400px) {
   .products-section .slider-products .product-card {
-    width: calc(100% / 6 - 10px);
+    width: calc(16.6666666667% - 10px);
     margin: 15px 10px 30px 10px;
   }
 }
@@ -7271,7 +7276,7 @@ footer .footer-container {
 .product-card {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 2 - 10px);
+  width: calc(50% - 10px);
   margin: 0 5px;
   padding-bottom: 15px;
   position: relative;
@@ -7293,18 +7298,18 @@ footer .footer-container {
 }
 @media screen and (min-width: 600px) {
   .product-card {
-    width: calc(100% / 3 - 10px);
+    width: calc(33.3333333333% - 10px);
   }
 }
 @media screen and (min-width: 1000px) {
   .product-card {
-    width: calc(100% / 4 - 30px);
+    width: calc(25% - 30px);
     margin: 0 15px;
   }
 }
 @media screen and (min-width: 1400px) {
   .product-card {
-    width: calc(100% / 6 - 30px);
+    width: calc(16.6666666667% - 30px);
   }
 }
 .product-card__content {
@@ -7528,7 +7533,7 @@ footer .footer-container {
   bottom: calc(100% + 7px);
   left: -3px;
   padding: 0.35em 0.5em;
-  background: #ececec;
+  background: rgb(236, 236, 236);
   color: #727272;
   font-size: 11px;
   border-radius: 3px;
@@ -7578,49 +7583,49 @@ footer .footer-container {
   box-shadow: 0 0 4px 0px #d9d9d9 inset;
 }
 .color-variants__item--blackwhite {
-  background: linear-gradient(90deg, #fff 50%, #3e3f41 50%);
+  background: linear-gradient(90deg, #fff 50%, rgb(62, 63, 65) 50%);
   box-shadow: 0 0 4px 0px #d9d9d9 inset;
 }
 .color-variants__item--biege {
-  background-color: #ffecd6;
+  background-color: rgb(255, 236, 214);
   box-shadow: 0 0 4px 0px #d9d9d9 inset;
 }
 .color-variants__item--lightblue {
-  background-color: #bedaff;
+  background-color: rgb(190, 218, 255);
 }
 .color-variants__item--yellow {
-  background-color: #ffdc17;
+  background-color: rgb(255, 220, 23);
 }
 .color-variants__item--green {
-  background-color: #69d12d;
+  background-color: rgb(105, 209, 45);
 }
 .color-variants__item--brown {
-  background-color: #9b5b48;
+  background-color: rgb(155, 91, 72);
 }
 .color-variants__item--red {
-  background-color: #ff5a4e;
+  background-color: rgb(255, 90, 78);
 }
 .color-variants__item--orange {
-  background-color: #ff9532;
+  background-color: rgb(255, 149, 50);
 }
 .color-variants__item--magenta {
-  background-color: #ffa3d1;
+  background-color: rgb(255, 163, 209);
 }
 .color-variants__item--gray {
-  background-color: #bbbfc2;
+  background-color: rgb(187, 191, 194);
 }
 .color-variants__item--blue {
-  background-color: #3d86e6;
+  background-color: rgb(61, 134, 230);
 }
 .color-variants__item--purple {
-  background-color: #d096f7;
+  background-color: rgb(208, 150, 247);
 }
 .color-variants__item--black {
-  background-color: #545658;
+  background-color: rgb(84, 86, 88);
 }
 .color-variants__item--multi {
-  background: linear-gradient(lightblue, #2d76ff, #b921b9, red, orange, yellow, #71dd0b);
-  background: conic-gradient(lightblue, #2d76ff, #b921b9, red, orange, yellow, #71dd0b);
+  background: linear-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
+  background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
 }
 
 .badges {
@@ -8104,7 +8109,7 @@ footer .footer-container {
 .popup-info__content {
   position: absolute;
   background-color: #fff;
-  box-shadow: 0 4px 8px #e4e4e4;
+  box-shadow: 0 4px 8px rgb(228, 228, 228);
   padding: 15px;
   font-size: 12px;
   z-index: 1;
@@ -8777,7 +8782,7 @@ footer .footer-container {
   flex-direction: column;
   row-gap: 10px;
   background-color: #fff;
-  box-shadow: 0 20px 100px #0000000d;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.0509803922);
   border-radius: 6px;
   flex-wrap: nowrap;
 }
