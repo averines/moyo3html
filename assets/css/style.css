@@ -4943,6 +4943,8 @@ footer .footer-container {
   border-bottom: 1px dashed #d9d9d9;
   margin: 0 13px;
   padding: 11px 0;
+  text-decoration: none;
+  color: #3d3d3c;
 }
 .toggler-sort__item:last-child {
   border-bottom: none;
@@ -5048,6 +5050,8 @@ footer .footer-container {
   border-bottom: 1px dashed #d9d9d9;
   margin: 0 13px;
   padding: 11px 0;
+  text-decoration: none;
+  color: #3d3d3c;
 }
 .toggler-count__item:last-child {
   border-bottom: none;

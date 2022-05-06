@@ -9,7 +9,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     column-gap: 0;
-    // margin-top: 15px;
   }
 
   .toggler-sort-wrapper {
@@ -43,9 +42,9 @@
       box-shadow: 0 3px 5px $line-d;
       border-radius: 0 0 4px 4px;
 
-    @media screen and (min-width: 768px) {
-      box-shadow: none;
-    }
+      @media screen and (min-width: 768px) {
+        box-shadow: none;
+      }
 
       .toggler-sort__item {
         display: flex;
@@ -77,6 +76,8 @@
     border-bottom: 1px dashed $line-l;
     margin: 0 13px;
     padding: 11px 0;
+    text-decoration: none;
+    color: $text;
 
     &:last-child {
       border-bottom: none;
@@ -192,6 +193,8 @@
     border-bottom: 1px dashed $line-l;
     margin: 0 13px;
     padding: 11px 0;
+    text-decoration: none;
+    color: $text;
 
     &:last-child {
       border-bottom: none;
