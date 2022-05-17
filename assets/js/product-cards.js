@@ -2,7 +2,15 @@
 
 // действия с мини-карточкой продукта===================================================
 
-const productsCards = document.querySelectorAll('.product-card');
+let productsCards;
+
+function getProductsCards() {
+    productsCards = document.querySelectorAll('.product-card');
+}
+
+//получаем карточки продуктов при загрузке страницы
+getProductsCards();
+
 if (productsCards.length > 0) {
     productsCards.forEach(pCard => {
         let pColors = pCard.querySelectorAll('.color-variants__item');
