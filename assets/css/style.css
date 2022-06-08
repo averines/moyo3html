@@ -6255,6 +6255,9 @@ footer .footer-container {
     max-width: none;
   }
 }
+.product-info__price .price-hidden .price-hidden__btn {
+  font-size: 13px;
+}
 .product-info__properties {
   margin-top: 50px;
   grid-area: properties;

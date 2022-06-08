@@ -62,6 +62,12 @@
         // @media screen and (min-width: 1024px) {
         //     order: 1;
         // }
+
+        .price-hidden {
+            .price-hidden__btn {
+                font-size: 13px;
+            }
+        }
     }
 
     &__properties {
