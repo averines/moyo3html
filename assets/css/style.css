@@ -4411,6 +4411,10 @@ footer .footer-container {
   color: #3d3d3c;
   border-bottom-color: #d9d9d9;
 }
+.btn-link--main {
+  color: #ab064e;
+  border-color: #ab064e;
+}
 
 .btn-not-added::after {
   content: "Показать все доступные размеры";
@@ -6258,6 +6262,14 @@ footer .footer-container {
 .product-info__price .price-hidden .price-hidden__btn {
   font-size: 13px;
 }
+.product-info__warning {
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 11px;
+  background-color: #d0e7e1;
+  border-radius: 4px;
+  margin-top: 12px;
+}
 .product-info__properties {
   margin-top: 50px;
   grid-area: properties;
@@ -6878,6 +6890,13 @@ footer .footer-container {
   .product-feedback__overall {
     padding: 60px;
   }
+}
+.product-feedback__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .product-feedback__messages {
@@ -8204,6 +8223,12 @@ footer .footer-container {
 }
 .social-share__item--ok {
   background: url(../img/icons/social/ok.svg) no-repeat center;
+}
+.social-share__item--tg {
+  background: url(../img/icons/social/tg.svg) no-repeat center;
+}
+.social-share__item--wa {
+  background: url(../img/icons/social/wa.svg) no-repeat center;
 }
 
 .after-pz::after {

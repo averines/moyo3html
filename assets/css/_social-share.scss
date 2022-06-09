@@ -17,12 +17,10 @@
             opacity: 1;
             border-left-color: lighten($line-l, 5);
         }
-        
 
         &:last-child {
             border-right: 1px solid $line-l;
         }
-    
 
         &--vk {
             background: url(../img/icons/social/vk.svg) no-repeat center;
@@ -35,13 +33,18 @@
         }
         &--ig {
             background: url(../img/icons/social/ig.svg) no-repeat center;
-        }        
+        }
         &--ma {
             background: url(../img/icons/social/ma.svg) no-repeat center;
         }
         &--ok {
             background: url(../img/icons/social/ok.svg) no-repeat center;
-        }                                  
+        }
+        &--tg {
+            background: url(../img/icons/social/tg.svg) no-repeat center;
+        }
+        &--wa {
+            background: url(../img/icons/social/wa.svg) no-repeat center;
+        }
     }
-
 }

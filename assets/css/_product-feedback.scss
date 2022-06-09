@@ -23,7 +23,15 @@
 
         @media screen and (min-width: 1200px) {
             padding: 60px;
-        }            
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
     }
 
     &__messages {
@@ -33,7 +41,7 @@
 
         @media screen and (min-width: 1024px) {
             padding: 0 30px;
-        }        
+        }
 
         @media screen and (min-width: 1200px) {
             padding: 0 30px 30px 30px;
@@ -56,7 +64,7 @@
 
         @media screen and (min-width: 1024px) {
             padding: 30px;
-        }        
+        }
     }
 
     &__add {

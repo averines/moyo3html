@@ -1721,9 +1721,17 @@
                         <a class="product-info__link" href="#product-feedback" data-action="scroll">23 отзыва</a>
                         <button class="product-info__favorite product-favorite" aria-label="В избранное"></button>
                     </div>
+                    <div class="product-info__warning">Только для оптовых покупателей</div>
                 </div>
                 <div class="product-info__column">
                     <div>
+                        <!-- без цены -->
+                        <div class="product-info__price pb-1">
+                            <div class="warning">
+                                <p>Нет в продаже</p>
+                            </div>
+                        </div>
+
                         <!-- обычная цена -->
                         <div class="product-info__price product-price product-price--page-product">
                             <div class="product-price__row">
@@ -1734,7 +1742,7 @@
                                 <div class="text-muted">Эта цена применится в Корзине при общей сумме заказа > 7500&nbsp;₽ по&nbsp;оптовым ценам</div>
                             </div>
                         </div>
-                        
+
                         <!-- цена со скидкой -->
                         <div class="product-info__price product-price product-price--page-product">
                             <div class="product-price__row">
@@ -1771,25 +1779,7 @@
                             </div>
                         </div>
 
-                        <!-- с пометкой "только для опта" -->
-                        <div class="product-info__price product-price product-price--page-product">
-                            <div class="product-card__warning">Только для оптовых покупателей</div>
-                            <div class="product-price__row">
-                                <div class="product-price__old">2 830</div>
-                                <div class="product-price__profit">175</div>
-                                <div class="product-price__date">Осталось 3 дня</div>
-                            </div>
-                            <div class="product-price__row">
-                                <div class="product-price__base">2 655</div>
-                                <div class="product-price__discount">15</div>
-                            </div>
-                            <div class="product-price__opt">
-                                Оптовая цена <span>2 236</span>
-                                <div class="text-muted">Эта цена применится в Корзине при общей сумме заказа > 7500&nbsp;₽ по&nbsp;оптовым ценам</div>
-                            </div>
-                        </div>
-
-                        <div class="product-info__warning warning animate-blink">Этот товар возврату и&nbsp;обмену не&nbsp;подлежит</div>
+                        <div class="warning animate-blink">Этот товар возврату и&nbsp;обмену не&nbsp;подлежит</div>
                     </div>
                     <div>
                         <a class="product-info__brand" href="brand.html">
@@ -1797,10 +1787,10 @@
                             <img src="./i/brands/logos/01.png" alt="Vittoria Vicci" loading="lazy">
                         </a>
                         <div class="product-info__share social-share">
+                            <a class="social-share__item social-share__item--tg" href="#" aria-label="Telegram"></a>
+                            <a class="social-share__item social-share__item--wa" href="#" aria-label="WhatsApp"></a>
                             <a class="social-share__item social-share__item--vk" href="#" aria-label="VK"></a>
-                            <a class="social-share__item social-share__item--fb" href="#" aria-label="Facebook"></a>
                             <a class="social-share__item social-share__item--tw" href="#" aria-label="Twiter"></a>
-                            <a class="social-share__item social-share__item--ig" href="#" aria-label="Instagram"></a>
                             <a class="social-share__item social-share__item--ma" href="#" aria-label="Mail.ru"></a>
                             <a class="social-share__item social-share__item--ok" href="#" aria-label="Одноклассники"></a>
                         </div>
@@ -1924,13 +1914,799 @@
 
                     </div>
                 </div>
+
+                <!-- нет размеров -->
                 <div class="product-info__sizes product-sizes">
                     <div class="product-sizes__header">
                         <div class="h3">Добавить в корзину</div>
                         <button class="product-info__link" data-fancybox data-type="ajax" data-src="modal-sizes.html">Таблица размеров</button>
                     </div>
-                    <div class="product-info__warning warning animate-blink">Нет доступных размеров у этого товара</div>
+                    <div class="warning">
+                        <p>Нет доступных размеров у этого товара</p>
+                    </div>
                 </div>
+
+                <!-- есть размеры и контролы -->
+                <div class="product-info__sizes product-sizes">
+                    <div class="product-sizes__header">
+                        <div class="h3">Добавить в корзину</div>
+                        <button class="product-info__link" data-fancybox data-type="ajax" data-src="modal-sizes.html">Таблица размеров</button>
+                    </div>
+                    <div class="product-table-wrapper">
+                        <table class="product-table product-table--sm">
+                            <thead>
+                                <tr>
+                                    <th class="product-table__col--size">Размер</th>
+                                    <th class="product-table__col--count">Количество</th>
+                                    <th>Цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44-46
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            44
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="quantity">
+                                            <button class="quantity__btn quantity__btn--minus" aria-label="-" disabled></button>
+                                            <input class="quantity__input" type="text" value="0">
+                                            <button class="quantity__btn quantity__btn--plus" aria-label="+"></button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="product-table__btn"></button>
+                    <div class="product-table__total">
+                        Этого товара в корзине:
+                        <div data-action="product-table-total">
+                            <span class="after-pz">0</span>
+                            /
+                            <span class="after-currency">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- есть размеры, требуется вход -->
+                <div class="product-info__sizes product-sizes">
+                    <div class="product-sizes__header">
+                        <div class="h3">Добавить в корзину</div>
+                        <button class="product-info__link" data-fancybox data-type="ajax" data-src="modal-sizes.html">Таблица размеров</button>
+                    </div>
+                    <div>
+                        <p><button class="btn-link btn-link--main" data-fancybox data-type="ajax" data-src="modal-login.html">Войдите / Зарегистрируйтесь</button> чтобы добавлять товары в корзину.</p>
+                    </div>
+
+                    <div class="product-table-wrapper">
+                        <table class="product-table product-table--sm">
+                            <thead>
+                                <tr>
+                                    <th class="product-table__col--size">Размер</th>
+                                    <th>Цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="product-table__row">
+                                    <td>
+                                        <div class="product-table__td--flex">
+                                            42
+                                            <div class="popup-info">
+                                                <button class="popup-info__btn" aria-label="Инфо"></button>
+                                                <div class="popup-info__content">
+                                                    <p>Оригинальный размер: S</p>
+                                                    <p>Обхват груди: 86-89 см</p>
+                                                    <p>Обхват талии: 67-71 см</p>
+                                                    <p>Обхват бедер: 94-97 см</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="product-price product-price--table-product">
+                                            <div class="product-price__base">2 655</div>
+                                            <div class="product-price__discount">15</div>
+                                            <div class="product-price__old">2 830</div>
+                                            <div class="product-price__profit">175</div>
+                                            <div class="product-price__opt">Оптовая <span>1 750</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="product-table__btn"></button>
+                </div>
+
                 <div class="product-info__text">
                     <div class="h3">Дополнительная информация</div>
 
@@ -1946,6 +2722,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="product-feedback" id="product-feedback">
                 <div class="product-feedback__overall">
                     <div class="rating-number">
@@ -1955,7 +2732,7 @@
                             <div class="feedback-stars__stroked"></div>
                         </div>
                         <div class="rating-number__btn">Подробнее</div>
-
+            
                         <div class="rating-stars">
                             <div class="rating-stars__count">Отзывов: 23</div>
                             <div class="rating-stars__item">
@@ -2010,7 +2787,7 @@
                             </div>
                         </div>
                     </div>
-
+            
                     <div class="rating-sizes">
                         <div class="rating-sizes__item" data-feedback-size-percent="70">
                             <div class="rating-sizes__header">
@@ -2039,15 +2816,15 @@
                                 <div class="rating-sizes__value"></div>
                             </div>
                         </div>
-
+            
                     </div>
                 </div>
-
+            
                 <div class="product-feedback__togglers">
                     <button class="product-feedback__add">Добавить отзыв</button>
                     <button class="product-feedback__all product-info__link" aria-label="Показать все отзывы"></button>
                 </div>
-
+            
                 <form class="product-feedback__form feedback-form">
                     <div class="feedback-form__title">Добавить отзыв</div>
                     <div class="form-row">
@@ -2058,16 +2835,16 @@
                         <div class="feedback-form__stars feedback-stars-form">
                             <input id="star-5" type="radio" name="feedback-rating">
                             <label for="star-5" aria-label="5"></label>
-
+            
                             <input id="star-4" type="radio" name="feedback-rating">
                             <label for="star-4" aria-label="4"></label>
-
+            
                             <input id="star-3" type="radio" name="feedback-rating">
                             <label for="star-3" aria-label="3"></label>
-
+            
                             <input id="star-2" type="radio" name="feedback-rating">
                             <label for="star-2" aria-label="2"></label>
-
+            
                             <input id="star-1" type="radio" name="feedback-rating">
                             <label for="star-1" aria-label="1"></label>
                         </div>
@@ -2102,7 +2879,7 @@
                     </div>
                     <button class="feedback-form__submit" type="submit">Отправить отзыв</button>
                 </form>
-
+            
                 <div class="product-feedback__messages feedback-messages" id="feedback-messages">
                     <div class="feedback-messages__item feedback-message">
                         <div class="feedback-message__header">

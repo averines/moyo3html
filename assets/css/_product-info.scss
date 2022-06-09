@@ -70,6 +70,16 @@
         }
     }
 
+    &__warning {
+        display: inline-block;
+        padding: 0.5em;
+        font-size: 11px;
+        background-color: $special-6-l;
+        border-radius: 4px;
+        margin-top: 12px;
+
+    }
+
     &__properties {
         margin-top: 50px;
         grid-area: properties;

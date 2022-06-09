@@ -54,7 +54,7 @@
         &:hover {
             background-color: darken($special-2, 5);
         }
-    }    
+    }
 
     &-gray-outline {
         color: $text-l;
@@ -108,6 +108,11 @@
     &:hover {
         color: $text;
         border-bottom-color: $line-l;
+    }
+
+    &--main {
+        color: $main;
+        border-color: $main;
     }
 }
 
