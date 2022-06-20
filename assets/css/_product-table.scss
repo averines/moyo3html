@@ -42,26 +42,6 @@
     width: 100%;
     border-collapse: collapse;
 
-    @media screen and (min-width: 768px) {
-        // border: 15px solid #fff;
-
-        tbody {
-            tr {
-                &:hover {
-                    & td:first-child {
-                        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, lighten($bg-ll, 6) 100%);
-                    }
-                }
-
-                &.is-added {
-                    td:first-child {
-                        background: linear-gradient(270deg, rgba(183, 241, 195, 0.25) 0%, rgba(183, 241, 195, 0) 100%);
-                    }
-                }
-            }
-        }
-    }
-
     thead {
         tr {
             display: none;
@@ -91,9 +71,11 @@
             grid-template-areas:
                 "size counter"
                 "price price";
+            border-bottom: 1px solid lighten($line-l, 5);
 
             @media screen and (min-width: 500px) {
                 display: table-row;
+                border-bottom-color: #fff;
             }
 
             td {
@@ -124,7 +106,7 @@
                     grid-area: counter;
                     padding-top: 10px;
                     padding-bottom: 3px;
-
+                    padding-right: 10px;
                     grid-row: 1;
                     grid-column: 2;
 
@@ -138,6 +120,7 @@
                     @media screen and (min-width: 500px) {
                         padding-top: 10px;
                         padding-bottom: 10px;
+                        padding-right: 0;
                     }
 
                     @media screen and (min-width: 1024px) {
@@ -150,10 +133,8 @@
                     padding-top: 0;
                     padding-bottom: 10px;
                     grid-area: price;
-                    border-bottom: 1px solid $line-l;
-
                     grid-row: 2;
-                    grid-column: 1;
+                    // grid-column: 1;
 
                     @media screen and (min-width: 500px) {
                         padding-top: 10px;
@@ -173,27 +154,23 @@
                 @media screen and (min-width: 500px) {
                     display: table-cell;
                     width: auto;
-                    border-bottom: 1px solid $line-l;
                 }
 
                 @media screen and (min-width: 768px) {
                     font-size: 13px;
                     padding-right: 10px;
-                    border-bottom-color: lighten($line-ll, 5);
-                    background-color: #fff;
                 }
             }
 
-            &:hover {
-                td {
-                    background-color: lighten($bg-ll, 5);
-                }
-            }
+            // &:hover {
+            //     td {
+            //         background-color: lighten($bg-ll, 5);
+            //     }
+            // }
 
             &.is-added {
-                td {
-                    background: rgba(183, 241, 195, 0.25);
-                }
+                background: linear-gradient(270deg, rgba(183, 241, 195, 0.25) 75%, rgba(183, 241, 195, 0) 100%);
+
                 .quantity__btn {
                     box-shadow: 0 2px 3px 0 rgba(44, 50, 70, 0.2);
                 }

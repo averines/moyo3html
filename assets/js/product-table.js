@@ -3,8 +3,8 @@
 // показать/скрыть все размеры в таблице товара, если размеров больше 8
 const productTableWrapper = document.querySelector('.product-table-wrapper');
 const productTableBtn = document.querySelector('.product-table__btn');
-const poductsTableRows = document.querySelectorAll('.product-table__row');
-if (poductsTableRows.length > 8) {
+const productsTableRows = document.querySelectorAll('.product-table__row');
+if (productsTableRows.length > 8) {
     if (productTableWrapper && productTableBtn) {
         productTableBtn.addEventListener('click', () => {
             productTableBtn.classList.toggle('is-active');

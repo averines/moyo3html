@@ -96,18 +96,18 @@ if (menuFilterCheckboxItems) {
 }
 
 // сброс развернутых элементов при переходе в десктопный режим
-window.addEventListener('resize', () => {
+// window.addEventListener('resize', () => {
 
-    // if (document.body.clientWidth> 1200) {
-    //     menuInfoBtn.classList.remove('is-active')
-    //     menuInfoWindow.classList.remove('is-active')
-    //     menuUserBtn.classList.remove('is-active')
-    //     menuUserWindow.classList.remove('is-active')
-    // }
+//     // if (document.body.clientWidth> 1200) {
+//     //     menuInfoBtn.classList.remove('is-active')
+//     //     menuInfoWindow.classList.remove('is-active')
+//     //     menuUserBtn.classList.remove('is-active')
+//     //     menuUserWindow.classList.remove('is-active')
+//     // }
 
-    if (document.body.clientWidth < 768) {
-        togglersItems.forEach(item => {
-            item.classList.remove('is-active');
-        });
-    }
-}, false);
+//     if (document.body.clientWidth < 768) {
+//         togglersItems.forEach(item => {
+//             item.classList.remove('is-active');
+//         });
+//     }
+// }, false);

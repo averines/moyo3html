@@ -77,7 +77,6 @@
         background-color: $special-6-l;
         border-radius: 4px;
         margin-top: 12px;
-
     }
 
     &__properties {
@@ -120,7 +119,13 @@
 
     &__column {
         display: flex;
+        flex-direction: column;
         column-gap: 30px;
+        row-gap: 20px;
+
+        @media screen and (min-width: 600px) {
+            flex-direction: row;
+        }
 
         @media screen and (min-width: 1200px) {
             column-gap: 70px;
@@ -162,7 +167,7 @@
         font-size: 12px;
         padding: 10px 15px;
         display: flex;
-        flex-direction: column;
+        column-gap: 10px;
         justify-content: center;
         text-align: center;
         align-items: center;
@@ -174,11 +179,11 @@
             text-decoration: none;
         }
 
-        > img {
+        img {
             max-width: 90px;
         }
+
         @media screen and (min-width: 600px) {
-            flex-direction: row;
             text-align: left;
             justify-content: flex-start;
         }

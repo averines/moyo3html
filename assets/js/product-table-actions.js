@@ -58,7 +58,7 @@ function updateTotal() {
     let productTotalCost = 0;
     let productTotalQuantity = 0;
 
-    poductsTableRows.forEach(poductsTableRow => {
+    productsTableRows.forEach(poductsTableRow => {
         const inputVal = poductsTableRow.querySelector('.quantity__input').value;
         const price = poductsTableRow.querySelector('.product-price__base').innerHTML.replace(/\s/g, '');
 

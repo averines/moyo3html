@@ -1,0 +1,19 @@
+.feedback-answer {
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: $bg-ll;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    &__header {
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
