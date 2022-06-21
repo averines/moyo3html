@@ -158,7 +158,7 @@ if (document.querySelector('.container--page-product')) {
     });
 
     Fancybox.bind('[data-fancybox="product-pics"]', {
-        infinite: false,
+        infinite: true,
         dragToClose: true,
         placeFocusBack: false,
         Toolbar: {

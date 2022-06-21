@@ -6449,6 +6449,7 @@ footer .footer-container {
 }
 .product-info .info-description {
   max-width: 550px;
+  margin-top: 14px;
 }
 
 .product-properties {
