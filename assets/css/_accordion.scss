@@ -74,7 +74,7 @@
     &.accordion--brand-filter {
         @media screen and (min-width: 1200px) {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             column-gap: 20px;
         }
 
@@ -102,6 +102,12 @@
                     &::after {
                         display: none;
                     }
+                }
+            }
+
+            > .accordion__content {
+                @media screen and (min-width: 1200px) {
+                max-height: none;
                 }
             }
 
