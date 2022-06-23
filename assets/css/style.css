@@ -2881,7 +2881,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 1200px) {
   .accordion.accordion--brand-filter > .accordion__item > .accordion__content {
-    max-height: none;
+    max-height: none !important;
   }
 }
 .accordion.accordion--brand-filter > .accordion__item.is-opened > .accordion__content {

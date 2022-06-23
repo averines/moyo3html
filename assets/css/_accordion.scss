@@ -107,7 +107,7 @@
 
             > .accordion__content {
                 @media screen and (min-width: 1200px) {
-                max-height: none;
+                    max-height: none !important;
                 }
             }
 
