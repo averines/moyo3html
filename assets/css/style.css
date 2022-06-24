@@ -6323,6 +6323,8 @@ footer .footer-container {
 @media screen and (min-width: 600px) {
   .product-info__column {
     flex-direction: row;
+    justify-content: space-between;
+    max-width: 600px;
   }
 }
 @media screen and (min-width: 1200px) {

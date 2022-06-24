@@ -125,6 +125,8 @@
 
         @media screen and (min-width: 600px) {
             flex-direction: row;
+            justify-content: space-between;
+            max-width: 600px;
         }
 
         @media screen and (min-width: 1200px) {
