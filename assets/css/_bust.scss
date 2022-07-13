@@ -123,3 +123,65 @@
         border-radius: 5px;
     }
 }
+
+// другой вариант
+.drag-range {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        span {
+            font-weight: 400;
+        }        
+    }
+
+    &__input {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        input {
+            width: 280px;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none !important;
+            // background: linear-gradient(90deg, $special-1, $special-2);
+            background: url(../img/ruler.jpg) repeat-x  50% 40% ;
+            height: 20px;
+            border-radius: 3px;
+            // border: 1px solid red;
+            
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none !important;
+            background: $main;
+            height: 8px;
+            width: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    }
+
+    &__value {
+        text-align: center;
+
+        span {
+            background-color: $text;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $text-l;
+    }
+}

@@ -13,6 +13,20 @@
 }
 
 @for $i from 0 through 6 {
+  .pl-#{$i},
+  .px-#{$i} {
+    padding-left: 1em * $i;
+  }
+}
+
+@for $i from 0 through 6 {
+  .pr-#{$i},
+  .px-#{$i} {
+    padding-right: 1em * $i;
+  }
+}
+
+@for $i from 0 through 6 {
   .mt-#{$i},
   .my-#{$i} {
     margin-top: 1em * $i;
@@ -61,7 +75,6 @@
     max-width: 80%;
   }
 }
-
 
 .mr-auto {
   margin-right: auto;

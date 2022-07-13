@@ -1,14 +1,13 @@
 .icon-star {
-    width: 15px;
-    height: 15px;
-    background: url(../img/icons/star-filled.svg) no-repeat center;
-    background-size: 100%;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/star-filled.svg) no-repeat center;
+  background-size: 100%;
 
-    &--stroked {
-        background: url(../img/icons/star-stroked.svg) no-repeat center;
-    }
+  &--stroked {
+    background: url(../img/icons/star-stroked.svg) no-repeat center;
+  }
 }
-
 
 .icon-password {
   width: 30px;
@@ -24,5 +23,17 @@
 
   &.is-active {
     filter: brightness(0);
+  }
+}
+
+.icon-loading {
+  background: url(../img/icons/circle.svg) no-repeat center/100%;
+  width: 1em;
+  height: 1em;
+  animation: loading 1s 0s infinite;
+  display: inline-block;
+
+  &--white {
+    filter: brightness(10);
   }
 }
