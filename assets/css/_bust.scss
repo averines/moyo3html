@@ -1,187 +1,122 @@
 .bust-wrapper {
     order: 8;
     margin-top: 30px;
-}
-
-.bust {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: 30px;
-}
-
-.bust-body {
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    max-width: 300px;
-
-    &__pic {
-        display: block;
-        width: 100%;
-    }
-
-    &__lines {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        path {
-            opacity: 0.7;
-            transition: all 0.1s ease-in-out;
-
-            &.is-active {
-                opacity: 1;
-                fill: $main;
-                transform: translateY(2px);
-            }
-        }
-    }
-}
-
-.bust-content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
+    margin-bottom: 250px;
+    max-width: 600px;
 }
 
 .bust-result {
-    box-shadow: 0 10px 30px rgb(114 118 122 / 10%);
-    border-radius: 5px;
-    padding: 25px;
-    font-size: 14px;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 7px;
+    font-weight: 600;
+    font-size: 14px;
 
     span {
-        font-weight: 600;
+        font-weight: 400;
+    }
+
+    .is-animated {
+        animation: counter 0.2s ease-in-out;
+    }
+}
+
+.bust-body {
+    // border: 1px solid blue;
+    margin-top: 30px;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        background-color: $body;
+        height: 400px;
+    }
+}
+
+.bust-pic {
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 67px);
+    z-index: 0;
+
+    @media screen and (min-width: 768px) {
+        top: 23px;
     }
 }
 
 .drags {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
+    // border: 1px solid red;
+    z-index: 1;
+    padding-bottom: 20px;
 }
 
-.drag {
-    position: relative;
-
-    &__box {
-        border-radius: 6px;
-        width: 300px;
-        height: 50px;
-        border: 1px solid #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url(../img/ruler.jpg) repeat-x;
-        background-position-x: 0;
-        cursor: pointer;
-        transition: box-shadow 0.15s ease-in-out;
-
-        &:hover {
-            border-color: $text;
-
-            .drag__value {
-                background-color: $main;
-            }
-        }
-
-        &.is-disabled {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.35) inset;
-        }
-    }
-
-    &__value {
-        width: 35px;
-        height: 25px;
-        font-size: 13px;
-        background-color: $text;
-        color: #fff;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 3px;
-        pointer-events: none;
-        user-select: none;
-    }
-
-    &__title {
-        font-size: 13px;
-        padding: 5px;
-        position: absolute;
-        top: -1em;
-        left: 10px;
-        background-color: #fff;
-        border-radius: 5px;
-    }
-}
-
-// другой вариант
 .drag-range {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    &__value {
+        display: block;
+        width: 36px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        background-color: $text;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 1px;
+        margin-bottom: -15px;
+    }
 
     &__title {
-        font-size: 14px;
+        font-size: 10px;
         font-weight: 600;
-        margin-bottom: 10px;
-
-        span {
-            font-weight: 400;
-        }        
+        margin-bottom: 7px;
     }
 
     &__input {
         display: flex;
         column-gap: 10px;
-        align-items: center;
+        justify-content: space-between;
 
         input {
-            width: 280px;
+            width: 220px;
+
+            @media screen and (min-width: 768px) {
+                width: 287px;
+            }
         }
 
         input[type="range"] {
             -webkit-appearance: none !important;
-            // background: linear-gradient(90deg, $special-1, $special-2);
-            background: url(../img/ruler.jpg) repeat-x  50% 40% ;
+            background: url(../img/ruler.svg) repeat-x;
             height: 20px;
-            border-radius: 3px;
             // border: 1px solid red;
-            
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none !important;
-            background: $main;
-            height: 8px;
-            width: 50px;
-            border-radius: 50px;
+            background: linear-gradient($main 35%, transparent 35%);
+            height: 20px;
+            width: 37px;
             cursor: pointer;
-        }
-    }
+            transition: $tr;
 
-    &__value {
-        text-align: center;
-
-        span {
-            background-color: $text;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 13px;
+            &:hover {
+                background: linear-gradient($main-h 35%, transparent 35%);
+            }
         }
     }
 
     &__text {
         font-size: 14px;
-        color: $text-l;
+    }
+
+    &:last-child {
+        margin-top: 20px;
     }
 }

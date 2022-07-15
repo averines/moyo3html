@@ -2,11 +2,10 @@
 
 // калькулятор размеров для бюстгальтеров бренда Conto
 
-
-let drags = document.querySelectorAll('.drag__box');
-let bodyLines = document.querySelectorAll('.bust-body__lines path');
+let drags = document.querySelectorAll('.drags input');
 let resultBra = document.querySelector('.bust-result__bra span');
 let resultSlip = document.querySelector('.bust-result__slip span');
+
 let bustSize = 90;
 let underBustSize = 70;
 let hipsSize = 90;
@@ -14,98 +13,11 @@ let checkSizes;
 
 if (drags.length > 0) {
     drags.forEach(drag => {
-        let start = 0;
-        let offsetGlobal = Number(drag.dataset.start);
-        let min = Number(drag.dataset.min);
-        let max = Number(drag.dataset.max);
-        let title = drag.dataset.title;
-        let offsetLocal = 0;
-        let pressDown = false;
-        const dragValueEl = drag.querySelector('.drag__value');
-
-        // drag.addEventListener('mousedown', e => {
-        //     pressDown = true;
-        //     start = e.offsetX;
-        // });
-
-        // drag.addEventListener('mouseenter', e => {
-        //     bodyLines.forEach(bodyLine => {
-        //         if (bodyLine.dataset.title == title) {
-        //             bodyLine.classList.add("is-active");
-        //         }
-        //     });
-        // });
-
-        // drag.addEventListener("mousemove", e => {
-        //     updateDragger(start, Math.round(e.offsetX / 6), pressDown);
-        // });
-
-        // drag.addEventListener('mouseup', () => {
-        //     pressDown = false;
-        //     checkSizes({ title, value: offsetGlobal });
-        // });
-
-        // drag.addEventListener('mouseout', () => {
-        //     pressDown = false;
-        //     bodyLines.forEach(bodyLine => bodyLine.classList.remove("is-active"));
-        // });
-
-
-        ['mousedown', 'pointerdown'].forEach(function (e) {
-            drag.addEventListener(e, event => {
-                pressDown = true;
-                start = event.offsetX;
-            });
+        let dragValue = drag.closest('.drag-range').querySelector('.drag-range__value');
+        drag.addEventListener('input', () => {
+            dragValue.innerText = drag.value;
+            checkSizes({ title: drag.name, value: drag.value });
         });
-
-        ['mouseenter', 'pointerenter'].forEach(function (e) {
-            drag.addEventListener(e, event => {
-                bodyLines.forEach(bodyLine => {
-                    if (bodyLine.dataset.title == title) {
-                        bodyLine.classList.add("is-active");
-                    }
-                });
-            });
-        });
-
-        ['mousemove', 'pointermove'].forEach(function (e) {
-            drag.addEventListener(e, event => {
-                console.log(Math.floor(event.offsetX));
-                updateDragger(start, Math.round(event.offsetX / 6), pressDown);
-            });
-        });
-
-        ['mouseup', 'pointerup'].forEach(function (e) {
-            drag.addEventListener(e, event => {
-                pressDown = false;
-                checkSizes({ title, value: offsetGlobal });
-            });
-        });
-
-        ['mouseout', 'pointerout'].forEach(function (e) {
-            drag.addEventListener(e, event => {
-                pressDown = false;
-                bodyLines.forEach(bodyLine => bodyLine.classList.remove("is-active"));
-            });
-        });
-
-        function updateDragger(s, end, pressDown) {
-            if (pressDown) {
-                offsetLocal = (end - s) * -1;
-                start = end;
-                let offset = offsetGlobal + offsetLocal;
-                if (offset >= min && offset <= max) {
-                    offsetGlobal = offset;
-                    dragValueEl.innerHTML = offsetGlobal;
-                    drag.style.backgroundPositionX = offsetGlobal * -1 + 'px';
-                    drag.classList.remove("is-disabled");
-
-                    if (offset == min || offset == max) {
-                        drag.classList.add("is-disabled");
-                    }
-                }
-            }
-        }
     });
 
     checkSizes = function (size) {
@@ -135,7 +47,9 @@ if (drags.length > 0) {
             });
 
             if (resultBustSizes.length > 0) {
+                resultBra.classList.add('is-animated');
                 resultBra.innerHTML = resultBustSizes.join(' или ');
+                setTimeout(() => { resultBra.classList.remove('is-animated'); }, 200);
             } else {
                 resultBra.innerHTML = "Нет соответствий";
             }
