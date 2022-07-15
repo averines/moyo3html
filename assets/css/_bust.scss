@@ -11,13 +11,17 @@
     row-gap: 7px;
     font-weight: 600;
     font-size: 14px;
+    border: 1px solid transparent;
 
     span {
-        font-weight: 400;
+        // font-weight: 600;
+        color: $main;
     }
 
     .is-animated {
         animation: counter 0.2s ease-in-out;
+        // color: $special-1;
+        // filter: blur(1px);
     }
 }
 

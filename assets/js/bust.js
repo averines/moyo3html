@@ -60,10 +60,12 @@ if (drags.length > 0) {
                 if (hipsSize >= row.min && hipsSize <= row.max) {
                     resultSlipSizes.push(row.title);
                 }
-            })
+            });
 
             if (resultSlipSizes.length > 0) {
+                resultSlip.classList.add('is-animated');
                 resultSlip.innerHTML = resultSlipSizes.join(' или ');
+                setTimeout(() => { resultSlip.classList.remove('is-animated'); }, 200);
             } else {
                 resultSlip.innerHTML = "Нет соответствий";
             }

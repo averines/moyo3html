@@ -10462,9 +10462,10 @@ footer .footer-container {
   row-gap: 7px;
   font-weight: 600;
   font-size: 14px;
+  border: 1px solid transparent;
 }
 .bust-result span {
-  font-weight: 400;
+  color: #ab064e;
 }
 .bust-result .is-animated {
   -webkit-animation: counter 0.2s ease-in-out;
