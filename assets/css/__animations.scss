@@ -90,3 +90,17 @@
     transform: rotate(1turn);
   }
 }
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
