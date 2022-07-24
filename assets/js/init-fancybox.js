@@ -5,8 +5,8 @@ Fancybox.bind("[data-fancybox]", {
     infinite: false,
     dragToClose: false,
     groupAll: false,
-    autoFocus: false,
-    trapFocus: false,
+    // autoFocus: false,
+    // trapFocus: false,
     placeFocusBack: false,
     l10n: {
         CLOSE: "Закрыть",
