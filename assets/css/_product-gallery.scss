@@ -1,9 +1,15 @@
 .product-gallery {
     &__thumbs {
         display: none;
-        
+
         @media screen and (min-width: 1024px) {
             display: block;
+        }
+
+        .carousel__nav {
+            .carousel__button.is-prev, .carousel__button.is-next {
+                top: 50%;
+            }
         }
     }
 
