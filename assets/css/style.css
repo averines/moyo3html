@@ -3373,6 +3373,9 @@ footer .footer-container {
 }
 .favorites-mini__btn {
   position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 .favorites-mini__icon {
   display: block;
@@ -3391,16 +3394,25 @@ footer .footer-container {
   }
 }
 .favorites-mini__count {
-  position: absolute;
-  top: 2px;
-  right: 2px;
+  margin-top: -0.9em;
+  order: 1;
   color: #fff;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
+  text-align: center;
 }
 @media screen and (min-width: 400px) {
   .favorites-mini__count {
+    position: absolute;
     top: -2px;
+    right: 2px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .favorites-mini__count {
+    top: -3px;
+    font-size: 10px;
   }
 }
 .favorites-mini:hover .favorites-mini__icon {
@@ -9733,6 +9745,7 @@ footer .footer-container {
 @media screen and (min-width: 900px) {
   .order-icons {
     width: auto;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
