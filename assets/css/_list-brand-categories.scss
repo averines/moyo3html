@@ -1,0 +1,67 @@
+.list-brand-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px 0;
+    gap: 30px;
+
+    @media screen and (min-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .brand-categories-item {
+        background-color: #fff;
+        border-radius: 10px;
+        height: 130px;
+        text-decoration: none;
+        color: $text;
+        transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+        box-shadow: 0 2px 6px rgb(235, 235, 235);
+        position: relative;
+        overflow: hidden;
+
+        @media screen and (min-width: 700px) {
+            height: 200px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            height: 240px;
+        }        
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgb(228, 228, 228);
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            padding: 25px;
+            z-index: 1;
+            position: absolute;
+            max-width: 60%;
+
+            @media screen and (min-width: 900px) {
+                font-size: 22px;
+                padding: 40px;
+                max-width: none;
+            }
+        }
+
+        &__pic {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center right;
+
+            @media screen and (min-width: 700px) {
+                object-fit: cover;
+               
+            }
+        }
+    }
+}
