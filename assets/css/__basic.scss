@@ -47,6 +47,14 @@ h1,
   padding-top: 22px;
   padding-bottom: 16px;
   margin: 0;
+
+  &--lg {
+    font-size: 30px;
+  }
+
+  &--xl {
+    font-size: 40px;
+  }  
 }
 
 h2,

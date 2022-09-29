@@ -74,6 +74,20 @@ if (document.querySelector('.section-slider-category')) {
     });
 }
 
+// слайдер категорий на странице бренда
+if (document.querySelector('.section-slider-brand-category')) {
+    let sliderBrandCategory = new Carousel(document.querySelector(".section-slider-brand-category .carousel"), {
+        infinite: false,
+        Navigation: false,
+        Dots: false,
+        friction: 0.89,
+        slidesPerPage: 'auto',
+        slidesToSlide: 1,
+        fill: true,
+        center: true
+    });
+}
+
 // слайдер продуктов
 const slidersProducts = document.querySelectorAll('.slider-products');
 if (slidersProducts.length > 0) {

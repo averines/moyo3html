@@ -49,6 +49,14 @@ h1,
   padding-bottom: 16px;
   margin: 0;
 }
+h1--lg,
+.h1--lg {
+  font-size: 30px;
+}
+h1--xl,
+.h1--xl {
+  font-size: 40px;
+}
 
 h2,
 .h2 {
@@ -840,7 +848,7 @@ footer .footer-container {
 .footer-nav__title {
   text-transform: uppercase;
   color: #3d3d3c;
-  font-size: 12.5px;
+  font-size: 12px !important;
   font-weight: 600;
   letter-spacing: 0.05em;
   padding: 15px 15px;
@@ -880,7 +888,7 @@ footer .footer-container {
   color: #3d3d3c;
 }
 .footer-menu__item {
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 }
 .footer-menu__link {
   color: #3d3d3c;
@@ -2499,6 +2507,40 @@ footer .footer-container {
   font-size: 15px;
 }
 
+.section-slider-brand-category {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.section-slider-brand-category > .container {
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .section-slider-brand-category > .container {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+.section-slider-brand-category .section__header {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+.section-slider-brand-category .section__header:after {
+  display: none;
+}
+.section-slider-brand-category .section__title {
+  color: #3d3d3c;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  background: none;
+  padding: 0;
+  font-size: 15px;
+}
+
 .slider-category-wrapper {
   position: relative;
 }
@@ -2714,6 +2756,24 @@ footer .footer-container {
   .slider-category--main-page .slider-category__item {
     width: 16.66%;
   }
+}
+@media screen and (min-width: 1200px) {
+  .slider-category--brand-page .slider-category__item {
+    width: 16.66%;
+  }
+}
+.slider-category--brand-page .slider-category__info {
+  padding: 20px;
+  height: 80px;
+}
+.slider-category--brand-page .slider-category__title {
+  text-align: center;
+  font-variant: small-caps;
+}
+.slider-category--brand-page .slider-category__title span {
+  padding-top: 4px;
+  display: block;
+  font-size: 0.8em;
 }
 
 .slider-category-mini {
