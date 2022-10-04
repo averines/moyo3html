@@ -1,5 +1,10 @@
 .pagebanner {
-    padding-top: 20px;
+    margin-top: 20px;
+    max-height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
     &__video {
         width: 100%;
     }

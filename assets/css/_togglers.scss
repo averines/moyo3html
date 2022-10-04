@@ -79,7 +79,7 @@
     text-decoration: none;
     color: $text;
 
-    &:last-child {
+    @media screen and (max-width: 768px) {
       border-bottom: none;
     }
 

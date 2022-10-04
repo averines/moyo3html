@@ -10,7 +10,7 @@ if (document.getElementById('js-map1')) {
             myMap = new ymaps.Map(
                 'js-map1',
                 {
-                    center: [55.77446156893533, 37.741998],
+                    center: [55.778036, 37.736500],
                     zoom: 15
                 },
                 {
@@ -19,9 +19,9 @@ if (document.getElementById('js-map1')) {
             );
             myMap.geoObjects.add(
                 new ymaps.Placemark(
-                    [55.77446156893533, 37.741998],
+                    [55.778036, 37.736500],
                     {
-                        balloonContent: 'Окружной проезд, 30А',
+                        balloonContent: 'ул. Вольная, д. 35, стр. 8',
                         iconCaption: 'OptMoyo.ru'
                     },
                     {
