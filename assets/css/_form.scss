@@ -176,7 +176,7 @@
         }
 
         .form-group {
-            > input[type="text"] {
+            > input[type="text"], textarea {
                 border-radius: 5px;
             }
         }
@@ -209,7 +209,8 @@
             }
         }
 
-        input {
+        input,
+        textarea {
             padding: 27px 40px 10px 20px;
             border: 1px solid $line-l;
             font-size: 18px;
@@ -225,7 +226,7 @@
             &:focus,
             &.not-empty,
             &:focus-within {
-                outline: none;
+                outline: none !important;
                 + label {
                     transform: translateY(-10px) scale(0.75);
                     opacity: 0.8;
@@ -245,6 +246,12 @@
                 transform-origin: 0 0;
             }
         }
+
+        textarea {
+            + label {
+                top: 19px;
+            }
+        }
     }
 
     .form-block {
@@ -257,9 +264,14 @@
         .form-group {
             margin: 0;
 
-            input {
+            input,
+            textarea {
                 border: none;
                 border-bottom: 1px solid $line-ll;
+
+                &:focus {
+                    outline: none;
+                }
             }
 
             &:last-child {

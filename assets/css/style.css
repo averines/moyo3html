@@ -8569,7 +8569,7 @@ footer .footer-container {
 .form-minimal .form-row:first-child {
   margin-top: 0;
 }
-.form-minimal .form-row .form-group > input[type=text] {
+.form-minimal .form-row .form-group > input[type=text], .form-minimal .form-row .form-group textarea {
   border-radius: 5px;
 }
 .form-minimal .form-group {
@@ -8593,7 +8593,8 @@ footer .footer-container {
 .form-minimal .form-group.valid::after {
   filter: none;
 }
-.form-minimal .form-group input {
+.form-minimal .form-group input,
+.form-minimal .form-group textarea {
   padding: 27px 40px 10px 20px;
   border: 1px solid #d9d9d9;
   font-size: 18px;
@@ -8604,14 +8605,21 @@ footer .footer-container {
   border-radius: 0;
   -webkit-border-radius: 0;
 }
-.form-minimal .form-group input:focus, .form-minimal .form-group input.not-empty, .form-minimal .form-group input:focus-within {
-  outline: none;
+.form-minimal .form-group input:focus, .form-minimal .form-group input.not-empty, .form-minimal .form-group input:focus-within,
+.form-minimal .form-group textarea:focus,
+.form-minimal .form-group textarea.not-empty,
+.form-minimal .form-group textarea:focus-within {
+  outline: none !important;
 }
-.form-minimal .form-group input:focus + label, .form-minimal .form-group input.not-empty + label, .form-minimal .form-group input:focus-within + label {
+.form-minimal .form-group input:focus + label, .form-minimal .form-group input.not-empty + label, .form-minimal .form-group input:focus-within + label,
+.form-minimal .form-group textarea:focus + label,
+.form-minimal .form-group textarea.not-empty + label,
+.form-minimal .form-group textarea:focus-within + label {
   transform: translateY(-10px) scale(0.75);
   opacity: 0.8;
 }
-.form-minimal .form-group input + label {
+.form-minimal .form-group input + label,
+.form-minimal .form-group textarea + label {
   pointer-events: none;
   top: auto;
   color: #727272;
@@ -8623,6 +8631,9 @@ footer .footer-container {
   transition: transform 0.15s ease-in-out;
   transform-origin: 0 0;
 }
+.form-minimal .form-group textarea + label {
+  top: 19px;
+}
 .form-minimal .form-block {
   margin: 15px 0;
   border-radius: 5px;
@@ -8633,9 +8644,14 @@ footer .footer-container {
 .form-minimal .form-block .form-group {
   margin: 0;
 }
-.form-minimal .form-block .form-group input {
+.form-minimal .form-block .form-group input,
+.form-minimal .form-block .form-group textarea {
   border: none;
   border-bottom: 1px solid #f1f1f1;
+}
+.form-minimal .form-block .form-group input:focus,
+.form-minimal .form-block .form-group textarea:focus {
+  outline: none;
 }
 .form-minimal .form-block .form-group:last-child > input[type=text],
 .form-minimal .form-block .form-group:last-child > input[type=password] {
