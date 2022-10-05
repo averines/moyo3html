@@ -142,23 +142,23 @@
         }
     }
 
-    &--1-failed {
+    &--1-inprogress {
         &::before {
             background: url(../img/icons/order-icons/statuses/01_.svg) no-repeat center/100%;
         }
     }
-    &--2-failed {
+    &--2-inprogress {
         &::before {
             background: url(../img/icons/order-icons/statuses/02_.svg) no-repeat center/80%;
         }
     }
     
-    &--1-inprogress {
+    &--1-failed {
         &::before {
             background: url(../img/icons/order-icons/statuses/01__.svg) no-repeat center/100%;
         }
     }
-    &--2-inprogress {
+    &--2-failed {
         &::before {
             background: url(../img/icons/order-icons/statuses/02__.svg) no-repeat center/80%;
         }

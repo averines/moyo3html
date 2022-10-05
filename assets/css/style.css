@@ -663,6 +663,20 @@ ol li > a:hover {
   filter: brightness(10);
 }
 
+.icon-close {
+  background: url(../img/icons/close.svg) no-repeat center/80%;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.icon-return {
+  background: url(../img/icons/return2.svg) no-repeat center/100%;
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-block;
+}
+
 .section {
   padding-top: 30px;
   padding-bottom: 70px;
@@ -4577,7 +4591,11 @@ footer .footer-container {
 }
 .btn--small {
   font-size: 13px;
-  padding: 0.6em 1.1em;
+  padding: 0.5em 0.75em;
+}
+.btn--icon {
+  display: flex;
+  align-items: center;
 }
 .btn:disabled {
   background-color: #a6a6a8;
@@ -8569,7 +8587,8 @@ footer .footer-container {
 .form-minimal .form-row:first-child {
   margin-top: 0;
 }
-.form-minimal .form-row .form-group > input[type=text], .form-minimal .form-row .form-group textarea {
+.form-minimal .form-row .form-group > input[type=text],
+.form-minimal .form-row .form-group textarea {
   border-radius: 5px;
 }
 .form-minimal .form-group {
@@ -8594,7 +8613,8 @@ footer .footer-container {
   filter: none;
 }
 .form-minimal .form-group input,
-.form-minimal .form-group textarea {
+.form-minimal .form-group textarea,
+.form-minimal .form-group select {
   padding: 27px 40px 10px 20px;
   border: 1px solid #d9d9d9;
   font-size: 18px;
@@ -8608,18 +8628,25 @@ footer .footer-container {
 .form-minimal .form-group input:focus, .form-minimal .form-group input.not-empty, .form-minimal .form-group input:focus-within,
 .form-minimal .form-group textarea:focus,
 .form-minimal .form-group textarea.not-empty,
-.form-minimal .form-group textarea:focus-within {
+.form-minimal .form-group textarea:focus-within,
+.form-minimal .form-group select:focus,
+.form-minimal .form-group select.not-empty,
+.form-minimal .form-group select:focus-within {
   outline: none !important;
 }
 .form-minimal .form-group input:focus + label, .form-minimal .form-group input.not-empty + label, .form-minimal .form-group input:focus-within + label,
 .form-minimal .form-group textarea:focus + label,
 .form-minimal .form-group textarea.not-empty + label,
-.form-minimal .form-group textarea:focus-within + label {
+.form-minimal .form-group textarea:focus-within + label,
+.form-minimal .form-group select:focus + label,
+.form-minimal .form-group select.not-empty + label,
+.form-minimal .form-group select:focus-within + label {
   transform: translateY(-10px) scale(0.75);
   opacity: 0.8;
 }
 .form-minimal .form-group input + label,
-.form-minimal .form-group textarea + label {
+.form-minimal .form-group textarea + label,
+.form-minimal .form-group select + label {
   pointer-events: none;
   top: auto;
   color: #727272;
@@ -8631,8 +8658,25 @@ footer .footer-container {
   transition: transform 0.15s ease-in-out;
   transform-origin: 0 0;
 }
+.form-minimal .form-group select {
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-minimal .form-group select + label {
+  transform: translateY(-10px) scale(0.75);
+  opacity: 0.8;
+}
 .form-minimal .form-group textarea + label {
   top: 19px;
+}
+.form-minimal .form-group input[type=file] {
+  padding: 35px 40px 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form-minimal .form-group input[type=file] + label {
+  transform: translateY(-15px) scale(0.75);
+  opacity: 0.8;
 }
 .form-minimal .form-block {
   margin: 15px 0;
@@ -8645,12 +8689,14 @@ footer .footer-container {
   margin: 0;
 }
 .form-minimal .form-block .form-group input,
-.form-minimal .form-block .form-group textarea {
+.form-minimal .form-block .form-group textarea,
+.form-minimal .form-block .form-group select {
   border: none;
   border-bottom: 1px solid #f1f1f1;
 }
 .form-minimal .form-block .form-group input:focus,
-.form-minimal .form-block .form-group textarea:focus {
+.form-minimal .form-block .form-group textarea:focus,
+.form-minimal .form-block .form-group select:focus {
   outline: none;
 }
 .form-minimal .form-block .form-group:last-child > input[type=text],
@@ -8762,7 +8808,7 @@ footer .footer-container {
     grid-template-columns: 2fr 4fr;
     -moz-column-gap: 15px;
          column-gap: 15px;
-    padding: 35px 0;
+    padding: 20px 0 35px 0;
     margin: 20px 0;
     border-bottom: 1px dashed #dddddd;
   }
@@ -8907,6 +8953,9 @@ footer .footer-container {
 .list-table thead tr th:first-child {
   text-align: left;
 }
+.list-table thead tr th:nth-child(2) {
+  width: 220px;
+}
 @media screen and (min-width: 400px) {
   .list-table thead tr th {
     font-size: 11px;
@@ -8915,14 +8964,8 @@ footer .footer-container {
 }
 @media screen and (min-width: 768px) {
   .list-table thead tr th {
-    width: 140px;
+    width: 80px;
     text-align: left;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .list-table thead tr th.list-table-header__return {
-    width: 350px;
-    flex-shrink: 0;
   }
 }
 .list-table tbody tr td {
@@ -8967,8 +9010,25 @@ footer .footer-container {
   font-weight: 600;
 }
 .list-table__quantity {
-  width: 150px;
+  width: 50px;
   flex-grow: 0;
+}
+@media screen and (min-width: 768px) {
+  .list-table__quantity {
+    width: 80px;
+  }
+}
+.list-table__status {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .list-table__status {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
 }
 
 .list-table-header__size {
@@ -9960,16 +10020,16 @@ footer .footer-container {
 .statuses--2::before {
   background: url(../img/icons/order-icons/statuses/02.svg) no-repeat center/80%;
 }
-.statuses--1-failed::before {
+.statuses--1-inprogress::before {
   background: url(../img/icons/order-icons/statuses/01_.svg) no-repeat center/100%;
 }
-.statuses--2-failed::before {
+.statuses--2-inprogress::before {
   background: url(../img/icons/order-icons/statuses/02_.svg) no-repeat center/80%;
 }
-.statuses--1-inprogress::before {
+.statuses--1-failed::before {
   background: url(../img/icons/order-icons/statuses/01__.svg) no-repeat center/100%;
 }
-.statuses--2-inprogress::before {
+.statuses--2-failed::before {
   background: url(../img/icons/order-icons/statuses/02__.svg) no-repeat center/80%;
 }
 
@@ -10325,8 +10385,6 @@ footer .footer-container {
   display: flex;
   -moz-column-gap: 7px;
        column-gap: 7px;
-  padding-top: 25px;
-  margin-top: auto;
 }
 .product-icons__item {
   transition: all 0.15s ease-in-out;

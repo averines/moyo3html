@@ -15,10 +15,24 @@
 
             <div class="form-row">
                 <div class="form-group">
-                    <textarea cols="30" rows="6" id="return-description" name="return-description" data-check data-check-required="true"></textarea>
-                    <label for="return-description">Причина возврата</label>
+                    <select id="return-reason" name="return-reason">
+                        <option value="return-reason-1" checked>Брак</option>
+                        <option value="return-reason-2">Пересорт по цвету</option>
+                        <option value="return-reason-3">Пересорт по размеру</option>
+                        <option value="return-reason-4">Нет в наличии</option>
+                        <option value="return-reason-5">Другой товар</option>
+                    </select>
+                    <label for="return-reason">Причина возврата</label>
                 </div>
             </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="file" id="return-files" name="return-files" multiple accept="image/png, image/gif, image/jpeg">
+                    <label for="return-files">Загрузите фото (не более 5 шт.)</label>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-main btn--small disabled">Отправить</button>
         </form>
     </div>
