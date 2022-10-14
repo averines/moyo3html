@@ -2390,6 +2390,7 @@ footer .footer-container {
   .slider-main__text {
     padding-left: 70px;
     padding-top: 40px;
+    padding-right: 10%;
     left: -50px;
     top: 25px;
   }
@@ -2418,6 +2419,16 @@ footer .footer-container {
   color: #fff;
   font-size: 14px;
   line-height: 1.4;
+}
+.slider-main__description > a {
+  color: #fff;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.05em;
+}
+.slider-main__description > a:hover {
+  opacity: 0.7;
 }
 @media screen and (min-width: 1300px) {
   .slider-main__description {
