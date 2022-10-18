@@ -430,6 +430,13 @@ ol li > a:hover {
 .container--max700 {
   max-width: 700px;
 }
+.container--letter {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #d9d9d9;
+}
 
 .container-sm {
   max-width: 580px;
@@ -9569,8 +9576,14 @@ footer .footer-container {
 
 .letter-footer {
   display: flex;
+  flex-wrap: wrap;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .letter-footer {
+    flex-wrap: nowrap;
+  }
 }
 
 .letter-buttons {
