@@ -6865,7 +6865,7 @@ footer .footer-container {
   padding: 2px;
   display: block;
   transition: opacity 0.15s ease-in-out;
-  margin: 0;
+  margin: 0 5px;
 }
 .product-colors__item picture {
   width: 100%;
