@@ -225,3 +225,17 @@
         }
     }
 }
+
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+
+    > .btn {
+        width: 100%;
+
+        @media screen and (min-width: 600px) {
+            width: auto;
+        }
+    }
+}

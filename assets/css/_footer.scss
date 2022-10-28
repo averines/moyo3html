@@ -18,7 +18,7 @@ footer {
     }
 
     .footer-bottom {
-        font-size: $base-fz * 10px;
+        font-size: $base-fz * 11.5px;
         text-transform: uppercase;
         padding: 12px 0;
         background-color: $text;
@@ -213,7 +213,7 @@ footer {
         padding-top: 5px;
         color: $text-l;
         font-weight: 600;
-        font-size: $base-fz * 10px;
+        font-size: $base-fz * 11.5px;
         text-transform: uppercase;
         display: flex;
         align-items: center;
@@ -252,7 +252,7 @@ footer {
     }
 
     &__text {
-        font-size: $base-fz * 10px;
+        font-size: $base-fz * 11.5px;
         line-height: 1.5;
     }
 }
