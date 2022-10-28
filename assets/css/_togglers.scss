@@ -67,7 +67,7 @@
   &__item {
     display: none;
     height: 36px;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +124,7 @@
 
     @media screen and (min-width: 768px) {
       display: block;
-      font-size: 13.5px;
+      font-size: $base-fz * 13.5px;
       padding: 0;
       justify-content: space-between;
       align-items: center;
@@ -184,7 +184,7 @@
   &__item {
     display: none;
     height: 36px;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
     padding: 10px;
     justify-content: space-between;
     align-items: center;

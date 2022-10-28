@@ -7,7 +7,7 @@
 
 .list-category-title {
     color: $text-l;
-    font-size: 13px;
+    font-size: $base-fz * 13px;
     display: inline-block;
 }
 
@@ -18,7 +18,7 @@
     flex-wrap: wrap;
 
     &__item {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         padding: 0.5em 0.75em;
         border: 1px solid $line-ll;
         text-decoration: none;

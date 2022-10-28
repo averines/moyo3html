@@ -4,14 +4,15 @@
     flex-shrink: 0;
     flex-grow: 0;
 
+    display: flex;
+    flex-direction: column;
+
     @media screen and (min-width: 768px) {
         padding: 40px 40px 60px 60px;
         background-color: #fff;
     }
 
     @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: column;
         grid-area: info;
         width: 100%;
         align-items: stretch;
@@ -22,6 +23,7 @@
     }
 
     &__header {
+        order: 0;
         position: relative;
         margin-bottom: 50px;
         margin-top: 25px;
@@ -31,13 +33,13 @@
             margin-bottom: 50px;
         }
 
-        @media screen and (min-width: 1024px) {
-            order: 0;
-        }
+        // @media screen and (min-width: 1024px) {
+        //     order: 0;
+        // }
     }
 
     &__title {
-        font-size: 22px;
+        font-size: $base-fz * 22px;
         padding-top: 0;
         padding-bottom: 5px;
         padding-right: 60px;
@@ -45,14 +47,14 @@
         text-decoration: none;
 
         @media screen and (min-width: 768px) {
-            font-size: 28px;
+            font-size: $base-fz * 28px;
         }
     }
 
     &__price {
         @media screen and (min-width: 768px) {
             // order: 2;
-            font-size: 1.1em;
+            font-size: $base-fz * 1.1em;
 
             .product-price__opt {
                 max-width: none;
@@ -65,7 +67,7 @@
 
         .price-hidden {
             .price-hidden__btn {
-                font-size: 13px;
+                font-size: $base-fz * 13px;
             }
         }
     }
@@ -73,13 +75,14 @@
     &__warning {
         display: inline-block;
         padding: 0.5em;
-        font-size: 11px;
+        font-size: $base-fz * 11px;
         background-color: $special-6-l;
         border-radius: 4px;
         margin-top: 12px;
     }
 
     &__properties {
+        order: 4;
         margin-top: 50px;
         grid-area: properties;
 
@@ -118,6 +121,7 @@
     }
 
     &__column {
+        order: 1;
         display: flex;
         flex-direction: column;
         column-gap: 30px;
@@ -143,11 +147,11 @@
     }
 
     &__counter {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
     }
 
     &__link {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         color: $text-l;
         text-decoration: none;
         border: none;
@@ -166,7 +170,7 @@
 
     &__brand {
         background-color: #fff;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         padding: 10px 15px;
         display: flex;
         column-gap: 10px;
@@ -192,7 +196,7 @@
 
         @media screen and (min-width: 768px) {
             order: 5;
-            font-size: 13px;
+            font-size: $base-fz * 13px;
             box-shadow: 0 2px 6px rgb(235, 235, 235);
             text-decoration: none;
             transition: $tr;
@@ -237,13 +241,14 @@
     }
 
     &__colors {
+        order: 3;
         // grid-area: colors;
         // position: relative;
         // width: 100%;
         padding-top: 35px;
 
         > p {
-            font-size: 13px;
+            font-size: $base-fz * 13px;
             color: $text-ll;
 
             > span {
@@ -261,21 +266,24 @@
     }
 
     &__sizes {
+        order: 2;
         grid-area: sizes;
         width: 100%;
         padding-top: 35px;
 
-        @media screen and (min-width: 1024px) {
-            order: 5;
-        }
+        // @media screen and (min-width: 1024px) {
+        //     order: 5;
+        // }
     }
 
     &__text {
+        order: 5;
         grid-area: text;
         padding-top: 40px;
-        @media screen and (min-width: 768px) {
-            order: 7;
-        }
+
+        // @media screen and (min-width: 768px) {
+        //     order: 10;
+        // }
     }
 
     &__share {
@@ -292,6 +300,6 @@
         max-width: 550px;
         margin-top: 14px;
         line-height: 1.6;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
     }
 }

@@ -31,7 +31,7 @@
     column-gap: 20px;
 
     &__number {
-        font-size: 36px;
+        font-size: $base-fz * 36px;
         color: $text-ll;
         font-weight: 600;
         margin-top: -3px;
@@ -39,12 +39,12 @@
 
     &__title {
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         font-weight: 600;
     }
 
     &__text {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
 
         > p:first-child {
         margin-top: 3px}

@@ -94,7 +94,7 @@
         align-items: center;
         row-gap: 10px;
         padding: 20px 8px;
-        font-size: 11.5px;
+        font-size: $base-fz * 11.5px;
         text-decoration: none;
         color: #fff;
         text-align: center;
@@ -103,7 +103,7 @@
 
         @media screen and (min-width: 400px) {
             padding: 20px 10px;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
         }
 
         > img {
@@ -169,7 +169,7 @@
             border-radius: 0;
             display: block;
             text-align: left;
-            font-size: 15px;
+            font-size: $base-fz * 15px;
             color: $text;
             padding: 8px 20px;
             height: auto;

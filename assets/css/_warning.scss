@@ -1,7 +1,7 @@
 .warning {
     padding: 5px 8px;
     border: 1px solid $main-ll;
-    font-size: 13px;
+    font-size: $base-fz * 13px;
     display: inline-block;
     color: $main;
     border-radius: 3px;

@@ -35,13 +35,13 @@
     }
 
     &__title {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         font-weight: 600;
         line-height: 1.2;
     }
 
     &__content {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         line-height: 1.3;
 
         > ul {
@@ -65,7 +65,7 @@
     }
 
     &__description {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         line-height: 1.4;
         color: $text-l;
     }
@@ -164,7 +164,7 @@
 
     .setting-title {
         font-weight: 400;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         color: $text-ll;
         padding: 15px 20px 0 20px;
 
@@ -175,7 +175,7 @@
         &--bold {
             font-weight: 600;
             color: $text;
-            font-size: 14px;
+            font-size: $base-fz * 14px;
         }
     }
 
@@ -210,7 +210,7 @@
         align-items: center;
         padding: 0 20px;
         display: none;
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         order: 2;
         border-top: 1px solid $line-ll;
         background-color: #fff;

@@ -1,7 +1,7 @@
 .discount-info {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
 
     &__pic {
         max-width: 100%;
@@ -29,14 +29,14 @@
     &__percent {
         color: $special-3;
         font-weight: 600;
-        font-size: 5.7em;
+        font-size: $base-fz * 5.7em;
         line-height: 1em;
         margin-bottom: -0.29em;
         position: relative;
 
         &::after {
             content: "%";
-            font-size: 0.6em;
+            font-size: $base-fz * 0.6em;
             font-weight: 600;
             margin-left: -0.2em;
         }
@@ -57,7 +57,7 @@
 
     &__title {
         font-weight: 600;
-        font-size: 18px;
+        font-size: $base-fz * 18px;
         color: #fff;
         background-color: #900583;
         display: inline-block;
@@ -93,12 +93,12 @@
     &__text {
         margin-top: 2em;
         margin-bottom: 0.5em;
-        font-size: 0.85em;
+        font-size: $base-fz * 0.85em;
         position: relative;
     }
 
     &__total {
-        font-size: 1.5em;
+        font-size: $base-fz * 1.5em;
         font-weight: 600;
     }
 }
@@ -108,7 +108,7 @@
     margin-bottom: 2em;
 
     &__title {
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         font-weight: 600;
         padding: 1em;
         background-color: $bg-l;

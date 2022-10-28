@@ -9,11 +9,11 @@
 
     &__header {
         font-weight: 600;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
     }
 
     &__text {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         line-height: 1.4;
     }
 }

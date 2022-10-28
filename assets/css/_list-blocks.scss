@@ -23,12 +23,12 @@
         display: flex;
         align-items: center;
         font-weight: 600;
-        font-size: 15px;
+        font-size: $base-fz * 15px;
         column-gap: 10px;
         padding-bottom: 10px;
     }
 
     .marker {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
     }
 }

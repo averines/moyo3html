@@ -18,7 +18,7 @@
 
     &__title {
         font-weight: 600;
-        font-size: 24px;
+        font-size: $base-fz * 24px;
         text-align: center;
     }
 
@@ -28,7 +28,7 @@
         margin-bottom: 30px;
 
         > p {
-            font-size: 16px;
+            font-size: $base-fz * 16px;
         }
     }
 }

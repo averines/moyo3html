@@ -22,13 +22,13 @@
   }
 
   &__title {
-    font-size: 15px;
+    font-size: $base-fz * 15px;
     line-height: 1.4;
     font-weight: 600;
   }
 
   &__text {
-    font-size: 14px;
+    font-size: $base-fz * 14px;
     line-height: 1.4;
   }  
 
@@ -54,7 +54,7 @@
     }
 
     .list-icons__title {
-      font-size: 15px;
+      font-size: $base-fz * 15px;
       font-weight: 400;
     }
 
@@ -72,7 +72,7 @@
 
   &--font-mini {
     .list-icons__title {
-      font-size: 14px;
+      font-size: $base-fz * 14px;
       line-height: 1.4;
     }
 

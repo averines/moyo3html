@@ -70,7 +70,7 @@
                 transition: font-size 0.15s;
 
                 &:focus {
-                    font-size: 1em;
+                    font-size: $base-fz * 1em;
                 }
             }
         }
@@ -84,7 +84,7 @@
         .search-form {
             &__input {
                 background-color: #fff;
-                font-size: 16px;
+                font-size: $base-fz * 16px;
                 outline: none;
 
                 @media screen and (min-width: 1200px) and (max-width: 1500px) {
@@ -135,7 +135,7 @@
         border: none;
         border-radius: 2px;
         background: rgba(255, 255, 255, 0.8);
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         padding: 10px 65px 10px 10px;
         transition: background-color 0.15s ease-in-out;
 
@@ -217,7 +217,7 @@
     &__link {
         text-transform: uppercase;
         text-align: center;
-        font-size: 11px;
+        font-size: $base-fz * 11px;
         letter-spacing: 0.05em;
         line-height: 1.3em;
         color: $text;
@@ -252,7 +252,7 @@
     &__item {
         padding: 6px 15px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         transition: background-color 0.15s ease-in-out;
         text-transform: lowercase;
 

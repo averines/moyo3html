@@ -41,7 +41,7 @@
             padding-bottom: 0;
             .accordion__title {
                 font-weight: 400;
-                font-size: 12px;
+                font-size: $base-fz * 12px;
             }
         }
     }
@@ -66,7 +66,7 @@
 
             > a {
                 color: $text;
-                font-size: 15px;
+                font-size: $base-fz * 15px;
                 text-decoration: none;
                 padding: 10px 15px;
                 display: block;
@@ -85,7 +85,7 @@
                 .accordion__title {
                     text-transform: uppercase;
                     font-weight: 600;
-                    font-size: 14px;
+                    font-size: $base-fz * 14px;
                     padding: 15px;
                     background-color: $bg-l;
                     border-bottom: 2px solid #fff;
@@ -122,7 +122,7 @@
             > a,
             > span,
             > button {
-                font-size: 12px;
+                font-size: $base-fz * 12px;
                 color: #fff;
                 background: none;
                 border: none;
@@ -188,7 +188,7 @@
     &__item {
         > a {
             color: $text;
-            font-size: 15px;
+            font-size: $base-fz * 15px;
             text-decoration: none;
             padding: 8px 15px;
             display: block;
@@ -222,7 +222,7 @@
 
             > a {
                 display: block;
-                font-size: 15px;
+                font-size: $base-fz * 15px;
                 color: $text;
                 padding: 8px 20px;
                 // border-top: 1px dotted $line-l;

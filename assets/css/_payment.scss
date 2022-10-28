@@ -10,24 +10,24 @@
     white-space: nowrap;
     &__sum {
         font-weight: 600;
-        font-size: 17px;
+        font-size: $base-fz * 17px;
     }
 
     &__quantity {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         color: $text-ll;
     }
 
     &__return {
         color: $main;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         padding-top: 4px;
     }
 }
 
 .payment-status {
     font-weight: 600;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
 
     &__success {
         padding-left: 15px;
@@ -46,7 +46,7 @@
         padding-top: 10px;
         flex-wrap: wrap;
         legend {
-            font-size: 11px;
+            font-size: $base-fz * 11px;
         }
         input {
             border: 1px solid $line-l;
@@ -69,7 +69,7 @@
     border-radius: 4px;
 
     &__content {
-        font-size: 12.5px;
+        font-size: $base-fz * 12.5px;
         padding-bottom: 10px;
 
         > span {

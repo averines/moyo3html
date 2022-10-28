@@ -14,12 +14,12 @@
     }
 
     &__title {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         color: $text-l;
     }
 
     &__percent {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         color: $text-l;
 
         &::after {

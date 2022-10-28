@@ -30,11 +30,11 @@
 
     &__user {
         font-weight: 600;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
     }
 
     &__date {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         color: $text-ll;
         margin-left: auto;
     }
@@ -53,11 +53,11 @@
     }
 
     &__size {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
     }
 
     &__status {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
 
         &--good {
             color: $special-2;
@@ -88,7 +88,7 @@
     }
 
     &__text {
-        font-size: 13.5px;
+        font-size: $base-fz * 13.5px;
         line-height: 1.6;
     }
 

@@ -15,7 +15,7 @@
     a {
       color: $text;
       text-decoration: underline;
-      font-size: 0.9em;
+      font-size: $base-fz * 0.9em;
     }
   }
 

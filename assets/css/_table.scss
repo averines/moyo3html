@@ -20,7 +20,7 @@
     vertical-align: top;
     width: 100%;
     border-collapse: collapse;
-    font-size: 13px;
+    font-size: $base-fz * 13px;
     border-radius: 10px;
 
     td {
@@ -112,7 +112,7 @@
 }
 
 .table-title {
-    font-size: 18px;
+    font-size: $base-fz * 18px;
     color: $main;
 }
 

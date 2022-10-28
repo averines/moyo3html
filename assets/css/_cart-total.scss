@@ -10,7 +10,7 @@
     }
 
     &__title {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         margin-bottom: -1px;
         // background-color: $bg-d;
         background-color: #fff;
@@ -18,7 +18,7 @@
     }
 
     &__value {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         font-weight: 600;
         margin-bottom: -1px;
         // background-color: $bg-d;

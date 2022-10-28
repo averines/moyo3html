@@ -194,24 +194,24 @@
     &__title {
         color: #fff;
         padding-bottom: 15px;
-        font-size: 18px;
+        font-size: $base-fz * 18px;
 
         @media screen and (min-width: 375px) {
-            font-size: 22px;
+            font-size: $base-fz * 22px;
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: 26px;
+            font-size: $base-fz * 26px;
         }
 
         @media screen and (min-width: 1300px) {
-            font-size: 36px;
+            font-size: $base-fz * 36px;
         }
     }
 
     &__description {
         color: #fff;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         line-height: 1.4;
 
         > a {
@@ -227,7 +227,7 @@
         }
 
         @media screen and (min-width: 1300px) {
-            font-size: 16px;
+            font-size: $base-fz * 16px;
         }
     }
 
@@ -235,7 +235,7 @@
         text-decoration: none;
         text-transform: uppercase;
         color: #fff;
-        font-size: 10px;
+        font-size: $base-fz * 10px;
         letter-spacing: 0.07em;
         font-weight: 600;
         opacity: 0.6;

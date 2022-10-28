@@ -19,7 +19,7 @@
     }
 
     &__title {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         color: $text-l;
         flex-grow: 0;
         flex-shrink: 0;
@@ -48,7 +48,7 @@
     }
 
     &__text {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         text-align: right;
         flex-grow: 0;
         margin-left: auto;

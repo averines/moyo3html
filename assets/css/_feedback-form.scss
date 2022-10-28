@@ -34,7 +34,7 @@
     &__input {
         border: none;
         width: 100%;
-        font-size: 15px;
+        font-size: $base-fz * 15px;
         line-height: 1.5;
         padding: 10px 15px;
         border-radius: 3px;
@@ -45,7 +45,7 @@
         background-color: $special-2;
         color: #fff;
         border: none;
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         padding: 15px;
         text-align: center;
         border-radius: 4px;
@@ -62,7 +62,7 @@
     }
 
     &__title {
-        font-size: 18px;
+        font-size: $base-fz * 18px;
         font-weight: 600;
     }
 }

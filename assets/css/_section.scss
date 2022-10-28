@@ -22,7 +22,7 @@
     }
 
     .section__title {
-        font-size: 10px;
+        font-size: $base-fz * 10px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.035em;
@@ -37,14 +37,14 @@
         // }
 
         &--partners {
-            font-size: 17px;
+            font-size: $base-fz * 17px;
             letter-spacing: normal;
             text-align: center;
             margin-top: 0;
         }
 
         @media screen and (min-width: 768px) {
-            font-size: 12px;
+            font-size: $base-fz * 12px;
             padding: 7px 13px;
         }
     }

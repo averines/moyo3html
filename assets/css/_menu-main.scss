@@ -9,7 +9,7 @@
 
     &__item {
         color: #fff;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         letter-spacing: 0.07em;
         text-decoration: none;
         transition: opacity 0.15s ease-in-out;

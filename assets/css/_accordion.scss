@@ -54,7 +54,7 @@
                     border-bottom: 1px solid $line-ll;
                     border-top: 1px solid $line-ll;
                     font-weight: 600;
-                    font-size: 14px;
+                    font-size: $base-fz * 14px;
                     margin-top: -1px;
 
                     &:hover {
@@ -81,7 +81,7 @@
         > .accordion__item {
             > .accordion__title {
                 color: $text;
-                font-size: 11px;
+                font-size: $base-fz * 11px;
                 text-transform: uppercase;
                 font-weight: 600;
                 padding: 10px 0;
@@ -133,7 +133,7 @@
 
             > .accordion__title {
                 display: flex;
-                font-size: 14px;
+                font-size: $base-fz * 14px;
                 font-weight: 600;
             }
         }

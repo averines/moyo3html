@@ -16,7 +16,7 @@
         align-items: baseline;
         padding: 5px 0;
         cursor: pointer;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
 
         > input {
             margin: 0 5px 0 0;
@@ -30,7 +30,7 @@
         border: none;
         padding: 20px;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
+        font-size: $base-fz * 15px;
         border-radius: 3px;
     }
 }
@@ -63,7 +63,7 @@
     > label {
         display: flex;
         column-gap: 20px;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         line-height: 1.4;
         color: $text-l;
         cursor: pointer;
@@ -127,12 +127,12 @@
     }
 
     &__title {
-        font-size: 0.85em;
+        font-size: $base-fz * 0.85em;
         margin-bottom: 0.3em;
     }
 
     &__text {
-        font-size: 0.85em;
+        font-size: $base-fz * 0.85em;
         color: $text-l;
     }
 
@@ -147,7 +147,7 @@
         .callback-phones {
             flex-direction: row;
             a {
-                font-size: 1em;
+                font-size: $base-fz * 1em;
                 font-weight: 600;
 
                 &::after {
@@ -215,7 +215,7 @@
         select {
             padding: 27px 40px 10px 20px;
             border: 1px solid $line-l;
-            font-size: 18px;
+            font-size: $base-fz * 18px;
             width: 100%;
             // margin-top: -1px;
 
@@ -239,7 +239,7 @@
                 pointer-events: none;
                 top: auto;
                 color: $text-l;
-                font-size: 17px;
+                font-size: $base-fz * 17px;
                 padding: 0 25px;
                 left: 0;
                 position: absolute;
@@ -268,7 +268,7 @@
         input[type="file"] {
             padding: 35px 40px 15px 20px;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: $base-fz * 16px;
 
             + label {
                 transform: translateY(-15px) scale(0.75);
@@ -336,7 +336,7 @@
     .btn {
         width: 100%;
         max-width: none;
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         padding: 1.25em;
     }
 }

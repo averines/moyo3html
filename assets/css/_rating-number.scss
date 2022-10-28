@@ -6,7 +6,7 @@
     position: relative;
 
     &__number {
-        font-size: 50px;
+        font-size: $base-fz * 50px;
         font-weight: 600;
     }
 
@@ -25,13 +25,13 @@
     }
 
     &__count {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         color: $text-l;
     }
 
     &__btn {
         cursor: pointer;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         line-height: 1.4;
         color: $text-l;
         border-bottom: 1px dashed $text-ll;

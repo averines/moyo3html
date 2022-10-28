@@ -56,7 +56,7 @@
     }
 
     &__title {
-        font-size: 30px;
+        font-size: $base-fz * 30px;
         font-weight: 600;
         letter-spacing: normal;
         padding-top: 15px;
@@ -64,7 +64,7 @@
 
     &__subtitle {
         font-weight: 600;
-        font-size: 15px;
+        font-size: $base-fz * 15px;
     }
 
     &__description {
@@ -106,7 +106,7 @@
         &__description {
             margin-bottom: 25px;
             margin-top: 10px;
-            font-size: 14px;
+            font-size: $base-fz * 14px;
         }
 
         &__pic {
@@ -145,7 +145,7 @@
         color: $text;
         padding: 1em;
         border-bottom: 1px solid $line-l;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         transition: $tr;
 
         &:hover {

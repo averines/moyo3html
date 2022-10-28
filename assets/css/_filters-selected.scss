@@ -9,7 +9,7 @@
         display: flex;
         align-items: center;
         color: $text-d;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         transition: $tr;
         cursor: pointer;
 

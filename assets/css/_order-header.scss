@@ -8,7 +8,7 @@
 
     &__link {
         color: $text-l;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
     }
 
     .order-info {
@@ -32,7 +32,7 @@
         }
 
         &__title {
-            font-size: 18px;
+            font-size: $base-fz * 18px;
             display: flex;
             flex-direction: column;
             text-decoration: none;
@@ -44,7 +44,7 @@
             }
 
             > span {
-                font-size: 12px;
+                font-size: $base-fz * 12px;
             }
         }
     }
@@ -78,7 +78,7 @@
         }
 
         &__sum {
-            font-size: 22px;
+            font-size: $base-fz * 22px;
         }
     }
 
@@ -100,7 +100,7 @@
             text-align: left;
             max-width: none;
             column-gap: 3px;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
             font-weight: 400;
 
             &::before {

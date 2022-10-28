@@ -87,12 +87,12 @@
     }
 
     &__title {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         font-weight: 600;
     }
 
     &__subtitle {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
     }
 
     &__pic {
@@ -103,7 +103,7 @@
         > img {
             display: block;
             background-color: #f3f3f3;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
         }
     }
 
@@ -134,7 +134,7 @@
     padding-top: 10px;
 
     &__item {
-        font-size: 11px;
+        font-size: $base-fz * 11px;
         padding-bottom: 3px;
         > span {
             color: $text-l;
@@ -155,7 +155,7 @@
     left: 0;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: $base-fz * 11px;
     height: 55px;
     letter-spacing: 0.05em;
     border-radius: 0 0 4px 4px;

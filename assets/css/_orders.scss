@@ -77,7 +77,7 @@
 
     &__item {
         text-align: center;
-        font-size: 10px;
+        font-size: $base-fz * 10px;
         max-width: 70px;
         color: $text;
         font-weight: 600;

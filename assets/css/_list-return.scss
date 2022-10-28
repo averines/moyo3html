@@ -19,7 +19,7 @@
 
   &__title {
     font-weight: 600;
-    font-size: 0.95em;
+    font-size: $base-fz * 0.95em;
     padding-bottom: 1em;
     border-bottom: 2px solid $main;
     margin-bottom: 1.5em;
@@ -29,7 +29,7 @@
   }
 
   p {
-    font-size: 0.9em;
+    font-size: $base-fz * 0.9em;
   }
 }
 

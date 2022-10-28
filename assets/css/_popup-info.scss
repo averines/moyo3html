@@ -27,7 +27,7 @@
         background-color: #fff;
         box-shadow: 0 4px 8px rgb(228, 228, 228);
         padding: 15px;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         z-index: 1;
         border-radius: 5px;
         color: $text-d;
@@ -41,7 +41,7 @@
         transition: transform 0.15s ease-in-out;
 
         > p {
-            font-size: 12.5px;
+            font-size: $base-fz * 12.5px;
             margin: 0 0 3px 0;
 
             &:last-child {

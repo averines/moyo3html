@@ -7,7 +7,7 @@
 
     &__title {
         padding: 30px 20px 0 20px;
-        font-size: 20px;
+        font-size: $base-fz * 20px;
         font-weight: 600;
 
         @media screen and (min-width: 768px) {
@@ -32,7 +32,7 @@
     .btn {
         width: 100%;
         max-width: none;
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         margin-top: 5px;
         padding: 0.95em 1.5em;
     }
@@ -138,7 +138,7 @@
         .btn {
             width: 100%;
             max-width: none;
-            font-size: 16px;
+            font-size: $base-fz * 16px;
             padding: 0.95em 1.5em;
         }
     }

@@ -35,7 +35,7 @@
         // border-top: 1px solid $line-d;
         // border-bottom: 1px solid $line-d;
         border: 1px dotted $line-l;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         background-color: #fff;
         padding-left: 10px;
         margin-top: 15px;
@@ -51,7 +51,7 @@
     }
 
     &__total {
-        font-size: 18px;
+        font-size: $base-fz * 18px;
         text-align: right;
         padding-top: 20px;
 
@@ -66,7 +66,7 @@
 
     &__text {
         padding-top: 15px;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         white-space: nowrap;
     }
 }

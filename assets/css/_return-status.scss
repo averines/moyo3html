@@ -13,13 +13,13 @@
     &__date {
         border: 1px solid $line-d;
         padding: 0.3em 0.5em;
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         border-radius: 3px;
         margin-right: 0.5em;
     }
 
     &__title {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         // white-space: nowrap;
         &--inprogress {
             color: $special-7;

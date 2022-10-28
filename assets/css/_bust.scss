@@ -10,7 +10,7 @@
     flex-direction: column;
     row-gap: 7px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
     border: 1px solid transparent;
 
     span {
@@ -72,13 +72,13 @@
         background-color: $text;
         color: #fff;
         font-weight: 600;
-        font-size: 16px;
+        font-size: $base-fz * 16px;
         border-radius: 1px;
         margin-bottom: -15px;
     }
 
     &__title {
-        font-size: 10px;
+        font-size: $base-fz * 10px;
         font-weight: 600;
         margin-bottom: 7px;
     }
@@ -117,7 +117,7 @@
     }
 
     &__text {
-        font-size: 14px;
+        font-size: $base-fz * 14px;
     }
 
     &:last-child {

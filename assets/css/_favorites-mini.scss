@@ -32,7 +32,7 @@
         margin-top: -0.9em;
         order: 1;
         color: #fff;
-        font-size: 9px;
+        font-size: $base-fz * 9px;
         font-weight: 600;
         text-align: center;
 
@@ -45,7 +45,7 @@
 
         @media screen and (min-width: 1200px) {
             top: -3px;
-            font-size: 10px;
+            font-size: $base-fz * 10px;
         }
     }
 

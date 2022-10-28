@@ -74,7 +74,7 @@
             background-color: $bg-l;
             font-weight: 600;
             color: $text-d;
-            font-size: 15px;
+            font-size: $base-fz * 15px;
             padding: 14px 20px;
             display: flex;
             align-items: center;
@@ -105,7 +105,7 @@
             cursor: pointer;
             border: none;
             margin-left: auto;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
             font-weight: 600;
             transition: $tr;
 
@@ -191,7 +191,7 @@
 
     &__item {
         color: $text-l;
-        font-size: 14px;
+        font-size: $base-fz * 14px;
         padding: 12px 0;
         border-bottom: 1px dashed $line-l;
         display: flex;
@@ -241,7 +241,7 @@
     }
 
     &__count {
-        font-size: 11px;
+        font-size: $base-fz * 11px;
         margin-left: 5px;
 
         &::before {
@@ -333,7 +333,7 @@
             min-width: 125px;
             max-width: 150px;
             height: 30px;
-            font-size: 14px;
+            font-size: $base-fz * 14px;
             line-height: 18px;
             color: $text-l;
             border-radius: 4px;
@@ -349,7 +349,7 @@
 
     .irs-min,
     .irs-max {
-        font-size: 12px;
+        font-size: $base-fz * 12px;
         color: $text-l;
         top: 10px;
     }
@@ -375,7 +375,7 @@
 
         .irs-single {
             background-color: $text-d;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
             top: 3px;
 
             &::before {

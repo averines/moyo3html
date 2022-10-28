@@ -8,7 +8,7 @@
         background-color: $line-dd;
         display: inline-block;
         color: #fff;
-        font-size: 10px;
+        font-size: $base-fz * 10px;
         font-weight: 600;
         padding: 0.3em 0.4em;
         border-radius: 3px;
@@ -37,7 +37,7 @@
             }
 
             @media screen and (min-width: 1024px) {
-                font-size: 11px;
+                font-size: $base-fz * 11px;
             }
         }
     }

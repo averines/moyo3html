@@ -22,11 +22,11 @@
             }
 
             &__price {
-                font-size: 0.7em;
+                font-size: $base-fz * 0.7em;
             }
 
             &__header {
-                font-size: 0.9em;
+                font-size: $base-fz * 0.9em;
                 padding-top: 10px;
             }
         }

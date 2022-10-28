@@ -97,7 +97,7 @@
   }
 
   &__price {
-    font-size: 0.8em;
+    font-size: $base-fz * 0.8em;
     padding-bottom: 0;
   }
 
@@ -116,19 +116,19 @@
 
   &__title {
     font-weight: 600;
-    font-size: 14px;
+    font-size: $base-fz * 14px;
     color: $text;
     text-transform: uppercase;
   }
 
   &__subtitle {
-    font-size: 13px;
+    font-size: $base-fz * 13px;
     color: $text-l;
   }
 
   &__colors {
     margin-top: auto;
-    font-size: 12px;
+    font-size: $base-fz * 12px;
     align-items: center;
     color: $text-l;
   }
@@ -173,7 +173,7 @@
 
   &__warning {
     padding: 0.5em;
-    font-size: 11px;
+    font-size: $base-fz * 11px;
     background-color: $special-6-l;
     border-radius: 4px;
     margin-bottom: 12px;

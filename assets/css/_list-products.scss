@@ -41,7 +41,7 @@
         picture,
         img {
             background-color: $bg-l;
-            font-size: 12px;
+            font-size: $base-fz * 12px;
             display: block;
             border-radius: 4px;
             overflow: hidden;
@@ -54,11 +54,11 @@
 
     &__brand {
         font-weight: 600;
-        font-size: 15px;
+        font-size: $base-fz * 15px;
     }
 
     &__title {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
     }
 
     &__remove {
@@ -119,7 +119,7 @@
     &__fail {
         color: $main;
         font-weight: 600;
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         padding-top: 30px;
     }
 
@@ -177,7 +177,7 @@
     padding-top: 15px;
 
     &__item {
-        font-size: 13px;
+        font-size: $base-fz * 13px;
         padding-bottom: 3px;
         > span {
             color: $text-l;
