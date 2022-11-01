@@ -53,6 +53,7 @@
     .products {
         margin: 0 -5px;
     }
+
     .product-card {
         @media screen and (min-width: 900px) {
             width: calc(100% / 3 - 10px);
@@ -65,7 +66,7 @@
         }
 
         &__info {
-            padding: 15px 15px 0 15px;
+            padding: 15px 10px 0 10px;
         }
 
         &__extra-wrapper {

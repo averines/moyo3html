@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: calc(100% / 2 - 10px);
-  margin: 0 5px;
+  margin: 0 3px;
   padding-bottom: 15px;
   position: relative;
   background-color: #fff;
@@ -116,7 +116,7 @@
 
   &__title {
     font-weight: 600;
-    font-size: $base-fz * 14px;
+    font-size: $base-fz * 13.6px;
     color: $text;
     text-transform: uppercase;
   }

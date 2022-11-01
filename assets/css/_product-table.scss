@@ -263,4 +263,25 @@
             animation: counter 0.2s ease-in-out;
         }
     }
+
+    &__offsize {
+        > div {
+            padding-top: 0.5em;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 6px;
+            row-gap: 6px;
+
+            > span {
+                text-decoration: none;
+                background-color: #fff;
+                color: $text;
+                font-size: $base-fz * 13px;
+                font-weight: 600;
+                border: 1px solid $line-l;
+                padding: 0.5em;
+                border-radius: 4px;
+            }
+        }
+    }
 }

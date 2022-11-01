@@ -4,8 +4,8 @@
 
     &__item {
         text-decoration: none;
-        width: 17px;
-        height: 17px;
+        width: 30px;
+        height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,16 +15,28 @@
         border-radius: 50%;
         transition: all 0.1s ease-in-out;
 
+        @media screen and (min-width: 600px) {
+            border-width: 3px;
+            width: 17px;
+            height: 17px;
+        }
+
         // белый кружок
         &::after {
-            display: none;
             position: absolute;
             content: "";
-            width: 5px;
-            height: 5px;
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
             background-color: #fff;
             border-radius: 50%;
             transition: all 0.15s ease-in-out;
+
+            @media screen and (min-width: 600px) {
+                width: 5px;
+                height: 5px;
+                opacity: 1;
+            }
         }
 
         // надпись с названием цвета
@@ -38,50 +50,26 @@
             font-size: $base-fz * 11px;
             border-radius: 3px;
             position: absolute;
-            content: attr(data-color-title);
+            content: attr(aria-label);
             z-index: 10;
             line-height: 1;
         }
 
         &:hover {
-            border-width: 2px;
-
             &::before {
                 display: block;
             }
 
             &::after {
-                @media screen and (min-width: 1200px) {
-                    display: block;
-                }
+                opacity: 0;
             }
         }
 
         &.is-active {
-            border-width: 2px;
-
-            @media screen and (min-width: 1200px) {
-                border-width: 4px;
+            @media screen and (min-width: 600px) {
                 &::after {
                     opacity: 0;
                 }
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-            border-width: 3px;
-            &::after {
-                display: block;
-            }
-
-            &:hover {
-                &::after {
-                    opacity: 0;
-                }
-            }
-
-            &.is-active {
-                border-width: 3px;
             }
         }
 
@@ -148,27 +136,5 @@
             background: linear-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
             background: conic-gradient(lightblue, rgb(45, 118, 255), rgb(185, 33, 185), red, orange, yellow, rgb(113, 221, 11));
         }
-
-        // устаревшие========================
-
-        // &--mint {
-        //         background-color: rgb(163, 255, 186);
-        // }
-
-        // &--burgundy {
-        //         background-color: rgb(184, 37, 0);
-        // }
-
-        // &--fuchsia {
-        //         background-color: rgb(221, 52, 255);
-        // }
-
-        // &--turquoise {
-        //         background-color: rgb(98, 232, 255);
-        // }
-
-        // &--animal {
-        //         background-color: rgb(61, 134, 230);
-        // }
     }
 }

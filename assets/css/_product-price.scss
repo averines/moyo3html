@@ -12,8 +12,9 @@
 
     &__row {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        column-gap: 0.5em;
+        gap: 0.25em 0.5em;
     }
 
     &__old {
@@ -78,7 +79,7 @@
         max-width: 300px;
 
         > span {
-            // font-weight: 600;
+            white-space: nowrap;
             font-size: $base-fz * 12px;
 
             &::after {
@@ -136,6 +137,7 @@
         display: flex;
         padding-bottom: 20px;
         flex-direction: column;
+        row-gap: 8px;
 
         .product-price__date {
             font-size: $base-fz * 11px;
