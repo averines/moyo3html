@@ -227,11 +227,11 @@ hr {
 
     a {
       text-decoration: none;
-      color: $text;
+      color: $main;
       transition: $tr;
 
       &:hover {
-        color: $main;
+        color: $main-h;
       }
     }
   }

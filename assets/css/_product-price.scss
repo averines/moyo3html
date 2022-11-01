@@ -90,7 +90,7 @@
 
     &__date {
         color: $main;
-        font-size: $base-fz * 0.85em;
+        font-size: $base-fz * 0.9em;
         text-align: right;
         line-height: 0.8;
     }
@@ -140,7 +140,7 @@
         row-gap: 8px;
 
         .product-price__date {
-            font-size: $base-fz * 11px;
+            font-size: $base-fz * 12px;
         }
     }
 
@@ -186,7 +186,7 @@
     &__btn {
         cursor: pointer;
         color: $main;
-        font-size: $base-fz * 11px;
+        font-size: $base-fz * 12px;
         text-align: left;
         padding: 3px 0;
         border: none;
