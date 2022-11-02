@@ -107,6 +107,12 @@
                     justify-content: center;
                     line-height: 1.2;
 
+                    position: sticky;
+                    top: 10px;
+                    box-shadow: 0 -10px 0 10px $body;
+                    z-index: 2;
+                   
+
                     &::after {
                         display: none;
                     }

@@ -3,6 +3,10 @@
     width: 100%;
     padding-top: 30px;
 
+    @media screen and (min-width: 1200px) {
+        overflow: visible;
+    }
+
     .titles {
         .carousel__track {
             align-items: center;
@@ -62,6 +66,7 @@
 
 .brand-filter-content {
     margin-top: 40px;
+
     .accordion__title {
         span {
             font-weight: 400;
@@ -69,6 +74,7 @@
             margin-right: auto;
             margin-left: 5px;
             white-space: nowrap;
+
             @media screen and (min-width: 1200px) {
                 margin: 0;
                 opacity: 0.7;
@@ -84,6 +90,7 @@
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     column-gap: 20px;
+    transition: $tr;
 
     @media screen and (min-width: 768px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -94,6 +101,11 @@
         row-gap: 12px;
         flex-direction: column;
         background-color: #fff;
+        border-radius: 0 0 8px 8px;
+        
+        &:hover {
+            box-shadow: 0 -2px 0px 2px $main inset;
+        }
     }
 
     &__item {
@@ -116,7 +128,7 @@
             align-items: center;
             flex-direction: column;
             color: $text-l;
-            font-size: $base-fz * 11px;
+            font-size: $base-fz * 10px;
             text-transform: uppercase;
             text-align: center;
             line-height: 1.1;

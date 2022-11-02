@@ -3031,6 +3031,11 @@ footer .footer-container {
     flex-direction: column;
     justify-content: center;
     line-height: 1.2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    box-shadow: 0 -10px 0 10px #f9f9f9;
+    z-index: 2;
   }
   .accordion.accordion--brand-filter > .accordion__item > .accordion__title::after {
     display: none;
@@ -4779,6 +4784,11 @@ footer .footer-container {
   width: 100%;
   padding-top: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .brand-filter {
+    overflow: visible;
+  }
+}
 .brand-filter .titles .carousel__track {
   align-items: center;
 }
@@ -4851,6 +4861,7 @@ footer .footer-container {
   flex-direction: row;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  transition: all 0.15s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .brand-filter-list {
@@ -4863,6 +4874,10 @@ footer .footer-container {
     row-gap: 12px;
     flex-direction: column;
     background-color: #fff;
+    border-radius: 0 0 8px 8px;
+  }
+  .brand-filter-list:hover {
+    box-shadow: 0 -2px 0px 2px #ab064e inset;
   }
 }
 .brand-filter-list__item {
@@ -4886,7 +4901,7 @@ footer .footer-container {
     align-items: center;
     flex-direction: column;
     color: #727272;
-    font-size: 11.77px;
+    font-size: 10.7px;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.1;
