@@ -13,13 +13,14 @@
         text-decoration: none;
         font-size: $base-fz * 11px;
         color: $text;
-        padding: 17px;
+        padding: 15px;
         border: 2px solid transparent;
         border-top: 2px solid $line-l;
         line-height: 1;
         text-align: center;
         transition: background-color 0.15s ease-in-out;
         flex: 1 1 0px; // одинаковая ширина флекс элементов
+        line-height: 1.4;
 
         @media screen and (min-width: 768px) {
             border: none;

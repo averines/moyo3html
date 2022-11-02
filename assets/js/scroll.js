@@ -14,3 +14,22 @@ if (scrollToLinks) {
         });
     });
 }
+
+// плавно перемещаем к элементу с атрибутом data-scroll-onload
+const scrollHereElements = document.querySelectorAll('[data-scroll-onload]');
+if (scrollHereElements) {
+    scrollHereElements.forEach(scrollHereElement => {
+        scrollHereElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    })
+}
+
+// в личном кабинете перемещаем на высоту меню при загрузке страницы
+const menuTabs = document.querySelector('.menu-tabs');
+if (menuTabs && window.innerWidth < 768 ) {
+    let menuTabsCoord = menuTabs.getBoundingClientRect()
+    window.scrollTo({
+        top: menuTabsCoord.bottom - 60,
+        left: 0,
+        behavior: 'smooth'
+    })
+}
