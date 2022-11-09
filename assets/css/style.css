@@ -578,6 +578,26 @@ ol li > a:hover {
     transform: none;
   }
 }
+@-webkit-keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 @-webkit-keyframes zoomin {
   from {
     opacity: 0;
@@ -6505,7 +6525,7 @@ footer .footer-container {
 }
 
 .product-info {
-  padding-top: 30px;
+  padding-top: 15px;
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
@@ -6534,7 +6554,6 @@ footer .footer-container {
   order: 0;
   position: relative;
   margin-bottom: 50px;
-  margin-top: 25px;
   grid-area: header;
 }
 @media screen and (min-width: 768px) {
@@ -6545,7 +6564,7 @@ footer .footer-container {
 .product-info__title {
   font-size: 23.54px;
   padding-top: 0;
-  padding-bottom: 5px;
+  padding-bottom: 0;
   padding-right: 60px;
   color: #3d3d3c;
   text-decoration: none;
@@ -6554,6 +6573,11 @@ footer .footer-container {
   .product-info__title {
     font-size: 29.96px;
   }
+}
+.product-info__subtitle {
+  font-size: 18.19px;
+  color: #727272;
+  padding-bottom: 7px;
 }
 @media screen and (min-width: 768px) {
   .product-info__price {
@@ -6756,48 +6780,30 @@ footer .footer-container {
 
 .product-properties {
   padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 .product-properties__item {
-  display: flex;
-  justify-content: space-between;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  font-size: 13.91px;
+  display: none;
   position: relative;
   max-width: 600px;
   min-width: 280px;
   margin-bottom: 12px;
 }
+.product-properties__item.is-active {
+  display: inline;
+}
 .product-properties__item:last-child {
   margin-bottom: 0;
 }
 .product-properties__title {
-  font-size: 13.91px;
-  color: #727272;
+  color: #B2B2B2;
   flex-grow: 0;
   flex-shrink: 0;
-  background-color: #f9f9f9;
   z-index: 1;
-}
-.product-properties__title::before {
-  content: "";
-  width: 95%;
-  height: 1px;
-  border-bottom: 1px dotted #d9d9d9;
-  display: block;
-  position: absolute;
-  bottom: 2px;
-}
-.product-properties__title::after {
-  content: "";
-  width: calc(100% + 10px);
-  height: 1px;
-  background: #f9f9f9;
-  display: block;
-  position: relative;
-  transform: translateY(-2px);
 }
 .product-properties__text {
   font-size: 14.98px;
@@ -6827,21 +6833,12 @@ footer .footer-container {
 .product-properties__btn::after {
   content: "Показать прочие характеристики";
 }
-.product-properties__btn.is-active::after {
-  content: "Скрыть прочие характеристики";
-}
 .product-properties__more {
   max-height: 0;
   overflow: hidden;
   pointer-events: none;
   visibility: hidden;
   transition: height 0.15s ease-in, padding 0.2s ease-in-out;
-}
-.product-properties__more.is-active {
-  padding-top: 20px;
-  max-height: 1000px;
-  pointer-events: all;
-  visibility: visible;
 }
 
 .product-favorite {

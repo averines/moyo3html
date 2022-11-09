@@ -1,15 +1,20 @@
 "use strict";
 
-// показать/скрыть дополнительные характеристики на странице товара
+// показать дополнительные характеристики на странице товара
 function productPropertiesHandler() {
-    const productProperties = document.querySelector('.product-properties');
+    const productProperties = document.querySelector('.product-info__properties');
     if (productProperties) {
         const productPropertiesBtn = productProperties.querySelector('.product-properties__btn');
-        const productPropertiesMore = productProperties.querySelector('.product-properties__more');
+        const productPropertiesItems = productProperties.querySelectorAll('.product-properties__item');
 
         productPropertiesBtn.addEventListener('click', () => {
-            productPropertiesBtn.classList.toggle('is-active');
-            productPropertiesMore.classList.toggle('is-active');
+            // productPropertiesBtn.classList.toggle('is-active');
+            productPropertiesBtn.remove();
+
+            productPropertiesItems.forEach(productPropertiesItem => {
+                productPropertiesItem.classList.add('is-active')
+            })
+
         });
     }
 }
