@@ -104,11 +104,11 @@
                 }
             }
         }
-    } 
+    }
 
     @media screen and (min-width: 1200px) {
         display: flex;
-        align-items: center; 
+        align-items: center;
         column-gap: 12px;
         margin: 0;
         padding: 0;
@@ -255,5 +255,18 @@
             left: 19px;
             transform: rotate(45deg);
         }
+    }
+}
+
+.menu-alert {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: $main-l;
+    transform: translateX(4px) translateY(-6px);
+
+    &--animated {
+        animation: blink 1.5s infinite ease-in-out;
     }
 }

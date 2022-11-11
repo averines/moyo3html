@@ -116,3 +116,15 @@
     transform: translateX(0px);
   }
 }
+
+
+@keyframes blink {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: $main-l;
+  }
+}
+

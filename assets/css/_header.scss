@@ -57,11 +57,15 @@ header {
 .logo {
     margin-right: auto;
     height: 30px;
-    width: 90px;
+    width: 75px;
     flex-shrink: 0;
     text-indent: -1000em;
     background: url(../img/logo.svg) no-repeat center left;
     background-size: 100% 100%;
+
+    @media screen and (min-width: 350px) {
+        width: 90px;
+    }    
 
     @media screen and (min-width: 468px) {
         width: 120px;
