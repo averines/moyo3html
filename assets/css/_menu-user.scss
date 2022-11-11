@@ -103,6 +103,14 @@
                 filter: brightness(10);
             }
         }
+
+        &--alert {
+            img {
+                @media screen and (min-width: 380px) {
+                    animation: blinkopacity 1.5s infinite ease-in-out;
+                }
+            }
+        }
     }
 
     &__link {
@@ -142,6 +150,16 @@
 
         &:hover {
             background-color: lighten($main-d, 8);
+        }
+
+        .menu-alert {
+            @media screen and (min-width: 380px) {
+                display: none;
+            }
+
+            @media screen and (min-width: 1200px) {
+                display: inline-block;
+            }
         }
     }
 
