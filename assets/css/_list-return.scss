@@ -9,20 +9,22 @@
 
   @media screen and (min-width: 992px) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 .return-item {
   padding: 1.5em;
   background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 20px 100px rgb(0 0 0 / 5%);
 
   &__title {
     font-weight: 600;
     font-size: $base-fz * 0.95em;
     padding-bottom: 1em;
-    border-bottom: 2px solid $main;
-    margin-bottom: 1.5em;
+    border-bottom: 1px solid $line-ll;
+    margin-bottom: 2em;
     display: flex;
     align-items: center;
     column-gap: 0.75em;

@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-    
+
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
     <script src="./assets/js.min.js" defer></script>
 </head>
@@ -39,10 +39,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-    
+
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-    
+
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -74,7 +74,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-    
+
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1319,14 +1319,14 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-    
+
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1647,10 +1647,22 @@
             <ul class="list-return mt-2">
                 <li class="list-return__item return-item">
                     <div class="return-item__title">
-                        <img src="./assets/img/icons/info/letter.svg" alt="Заполните заявление">
-                        1. Заполните заявление
+                        <img src="./assets/img/icons/info/chat.svg" alt="Согласуйте возврат">
+                        1. Согласуйте возврат
                     </div>
                     <div class="return-item__info">
+                        <p>Напишите на почту <a href="mailto:info@optmoyo.ru">info@optmoyo.ru</a></p>
+                        <p>В письме укажите ID изделия, номер заказа, суть претензии. Прикрепите фото.</p>
+                    </div>
+                </li>
+
+                <li class="list-return__item return-item">
+                    <div class="return-item__title">
+                        <img src="./assets/img/icons/info/letter.svg" alt="Заполните заявление">
+                        2. Заполните заявление
+                    </div>
+                    <div class="return-item__info">
+                        <p>После согласования заполните соответсвующее заявление:</p>
                         <ul class="list-docs">
                             <li class="list-docs__item list-docs__item--xls">
                                 <a href="#" target="_blank">Бланк заявления на возврат товара по причине брака для физ. и юр. лиц</a>
@@ -1659,25 +1671,23 @@
                                 <a href="#" target="_blank">Бланк заявления на возврат денежных средств по причине недовложения/пересорта для физ. и юр. лиц</a>
                             </li>
                         </ul>
-                        <p class="mt-3">Заявления отправлять на почту <a href="mailto:vozvrat@OptMoyo.ru">vozvrat@OptMoyo.ru</a></p>
+                        <p class="mt-2">Заявления отправьте на <a href="mailto:vozvrat@optmoyo.ru">vozvrat@optmoyo.ru</a>.</p>
+                        <p>Оригинал заявления вложите в коробку с возвращаемым изделием.</p>
                     </div>
                 </li>
 
                 <li class="list-return__item return-item">
                     <div class="return-item__title">
                         <img src="./assets/img/icons/info/delivery.svg" alt="Отправьте брак/пересорт">
-                        2. Отправьте брак/пересорт
+                        3. Отправьте посылку
                     </div>
                     <div class="return-item__info">
-                        <p class="mb-2">Почтой России обычной посылкой на адрес: <br>
-                            <span class="text-muted">105187, Москва, до востребования,ИП Потапов Л.В.</span>
+                        <p>Почтой России обычным отправлением без наложенного платежа на адрес: <br>
+                            105187, Москва, до востребования, ИП Потапов Л.В.
                         </p>
-                        <p class="mb-2">Или доставьте самостоятельно по адресу: <br>
-                            <span class="text-muted">Москва, Окружной проезд, 30А</span>
-                        </p>
-                        <p class="mb-0">
-                            <span class="text-main">Внимание!</span><br>
-                            Пересылка брака и пересорта за наш счет
+                        <p class="text-main">Мы возместим стоимость пересылки. Для этого отправьте фото чеков на <a href="mailto:info@optmoyo.ru">info@optmoyo.ru</a></p>
+                        <p class="mt-3">Или доставьте самостоятельно по адресу: <br>
+                            г. Москва, ул.Вольная, д.&nbsp;35, стр.&nbsp;8
                         </p>
                     </div>
                 </li>
@@ -1685,10 +1695,10 @@
                 <li class="list-return__item return-item">
                     <div class="return-item__title">
                         <img src="./assets/img/icons/info/money.svg" alt="Получите деньги">
-                        3. Получите деньги
+                        4. Получите деньги
                     </div>
                     <div class="return-item__info">
-                        <p>Возврат денежных средств будет осуществлен после получения посылки в течение 10-ти рабочих дней.</p>
+                        <p>Возврат денежных средств за изделие и пересылку будет осуществлен после получения посылки в течение 10-ти рабочих дней.</p>
                     </div>
                 </li>
             </ul>

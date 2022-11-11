@@ -4194,20 +4194,22 @@ footer .footer-container {
 @media screen and (min-width: 992px) {
   .list-return {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 .return-item {
   padding: 1.5em;
   background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.05);
 }
 .return-item__title {
   font-weight: 600;
   font-size: 1.0165em;
   padding-bottom: 1em;
-  border-bottom: 2px solid #ab064e;
-  margin-bottom: 1.5em;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 2em;
   display: flex;
   align-items: center;
   -moz-column-gap: 0.75em;
