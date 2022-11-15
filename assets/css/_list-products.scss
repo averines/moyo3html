@@ -1,4 +1,7 @@
 .list-products {
+    padding: 0;
+    counter-reset: counter;
+
     @media screen and (min-width: 768px) {
         margin-top: 50px;
     }
@@ -14,6 +17,7 @@
 }
 
 .list-product {
+    counter-increment: counter;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -123,12 +127,6 @@
         padding-top: 30px;
     }
 
-    // &:first-child {
-    //     @media screen and (min-width: 768px) {
-    //         border-top: 1px solid $line-d;
-    //     }
-    // }
-
     &:not(:first-child) {
         @media screen and (min-width: 768px) {
             .list-product__table {
@@ -143,6 +141,25 @@
                     }
                 }
             }
+        }
+    }
+
+    &::before {
+        content: counter(counter) ".";
+        position: absolute;
+        left: 0;
+        top: -20px;
+        font-size: $base-fz * 12px;
+        color: $text-ll;
+        text-align: right;
+
+        @media screen and (min-width: 768px) {
+            top: -5px;
+        }
+
+        @media screen and (min-width: 1520px) {
+            left: -22px;
+            top: 20px;
         }
     }
 

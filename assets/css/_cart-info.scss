@@ -54,10 +54,9 @@
         font-size: $base-fz * 18px;
         text-align: right;
         padding-top: 20px;
-
-        > span {
-            font-weight: 600;
-        }
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
     }
 
     &__warning {
@@ -65,8 +64,9 @@
     }
 
     &__text {
-        padding-top: 15px;
-        font-size: $base-fz * 13px;
         white-space: nowrap;
+        > span {
+            font-weight: 600;
+        }
     }
 }

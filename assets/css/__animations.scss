@@ -1,4 +1,4 @@
-@keyframes blink {
+@keyframes blinkborder {
   0% {
     border-color: transparent;
   }
@@ -9,7 +9,7 @@
 }
 
 .animate-blink {
-  animation: blink 0.9s infinite alternate ease-in-out;
+  animation: blinkborder 0.9s infinite alternate ease-in-out;
 }
 
 @keyframes favorites {
@@ -117,7 +117,6 @@
   }
 }
 
-
 @keyframes blink {
   0% {
     background-color: #fff;
@@ -137,5 +136,3 @@
     opacity: 0.25;
   }
 }
-
-

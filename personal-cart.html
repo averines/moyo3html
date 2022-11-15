@@ -1646,8 +1646,9 @@
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
             </div>
-            <div class="list-products">
-                <div class="list-product">
+
+            <ol class="list-products">
+                <li class="list-product">
                     <div class="list-product__info">
                         <a class="list-product__pic" href="product.html">
                             <picture>
@@ -1813,8 +1814,8 @@
                         </tbody>
                     </table>
                     <button class="list-product__remove" aria-label="Удалить"></button>
-                </div>
-                <div class="list-product">
+                </li>
+                <li class="list-product">
                     <div class="list-product__info">
                         <a class="list-product__pic" href="product.html">
                             <picture>
@@ -1980,8 +1981,8 @@
                         </tbody>
                     </table>
                     <button class="list-product__remove" aria-label="Удалить"></button>
-                </div>
-            </div>
+                </li>
+            </ol>
             <div class="cart-info">
                 <div class="cart-info__content">
                     <div class="cart-info__row promocode">
@@ -2023,13 +2024,12 @@
                         </div>
                     </div>
                     <div class="cart-info__total">
-                        <div class="cart-info__warning">
-                            <div class="warning warning--good animate-blink">
-                                Сумма заказа пересчитана по оптовым ценам
-                            </div>
-                            <div class="cart-info__text">Было: <span class="text-deleted">1 575,00 ₽</span></div>
+                        <div class="warning warning--good animate-blink">
+                            Сумма заказа пересчитана по оптовым ценам
                         </div>
-                        Стало: <span>1 234,00 ₽</span>
+                        <div class="cart-info__text text-sm">Было: <span class="text-deleted">1 575,00 ₽</span></div>
+                        <div class="cart-info__text">Сумма: <span>1 234,00 ₽</span></div>
+                        <div class="cart-info__text text-sm">Всего товаров: <span>88 шт.</span></div>
                     </div>
                 </div>
             </div>
