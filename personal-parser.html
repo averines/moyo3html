@@ -1642,107 +1642,28 @@
             <div class="menu-tabs mt-1">
                 <a class="menu-tabs__item" href="personal-favorites.html">Избранное</a>
                 <a class="menu-tabs__item" href="personal-cart.html">Корзина</a>
-                <span class="menu-tabs__item is-active">Личные данные</span>
+                <a class="menu-tabs__item" href="personal-data-fiz.html">Личные данные</a>
                 <a class="menu-tabs__item" href="personal-orders.html">История заказов</a>
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
-                <a class="menu-tabs__item" href="personal-parser.html">Парсер</a>
+                <span class="menu-tabs__item is-active">Парсер</span>
             </div>
             <div class="settings-wrapper">
                 <div class="settings">
-                    <div class="setting setting--boxed">
-                        <div class="setting__title">Сумма на вашем депозите</div>
-                        <div class="setting__content">
-                            <span class="text-bold text-lg text-nowrap">2 468,00 ₽</span>
-                        </div>
-                    </div>
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Логин и пароль</div>
-                            <div class="setting__content">
-                                <span class="text-main">Логин: mylogin@mail.ru</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-password.html">Изменить пароль</button>
-                    </div>
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Македонский А.С.</div>
-                            <div class="setting__content">
-                                <span class="text-main">ID Клиента: 254816</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-data-fiz.html">Изменить</button>
-                    </div>
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Телефон</div>
-                            <div class="setting__content">+7 123 456-78-90</div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-phone.html">Изменить</button>
-                    </div>
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Город доставки</div>
-                            <div class="setting__content">
-                                г. Александрополь
-                                <p class="text-sm"><span class="text-main">Внимание!</span> Указан город, в котором Вы получите груз. Информация о городе доставки берется из данных при регистрации на
-                                    сайте.</p>
-                            </div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-city.html">Изменить</button>
-                    </div>
                     <div>
                         <div class="setting setting-select">
-                            <div class="setting-title">Транспортная компания</div>
+                            <div class="setting-title">Показывать парсер СП</div>
                             <div class="setting-select__container">
                                 <div class="setting-select__content">
-                                    <div class="setting-select__item is-active">ПЭК</div>
-                                    <div class="setting-select__item">Байкал-Сервис</div>
-                                    <div class="setting-select__item">Возовоз</div>
-                                    <div class="setting-select__item">Деловые линии</div>
-                                    <div class="setting-select__item">Желдорэкспедиция</div>
-                                    <div class="setting-select__item">Энергия</div>
+                                    <div class="setting-select__item is-active">TurboParser</div>
+                                    <div class="setting-select__item">SuperParser</div>
+                                    <div class="setting-select__item">MegaParser</div>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-sm">Новые данные о ТК станут активны после проверки менеджером в течение 12 часов с момента изменения.</p>
-                    </div>
-                </div>
-                <div class="settings">
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Адреса доставки</div>
-                            <div class="setting__content">
-                                <ul class="setting-list">
-                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> 108840, Россия, Троицк, ул. Академика Черенкова, 3 (склад сдек)</li>
-                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> 125548, Россия, Новотроицк, ул. Чапаева, 23</li>
-                                </ul>
-                                <p class="text-sm mt-2"><span class="text-main">Внимание!</span> Информация по адресу доставки берется из Вашего первого заказа.</p>
-                            </div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-delivery-addresses.html">Добавить</button>
-                    </div>
-                    <div class="setting setting--boxed">
-                        <div class="setting__info">
-                            <div class="setting__title">Гостевые логины</div>
-                            <div class="setting__content">
-                                <ul class="setting-list">
-                                    <li class="setting-list__item"><button class="btn-delete" aria-label="Удалить"></button> guest@yandex.ru <span>(наценка 10% + 50₽)</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button class="btn btn-gray-outline btn--small" data-fancybox data-type="ajax" data-src="modal-personal-guestlogin.html">Добавить</button>
-                    </div>
-                    <div class="setting setting--boxed setting-switch">
-                        <div class="setting__info">
-                            <div class="setting__title">Рассылка</div>
-                            <div class="setting__content">Получать рассылку об акциях и новинках</div>
-                        </div>
-                        <div class="setting-switch__button">
-                            <input type="checkbox" id="setting-subscribe" checked>
-                            <label for="setting-subscribe"></label>
-                        </div>
+                        <p>Парсер даёт возможность выгружать товары в соцсети или в формат Excel (.xlsx, .csv).</p>
+                        <p>Выбранный парсер отображается в виде кнопки (виджета) на страницах нашего каталога.</p>
+                        <p>Потребуется бесплатная регистрация в выбранном сервисе. Ссылки на инструкции и официальные сайты сервисов будут указаны в появившемся виджете.</p>
                     </div>
                 </div>
             </div>

@@ -88,15 +88,19 @@
     &__item {
         flex-basis: 100%;
 
-        @media screen and (min-width: 380px) {
-            flex-basis: 16%;
+        @media screen and (min-width: 450px) {
+            flex-basis: 14%;
         }
+
+        @media screen and (min-width: 630px) {
+            flex-basis: 14%;
+        }        
 
         &--logout {
             flex-basis: 100%;
 
-            @media screen and (min-width: 530px) {
-                flex-basis: 16%;
+            @media screen and (min-width: 630px) {
+                flex-basis: 14%;
             }
 
             > button > img {
@@ -106,7 +110,7 @@
 
         &--alert {
             img {
-                @media screen and (min-width: 380px) {
+                @media screen and (min-width: 450px) {
                     animation: blinkopacity 1.5s infinite ease-in-out;
                 }
             }
@@ -130,7 +134,7 @@
         transition: background-color 0.15s ease-in-out;
         line-height: 1.2;
 
-        @media screen and (min-width: 380px) {
+        @media screen and (min-width: 450px) {
             padding: 15px 10px;
             font-size: $base-fz * 11px;
             flex-direction: column;
@@ -142,7 +146,7 @@
             height: 22px;
             filter: brightness(10);
 
-            @media screen and (min-width: 380px) {
+            @media screen and (min-width: 450px) {
                 width: 24px;
                 height: 24px;
             }
@@ -153,7 +157,7 @@
         }
 
         .menu-alert {
-            @media screen and (min-width: 380px) {
+            @media screen and (min-width: 450px) {
                 display: none;
             }
 
