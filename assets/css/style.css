@@ -786,11 +786,6 @@ ol li > a:hover {
   padding-top: 65px;
   padding-bottom: 40px;
 }
-@media screen and (min-width: 768px) {
-  .section--posts-brands {
-    padding-bottom: 90px;
-  }
-}
 .section--posts-actions {
   padding-top: 45px;
   padding-bottom: 40px;
@@ -1765,7 +1760,7 @@ footer .footer-container {
   }
 }
 .menu-user.is-active .dropdown-user {
-  max-height: 290px;
+  max-height: 100vh;
   opacity: 1;
   visibility: visible;
   pointer-events: all;
