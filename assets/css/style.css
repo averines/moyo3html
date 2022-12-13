@@ -855,7 +855,7 @@ header {
   width: 75px;
   flex-shrink: 0;
   text-indent: -1000em;
-  background: url(../img/logo.svg) no-repeat center left;
+  background: url(../img/logo_om.svg) no-repeat center left;
   background-size: 100% 100%;
 }
 @media screen and (min-width: 350px) {
@@ -2525,6 +2525,7 @@ footer .footer-container {
   color: #fff;
   padding-bottom: 15px;
   font-size: 19.26px;
+  line-height: 1;
 }
 @media screen and (min-width: 375px) {
   .slider-main__title {

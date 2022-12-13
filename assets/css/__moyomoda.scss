@@ -1,6 +1,16 @@
+header {
+    background: url(../img/header-bg-1024_mm.jpg) no-repeat center $main-d;
+
+    @media screen and (min-width: 1200px) {
+        background: url(../img/header-bg-2600_mm.jpg) no-repeat center $main-d;
+    }
+}
+
 .logo {
     height: 30px;
     width: 70px;
+    background: url(../img/logo_mm.svg) no-repeat center left;
+    background-size: 100%;
 
     @media screen and (min-width: 400px) {
         width: 120px;
@@ -184,5 +194,11 @@ footer {
         padding: 5px 15px;
         border-left: 1px solid $line-l;
         background-color: transparent;
+    }
+}
+
+.slider-main {
+        &__text {
+            filter: hue-rotate(20deg);
     }
 }
