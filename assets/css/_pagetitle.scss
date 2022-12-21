@@ -5,7 +5,7 @@
     padding-top: 20px;
 
     @media screen and (min-width: 768px) {
-        padding-top: 25px;
+        padding-top: 35px;
     }
 
     &__header {
@@ -49,4 +49,12 @@
 .pagetitle-description {
     font-size: $base-fz * 16px;
     max-width: 600px;
+}
+
+.container--fullwidth {
+    .pagetitle {
+        @media screen and (min-width: 1366px) {
+            padding-top: 65px;
+        }
+    }
 }

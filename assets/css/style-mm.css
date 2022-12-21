@@ -5064,7 +5064,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 768px) {
   .pagetitle {
-    padding-top: 25px;
+    padding-top: 35px;
   }
 }
 .pagetitle__header {
@@ -5102,6 +5102,12 @@ footer .footer-container {
 .pagetitle-description {
   font-size: 17.12px;
   max-width: 600px;
+}
+
+@media screen and (min-width: 1366px) {
+  .container--fullwidth .pagetitle {
+    padding-top: 65px;
+  }
 }
 
 .pagination {
