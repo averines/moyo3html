@@ -6998,12 +6998,19 @@ footer .footer-container {
   transition: background-image 0.2s, transform 0.05s ease-in-out, opacity 0.15s ease-in-out;
 }
 
+.product-colors {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 10px;
+}
 .product-colors__item {
+  width: calc(33% - 10px);
   max-width: 100px;
   padding: 2px;
   display: block;
   transition: opacity 0.15s ease-in-out;
-  margin: 0 5px;
 }
 .product-colors__item picture {
   width: 100%;
@@ -7022,6 +7029,15 @@ footer .footer-container {
 }
 .product-colors__item.is-active picture {
   box-shadow: 0 0 1px 2px #e1173c;
+}
+@media screen and (min-width: 1000px) {
+  .product-colors__item {
+    width: auto;
+  }
+}
+
+.product-colors--sm .product-colors__item {
+  max-width: 60px;
 }
 
 .product-sizes__header {

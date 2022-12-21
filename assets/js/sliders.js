@@ -124,18 +124,18 @@ if (document.querySelector('.brand-filter')) {
 }
 
 // слайдер цветов на странице товара
-if (document.querySelector('.container--page-product .product-colors')) {
-    let sliderColorsProduct = new Carousel(document.querySelector(".container--page-product .product-colors.carousel"), {
-        infinite: false,
-        Navigation: false,
-        Dots: false,
-        friction: 0.75,
-        slidesPerPage: "auto",
-        slidesToSlide: 1,
-        fill: true,
-        center: false,
-    });
-}
+// if (document.querySelector('.container--page-product .product-colors')) {
+//     let sliderColorsProduct = new Carousel(document.querySelector(".container--page-product .product-colors.carousel"), {
+//         infinite: false,
+//         Navigation: false,
+//         Dots: false,
+//         friction: 0.75,
+//         slidesPerPage: "auto",
+//         slidesToSlide: 1,
+//         fill: true,
+//         center: false,
+//     });
+// }
 
 
 let sliderGalleryProduct;

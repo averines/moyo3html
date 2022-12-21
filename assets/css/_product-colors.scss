@@ -1,11 +1,17 @@
 .product-colors {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 10px;
+
     &__item {
+        width: calc(33% - 10px);
         max-width: 100px;
         padding: 2px;
         display: block;
         transition: opacity 0.15s ease-in-out;
-        margin: 0 5px;
-        
+        // margin: 0 5px;
+
         picture {
             width: 100%;
             display: block;
@@ -29,5 +35,14 @@
                 box-shadow: 0 0 1px 2px $main;
             }
         }
+        @media screen and (min-width: 1000px) {
+            width: auto;
+        }
+    }
+}
+
+.product-colors--sm {
+    .product-colors__item {
+        max-width: 60px;
     }
 }
