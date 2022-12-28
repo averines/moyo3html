@@ -5,10 +5,11 @@
     align-items: center;
     column-gap: 10px;
     text-align: left;
+    padding-right: 20px;
 
-    @media screen and (min-width: 768px) {
-        flex-wrap: nowrap;
-    }
+    // @media screen and (min-width: 768px) {
+    //     flex-wrap: nowrap;
+    // }
 
     &__date {
         border: 1px solid $line-d;

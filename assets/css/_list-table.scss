@@ -16,9 +16,9 @@
                     text-align: left;
                 }
 
-                &:nth-child(2) {
-                    width: 220px;
-                }
+                // &:nth-child(2) {
+                //     width: 120px;
+                // }
 
                 @media screen and (min-width: 400px) {
                     font-size: $base-fz * 11px;
@@ -72,6 +72,7 @@
         }
     }
 
+    
     &__price {
         white-space: nowrap;
     }
@@ -92,7 +93,7 @@
     &__quantity {
         width: 50px;
         flex-grow: 0;
-        
+
         @media screen and (min-width: 768px) {
             width: 80px;
         }
@@ -109,6 +110,7 @@
 }
 
 .list-table-header {
+
     &__size {
         white-space: nowrap;
         &::after {

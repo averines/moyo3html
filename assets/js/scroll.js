@@ -33,3 +33,21 @@ if (menuTabs && window.innerWidth < 768 ) {
         behavior: 'smooth'
     })
 }
+
+// показываем кнопку прокрутки, если промотали достаточно
+let wScroll, wHeight, wScrollProcent;
+const scrollToTopBtn = document.querySelector('.btn-goto');
+
+window.addEventListener('scroll', function () {
+    wScroll = window.scrollY;
+    wHeight = window.innerHeight;
+    wScrollProcent = wScroll / wHeight;
+
+    if (wScrollProcent > 1) {
+        if (!scrollToTopBtn.classList.contains('is-active')) {
+            scrollToTopBtn.classList.add('is-active');
+        }
+    } else {
+        scrollToTopBtn.classList.remove('is-active');
+    }
+});

@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-    
+
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
     <script src="./assets/js.min.js" defer></script>
 </head>
@@ -39,10 +39,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-    
+
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-    
+
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -74,7 +74,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-    
+
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1319,14 +1319,14 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-    
+
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1644,17 +1644,20 @@
                 <a class="menu-tabs__item" href="personal-data-fiz.html">Личные данные</a>
                 <a class="menu-tabs__item" href="personal-orders.html">История заказов</a>
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
-                <span class="menu-tabs__item is-active">Рекламация</span>
+                <span class="menu-tabs__item is-active">Рекламации</span>
+                <a class="menu-tabs__item" href="personal-parser.html">Парсер</a>
             </div>
 
-            <p>Если вы получили товар с браком, не того размера или расцветки, заполните рекламацию.</p>
+            <!-- если нет заявок -->
+            <p>Если вы получили товар с браком, неправильного размера или расцветки, заполните рекламацию.</p>
             <p>Здесь будут отражаться ваши заявки.</p>
-            <div class="alert alert--bordered">
+            <div class="alert alert--bordered mb-6">
                 <p>В настоящее время у вас нет активных заявок</p>
             </div>
 
+            <!-- если есть заявки -->
             <div class="order-return">
-                <div class="order-return__title">Заказ №12345</div>
+                <div class="order-return__title">Заявка №1 <span>к&nbsp;заказу №12345</span></div>
                 <div class="list-products">
                     <div class="list-product">
                         <div class="list-product__info">
@@ -1681,7 +1684,6 @@
                                     <th class="list-table-header__size"></th>
                                     <th class="list-table-header__quantity"></th>
                                     <th>Цена</th>
-                                    <th>Скидка</th>
                                     <th>Сумма</th>
                                 </tr>
                             </thead>
@@ -1694,40 +1696,27 @@
                                         </div>
                                     </td>
                                     <td>42</td>
-                                    <td class="list-table__quantity">3</td>
+                                    <td class="list-table__quantity">1</td>
                                     <td class="list-table__price">2 655,00</td>
-                                    <td class="list-table__discount">175,00</td>
-                                    <td class="list-table__total">5 258,00</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="return-status">
-                                            <div class="return-status__date">29.07.2021</div>
-                                            <div class="return-status__title return-status__title--inprogress">Возврат одобрен</div>
-                                        </div>
-                                    </td>
-                                    <td>42</td>
-                                    <td class="list-table__quantity">3</td>
-                                    <td class="list-table__price">2 655,00</td>
-                                    <td class="list-table__discount">175,00</td>
-                                    <td class="list-table__total">5 258,00</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="return-status">
-                                            <div class="return-status__date">22.07.2021</div>
-                                            <div class="return-status__title return-status__title--good">Возврат выполнен</div>
-                                        </div>
-                                    </td>
-                                    <td>42</td>
-                                    <td class="list-table__quantity">3</td>
-                                    <td class="list-table__price">2 655,00</td>
-                                    <td class="list-table__discount">175,00</td>
-                                    <td class="list-table__total">5 258,00</td>
+                                    <td class="list-table__total">2 655,00</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <!-- выводить только одну кнопку, соответствующие статусу (юр / физ) заказчика для конкретного заказа -->
+                <div class="return-buttons">
+                    <!-- юр -->
+                    <a href="personal-return-ooo.html" class="btn btn-main">Заявление на возврат</a>
+
+                    <!-- физ -->
+                    <a href="personal-return-fiz.html" class="btn btn-main">Заявление на возврат</a>
+                </div>
+            </div>
+
+            <div class="order-return">
+                <div class="order-return__title">Заявка №2 <span>к&nbsp;заказу №12345</span></div>
+                <div class="list-products">
                     <div class="list-product">
                         <div class="list-product__info">
                             <a class="list-product__pic" href="product.html">
@@ -1753,7 +1742,6 @@
                                     <th class="list-table-header__size"></th>
                                     <th class="list-table-header__quantity"></th>
                                     <th>Цена</th>
-                                    <th>Скидка</th>
                                     <th>Сумма</th>
                                 </tr>
                             </thead>
@@ -1762,27 +1750,133 @@
                                     <td>
                                         <div class="return-status">
                                             <div class="return-status__date">22.07.2021</div>
-                                            <div class="return-status__title return-status__title--bad">Возврат отклонен</div>
+                                            <div class="return-status__title return-status__title--inprogress">Возврат одобрен</div>
                                         </div>
                                     </td>
-                                    <td>42</td>
-                                    <td class="list-table__quantity">3</td>
+                                    <td>48</td>
+                                    <td class="list-table__quantity">1</td>
                                     <td class="list-table__price">2 655,00</td>
-                                    <td class="list-table__discount">175,00</td>
-                                    <td class="list-table__total">5 258,00</td>
+                                    <td class="list-table__total">2 655,00</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="return-buttons">
-                    <a href="personal-return-ooo.html" class="btn btn-main">Заявление на возврат (юр.)</a>
-                    <a href="personal-return-fiz.html" class="btn btn-main">Заявление на возврат (физ.)</a>
+                    <a href="personal-return-ooo.html" class="btn btn-main">Заявление на возврат</a>
                 </div>
             </div>
 
+            <div class="order-return">
+                <div class="order-return__title">Заявка №3 <span>к&nbsp;заказу №12345</span></div>
+                <div class="list-products">
+                    <div class="list-product">
+                        <div class="list-product__info">
+                            <a class="list-product__pic" href="product.html">
+                                <picture>
+                                    <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                                    <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Платье Vilatte" width="100" height="150">
+                                </picture>
+                            </a>
+                            <div class="list-product__content">
+                                <div class="list-product__brand">Vittoria Vicci</div>
+                                <div class="list-product__title">Платье</div>
+                                <div class="list-properties">
+                                    <div class="list-properties__item">Артикул <span>123123</span></div>
+                                    <div class="list-properties__item">ID <span>258660</span></div>
+                                    <div class="list-properties__item">Цвет <span>Черный</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="list-product__table list-table">
+                            <thead>
+                                <tr>
+                                    <th class="list-table-header__return">Рекламация</th>
+                                    <th class="list-table-header__size"></th>
+                                    <th class="list-table-header__quantity"></th>
+                                    <th>Цена</th>
+                                    <th>Сумма</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="return-status">
+                                            <div class="return-status__date">29.07.2021</div>
+                                            <div class="return-status__title return-status__title--good">Возврат выполнен</div>
+                                        </div>
+                                    </td>
+                                    <td>48</td>
+                                    <td class="list-table__quantity">1</td>
+                                    <td class="list-table__price">2 655,00</td>
+                                    <td class="list-table__total">2 655,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="return-buttons">
+                    <a href="personal-return-ooo.html" class="btn btn-main">Заявление на возврат</a>
+                </div>
+            </div>
+
+            <div class="order-return">
+                <div class="order-return__title">Заявка №4 <span>к&nbsp;заказу №777</span></div>
+                <div class="list-products">
+                    <div class="list-product">
+                        <div class="list-product__info">
+                            <a class="list-product__pic" href="product.html">
+                                <picture>
+                                    <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
+                                    <img src="./i/products/100/11111-col1-pic1-100.jpg" alt="Платье Vilatte" width="100" height="150">
+                                </picture>
+                            </a>
+                            <div class="list-product__content">
+                                <div class="list-product__brand">Vittoria Vicci</div>
+                                <div class="list-product__title">Платье</div>
+                                <div class="list-properties">
+                                    <div class="list-properties__item">Артикул <span>123123</span></div>
+                                    <div class="list-properties__item">ID <span>258660</span></div>
+                                    <div class="list-properties__item">Цвет <span>Черный</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="list-product__table list-table">
+                            <thead>
+                                <tr>
+                                    <th class="list-table-header__return">Рекламация</th>
+                                    <th class="list-table-header__size"></th>
+                                    <th class="list-table-header__quantity"></th>
+                                    <th>Цена</th>
+                                    <th>Сумма</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="return-status">
+                                            <div class="return-status__date">29.07.2021</div>
+                                            <div class="return-status__title return-status__title--bad">Возврат отклонен</div>
+                                        </div>
+                                    </td>
+                                    <td>48</td>
+                                    <td class="list-table__quantity">1</td>
+                                    <td class="list-table__price">2 655,00</td>
+                                    <td class="list-table__total">2 655,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="return-buttons">
+                    <a href="personal-return-ooo.html" class="btn btn-main">Заявление на возврат</a>
+                </div>
+            </div>
+
+            <!-- всегда -->
             <div class="container--max700">
-                <p class="h1 mt-2">1. Оформите рекламацию</p>
+                <p class="h1 mt-2">Инструкция</p>
+                <p class="h2">1. Оформите рекламацию</p>
                 <ol>
                     <li>Зайдите в нужный заказ в разделе <a href="personal-orders.html">История заказов</a></li>
                     <li>Нажмите на кнопку "ВОЗВРАТ" рядом с товаром, который хотите вернуть</li>
@@ -1793,18 +1887,18 @@
                 </ol>
                 <p>Обращение будет рассмотрено в кратчайшие сроки, после чего вы получите уведомление на электронную почту. Также изменится статус заявки на этой странице.</p>
 
-                <p class="h1 mt-2">2. Отравьте заявление на возврат</p>
+                <p class="h2 mt-2">2. Отравьте заявление на возврат</p>
                 <p>Процедура возврата для юр. и физ. лиц различается:</p>
 
-                <p class="h2">Для юридических лиц</p>
+                <p class="h3">Для юридических лиц</p>
                 <p>В случае одобрения возврата, на этой странице появится кнопка "ЗАЯВЛЕНИЕ НА ВОЗВРАТ", нажмите и проверьте правильность заполнения. Если все верно, скачайте, распечатайте, поставьте
                     подпись и печать (при наличии), отсканируйте (сфотографируйте), прикрепите файл, нажмите кнопку "ОТПРАВИТЬ".</p>
                 <p>Оригинал распечатанного заявления вложите в коробку с возвратом.</p>
 
-                <p class="h2">Для физических лиц</p>
+                <p class="h3">Для физических лиц</p>
                 <p>В случае одобрения возврата, на этой странице появится кнопка "ЗАЯВЛЕНИЕ НА ВОЗВРАТ", проверьте все ли верно и нажмите "ПОДТВЕРДИТЬ". Ничего распечатывать не нужно.</p>
 
-                <p class="h1 mt-2">3. Отправьте вещи</p>
+                <p class="h2 mt-2">3. Отправьте вещи</p>
                 <p>После положительного решения отправьте нам вещь(и).</p>
                 <p>Вещь(и) отправляйте простым почтовым отправлением на адрес: 105077, Москва, до востребования, ИП Потапов Л.В.</p>
                 <p>Не отправляйте посылки наложенным платежом!</p>

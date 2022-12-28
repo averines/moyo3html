@@ -1,12 +1,42 @@
 .order-return {
-    margin-top: 120px;
     position: relative;
-    padding-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        border-bottom: 1px solid $line-l;
+    }
 
     &__title {
         position: absolute;
         font-weight: 600;
         font-size: $base-fz * 20px;
         top: -36px;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            max-width: 260px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: inline;
+            max-width: none;
+        }
+
+        > span {
+            font-weight: 400;
+            font-size: 0.85em;
+        }
+    }
+
+    .list-products .list-product {
+        padding-bottom: 0;
+        margin-bottom: 20px;
+
+        &::before {
+            display: none;
+        }
     }
 }
