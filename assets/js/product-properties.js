@@ -3,8 +3,8 @@
 // показать дополнительные характеристики на странице товара
 function productPropertiesHandler() {
     const productProperties = document.querySelector('.product-info__properties');
-    if (productProperties) {
-        const productPropertiesBtn = productProperties.querySelector('.product-properties__btn');
+    const productPropertiesBtn = document.querySelector('.product-properties__btn');
+    if (productProperties && productPropertiesBtn) {
         const productPropertiesItems = productProperties.querySelectorAll('.product-properties__item');
 
         productPropertiesBtn.addEventListener('click', () => {
