@@ -89,6 +89,11 @@
     &:disabled {
         background-color: $disabled;
     }
+
+    &.is-disabled {
+        background-color: $disabled;
+        pointer-events: none;
+    }
 }
 
 .btn-filter {

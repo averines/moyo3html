@@ -108,3 +108,19 @@ const allInputs = document.querySelectorAll('form input');
 if (allInputs.length > 0) {
     checkEmpty(allInputs);
 }
+
+
+// в модальном окне оформления заявки на возврат товара - показывать поле "опишите дефект" только при выбранной причине возврата "брак"
+function returnReasonHandler() {
+    const returnReason = document.getElementById('return-reason');
+    const returnDescription = document.querySelector('[data-action="return-description"]');
+    if (returnReason && returnDescription) {
+        returnReason.addEventListener('change', () => {
+            if (returnReason.value == "return-reason-1") {
+                returnDescription.classList.remove('is-hidden');
+            } else {
+                returnDescription.classList.add('is-hidden');
+            }
+        })
+    }
+}

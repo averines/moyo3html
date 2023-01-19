@@ -73,6 +73,8 @@ let deliveryCheck;
 
 if (orderDeliveryInfo) {
     let typeVariants = document.querySelectorAll('[data-delivery-select] .tabs-titles__item');
+    let goToPaymentBtn = document.querySelector('[data-check-delivery-type]');
+    
     // прячем дополнительные поля в доставке
     deliveryCheck = function (typeValue) {
         if (typeValue == 'type2' || typeValue == 'type3') {
@@ -80,15 +82,17 @@ if (orderDeliveryInfo) {
         } else {
             orderDeliveryInfo.style.display = 'none';
         }
-    };
 
-    deliveryCheck('type1');
+        // снимаем блокировку кнопки "выбор оплаты"
+        goToPaymentBtn.classList.remove('is-disabled');
+    };
 
     // передаем в форму значение выбранного типа регистрации
     typeVariants.forEach(typeVariant => {
         typeVariant.addEventListener('click', () => {
             let typeValue = typeVariant.dataset.tabTarget;
-            // typeInput.value = typeValue;
+            typeVariants.forEach(tv => tv.classList.remove('is-active'))
+            typeVariant.classList.add('is-active')
             deliveryCheck(typeValue);
         });
     });

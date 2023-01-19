@@ -342,6 +342,18 @@ ol {
   display: block;
 }
 
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
 .flex-column {
   flex-direction: column;
 }

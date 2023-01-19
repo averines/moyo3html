@@ -337,6 +337,18 @@ ol li > a:hover {
   display: block;
 }
 
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -4762,6 +4774,10 @@ footer .footer-container {
 .btn:disabled {
   background-color: #a6a6a8;
 }
+.btn.is-disabled {
+  background-color: #a6a6a8;
+  pointer-events: none;
+}
 
 .btn-filter {
   font-weight: 600;
@@ -8831,6 +8847,7 @@ footer .footer-container {
 .form-minimal .form-group input,
 .form-minimal .form-group textarea,
 .form-minimal .form-group select {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 27px 40px 10px 20px;
   border: 1px solid #d9d9d9;
   font-size: 19.26px;
@@ -9343,6 +9360,7 @@ footer .footer-container {
   padding: 15px 0;
 }
 .cart-info__text {
+  margin-top: 10px;
   white-space: nowrap;
 }
 .cart-info__text > span {
