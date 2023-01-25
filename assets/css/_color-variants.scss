@@ -53,6 +53,7 @@
             content: attr(aria-label);
             z-index: 10;
             line-height: 1;
+            pointer-events: none;
         }
 
         &:hover {

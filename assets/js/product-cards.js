@@ -6,28 +6,82 @@
 function getProductsCards() {
     const productsCards = document.querySelectorAll('.product-card');
 
+    function checkIsMobile() {
+        let isMobile = window.matchMedia || window.msMatchMedia;
+        if (isMobile) {
+            let match_mobile = isMobile("(pointer:coarse)");
+            return match_mobile.matches;
+        }
+        return false;
+    }
+
     if (productsCards.length > 0) {
         productsCards.forEach(pCard => {
             let pColors = pCard.querySelectorAll('.color-variants__item');
             let pSizes = pCard.querySelectorAll('.size-variants__item');
             let pPicSources = pCard.querySelectorAll('.product-card__pic source');
             let pPicImg = pCard.querySelector('.product-card__pic img');
+            let pLinkPic = pCard.querySelector('.product-card__link');
+            // let pLinkHeader = pCard.querySelector('.product-card__header');
             let swapImagesTimer;
 
             pCard.addEventListener('mouseover', (e) => {
+                // console.log(e.target.classList);
+                if (e.target.classList.contains('size-variants__item')
+                    || e.target.classList.contains('product-price__base')
+                    || e.target.classList.contains('product-price__discount')
+                    || e.target.classList.contains('product-price__date')
+                    || e.target.classList.contains('product-price__profit')
+                    || e.target.classList.contains('product-price__old')
+                    || e.target.classList.contains('product-price__opt')
+                    || e.target.classList.contains('product-price__row')
+                    || e.target.classList.contains('product-card__price')
+                    || e.target.classList.contains('product-card__title')
+                    || e.target.classList.contains('product-card__subtitle')
+                    || e.target.classList.contains('product-card__favorite')
+                    || e.target.classList.contains('product-card-slider__item')
+                    || e.target.classList.contains('product-card__info')
+                    || e.target.classList.contains('product-card__extra')
+                    || e.target.classList.contains('product-card__extra-wrapper')
+                    || e.target.classList.contains('product-card__colors')
+                    || e.target.classList.contains('product-card__sizes')
+                    || e.target.classList.value == ""
+                ) {
+                    updateColors(pCard.dataset.productId);
+                    updateSizes(pCard.dataset.productId);
+                    updateImage(pCard.dataset.productId);
+                    updateLink(pCard.dataset.productId);
+                    clearTimeout(swapImagesTimer);
+                }
+
+
+                if (e.target.classList.contains('product-card__link') && !checkIsMobile()) {
+                    slideImages(e.target, pColors[0].dataset.images.replace(/\s/g, '').split(','));
+                }
+
+                if ((e.target.classList.contains('product-card__header')
+                    || e.target.classList.contains('product-card__title')
+                    || e.target.classList.contains('product-card__subtitle'))
+                    && checkIsMobile()) {
+                    e.target.addEventListener('click', (event) => { event.preventDefault(); })
+                }
+
                 if (e.target.classList.contains('color-variants__item')) {
                     updateColors(e.target.dataset.colorId);
                     updateSizes(e.target.dataset.colorId);
                     updateImage(e.target.dataset.colorId);
                     swapImages(e.target.dataset.images.replace(/\s/g, '').split(','), 1);
-                } else if (e.target.classList.contains('product-card__link')) {
-                    slideImages(e.target, pColors[0].dataset.images.replace(/\s/g, '').split(','));
-                } else {
-                    updateColors(pCard.dataset.productId);
-                    updateSizes(pCard.dataset.productId);
-                    updateImage(pCard.dataset.productId);
-                    clearTimeout(swapImagesTimer);
+
+                    if (checkIsMobile()) {
+                        e.target.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            updateLink(e.target.dataset.colorId)
+                        })
+                    }
+
                 }
+
+
             }, true);
 
             pCard.addEventListener('mouseout', () => {
@@ -40,7 +94,12 @@ function getProductsCards() {
                 updateColors();
                 updateSizes();
                 updateImage(e.target.dataset.productId);
+
+                if (checkIsMobile()) {
+                    updateLink();
+                }
                 clearTimeout(swapImagesTimer);
+
             });
 
             // обновление иконок цветов
@@ -98,8 +157,19 @@ function getProductsCards() {
                 el.appendChild(slider);
             }
 
+            // в мобильной версии обновляем ссылку на товар при клике на цвет
+            function updateLink(colorId) {
+                if (colorId) {
+                    pLinkPic.href = 'product/' + colorId;
+                    // pLinkHeader.href = 'product/' + colorId;
+                } else {
+                    pLinkPic.href = 'product/' + pCard.dataset.productId;
+                    // pLinkHeader.href = 'product/' + pCard.dataset.productId;
+                }
+            }
+
         });
-    }    
+    }
 }
 
 //получаем карточки продуктов при загрузке страницы и привязываем события
