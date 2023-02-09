@@ -431,7 +431,6 @@ ol li > a:hover {
     display: grid;
     align-items: stretch;
     grid-template-columns: 450px 1fr;
-    grid-template-rows: -webkit-max-content 1fr;
     grid-template-rows: max-content 1fr;
     grid-template-areas: "gallery info" "feedback info";
     width: 100%;
@@ -475,15 +474,6 @@ ol li > a:hover {
   }
 }
 
-@-webkit-keyframes blinkborder {
-  0% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: initial;
-  }
-}
-
 @keyframes blinkborder {
   0% {
     border-color: transparent;
@@ -493,32 +483,7 @@ ol li > a:hover {
   }
 }
 .animate-blink {
-  -webkit-animation: blinkborder 0.9s infinite alternate ease-in-out;
-          animation: blinkborder 0.9s infinite alternate ease-in-out;
-}
-
-@-webkit-keyframes favorites {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    transform: translate(4px, -10px);
-  }
-  60% {
-    transform: translate(-4px, -15px) scale(1.08);
-  }
-  80% {
-    opacity: 1;
-    transform: translate(-2px, -20px) scale(1.2);
-  }
-  90% {
-    transform: translate(-1px, -20px) scale(1.25);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-1px, -20px) scale(2.2);
-    filter: brightness(2);
-  }
+  animation: blinkborder 0.9s infinite alternate ease-in-out;
 }
 
 @keyframes favorites {
@@ -544,19 +509,6 @@ ol li > a:hover {
     filter: brightness(2);
   }
 }
-@-webkit-keyframes counter {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  70% {
-    transform: translateY(2px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes counter {
   0% {
     opacity: 0;
@@ -570,30 +522,10 @@ ol li > a:hover {
     transform: translateY(0);
   }
 }
-@-webkit-keyframes slideup {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
 @keyframes slideup {
   from {
     opacity: 0;
     transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-@-webkit-keyframes slidedown {
-  from {
-    opacity: 0;
-    transform: translateY(-3px);
   }
   to {
     opacity: 1;
@@ -610,16 +542,6 @@ ol li > a:hover {
     transform: none;
   }
 }
-@-webkit-keyframes zoomin {
-  from {
-    opacity: 0;
-    transform: scale(2);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
 @keyframes zoomin {
   from {
     opacity: 0;
@@ -630,31 +552,12 @@ ol li > a:hover {
     transform: none;
   }
 }
-@-webkit-keyframes loading {
-  0% {
-    transform: rotate(0turn);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
 @keyframes loading {
   0% {
     transform: rotate(0turn);
   }
   100% {
     transform: rotate(1turn);
-  }
-}
-@-webkit-keyframes shake {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-30px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 @keyframes shake {
@@ -668,28 +571,12 @@ ol li > a:hover {
     transform: translateX(0px);
   }
 }
-@-webkit-keyframes blink {
-  0% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: #e74ca6;
-  }
-}
 @keyframes blink {
   0% {
     background-color: #fff;
   }
   100% {
     background-color: #e74ca6;
-  }
-}
-@-webkit-keyframes blinkopacity {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.25;
   }
 }
 @keyframes blinkopacity {
@@ -730,8 +617,7 @@ ol li > a:hover {
   background: url(../img/icons/circle.svg) no-repeat center/100%;
   width: 1em;
   height: 1em;
-  -webkit-animation: loading 1s 0s infinite;
-          animation: loading 1s 0s infinite;
+  animation: loading 1s 0s infinite;
   display: inline-block;
 }
 .icon-loading--white {
@@ -810,7 +696,6 @@ ol li > a:hover {
 header {
   background: url(../img/header-bg-1024.jpg) no-repeat center #ab064e;
   background-size: 100% 100%, cover;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -1227,8 +1112,8 @@ footer .footer-container {
     height: 100%;
   }
   .menu-top__item > a,
-.menu-top__item > span,
-.menu-top__item > button {
+  .menu-top__item > span,
+  .menu-top__item > button {
     font-size: 12.84px;
     color: #fff;
     background: none;
@@ -1244,8 +1129,8 @@ footer .footer-container {
     align-items: center;
   }
   .menu-top__item > a:hover,
-.menu-top__item > span:hover,
-.menu-top__item > button:hover {
+  .menu-top__item > span:hover,
+  .menu-top__item > button:hover {
     opacity: 1;
   }
   .menu-top__item > span {
@@ -1331,7 +1216,7 @@ footer .footer-container {
     background-color: #f3f2f0;
   }
   .menu-child__item:hover > a,
-.menu-child__item:hover + .menu-child__item > a {
+  .menu-child__item:hover + .menu-child__item > a {
     border-color: transparent;
   }
   .menu-child::after {
@@ -1356,8 +1241,7 @@ footer .footer-container {
   transform: translateX(4px) translateY(-6px);
 }
 .menu-alert--animated {
-  -webkit-animation: blink 1.5s infinite ease-in-out;
-          animation: blink 1.5s infinite ease-in-out;
+  animation: blink 1.5s infinite ease-in-out;
 }
 
 .menu-tabs {
@@ -1704,15 +1588,6 @@ footer .footer-container {
   content: "";
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -1852,8 +1727,7 @@ footer .footer-container {
 }
 @media screen and (min-width: 450px) {
   .dropdown-user__item--alert img {
-    -webkit-animation: blinkopacity 1.5s infinite ease-in-out;
-            animation: blinkopacity 1.5s infinite ease-in-out;
+    animation: blinkopacity 1.5s infinite ease-in-out;
   }
 }
 .dropdown-user__link {
@@ -3159,7 +3033,6 @@ footer .footer-container {
     flex-direction: column;
     justify-content: center;
     line-height: 1.2;
-    position: -webkit-sticky;
     position: sticky;
     top: 10px;
     box-shadow: 0 -10px 0 10px #f9f9f9;
@@ -4216,7 +4089,7 @@ footer .footer-container {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .list-return {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -5731,8 +5604,7 @@ footer .footer-container {
 }
 .tabs-content__item.is-active {
   display: block;
-  -webkit-animation: fade 0.33s ease-in-out;
-          animation: fade 0.33s ease-in-out;
+  animation: fade 0.33s ease-in-out;
 }
 
 .tabs-title-category {
@@ -7037,8 +6909,7 @@ footer .footer-container {
   display: block;
   background: url(../img/icons/favorites-filled.svg) no-repeat center;
   background-size: 100%;
-  -webkit-animation: favorites 1s ease-in-out;
-          animation: favorites 1s ease-in-out;
+  animation: favorites 1s ease-in-out;
   position: absolute;
   top: calc(50% - 5px);
   left: calc(50% - 5px);
@@ -7318,8 +7189,7 @@ footer .footer-container {
   font-weight: 600;
 }
 .product-table__total .is-animated {
-  -webkit-animation: counter 0.2s ease-in-out;
-          animation: counter 0.2s ease-in-out;
+  animation: counter 0.2s ease-in-out;
 }
 .product-table__offsize > div {
   padding-top: 0.5em;
@@ -7576,12 +7446,10 @@ footer .footer-container {
   margin: 0 -10px;
 }
 .products-section .slider-products:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
 }
 .products-section .slider-products.shake {
-  -webkit-animation: shake 0.4s ease-in-out 3 alternate 0.75s;
-          animation: shake 0.4s ease-in-out 3 alternate 0.75s;
+  animation: shake 0.4s ease-in-out 3 alternate 0.75s;
 }
 .products-section .slider-products .products {
   margin: 0;
@@ -10138,8 +10006,7 @@ footer .footer-container {
   content: "";
   display: block;
   flex-shrink: 0;
-  -webkit-animation: zoomin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          animation: zoomin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: zoomin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .status--good::before {
   width: 45px;
@@ -10156,8 +10023,7 @@ footer .footer-container {
 .status__message {
   font-size: 17.12px;
   line-height: 1.45;
-  -webkit-animation: slideup 0.3s ease-in-out;
-          animation: slideup 0.3s ease-in-out;
+  animation: slideup 0.3s ease-in-out;
 }
 
 .is-waiting {
@@ -11019,8 +10885,7 @@ footer .footer-container {
   color: #ab064e;
 }
 .bust-result .is-animated {
-  -webkit-animation: counter 0.2s ease-in-out;
-          animation: counter 0.2s ease-in-out;
+  animation: counter 0.2s ease-in-out;
 }
 
 .bust-body {

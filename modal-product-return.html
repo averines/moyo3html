@@ -3,6 +3,7 @@
         Оформить рекламацию
     </div>
     <div class="modal__content">
+        <!-- после успешной отправки формы Добавить css-класс is-hidden -->
         <form class="form-minimal" action="/" method="POST" data-check id="modal-personal-return-count">
             <p>Укажите количество ранее заказанного товара, которое вы хотите вернуть и укажите причину возврата.</p>
 
@@ -30,7 +31,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <textarea id="return-description" name="return-description" data-check data-check-required="true" rows="5"></textarea>
-                        <label for="return-description">Опишите дефект</label>
+                        <label for="return-description">Опишите подробности проблемы</label>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,16 @@
             </div>
 
             <button type="submit" class="btn btn-main btn--small disabled">Отправить</button>
+
+
         </form>
+
+        <!-- после успешной отправки формы Убрать css-класс is-hidden -->
+        <div class="form-success is-hidden">
+            <p>Заявка успешно отправлена.</p>
+            <p>Заявка будет рассмотрена в кратчайшие сроки, после чего вы получите уведомление на электронную почту.</p>
+            <p>Инструкцию по дальнейшим действиям и статус заявки можно посмотреть на странице <a href="/customer/reclamations">Рекламации</a>.</p>
+        </div>
     </div>
 </div>
 

@@ -116,7 +116,7 @@ function returnReasonHandler() {
     const returnDescription = document.querySelector('[data-action="return-description"]');
     if (returnReason && returnDescription) {
         returnReason.addEventListener('change', () => {
-            if (returnReason.value == "return-reason-1") {
+            if (["return-reason-1", "return-reason-2", "return-reason-3", "return-reason-5"].some(v => v == returnReason.value)) {
                 returnDescription.classList.remove('is-hidden');
             } else {
                 returnDescription.classList.add('is-hidden');
