@@ -1632,10 +1632,23 @@
     <main>
         <div class="container container--fullwidth">
             <nav>
-                <ol class="breadcrumbs">
-                    <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
-                    <li><a href="category-woman.html">Женщинам</a></li>
-                    <li><span>Платья</span></li>
+                <ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html" title="Optmoyo.ru – интернет-магазин одежды по оптовым ценам">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="category-woman.html">
+                            <span itemprop="name">Женщинам</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Платья</span>
+                        <meta itemprop="position" content="3">
+                    </li>
                 </ol>
             </nav>
 

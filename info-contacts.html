@@ -32,7 +32,7 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=2ce1a317-5c77-4d2c-8227-060a3628a392&lang=ru_RU" defer></script>
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
-    <script src="./assets/js.min.js" defer></script>
+    <script src="./assets/js.min.js" defer></script>\
 </head>
 
 <body>
@@ -40,10 +40,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-    
+
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-    
+
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -75,7 +75,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-    
+
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1320,14 +1320,14 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-    
+
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1628,6 +1628,28 @@
     </header>
 
     <main>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "RU",
+                "addressLocality": "г. Москва, Россия",
+                "postalCode": "105187",
+                "streetAddress": "ул. Вольная, д. 35, стр. 8"
+            },
+            "url": "https://optmoyo.ru",
+            "email": "info@optmoyo.ru",
+            "name": "OptMoyo",
+            "alternateName": "ОптМоё",
+            "telephone": "8 (800) 301-25-75",
+            "description": "Интернет-магазин одежды. Женская, мужская и детская одежда по оптовым ценам.",
+            "sameAs": ["https://vk.com/optmoyo_shop"]
+        }
+        </script>
+
         <div class="container">
             <nav>
                 <ol class="breadcrumbs">

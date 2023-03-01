@@ -6561,6 +6561,7 @@ footer .footer-container {
 .product-thumbs__item picture img {
   display: block;
   width: 100%;
+  height: auto;
 }
 .product-thumbs__item.is-nav-selected {
   outline-color: #ab064e;
@@ -6842,7 +6843,7 @@ footer .footer-container {
   margin-bottom: 0;
 }
 .product-properties__title {
-  color: #B2B2B2;
+  color: #727272;
   flex-grow: 0;
   flex-shrink: 0;
   z-index: 1;

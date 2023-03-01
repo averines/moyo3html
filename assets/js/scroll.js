@@ -6,7 +6,13 @@ if (scrollToLinks) {
     scrollToLinks.forEach(scrollToLink => {
         scrollToLink.addEventListener('click', (e) => {
             e.preventDefault();
-            const scrollToBlock = scrollToLink.getAttribute('href');
+            let scrollToBlock
+            if (scrollToLink.getAttribute('href')) {
+                scrollToBlock = scrollToLink.getAttribute('href');
+            } else {
+                scrollToBlock = scrollToLink.dataset.scrollTarget;
+            }
+            
             document.querySelector(scrollToBlock).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
