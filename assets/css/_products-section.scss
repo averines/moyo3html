@@ -13,6 +13,12 @@
         align-items: center;
         column-gap: 14px;
 
+        > h2 {
+            padding: 0;
+            margin: 0;
+            font-size: $base-fz * 14px;
+        }
+
         &.products-section__title--center {
             .products-section__link {
                 padding-top: 12px;
