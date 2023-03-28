@@ -10,7 +10,16 @@
                     <label for="data-inn">ИНН</label>
                 </div>
             </div>
-            <p>Новые данные станут активны после проверки менеджером в течение 12 часов с момента отправки.</p>
+            <p class="text-sm">Изменения отобразятся в кабинете только после проверки менеджером.</p>
+            <p class="text-sm">Все неоплаченные заказы будут обновлены в соответствии с измененными данными Клиента.</p>
+            <p class="text-sm">Все выставленные и неоплаченные счета будут аннулированы и вновь перевыставлены с новыми номерами и измененными реквизитами.</p>
+
+            <div class="form-row">
+                <div class="form-checkbox">
+                    <input id="data-confirmation" type="checkbox" name="data-confirmation" data-check data-check-required="true">
+                    <label for="data-confirmation">Подтверждаю изменения</label>
+                </div>
+            </div>
             <button type="submit" class="btn btn-main" disabled>Сохранить</button>
         </form>
     </div>

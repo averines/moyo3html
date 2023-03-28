@@ -7,7 +7,12 @@ function checkForm(form) {
     if (inputs.length > 0) {
         inputs.forEach(input => {
             let formGroup = input.closest('.form-group');
-            formGroup.classList.add('form-group--need-check');
+            if (formGroup) {
+                formGroup.classList.add('form-group--need-check');
+            } else {
+                formGroup = input.closest('.form-checkbox');
+            }
+
             input.dataset.error = "true";
             checkInput(formGroup, input, input.value);
 
@@ -43,8 +48,8 @@ function countErrors(inputs) {
 }
 
 function checkInput(formGroup, input, value) {
-    // проверка на наличие значения
-    if (input.dataset.checkRequired == 'true' && value.replace(/\s/g, '').length > 0) {
+    // проверка на наличие значения или флага checked
+    if (input.dataset.checkRequired == 'true' && ((input.type == "text" && value.replace(/\s/g, '').length > 0) || (input.type == "checkbox" && input.checked))) {
         formGroup.classList.add('is-valid');
         input.dataset.error = false;
     } else {
