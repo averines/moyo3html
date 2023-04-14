@@ -3081,8 +3081,8 @@ footer .footer-container {
   .conditions {
     display: grid;
     grid-template-columns: 4fr 8fr;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
   }
 }
 
@@ -11126,6 +11126,7 @@ footer .footer-container {
 .article__text {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.5;
 }
 .article__text > p {
   margin: 0 0 0.5em 0;
