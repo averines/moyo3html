@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все страницы</title>
+    <title>Выбор оплаты</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -18,7 +18,7 @@
     <meta property="og:image:secure_url" content="https://averines.github.io/moyo3html/assets/img/og.png">
     <meta property="og:image:type" content="image/png">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
 
     <meta name="theme-color" content="#973c8e">
     <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any">
@@ -1327,7 +1327,6 @@
                     <div class="subcategory-menu-cloned"></div>
                 </div>
 
-
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1629,93 +1628,88 @@
 
     <main>
         <div class="container">
-            <div class="allpageslist">
+            <div class="pagetitle pagetitle--column">
+                <h1 class="pagetitle__header">Оформление заказа: выбор оплаты</h1>
+            </div>
+
+            <div class="order-progress">
+                <div class="order-progress__item">
+                    <img src="./assets/img/icons/order-progress/01.svg" alt="Корзина">
+                    Корзина
+                </div>
+                <div class="order-progress__separator"></div>
+                <div class="order-progress__item">
+                    <img src="./assets/img/icons/order-progress/04.svg" alt="Покупатель">
+                    Покупатель
+                </div>
+                <div class="order-progress__separator"></div>
+                <div class="order-progress__item">
+                    <img src="./assets/img/icons/order-progress/02.svg" alt="Доставка">
+                    Доставка
+                </div>
+                <div class="order-progress__separator"></div>
+                <div class="order-progress__item order-progress__item--active">
+                    <img src="./assets/img/icons/order-progress/03.svg" alt="Оплата">
+                    Оплата
+                </div>
+            </div>
+
+            <div class="order-prepare">
                 <div>
-                    <h4>Основные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="index.html">Главная</a></li>
-                        <li class="checked"><a href="category-woman.html">Категория Женщинам</a></li>
-                        <li class="checked"><a href="category-girl.html">Категория Девочкам</a></li>
-                        <li class="checked"><a href="category-man.html">Категория Мужчинам</a></li>
-                        <li class="checked"><a href="category-boy.html">Категория Мальчикам</a></li>
-                        <li class="checked"><a href="category-home.html">Категория Для дома</a></li>
-                        <li class="checked"><a href="category-toy.html">Категория Игрушки</a></li>
-                        <li class="checked"><a href="subcategory.html">Подкатегория</a></li>
-                        <li class="checked"><a href="product.html">Товар</a></li>
-                        <li class="checked"><a href="product-variants.html">Товар с вариантами некоторых блоков</a></li>
-                        <li class="checked"><a href="product-no-feedback.html">Товар без отзывов</a></li>
-                        <li class="checked"><a href="brand.html">Бренд</a></li>
-                        <li class="checked"><a href="brands.html">Бренды</a></li>
-                        <li class="checked"><a href="brand-categories.html">Категории бренда</a></li>
-                        <li class="checked"><a href="brand-categories-2.html">Категории бренда другой вариант</a></li>
-                        <li class="checked"><a href="brands-logo.html">Все Логотипы</a></li>
-                    </ul>
+                    <div class="prepare-wrap">
+                        <div class="prepare-wrap__title">Выберите способ оплаты:</div>
+                        <div class="tabs-variants" data-action="tabs">
+                            <div class="tabs-titles tabs-titles--vertical">
+                                <div class="tabs-titles__wrap">
+                                    <button class="tabs-titles__item" data-tab-target="type4">
+                                        <span class="icon icon--money"></span>
+                                        Оплата наличными
+                                    </button>
+                                    <div class="tabs-titles__description">
+                                        Оплата наличными или картой при получении заказа в офисе.
+                                    </div>
+                                </div>
+                                <div class="tabs-titles__wrap">
+                                    <button class="tabs-titles__item" data-tab-target="type6">
+                                        <span class="icon icon--card"></span>
+                                        Оплата картой на&nbsp;сайте
+                                    </button>
+                                    <div class="tabs-titles__description">
+                                        Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="tabs-content__item" data-tab-id="type4"></div>
+                                <div class="tabs-content__item" data-tab-id="type5"></div>
+                                <div class="tabs-content__item" data-tab-id="type6"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div>
-                    <h4>Личный кабинет</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="personal-registration.html">Регистрация</a></li>
-                        <li class="checked"><a href="personal-discounts.html">Бонусы и скидки</a></li>
-                        <li class="checked"><a href="personal-favorites.html">Избранное</a></li>
-                        <li class="checked"><a href="visitor-favorites.html">Избранное для неавторизованного</a></li>
-                        <li class="checked"><a href="personal-cart.html">Корзина</a></li>
-                        <li class="checked"><a href="visitor-cart.html">Корзина для неавторизованного</a></li>
-                        <li class="checked"><a href="personal-cart-empty.html">Корзина пустая</a></li>
-                        <li class="checked"><a href="personal-cart-addition.html">Корзина с дозаказом</a></li>
-                        <li class="checked"><a href="personal-orders.html">История заказов</a></li>
-                        <li class="checked"><a href="personal-order-view.html">Просмотр заказа</a></li>
-                        <li class="checked"><a href="personal-data-fiz.html">Личные данные физ. лица</a></li>
-                        <li class="checked"><a href="personal-data-ip.html">Личные данные ИП</a></li>
-                        <li class="checked"><a href="personal-data-ooo.html">Личные данные ООО</a></li>
-                        <li class="checked"><a href="personal-data-ip-firsttime.html">Заполнение данных для ИП в первый раз</a></li>
-                        <li class="checked"><a href="personal-data-ooo-firsttime.html">Заполнение данных для ООО в первый раз</a></li>
-                        <li class="checked"><a href="personal-return.html">Рекламация</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Оформление заказа</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="personal-order-delivery.html">Выбор доставки</a></li>
-                        <li class="checked"><a href="personal-order-payment.html">Выбор оплаты</a></li>
-                        <li class="checked"><a href="personal-order-payment-fiz.html">Выбор оплаты (физ. лицо)</a></li>
-
-                        <li class="checked"><a href="visitor-order-userinfo.html">Заполнение данных покупателя для неавторизованного</a></li>
-                        <li class="checked"><a href="visitor-order-delivery.html">Выбор доставки для неавторизованного</a></li>
-                        <li class="checked"><a href="visitor-order-payment.html">Выбор оплаты для неавторизованного</a></li>
-                        <li class="checked"><a href="visitor-order-payment-fiz.html">Выбор оплаты для неавторизованного (физ. лицо)</a></li>
-
-                        <li class="checked"><a href="personal-online-payment.html">Онлайн-оплата</a></li>
-                        <li class="checked"><a href="personal-order-sent.html">Заказ отправлен</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Информационные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="info-about.html">О нас</a></li>
-                        <li class="checked"><a href="info-conditions.html">Условия работы</a></li>
-                        <li class="checked"><a href="info-contacts.html">Контакты</a></li>
-
-                        <li class="checked"><a href="info-sizes.html">Размеры</a></li>
-                        <li class="checked"><a href="info-delivery.html">Доставка</a></li>
-                        <li class="checked"><a href="info-payment.html">Оплата</a></li>
-                        <li class="checked"><a href="info-faq.html">Ответы на вопросы</a></li>
-                        <li class="checked"><a href="info-return.html">Возврат</a></li>
-
-                        <li class="checked"><a href="info-partnership.html">Сотрудничество/Поставщикам</a></li>
-                        <li><a href="info-api.html">API</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Служебные</h4>
-                    <ul class="marker mb-3">
-                        <li class="checked"><a href="404.html">Ошибка 404</a></li>
-                        <li class="checked"><a href="500.html">Ошибка 500</a></li>
-                        <li class="checked"><a href="elements.html">Элементы интерфейса</a></li>
-                    </ul>
+                    <div class="cart-info__wrapper">
+                        <div class="cart-info">
+                            <div class="cart-info__content">
+                                <div class="cart-total">
+                                    <div class="cart-total__item">
+                                        <div class="cart-total__title">Общая стоимость товаров</div>
+                                        <div class="cart-total__value">7200,00 ₽</div>
+                                    </div>
+                                    <div class="cart-total__item">
+                                        <div class="cart-total__title">Скидка</div>
+                                        <div class="cart-total__value cart-total__value--special">1200,00 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__total">
+                                    Итого: <span>6000,00 ₽</span>
+                                </div>
+                                <a class="btn btn-main btn--big mt-2 w-100 d-block" data-check-delivery-type href="personal-order-sent.html">Отправить заказ</a>
+                            </div>
+                        </div>
+                        <a class="btn-back" href="visitor-order-delivery.html">Назад к выбору Доставки</a>
+                    </div>
                 </div>
             </div>
         </div>
