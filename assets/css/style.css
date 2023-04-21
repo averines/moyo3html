@@ -2120,7 +2120,7 @@ footer .footer-container {
 .filter-checkbox .icon-color--orange::after {
   background: #ffa216;
 }
-.filter-checkbox .icon-color--magenta::after {
+.filter-checkbox .icon-color--pink::after {
   background-color: #ff90c7;
 }
 .filter-checkbox .icon-color--gray::after {
@@ -7986,7 +7986,7 @@ footer .footer-container {
 .color-variants__item--orange {
   background-color: rgb(255, 149, 50);
 }
-.color-variants__item--magenta {
+.color-variants__item--pink {
   background-color: rgb(255, 163, 209);
 }
 .color-variants__item--gray {
