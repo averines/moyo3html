@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор оплаты</title>
+    <title>Заказ отправлен</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="./assets/libs/fancybox/fancybox.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
-
+    
     <script src="./assets/libs/fancybox/fancybox.min.js"></script>
     <script src="./assets/js.min.js" defer></script>
 </head>
@@ -39,10 +39,10 @@
         <div class="header-top">
             <div class="container">
                 <ul class="menu-top accordion" data-accordion-disabled="1200">
-
+    
                     <!-- эта пункт меню только для неавторизованного пользователя.  для авторизованного этот пункт не отображается -->
                     <li class="menu-top__item"><button data-fancybox data-type="ajax" data-src="modal-login.html">Вход / Регистрация</button></li>
-
+    
                     <li class="menu-top__item menu-top__item--parent accordion__item">
                         <span class="accordion__title">О покупках</span>
                         <ul class="menu-top__child menu-child accordion__content">
@@ -74,7 +74,7 @@
         <div class="header-main">
             <div class="container">
                 <button class="menu-catalog__btn-open" aria-label="Меню каталога"></button>
-
+    
                 <div class="menu-catalog">
                     <div class="categories accordion">
                         <div class="categories__item accordion__item" data-category-id="1">
@@ -1319,14 +1319,14 @@
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Апрель</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Котмаркот</a></div>
                                     <div class="subcategories__item"><a class="subcategories__link" href="subcategory.html">Натали</a></div>
-
+    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="subcategory-menu-cloned"></div>
                 </div>
-
+    
                 <a class="logo" href="index.html" aria-label="Optmoyo.ru">
                     OptMoyo.ru – интернет-магазин модной женской и детской одежды.
                 </a>
@@ -1628,98 +1628,38 @@
 
     <main>
         <div class="container">
-            <h1 class="text-hidden">Оформление заказа: выбор оплаты</h1>
-            <div class="order-progress">
-                <div class="order-progress__item">
-                    <img src="./assets/img/icons/order-progress/01.svg" alt="Корзина">
-                    Корзина
-                </div>
-                <div class="order-progress__separator"></div>
-                <div class="order-progress__item">
-                    <img src="./assets/img/icons/order-progress/04.svg" alt="Покупатель">
-                    Покупатель
-                </div>
-                <div class="order-progress__separator"></div>
-                <div class="order-progress__item">
-                    <img src="./assets/img/icons/order-progress/02.svg" alt="Доставка">
-                    Доставка
-                </div>
-                <div class="order-progress__separator"></div>
-                <div class="order-progress__item order-progress__item--active">
-                    <img src="./assets/img/icons/order-progress/03.svg" alt="Оплата">
-                    Оплата
+            <nav>
+                <ol class="breadcrumbs">
+                    <li><a href="index.html" title="Модная одежда оптом по низким ценам в интернет-магазине OptMoyo">Главная</a></li>
+                    <li><span>Заказ отправлен</span></li>
+                </ol>
+            </nav>
+
+            <div class="pagetitle pagetitle--row mt-2">
+                <img src="./assets/img/icons/success.svg" alt="Заказ отправлен">
+                <div class="pagetitle--column">
+                    <h1 class="pagetitle__header">Заказ отправлен</h1>
+                    <div class="pagetitle__text">Номер заказа <span class="text-bold">12345</span></div>
                 </div>
             </div>
 
-            <div class="order-prepare">
-                <div>
-                    <div class="prepare-wrap">
-                        <div class="prepare-wrap__title">Выберите способ оплаты:</div>
-                        <div class="tabs-variants" data-action="tabs">
-                            <div class="tabs-titles tabs-titles--vertical">
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type4">
-                                        <span class="icon icon--money"></span>
-                                        Оплата наличными
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Оплата наличными или картой при получении заказа в офисе.
-                                    </div>
-                                </div>
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type5">
-                                        <span class="icon icon--letter"></span>
-                                        Безналичная оплата
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Будет выставлен счет на сайте в личном кабинете и по электронной почте.
-                                        <div class="text-special">Недоступно для физ.лиц</div>
-                                    </div>
-                                </div>
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type6">
-                                        <span class="icon icon--card"></span>
-                                        Оплата картой на&nbsp;сайте
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs-content">
-                                <div class="tabs-content__item" data-tab-id="type4"></div>
-                                <div class="tabs-content__item" data-tab-id="type5"></div>
-                                <div class="tabs-content__item" data-tab-id="type6"></div>
-                            </div>
-                        </div>
+            <div class="order-sent">
+                <div class="order-sent__content">
+                    <p>На указанный вами email отправлено письмо. Пожалуйста, перейдите по&nbsp;ссылке в&nbsp;письме для подтверждения регистрации на&nbsp;сайте.</p>
+                    <p>Это обязательная процедура позволяет убедиться, что вы указали правильный email при&nbsp;оформлении заказа.</p>
+                    <p>Если у вас остались вопросы, свяжитесь с нами по телефонам <a class="text-nowrap" href="tel:+78003012575">8(800) 301-25-75</a> или&nbsp;<a class="text-nowrap" href="tel:+74996088925">8 (499) 608-89-25</a> в рабочее время.</p>
+                    <div class="my-2 d-flex flex-col-20">
+                        <a href="index.html" class="btn btn-white">На главную</a>
                     </div>
                 </div>
 
-                <div>
-                    <div class="cart-info__wrapper">
-                        <div class="cart-info">
-                            <div class="cart-info__content">
-                                <div class="cart-total">
-                                    <div class="cart-total__item">
-                                        <div class="cart-total__title">Общая стоимость товаров</div>
-                                        <div class="cart-total__value">7200,00 ₽</div>
-                                    </div>
-                                    <div class="cart-total__item">
-                                        <div class="cart-total__title">Скидка</div>
-                                        <div class="cart-total__value cart-total__value--special">1200,00 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="cart-info__total">
-                                    Итого: <span>6000,00 ₽</span>
-                                </div>
-                                <a class="btn btn-main btn--big mt-2 w-100 d-block" data-check-delivery-type href="personal-order-sent.html">Отправить заказ</a>
-                            </div>
-                        </div>
-                        <a class="btn-back" href="visitor-order-delivery.html">Назад к выбору Доставки</a>
-                    </div>
-                </div>
+                <picture class="order-sent__pic">
+                    <source type="image/webp" srcset="./assets/img/order-sent.webp">
+                    <img src="./assets/img/order-sent.png" alt="Заказ отправлен">
+                </picture>
             </div>
         </div>
+
     </main>
 
     <footer>

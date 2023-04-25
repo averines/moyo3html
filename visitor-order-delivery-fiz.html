@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор оплаты</title>
+    <title>Выбор доставки</title>
     <meta name="description" content="Стильная одежда мелким оптом по низкой цене для всех без исключения!">
 
     <meta property="og:title" content="Главная">
@@ -1628,7 +1628,7 @@
 
     <main>
         <div class="container">
-            <h1 class="text-hidden">Оформление заказа: выбор оплаты</h1>
+            <h1 class="text-hidden">Оформление заказа: выбор доставки</h1>
             <div class="order-progress">
                 <div class="order-progress__item">
                     <img src="./assets/img/icons/order-progress/01.svg" alt="Корзина">
@@ -1640,61 +1640,97 @@
                     Покупатель
                 </div>
                 <div class="order-progress__separator"></div>
-                <div class="order-progress__item">
+                <div class="order-progress__item order-progress__item--active">
                     <img src="./assets/img/icons/order-progress/02.svg" alt="Доставка">
                     Доставка
                 </div>
-                <div class="order-progress__separator"></div>
-                <div class="order-progress__item order-progress__item--active">
+                <div class="order-progress__separator order-progress__separator--disabled"></div>
+                <div class="order-progress__item order-progress__item--disabled">
                     <img src="./assets/img/icons/order-progress/03.svg" alt="Оплата">
                     Оплата
                 </div>
             </div>
-
             <div class="order-prepare">
-                <div>
-                    <div class="prepare-wrap">
-                        <div class="prepare-wrap__title">Выберите способ оплаты:</div>
-                        <div class="tabs-variants" data-action="tabs">
-                            <div class="tabs-titles tabs-titles--vertical">
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type4">
-                                        <span class="icon icon--money"></span>
-                                        Оплата наличными
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Оплата наличными или картой при получении заказа в офисе.
-                                    </div>
+                <div class="prepare-wrap">
+                    <div class="prepare-wrap__title">Выберите вариант получения заказа:</div>
+                    <div class="tabs-variants" data-delivery-select>
+                        <div class="tabs-titles tabs-titles--vertical">
+                            <div class="tabs-titles__wrap">
+                                <button class="tabs-titles__item" data-tab-target="type1">
+                                    <span class="icon icon--map"></span>
+                                    Самовывоз
+                                </button>
+                                <div class="tabs-titles__description">
+                                    Вы можете забрать заказ самостоятельно по адресу: <br><span class="text-bold">г. Москва, ул. Вольная, д. 35, стр. 8</span>
                                 </div>
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type5">
-                                        <span class="icon icon--letter"></span>
-                                        Безналичная оплата
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Будет выставлен счет на сайте в личном кабинете и по электронной почте.
-                                        <div class="text-special">Недоступно для физ.лиц</div>
-                                    </div>
+                            </div>
+                            <div class="tabs-titles__wrap">
+                                <button class="tabs-titles__item" data-tab-target="type2">
+                                    <span class="icon icon--transport"></span>
+                                    Доставка
+                                </button>
+                                <div class="tabs-titles__description">
+                                    Доставка через Траспортные компании и курьерские службы, услуги которых вы оплачиваете самостоятельно при получении заказа.
                                 </div>
-                                <div class="tabs-titles__wrap">
-                                    <button class="tabs-titles__item" data-tab-target="type6">
-                                        <span class="icon icon--card"></span>
-                                        Оплата картой на&nbsp;сайте
-                                    </button>
-                                    <div class="tabs-titles__description">
-                                        Оплата картой без процентов на сайте через платёжную систему (после подтверждения заказа поставщиками).
+                            </div>
+                        </div>
+                        <div class="tabs-content">
+                            <div class="tabs-content__item" data-tab-id="type1"></div>
+                            <div class="tabs-content__item" data-tab-id="type2"></div>
+                        </div>
+                    </div>
+                    <div class="is-hidden mt-1" data-delivery-content>
+                        <div class="settings">
+                            <div class="setting setting-select mt-2">
+                                <div class="setting-title setting-title--bold">Выберите способ доставки</div>
+                                <div class="setting-select__container">
+                                    <div class="setting-select__content">
+                                        <div class="setting-select__item is-active">СДЕК</div>
+                                        <div class="setting-select__item">Почта России</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-content">
-                                <div class="tabs-content__item" data-tab-id="type4"></div>
-                                <div class="tabs-content__item" data-tab-id="type5"></div>
-                                <div class="tabs-content__item" data-tab-id="type6"></div>
+                            <div class="setting setting--boxed">
+                                <div class="setting__info">
+                                    <div class="setting__title">Укажите адрес доставки</div>
+                                    <div class="setting__content">
+                                        <div class="form-minimal" action="/" method="POST" data-check id="modal-personal-delivery-addresses">
+                                            <div class="form-block">
+                                                <div class="form-group">
+                                                    <input id="delivery-address-index" type="text" name="delivery-address-index" data-check data-check-required="true">
+                                                    <label for="delivery-address-index">Почтовый индекс</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="delivery-address-region" type="text" name="delivery-address-region" data-check data-check-required="true">
+                                                    <label for="delivery-address-region">Регион, область, район</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="delivery-address-city" type="text" name="delivery-address-city" data-check data-check-required="true">
+                                                    <label for="delivery-address-city">Населенный пункт</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="delivery-address-street" type="text" name="delivery-address-street" data-check data-check-required="true">
+                                                    <label for="delivery-address-street">Улица</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <input id="delivery-address-building" type="text" name="delivery-address-building" data-check data-check-required="true">
+                                                    <label for="delivery-address-building">Дом, стр./корп.</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="delivery-address-appartment" type="text" name="delivery-address-appartment" data-check data-check-required="true">
+                                                    <label for="delivery-address-appartment">Кв./офис</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <div class="cart-info__wrapper">
                         <div class="cart-info">
@@ -1712,10 +1748,15 @@
                                 <div class="cart-info__total">
                                     Итого: <span>6000,00 ₽</span>
                                 </div>
-                                <a class="btn btn-main btn--big mt-2 w-100 d-block" data-check-delivery-type href="personal-order-sent.html">Отправить заказ</a>
+                                <hr class="my-2">
+                                <p class="text-bold">Розничная покупка</p>
+                                <p>Покупатель: Афонасьев Святогор Еремеевич, г. Москва</p>
+                                <p>Контакты: afonas@mail.ru, 89929150208</p>
+
+                                <a class="btn btn-main btn--big mt-2 w-100 d-block is-disabled" data-check-delivery-type href="visitor-order-payment-fiz.html">К выбору оплаты</a>
                             </div>
                         </div>
-                        <a class="btn-back" href="visitor-order-delivery.html">Назад к выбору Доставки</a>
+                        <a class="btn-back" href="visitor-order-userinfo.html">Назад к Информации о покупателе</a>
                     </div>
                 </div>
             </div>

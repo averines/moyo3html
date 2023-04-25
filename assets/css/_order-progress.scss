@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border-bottom: 1px dotted $line-l;
     padding-bottom: 30px;
     padding-top: 30px;
-    column-gap: 25px;
-    margin-bottom: 30px;
+    column-gap: 15px;
+    margin-bottom: 10px;
 
     @media screen and (min-width: 768px) {
+        column-gap: 25px;
         justify-content: center;
     }
 
@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
         column-gap: 7px;
-        font-size: $base-fz * 12px;
+        font-size: $base-fz * 10px;
 
         > img {
             width: 20px;
@@ -38,6 +38,7 @@
 
         @media screen and (min-width: 768px) {
             flex-direction: row;
+            font-size: $base-fz * 11px;
         }
     }
 
@@ -53,10 +54,10 @@
 
         @media screen and (min-width: 768px) {
             width: 80px;
-        }    
-        
+        }
+
         @media screen and (min-width: 1200px) {
             width: 110px;
-        }         
+        }
     }
 }

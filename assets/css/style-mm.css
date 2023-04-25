@@ -166,6 +166,7 @@ p a:hover {
   width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
 }
 
 .nowrap {
@@ -5803,6 +5804,34 @@ footer .footer-container {
 .tabs-variants .tabs-titles__item .icon--letter {
   background: url(../img/icons/payment-letter.svg) no-repeat center/100%;
 }
+.tabs-variants .tabs-titles .tabs-titles__item--horizontal {
+  flex-direction: column;
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  min-height: auto;
+  padding: 15px 10px 10px 10px;
+  row-gap: 5px;
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .tabs-variants .tabs-titles .tabs-titles__item--horizontal {
+    width: 138px;
+    min-height: 140px;
+    padding: 20px;
+  }
+}
+.tabs-variants .tabs-titles--horizontal {
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .tabs-variants .tabs-titles--horizontal {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+}
 .tabs-variants .tabs-titles--vertical {
   display: flex;
   flex-direction: column;
@@ -6084,7 +6113,9 @@ footer .footer-container {
 }
 
 .allpageslist {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 150px;
@@ -10826,12 +10857,14 @@ footer .footer-container {
   align-items: center;
   padding-bottom: 30px;
   padding-top: 30px;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-  margin-bottom: 30px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   .order-progress {
+    -moz-column-gap: 25px;
+         column-gap: 25px;
     justify-content: center;
   }
 }
@@ -10843,7 +10876,7 @@ footer .footer-container {
   align-items: center;
   -moz-column-gap: 7px;
        column-gap: 7px;
-  font-size: 12.84px;
+  font-size: 10.7px;
 }
 .order-progress__item > img {
   width: 20px;
@@ -10858,6 +10891,7 @@ footer .footer-container {
 @media screen and (min-width: 768px) {
   .order-progress__item {
     flex-direction: row;
+    font-size: 11.77px;
   }
 }
 .order-progress__separator {
@@ -10955,10 +10989,15 @@ footer .footer-container {
 }
 .prepare-wrap__title {
   font-weight: 600;
-  font-size: 25.68px;
+  font-size: 19.26px;
   padding-bottom: 30px;
   max-width: 400px;
-  line-height: 1.3;
+  line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .prepare-wrap__title {
+    font-size: 25.68px;
+  }
 }
 .prepare-wrap .setting--boxed,
 .prepare-wrap .setting-select {
