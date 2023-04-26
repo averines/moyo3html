@@ -9355,11 +9355,14 @@ footer .footer-container {
   flex-direction: column;
   row-gap: 8px;
 }
+.cart-info__total > span {
+  font-weight: 600;
+}
 .cart-info__warning {
   padding: 15px 0;
 }
 .cart-info__text {
-  margin-top: 10px;
+  margin-top: 5px;
   white-space: nowrap;
 }
 .cart-info__text > span {
@@ -9384,7 +9387,6 @@ footer .footer-container {
 }
 .cart-total__value {
   font-size: 14.98px;
-  font-weight: 600;
   margin-bottom: -1px;
   background-color: #fff;
   padding-left: 5px;
