@@ -2125,7 +2125,7 @@ footer .footer-container {
 .filter-checkbox .icon-color--orange::after {
   background: #ffa216;
 }
-.filter-checkbox .icon-color--pink::after {
+.filter-checkbox .icon-color--magenta::after {
   background-color: #ff90c7;
 }
 .filter-checkbox .icon-color--gray::after {
@@ -11562,6 +11562,9 @@ footer .footer-bottom {
   color: #ebebec;
   border-bottom: 1px solid #4a545c;
   border-top: 1px solid #4a545c;
+}
+.footer-nav__title:hover {
+  background-color: #333a40;
 }
 @media screen and (min-width: 992px) {
   .footer-nav__title {

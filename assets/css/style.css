@@ -2125,7 +2125,7 @@ footer .footer-container {
 .filter-checkbox .icon-color--orange::after {
   background: #ffa216;
 }
-.filter-checkbox .icon-color--pink::after {
+.filter-checkbox .icon-color--magenta::after {
   background-color: #ff90c7;
 }
 .filter-checkbox .icon-color--gray::after {

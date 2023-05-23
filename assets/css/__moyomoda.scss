@@ -45,6 +45,10 @@ footer {
         border-bottom: 1px solid lighten($footer-l, 10);
         border-top: 1px solid lighten($footer-l, 10);
 
+        &:hover {
+            background-color: $footer-l;
+        }
+
         @media screen and (min-width: 992px) {
             border: none;
         }
