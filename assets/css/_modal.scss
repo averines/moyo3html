@@ -21,6 +21,11 @@
         padding: 20px;
         position: relative;
 
+        ul {
+            font-size: $base-fz * 14px;
+            line-height: 1.4;
+        }
+
         @media screen and (min-width: 768px) {
             padding-left: 60px;
             padding-right: 60px;
@@ -150,6 +155,12 @@
         @media screen and (min-width: 768px) {
             width: 550px;
         }
+    }
+
+    &--std {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 800px;
     }
 
     &--lg {

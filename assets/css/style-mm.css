@@ -3720,6 +3720,10 @@ footer .footer-container {
   padding: 20px;
   position: relative;
 }
+.modal__content ul {
+  font-size: 14.98px;
+  line-height: 1.4;
+}
 @media screen and (min-width: 768px) {
   .modal__content {
     padding-left: 60px;
@@ -3840,6 +3844,11 @@ footer .footer-container {
   .modal--md {
     width: 550px;
   }
+}
+.modal--std {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
 }
 .modal--lg {
   max-width: 300px;
