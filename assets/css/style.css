@@ -4057,6 +4057,23 @@ footer .footer-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
+.list-subcategory--flex {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+}
+.list-subcategory__group {
+  display: flex;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  width: 100%;
+}
+@media screen and (min-width: 700px) {
+  .list-subcategory__group {
+    width: auto;
+  }
+}
 .list-subcategory__link {
   display: flex;
   flex-direction: column;
