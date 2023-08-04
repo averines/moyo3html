@@ -23,7 +23,7 @@
         }
 
         @media screen and (min-width: 468px) {
-            margin-right: 5px;;
+            margin-right: 5px;
         }
     }
 
@@ -50,7 +50,9 @@
     left: -85%;
     width: 85%;
     height: 100vh;
-    transition: left 0.1s ease-in-out, box-shadow 2s ease-in-out;
+    transition:
+        left 0.1s ease-in-out,
+        box-shadow 2s ease-in-out;
 
     @media screen and (min-width: 650px) {
         width: 350px;
@@ -105,6 +107,11 @@
         &[data-category-id="7"] {
             .categories__title::before {
                 background-image: url(../img/icons/categories/brand.svg);
+            }
+        }
+        &[data-category-id="8"] {
+            .categories__title::before {
+                background-image: url(../img/icons/categories/school.svg);
             }
         }
     }

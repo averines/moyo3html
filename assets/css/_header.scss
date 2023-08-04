@@ -1,6 +1,8 @@
 header {
     background: url(../img/header-bg-1024.jpg) no-repeat center $main;
-    background-size: 100% 100%, cover;
+    background-size:
+        100% 100%,
+        cover;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -18,7 +20,7 @@ header {
 
 .header-top {
     height: 0;
-    
+
     .container {
         display: flex;
         justify-content: space-between;
@@ -65,13 +67,17 @@ header {
 
     @media screen and (min-width: 350px) {
         width: 90px;
-    }    
+    }
 
     @media screen and (min-width: 468px) {
         width: 120px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 468px) {
+        width: 90px;
+    }
+
+    @media screen and (min-width: 1400px) {
         margin-right: auto;
         width: 160px;
         height: 40px;

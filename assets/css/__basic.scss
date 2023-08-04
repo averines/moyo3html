@@ -385,3 +385,12 @@ ol {
     border: 1px solid $special-7;
   }
 }
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.img-max {
+  width: 100%;
+  height: auto;
+}

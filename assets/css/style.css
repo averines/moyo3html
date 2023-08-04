@@ -380,6 +380,15 @@ ol li > a:hover {
   border: 1px solid #1978b8;
 }
 
+.img-fluid {
+  max-width: 100%;
+}
+
+.img-max {
+  width: 100%;
+  height: auto;
+}
+
 .container-wrapper {
   background-color: #f3f2f0;
 }
@@ -769,7 +778,12 @@ header {
     width: 120px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 468px) {
+  .logo {
+    width: 90px;
+  }
+}
+@media screen and (min-width: 1400px) {
   .logo {
     margin-right: auto;
     width: 160px;
@@ -1395,6 +1409,9 @@ footer .footer-container {
 }
 .categories__item[data-category-id="7"] .categories__title::before {
   background-image: url(../img/icons/categories/brand.svg);
+}
+.categories__item[data-category-id="8"] .categories__title::before {
+  background-image: url(../img/icons/categories/school.svg);
 }
 .categories__title {
   font-size: 0.8025em;
