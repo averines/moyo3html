@@ -1646,10 +1646,17 @@
                 <a class="menu-tabs__item" href="personal-discounts.html">Скидки и бонусы</a>
                 <a class="menu-tabs__item" href="personal-return.html">Рекламация</a>
             </div>
-
+            <div class="cart-control">
+                <button class="cart-control__btn is-active" data-action="toggle-products-in-cart"><span></span></button>
+                <div class="cart-control__content">Выбрано товаров: <span>2</span> из 2</div>
+            </div>
             <ol class="list-products">
                 <li class="list-product">
                     <div class="list-product__info">
+                        <label class="list-product__checkbox" for="list-product-1">
+                            <input type="checkbox" id="list-product-1" checked data-action="toggle-product-in-cart">
+                            <span></span>
+                        </label>
                         <a class="list-product__pic" href="product.html">
                             <picture>
                                 <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">
@@ -1817,6 +1824,10 @@
                 </li>
                 <li class="list-product">
                     <div class="list-product__info">
+                        <label class="list-product__checkbox" for="list-product-2">
+                            <input type="checkbox" id="list-product-2" checked data-action="toggle-product-in-cart">
+                            <span></span>
+                        </label>
                         <a class="list-product__pic" href="product.html">
                             <picture>
                                 <source type="image/webp" srcset="./i/products/100/11111-col1-pic1-100.webp">

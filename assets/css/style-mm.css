@@ -9171,6 +9171,54 @@ footer .footer-container {
   font-size: 13.91px;
   padding-top: 30px;
 }
+.list-product__checkbox {
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+}
+.list-product__checkbox:hover > span {
+  background-color: #ffbbbb;
+}
+.list-product__checkbox:hover > span::after {
+  opacity: 0.3;
+}
+.list-product__checkbox > input {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.list-product__checkbox > input:checked + span {
+  background-color: #e1173c;
+}
+.list-product__checkbox > input:checked + span:hover {
+  background: #ca1536;
+  border-color: #ca1536;
+}
+.list-product__checkbox > input:checked + span::after {
+  opacity: 1;
+  filter: invert(1) brightness(10);
+  transform: translateY(0);
+}
+.list-product__checkbox > span {
+  display: block;
+  position: absolute;
+  inset: 0;
+  border: 2px solid #e1173c;
+  border-radius: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.list-product__checkbox > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: url(../img/icons/check.svg) no-repeat center/55%;
+  opacity: 0;
+}
 @media screen and (min-width: 768px) {
   .list-product:not(:first-child) .list-product__table thead {
     visibility: collapse;
@@ -9439,6 +9487,78 @@ footer .footer-container {
 }
 .cart-total__value--special {
   color: #6cb33f;
+}
+
+.cart-control {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(84, 85, 87, 0.05);
+  border-radius: 5px;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.cart-control__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.6em 1em 0.6em 0.6em;
+  transition: all 0.15s ease-in-out;
+}
+.cart-control__btn::after {
+  content: "Выбрать все";
+}
+.cart-control__btn:hover {
+  background-color: #f3f2f0;
+}
+.cart-control__btn:hover > span {
+  background-color: #ffbbbb;
+}
+.cart-control__btn:hover > span::after {
+  opacity: 0.4;
+}
+.cart-control__btn.is-active::after {
+  content: "Снять все";
+}
+.cart-control__btn.is-active > span {
+  background-color: #e1173c;
+}
+.cart-control__btn.is-active > span::after {
+  opacity: 1;
+  filter: invert(1) brightness(10);
+}
+.cart-control__btn.is-active:hover > span {
+  background: #ca1536;
+  border-color: #ca1536;
+}
+.cart-control__btn > span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 2px solid #e1173c;
+  position: relative;
+  pointer-events: none;
+}
+.cart-control__btn > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: url(../img/icons/check.svg) no-repeat center/55%;
+  opacity: 0;
+}
+.cart-control__content {
+  font-size: 14px;
+  color: #6e6e6e;
 }
 
 .cart-empty {

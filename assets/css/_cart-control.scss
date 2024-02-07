@@ -1,0 +1,83 @@
+.cart-control {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(84, 85, 87, 0.05);
+    border-radius: 5px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    &__btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        border: none;
+        background: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0.6em 1em 0.6em 0.6em;
+        transition: $tr;
+
+        &::after {
+            content: "Выбрать все";
+        }
+
+        &:hover {
+            background-color: $bg-l;
+
+            > span {
+                background-color: $main-lll;
+
+                &::after {
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        &.is-active {
+            &::after {
+                content: "Снять все";
+            }
+            > span {
+                background-color: $main;
+                &::after {
+                    opacity: 1;
+                    filter: invert(1) brightness(10);
+                }
+            }
+
+            &:hover {
+                > span {
+                    background: darken($main, 5);
+                    border-color: darken($main, 5);
+                }
+            }
+        }
+
+        > span {
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 3px;
+            border: 2px solid $main;
+            position: relative;
+            pointer-events: none;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                inset: 0;
+                background: url(../img/icons/check.svg) no-repeat center/55%;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__content {
+        font-size: 14px;
+        color: $text-l;
+    }
+}
